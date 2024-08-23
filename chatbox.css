@@ -132,6 +132,32 @@ select {
 	cursor: pointer;
 	transition: .2s;
 }
+.chatbox-toggle1 {
+	width: 100%;
+	height: 100%;
+	background:  #1e9413;
+	color: var(--white);
+	font-size: 2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: .2s;
+}
+.chatbox-toggle2 {
+	width: 100%;
+	height: 100%;
+	background:  #d12c2c;
+	color: var(--white);
+	font-size: 2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: .2s;
+}
 .chatbox-toggle:active {
 	transform: scale(.9);
 }
