@@ -1,633 +1,441 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tamkin Express</title>
-    <!-- Adding Stylesheets -->
-    <link rel="icon" href="asset\image\logoonly.png" type="image/png">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-
+    <title>TamkinExpress - Complete Business Services in UAE | Registration to Digital Solutions</title>
+    <meta name="description" content="TamkinExpress provides comprehensive business services in UAE from registration to technical solutions, marketing, videography, content creation, software development and web development. Your one-stop solution for business growth.">
+    <meta name="keywords" content="business registration UAE, business services Dubai, technical solutions, marketing solutions, videography UAE, content creation, software development, web development, business consultancy UAE">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Varela&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./asset/css/style.css">
-    <link rel="stylesheet" href="./asset/css/responsive.css">
-    <link rel="stylesheet" href="./chatbox.css">
+    <link rel="stylesheet" href="./asset/css/chatbox.css">
 
+
+    <!-- Favicon and Icons -->
+    <link rel="icon" type="image/x-icon" href="./asset/image/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="./asset/image/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./asset/image/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./asset/image/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./asset/image/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#007bff">
+    <meta name="msapplication-TileColor" content="#007bff">
+    <meta name="theme-color" content="#00d2cc">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://tamkinexpress.com/">
+
+    <!-- Robots Meta -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+    
+    <!-- Alternate Languages -->
+    <link rel="alternate" hreflang="en-ae" href="https://tamkinexpress.com/">
+    <link rel="alternate" hreflang="ar-ae" href="https://tamkinexpress.ae">
+    <link rel="alternate" hreflang="x-default" href="https://tamkinexpress.com/">
+
+    <!-- GeoGraphic SEO Code Here -->
+    <meta name="geo.region" content="AE-DU">
+    <meta name="geo.placename" content="Abudhabi">
+    <meta name="geo.position" content="25.2048;55.2708">
+    <meta name="ICBM" content="25.2048, 55.2708">
+
+     <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tamkinexpress.com/">
+    <meta property="og:title" content="TamkinExpress UAE | #1 Business Registration & Digital Solutions in UAE">
+    <meta property="og:description" content="Leading business registration and digital solutions provider in UAE. Expert business setup, web development, marketing services. 500+ successful business launches with 95% success rate.">
+    <meta property="og:image" content="https://tamkinexpress.com/asset/image/tamkin-logo.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_AE">
+    <meta property="og:site_name" content="TamkinExpress">
+
+
+    <!-- Additional SEO Meta Tags -->
+    <meta name="author" content="TamkinExpress">
+    <meta name="publisher" content="TamkinExpress">
+    <meta name="copyright" content="2025 TamkinExpress">
+    <meta name="revisit-after" content="7 days">
+    <meta name="distribution" content="global">
+    <meta name="rating" content="general">
+    <meta name="language" content="English">
+    <meta name="category" content="Business Services">
+    
+    <!-- Structured Data - Organization Schema -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "TamkinExpress",
+            "alternateName": ["Tamkin Express", "Tamkin Express UAE", "TamkinExpress Dubai", "Tamkin", " Tamkin Express Abudhabi", " TamkinExpress Ajman", "Tamkin Express Ummu-al-quwain", "Tamkin Express Fujaira"],
+            "url": "https://tamkinexpress.com",
+            "logo": "https://tamkinexpress.com/asset/image/tamkin-logo.png",
+            "description": "Leading business registration and digital solutions provider in UAE offering complete business setup, legal translation, PRO Services, Company Formation, Visa Services, Business Consultation, web development, marketing, and technical solutions.",
+            "foundingDate": "2020",
+            "numberOfEmployees": "50-100",
+            "legalName": "TamkinExpress Business Services LLC",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Musaffa , Maxim Building",
+                "addressLocality": "Abudhabi",
+                "addressRegion": "Abudhabi",
+                "addressCountry": "AE",
+                "postalCode": "00000"
+            },
+            "contactPoint": [
+                {
+                    "@type": "ContactPoint",
+                    "telephone": "+971-588967713",
+                    "contactType": "customer service",
+                    "availableLanguage": ["English", "Arabic", "Hindi", "German", "French", "Malayalam", "Spanish", "Urdu", "Russian", "Chinese", "Mandari", "Persian"],
+                    "areaServed": "AE"
+                },
+                {
+                    "@type": "ContactPoint",
+                    "email": "info@tamkinexpress.com",
+                    "contactType": "customer service"
+                }
+            ],
+            "sameAs": [
+                "https://www.tiktok.com/@aadiilll.___?_t=ZS-8yDNS7xDxoW&_r=1",
+                "https://x.com/tamkinexpress?s=09",
+                "https://www.instagram.com/tamkinexpress?igsh=bW9ubHZzbnNqMzE=",
+                "https://www.facebook.com/profile.php?id=61563209741328&mibextid=ZbWKwL"
+            ],
+            "areaServed": {
+                "@type": "Country",
+                "name": "United Arab Emirates"
+            },
+            "serviceArea": {
+                "@type": "AdministrativeArea",
+                "name": "United Arab Emirates"
+            },
+            "knowsAbout": [
+                "Business Registration UAE",
+                "Company Formation UAE",
+                "Legal Translation",
+                "Visa Services",
+                "Family Visa",
+                "Golden Visa",
+                "Business Registration"
+                "Web Development",
+                "Digital Marketing",
+                "Technical Solutions",
+                "Business Consultancy"
+            ],
+            "slogan": "Your Complete Business Services Partner in UAE"
+        }
+        </script>
+        
 </head>
 <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <!-- <span class="logo-text">TAMKINEXPRESS</span>
+                <span class="logo-subtitle">Complete Business Services</span> -->
+                <img src="./asset/logo_coloured.png" style="height: 50px; width: 140px;" alt="Tamkin Logo | Tamkin Express Logo | Logo | Tamkin | Business Registration | UAE"></img>
+            </div>
 
-    <!-- Header Start  -->
-    <section class="header ">
-        <!-- Header Navigation Start  -->
-        <div class="container header-nav">
-            <div class="row">
-                <div class="col-md-12">
-                    <nav class="navbar navbar-expand-lg navbar-light bg-light main-menu fixed-top ">
-                        <div class="container">
-                            <a href="#" class="navbar-brand">
-                                <img src="./asset/image/Logo (2).png" alt=" LeadsbeeLogo">
-                            </a>
-                            <button class="navbar-toggler" data-toggle="collapse" data-target="#beeToggler">
-                                <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
-                            </button>
-                            <div class="collapse navbar-collapse" id="beeToggler">
-                                <ul class="navbar-nav ml-auto ">
-                                    <li><a href="#">Home</a></li>
-                                    &nbsp;
-                                    <!-- <li><a href="./project.html">Project</a></li> -->
-                                    <!-- &nbsp; -->
-                                    <li><a href="./service.html">Services</a></li>
-                                    &nbsp;
-                                    <li><a href="contact-us.html">Contact us</a></li>
-                                    &nbsp;
-                                    <li><a href="./careers.html">Career</a></li>
-                                    &nbsp;
-                                    <li><a href="./blog.html">FAQ</a></li>
-                                    &nbsp;
-                                    <!-- <li>
-                                        <a href="contact-us.html">
-                                        <button class="nav-button">Contact Us <i class="fas fa-angle-right"></i> </button>
-                                        </a>
-                                    </li>
-                                    &nbsp; -->
-                                    <li>
-                                        <a href="./amjad.html">
-                                        <button class="nav-button">Check Your Case ID <i class="fas fa-angle-right"></i> </button>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </nav>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#portfolio" class="nav-link">Portfolio</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+
+            <div class="nav-cta">
+                <a href="#contact" class="cta-button primary">Get Started</a>
+            </div>
+
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-background"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Built for businesses that want to
+                    <span class="highlight">thrive</span> instead of struggle
+                </h1>
+                <p class="hero-subtitle">
+                    From business registration to cutting-edge digital solutions in UAE.
+                    We handle everything so you can focus on what matters most - growing your business.
+                </p>
+                <div class="hero-cta">
+                    <a href="#contact" class="cta-button primary">
+                        <span class="button-icon">📞</span>
+                        Plan a consultation
+                    </a>
+                    <span class="cta-divider">or</span>
+                    <a href="#portfolio" class="cta-button secondary">
+                        <span class="button-icon">👁️</span>
+                        View our work
+                    </a>
                 </div>
             </div>
         </div>
-<br>
-        <!-- Header Navigation End  -->
 
-        <!-- Header Banner Start  -->
-        <div class="container header-content ">
-            <!-- <div class="col-md-3">
-                <div class="footer-widget-4">
-                    
+        <!-- Animated Cards -->
+        <div class="hero-cards">
+            <div class="hero-card card-01">
+                <div class="card-number">01</div>
+                <h3 class="card-title">One team.<br><em>Built for efficiency.</em></h3>
+                <p class="card-text">No juggling multiple vendors.<br>No endless paperwork delays.<br><br>We handle registration, tech, marketing and automation seamlessly.</p>
+                <div class="card-visual">
+                    <div class="card-lines"></div>
+                </div>
+            </div>
+
+            <div class="hero-card card-02">
+                <div class="card-number">02</div>
+                <h3 class="card-title"><em>Strategy</em> before solutions</h3>
+                <p class="card-text">We analyze your business needs and UAE market requirements to deliver solutions that drive real results.</p>
+                <div class="card-visual">
+                    <div class="card-device"></div>
+                </div>
+            </div>
+
+            <div class="hero-card card-03">
+                <div class="card-number">03</div>
+                <h3 class="card-title">Built to <em>scale</em></h3>
+                <p class="card-text">Smart and integrated business systems that grow <em>with</em> your success.</p>
+                <div class="card-visual">
+                    <div class="card-growth"></div>
+                </div>
+            </div>
+
+            <div class="hero-card card-04">
+                <div class="card-number">04</div>
+                <h3 class="card-title">UAE <em>expertise</em></h3>
+                <p class="card-text">Deep knowledge of UAE business landscape, regulations, and market opportunities.</p>
+                <div class="card-visual">
+                    <div class="card-location"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">Our Business Services</h2>
+
+            <div class="services-grid">
+                <a href="./business-registration.html" class="service-card">
+                    <div class="service-icon">🏢</div>
+                    <h3 class="service-title">Business Registration</h3>
+                    <p class="service-description">Complete business setup and company formation in UAE including license, permits, and legal compliance.</p>
+                </a>
+
+                <a href="" class="service-card">
+                    <div class="service-icon">🏆</div>
+                    <h3 class="service-title">PRO & GRO Services UAE</h3>
+                    <p class="service-description">Premium business consultancy, legal support, and strategic advisory services.</p>
+                </a>
+            </div>
+
+            <!-- <div class="services-cta">
+                <a href="#contact" class="cta-button primary">See all services</a>
+            </div> -->
+        </div>
+
+        <div class="container">
+            <h2 class="section-title">Our Digital Solutions</h2>
+
+            <div class="services-grid">
+                <a href="./business-registration.html" class="service-card">
+                    <div class="service-icon">🏢</div>
+                    <h3 class="service-title">Business Registration</h3>
+                    <p class="service-description">Complete business setup in UAE including license, permits, and legal compliance.</p>
+                </a>
+
+                <a href="./technical-solutions.html" class="service-card">
+                    <div class="service-icon">⚡</div>
+                    <h3 class="service-title">Technical Solutions</h3>
+                    <p class="service-description">Custom technical infrastructure, automation, and digital transformation services.</p>
+                </a>
+
+                <a href="./marketing-solutions.html" class="service-card">
+                    <div class="service-icon">📊</div>
+                    <h3 class="service-title">Marketing Solutions</h3>
+                    <p class="service-description">Digital marketing, branding, SEO, and social media management for UAE market.</p>
+                </a>
+
+                <a href="" class="service-card">
+                    <div class="service-icon">🎥</div>
+                    <h3 class="service-title">Videography</h3>
+                    <p class="service-description">Professional video production, corporate videos, and visual storytelling.</p>
+                </a>
+
+                <a href="" class="service-card">
+                    <div class="service-icon">✍️</div>
+                    <h3 class="service-title">Content Creation</h3>
+                    <p class="service-description">Engaging content strategy, copywriting, and multimedia content development.</p>
+                </a>
+
+                <a href="" class="service-card">
+                    <div class="service-icon">📱</div>
+                    <h3 class="service-title">Software & App Development</h3>
+                    <p class="service-description">Custom software solutions, mobile apps, and enterprise applications.</p>
+                </a>
+
+                <a href="./web-development.html" class="service-card">
+                    <div class="service-icon">🌐</div>
+                    <h3 class="service-title">Web Development</h3>
+                    <p class="service-description">Modern websites, e-commerce platforms, and web applications that convert.</p>
+                </a>
+
+                <a href="" class="service-card">
+                    <div class="service-icon">🏆</div>
+                    <h3 class="service-title">Pro Services UAE</h3>
+                    <p class="service-description">Premium business consultancy, legal support, and strategic advisory services.</p>
+                </a>
+            </div>
+
+            <!-- <div class="services-cta">
+                <a href="#contact" class="cta-button primary">See all services</a>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="impact">
+        <div class="container">
+            <h2 class="section-title">Impact we made <em>in numbers.</em></h2>
+
+            <div class="impact-grid">
+                <div class="impact-card">
+                    <div class="impact-stat">
+                        <span class="stat-value">95%</span>
+                        <span class="stat-label">Business Setup Success Rate</span>
+                    </div>
+                    <div class="stat-icon">
+                        <div class="growth-chart"></div>
+                    </div>
+                </div>
+
+                <div class="impact-card">
+                    <div class="impact-stat">
+                        <span class="stat-value">500+</span>
+                        <span class="stat-label">Businesses Launched</span>
+                    </div>
+                    <div class="stat-icon">
+                        <div class="growth-chart"></div>
+                    </div>
+                </div>
+
+                <div class="impact-card">
+                    <div class="impact-stat">
+                        <span class="stat-value">300%</span>
+                        <span class="stat-label">Average Revenue Growth</span>
+                    </div>
+                    <div class="stat-icon">
+                        <div class="growth-chart"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted Section -->
+    <section class="trusted">
+        <div class="container">
+            <h2 class="section-title">You are in the right place</h2>
+
+            <div class="clients-logos">
+                <div class="logo-slider">
+                    <img style="height: 80px;" src="./asset/image/works-with/tas-heel.png" class="client-logo"></img>
+                    <img style="height: 80px;"src="./asset/image/works-with/dubai-economy.png" class="client-logo"></img>
+                    <img style="height: 80px;"src="./asset/image/works-with/amir.png" class="client-logo"></img>
+                    <img style="height: 80px;" src="./asset/image/works-with/ministry of interior.png" class="client-logo"></img>
+                    <img style="height: 80px;"src="./asset/image/works-with/dubai-muncipality.png" class="client-logo"></img>
+                    <!-- <div class="client-logo">StartupSuccess</div>
+                    <div class="client-logo">TechCorp</div>
+                    <div class="client-logo">InnovateUAE</div> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="final-cta">
+        <div class="container">
+            <h2 class="cta-title">Start building with TamkinExpress</h2>
+            <a href="#contact" class="cta-button primary large">
+                <span class="button-icon">📞</span>
+                Plan a consultation
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TamkinExpress</h3>
+                    <p>Your complete business services partner in UAE. From registration to digital excellence.</p>
+                    <div class="contact-info">
+                        <p>📍 Dubai, United Arab Emirates</p>
+                        <p>📞 +971 XX XXX XXXX</p>
+                        <p>✉️ info@tamkinexpress.com</p>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Services</h4>
                     <ul>
-                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                        <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
+                        <li><a href="pages/business-registration.html">Business Registration</a></li>
+                        <li><a href="pages/technical-solutions.html">Technical Solutions</a></li>
+                        <li><a href="pages/marketing-solutions.html">Marketing Solutions</a></li>
+                        <li><a href="pages/web-development.html">Web Development</a></li>
                     </ul>
                 </div>
-            </div> -->
-            <div class="row ">
-                <div class="col-md-6 centralize">
-                    <div class="left-content ">
-                        <h2>Tamkin<span class="highlight"></span> 
-                            <span class="highlight">Express</span>
-                        </h2>
-                        <p1>Bussiness services & Typing</p1>
-                        <br>
-                        <br>
 
-                        <p>
-                            We offer comprehensive solutions for all your personal and Business service requirements in Abu Dhabi, Dubai and all Emirates of United Arab Emirates,  including: <br> Family Visa, Golden Visa and Employment Visa Processing, Business setup  and company formation, PRO services, GRO services, Attestation, Notarization, Legalization, Document Clearing and Translation Services.
-                           <br> Let us simplify your personal and business needs with our expert services.                        </p>
-                        <br>
-                        <li>
-                            <a href="./contact-us.html">
-                            <button class="nav-button">Work with us <i class="fas fa-angle-right"></i> </button>
-                            </a>
-                        </li>
-                    </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#careers">Careers</a></li>
+                    </ul>
                 </div>
-                <div class="col-md-6">
-                    <div class="right-content">
-                        <img src="asset\image\vector.png" alt="">
-                    </div>
+
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#terms">Terms of Service</a></li>
+                        <li><a href="#cookies">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 TamkinExpress. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link">LinkedIn</a>
+                    <a href="#" class="social-link">Twitter</a>
+                    <a href="#" class="social-link">Instagram</a>
                 </div>
             </div>
         </div>
-
-
-    </section>
-    <!-- Header End  -->
-
-    <!-- Work Process Start  -->
-    <section class="work-process section-padding" style="background: #fff;">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <div  class="process-block">
-                        <a href="./visaProcessing.html">
-                        <img src="asset\image\visa_process.png" alt="Project Discussion"></a>
-                        <br>
-                        <h3>Visa Processing (Fast & Efficient)</h3>
-                        <!-- <p>Fast-track your Abu Dhabi business journey. Our experts handle everything from licensing to legalities, ensuring a smooth and efficient company formation process.</p> -->
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="process-block">
-                     <a href="./BussinessSetup.html">   <img src="asset\image\bussiness_setup.png" alt="Project Discussion"></a>
-                        <br>
-
-                        <h3>Business Setup and Company Formation </h3>
-                        <!-- <p>Get your documents authenticated for any country, hassle-free. We handle all types of documents, ensuring fast and reliable attestation services for global use.</p> -->
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="process-block">
-                       <a href="./proService.html"> <img src="asset\image\pro service.png" alt="Project Discussion"></a>
-                        <br>
-
-                        <h3>PRO & GRO Services </h3>
-                        <!-- <p>Bridge the language gap for your legal needs. Our expert translators deliver accurate and culturally-sensitive translations in over 100 languages, ensuring your documents are understood worldwide.</p> -->
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="process-block">
-                       <a href="./translation.html"> <img src="asset\image\translation.png" alt="Project Discussion"></a>
-                        <br>
-
-                        <h3>Legal Translation Services (Over 100 Languages)</h3>
-                        <!-- <p>Simplify government interactions for your business. Our PROs (Public Relations Officers) and GROs (Government Relations Officers) handle everything from visa processing to licensing, ensuring you stay compliant and operate efficiently in Abu Dhabi.</p> -->
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="process-block">
-                      <a href="./attestation.html">  <img src="asset\image\attestation.png" alt="Project Discussion"></a>
-                        <br>
-
-                        <h3>Attestation and Notarization Services (Worldwide & All Documents)</h3>
-                        <!-- <p>Effortlessly navigate Abu Dhabi's visa landscape. We handle all types of visas, including:</p>
-                        <p>Family Visa: Reunite with loved ones in Abu Dhabi. We handle family visa applications
-                            efficiently.</p>
-                            <p>Golden Visa: Unlock long-term residency benefits. We simplify the Golden Visa application process.</p>
-                            <p>Employment Visa: Launch your Abu Dhabi career. We guide you through the employment visa process.</p>
-                            <p>Visit Visa: Enjoy a hassle-free vacation with our streamlined visit visa processing</p> -->
-
-
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="process-block">
-                       <a href="./coporativeService.html"> <img src="asset\image\coprative.png" alt="Project Discussion"></a>
-                        <br>
-
-                        <h3>Corporate Services (Streamline Your Business Operations)</h3>
-                        <!-- <p>Empower your Abu Dhabi business with our comprehensive corporate services. We offer solutions to:</p>
-                        <p>Form your company: Navigate regulations and legalities with our efficient company formation services.</p>
-
-                        <p>Manage daily operations: Free yourself from administrative burdens with our PRO and
-                            GRO services.</p>
-
-                        <p>Comply with regulations: Stay compliant with local laws and regulations with our expert guidance.</p>
-                        <p>Grow your business: Focus on your core activities while we handle the administrative tasks.</p> -->
-
-
-                    </div>
-                </div>
-            </div>
-
-            <!-- <div class="row mt-5">
-                <div class="col-md-5">
-                    <img src="./asset/image/meeting.jpg" alt="Client discussion" class="img img-fluid">
-                </div>
-                <div class="col-md-7 centralize">
-                    <div class="project-discussion ">
-                        <h2>Let’s Talk About <span class="highlight">TamkinExpress</span> </h2>
-                        <p>
-                             We are dedicated to providing comprehensive business solutions tailored to your needs in Abu Dhabi. Our expert services include company formation, visa processing, attestation, document writing, and legal translation. We pride ourselves on delivering professional and efficient support, ensuring your business operations run smoothly. Whether you're establishing a new company or managing ongoing documentation and legal requirements, our team is here to simplify the process and help you succeed in the dynamic Abu Dhabi market.
-                        </p>
-                        <p>
-                           
-                        </p>
-                        <button>Let's Talk <i class="fas fa-angle-right"></i></button>
-                    </div>
-                </div>
-            </div> -->
-        </div>
-    </section>
-    <!-- Work Process End  -->
-
-    <!-- Services Start  -->
-
-    <!-- <section class="services section-padding">
-        <div class="container">
-            <div class="row">
-                <h2 class="text-center w-100 service-heading">We Provide a Platform To Easily
-                    <span class="highlight">Build a Website</span> </h2>
-            </div>
-        </div>
-
-        <div class="container text-center mt-5">
-            <div class="row mx-auto my-auto">
-                <div id="myCarousel" class="carousel slide w-100" data-ride="carousel">
-                    <div class=".service-carousel carousel-inner w-100" role="listbox">
-                        <div class="carousel-item active">
-                            <div class="col-lg-4 col-md-6 col-sm-12 col-12">
-                                <div class="card service-card" style="width: 18rem;">
-                                    <img class="card-img-top"
-                                        src="./asset/image/inspiration-ideas-design-creative-thinking-word.jpg"
-                                        alt="Card image cap">
-                                    <div class="card-body bg-white">
-                                        <h5 class="card-title">UI/UX</h5>
-                                        <p class="card-text">Lorem ipsum dolor sit amet, consectet adipiscing .
-                                            dignissim.consectet</p>
-                                        <a href="#" class="service-link">Learn More <i
-                                                class="fas fa-angel-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="col-lg-4 col-md-6 col-sm-12 col-12">
-                                <div class="card service-card" style="width: 18rem;">
-                                    <img class="card-img-top"
-                                        src="./asset/image/web-design-concepts-with-blurred-background.jpg"
-                                        alt="Card image cap">
-                                    <div class="card-body bg-white">
-                                        <h5 class="card-title">Website Optimization</h5>
-                                        <p class="card-text">Lorem ipsum dolor sit amet, consectet adipiscing .
-                                            dignissim.consectet</p>
-                                        <a href="#" class="">Learn More <i class="fas fa-angel-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="col-lg-4 col-md-6 col-sm-12 col-12">
-                                <div class="card service-card" style="width: 18rem;">
-                                    <img class="card-img-top" src="./asset/image/creative-postcard-set-blue-wall.jpg"
-                                        alt="Card image cap">
-                                    <div class="card-body bg-white">
-                                        <h5 class="card-title">Social Media Marketinh</h5>
-                                        <p class="card-text">Lorem ipsum dolor sit amet, consectet adipiscing .
-                                            dignissim.consectet</p>
-                                        <a href="#" class="">Learn More <i class="fas fa-angel-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="col-lg-4 col-md-6 col-sm-12 col-12">
-                                <div class="card service-card" style="width: 18rem;">
-                                    <img class="card-img-top"
-                                        src="./asset/image/inspiration-ideas-design-creative-thinking-word.jpg"
-                                        alt="Card image cap">
-                                    <div class="card-body bg-white">
-                                        <h5 class="card-title">UI/UX</h5>
-                                        <p class="card-text">Lorem ipsum dolor sit amet, consectet adipiscing .
-                                            dignissim.consectet</p>
-                                        <a href="#" class="">Learn More <i class="fas fa-angel-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="col-lg-4 col-md-6 col-sm-12 col-12">
-                                <div class="card service-card" style="width: 18rem;">
-                                    <img class="card-img-top"
-                                        src="./asset/image/web-design-concepts-with-blurred-background.jpg"
-                                        alt="Card image cap">
-                                    <div class="card-body bg-white">
-                                        <h5 class="card-title">UI/UX</h5>
-                                        <p class="card-text">Lorem ipsum dolor sit amet, consectet adipiscing .
-                                            dignissim.consectet</p>
-                                        <a href="#" class="">Learn More <i class="fas fa-angel-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="carousel-item">
-                            <div class="col-lg-4 col-md-6 col-sm-12 col-12">
-                                <div class="card service-card" style="width: 18rem;">
-                                    <img class="card-img-top" src="./asset/image/creative-postcard-set-blue-wall.jpg"
-                                        alt="Card image cap">
-                                    <div class="card-body bg-white">
-                                        <h5 class="card-title">UI/UX</h5>
-                                        <p class="card-text">Lorem ipsum dolor sit amet, consectet adipiscing .
-                                            dignissim.consectet</p>
-                                        <a href="#" class="">Learn More <i class="fas fa-angel-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <a class="carousel-control-prev w-auto " href="#myCarousel" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon service-control-prev" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next w-auto" href="#myCarousel" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon service-control-next" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
-    <!-- Services End  -->
-
-    <!-- Testimonial Start  -->
-
-    <!-- <section class="testimonial section-padding">
-        <div class="container">
-            <div class="card col-md-12 mt-2">
-                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="100000">
-                    <div class="w-100 carousel-inner mb-5" role="listbox">
-                        <div class="carousel-item active">
-
-                            <div class="row">
-                                <div class="col-lg-7 d-flex flex-column justify-content-center">
-                                    <div class="testimonial-description">
-                                        <h3> Clients’ Love To Work With Us </h3>
-                                        <div class="client-meta-data">
-                                            <h5>John Doe</h5>
-                                            <p> UI/UX Designer</p>
-                                            <p class="clients-feedback"> 
-												Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-												mauris, et congue magna pretium n. Maecenas ac luctus odio,
-												In ut fermentum lorem. In nulla velit, mauris, et congue magna pretium magna
-												pretium n.
-											</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-5">
-                                    <div class="client-picture">
-                                        <img src="asset/image/client.png" alt="" class="img-fluid" />
-                                        <img src="asset/image/coma.svg" alt="" class="coma" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-                        <!--START php slide-->
-                        
-                        <!-- <div class="carousel-item">
-                            <div class="row">
-                                <div class="col-md-7 d-flex flex-column justify-content-center">
-                                    <div class="testimonial-description">
-                                        <h3> Clients’ Love To Work With Us </h3>
-                                        <div class="client-meta-data">
-                                            <h5>John Doe</h5>
-                                            <p>Web Designer</p>
-                                            <p class="clients-feedback">
-												Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-												mauris, et congue magna pretium n. Maecenas ac luctus odio,
-												In ut fermentum lorem. In nulla velit, mauris, et congue magna pretium magna
-												pretium n.
-											</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-5">
-                                    <div class="client-picture">
-                                        <img src="asset/image/client 2.png" alt="" />
-                                        <img src="./asset/image/coma.svg" alt="" class="coma" />
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div> -->
-                        
-                       <!-- END php-->
-                        
-                        
-<!-- 
-                    </div>
-
-                    <a class="carousel-control-prev testimonial-control" href="#carouselExampleControls" role="button"
-                        data-slide="prev">
-                        <span class="carousel-control-prev-icon testimonial-control-icon" aria-hidden="true"><i
-                                class="fas fa-chevron-left"></i></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next testimonial-control" href="#carouselExampleControls" role="button"
-                        data-slide="next">
-                        <span class="carousel-control-next-icon testimonial-control-icon" aria-hidden="true"><i
-                                class="fas fa-chevron-right"></i></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </div>
-
-            </div>
-
-
-        </div>
-    </section> -->
-    <!-- Testimonial End  -->
-
-    <!-- Portfolio Start  -->
-
-    <!-- <section class="portfolio section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h2 class="text-center portfolio-heading">Our Company <span class="highlight">Specializes</span> </h2>
-                </div>
-            </div>
-        </div>
-        <div class="container mt-5">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="portfolio-buttons text-center">
-                        <button type="button" class="control" data-filter="all">All</button>
-                        <button type="button" class="control" data-filter=".design">Company Formation</button>
-                        <button type="button" class="control" data-filter=".development">Attestation</button>
-                        <button type="button" class="control" data-filter=".seo">Translation</button>
-                        <button type="button" class="control" data-filter=".brand">PRO & GRO</button>
-                        <button type="button" class="control" data-filter=".photos">VISA</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container myMixCont text-center" data-ref="mixitup-container">
-            <div class="row d-flex justify-content-center ">
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                    <a href="#"><img src="./asset/image/Portfolio 1.svg"  class="img-fluid design" data-ref="mixitup-target"></a>
-                    <a href="#"><img src="./asset/image/Portfolio 3.svg"  class="img-fluid development" data-ref="mixitup-target"></a>
-                  </div>
-                  <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                  <a href="#"><img src="./asset/image/Portfolio 4.svg"  class="img-fluid brand" data-ref="mixitup-target"></a>
-                  <a href="#"><img src="./asset/image/Portfolio 5.svg"  class="img-fluid photos" data-ref="mixitup-target"></a>
-                  </div> 
-                  <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                  <a href="#"><img src="./asset/image/Portfolio 2.svg"  class="img-fluid development" data-ref="mixitup-target"></a>
-                  <a href="#"><img src="./asset/image/Portfolio 6.svg"  class="img-fluid seo" data-ref="mixitup-target"></a> 
-                  </div>
-            </div>
-            
-        </div>
-    </section> -->
-    <!-- Partner Start  -->
-
-    <!-- <section class="partners section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h2 class="text-center partner-heading">Business Partner Trusted
-                        <span class="highlight"> By The World's</span></h2>
-                </div>
-            </div>
-            <div class="row mt-5">
-                <div class="col-lg-3 col-md-6 d-flex justify-content-center">
-                    <div class="partner">
-                        <img src="./asset/image/A (3).png" alt="" class="img-fluid">
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 d-flex justify-content-center">
-                    <div class="partner">
-                        <img src="./asset/image/A (4).png" alt="" class="img-fluid">
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 d-flex justify-content-center">
-                    <div class="partner">
-                        <img src="./asset/image/A (2).png" alt="" class="img-fluid">
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 d-flex justify-content-center">
-                    <div class="partner">
-                        <img src="./asset/image/A (1).png" alt="" class="img-fluid">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-    <!-- Partner End  -->
-
-
-
-
-
-    <!-- Footer Start  -->
-
-    <section class="footer section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="footer-widget-1">
-                        <img src="./asset/image/Logo (2).png" alt="">
-                        <p>
-                           <!-- Contact us for our best service -->
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="footer-widget-2">
-                        <h3>Work</h3>
-                        <ul>
-                            <li><a href="#">Case Studies</a></li>
-                            <li><a href="#">Gallery</a></li>
-                            <li><a href="#">Dribble</a></li>
-                            <li><a href="#">Instagram</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="footer-widget-3">
-                        <h3>Company</h3>
-                        <ul>
-                            <li><a href="#">Company</a></li>
-                            <li><a href="#">Article</a></li>
-                            <li><a href="#">Testimonial</a></li>
-                            <li><a href="#">FAQ's</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="footer-widget-4">
-                        <h3>Contact Us  <br><br></h3>
-                       <a href="https://wa.me/+971506512466">+971 506512466</a>
-                        <a href="mailto:info@tamkinexpress.com">info@tamkinexpress.com</a> 
-                            <p> Abudhabi UAE
-                        </p>
-                        <ul>
-                            <li><a href="https://www.facebook.com/profile.php?id=61562967317988"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="https://x.com/tamkinexpress"><i class="fa-brands fa-x"></i></a></li>
-                            <li><a href="https://www.instagram.com/tamkin.express/"><i class="fab fa-instagram"></i></a></li>
-                            <li><a href="https://wa.me/+971506512466"><i class="fa-brands fa-whatsapp"></i></a></li>
-                            <!-- <li><a href="https://wa.me/+971506512466"><i class="fas fa-comments"></i></a></li> -->
-                            <li><a href="https://www.linkedin.com/company/tamkin-express-business-services-llc"><i class="fa-brands fa-linkedin"></i></a></li>
-
-
-                        </ul>
-                    </div>
-                </div>
-            </div>
-			
-			<div class="row" style="border-top: 1px solid #ddd; padding-top: 10px;">
-                <div class="col-md-10">
-                    <div class="copyright-text">
-                        <p>
-                            Copyright © 2024 TamkinExpress, All Rights Reserved.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-2">
-                    <div class="messenger">
-                        <i class="fab fa-youtube"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Footer End  -->
-    <!--Adding Scripts-->
-        <Section  class="chatbox-wrapper">
-            <div id="click" class="chatbox-toggle">
-                <i class='fas fa-robot'></i>
-            </div>
-            <div class="chatbox-message-wrapper">
-                <div class="chatbox-message-header">
-                    <div class="chatbox-message-profile">
-                        <img src="asset\image\1 (2).png" alt="" class="chatbox-message-image">
-                        <div>
-                            <h4 class="chatbox-message-name">TamkinExpress</h4>
-                            <p class="chatbox-message-status">online</p>
-                        </div>
-                    </div>
-                    <div class="chatbox-message-dropdown">
-                        <i class='bx bx-dots-vertical-rounded chatbox-message-dropdown-toggle'></i>
-                        <ul class="chatbox-message-dropdown-menu">
-                            <li>
-                                <a href="#">Search</a>
-                            </li>
-                            <li>
-                                <a href="#">Report</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="chatbox-message-content">
-                    <h4 class="chatbox-message-no-message"></h4>
-                    <!-- <div class="chatbox-message-item sent">
-                        <span class="chatbox-message-item-text">
-                            Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Quod, fugiat?
-                        </span>
-                        <span class="chatbox-message-item-time">08:30</span>
-                    </div>
-                    <div class="chatbox-message-item received">
-                        <span class="chatbox-message-item-text">
-                            Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Quod, fugiat?
-                        </span>
-                        <span class="chatbox-message-item-time">08:30</span>
-                    </div> -->
-                </div>
-                <div class="chatbox-message-bottom">
-                    <form action="#" class="chatbox-message-form" name="chat-form">
-                        <textarea cols="40" rows="1" placeholder="Type message..." class="chatbox-message-input" id="name" name="name"></textarea>
-                        <button type="submit" class="chatbox-message-submit"><i class='bx bx-send' ></i></button>
-                    </form>
-                </div>
-            </div>
-            <script>
-                const scriptURL ='https://script.google.com/macros/s/AKfycbxSgJW29b_i_Gk8VpDBmwYDPrnpE9n_wuZI_DcWi3HP-RMheIxE7x_YjMJVtgA2oVSHIQ/exec'
+    </footer>
+    <script>
+        const scriptURL ='https://script.google.com/macros/s/AKfycbxSgJW29b_i_Gk8VpDBmwYDPrnpE9n_wuZI_DcWi3HP-RMheIxE7x_YjMJVtgA2oVSHIQ/exec'
 const form = document.forms['chat-form']
 form.addEventListener('submit', e => {
 e.preventDefault()
@@ -637,37 +445,36 @@ fetch(scriptURL, { method: 'POST', body: new FormData(form)})
 // .catch(error => console.error('Error!', error.message))
 })
 
-              </script>
-        </Section>
+      </script>
+</Section>
 
+<!-- Footer End  -->
+<!--Adding Scripts-->
+<script src="chatbox.js"></script>
 
-        <Section  class="chatbox-wrapper1">
-          <a href="https://wa.me/+971506512466">  <div id="click" class="chatbox-toggle1">
-                <i class='fa-brands fa-whatsapp'></i>
-            </div></a>
-            
-   
-        </Section>
-        <Section  class="chatbox-wrapper2">
-            <a href="mailto:info@tamkinexpress.com">  <div id="click" class="chatbox-toggle2">
-                  <i class='fas fa-envelope'></i>
-              </div></a>
-              
-     
-          </Section>
-        <script src="chatbox.js"></script>
-    <script src="chatbox.js"></script>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-        <script src="./asset/js/mixitup.min.js"></script>
-    <script src="./asset/js/main.js"></script>
-
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+    <script src="./asset/js/mixitup.min.js"></script>
+    <script src="./asset/js/main.js" type="module"></script>
 </body>
 
 </html>
+<Section  class="chatbox-wrapper1">
+    <a href="https://wa.me/+971506512466">  <div id="click" class="chatbox-toggle1">
+          <i class='fa-brands fa-whatsapp'></i>
+      </div></a>
+      
+
+  </Section>
+  <Section  class="chatbox-wrapper2">
+      <a href="mailto:info@tamkinexpress.com">  <div id="click" class="chatbox-toggle2">
+            <i class='fas fa-envelope'></i>
+        </div></a>
+        
+
+    </Section>
