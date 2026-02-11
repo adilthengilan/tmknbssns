@@ -66,72 +66,117 @@
     
     <!-- Structured Data - Organization Schema -->
     <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "TamkinExpress",
-            "alternateName": ["Tamkin Express", "Tamkin Express UAE", "TamkinExpress Dubai", "Tamkin", " Tamkin Express Abudhabi", " TamkinExpress Ajman", "Tamkin Express Ummu-al-quwain", "Tamkin Express Fujaira"],
-            "url": "https://tamkinexpress.com",
-            "logo": "https://tamkinexpress.com/asset/image/tamkin-logo.png",
-            "description": "Leading business registration and digital solutions provider in UAE offering complete business setup, legal translation, PRO Services, Company Formation, Visa Services, Business Consultation, web development, marketing, and technical solutions.",
-            "foundingDate": "2020",
-            "numberOfEmployees": "50-100",
-            "legalName": "TamkinExpress Business Services LLC",
-            "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "Musaffa , Maxim Building",
-                "addressLocality": "Abudhabi",
-                "addressRegion": "Abudhabi",
-                "addressCountry": "AE",
-                "postalCode": "00000"
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://tamkinexpress.com/#organization",
+      "name": "TamkinExpress",
+      "alternateName": [
+        "Tamkin Express",
+        "Tamkin Express UAE",
+        "TamkinExpress Abu Dhabi",
+        "TamkinExpress Dubai"
+      ],
+      "url": "https://tamkinexpress.com",
+      "logo": "https://tamkinexpress.com/asset/image/tamkin-logo.png",
+      "description": "TamkinExpress is a leading provider of business services and the best digital marketing in UAE, offering SEO, Google Ads, web development, PRO services, company formation and visa services.",
+      "foundingDate": "2020",
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=61563209741328",
+        "https://www.instagram.com/tamkinexpress",
+        "https://x.com/tamkinexpress",
+        "https://www.tiktok.com/@aadiilll.___"
+      ],
+      "knowsAbout": [
+        "Best Digital Marketing in UAE",
+        "Digital Marketing Services UAE",
+        "SEO Services UAE",
+        "Google Ads Management UAE",
+        "Social Media Marketing UAE",
+        "Business Registration UAE",
+        "Company Formation UAE",
+        "PRO Services UAE",
+        "Web Development UAE"
+      ]
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://tamkinexpress.com/#localbusiness",
+      "name": "TamkinExpress Business Services LLC",
+      "image": "https://tamkinexpress.com/asset/image/tamkin-logo.png",
+      "url": "https://tamkinexpress.com",
+      "telephone": "+971588967713",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Office No. 49, Maxim Pharmacy Building, Musaffah M43",
+        "addressLocality": "Abu Dhabi",
+        "addressRegion": "Abu Dhabi",
+        "postalCode": "00000",
+        "addressCountry": "AE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "24.4539",
+        "longitude": "54.3773"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "United Arab Emirates"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Sunday",
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday"
+        ],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Digital Marketing & Business Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Best Digital Marketing Services in UAE"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "SEO Services in UAE"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Google Ads Management UAE"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Business Registration & PRO Services UAE"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
+</script>
 
-                
-            },
-            "contactPoint": [
-                {
-                    "@type": "ContactPoint",
-                    "telephone": "+971-588967713",
-                    "contactType": "customer service",
-                    "availableLanguage": ["English", "Arabic", "Hindi", "German", "French", "Malayalam", "Spanish", "Urdu", "Russian", "Chinese", "Mandari", "Persian"],
-                    "areaServed": "AE"
-                },
-                {
-                    "@type": "ContactPoint",
-                    "email": "info@tamkinexpress.com",
-                    "contactType": "customer service"
-                }
-            ],
-            "sameAs": [
-                "https://www.tiktok.com/@aadiilll.___?_t=ZS-8yDNS7xDxoW&_r=1",
-                "https://x.com/tamkinexpress?s=09",
-                "https://www.instagram.com/tamkinexpress?igsh=bW9ubHZzbnNqMzE=",
-                "https://www.facebook.com/profile.php?id=61563209741328&mibextid=ZbWKwL"
-            ],
-            "areaServed": {
-                "@type": "Country",
-                "name": "United Arab Emirates"
-            },
-            "serviceArea": {
-                "@type": "AdministrativeArea",
-                "name": "United Arab Emirates"
-            },
-            "knowsAbout": [
-                 "Best Digital Marketing in UAE",
-                "Business Registration UAE",
-                "Company Formation UAE",
-                "Legal Translation",
-                "Visa Services",
-                "Family Visa",
-                "Golden Visa",
-                "Business Registration",
-                "Web Development",
-                "Digital Marketing",
-                "Technical Solutions",
-                "Business Consultancy"
-            ],
-            "slogan": "Your Complete Business Services Partner in UAE"
-        }
-        </script>
         
 </head>
 <body>
