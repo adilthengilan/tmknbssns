@@ -233,7 +233,7 @@ section {
     border-radius: var(--border-radius);
     transition: all 0.3s ease;
     position: relative;
-    overflow: hidden;
+    overflow: hidden;   
 }
 
 .cta-button.primary {
@@ -259,7 +259,7 @@ section {
     color: var(--primary-color);
 }
 
-.cta-button.large {
+.cta-button.primary {
     padding: 1.2rem 2.5rem;
     font-size: 1.2rem;
 }
