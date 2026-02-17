@@ -297,7 +297,7 @@ section {
 .hero-title {
     color: var(--text-primary);
     margin-bottom: 1.5rem;
-    font-size: 36px;
+    font-size: 20px;
 }
 
 .highlight {
