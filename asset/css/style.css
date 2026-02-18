@@ -301,7 +301,7 @@ section {
     -webkit-text-fill-color: transparent;
     
    .hero-title {
-    color: #ffffff;
+    color: #ffffff;/* WHITE */
     margin-bottom: 1.8rem;
     font-size: clamp(3.2rem, 6.5vw, 4.8rem);
     font-weight: 700;
