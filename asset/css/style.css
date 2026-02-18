@@ -319,7 +319,7 @@ background-clip: text;
     font-size: 1.3rem;
     max-width: 600px;
     margin: 0 auto 2rem;
-    color: var(--text-secondary);
+    color: #ffffff;
 }
 
 .hero-cta {
