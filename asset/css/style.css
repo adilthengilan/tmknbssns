@@ -294,11 +294,13 @@ section {
     animation: fadeInUp 1s ease-out;
 }
 
+.hero-title,
+.hero-title .highlight {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    background: none !important;
+}
 
-.highlight {
-    background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     
    .hero-title {
     color: #ffffff !important;
