@@ -313,9 +313,7 @@ section {
 }
 
     
-background-clip: text;
-    position: relative;
-}
+
 
 .hero-subtitle {
     font-size: 1.3rem;
