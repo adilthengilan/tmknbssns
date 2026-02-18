@@ -294,18 +294,21 @@ section {
     animation: fadeInUp 1s ease-out;
 }
 
-.hero-title {
-    color: var(--text-primary);
-    margin-bottom: 1.5rem;
-    font-size: clamp(2.8rem, 6vw, 4.5rem);
-    font-weight: 500;
-}
 
 .highlight {
     background: var(--gradient-primary);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-clip: text;
+    
+    .hero-title {
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    font-size: clamp(3rem, 6vw, 4.5rem);
+    font-weight: 600;
+    letter-spacing: -0.5px;
+}
+    
+background-clip: text;
     position: relative;
 }
 
