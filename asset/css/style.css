@@ -266,12 +266,6 @@ section {
 }
 
 /* Hero Section */
-a[href*="seo"],
-a[href*="google-ads"],
-a[href*="google-business"] {
-  color: white;
-  text-decoration: none;
-}
 .hero-content p a:hover,
 .hero p a:hover {
   color: #00d4c8 !important;
