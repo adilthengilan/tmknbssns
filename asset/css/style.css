@@ -266,16 +266,12 @@ section {
 }
 
 /* Hero Section */
-.hero-content p a,
-.hero p a,
-.hero-text p a {
-  color: white !important;
-  text-decoration: none !important;
-  font-weight: 600;
-  border-bottom: 2px solid #00d4c8;
-  padding-bottom: 1px;
+a[href*="seo"],
+a[href*="google-ads"],
+a[href*="google-business"] {
+  color: white;
+  text-decoration: none;
 }
-
 .hero-content p a:hover,
 .hero p a:hover {
   color: #00d4c8 !important;
