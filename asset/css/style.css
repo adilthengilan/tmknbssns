@@ -71,8 +71,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
+    h1 {
     font-size: clamp(2.5rem, 5vw, 4.5rem);
     font-weight: 300;
+}
+
+.contact-heading {
+    font-size: 1.8rem !important;
+    font-weight: 400 !important;
+    color: #ffffff !important;
+    line-height: 1.2 !important;
+    margin-bottom: 1rem !important;
+}
+.contact-heading span {
+    color: #00d4c8 !important;
+    font-style: italic !important;
+    font-weight: 400 !important;
+}
 }
 
 h2 {
