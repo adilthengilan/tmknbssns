@@ -36,8 +36,7 @@ function toggleMobileMenu() {
 }
 
 function setupSmoothScrolling() {
-    const navLinks = document.querySelectorAll('.nav-link, .cta-button[href^="#"]');
-
+    const navLinks = document.querySelectorAll('.cta-button[href^="#"]');
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
             const href = link.getAttribute('href');
