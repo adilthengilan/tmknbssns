@@ -15,16 +15,17 @@
 
     /* ── CONTACT PAGE SPECIFIC ── */
     .contact-hero {
-      padding: 5rem 2rem 3rem;
+      padding: 2.5rem 2rem 1.5rem;
       text-align: center;
       background: linear-gradient(180deg, rgba(0,212,200,0.04) 0%, transparent 100%);
     }
     .contact-hero h1 {
-      font-size: 2rem;
-      font-weight: 700;
-      line-height: 1.1;
+      font-size: clamp(1.8rem, 3vw, 2.8rem);
+      font-weight: 400;
+      line-height: 1.2;
       margin-bottom: 1rem;
       color: #fff;
+      font-family: 'Montserrat', sans-serif;
     }
     .contact-hero h1 span { color: #00d4c8; font-style: italic; font-weight: 400; }
     .contact-hero p {
@@ -219,7 +220,7 @@
         <div class="ic-icon">✉️</div>
         <div class="ic-text">
           <h3>Email</h3>
-          <p><a href="mailto:info@tamkinexpress.com">info@tamkinexpress.com</a></p>
+          <p><a href="/cdn-cgi/l/email-protection#4b22252d240b3f2a262022252e333b392e383865282426"><span class="__cf_email__" data-cfemail="cda4a3aba28db9aca0a6a4a3a8b5bdbfa8bebee3aea2a0">[email&#160;protected]</span></a></p>
         </div>
       </div>
 
@@ -297,7 +298,7 @@
           <div style="margin-top:1rem; display:flex; flex-direction:column; gap:0.4rem;">
             <p style="color:#aaa; font-size:0.85rem;">📍 Office No. 49, Musaffah M43, Abu Dhabi – UAE</p>
             <p style="color:#aaa; font-size:0.85rem;">📞 +971 588967713</p>
-            <p style="color:#aaa; font-size:0.85rem;">✉️ info@tamkinexpress.com</p>
+            <p style="color:#aaa; font-size:0.85rem;">✉️ <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c8a1a6aea788bca9a5a3a1a6adb0b8baadbbbbe6aba7a5">[email&#160;protected]</a></p>
           </div>
         </div>
 
@@ -342,19 +343,7 @@
     </div>
   </footer>
 
-  <script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     function handleSubmit() {
       const fname = document.getElementById('fname').value.trim();
       const email = document.getElementById('email').value.trim();
-      const message = document.getElementById('message').value.trim();
-      if (!fname || !email || !message) {
-        alert('Please fill in your name, email, and message.');
-        return;
-      }
-      document.getElementById('contactForm').style.display = 'none';
-      document.getElementById('successMsg').style.display = 'block';
-    }
-  </script>
-
-</body>
-</html>
