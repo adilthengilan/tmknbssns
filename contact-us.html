@@ -4,194 +4,108 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Us – TamkinExpress</title>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Varela&display=swap" rel="stylesheet">
+  <!-- Same CSS as main site -->
+  <link rel="stylesheet" href="./asset/css/style.css">
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    /* ── FORCE BLACK BACKGROUND ── */
+    html, body { background: #0a0a0a !important; color: #fff !important; }
 
-    :root {
-      --teal: #00d4c8;
-      --teal-dim: rgba(0,212,200,0.1);
-      --teal-border: rgba(0,212,200,0.25);
-      --dark: #0d0d0d;
-      --card: #161616;
-      --text: #ffffff;
-      --muted: #999;
-      --border: rgba(255,255,255,0.07);
+    /* ── CONTACT PAGE SPECIFIC ── */
+    .contact-hero {
+      padding: 5rem 2rem 3rem;
+      text-align: center;
+      background: linear-gradient(180deg, rgba(0,212,200,0.04) 0%, transparent 100%);
     }
-
-    body {
-      background: var(--dark);
-      color: var(--text);
-      font-family: 'Outfit', sans-serif;
-      min-height: 100vh;
-      overflow-x: hidden;
-    }
-
-    /* ── NAV ── */
-    nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1rem 3rem;
-      border-bottom: 1px solid var(--border);
-      background: var(--dark);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    .logo-wrap { display: flex; align-items: center; gap: 0.5rem; }
-    .logo-wrap img { height: 36px; object-fit: contain; }
-    .logo-fallback { font-weight: 900; font-size: 1.3rem; color: var(--teal); display: none; }
-    nav ul { display: flex; align-items: center; list-style: none; }
-    nav ul li { display: flex; align-items: center; }
-    nav ul li::before { content: '•'; color: #444; margin: 0 0.5rem; font-size: 0.45rem; }
-    nav ul li:first-child::before { display: none; }
-    nav ul a { color: #aaa; text-decoration: none; font-size: 0.9rem; padding: 0.3rem 0.5rem; transition: color 0.2s; }
-    nav ul a:hover, nav ul a.active { color: #fff; }
-
-    /* ── MAIN SECTION ── */
-    .main-section {
-      min-height: calc(100vh - 65px);
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      position: relative;
-      overflow: hidden;
-    }
-
-    /* Background city image overlay */
-    .main-section::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(ellipse 80% 60% at 20% 50%, rgba(0,212,200,0.04) 0%, transparent 60%),
-        linear-gradient(135deg, #0d0d0d 0%, #141414 100%);
-      pointer-events: none;
-    }
-
-    /* ── LEFT SIDE ── */
-    .left-side {
-      position: relative;
-      z-index: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 4rem 3.5rem 4rem 3rem;
-    }
-
-    .tag {
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--teal);
-      margin-bottom: 1.5rem;
-    }
-
-    .left-side h1 {
-      font-size: clamp(2.2rem, 4vw, 3.8rem);
+    .contact-hero h1 {
+      font-size: clamp(2.2rem, 5vw, 4rem);
       font-weight: 700;
       line-height: 1.1;
-      letter-spacing: -0.02em;
-      margin-bottom: 1.2rem;
-    }
-    .left-side h1 span { color: var(--teal); font-style: italic; font-weight: 400; }
-
-    .left-side p {
-      color: var(--muted);
-      font-size: 0.97rem;
-      line-height: 1.75;
-      max-width: 420px;
-      margin-bottom: 2.5rem;
-    }
-
-    /* CTA Buttons */
-    .cta-buttons { display: flex; flex-direction: column; gap: 0.9rem; max-width: 320px; }
-
-    .btn-call {
-      display: flex; align-items: center; gap: 0.7rem;
-      background: var(--teal);
-      color: #000;
-      font-weight: 700;
-      font-size: 0.95rem;
-      font-family: 'Outfit', sans-serif;
-      padding: 0.9rem 1.4rem;
-      border-radius: 10px;
-      text-decoration: none;
-      transition: opacity 0.2s, transform 0.2s;
-    }
-    .btn-call:hover { opacity: 0.88; transform: translateY(-2px); }
-
-    .btn-wa {
-      display: flex; align-items: center; gap: 0.7rem;
-      background: transparent;
+      margin-bottom: 1rem;
       color: #fff;
-      font-weight: 600;
-      font-size: 0.95rem;
-      font-family: 'Outfit', sans-serif;
-      padding: 0.9rem 1.4rem;
+    }
+    .contact-hero h1 span { color: #00d4c8; font-style: italic; font-weight: 400; }
+    .contact-hero p {
+      color: #999;
+      font-size: 1rem;
+      max-width: 500px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.75;
+    }
+
+    /* ── MAIN GRID ── */
+    .contact-wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 2rem 5rem;
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 2rem;
+      align-items: start;
+    }
+
+    /* ── INFO CARDS ── */
+    .info-col { display: flex; flex-direction: column; gap: 1rem; }
+
+    .info-card {
+      background: #161616;
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 14px;
+      padding: 1.3rem 1.4rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      transition: border-color 0.3s, transform 0.25s;
+    }
+    .info-card:hover { border-color: rgba(0,212,200,0.3); transform: translateY(-2px); }
+    .ic-icon {
+      width: 42px; height: 42px;
+      background: rgba(0,212,200,0.1);
+      border: 1px solid rgba(0,212,200,0.2);
       border-radius: 10px;
-      border: 1px solid rgba(255,255,255,0.15);
-      text-decoration: none;
-      transition: border-color 0.2s, transform 0.2s;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem; flex-shrink: 0;
     }
-    .btn-wa:hover { border-color: #25D366; color: #25D366; transform: translateY(-2px); }
+    .ic-text h3 { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #00d4c8; margin-bottom: 0.3rem; }
+    .ic-text p { color: #ccc; font-size: 0.92rem; line-height: 1.55; }
+    .ic-text a { color: #ccc; text-decoration: none; transition: color 0.2s; }
+    .ic-text a:hover { color: #00d4c8; }
 
-    .contact-meta {
-      margin-top: 2rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
+    .wa-btn {
+      display: flex; align-items: center; justify-content: center; gap: 0.5rem;
+      background: #25D366; color: #fff;
+      font-weight: 700; font-size: 0.95rem;
+      border-radius: 12px; padding: 0.85rem 1.2rem;
+      text-decoration: none; transition: opacity 0.2s, transform 0.2s;
     }
-    .contact-meta a {
-      display: flex; align-items: center; gap: 0.5rem;
-      color: var(--muted);
-      font-size: 0.88rem;
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-    .contact-meta a:hover { color: var(--teal); }
+    .wa-btn:hover { opacity: 0.88; transform: translateY(-2px); }
 
-    /* ── RIGHT SIDE (FORM CARD) ── */
-    .right-side {
-      position: relative;
-      z-index: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 3rem 3rem 3rem 2rem;
-    }
-
+    /* ── FORM CARD ── */
     .form-card {
       background: #161616;
-      border: 1px solid var(--border);
+      border: 1px solid rgba(255,255,255,0.07);
       border-radius: 20px;
       padding: 2.2rem 2.4rem;
-      width: 100%;
-      max-width: 480px;
-      box-shadow: 0 40px 80px rgba(0,0,0,0.5);
-      position: relative;
+      box-shadow: 0 40px 80px rgba(0,0,0,0.4);
     }
-
     .form-card-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
+      display: flex; justify-content: space-between; align-items: flex-start;
       margin-bottom: 1.6rem;
     }
     .form-card-header h2 { font-size: 1.4rem; font-weight: 700; color: #fff; }
     .form-card-header p { font-size: 0.82rem; color: #666; margin-top: 0.2rem; }
     .send-icon {
       width: 44px; height: 44px;
-      background: var(--teal-dim);
-      border: 1px solid var(--teal-border);
+      background: rgba(0,212,200,0.1);
+      border: 1px solid rgba(0,212,200,0.25);
       border-radius: 50%;
       display: flex; align-items: center; justify-content: center;
-      font-size: 1.1rem;
-      flex-shrink: 0;
+      font-size: 1.1rem; flex-shrink: 0;
     }
 
-    .field { display: flex; flex-direction: column; gap: 0; margin-bottom: 0.9rem; }
+    .field { display: flex; flex-direction: column; margin-bottom: 0.9rem; }
     .field input,
     .field textarea,
     .field select {
@@ -200,204 +114,247 @@
       border-radius: 50px;
       padding: 0.85rem 1.2rem;
       color: #fff;
-      font-family: 'Outfit', sans-serif;
+      font-family: 'Montserrat', sans-serif;
       font-size: 0.92rem;
       outline: none;
-      transition: background 0.2s, box-shadow 0.2s;
+      transition: border-color 0.2s, box-shadow 0.2s;
       width: 100%;
       -webkit-appearance: none;
     }
-    .field textarea {
-      border-radius: 16px;
-      resize: vertical;
-      min-height: 90px;
-    }
+    .field textarea { border-radius: 16px; resize: vertical; min-height: 110px; }
     .field select { cursor: pointer; }
     .field input::placeholder,
     .field textarea::placeholder { color: #555; }
     .field input:focus,
     .field textarea:focus,
     .field select:focus {
-      background: #2a2a2a;
-      box-shadow: 0 0 0 2px rgba(0,212,200,0.3);
+      border-color: #00d4c8;
+      box-shadow: 0 0 0 2px rgba(0,212,200,0.15);
     }
     .field select option { background: #222; color: #fff; }
 
-    /* Phone row */
     .phone-row { display: flex; gap: 0.6rem; }
     .phone-prefix {
       display: flex; align-items: center; gap: 0.4rem;
-      background: #222;
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 50px;
-      padding: 0 1rem;
-      font-size: 0.88rem;
-      color: #aaa;
-      white-space: nowrap;
-      flex-shrink: 0;
+      background: #222; border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 50px; padding: 0 1rem;
+      font-size: 0.88rem; color: #aaa;
+      white-space: nowrap; flex-shrink: 0;
     }
     .phone-row input { flex: 1; }
 
     .submit-btn {
       width: 100%;
-      background: var(--teal);
-      color: #000;
-      border: none;
-      border-radius: 50px;
+      background: #00d4c8; color: #000;
+      border: none; border-radius: 50px;
       padding: 0.95rem;
-      font-family: 'Outfit', sans-serif;
-      font-weight: 700;
-      font-size: 0.97rem;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700; font-size: 0.97rem;
       cursor: pointer;
       transition: opacity 0.2s, transform 0.15s;
       margin-top: 0.3rem;
-      letter-spacing: 0.01em;
     }
     .submit-btn:hover { opacity: 0.85; transform: translateY(-1px); }
 
-    /* Success */
-    .success-msg { display: none; text-align: center; padding: 2rem 1rem; }
+    .success-msg { display: none; text-align: center; padding: 2.5rem 1rem; }
     .success-msg .check { font-size: 3rem; margin-bottom: 0.8rem; }
-    .success-msg h3 { font-size: 1.3rem; font-weight: 700; color: var(--teal); margin-bottom: 0.4rem; }
+    .success-msg h3 { font-size: 1.3rem; font-weight: 700; color: #00d4c8; margin-bottom: 0.4rem; }
     .success-msg p { color: #666; font-size: 0.88rem; }
 
-    /* ── FOOTER ── */
-    footer {
-      text-align: center;
-      padding: 1.5rem 3rem;
-      border-top: 1px solid var(--border);
-      color: var(--muted);
-      font-size: 0.82rem;
-    }
-    footer a { color: var(--teal); text-decoration: none; }
-
-    /* ── MOBILE ── */
     @media (max-width: 860px) {
-      nav { padding: 1rem 1.5rem; }
-      nav ul { display: none; }
-      .main-section { grid-template-columns: 1fr; min-height: auto; }
-      .left-side { padding: 3rem 1.5rem 2rem; }
-      .right-side { padding: 0 1.5rem 3rem; }
-      .form-card { max-width: 100%; }
-      footer { padding: 1.5rem; }
+      .contact-wrap { grid-template-columns: 1fr; }
+      .contact-hero { padding: 3rem 1.5rem 2rem; }
+      .contact-wrap { padding: 0 1.5rem 3rem; }
     }
   </style>
 </head>
 <body>
 
-  <!-- NAV -->
-  <nav>
-    <div class="logo-wrap">
-      <img src="./asset/logo_coloured.png" alt="TamkinExpress" onerror="this.style.display='none'; document.querySelector('.logo-fallback').style.display='block'" />
-      <span class="logo-fallback">tamkin</span>
+  <!-- SAME NAVBAR AS MAIN SITE -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <a href="./index.html" style="text-decoration:none;">
+          <img src="./asset/logo_coloured.png" alt="TamkinExpress Logo" style="height:50px;width:140px;">
+        </a>
+      </div>
+      <div class="nav-menu" id="nav-menu">
+        <a href="./index.html" class="nav-link">Home</a>
+        <a href="./index.html#about" class="nav-link">About</a>
+        <a href="./index.html#services" class="nav-link">Services</a>
+        <a href="./portfolio.html" class="nav-link">Portfolio</a>
+        <a href="./contact-us.html" class="nav-link active">Contact</a>
+      </div>
     </div>
-    <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/about.html">About Us</a></li>
-      <li><a href="/#services">Services</a></li>
-      <li><a href="/portfolio.html">Portfolio</a></li>
-      <a href="/contact-us.html" class="active">Contact</a>
-    </ul>
   </nav>
 
-  <!-- MAIN -->
-  <section class="main-section">
-
-    <!-- LEFT -->
-    <div class="left-side">
-      <div class="tag">Get In Touch</div>
-      <h1>Let's grow your<br><span>business together</span></h1>
-      <p>Whether you're starting fresh or scaling up, our team is ready to guide you through every step of your UAE business journey.</p>
-
-      <div class="cta-buttons">
-        <a href="tel:+971588967713" class="btn-call">
-          📞 &nbsp;Call +971 58 896 7713
-        </a>
-        <a href="https://wa.me/971588967713" target="_blank" class="btn-wa">
-          💬 &nbsp;WhatsApp Us
-        </a>
-      </div>
-
-      <div class="contact-meta">
-        <a href="/cdn-cgi/l/email-protection#8ce5e2eae3ccf8ede1e7e5e2e9f4fcfee9ffffa2efe3e1">✉️ &nbsp;<span class="__cf_email__" data-cfemail="adc4c3cbc2edd9ccc0c6c4c3c8d5dddfc8dede83cec2c0">[email&#160;protected]</span></a>
-        <a href="#">📍 &nbsp;Office No. 49, Musaffah M43, Abu Dhabi – UAE</a>
-      </div>
-    </div>
-
-    <!-- RIGHT (FORM CARD) -->
-    <div class="right-side">
-      <div class="form-card">
-        <div class="form-card-header">
-          <div>
-            <h2>Send a Message</h2>
-            <p>Response within 24 hours</p>
-          </div>
-          <div class="send-icon">✈️</div>
-        </div>
-
-        <div id="contactForm">
-          <div class="field">
-            <input type="text" placeholder="Your Name" id="fname" />
-          </div>
-
-          <div class="field">
-            <div class="phone-row">
-              <div class="phone-prefix">🇦🇪 &nbsp;+971</div>
-              <input type="tel" placeholder="Phone Number" id="phone" />
-            </div>
-          </div>
-
-          <div class="field">
-            <input type="email" placeholder="Email Address" id="email" />
-          </div>
-
-          <div class="field">
-            <select id="service">
-              <option value="" disabled selected>Select Requirement</option>
-              <option>Business Registration</option>
-              <option>Employment & Family Visa</option>
-              <option>Golden Visa</option>
-              <option>Digital Marketing</option>
-              <option>Web Development</option>
-              <option>Mobile App Development</option>
-              <option>PRO Services</option>
-              <option>CICPA & Security Passes</option>
-              <option>Certificate Attestation</option>
-              <option>Legal Translation</option>
-              <option>Other</option>
-            </select>
-          </div>
-
-          <div class="field">
-            <textarea placeholder="Business Activity / Message…" id="message"></textarea>
-          </div>
-
-          <button class="submit-btn" onclick="handleSubmit()">Get Free Proposal →</button>
-        </div>
-
-        <div class="success-msg" id="successMsg">
-          <div class="check">✅</div>
-          <h3>Message Sent!</h3>
-          <p>Our team will get back to you within 24 hours.</p>
-        </div>
-      </div>
-    </div>
-
+  <!-- HERO -->
+  <section class="contact-hero">
+    <h1>Let's grow your <span>business together</span></h1>
+    <p>Whether you're starting fresh or scaling up, our team is ready to guide you through every step of your UAE business journey.</p>
   </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2025 TamkinExpress. All rights reserved. &nbsp;|&nbsp;
-      <a href="/">Home</a> &nbsp;|&nbsp;
-      <a href="/about.html">About</a> &nbsp;|&nbsp;
-      <a href="/#services">Services</a>
-    </p>
+  <!-- CONTACT GRID -->
+  <div class="contact-wrap">
+
+    <!-- INFO -->
+    <div class="info-col">
+      <div class="info-card">
+        <div class="ic-icon">📍</div>
+        <div class="ic-text">
+          <h3>Office Address</h3>
+          <p>Office No. 49, Maxim Pharmacy Building<br>Musaffah M43, Abu Dhabi – UAE</p>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="ic-icon">📞</div>
+        <div class="ic-text">
+          <h3>Phone</h3>
+          <p><a href="tel:+971588967713">+971 58 896 7713</a></p>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="ic-icon">✉️</div>
+        <div class="ic-text">
+          <h3>Email</h3>
+          <p><a href="mailto:info@tamkinexpress.com">info@tamkinexpress.com</a></p>
+        </div>
+      </div>
+
+      <a class="wa-btn" href="https://wa.me/971588967713" target="_blank">
+        💬 &nbsp;Chat on WhatsApp
+      </a>
+    </div>
+
+    <!-- FORM -->
+    <div class="form-card">
+      <div class="form-card-header">
+        <div>
+          <h2>Send a Message</h2>
+          <p>Response within 24 hours</p>
+        </div>
+        <div class="send-icon">✈️</div>
+      </div>
+
+      <div id="contactForm">
+        <div class="field">
+          <input type="text" placeholder="Your Name" id="fname" />
+        </div>
+
+        <div class="field">
+          <div class="phone-row">
+            <div class="phone-prefix">🇦🇪 &nbsp;+971</div>
+            <input type="tel" placeholder="Phone Number" id="phone" />
+          </div>
+        </div>
+
+        <div class="field">
+          <input type="email" placeholder="Email Address" id="email" />
+        </div>
+
+        <div class="field">
+          <select id="service">
+            <option value="" disabled selected>Select Requirement</option>
+            <option>Business Registration</option>
+            <option>Employment & Family Visa</option>
+            <option>Golden Visa</option>
+            <option>Digital Marketing</option>
+            <option>Web Development</option>
+            <option>Mobile App Development</option>
+            <option>PRO Services</option>
+            <option>CICPA & Security Passes</option>
+            <option>Certificate Attestation</option>
+            <option>Legal Translation</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <textarea placeholder="Business Activity / Message…" id="message"></textarea>
+        </div>
+
+        <button class="submit-btn" onclick="handleSubmit()">Get Free Proposal →</button>
+      </div>
+
+      <div class="success-msg" id="successMsg">
+        <div class="check">✅</div>
+        <h3>Message Sent!</h3>
+        <p>Our team will get back to you within 24 hours.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- SAME FOOTER AS MAIN SITE -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <img src="./asset/logo_coloured.png" style="height:60px; width:170px; margin-bottom:1rem;">
+          <p style="color:#aaa; font-size:0.88rem; line-height:1.7; max-width:220px;">Your trusted partner for business registration and complete business services in UAE.</p>
+          <div style="margin-top:1rem; display:flex; flex-direction:column; gap:0.4rem;">
+            <p style="color:#aaa; font-size:0.85rem;">📍 Office No. 49, Musaffah M43, Abu Dhabi – UAE</p>
+            <p style="color:#aaa; font-size:0.85rem;">📞 +971 588967713</p>
+            <p style="color:#aaa; font-size:0.85rem;">✉️ info@tamkinexpress.com</p>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h4 style="color:#00d4c8; font-size:0.85rem; letter-spacing:0.05em; margin-bottom:1rem;">Visa Services</h4>
+          <ul style="list-style:none; display:flex; flex-direction:column; gap:0.6rem;">
+            <li><a href="./golden-visa.html" style="color:#aaa; text-decoration:none; font-size:0.88rem;">Golden Visa</a></li>
+            <li><a href="./employment-visa.html" style="color:#aaa; text-decoration:none; font-size:0.88rem;">Employment Visa</a></li>
+            <li><a href="./employment-visa.html" style="color:#aaa; text-decoration:none; font-size:0.88rem;">Family Visa</a></li>
+            <li><a href="./cicpa.html" style="color:#aaa; text-decoration:none; font-size:0.88rem;">CICPA Passes</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4 style="color:#00d4c8; font-size:0.85rem; letter-spacing:0.05em; margin-bottom:1rem;">Other Services</h4>
+          <ul style="list-style:none; display:flex; flex-direction:column; gap:0.6rem;">
+            <li><a href="./digital-marketing.html" style="color:#aaa; text-decoration:none; font-size:0.88rem;">Digital Marketing</a></li>
+            <li><a href="./pro-services.html" style="color:#aaa; text-decoration:none; font-size:0.88rem;">PRO Services</a></li>
+            <li><a href="./legal-translation.html" style="color:#aaa; text-decoration:none; font-size:0.88rem;">Legal Translation</a></li>
+            <li><a href="./certificate-attestation.html" style="color:#aaa; text-decoration:none; font-size:0.88rem;">Certificate Attestation</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4 style="color:#00d4c8; font-size:0.85rem; letter-spacing:0.05em; margin-bottom:1rem;">Company</h4>
+          <ul style="list-style:none; display:flex; flex-direction:column; gap:0.6rem;">
+            <li><a href="./about.html" style="color:#aaa; text-decoration:none; font-size:0.88rem;">About Us</a></li>
+            <li><a href="./portfolio.html" style="color:#aaa; text-decoration:none; font-size:0.88rem;">Portfolio</a></li>
+            <li><a href="./contact-us.html" style="color:#aaa; text-decoration:none; font-size:0.88rem;">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 TamkinExpress. All rights reserved.</p>
+        <div class="social-links">
+          <a href="#" class="social-link">LinkedIn</a>
+          <a href="#" class="social-link">Twitter</a>
+          <a href="#" class="social-link">Instagram</a>
+        </div>
+      </div>
+    </div>
   </footer>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  <script>
     function handleSubmit() {
       const fname = document.getElementById('fname').value.trim();
       const email = document.getElementById('email').value.trim();
       const message = document.getElementById('message').value.trim();
       if (!fname || !email || !message) {
-        aler
+        alert('Please fill in your name, email, and message.');
+        return;
+      }
+      document.getElementById('contactForm').style.display = 'none';
+      document.getElementById('successMsg').style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
