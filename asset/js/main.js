@@ -40,7 +40,10 @@ function setupSmoothScrolling() {
 
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
-            e.preventDefault();
+            const href = link.getAttribute('href');
+
+            if (href && href.startsWith('#')) {
+                e.preventDefault();
             const href = link.getAttribute('href');
 
             if (href && href.startsWith('#')) {
