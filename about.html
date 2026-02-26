@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us — TamkinExpress</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --teal: #00d4c8;
+  --teal-dim: rgba(0,212,200,0.10);
+  --teal-glow: rgba(0,212,200,0.30);
+  --dark: #070b0b;
+  --dark2: #0d1515;
+  --card: #111c1c;
+  --border: rgba(0,212,200,0.12);
+  --text: #d8ecea;
+  --muted: #6b9290;
+  --white: #ffffff;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--dark);color:var(--text);font-family:'Inter',sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+
+/* NAV */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  padding:.9rem 5%;
+  background:rgba(7,11,11,0.90);
+  backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--border);
+}
+.logo{font-weight:800;font-size:1.25rem;color:var(--teal);text-decoration:none;letter-spacing:-.02em;white-space:nowrap;}
+.logo span{color:var(--white);}
+.nav-links{display:flex;gap:2rem;list-style:none;}
+.nav-links a{color:var(--muted);font-size:.85rem;text-decoration:none;transition:color .2s;white-space:nowrap;}
+.nav-links a:hover{color:var(--white);}
+.nav-links a.active{color:var(--teal);}
+.nav-btn{background:var(--teal);color:#000;padding:.5rem 1.1rem;border-radius:5px;font-weight:700;font-size:.82rem;text-decoration:none;white-space:nowrap;flex-shrink:0;transition:opacity .2s,transform .2s;}
+.nav-btn:hover{opacity:.85;transform:translateY(-1px);}
+
+/* HERO */
+.hero{min-height:100vh;display:grid;place-items:center;text-align:center;padding:9rem 6% 6rem;position:relative;overflow:hidden;}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 50% at 50% 30%, rgba(0,212,200,0.07) 0%, transparent 65%);}
+.hero-lines{position:absolute;inset:0;background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse 70% 60% at 50% 40%,black,transparent);opacity:.5;}
+.hero-inner{position:relative;max-width:780px;}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:.5rem;font-size:.73rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-bottom:1.6rem;opacity:0;animation:up .8s .1s ease forwards;}
+.hero-eyebrow::before,.hero-eyebrow::after{content:'';width:24px;height:1px;background:var(--teal);opacity:.5;}
+.hero h1{font-size:clamp(2.4rem,5.5vw,4.2rem);font-weight:800;line-height:1.1;color:var(--white);letter-spacing:-.03em;opacity:0;animation:up .8s .22s ease forwards;}
+.hero h1 em{font-style:normal;color:var(--teal);}
+.hero-sub{margin-top:1.4rem;font-size:1rem;line-height:1.82;color:var(--muted);max-width:540px;margin-inline:auto;opacity:0;animation:up .8s .34s ease forwards;}
+.hero-actions{display:flex;gap:.9rem;justify-content:center;flex-wrap:wrap;margin-top:2.4rem;opacity:0;animation:up .8s .46s ease forwards;}
+.btn{display:inline-flex;align-items:center;padding:.75rem 1.6rem;border-radius:6px;font-weight:600;font-size:.88rem;text-decoration:none;transition:all .25s;}
+.btn-solid{background:var(--teal);color:#000;}
+.btn-solid:hover{box-shadow:0 0 24px var(--teal-glow);transform:translateY(-2px);}
+.btn-outline{border:1px solid rgba(0,212,200,0.25);color:var(--text);}
+.btn-outline:hover{border-color:var(--teal);color:var(--teal);}
+
+/* DIVIDER */
+.divider{height:1px;margin:0 5%;background:linear-gradient(90deg,transparent,var(--border),transparent);}
+
+/* STORY */
+.section-wrap{max-width:1200px;margin:0 auto;padding:6rem 5%;}
+.section-label{font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--teal);margin-bottom:.9rem;}
+.section-title{font-size:clamp(1.8rem,3.5vw,2.7rem);font-weight:800;color:var(--white);line-height:1.18;letter-spacing:-.025em;margin-bottom:2rem;}
+.section-title em{font-style:normal;color:var(--teal);}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;}
+.story-text p{color:var(--muted);font-size:.97rem;line-height:1.85;margin-bottom:1.1rem;}
+.story-cards{display:flex;flex-direction:column;gap:1px;border:1px solid var(--border);border-radius:12px;overflow:hidden;}
+.s-card{padding:1.5rem 1.7rem;background:var(--card);border-bottom:1px solid var(--border);transition:background .25s;}
+.s-card:last-child{border-bottom:none;}
+.s-card:hover{background:rgba(0,212,200,0.05);}
+.s-card-n{font-size:.68rem;font-weight:700;letter-spacing:.15em;color:var(--teal);margin-bottom:.35rem;}
+.s-card-t{font-weight:700;color:var(--white);font-size:.92rem;margin-bottom:.3rem;}
+.s-card-d{color:var(--muted);font-size:.84rem;line-height:1.6;}
+
+/* VALUES */
+.values-section{background:var(--dark2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.values-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:12px;overflow:hidden;margin-top:3rem;}
+.val{background:var(--card);padding:2.2rem 1.8rem;position:relative;transition:background .25s;}
+.val:hover{background:rgba(0,212,200,0.05);}
+.val-n{font-size:2.5rem;font-weight:800;letter-spacing:-.04em;color:rgba(0,212,200,0.08);line-height:1;margin-bottom:1.2rem;}
+.val-title{font-weight:700;color:var(--white);font-size:.93rem;margin-bottom:.6rem;line-height:1.35;}
+.val-title span{color:var(--teal);}
+.val-desc{color:var(--muted);font-size:.84rem;line-height:1.65;}
+.val-line{position:absolute;bottom:0;left:1.8rem;width:0;height:2px;background:var(--teal);transition:width .4s ease;}
+.val:hover .val-line{width:40px;}
+
+/* WHY */
+.why-list{display:flex;flex-direction:column;gap:.8rem;}
+.why-item{display:flex;align-items:flex-start;gap:1.2rem;padding:1.5rem;border:1px solid var(--border);border-radius:10px;background:var(--card);transition:border-color .25s,background .25s;}
+.why-item:hover{border-color:rgba(0,212,200,0.28);background:rgba(0,212,200,0.04);}
+.why-dot{width:7px;height:7px;border-radius:50%;background:var(--teal);flex-shrink:0;margin-top:.5rem;}
+.why-item strong{display:block;font-weight:700;color:var(--white);font-size:.92rem;margin-bottom:.3rem;}
+.why-item span{color:var(--muted);font-size:.85rem;line-height:1.62;}
+.cta-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:2.8rem;position:sticky;top:5.5rem;}
+.cta-card h3{font-size:1.5rem;font-weight:800;color:var(--white);line-height:1.3;margin-bottom:1rem;letter-spacing:-.02em;}
+.cta-card h3 span{color:var(--teal);}
+.cta-card p{color:var(--muted);font-size:.9rem;line-height:1.75;margin-bottom:1.8rem;}
+.cta-card .btn-solid{display:block;text-align:center;}
+.cta-note{text-align:center;margin-top:.9rem;color:var(--muted);font-size:.77rem;}
+
+/* FINAL CTA */
+.final-cta{padding:7rem 5%;text-align:center;background:linear-gradient(180deg,var(--dark) 0%,var(--dark2) 100%);border-top:1px solid var(--border);position:relative;overflow:hidden;}
+.final-cta::before{content:'';position:absolute;bottom:-80px;left:50%;transform:translateX(-50%);width:500px;height:400px;background:radial-gradient(ellipse,rgba(0,212,200,0.08),transparent 70%);}
+.final-cta *{position:relative;}
+.final-cta .section-title{margin:0 auto 1.2rem;max-width:560px;}
+.final-cta p{color:var(--muted);font-size:.97rem;line-height:1.75;max-width:460px;margin:0 auto;}
+.final-cta .btn-solid{margin-top:2.2rem;display:inline-flex;}
+
+/* FOOTER */
+footer{padding:1.8rem 5%;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+footer p{color:var(--muted);font-size:.8rem;}
+footer a{color:var(--teal);text-decoration:none;}
+
+/* ANIMATION */
+@keyframes up{from{opacity:0;transform:translateY(22px);}to{opacity:1;transform:none;}}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease;}
+.reveal.visible{opacity:1;transform:none;}
+
+@media(max-width:900px){
+  .two-col{grid-template-columns:1fr;gap:3rem;}
+  .values-grid{grid-template-columns:1fr 1fr;}
+  .cta-card{position:static;}
+}
+@media(max-width:600px){
+  .nav-links,.nav-btn{display:none;}
+  .values-grid{grid-template-columns:1fr;}
+  .hero{padding-top:7rem;}
+  .section-wrap{padding:4rem 5%;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="logo">tamkin<span>Express</span></a>
+  <ul class="nav-links">
+    <li><a href="#">Home</a></li>
+    <li><a href="#" class="active">About Us</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Portfolio</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-btn">Plan a Consultation</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-lines"></div>
+  <div class="hero-inner">
+    <div class="hero-eyebrow">About TamkinExpress</div>
+    <h1>We don't just market.<br>We build <em>growth engines.</em></h1>
+    <p class="hero-sub">A UAE-based digital marketing agency that turns complex business challenges into scalable online success — with strategy, precision, and zero fluff.</p>
+    <div class="hero-actions">
+      <a href="#story" class="btn btn-solid">Our Story</a>
+      <a href="#why" class="btn btn-outline">Why Choose Us</a>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- STORY -->
+<div id="story" class="section-wrap">
+  <div class="two-col">
+    <div class="story-text reveal">
+      <p class="section-label">Our Story</p>
+      <h2 class="section-title">Born from a gap.<br>Built for <em>impact.</em></h2>
+      <p>TamkinExpress was founded after witnessing too many UAE businesses losing ground online — not because of bad products, but bad strategy. We set out to change that.</p>
+      <p>Today, we specialize in SEO, paid advertising, and Google Business Profile optimization tailored specifically for the UAE market. We understand the local landscape, the audience, and what it takes to dominate search results here.</p>
+      <p>Our model is simple: no fluff, no vendor juggling — just one integrated team that handles your registration, tech, marketing, and automation from end to end.</p>
+    </div>
+    <div class="story-cards reveal">
+      <div class="s-card">
+        <div class="s-card-n">01</div>
+        <div class="s-card-t">UAE Market Focus</div>
+        <div class="s-card-d">Deep understanding of UAE search behavior, local platforms, and business culture.</div>
+      </div>
+      <div class="s-card">
+        <div class="s-card-n">02</div>
+        <div class="s-card-t">End-to-End Execution</div>
+        <div class="s-card-d">Registration, tech, marketing, and automation — handled seamlessly under one roof.</div>
+      </div>
+      <div class="s-card">
+        <div class="s-card-n">03</div>
+        <div class="s-card-t">Strategy Before Action</div>
+        <div class="s-card-d">We analyze deeply before we recommend anything. Every move is backed by real data.</div>
+      </div>
+      <div class="s-card">
+        <div class="s-card-n">04</div>
+        <div class="s-card-t">Built to Scale</div>
+        <div class="s-card-d">Systems and strategies designed for long-term growth, not just short-term wins.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- VALUES -->
+<section class="values-section">
+  <div class="section-wrap" style="padding-top:6rem;padding-bottom:6rem;">
+    <p class="section-label">Our Values</p>
+    <h2 class="section-title">The principles that drive<br>everything we do.</h2>
+    <div class="values-grid">
+      <div class="val reveal">
+        <div class="val-n">01</div>
+        <div class="val-title">One team. <span>Built for efficiency.</span></div>
+        <div class="val-desc">No juggling multiple vendors. No endless delays. We handle everything seamlessly under one roof.</div>
+        <div class="val-line"></div>
+      </div>
+      <div class="val reveal">
+        <div class="val-n">02</div>
+        <div class="val-title"><span>Strategy</span> before solutions.</div>
+        <div class="val-desc">We analyze your business and UAE market needs before proposing anything. Every recommendation is data-backed.</div>
+        <div class="val-line"></div>
+      </div>
+      <div class="val reveal">
+        <div class="val-n">03</div>
+        <div class="val-title">Built to <span>scale.</span></div>
+        <div class="val-desc">Smart, integrated systems that grow with your success. We build infrastructure for 10x growth.</div>
+        <div class="val-line"></div>
+      </div>
+      <div class="val reveal">
+        <div class="val-n">04</div>
+        <div class="val-title">Radical <span>transparency.</span></div>
+        <div class="val-desc">You always know where your budget goes and what it generates. Clear reporting, zero surprises.</div>
+        <div class="val-line"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<div id="why" class="section-wrap">
+  <p class="section-label">Why TamkinExpress</p>
+  <h2 class="section-title">Built different.<br><em>Proven</em> to perform.</h2>
+  <div class="two-col">
+    <ul class="why-list">
+      <li class="why-item reveal">
+        <div class="why-dot"></div>
+        <div><strong>UAE Market Specialists</strong><span>We don't copy-paste global strategies. We're built for the UAE — its culture, its platforms, its search behavior.</span></div>
+      </li>
+      <li class="why-item reveal">
+        <div class="why-dot"></div>
+        <div><strong>Integrated, Agile Execution</strong><span>From strategy to deployment, everything happens in-house. Faster decisions, tighter campaigns, better results.</span></div>
+      </li>
+      <li class="why-item reveal">
+        <div class="why-dot"></div>
+        <div><strong>Data-Driven at Every Step</strong><span>We track what matters. Every campaign is measured, reported, and optimized based on real performance data.</span></div>
+      </li>
+      <li class="why-item reveal">
+        <div class="why-dot"></div>
+        <div><strong>No Lock-In Mindset</strong><span>We earn your trust every month. No long contracts — just consistent value and transparent communication.</span></div>
+      </li>
+    </ul>
+    <div class="cta-card reveal">
+      <h3>Ready to <span>grow</span> with us?</h3>
+      <p>Whether you're a startup finding your footing or an established business looking to scale, we have a strategy built for your stage and your goals.</p>
+      <a href="#" class="btn btn-solid">Plan a Consultation</a>
+      <p class="cta-note">Free 30-minute strategy session · No commitment</p>
+    </div>
+  </div>
+</div>
+
+<!-- FINAL CTA -->
+<section class="final-cta" id="contact">
+  <p class="section-label">Let's Talk</p>
+  <h2 class="section-title">Stop struggling.<br>Start <em>thriving.</em></h2>
+  <p>Join the businesses across UAE that chose strategy over guesswork — and never looked back.</p>
+  <a href="https://tamkinexpress.ae" class="btn btn-solid">Get Started Today →</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <a href="#" class="logo">tamkin<span>Express</span></a>
+  <p>© 2025 TamkinExpress. All rights reserved.</p>
+  <p>Built for UAE businesses · <a href="https://tamkinexpress.ae">tamkinexpress.ae</a></p>
+</footer>
+
+<script>
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target); } });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
