@@ -1245,3 +1245,21 @@ html {
     font-weight: 500;
     border: 1px solid rgba(0, 210, 204, 0.3);
 }
+/* btn-solid style */
+.btn.btn-solid {
+    display: inline-block;
+    background-color: #00d2cc;
+    color: #0a0a0a;
+    border: 2px solid #0a0a0a;
+    border-radius: 12px;
+    padding: 14px 28px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn.btn-solid:hover {
+    background-color: #00b3ad;
+    transform: translateY(-2px);
+}
