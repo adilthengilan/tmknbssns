@@ -26,8 +26,6 @@
       margin-bottom: 1rem;
       color: #fff;
       font-family: 'Montserrat', sans-serif;
-      font-size: 1.8rem !important;
-letter-spacing: -0.01em !important;
     }
     .contact-hero h1 span { color: #00d4c8; font-style: italic; font-weight: 400; }
     .contact-hero p {
@@ -168,28 +166,32 @@ letter-spacing: -0.01em !important;
       .contact-wrap { grid-template-columns: 1fr; }
       .contact-hero { padding: 3rem 1.5rem 2rem; }
       .contact-wrap { padding: 0 1.5rem 3rem; }
-}
-</style>
+    }
+  </style>
 </head>
 <body>
 
-<!-- NAV -->
-<nav>
-  <a href="/" class="logo">
-    <img src="./asset/logo_coloured.png" alt="TamkinExpress Logo" style="height:50px;width:140px;">
-  </a>
-  <ul class="nav-links">
-    <li><a href="/">Home</a></li>
-    <li><a href="/about.html" class="active">About Us</a></li>
-    <li><a href="/#services">Services</a></li>
-    <li><a href="/portfolio.html">Portfolio</a></li>
-    <li><a href="https://tamkinexpress.ae/contact-us.html">Contact</a></li>
-  </ul>
+  <!-- SAME NAVBAR AS MAIN SITE -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <a href="./index.html" style="text-decoration:none;">
+          <img src="./asset/logo_coloured.png" alt="TamkinExpress Logo" style="height:50px;width:140px;">
+        </a>
+      </div>
+      <div class="nav-menu" id="nav-menu">
+        <a href="./index.html" class="nav-link">Home</a>
+        <a href="./index.html#about" class="nav-link">About</a>
+        <a href="./index.html#services" class="nav-link">Services</a>
+        <a href="./portfolio.html" class="nav-link">Portfolio</a>
+        <a href="./contact-us.html" class="nav-link active">Contact</a>
+      </div>
+    </div>
   </nav>
 
   <!-- HERO -->
   <section class="contact-hero">
-    <p class="contact-heading">Let's grow your <span>business together</span></p>
+    <h1>Let's grow your <span>business together</span></h1>
     <p>Whether you're starting fresh or scaling up, our team is ready to guide you through every step of your UAE business journey.</p>
   </section>
 
