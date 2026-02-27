@@ -30,47 +30,126 @@ nav{
   background:rgba(7,11,11,0.90);
   backdrop-filter:blur(20px);
   border-bottom:1px solid var(--border);
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+nav.scrolled {
+  background: rgba(7,11,11,0.98);
+  border-bottom-color: rgba(0,212,200,0.18);
 }
 .logo{text-decoration:none;display:inline-flex;align-items:center;}
 .logo span{color:var(--white);}
 .nav-links{display:flex;gap:2rem;list-style:none;}
-.nav-links a{color:var(--muted);font-size:.85rem;text-decoration:none;transition:color .2s;white-space:nowrap;}
+.nav-links a{
+  color:var(--muted);font-size:.85rem;text-decoration:none;
+  transition:color .2s;white-space:nowrap;
+  position:relative;
+}
+.nav-links a::after{
+  content:'';position:absolute;bottom:-4px;left:0;
+  width:0;height:1.5px;background:var(--teal);
+  transition:width 0.3s ease;
+}
 .nav-links a:hover{color:var(--white);}
+.nav-links a:hover::after{width:100%;}
 .nav-links a.active{color:var(--teal);}
-.nav-btn{background:var(--teal);color:#000;padding:.5rem 1.1rem;border-radius:5px;font-weight:700;font-size:.82rem;text-decoration:none;white-space:nowrap;flex-shrink:0;transition:opacity .2s,transform .2s;}
-.nav-btn:hover{opacity:.85;transform:translateY(-1px);}
+.nav-links a.active::after{width:100%;}
+.nav-btn{
+  background:var(--teal);color:#000;padding:.5rem 1.1rem;
+  border-radius:5px;font-weight:700;font-size:.82rem;
+  text-decoration:none;white-space:nowrap;flex-shrink:0;
+  transition:opacity .2s,transform .2s, box-shadow 0.3s;
+}
+.nav-btn:hover{opacity:.85;transform:translateY(-1px); box-shadow: 0 0 20px var(--teal-glow);}
 
 /* HERO */
 .hero{min-height:100vh;display:grid;place-items:center;text-align:center;padding:9rem 6% 6rem;position:relative;overflow:hidden;}
 .hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 50% at 50% 30%, rgba(0,212,200,0.07) 0%, transparent 65%);}
-.hero-lines{position:absolute;inset:0;background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse 70% 60% at 50% 40%,black,transparent);opacity:.5;}
+.hero-lines{
+  position:absolute;inset:0;
+  background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);
+  background-size:60px 60px;
+  mask-image:radial-gradient(ellipse 70% 60% at 50% 40%,black,transparent);
+  opacity:.5;
+}
 .hero-inner{position:relative;max-width:780px;}
-.hero-eyebrow{display:inline-flex;align-items:center;gap:.5rem;font-size:.73rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-bottom:1.6rem;opacity:0;animation:up .8s .1s ease forwards;}
+
+/* Hero staggered fade-up animations */
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:.5rem;
+  font-size:.73rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--teal);margin-bottom:1.6rem;
+  opacity:0;animation:up .8s .1s cubic-bezier(0.22,1,0.36,1) forwards;
+}
 .hero-eyebrow::before,.hero-eyebrow::after{content:'';width:24px;height:1px;background:var(--teal);opacity:.5;}
-.hero h1{font-size:clamp(2.4rem,5.5vw,4.2rem);font-weight:800;line-height:1.1;color:var(--white);letter-spacing:-.03em;opacity:0;animation:up .8s .22s ease forwards;}
-.hero h1 em{font-style:normal;color:var(--teal);}
-.hero-sub{margin-top:1.4rem;font-size:1rem;line-height:1.82;color:var(--muted);max-width:540px;margin-inline:auto;opacity:0;animation:up .8s .34s ease forwards;}
-.hero-actions{display:flex;gap:.9rem;justify-content:center;flex-wrap:wrap;margin-top:2.4rem;opacity:0;animation:up .8s .46s ease forwards;}
+.hero h1{
+  font-size:clamp(2.4rem,5.5vw,4.2rem);font-weight:800;line-height:1.1;
+  color:var(--white);letter-spacing:-.03em;
+  opacity:0;animation:up .85s .22s cubic-bezier(0.22,1,0.36,1) forwards;
+}
+.hero h1 em{
+  font-style:normal;
+  background:linear-gradient(90deg, var(--teal), #ffffff, var(--teal), #80fffb, var(--teal));
+  background-size:300% auto;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+  animation: shimmer 4s linear infinite;
+}
+.hero-sub{
+  margin-top:1.4rem;font-size:1rem;line-height:1.82;color:var(--muted);
+  max-width:540px;margin-inline:auto;
+  opacity:0;animation:up .85s .34s cubic-bezier(0.22,1,0.36,1) forwards;
+}
+.hero-actions{
+  display:flex;gap:.9rem;justify-content:center;flex-wrap:wrap;margin-top:2.4rem;
+  opacity:0;animation:up .85s .46s cubic-bezier(0.22,1,0.36,1) forwards;
+}
 .btn{display:inline-flex;align-items:center;padding:.75rem 1.6rem;border-radius:6px;font-weight:600;font-size:.88rem;text-decoration:none;transition:all .25s;}
-.btn-solid{background:var(--teal);color:#000;}
+.btn-solid{background:var(--teal);color:#000;position:relative;overflow:hidden;}
+.btn-solid::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,0.22),transparent);
+  transform:translateX(-100%);transition:transform 0.5s;
+}
+.btn-solid:hover::after{transform:translateX(100%);}
 .btn-solid:hover{box-shadow:0 0 24px var(--teal-glow);transform:translateY(-2px);}
 .btn-outline{border:1px solid rgba(0,212,200,0.25);color:var(--text);}
 .btn-outline:hover{border-color:var(--teal);color:var(--teal);}
+
+/* Floating teal orb */
+.hero::after{
+  content:'';
+  position:absolute;bottom:-80px;right:-80px;
+  width:350px;height:350px;border-radius:50%;
+  background:radial-gradient(circle,rgba(0,212,200,0.07) 0%,transparent 70%);
+  animation:floatOrb 7s ease-in-out infinite;
+  pointer-events:none;
+}
 
 /* DIVIDER */
 .divider{height:1px;margin:0 5%;background:linear-gradient(90deg,transparent,var(--border),transparent);}
 
 /* STORY */
 .section-wrap{max-width:1200px;margin:0 auto;padding:6rem 5%;}
-.section-label{font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--teal);margin-bottom:.9rem;}
-.section-title{font-size:clamp(1.8rem,3.5vw,2.7rem);font-weight:800;color:var(--white);line-height:1.18;letter-spacing:-.025em;margin-bottom:2rem;}
+.section-label{
+  font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--teal);margin-bottom:.9rem;
+}
+.section-title{
+  font-size:clamp(1.8rem,3.5vw,2.7rem);font-weight:800;color:var(--white);
+  line-height:1.18;letter-spacing:-.025em;margin-bottom:2rem;
+}
 .section-title em{font-style:normal;color:var(--teal);}
 .two-col{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;}
 .story-text p{color:var(--muted);font-size:.97rem;line-height:1.85;margin-bottom:1.1rem;}
 .story-cards{display:flex;flex-direction:column;gap:1px;border:1px solid var(--border);border-radius:12px;overflow:hidden;}
-.s-card{padding:1.5rem 1.7rem;background:var(--card);border-bottom:1px solid var(--border);transition:background .25s;}
+.s-card{
+  padding:1.5rem 1.7rem;background:var(--card);
+  border-bottom:1px solid var(--border);
+  transition:background .25s, transform 0.25s, border-color 0.25s;
+}
 .s-card:last-child{border-bottom:none;}
-.s-card:hover{background:rgba(0,212,200,0.05);}
+.s-card:hover{background:rgba(0,212,200,0.05);transform:translateX(4px);border-left:2px solid var(--teal);}
 .s-card-n{font-size:.68rem;font-weight:700;letter-spacing:.15em;color:var(--teal);margin-bottom:.35rem;}
 .s-card-t{font-weight:700;color:var(--white);font-size:.92rem;margin-bottom:.3rem;}
 .s-card-d{color:var(--muted);font-size:.84rem;line-height:1.6;}
@@ -78,9 +157,17 @@ nav{
 /* VALUES */
 .values-section{background:var(--dark2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
 .values-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:12px;overflow:hidden;margin-top:3rem;}
-.val{background:var(--card);padding:2.2rem 1.8rem;position:relative;transition:background .25s;}
-.val:hover{background:rgba(0,212,200,0.05);}
-.val-n{font-size:2.5rem;font-weight:800;letter-spacing:-.04em;color:rgba(0,212,200,0.08);line-height:1;margin-bottom:1.2rem;}
+.val{
+  background:var(--card);padding:2.2rem 1.8rem;position:relative;
+  transition:background .25s, transform 0.3s;
+}
+.val:hover{background:rgba(0,212,200,0.05);transform:translateY(-4px);}
+.val-n{
+  font-size:2.5rem;font-weight:800;letter-spacing:-.04em;
+  color:rgba(0,212,200,0.08);line-height:1;margin-bottom:1.2rem;
+  transition: color 0.3s;
+}
+.val:hover .val-n{color:rgba(0,212,200,0.18);}
 .val-title{font-weight:700;color:var(--white);font-size:.93rem;margin-bottom:.6rem;line-height:1.35;}
 .val-title span{color:var(--teal);}
 .val-desc{color:var(--muted);font-size:.84rem;line-height:1.65;}
@@ -89,12 +176,22 @@ nav{
 
 /* WHY */
 .why-list{display:flex;flex-direction:column;gap:.8rem;}
-.why-item{display:flex;align-items:flex-start;gap:1.2rem;padding:1.5rem;border:1px solid var(--border);border-radius:10px;background:var(--card);transition:border-color .25s,background .25s;}
-.why-item:hover{border-color:rgba(0,212,200,0.28);background:rgba(0,212,200,0.04);}
-.why-dot{width:7px;height:7px;border-radius:50%;background:var(--teal);flex-shrink:0;margin-top:.5rem;}
+.why-item{
+  display:flex;align-items:flex-start;gap:1.2rem;padding:1.5rem;
+  border:1px solid var(--border);border-radius:10px;background:var(--card);
+  transition:border-color .25s,background .25s, transform 0.25s;
+}
+.why-item:hover{border-color:rgba(0,212,200,0.28);background:rgba(0,212,200,0.04);transform:translateX(5px);}
+.why-dot{width:7px;height:7px;border-radius:50%;background:var(--teal);flex-shrink:0;margin-top:.5rem;transition:box-shadow 0.3s;}
+.why-item:hover .why-dot{box-shadow:0 0 10px var(--teal);}
 .why-item strong{display:block;font-weight:700;color:var(--white);font-size:.92rem;margin-bottom:.3rem;}
 .why-item span{color:var(--muted);font-size:.85rem;line-height:1.62;}
-.cta-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:2.8rem;position:sticky;top:5.5rem;}
+.cta-card{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:14px;padding:2.8rem;position:sticky;top:5.5rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.cta-card:hover{border-color:rgba(0,212,200,0.28); box-shadow:0 0 30px rgba(0,212,200,0.06);}
 .cta-card h3{font-size:1.5rem;font-weight:800;color:var(--white);line-height:1.3;margin-bottom:1rem;letter-spacing:-.02em;}
 .cta-card h3 span{color:var(--teal);}
 .cta-card p{color:var(--muted);font-size:.9rem;line-height:1.75;margin-bottom:1.8rem;}
@@ -102,8 +199,17 @@ nav{
 .cta-note{text-align:center;margin-top:.9rem;color:var(--muted);font-size:.77rem;}
 
 /* FINAL CTA */
-.final-cta{padding:7rem 5%;text-align:center;background:linear-gradient(180deg,var(--dark) 0%,var(--dark2) 100%);border-top:1px solid var(--border);position:relative;overflow:hidden;}
-.final-cta::before{content:'';position:absolute;bottom:-80px;left:50%;transform:translateX(-50%);width:500px;height:400px;background:radial-gradient(ellipse,rgba(0,212,200,0.08),transparent 70%);}
+.final-cta{
+  padding:7rem 5%;text-align:center;
+  background:linear-gradient(180deg,var(--dark) 0%,var(--dark2) 100%);
+  border-top:1px solid var(--border);
+  position:relative;overflow:hidden;
+}
+.final-cta::before{
+  content:'';position:absolute;bottom:-80px;left:50%;transform:translateX(-50%);
+  width:500px;height:400px;
+  background:radial-gradient(ellipse,rgba(0,212,200,0.08),transparent 70%);
+}
 .final-cta *{position:relative;}
 .final-cta .section-title{margin:0 auto 1.2rem;max-width:560px;}
 .final-cta p{color:var(--muted);font-size:.97rem;line-height:1.75;max-width:460px;margin:0 auto;}
@@ -122,13 +228,73 @@ nav{
 .footer-social{display:flex;gap:1.5rem;}
 .footer-social a{color:#666;text-decoration:none;font-size:.82rem;transition:color .2s;}
 .footer-social a:hover{color:var(--teal);}
+
+/* ── ANIMATIONS ── */
+@keyframes up {
+  from { opacity:0; transform:translateY(22px); }
+  to   { opacity:1; transform:none; }
+}
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
+}
+@keyframes floatOrb {
+  0%,100% { transform: translateY(0) scale(1); }
+  50%     { transform: translateY(-20px) scale(1.05); }
+}
+@keyframes fadeLeft {
+  from { opacity:0; transform:translateX(-28px); }
+  to   { opacity:1; transform:none; }
+}
+@keyframes fadeRight {
+  from { opacity:0; transform:translateX(28px); }
+  to   { opacity:1; transform:none; }
+}
+@keyframes fadeUp {
+  from { opacity:0; transform:translateY(24px); }
+  to   { opacity:1; transform:none; }
+}
+@keyframes scaleIn {
+  from { opacity:0; transform:scale(0.94); }
+  to   { opacity:1; transform:scale(1); }
+}
+
+/* Reveal base — hidden until JS triggers */
+.reveal          { opacity:0; transform:translateY(28px);   transition:opacity .7s cubic-bezier(0.22,1,0.36,1), transform .7s cubic-bezier(0.22,1,0.36,1); }
+.reveal-left     { opacity:0; transform:translateX(-28px);  transition:opacity .7s cubic-bezier(0.22,1,0.36,1), transform .7s cubic-bezier(0.22,1,0.36,1); }
+.reveal-right    { opacity:0; transform:translateX(28px);   transition:opacity .7s cubic-bezier(0.22,1,0.36,1), transform .7s cubic-bezier(0.22,1,0.36,1); }
+.reveal-scale    { opacity:0; transform:scale(0.94);        transition:opacity .7s cubic-bezier(0.22,1,0.36,1), transform .7s cubic-bezier(0.22,1,0.36,1); }
+.reveal.visible, .reveal-left.visible, .reveal-right.visible, .reveal-scale.visible {
+  opacity:1; transform:none;
+}
+
+/* Stagger delays for child groups */
+.stagger > *:nth-child(1) { transition-delay:.05s; }
+.stagger > *:nth-child(2) { transition-delay:.15s; }
+.stagger > *:nth-child(3) { transition-delay:.25s; }
+.stagger > *:nth-child(4) { transition-delay:.35s; }
+.stagger > *:nth-child(5) { transition-delay:.45s; }
+
+/* Section label + title */
+.section-label { opacity:0; transform:translateY(12px); transition:opacity .5s ease, transform .5s ease; }
+.section-label.visible { opacity:1; transform:none; }
+
+/* Values section label/title */
+.val-header .section-label,
+.val-header .section-title { opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease; }
+.val-header .section-label.visible,
+.val-header .section-title.visible { opacity:1; transform:none; }
+
+/* Final CTA section */
+.final-cta .section-label { transition-delay:.05s; }
+.final-cta .section-title { opacity:0; transform:translateY(20px); transition:opacity .7s .15s ease, transform .7s .15s ease; }
+.final-cta .section-title.visible { opacity:1; transform:none; }
+.final-cta > p  { opacity:0; transform:translateY(16px); transition:opacity .7s .3s ease, transform .7s .3s ease; }
+.final-cta > p.visible { opacity:1; transform:none; }
+.final-cta .btn-solid { opacity:0; transform:translateY(14px); transition:opacity .6s .45s ease, transform .6s .45s ease; }
+.final-cta .btn-solid.visible { opacity:1; transform:none; }
+
 @media(max-width:768px){.footer-grid{grid-template-columns:1fr 1fr;gap:2rem;}}
-
-/* ANIMATION */
-@keyframes up{from{opacity:0;transform:translateY(22px);}to{opacity:1;transform:none;}}
-.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease;}
-.reveal.visible{opacity:1;transform:none;}
-
 @media(max-width:900px){
   .two-col{grid-template-columns:1fr;gap:3rem;}
   .values-grid{grid-template-columns:1fr 1fr;}
@@ -143,9 +309,9 @@ nav{
 </style>
 </head>
 <body>
- 
+
 <!-- NAV -->
-<nav>
+<nav id="navbar">
   <a href="/" class="logo">
     <img src="./asset/logo_coloured.png" alt="TamkinExpress Logo" style="height:50px;width:140px;">
   </a>
@@ -156,7 +322,8 @@ nav{
     <li><a href="/portfolio.html">Portfolio</a></li>
     <li><a href="https://tamkinexpress.ae/contact-us.html">Contact</a></li>
   </ul>
-  </nav>
+  <a href="contact-us.html" class="nav-btn">Get Started →</a>
+</nav>
 
 <!-- HERO -->
 <section class="hero">
@@ -164,7 +331,7 @@ nav{
   <div class="hero-lines"></div>
   <div class="hero-inner">
     <div class="hero-eyebrow">About TamkinExpress</div>
-    <h1>We don't just market <br>We build <em>growth engines </em></h1>
+    <h1>We don't just market <br>We build <em>growth engines</em></h1>
     <p class="hero-sub">A UAE-based digital marketing agency that turns complex business challenges into scalable online success — with strategy, precision, and zero fluff.</p>
     <div class="hero-actions">
       <a href="#story" class="btn btn-solid">Our Story</a>
@@ -178,30 +345,30 @@ nav{
 <!-- STORY -->
 <div id="story" class="section-wrap">
   <div class="two-col">
-    <div class="story-text reveal">
+    <div class="story-text reveal-left">
       <p class="section-label">Our Story</p>
-      <h2 class="section-title">Born from a gap <br>Built for <em>impact </em></h2>
+      <h2 class="section-title">Born from a gap <br>Built for <em>impact</em></h2>
       <p>TamkinExpress was founded after witnessing too many UAE businesses losing ground online — not because of bad products, but bad strategy. We set out to change that.</p>
       <p>Today, we specialize in SEO, paid advertising, and Google Business Profile optimization tailored specifically for the UAE market. We understand the local landscape, the audience, and what it takes to dominate search results here.</p>
       <p>Our model is simple: no fluff, no vendor juggling — just one integrated team that handles your registration, tech, marketing, and automation from end to end.</p>
     </div>
-    <div class="story-cards reveal">
-      <div class="s-card">
+    <div class="story-cards reveal-right stagger">
+      <div class="s-card reveal">
         <div class="s-card-n">01</div>
         <div class="s-card-t">UAE Market Focus</div>
         <div class="s-card-d">Deep understanding of UAE search behavior, local platforms, and business culture.</div>
       </div>
-      <div class="s-card">
+      <div class="s-card reveal">
         <div class="s-card-n">02</div>
         <div class="s-card-t">End-to-End Execution</div>
         <div class="s-card-d">Registration, tech, marketing, and automation — handled seamlessly under one roof.</div>
       </div>
-      <div class="s-card">
+      <div class="s-card reveal">
         <div class="s-card-n">03</div>
         <div class="s-card-t">Strategy Before Action</div>
         <div class="s-card-d">We analyze deeply before we recommend anything. Every move is backed by real data.</div>
       </div>
-      <div class="s-card">
+      <div class="s-card reveal">
         <div class="s-card-n">04</div>
         <div class="s-card-t">Built to Scale</div>
         <div class="s-card-d">Systems and strategies designed for long-term growth, not just short-term wins.</div>
@@ -215,9 +382,11 @@ nav{
 <!-- VALUES -->
 <section class="values-section">
   <div class="section-wrap" style="padding-top:6rem;padding-bottom:6rem;">
-    <p class="section-label">Our Values</p>
-    <h2 class="section-title">The principles that drive<br>everything we do </h2>
-    <div class="values-grid">
+    <div class="val-header">
+      <p class="section-label">Our Values</p>
+      <h2 class="section-title">The principles that drive<br>everything we do</h2>
+    </div>
+    <div class="values-grid stagger">
       <div class="val reveal">
         <div class="val-n">01</div>
         <div class="val-title">One team. <span>Built for efficiency.</span></div>
@@ -249,9 +418,9 @@ nav{
 <!-- WHY -->
 <div id="why" class="section-wrap">
   <p class="section-label">Why TamkinExpress</p>
-  <h2 class="section-title">Built different <br><em>Proven</em> to perform </h2>
+  <h2 class="section-title">Built different <br><em>Proven</em> to perform</h2>
   <div class="two-col">
-    <ul class="why-list">
+    <ul class="why-list stagger">
       <li class="why-item reveal">
         <div class="why-dot"></div>
         <div><strong>UAE Market Specialists</strong><span>We don't copy-paste global strategies. We're built for the UAE — its culture, its platforms, its search behavior.</span></div>
@@ -269,10 +438,10 @@ nav{
         <div><strong>No Lock-In Mindset</strong><span>We earn your trust every month. No long contracts — just consistent value and transparent communication.</span></div>
       </li>
     </ul>
-    <div class="cta-card reveal">
+    <div class="cta-card reveal-right">
       <h3>Ready to <span>grow</span> with us?</h3>
       <p>Whether you're a startup finding your footing or an established business looking to scale, we have a strategy built for your stage and your goals.</p>
-      <a href="contact-us.html"btn btn-solid">Plan a Consultation</a>
+      <a href="contact-us.html" class="btn btn-solid">Plan a Consultation</a>
       <p class="cta-note">Free 30-minute strategy session · No commitment</p>
     </div>
   </div>
@@ -281,16 +450,15 @@ nav{
 <!-- FINAL CTA -->
 <section class="final-cta" id="contact">
   <p class="section-label">Let's Talk</p>
-  <h2 class="section-title">Stop struggling <br>Start <em>thriving </em></h2>
+  <h2 class="section-title">Stop struggling <br>Start <em>thriving</em></h2>
   <p>Join the businesses across UAE that chose strategy over guesswork — and never looked back.</p>
   <a href="contact-us.html" class="btn btn-solid">Get Started Today →</a>
 </section>
 
 <!-- FOOTER -->
-<footer class="site-footer" id="contact">
+<footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-grid">
-
       <div class="footer-col">
         <img src="./asset/logo_coloured.png" style="height:60px;width:170px;margin-bottom:1rem;" alt="TamkinExpress Logo">
         <p style="color:#aaa;font-size:.88rem;line-height:1.7;max-width:220px;">Your trusted partner for business registration and complete business services in UAE.</p>
@@ -300,7 +468,6 @@ nav{
           <p style="color:#aaa;font-size:.85rem;">✉️ info@tamkinexpress.com</p>
         </div>
       </div>
-
       <div class="footer-col">
         <h4 class="footer-col-title">Visa Services</h4>
         <ul class="footer-links">
@@ -310,7 +477,6 @@ nav{
           <li><a href="./cicpa.html">CICPA Passes</a></li>
         </ul>
       </div>
-
       <div class="footer-col">
         <h4 class="footer-col-title">Other Services</h4>
         <ul class="footer-links">
@@ -320,7 +486,6 @@ nav{
           <li><a href="./certificate-attestation.html">Certificate Attestation</a></li>
         </ul>
       </div>
-
       <div class="footer-col">
         <h4 class="footer-col-title">Company</h4>
         <ul class="footer-links">
@@ -329,9 +494,7 @@ nav{
           <li><a href="/contact-us.html">Contact</a></li>
         </ul>
       </div>
-
     </div>
-
     <div class="footer-bottom">
       <p>© 2025 TamkinExpress. All rights reserved.</p>
       <div class="footer-social">
@@ -344,10 +507,50 @@ nav{
 </footer>
 
 <script>
+// ── Navbar scroll effect ──
+window.addEventListener('scroll', () => {
+  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 40);
+});
+
+// ── Universal reveal observer ──
 const io = new IntersectionObserver(entries => {
-  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target); } });
-}, { threshold: 0.1 });
-document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      io.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.12 });
+
+document.querySelectorAll(
+  '.reveal, .reveal-left, .reveal-right, .reveal-scale, .section-label, .section-title, .final-cta > p, .final-cta .btn-solid'
+).forEach(el => io.observe(el));
+
+// ── Val header labels ──
+const valHeaderIo = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.querySelectorAll('.section-label, .section-title').forEach((el, i) => {
+        setTimeout(() => el.classList.add('visible'), i * 150);
+      });
+      valHeaderIo.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.2 });
+document.querySelectorAll('.val-header').forEach(el => valHeaderIo.observe(el));
+
+// ── Final CTA stagger ──
+const ctaIo = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.querySelectorAll('.section-label, .section-title, p, .btn-solid').forEach((el, i) => {
+        setTimeout(() => el.classList.add('visible'), i * 150);
+      });
+      ctaIo.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.2 });
+document.querySelectorAll('.final-cta').forEach(el => ctaIo.observe(el));
 </script>
 </body>
 </html>
