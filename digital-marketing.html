@@ -1,149 +1,368 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Best Digital Marketing in UAE | SEO & Google Ads Agency Dubai | TamkinExpress</title>
+<meta name="description" content="Looking for the best digital marketing in UAE? TamkinExpress is a leading digital marketing agency in Dubai offering SEO, Google Ads, social media marketing, and performance marketing services across UAE."/>
+<meta name="keywords" content="best digital marketing in UAE, digital marketing agency in Dubai, SEO services UAE, Google Ads agency Dubai, performance marketing UAE"/>
+<link rel="canonical" href="https://tamkinexpress.com/digital-marketing.html"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "TamkinExpress",
+  "url": "https://tamkinexpress.com/digital-marketing.html",
+  "description": "TamkinExpress is one of the best digital marketing agencies in UAE offering SEO, Google Ads, and social media marketing services.",
+  "telephone": "+971506512466",
+  "areaServed": { "@type": "Country", "name": "United Arab Emirates" },
+  "address": { "@type": "PostalAddress", "addressLocality": "Dubai", "addressCountry": "AE" }
+}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --teal:      #00d4a8;
+    --teal-dim:  rgba(0,212,168,0.13);
+    --teal-glow: rgba(0,212,168,0.35);
+    --bg1:       #000000;
+    --bg2:       #0a0a0a;
+    --bg3:       #111111;
+    --card:      rgba(15,15,15,0.8);
+    --border:    rgba(0,212,168,0.18);
+    --white:     #ffffff;
+    --muted:     #7a90b8;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; color: var(--white); background: var(--bg1); overflow-x: hidden; }
 
-    <title>Best Digital Marketing in UAE | SEO & Google Ads Agency Dubai</title>
+  /* BG */
+  .bg-wrap {
+    position: fixed; inset: 0; z-index: 0;
+    background:
+      radial-gradient(ellipse 100% 70% at 0% 0%,   #0d0d0d 0%, transparent 55%),
+      radial-gradient(ellipse 80%  80% at 100% 100%, #080808 0%, transparent 55%),
+      radial-gradient(ellipse 55%  45% at 50% 40%,  #111111 0%, transparent 60%),
+      linear-gradient(160deg, #000000 0%, #0a0a0a 40%, #111111 70%, #000000 100%);
+  }
+  .bg-wrap::after {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 50% 40% at 80% 8%,  rgba(0,212,168,0.06) 0%, transparent 55%),
+      radial-gradient(ellipse 40% 30% at 15% 90%, rgba(0,212,168,0.04) 0%, transparent 55%);
+  }
+  .bg-grid {
+    position: fixed; inset: 0; z-index: 0;
+    background-image:
+      repeating-linear-gradient(90deg, rgba(0,212,168,0.028) 0,rgba(0,212,168,0.028) 1px,transparent 1px,transparent 100px),
+      repeating-linear-gradient(0deg,  rgba(0,212,168,0.028) 0,rgba(0,212,168,0.028) 1px,transparent 1px,transparent 100px);
+    pointer-events: none;
+  }
 
-    <meta name="description" content="Looking for the best digital marketing in UAE? TamkinExpress is a leading digital marketing agency in Dubai offering SEO, Google Ads, social media marketing, and performance marketing services across UAE.">
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 15px 56px;
+    background: rgba(0,0,0,0.92);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+  }
+  .logo { display: flex; align-items: center; gap: 10px; font-family: 'Syne',sans-serif; font-size: 1.1rem; font-weight: 800; color: var(--teal); }
+  .logo-box { width: 32px; height: 32px; background: linear-gradient(135deg,#00d4a8,#00ffcc); border-radius: 7px; display: flex; align-items: center; justify-content: center; font-size: 0.9rem; color: #020b1e; font-weight: 900; }
+  .nav-links { display: flex; gap: 26px; align-items: center; }
+  .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.82rem; font-weight: 500; letter-spacing: .05em; text-transform: uppercase; transition: color .2s; }
+  .nav-links a:hover { color: var(--teal); }
+  .nav-cta { background: var(--teal) !important; color: #020b1e !important; padding: 8px 20px; border-radius: 6px; font-weight: 700 !important; transition: box-shadow .2s,transform .2s !important; }
+  .nav-cta:hover { box-shadow: 0 0 20px var(--teal-glow) !important; transform: translateY(-1px) !important; }
 
-    <meta name="keywords" content="best digital marketing in UAE, digital marketing agency in Dubai, SEO services UAE, Google Ads agency Dubai, performance marketing UAE">
+  /* HERO */
+  .hero { position: relative; z-index: 1; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 130px 56px 70px; }
+  .badge { display: inline-flex; align-items: center; gap: 8px; background: var(--teal-dim); border: 1px solid var(--border); border-radius: 100px; padding: 6px 16px; font-size: .72rem; font-weight: 600; color: var(--teal); letter-spacing: .1em; text-transform: uppercase; margin-bottom: 24px; width: fit-content; animation: up .7s ease both; }
+  .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--teal); animation: blink 2s infinite; }
+  @keyframes blink { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.3;transform:scale(1.6)} }
+  .hero h1 { font-family: 'Syne',sans-serif; font-size: clamp(2.8rem,6vw,5rem); font-weight: 800; line-height: 1.08; max-width: 700px; animation: up .7s .1s ease both; }
+  .hero h1 em { font-style: normal; color: var(--teal); }
+  .hero > p { font-size: .98rem; color: var(--muted); max-width: 500px; line-height: 1.8; margin-top: 16px; animation: up .7s .2s ease both; }
+  .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 34px; animation: up .7s .3s ease both; }
+  .btn-teal { background: var(--teal); color: #020b1e; padding: 13px 30px; border-radius: 8px; font-weight: 700; font-size: .9rem; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: box-shadow .25s,transform .25s; }
+  .btn-teal:hover { box-shadow: 0 0 28px var(--teal-glow); transform: translateY(-2px); }
+  .btn-line { background: transparent; color: var(--white); padding: 13px 30px; border-radius: 8px; font-weight: 500; font-size: .9rem; text-decoration: none; border: 1px solid rgba(255,255,255,.18); display: inline-flex; align-items: center; gap: 8px; transition: border-color .25s,color .25s; }
+  .btn-line:hover { border-color: var(--teal); color: var(--teal); }
+  .hero-nums { display: flex; gap: 40px; flex-wrap: wrap; margin-top: 52px; padding-top: 34px; border-top: 1px solid var(--border); animation: up .7s .4s ease both; }
+  .n-v { font-family: 'Syne',sans-serif; font-size: 1.9rem; font-weight: 800; color: var(--teal); }
+  .n-l { font-size: .75rem; color: var(--muted); margin-top: 3px; text-transform: uppercase; letter-spacing: .07em; }
 
-    <link rel="canonical" href="https://tamkinexpress.com/digital-marketing.html">
+  /* SECTIONS */
+  section { position: relative; z-index: 1; }
+  .wrap { padding: 88px 56px; }
+  .tag  { font-size: .7rem; font-weight: 600; text-transform: uppercase; letter-spacing: .15em; color: var(--teal); display: block; margin-bottom: 9px; }
+  h2.ttl { font-family: 'Syne',sans-serif; font-size: clamp(1.8rem,3.5vw,2.7rem); font-weight: 800; line-height: 1.15; }
+  h2.ttl em { font-style: normal; color: var(--teal); }
+  .sub  { font-size: .93rem; color: var(--muted); max-width: 460px; line-height: 1.8; margin-top: 11px; }
 
-    <!-- Schema Markup -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "TamkinExpress",
-      "url": "https://tamkinexpress.com/digital-marketing.html",
-      "description": "TamkinExpress is one of the best digital marketing agencies in UAE offering SEO, Google Ads, and social media marketing services.",
-      "telephone": "+971506512466",
-      "areaServed": {
-        "@type": "Country",
-        "name": "United Arab Emirates"
-      },
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Dubai",
-        "addressCountry": "AE"
-      }
-    }
-    </script>
+  /* SERVICES */
+  .svc-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(270px,1fr)); gap: 18px; margin-top: 44px; }
+  .svc { background: var(--card); border: 1px solid var(--border); border-radius: 15px; padding: 28px 24px; position: relative; overflow: hidden; transition: transform .3s,box-shadow .3s; }
+  .svc::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg,transparent,var(--teal),transparent); transform: scaleX(0); transform-origin: center; transition: transform .4s; }
+  .svc:hover { transform: translateY(-6px); box-shadow: 0 16px 44px rgba(0,0,0,.45); }
+  .svc:hover::before { transform: scaleX(1); }
+  .svc-ico { width: 46px; height: 46px; background: var(--teal-dim); border: 1px solid var(--border); border-radius: 11px; display: flex; align-items: center; justify-content: center; font-size: 1.25rem; margin-bottom: 16px; }
+  .svc h3 { font-family: 'Syne',sans-serif; font-size: 1rem; font-weight: 700; margin-bottom: 7px; }
+  .svc p  { font-size: .82rem; color: var(--muted); line-height: 1.7; }
 
-    <link rel="stylesheet" href="./asset/css/style.css">
+  /* STATS */
+  .stats-band { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); background: rgba(0,212,168,.04); }
+  .stats-row { display: flex; flex-wrap: wrap; }
+  .s-cell { flex: 1; min-width: 150px; padding: 38px 24px; text-align: center; border-right: 1px solid var(--border); transition: background .3s; }
+  .s-cell:last-child { border-right: none; }
+  .s-cell:hover { background: rgba(0,212,168,.08); }
+  .s-ico { font-size: 1.5rem; margin-bottom: 8px; }
+  .s-n { font-family: 'Syne',sans-serif; font-size: 2rem; font-weight: 800; color: var(--teal); }
+  .s-l { font-size: .75rem; color: var(--muted); margin-top: 4px; text-transform: uppercase; letter-spacing: .07em; }
+
+  /* PROCESS */
+  .steps { display: flex; gap: 0; margin-top: 48px; position: relative; }
+  .steps::before { content: ''; position: absolute; top: 27px; left: 27px; right: 27px; height: 1px; background: linear-gradient(90deg,var(--teal),rgba(0,212,168,.05)); }
+  .step { flex: 1; text-align: center; padding: 0 14px; position: relative; z-index: 1; }
+  .s-n2 { width: 54px; height: 54px; margin: 0 auto 14px; background: linear-gradient(135deg,#00d4a8,#00ffcc); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Syne',sans-serif; font-size: 1.05rem; font-weight: 800; color: #020b1e; box-shadow: 0 0 26px rgba(0,212,168,.3); }
+  .step h4 { font-size: .86rem; font-weight: 600; margin-bottom: 6px; }
+  .step p  { font-size: .78rem; color: var(--muted); line-height: 1.6; }
+
+  /* PLATFORMS */
+  .pills { display: flex; flex-wrap: wrap; gap: 11px; margin-top: 38px; }
+  .pill { display: flex; align-items: center; gap: 8px; background: var(--card); border: 1px solid var(--border); border-radius: 100px; padding: 9px 18px; font-size: .84rem; font-weight: 500; transition: border-color .2s,color .2s,transform .2s; }
+  .pill:hover { border-color: var(--teal); color: var(--teal); transform: translateY(-2px); }
+  .pill span { font-size: 1rem; }
+
+  /* PACKAGES */
+  .pkg-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; margin-top: 44px; }
+  .pkg { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 32px 26px; position: relative; overflow: hidden; transition: transform .3s,box-shadow .3s; }
+  .pkg.hot { border-color: var(--teal); }
+  .pkg.hot::after { content: 'POPULAR'; position: absolute; top: 16px; right: 16px; background: var(--teal); color: #020b1e; font-size: .6rem; font-weight: 800; padding: 3px 10px; border-radius: 100px; letter-spacing: .1em; }
+  .pkg:hover { transform: translateY(-5px); box-shadow: 0 16px 44px rgba(0,0,0,.4); }
+  .pkg-n { font-size: .7rem; font-weight: 600; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); margin-bottom: 7px; }
+  .pkg-p { font-family: 'Syne',sans-serif; font-size: 1.9rem; font-weight: 800; margin-bottom: 4px; }
+  .pkg-p span { font-size: .8rem; color: var(--muted); font-family: 'Inter',sans-serif; font-weight: 400; }
+  .pkg-d { font-size: .8rem; color: var(--muted); line-height: 1.65; margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid var(--border); }
+  .pkg-list { display: flex; flex-direction: column; gap: 9px; margin-bottom: 24px; }
+  .pkg-li { display: flex; align-items: center; gap: 9px; font-size: .82rem; }
+  .pkg-li::before { content: '✦'; color: var(--teal); font-size: .65rem; flex-shrink: 0; }
+  .pkg-btn { display: block; text-align: center; padding: 11px; border-radius: 8px; font-weight: 700; font-size: .85rem; text-decoration: none; transition: transform .2s,box-shadow .2s; }
+  .pkg-btn-o { border: 1px solid var(--border); color: var(--white); }
+  .pkg-btn-o:hover { border-color: var(--teal); color: var(--teal); }
+  .pkg-btn-t { background: var(--teal); color: #020b1e; }
+  .pkg-btn-t:hover { box-shadow: 0 6px 22px var(--teal-glow); transform: translateY(-2px); }
+
+  /* CTA */
+  .cta-sec { padding: 88px 56px; text-align: center; background: radial-gradient(ellipse 60% 60% at 50% 50%,rgba(0,212,168,.05) 0%,transparent 70%); }
+  .cta-box { max-width: 620px; margin: 0 auto; background: var(--card); border: 1px solid var(--border); border-radius: 20px; padding: 52px 44px; position: relative; overflow: hidden; }
+  .cta-box::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg,transparent,var(--teal),transparent); }
+  .cta-box h2 { font-family: 'Syne',sans-serif; font-size: 1.9rem; font-weight: 800; margin-bottom: 11px; }
+  .cta-box h2 em { font-style: normal; color: var(--teal); }
+  .cta-box p { color: var(--muted); font-size: .93rem; line-height: 1.75; margin-bottom: 28px; }
+  .cta-btns { display: flex; gap: 11px; justify-content: center; flex-wrap: wrap; }
+
+  /* FOOTER */
+  footer {
+    padding: 48px 56px 28px;
+    border-top: 1px solid var(--border);
+    background: rgba(0,0,0,0.6);
+  }
+  .footer-top {
+    display: grid; grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 40px; margin-bottom: 36px;
+  }
+  .footer-brand strong { font-family: 'Syne',sans-serif; font-size: 1.1rem; color: var(--teal); display: block; margin-bottom: 10px; }
+  .footer-brand p { font-size: .82rem; color: var(--muted); line-height: 1.75; max-width: 280px; }
+  .footer-col h4 { font-family: 'Syne',sans-serif; font-size: .78rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: var(--teal); margin-bottom: 14px; }
+  .footer-col a, .footer-col p { display: block; font-size: .82rem; color: var(--muted); text-decoration: none; margin-bottom: 8px; transition: color .2s; }
+  .footer-col a:hover { color: var(--teal); }
+  .footer-bottom {
+    padding-top: 24px; border-top: 1px solid var(--border);
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: .75rem; color: var(--muted); flex-wrap: wrap; gap: 10px;
+  }
+  .footer-bottom a { color: var(--teal); text-decoration: none; }
+
+  /* WA */
+  .wa { position: fixed; bottom: 26px; right: 26px; z-index: 999; width: 52px; height: 52px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.35rem; text-decoration: none; box-shadow: 0 6px 22px rgba(37,211,102,.45); animation: waP 2.5s infinite; transition: transform .2s; }
+  .wa:hover { transform: scale(1.1); }
+  @keyframes waP { 0%,100%{box-shadow:0 6px 22px rgba(37,211,102,.4)} 50%{box-shadow:0 6px 34px rgba(37,211,102,.7)} }
+
+  @keyframes up { from{opacity:0;transform:translateY(22px)} to{opacity:1;transform:translateY(0)} }
+
+  @media (max-width:900px) {
+    nav { padding: 14px 20px; }
+    .nav-links { display: none; }
+    .hero, .wrap, .cta-sec { padding-left: 20px; padding-right: 20px; }
+    .stats-row { flex-direction: column; }
+    .s-cell { border-right: none; border-bottom: 1px solid var(--border); }
+    .steps { flex-direction: column; gap: 26px; }
+    .steps::before { display: none; }
+    .pkg-grid { grid-template-columns: 1fr; max-width: 360px; }
+    .cta-box { padding: 34px 20px; }
+    footer { padding: 36px 20px; }
+    .footer-top { grid-template-columns: 1fr; gap: 28px; }
+    .footer-bottom { flex-direction: column; text-align: center; }
+  }
+</style>
 </head>
-
 <body>
+<div class="bg-wrap"></div>
+<div class="bg-grid"></div>
 
-<section class="hero service-hero">
-    <div class="container">
-        <div class="hero-content">
-            <h1>Best Digital Marketing Agency in UAE for Business Growth</h1>
-            <p>
-                TamkinExpress is recognized as one of the best digital marketing agencies in UAE, helping businesses in Dubai, Abu Dhabi, and across the Emirates grow through SEO, Google Ads, and performance-driven marketing strategies.
-            </p>
-        </div>
-    </div>
+<!-- NAV -->
+<nav>
+  <div class="logo"><div class="logo-box">✦</div>TamkinExpress</div>
+  <div class="nav-links">
+    <a href="#services">Services</a>
+    <a href="#packages">Packages</a>
+    <a href="#contact" class="nav-cta">Free Audit</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="badge"><span class="dot"></span>UAE Digital Growth Partner</div>
+  <h1>Grow Your Brand<br>with <em>Smart Digital</em><br>Marketing</h1>
+  <p>Data-driven SEO, paid ads, and social media management — built for the UAE market, Arabic & English.</p>
+  <div class="hero-btns">
+    <a href="#contact" class="btn-teal">🚀 Get Free Audit →</a>
+    <a href="#services" class="btn-line">📊 Our Services</a>
+  </div>
+  <div class="hero-nums">
+    <div><div class="n-v">300%</div><div class="n-l">Avg. ROI Increase</div></div>
+    <div><div class="n-v">200+</div><div class="n-l">Brands Grown</div></div>
+    <div><div class="n-v">8+ Yrs</div><div class="n-l">UAE Expertise</div></div>
+  </div>
 </section>
 
-<section>
-    <div class="container">
-        <h2>Why TamkinExpress is the Best Digital Marketing in UAE</h2>
-        <p>
-            As a leading digital marketing agency in Dubai, we combine data-driven strategies with creative execution to deliver measurable ROI for businesses across UAE.
-        </p>
-        <ul>
-            <li>✔ 300% Average ROI Growth</li>
-            <li>✔ Certified Google Ads Experts</li>
-            <li>✔ Advanced SEO Specialists</li>
-            <li>✔ Transparent Reporting</li>
-            <li>✔ Customized Strategies for UAE Market</li>
-        </ul>
+<!-- SERVICES -->
+<section id="services"><div class="wrap">
+  <span class="tag">What We Do</span>
+  <h2 class="ttl">Full-Suite <em>Digital Marketing</em></h2>
+  <p class="sub">Every service tailored for the UAE — from Arabic content to local strategies that convert.</p>
+  <div class="svc-grid">
+    <div class="svc"><div class="svc-ico">🔍</div><h3>SEO</h3><p>Rank higher on Google UAE in Arabic & English — technical, on-page, and local SEO.</p></div>
+    <div class="svc"><div class="svc-ico">📱</div><h3>Social Media</h3><p>Content creation & management on Instagram, TikTok, LinkedIn, and Snapchat.</p></div>
+    <div class="svc"><div class="svc-ico">🎯</div><h3>Paid Ads (PPC)</h3><p>High-converting Google & Meta campaigns with full tracking and optimization.</p></div>
+    <div class="svc"><div class="svc-ico">✍️</div><h3>Content Marketing</h3><p>Bilingual blogs, videos, and copy crafted for your UAE customer's journey.</p></div>
+    <div class="svc"><div class="svc-ico">📧</div><h3>Email & WhatsApp</h3><p>Automated campaigns and WhatsApp Business flows that nurture and convert leads.</p></div>
+    <div class="svc"><div class="svc-ico">📈</div><h3>Analytics</h3><p>Custom GA4 dashboards and monthly reports — so you always know your numbers.</p></div>
+  </div>
+</div></section>
+
+
+
+
+
+<!-- PLATFORMS -->
+<section><div class="wrap" style="padding-top:0">
+  <span class="tag">Platforms We Master</span>
+  <h2 class="ttl">Every Channel, <em>One Team</em></h2>
+  <div class="pills">
+    <div class="pill"><span>🔍</span>Google Search</div>
+    <div class="pill"><span>📸</span>Instagram</div>
+    <div class="pill"><span>🎵</span>TikTok</div>
+    <div class="pill"><span>👻</span>Snapchat</div>
+    <div class="pill"><span>💼</span>LinkedIn</div>
+    <div class="pill"><span>📘</span>Meta / Facebook</div>
+    <div class="pill"><span>📺</span>YouTube Ads</div>
+    <div class="pill"><span>💬</span>WhatsApp Business</div>
+    <div class="pill"><span>📊</span>Google Analytics 4</div>
+  </div>
+</div></section>
+
+<!-- PACKAGES -->
+<section id="packages"><div class="wrap">
+  <span class="tag">Pricing</span>
+  <h2 class="ttl">Simple, <em>Transparent</em> Plans</h2>
+  <p class="sub">All plans include free onboarding, dedicated account manager, and monthly reports.</p>
+  <div class="pkg-grid">
+    <div class="pkg">
+      <div class="pkg-n">Starter</div>
+      <div class="pkg-p">AED 2,500 <span>/ mo</span></div>
+      <div class="pkg-d">For new businesses building their digital presence.</div>
+      <div class="pkg-list">
+        <div class="pkg-li">Social Media (2 platforms)</div>
+        <div class="pkg-li">12 Posts / month</div>
+        <div class="pkg-li">Basic SEO Audit</div>
+        <div class="pkg-li">Monthly Report</div>
+      </div>
+      <a href="#contact" class="pkg-btn pkg-btn-o">Get Started</a>
     </div>
+    <div class="pkg hot">
+      <div class="pkg-n">Growth</div>
+      <div class="pkg-p">AED 5,500 <span>/ mo</span></div>
+      <div class="pkg-d">Scale through ads, content & organic growth.</div>
+      <div class="pkg-list">
+        <div class="pkg-li">Social Media (4 platforms)</div>
+        <div class="pkg-li">24 Posts + Reels/Stories</div>
+        <div class="pkg-li">Google + Meta Ads</div>
+        <div class="pkg-li">SEO + 2 Blogs/month</div>
+        <div class="pkg-li">Bi-weekly Reports</div>
+      </div>
+      <a href="#contact" class="pkg-btn pkg-btn-t">Get Started →</a>
+    </div>
+    <div class="pkg">
+      <div class="pkg-n">Enterprise</div>
+      <div class="pkg-p">Custom <span>pricing</span></div>
+      <div class="pkg-d">Full-scale for established brands & e-commerce.</div>
+      <div class="pkg-list">
+        <div class="pkg-li">All platforms managed</div>
+        <div class="pkg-li">Unlimited content</div>
+        <div class="pkg-li">Full SEO + link building</div>
+        <div class="pkg-li">Dedicated team of 3</div>
+      </div>
+      <a href="#contact" class="pkg-btn pkg-btn-o">Request Quote</a>
+    </div>
+  </div>
+</div></section>
+
+<!-- CTA -->
+<section class="cta-sec" id="contact">
+  <div class="cta-box">
+    <h2>Ready to <em>Dominate</em><br>the UAE Market?</h2>
+    <p>Book a free 30-minute digital audit. We'll show you exactly where the growth is hiding — no commitment required.</p>
+    <div class="cta-btns">
+      <a href="https://wa.me/971506512466" class="btn-teal">💬 WhatsApp Now</a>
+      <a href="mailto:info@tamkinexpress.com" class="btn-line">✉️ Email Us</a>
+    </div>
+  </div>
 </section>
 
-<section>
-    <div class="container">
-        <h2>Complete Digital Marketing Services in UAE</h2>
-
-        <h3>SEO Services in UAE</h3>
-        <p>
-            Our SEO services improve search rankings through technical optimization, content strategy, keyword research, and high-authority link building across Dubai and UAE.
-        </p>
-
-        <h3>Google Ads Management Dubai</h3>
-        <p>
-            We create high-converting Google Ads campaigns to generate qualified leads and maximize return on ad spend (ROAS).
-        </p>
-
-        <h3>Social Media Marketing UAE</h3>
-        <p>
-            We manage paid and organic campaigns across Instagram, Facebook, LinkedIn, and TikTok to increase brand awareness and lead generation.
-        </p>
-
-        <h3>Content Marketing</h3>
-        <p>
-            SEO blogs, landing pages, and bilingual content (Arabic & English) tailored for UAE businesses.
-        </p>
-    </div>
-</section>
-
-<section>
-    <div class="container">
-        <h2>Digital Marketing Services Across Dubai & UAE</h2>
-        <p>
-            We provide digital marketing services in Dubai, Abu Dhabi, Sharjah, Ajman, and other UAE emirates, helping businesses compete in the fast-growing digital market.
-        </p>
-    </div>
-</section>
-
-<section>
-    <div class="container">
-        <h2>Industries We Serve</h2>
-        <ul>
-            <li>Real Estate & Property Developers</li>
-            <li>Medical Clinics & Healthcare</li>
-            <li>Restaurants & Hospitality</li>
-            <li>E-commerce & Retail</li>
-            <li>Business Setup Services</li>
-            <li>Education & Training Institutes</li>
-        </ul>
-    </div>
-</section>
-
-<section>
-    <div class="container">
-        <h2>Frequently Asked Questions</h2>
-
-        <h4>How long does SEO take in UAE?</h4>
-        <p>SEO typically shows results within 3–6 months depending on competition.</p>
-
-        <h4>What makes TamkinExpress one of the best digital marketing agencies in UAE?</h4>
-        <p>Our ROI-focused strategies and UAE market expertise make us a trusted marketing partner.</p>
-
-        <h4>What is the minimum Google Ads budget?</h4>
-        <p>We recommend a minimum ad spend of AED 3,000 per month for effective results.</p>
-    </div>
-</section>
-
-<section class="final-cta">
-    <div class="container">
-        <h2>Ready to Work with the Best Digital Marketing Agency in UAE?</h2>
-        <a href="#contact" class="cta-button primary">Request Free Audit</a>
-    </div>
-</section>
-
+<!-- FOOTER -->
 <footer id="contact">
-    <div class="container">
-        <p>📍 Dubai, United Arab Emirates</p>
-        <p>📞 +971 506512466</p>
-        <p>✉️ info@tamkinexpress.com</p>
-        <p>© 2025 TamkinExpress. All rights reserved.</p>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <strong>TamkinExpress</strong>
+      <p>One of the best digital marketing agencies in UAE — helping businesses grow through SEO, Google Ads, and performance marketing.</p>
     </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <a href="#services">SEO Services UAE</a>
+      <a href="#services">Google Ads Dubai</a>
+      <a href="#services">Social Media Marketing</a>
+      <a href="#services">Content Marketing</a>
+      <a href="#services">Email & WhatsApp</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact Us</h4>
+      <p>📍 Dubai, United Arab Emirates</p>
+      <a href="tel:+971506512466">📞 +971 506512466</a>
+      <a href="mailto:info@tamkinexpress.com">✉️ info@tamkinexpress.com</a>
+      <a href="https://wa.me/971506512466">💬 WhatsApp Us</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 <a href="https://tamkinexpress.com">TamkinExpress</a>. All rights reserved.</span>
+    <span>Best Digital Marketing Agency in UAE · Dubai · Abu Dhabi · Sharjah</span>
+  </div>
 </footer>
 
+<a href="https://wa.me/971506512466" class="wa" title="WhatsApp">💬</a>
 </body>
 </html>
