@@ -1,373 +1,586 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premium Services</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>Best Business Services in UAE | Tamkin Express Abu Dhabi</title>
+	<meta name="description" content="Tamkin Express provides professional business setup, visa processing, PRO and company formation services in Abu Dhabi and across the UAE.">
+    <meta name="keywords" content="best business services in UAE, business setup Abu Dhabi, PRO services UAE, company formation UAE">
+    <link rel="canonical" href="https://www.tamkinexpress.com/service.html">
+    <meta property="og:title" content="Best Business Services in UAE | Tamkin Express">
+    <meta property="og:description" content="Business setup, visa and PRO services in Abu Dhabi and across UAE.">
+    <meta property="og:type" content="website">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <!-- Adding Stylesheets -->
+    <link rel="icon" href="asset\image\logoonly.png" type="image/png">
 
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background: #000000;
-            min-height: 100vh;
-            padding: 60px 20px;
-            color: #fff;
-        }
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
+    <link rel="stylesheet" href="./asset/css/style.css">
+    <link rel="stylesheet" href="./asset/css/responsive.css">
+    <link rel="stylesheet" href="./chatbox.css">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0M2690BWFK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-        .header {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .header h3 {
-            color: #00d4a8;
-            font-size: 14px;
-            font-weight: 500;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            letter-spacing: 4px;
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        .header h1 {
-            font-size: 56px;
-            font-weight: 700;
-            margin-bottom: 10px;
-            font-family: 'Playfair Display', serif;
-            line-height: 1.2;
-        }
-
-        .header h1 .highlight {
-            color: #00d4a8;
-        }
-
-        /* ✅ ONE single grid for ALL cards */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 35px;
-            margin-top: 50px;
-        }
-
-        .service-card {
-            background: #0F1116;
-            border-radius: 20px;
-            padding: 40px 35px;
-            border-left: 5px solid #00d4a8;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(0, 212, 168, 0.15) 0%, rgba(0, 212, 168, 0.05) 50%, transparent 100%);
-            opacity: 0;
-            transition: opacity 0.4s ease;
-            z-index: 0;
-        }
-
-        .service-card:hover {
-            transform: translateY(-12px);
-            box-shadow: 0 25px 50px rgba(0, 212, 168, 0.25);
-        }
-
-        .service-card:hover::before {
-            opacity: 1;
-        }
-
-        .service-card > * {
-            position: relative;
-            z-index: 1;
-        }
-
-        .icon-wrapper {
-            width: 70px;
-            height: 70px;
-            background: linear-gradient(135deg, rgba(0, 212, 168, 0.15), rgba(0, 212, 168, 0.05));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 25px;
-            transition: all 0.4s ease;
-            border: 2px solid rgba(0, 212, 168, 0.2);
-        }
-
-        .service-card:hover .icon-wrapper {
-            background: linear-gradient(135deg, rgba(0, 212, 168, 0.25), rgba(0, 212, 168, 0.1));
-            transform: scale(1.1) rotate(5deg);
-            border-color: rgba(0, 212, 168, 0.5);
-        }
-
-        .icon-wrapper svg {
-            width: 35px;
-            height: 35px;
-            fill: #00d4a8;
-        }
-
-        .service-card h3 {
-            font-size: 24px;
-            margin-bottom: 18px;
-            color: #fff;
-            font-family: 'Playfair Display', serif;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-        }
-
-        .service-card p {
-            color: #b8b8b8;
-            line-height: 1.7;
-            margin-bottom: 25px;
-            font-size: 14px;
-            font-weight: 300;
-        }
-
-        .learn-more {
-            color: #00d4a8;
-            text-decoration: none;
-            font-size: 13px;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-        }
-
-        .learn-more:hover {
-            gap: 15px;
-            color: #00ffc8;
-        }
-
-        .learn-more svg {
-            width: 18px;
-            height: 18px;
-            fill: #00d4a8;
-            transition: fill 0.3s ease;
-        }
-
-        .learn-more:hover svg {
-            fill: #00ffc8;
-        }
-
-        @media (max-width: 768px) {
-            .header h1 { font-size: 42px; }
-            .services-grid { grid-template-columns: 1fr; gap: 25px; }
-            .service-card { padding: 30px 25px; }
-        }
-    </style>
+  gtag('config', 'G-0M2690BWFK');
+</script>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h3>Our Specialization</h3>
-            <h1><span class="highlight">Our</span> Services</h1>
+    <!-- Header Start  -->
+    <section class="header contact-header">
+        <!-- Header Navigation Start  -->
+        <div class="container header-nav">
+            <div class="row">
+                <div class="col-md-12">
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light main-menu fixed-top ">
+                        <div class="container">
+                            <a href="#" class="navbar-brand">
+                                <img src="asset/image/download (80).jpg (2).png" alt=" LeadsbeeLogo">
+                            </a>
+                            <button class="navbar-toggler" data-toggle="collapse" data-target="#beeToggler">
+                                <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="beeToggler">
+                                <ul class="navbar-nav ml-auto ">
+                                    <li><a href="./index.html">Home</a></li>
+                                    <!-- &nbsp;
+                                    <li><a href="./project.html">Project</a></li> -->
+                                    &nbsp;
+                                    <li><a href="./service.html">Services</a></li>
+                                    &nbsp;
+                                    <li><a href="contact-us.html">Contact us</a></li>
+                                    &nbsp;
+                                    <li><a href="./blog.html">FAQ</a></li>
+                                    &nbsp;
+                                    <!-- <li>
+                                        <a href="contact-us.html">
+                                        <button class="nav-button">Contact Us <i class="fas fa-angle-right"></i> </button>
+                                        </a>
+                                    </li>
+                                    &nbsp; -->
+                                    <li>
+                                        <a href="#">
+                                        <button class="nav-button">Check Your Case ID <i class="fas fa-angle-right"></i> </button>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
         </div>
 
-        <!-- ✅ ALL cards inside ONE single services-grid div -->
-        <div class="services-grid">
+        <!-- Header Navigation End  -->
 
-            <!-- Business Registration -->
-            <div class="service-card">
-                <div class="icon-wrapper">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
-                    </svg>
+        <!-- Header Banner Start  -->
+        <div class="container header-content ">
+            <div class="row h-100">
+                <div class="col-md-6 centralize">
+                    <div class="left-content ">
+                        <h1>Best Business Services in UAE</h1>
+                        <h2>Professional Legal, Visa & <span class="highlight">PRO Services</span> in Abu Dhabi</h2>
+                        <p>
+                            Home / Services
+                        </p>
+                    </div>
                 </div>
-                <h3>Business Registration</h3>
-                <p>Complete business registration services with expert legal and documentation support.</p>
-                <a href="business-registration.html" class="learn-more">
-                    Learn more
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.172 12l-4.95-4.95 1.414-1.414L16 12l-6.364 6.364-1.414-1.414z"/></svg>
-                </a>
-            </div>
-
-            <!-- Employment Visa -->
-            <div class="service-card">
-                <div class="icon-wrapper">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
-                    </svg>
+                <div class="col-md-6 centralize">
+                    <div class="right-content">
+                        <img src="./asset/image/Group 1387.png" alt="">
+                    </div>
                 </div>
-                <h3>Employment Visa</h3>
-                <p>Expert assistance in securing employment visas with streamlined documentation and hassle-free processing for professionals.</p>
-                <a href="employment-visa.html" class="learn-more">
-                    Learn more
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.172 12l-4.95-4.95 1.414-1.414L16 12l-6.364 6.364-1.414-1.414z"/></svg>
-                </a>
             </div>
+        </div>
 
-            <!-- Digital Marketing -->
-            <div class="service-card">
-                <div class="icon-wrapper">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/>
-                    </svg>
+
+    </section>
+    <section class="work-process section-padding">           
+        <div class="container ">
+		    <div class="row mb-5">  
+                <div class="col-md-12 text-center">
+                    <h3>Why Choose Tamkin Express for Business Services in UAE?</h3>
+                    <p>Tamkin Express provides the <strong>best business services in UAE</strong>, 
+                    including visa processing, PRO services, legal translation and 
+                    company formation in Abu Dhabi and Dubai. Our experienced team handles 
+                    all government-related paperwork so you can focus on growing your business.</p>
+                    <p>Whether you need <strong>visa services in UAE</strong>, 
+                    <strong>PRO services in Abu Dhabi</strong>, legal translation or 
+                    notary services — Tamkin Express is your trusted partner for all 
+                    <strong>business setup services in UAE</strong>.</p>
+                    <p>We serve clients across Abu Dhabi, Dubai, and Sharjah with 
+                    fast, reliable, and affordable business solutions.</p>
+				 </div> 
+			 </div> 
+			 <div class="row">
+                 <div class="col-md-4">
+                     <div class="process-block">
+                        
+                        <div class="card">
+                            <div class="card-body">
+                                   <h2>Legal Services</h2>
+                                   <ul>
+                                
+                                  <li>Legal Translation</li>
+                                  <li>Register All Lawsuits</li>
+                                  <li>Cheque Bounce Cases</li>
+    
+                                  <li>Criminal Cases</li>
+    
+                                  <li>Civil Cases</li>
+                                  <li>Commercial Cases</li>
+    
+                                  <li>Labor Cases</li>
+    
+                                  <li>Drafting of Agreements and Affidavits for courts</li>
+    
+    
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <h3>Digital Marketing</h3>
-                <p>Comprehensive digital marketing solutions to elevate your brand presence and drive measurable business growth online.</p>
-                <a href="digital-marketing.html" class="learn-more">
-                    Learn more
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.172 12l-4.95-4.95 1.414-1.414L16 12l-6.364 6.364-1.414-1.414z"/></svg>
-                </a>
-            </div>
+                <div class="col-md-4">
+                    <div class="process-block">
+                        
+                        <div class="card">
+                            <div class="card-body">
+                                <!-- <img src="./asset/image/discussion.svg" alt="Projec Discussion"> -->
+                                <!-- <h3>Design & Development</h3> -->
+                                
+                                <h2>Other Services</h2>
+                                   <br>
+                                
+                                  <li>PRO Services</li>
+                                  <li>GRO Services</li>
+                                  <li>Legal Translation</li>
+    
+                                  <li>ADNOC Registration</li>
+    
+                                  <li>Dubai Notary Services</li>
+                                  <li>Abu Dhabi Notary Services</li>
 
-            <!-- Golden Visa -->
-            <div class="service-card">
-                <div class="icon-wrapper">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path d="M12 2L4 5v6.09c0 5.05 3.41 9.76 8 10.91 4.59-1.15 8-5.86 8-10.91V5l-8-3zm6 9.09c0 4-2.55 7.7-6 8.83-3.45-1.13-6-4.82-6-8.83V6.31l6-2.12 6 2.12v4.78zm-9.18-.5L12 13.77l3.18-3.18 1.41 1.41L12 16.59l-4.59-4.59 1.41-1.41z"/>
-                    </svg>
+
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <h3>Golden Visa</h3>
-                <p>Navigate the golden visa process with expert guidance for long-term residency and exclusive investment opportunities.</p>
-                <a href="golden-visa.html" class="learn-more">
-                    Learn more
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.172 12l-4.95-4.95 1.414-1.414L16 12l-6.364 6.364-1.414-1.414z"/></svg>
-                </a>
-            </div>
+                <div class="col-md-4">
+                    <div class="process-block">
+                        
+                        <div class="card">
+                            <div class="card-body">
+                                <h2>Visa Services</h2>
+                                <br>
+                                <li>Labour Visa</li>     
+                                <li>Family Visa</li>                                
+                                <li>Multiple Entry Tourist Visa</li>                                
+                                <li>Domestic Visa</li>                                
+                                <li>Golden Visa</li>                                
+                                <li>Remote Visa</li>                                
+                                <li>Student Visa</li>                                
+                                <li>Investor visa</li>                                
+                                <li>Mission visa</li>                                
+                                <li>Visit visa & Tourist visa</li>                                
+                              <div class="official-links">
+  <p>
+    Official visa and Emirates ID information is provided by
+    <a href="https://icp.gov.ae" target="_blank" rel="nofollow">
+      UAE ICP – Federal Authority for Identity, Citizenship, Customs & Port Security
+    </a>.
+  </p>
 
-            <!-- CICPA -->
-            <div class="service-card">
-                <div class="icon-wrapper">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
-                    </svg>
+  <p>
+    Labour and employment-related services are regulated by
+    <a href="https://www.mohre.gov.ae" target="_blank" rel="nofollow">
+      MOHRE – Ministry of Human Resources & Emiratisation
+    </a>.
+  </p>
+</div>
+	<p>
+  Our <a href="faq.html">UAE visa services FAQ</a> section answers common questions
+  about documents, processing time, and eligibility.
+    </p>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
-                <h3>CICPA</h3>
-                <p>Professional CICPA registration and compliance services ensuring your business meets all regulatory requirements.</p>
-                <a href="cicpa.html" class="learn-more">
-                    Learn more
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.172 12l-4.95-4.95 1.414-1.414L16 12l-6.364 6.364-1.414-1.414z"/></svg>
-                </a>
-            </div>
+                <div class="col-md-4">
+                    <div class="process-block">
+                        
+                        <div class="card">
+                            <div class="card-body">
+                                <h2>UAE Government Entity Services</h2>
+                                
+                                <br>
+                               <li>Abu Dhabi Government Entity services</li>
+                               <li>Dubai Government Entity Services</li>
+                               <li>Sharjah Government Entity Services</li>
 
-            <!-- Certificate Attestation -->
-            <div class="service-card">
-                <div class="icon-wrapper">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path d="M20 12c0-1.1-.9-2-2-2V7c0-1.1-.9-2-2-2H4c-1.1 0-1.99.9-1.99 2v3c-1.1 0-2 .9-2 2s.9 2 2 2v3c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-3c1.1 0 2-.9 2-2zm-4-2H4V7h12v3zm0 7H4v-3h12v3zm-6-9l-2 4h1l1 2 2-4h-1l-1-2z"/>
-                    </svg>
+                               <li>Department Of Economic Development</li>
+                               <li>Traffic & Patrol directorate</li>
+                               <li>Department of Health</li>
+                               <li>Department Of Municipality And Transport</li>
+                               <li>Abu Dhabi Judicial Department - ADJD</li>
+                               <li>Dubai Courts</li>
+                               <li>Ministry of human resources and Emiratization- MOHRE</li>
+                               <li>Federal authority for identity and citizenship- ICP</li>
+                               <li>Abu Dhabi Waste Management Company- Tadweer</li>
+                               <li>CICPA Applications</li>
+                                 
+    
+    
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <h3>Certificate Attestation</h3>
-                <p>Fast and reliable certificate attestation services for educational, personal, and commercial documents worldwide.</p>
-                <a href="certificate-attestation.html" class="learn-more">
-                    Learn more
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.172 12l-4.95-4.95 1.414-1.414L16 12l-6.364 6.364-1.414-1.414z"/></svg>
-                </a>
-            </div>
+                
+            </section>
 
-            <!-- Ministry of Economy -->
-            <div class="service-card">
-                <div class="icon-wrapper">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/>
-                    </svg>
-                </div>
-                <h3>Ministry of Economy</h3>
-                <p>Comprehensive support for Ministry of Economy procedures including licensing, permits, and business registration.</p>
-                <a href="ministry-of-economy.html" class="learn-more">
-                    Learn more
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.172 12l-4.95-4.95 1.414-1.414L16 12l-6.364 6.364-1.414-1.414z"/></svg>
-                </a>
-            </div>
-
-            <!-- PRO Services -->
-            <div class="service-card">
-                <div class="icon-wrapper">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path d="M20 6h-2.18c.11-.31.18-.65.18-1 0-1.66-1.34-3-3-3-1.05 0-1.96.54-2.5 1.35l-.5.67-.5-.68C10.96 2.54 10.05 2 9 2 7.34 2 6 3.34 6 5c0 .35.07.69.18 1H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-5-2c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zM9 4c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm11 15H4v-2h16v2zm0-5H4V8h5.08L7 10.83 8.62 12 11 8.76l1-1.36 1 1.36L15.38 12 17 10.83 14.92 8H20v6z"/>
-                    </svg>
-                </div>
-                <h3>PRO Services</h3>
-                <p>Complete PRO services handling all government documentation, visa processing, and corporate compliance matters efficiently.</p>
-                <a href="pro-services.html" class="learn-more">
-                    Learn more
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.172 12l-4.95-4.95 1.414-1.414L16 12l-6.364 6.364-1.414-1.414z"/></svg>
-                </a>
-            </div>
-
-            <!-- Ministry of Labour -->
-            <div class="service-card">
-                <div class="icon-wrapper">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
-                    </svg>
-                </div>
-                <h3>Ministry of Labour</h3>
-                <p>Expert handling of Ministry of Labour services including labor cards, work permits, and employee documentation.</p>
-                <a href="ministry-of-labour.html" class="learn-more">
-                    Learn more
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.172 12l-4.95-4.95 1.414-1.414L16 12l-6.364 6.364-1.414-1.414z"/></svg>
-                </a>
-            </div>
-
-            <!-- Notary Court -->
-            <div class="service-card">
-                <div class="icon-wrapper">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/>
-                    </svg>
-                </div>
-                <h3>Notary Court</h3>
-                <p>Professional notary and court services for document authentication, legal certifications, and official proceedings.</p>
-                <a href="notary-court.html" class="learn-more">
-                    Learn more
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.172 12l-4.95-4.95 1.414-1.414L16 12l-6.364 6.364-1.414-1.414z"/></svg>
-                </a>
-            </div>
-
-            <!-- Legal Translation -->
-            <div class="service-card">
-                <div class="icon-wrapper">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/>
-                    </svg>
-                </div>
-                <h3>Legal Translation</h3>
-                <p>Certified legal translation services ensuring accuracy and compliance for all your official document requirements.</p>
-                <a href="legal-translation.html" class="learn-more">
-                    Learn more
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.172 12l-4.95-4.95 1.414-1.414L16 12l-6.364 6.364-1.414-1.414z"/></svg>
-                </a>
-            </div>
-
-            <!-- Legal Contracts -->
-            <div class="service-card">
-                <div class="icon-wrapper">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11zM8 15.01l1.41 1.41L11 14.84V19h2v-4.16l1.59 1.59L16 15.01 12.01 11z"/>
-                    </svg>
-                </div>
-                <h3>Legal Contracts</h3>
-                <p>Expert drafting and review of legal contracts ensuring your interests are protected with comprehensive legal support.</p>
-                <a href="legal-contracts.html" class="learn-more">
-                    Learn more
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.172 12l-4.95-4.95 1.414-1.414L16 12l-6.364 6.364-1.414-1.414z"/></svg>
-                </a>
-            </div>
-
-        </div><!-- ✅ ONE closing tag for the single grid -->
+    <!-- Header End  -->
+    
+<!-- Services Start  -->
+<!-- <section class="services section-padding">
+    <div class="container">
+        <div class="row">
+            <h2 class="text-center w-100 service-heading py-5">We Provide a Platform To Easily<br>
+                <span class="highlight">Build a Website</span> </h2>
+        </div>
     </div>
+	
+    <div class="container">
+		<div class="row card-row-gap">
+		
+			<div class=" col-md-6 col-lg-4 col-sm-12 d-flex justify-content-center">
+				<div class="card service-block-card" style="width: 18rem;">
+					<img src="./asset/image/creative-postcard-set-blue-wall.jpg" class="card-img-top" alt="ui_design_card">
+					<div class="card-body">
+					  <h5 class="card-title">UI/UX Design</h5>
+					  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+					  <a href="./service_details.html" class="">Learn More ><i class="fas fa-angel-right"></i></a>
+					</div>
+				 </div>
+			</div>
+			
+			<div class="col-md-6 col-lg-4 col-sm-12 d-flex justify-content-center">
+				<div class="card service-block-card" style="width: 18rem;">
+				<img src="./asset/image/marketing-online-strategy-with-drawings.png" class="card-img-top" alt="ui_design_card">
+				<div class="card-body">
+				  <h5 class="card-title">Website optimization</h5>
+				  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				  <a href="./service_details.html" class="">Learn More ><i class="fas fa-angel-right"></i></a>
+				</div>
+			  </div>
+			</div>
+			
+			<div class="col-md-6 col-lg-4 col-sm-12 d-flex justify-content-center">
+				<div class="card service-block-card" style="width: 18rem;">
+				<img src="./asset/image/group-graphic-designers-discussing-laptop-their-desk.png" class="card-img-top" alt="ui_design_card">
+				<div class="card-body">
+				  <h5 class="card-title">Social Media Marketing</h5>
+				  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				  <a href="./service_details.html" class="">Learn More ><i class="fas fa-angel-right"></i></a>
+				</div>
+			  </div>
+			</div>
+			
+			<div class=" col-md-6 col-lg-4 col-sm-12 d-flex justify-content-center">
+				<div class="card service-block-card" style="width: 18rem;">
+					<img src="./asset/image/creative-postcard-set-blue-wall.jpg" class="card-img-top" alt="ui_design_card">
+					<div class="card-body">
+					  <h5 class="card-title">UI/UX Design</h5>
+					  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+					  <a href="./service_details.html" class="">Learn More ><i class="fas fa-angel-right"></i></a>
+					</div>
+				 </div>
+			</div>
+			
+			<div class="col-md-6 col-lg-4 col-sm-12 d-flex justify-content-center">
+				<div class="card service-block-card" style="width: 18rem;">
+				<img src="./asset/image/marketing-online-strategy-with-drawings.png" class="card-img-top" alt="ui_design_card">
+				<div class="card-body">
+				  <h5 class="card-title">Website optimization</h5>
+				  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				  <a href="./service_details.html" class="">Learn More ><i class="fas fa-angel-right"></i></a>
+				</div>
+			  </div>
+			</div>
+			
+			<div class="col-md-6 col-lg-4 col-sm-12 d-flex justify-content-center">
+				<div class="card service-block-card" style="width: 18rem;">
+				<img src="./asset/image/group-graphic-designers-discussing-laptop-their-desk.png" class="card-img-top" alt="ui_design_card">
+				<div class="card-body">
+				  <h5 class="card-title">Social Media Marketing</h5>
+				  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				  <a href="./service_details.html" class="">Learn More ><i class="fas fa-angel-right"></i></a>
+				</div>
+			  </div>
+			</div>
+			
+		</div>
+		
+    
+	
+    
+
+
+    </div>
+</section> -->
+
+<!--Why choose leadsbee-->
+<!-- 
+<section class="service-type section-padding">
+    <div class="container">
+        <div class="row">
+            <h2 class="text-center w-100 service-heading py-5">Why Choose 
+                <span class="highlight">Leadsbee</span> </h2>
+        </div>
+
+    </div>
+
+    <div class="container">
+		<div class="row service-type-gap why-choose">
+			<div class="col-md-6">
+				
+				<img src="./asset/image/Group 1460.png" class="img-fluid">
+
+			</div>
+			<div class="col-md-6">
+				<h2>Analysis</h2>
+				<p> 
+					Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+				</p>
+				
+			</div>
+		</div>
+		<div class="row service-type-gap why-choose" >
+			<div class="col-md-6">
+				<h2>UI/UX Design</h2>
+				<p> 
+					Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+				</p>
+        </div>
+        <div class="col-md-6">
+            <img src="./asset/image/Group 1521.png" class="img-fluid">
+
+        </div>
+    </div>
+	
+    <div class="row service-type-gap why-choose">
+        <div class="col-md-6">
+            <img src="./asset/image/Group 1538.png" class="img-fluid">
+
+        </div>
+        <div class="col-md-6">
+            <h2>Development</h2>
+            <p> 
+				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+			</p>
+        
+
+        </div>
+    </div>
+    </div>
+</section> -->
+<!--lets start-->
+<br>
+<br>
+<section class="lets-start section-padding">
+    <div class="container">
+        <div class="row">
+            <h2 class="text-center w-100 service-heading py-1">Get in Touch with <span class="highlight">Tamkin Express</span></h2>
+                <div class="text-center w-100 service-heading py-1" id="bottombutton">
+                    <h5>We will help you start your business from A to Z</h5>
+                    <a href="./contact-us.html">
+                    <button type="button" class="btn btn-warning">Let's Start ></button></a>
+                </div> 
+                
+        </div>
+
+
+    </div>
+
+</section>
+
+   
+    <!-- Footer Start  -->
+
+    <section class="footer section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="footer-widget-1">
+                        <img src="./asset/image/Logo (2).png" alt="">
+                        <p>
+                           <!-- Contact us for our best service -->
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="footer-widget-2">
+                        <h3>Work</h3>
+                        <ul>
+                            <li><a href="#">Case Studies</a></li>
+                            <li><a href="#">Gallery</a></li>
+                            <li><a href="#">Dribble</a></li>
+                            <li><a href="#">Instagram</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="footer-widget-3">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="#">Company</a></li>
+                            <li><a href="#">Article</a></li>
+                            <li><a href="#">Testimonial</a></li>
+                            <li><a href="#">FAQ's</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="footer-widget-4">
+                        <h3>Contact Us  <br><br></h3>
+                       <a href="https://wa.me/+971506512466">+971 506512466</a>
+                        <a href="mailto:info@tamkinexpress.com">info@tamkinexpress.com</a> 
+                            <p> Abudhabi UAE
+                        </p>
+                        <ul>
+                            <li><a href="https://www.facebook.com/profile.php?id=61562967317988"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="https://x.com/tamkinexpress"><i class="fa-brands fa-x"></i></a></li>
+                            <li><a href="https://www.instagram.com/tamkin.express/"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="https://wa.me/+971506512466"><i class="fa-brands fa-whatsapp"></i></a></li>
+                            <!-- <li><a href="https://wa.me/+971506512466"><i class="fas fa-comments"></i></a></li> -->
+                            <li><a href="https://www.linkedin.com/company/tamkin-express-business-services-llc"><i class="fa-brands fa-linkedin"></i></a></li>
+
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+			
+			<div class="row" style="border-top: 1px solid #ddd; padding-top: 10px;">
+                <div class="col-md-10">
+                    <div class="copyright-text">
+                        <p>
+                            Copyright © 2024 TamkinExpress, All Rights Reserved.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="messenger">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <Section  class="chatbox-wrapper">
+        <div id="click" class="chatbox-toggle">
+            <i class='fas fa-robot'></i>
+        </div>
+        <div class="chatbox-message-wrapper">
+            <div class="chatbox-message-header">
+                <div class="chatbox-message-profile">
+                    <img src="asset\image\1 (2).png" alt="" class="chatbox-message-image">
+                    <div>
+                        <h4 class="chatbox-message-name">TamkinExpress</h4>
+                        <p class="chatbox-message-status">online</p>
+                    </div>
+                </div>
+                <div class="chatbox-message-dropdown">
+                    <i class='bx bx-dots-vertical-rounded chatbox-message-dropdown-toggle'></i>
+                    <ul class="chatbox-message-dropdown-menu">
+                        <li>
+                            <a href="#">Search</a>
+                        </li>
+                        <li>
+                            <a href="#">Report</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="chatbox-message-content">
+                <h4 class="chatbox-message-no-message"></h4>
+                <!-- <div class="chatbox-message-item sent">
+                    <span class="chatbox-message-item-text">
+                        Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Quod, fugiat?
+                    </span>
+                    <span class="chatbox-message-item-time">08:30</span>
+                </div>
+                <div class="chatbox-message-item received">
+                    <span class="chatbox-message-item-text">
+                        Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Quod, fugiat?
+                    </span>
+                    <span class="chatbox-message-item-time">08:30</span>
+                </div> -->
+            </div>
+            <div class="chatbox-message-bottom">
+                <form action="#" class="chatbox-message-form" name="chat-form">
+                    <textarea cols="40" rows="1" placeholder="Type message..." class="chatbox-message-input" id="name" name="name"></textarea>
+                    <button type="submit" class="chatbox-message-submit"><i class='bx bx-send' ></i></button>
+                </form>
+            </div>
+        </div>
+        <script>
+            const scriptURL ='https://script.google.com/macros/s/AKfycbxSgJW29b_i_Gk8VpDBmwYDPrnpE9n_wuZI_DcWi3HP-RMheIxE7x_YjMJVtgA2oVSHIQ/exec'
+const form = document.forms['chat-form']
+form.addEventListener('submit', e => {
+e.preventDefault()
+fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+// .then(response => alert("Thank you! your form is submitted successfully." ))
+// .then(() => { window.location.reload(); })
+// .catch(error => console.error('Error!', error.message))
+})
+
+          </script>
+    </Section>
+    <Section  class="chatbox-wrapper1">
+        <a href="https://wa.me/+971506512466" aria-label="WhatsApp Tamkin Express">
+  <div id="click" class="chatbox-toggle1">
+    <i class='fa-brands fa-whatsapp'></i>
+    <span class="sr-only">WhatsApp Tamkin Express</span>
+  </div>
+</a>
+          
+ 
+      </Section>
+      <Section  class="chatbox-wrapper2">
+          <a href="mailto:info@tamkinexpress.com" aria-label="Email Tamkin Express">
+  <div id="click" class="chatbox-toggle2">
+    <i class='fas fa-envelope'></i>
+    <span class="sr-only">Email Tamkin Express</span>
+  </div>
+</a>
+            
+   
+        </Section>
+    <!-- Footer End  -->
+    <!--Adding Scripts-->
+    <script src="chatbox.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+        <script src="./asset/js/mixitup.min.js"></script>
+    <script src="./asset/js/main.js"></script>
 </body>
+
 </html>
