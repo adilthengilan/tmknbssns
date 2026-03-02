@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Software Development UAE | TamkinExpress</title>
+    <meta name="description" content="Custom software solutions for UAE businesses. TamkinExpress builds enterprise software, automation tools, and business management systems.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Montserrat:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --teal: #00d4a8; --teal-dim: rgba(0,212,168,0.15);
+            --bg: #000; --card-bg: #0F1116;
+            --text: #fff; --muted: rgba(255,255,255,0.55);
+            --border: rgba(0,212,168,0.2);
+        }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Montserrat', sans-serif; background: var(--bg); color: var(--text); overflow-x: hidden; }
+
+        /* NAVBAR */
+        .navbar { position: fixed; top:0; left:0; right:0; z-index:1000; padding:0 48px; height:72px; display:flex; align-items:center; justify-content:space-between; background:rgba(0,0,0,0.75); backdrop-filter:blur(24px); -webkit-backdrop-filter:blur(24px); border-bottom:1px solid rgba(0,212,168,0.12); transition:background 0.4s ease,box-shadow 0.4s ease; }
+        .navbar.scrolled { background:rgba(0,0,0,0.96); box-shadow:0 4px 30px rgba(0,0,0,0.5); }
+        .nav-logo a { display:flex; align-items:center; text-decoration:none; }
+        .nav-logo img { height:44px; width:124px; object-fit:contain; display:block; }
+        .nav-logo-text { font-family:'Playfair Display',serif; font-size:20px; font-weight:700; color:var(--teal); display:none; }
+        .nav-right { display:flex; align-items:center; gap:36px; }
+        .nav-menu { display:flex; gap:32px; list-style:none; align-items:center; }
+        .nav-link { color:rgba(255,255,255,0.72); text-decoration:none; font-size:13px; font-weight:500; letter-spacing:0.4px; transition:color 0.25s ease; position:relative; padding-bottom:2px; }
+        .nav-link::after { content:''; position:absolute; bottom:-2px; left:0; width:0; height:1.5px; background:var(--teal); transition:width 0.3s ease; }
+        .nav-link:hover,.nav-link.active { color:var(--teal); }
+        .nav-link:hover::after,.nav-link.active::after { width:100%; }
+        .nav-buttons { display:flex; align-items:center; gap:10px; }
+        .nav-btn-outline { display:inline-flex; align-items:center; gap:7px; color:var(--teal); border:1.5px solid rgba(0,212,168,0.4); padding:9px 22px; border-radius:100px; font-size:12.5px; font-weight:600; text-decoration:none; transition:all 0.3s ease; white-space:nowrap; }
+        .nav-btn-outline:hover { background:var(--teal-dim); border-color:var(--teal); }
+        .nav-cta { display:inline-flex; align-items:center; gap:7px; background:var(--teal); color:#000; padding:10px 24px; border-radius:100px; font-size:12.5px; font-weight:700; text-decoration:none; transition:all 0.3s ease; white-space:nowrap; }
+        .nav-cta:hover { background:#00ffc8; transform:translateY(-1px); box-shadow:0 6px 20px rgba(0,212,168,0.35); }
+        .hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:6px; background:none; border:none; z-index:1100; }
+        .hamburger span { display:block; width:24px; height:2px; background:#fff; border-radius:2px; transition:all 0.3s ease; }
+        .hamburger.open span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
+        .hamburger.open span:nth-child(2) { opacity:0; }
+        .hamburger.open span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
+        .mobile-menu { display:none; position:fixed; top:72px; left:0; right:0; background:rgba(0,0,0,0.97); border-bottom:1px solid rgba(0,212,168,0.15); padding:24px 32px 32px; flex-direction:column; gap:4px; z-index:999; transform:translateY(-10px); opacity:0; pointer-events:none; transition:all 0.3s ease; }
+        .mobile-menu.open { opacity:1; transform:translateY(0); pointer-events:all; display:flex; }
+        .mobile-link { color:rgba(255,255,255,0.8); text-decoration:none; font-size:15px; font-weight:500; padding:14px 0; border-bottom:1px solid rgba(255,255,255,0.06); transition:color 0.2s; }
+        .mobile-link:hover { color:var(--teal); }
+        .mobile-menu-btns { display:flex; flex-direction:column; gap:10px; margin-top:20px; }
+        .mobile-cta { background:var(--teal); color:#000; text-align:center; padding:13px; border-radius:100px; font-weight:700; font-size:13px; text-decoration:none; }
+        .mobile-cta-outline { border:1.5px solid rgba(0,212,168,0.4); color:var(--teal); text-align:center; padding:12px; border-radius:100px; font-weight:600; font-size:13px; text-decoration:none; }
+
+        /* HERO */
+        .hero { min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; position:relative; overflow:hidden; padding:120px 40px 80px; text-align:center; }
+        .hero-bg { position:absolute; inset:0; background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(0,212,168,0.12) 0%,transparent 70%),radial-gradient(ellipse 40% 40% at 80% 80%,rgba(0,212,168,0.06) 0%,transparent 60%); pointer-events:none; }
+        .hero-badge { display:inline-flex; align-items:center; gap:8px; background:rgba(0,212,168,0.1); border:1px solid rgba(0,212,168,0.3); border-radius:100px; padding:8px 18px; font-size:12px; font-weight:600; color:var(--teal); letter-spacing:2px; text-transform:uppercase; margin-bottom:32px; animation:fadeUp 0.6s ease both; }
+        .hero-badge::before { content:''; width:6px; height:6px; border-radius:50%; background:var(--teal); animation:pulse 2s infinite; }
+        .hero h1 { font-family:'Playfair Display',serif; font-weight:900; font-size:clamp(40px,6vw,74px); line-height:1.1; margin-bottom:28px; animation:fadeUp 0.6s 0.1s ease both; }
+        .line-teal { display:block; font-style:italic; background:linear-gradient(90deg,var(--teal) 0%,#fff 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; background-size:200%; animation:shimmer 4s ease-in-out infinite,fadeUp 0.6s 0.15s ease both; }
+        .hero-sub { font-family:'DM Sans',sans-serif; font-size:16px; font-weight:300; line-height:1.8; color:var(--muted); max-width:520px; margin:0 auto 50px; animation:fadeUp 0.6s 0.2s ease both; }
+        .hero-cta { display:flex; align-items:center; gap:20px; flex-wrap:wrap; justify-content:center; animation:fadeUp 0.6s 0.3s ease both; }
+        .btn-primary { display:inline-flex; align-items:center; gap:10px; background:var(--teal); color:#000; padding:16px 32px; border-radius:100px; font-size:14px; font-weight:700; text-decoration:none; transition:all 0.3s ease; }
+        .btn-primary:hover { background:#00ffc8; transform:translateY(-2px); box-shadow:0 12px 30px rgba(0,212,168,0.35); }
+        .btn-secondary { display:inline-flex; align-items:center; gap:10px; color:var(--teal); border:1px solid var(--border); padding:16px 32px; border-radius:100px; font-size:14px; font-weight:600; text-decoration:none; transition:all 0.3s ease; }
+        .btn-secondary:hover { background:var(--teal-dim); border-color:var(--teal); }
+        .cta-divider { color:var(--muted); font-size:13px; }
+        .hero-stats { display:flex; gap:56px; justify-content:center; margin-top:64px; flex-wrap:wrap; animation:fadeUp 0.6s 0.4s ease both; }
+        .stat-item { text-align:center; }
+        .stat-num { font-family:'Playfair Display',serif; font-size:38px; font-weight:700; color:var(--teal); display:block; }
+        .stat-label { font-size:11px; color:var(--muted); font-weight:500; letter-spacing:1px; text-transform:uppercase; margin-top:4px; }
+        .stat-div { width:1px; background:rgba(0,212,168,0.2); align-self:stretch; }
+
+        /* SECTIONS */
+        section { padding:100px 40px; }
+        .section-label { color:var(--teal); font-size:12px; font-weight:600; letter-spacing:4px; text-transform:uppercase; margin-bottom:14px; display:block; }
+        .section-title { font-family:'Playfair Display',serif; font-size:clamp(32px,4vw,52px); font-weight:700; line-height:1.2; margin-bottom:16px; }
+        .section-title .hl { color:var(--teal); }
+        .section-sub { font-size:15px; font-weight:300; color:var(--muted); max-width:520px; line-height:1.8; }
+
+        /* SERVICE CARDS */
+        .svc-section { background:#000; }
+        .svc-header { text-align:center; margin-bottom:60px; }
+        .svc-header .section-sub { margin:0 auto; }
+        .svc-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:28px; max-width:1300px; margin:0 auto; }
+        .svc-card { background:var(--card-bg); border-radius:20px; padding:38px 32px; border-left:5px solid var(--teal); position:relative; overflow:hidden; transition:all 0.4s cubic-bezier(0.4,0,0.2,1); }
+        .svc-card::before { content:''; position:absolute; inset:0; background:linear-gradient(135deg,rgba(0,212,168,0.12) 0%,rgba(0,212,168,0.04) 50%,transparent 100%); opacity:0; transition:opacity 0.4s ease; }
+        .svc-card:hover { transform:translateY(-10px); box-shadow:0 24px 48px rgba(0,212,168,0.2); }
+        .svc-card:hover::before { opacity:1; }
+        .svc-card > * { position:relative; z-index:1; }
+        .card-icon { width:62px; height:62px; border-radius:50%; background:var(--teal-dim); border:2px solid var(--border); display:flex; align-items:center; justify-content:center; margin-bottom:22px; font-size:26px; transition:all 0.4s ease; }
+        .svc-card:hover .card-icon { transform:scale(1.1) rotate(5deg); background:rgba(0,212,168,0.22); border-color:rgba(0,212,168,0.5); }
+        .svc-card h3 { font-family:'Playfair Display',serif; font-size:21px; font-weight:600; margin-bottom:12px; }
+        .svc-card p { font-size:13.5px; font-weight:300; color:var(--muted); line-height:1.75; margin-bottom:20px; }
+        .tags { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:20px; }
+        .tag { background:rgba(0,212,168,0.08); border:1px solid rgba(0,212,168,0.2); color:var(--teal); border-radius:100px; padding:4px 12px; font-size:11px; font-weight:600; }
+        .card-link { display:inline-flex; align-items:center; color:var(--teal); text-decoration:none; font-size:12.5px; font-weight:700; letter-spacing:1px; text-transform:uppercase; gap:6px; border-bottom:1px solid transparent; padding-bottom:2px; transition:all 0.3s ease; }
+        .card-link:hover { color:#00ffc8; border-bottom-color:#00ffc8; gap:10px; }
+
+        /* PROCESS */
+        .proc-section { background:#060608; position:relative; overflow:hidden; }
+        .proc-section::before { content:''; position:absolute; top:-200px; left:50%; transform:translateX(-50%); width:800px; height:800px; background:radial-gradient(circle,rgba(0,212,168,0.06) 0%,transparent 70%); pointer-events:none; }
+        .proc-wrap { max-width:1100px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; }
+        .steps { display:flex; flex-direction:column; }
+        .step { display:flex; gap:22px; padding:26px 0; border-bottom:1px solid rgba(255,255,255,0.06); transition:all 0.3s ease; }
+        .step:last-child { border-bottom:none; }
+        .step-num { font-family:'Playfair Display',serif; font-size:17px; font-weight:700; color:var(--teal); width:42px; height:42px; border-radius:50%; border:2px solid var(--border); display:flex; align-items:center; justify-content:center; flex-shrink:0; transition:all 0.3s ease; }
+        .step:hover .step-num { color:#000; background:var(--teal); }
+        .step h4 { font-family:'Playfair Display',serif; font-size:17px; font-weight:600; margin-bottom:6px; }
+        .step p { font-size:13px; color:var(--muted); font-weight:300; line-height:1.7; }
+        .proc-card { background:var(--card-bg); border-radius:20px; padding:36px; border:1px solid var(--border); }
+        .proc-card h3 { font-family:'Playfair Display',serif; font-size:24px; margin-bottom:22px; }
+        .mrow { display:flex; justify-content:space-between; align-items:center; padding:13px 0; border-bottom:1px solid rgba(255,255,255,0.06); }
+        .mrow:last-of-type { border-bottom:none; }
+        .mname { font-size:13px; color:var(--muted); }
+        .mbar-wrap { flex:1; margin:0 14px; height:4px; background:rgba(255,255,255,0.08); border-radius:4px; overflow:hidden; }
+        .mbar { height:100%; background:var(--teal); border-radius:4px; animation:growBar 1.5s ease both; }
+        .mval { font-size:13px; font-weight:600; color:var(--teal); min-width:36px; text-align:right; }
+        .proc-note { margin-top:24px; padding:16px; background:rgba(0,212,168,0.08); border-radius:10px; border:1px solid rgba(0,212,168,0.2); font-size:12px; color:var(--muted); line-height:1.7; font-weight:300; }
+
+        /* CTA */
+        .cta-section { background:linear-gradient(135deg,rgba(0,212,168,0.1) 0%,rgba(0,212,168,0.03) 50%,transparent 100%); border-top:1px solid rgba(0,212,168,0.15); text-align:center; padding:100px 40px; }
+        .cta-section h2 { font-family:'Playfair Display',serif; font-size:clamp(36px,5vw,60px); font-weight:900; line-height:1.15; margin-bottom:20px; }
+        .cta-section h2 em { font-style:italic; color:var(--teal); }
+        .cta-section p { color:var(--muted); font-size:15px; font-weight:300; max-width:460px; margin:0 auto 40px; line-height:1.8; }
+        .cta-btns { display:flex; gap:20px; justify-content:center; flex-wrap:wrap; }
+
+        /* FOOTER */
+        footer { background:#000; border-top:1px solid rgba(0,212,168,0.1); padding:60px 40px 30px; }
+        .footer-inner { max-width:1200px; margin:0 auto; display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:50px; padding-bottom:40px; border-bottom:1px solid rgba(255,255,255,0.06); }
+        .footer-brand img { height:50px; width:140px; object-fit:contain; margin-bottom:16px; display:block; }
+        .footer-brand p { font-size:13px; color:var(--muted); line-height:1.8; font-weight:300; margin-bottom:14px; }
+        .footer-brand .fc p { font-size:12.5px; color:var(--muted); margin-bottom:8px; font-weight:300; }
+        .footer-col h5 { font-size:12px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--teal); margin-bottom:20px; }
+        .footer-col ul { list-style:none; }
+        .footer-col li { margin-bottom:10px; }
+        .footer-col a { color:var(--muted); text-decoration:none; font-size:13px; font-weight:300; transition:color 0.3s; }
+        .footer-col a:hover { color:#fff; }
+        .footer-bottom { max-width:1200px; margin:24px auto 0; display:flex; justify-content:space-between; align-items:center; font-size:12px; color:rgba(255,255,255,0.3); }
+
+        /* ANIMATIONS */
+        @keyframes fadeUp { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:translateY(0)} }
+        @keyframes shimmer { 0%,100%{background-position:0% 50%} 50%{background-position:100% 50%} }
+        @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(0.7)} }
+        @keyframes growBar { from{width:0} }
+        .reveal { opacity:0; transform:translateY(30px); transition:opacity 0.7s ease,transform 0.7s ease; }
+        .reveal.visible { opacity:1; transform:none; }
+        .r1{transition-delay:0.1s} .r2{transition-delay:0.2s} .r3{transition-delay:0.3s}
+
+        /* RESPONSIVE */
+        @media(max-width:900px){
+            .proc-wrap{grid-template-columns:1fr;gap:50px;}
+            .footer-inner{grid-template-columns:1fr 1fr;}
+            .nav-menu,.nav-buttons{display:none;}
+            .hamburger{display:flex;}
+        }
+        @media(max-width:600px){
+            section{padding:70px 20px;}
+            .navbar{padding:0 20px;}
+            .footer-inner{grid-template-columns:1fr;}
+            .hero-stats{gap:28px;}
+            .stat-div{display:none;}
+        }
+</style>
+</head>
+<body>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-logo">
+            <a href="/">
+                <img src="./asset/logo_coloured.png" alt="TamkinExpress"
+                     onerror="this.style.display='none';this.nextSibling.style.display='block'">
+                <span class="nav-logo-text">TamkinExpress</span>
+            </a>
+        </div>
+        <div class="nav-right">
+            <ul class="nav-menu">
+                <li><a href="/" class="nav-link">Home</a></li>
+                <li><a href="/about.html" class="nav-link">About Us</a></li>
+                <li><a href="#services" class="nav-link active">Services</a></li>
+                <li><a href="/portfolio.html" class="nav-link">Portfolio</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <a href="tel:+971588967713" class="nav-btn-outline">📞 Call Us</a>
+                <a href="/contact-us.html" class="nav-cta">Get Free Quote</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="/" class="mobile-link">Home</a>
+        <a href="/about.html" class="mobile-link">About Us</a>
+        <a href="#services" class="mobile-link">Services</a>
+        <a href="/portfolio.html" class="mobile-link">Portfolio</a>
+        <div class="mobile-menu-btns">
+            <a href="tel:+971588967713" class="mobile-cta-outline">📞 Call Us</a>
+            <a href="/contact-us.html" class="mobile-cta">Get Free Quote</a>
+        </div>
+    </div>
+
+
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-badge">Software Development UAE</div>
+        <h1><span style="display:block;">Custom Software That</span><span style="display:block;">Solves Your Real</span><span class="line-teal">Business Problems.</span></h1>
+        <p class="hero-sub">We engineer bespoke software solutions for UAE businesses — from automation tools to enterprise systems — built to scale with your growth.</p>
+        <div class="hero-cta">
+            <a href="/contact-us.html" class="btn-primary">📞 Get Free Consultation</a>
+            <span class="cta-divider">or</span>
+            <a href="#services" class="btn-secondary">Explore Services ↓</a>
+        </div>
+        <div class="hero-stats"><div class="stat-item"><span class="stat-num">60+</span><span class="stat-label">Software Projects</span></div><div class="stat-div"></div><div class="stat-item"><span class="stat-num">Enterprise</span><span class="stat-label">Grade Security</span></div><div class="stat-div"></div><div class="stat-item"><span class="stat-num">Agile</span><span class="stat-label">2-Week Sprints</span></div><div class="stat-div"></div><div class="stat-item"><span class="stat-num">Lifetime</span><span class="stat-label">Support Available</span></div></div>
+    </section>
+
+    <section class="svc-section" id="services">
+        <div class="svc-header reveal">
+            <span class="section-label">What We Offer</span>
+            <h2 class="section-title"><span class="hl">Our</span> Solutions</h2>
+            <p class="section-sub">Tailored for UAE businesses — built to deliver real results from day one.</p>
+        </div>
+        <div class="svc-grid">
+            <div class="svc-card reveal ">
+                <div class="card-icon">⚙️</div>
+                <h3>Custom ERP Systems</h3>
+                <p>Purpose-built enterprise resource planning systems that manage your entire business — HR, finance, inventory, and operations in one platform.</p>
+                <div class="tags"><span class="tag">HR Module</span><span class="tag">Finance</span><span class="tag">Inventory</span><span class="tag">UAE VAT</span></div>
+                <a href="/contact-us.html" class="card-link">Get Started →</a>
+            </div>
+            <div class="svc-card reveal r1">
+                <div class="card-icon">🤖</div>
+                <h3>Automation Software</h3>
+                <p>Eliminate manual processes with intelligent automation — from document processing to approval workflows and scheduled reporting.</p>
+                <div class="tags"><span class="tag">RPA</span><span class="tag">Workflow Engine</span><span class="tag">Scheduling</span><span class="tag">Email Automation</span></div>
+                <a href="/contact-us.html" class="card-link">Get Started →</a>
+            </div>
+            <div class="svc-card reveal r2">
+                <div class="card-icon">📊</div>
+                <h3>Business Intelligence</h3>
+                <p>Custom BI tools that transform raw data into executive dashboards, sales forecasts, and operational KPIs in real time.</p>
+                <div class="tags"><span class="tag">Dashboards</span><span class="tag">Reports</span><span class="tag">Forecasting</span><span class="tag">Data Warehouse</span></div>
+                <a href="/contact-us.html" class="card-link">Get Started →</a>
+            </div>
+            <div class="svc-card reveal ">
+                <div class="card-icon">🔐</div>
+                <h3>Accounting & Finance Software</h3>
+                <p>UAE-compliant accounting systems with VAT filing, payroll, expense management, and financial reporting built in.</p>
+                <div class="tags"><span class="tag">VAT Compliance</span><span class="tag">Payroll</span><span class="tag">Expense Mgmt</span><span class="tag">Reports</span></div>
+                <a href="/contact-us.html" class="card-link">Get Started →</a>
+            </div>
+            <div class="svc-card reveal r1">
+                <div class="card-icon">🏭</div>
+                <h3>Industry-Specific Solutions</h3>
+                <p>Bespoke software for real estate, healthcare, logistics, retail, and hospitality — built around your industry's unique requirements.</p>
+                <div class="tags"><span class="tag">Real Estate</span><span class="tag">Healthcare</span><span class="tag">Logistics</span><span class="tag">Retail</span></div>
+                <a href="/contact-us.html" class="card-link">Get Started →</a>
+            </div>
+            <div class="svc-card reveal r2">
+                <div class="card-icon">☁️</div>
+                <h3>Cloud & DevOps</h3>
+                <p>We architect, deploy, and manage your software on cloud infrastructure with CI/CD pipelines, monitoring, and auto-scaling.</p>
+                <div class="tags"><span class="tag">AWS</span><span class="tag">Azure</span><span class="tag">Docker</span><span class="tag">CI/CD</span></div>
+                <a href="/contact-us.html" class="card-link">Get Started →</a>
+            </div></div>
+    </section>
+
+    <section class="proc-section">
+        <div class="proc-wrap">
+            <div>
+                <span class="section-label reveal">How We Work</span>
+                <h2 class="section-title reveal">Our <span class="hl">Process</span></h2>
+                <p class="section-sub reveal" style="margin-bottom:36px;">Transparent, efficient, and results-oriented — every step of the way.</p>
+                <div class="steps"><div class="step reveal"><div class="step-num">01</div><div><h4>Discovery & Analysis</h4><p>We document your business processes, pain points, and goals through workshops with your key stakeholders.</p></div></div><div class="step reveal"><div class="step-num">02</div><div><h4>Technical Architecture</h4><p>We design the system architecture, database schema, and integration plan — reviewed and approved before development starts.</p></div></div><div class="step reveal"><div class="step-num">03</div><div><h4>Agile Development</h4><p>We build in fortnightly sprints with demos and feedback — so you see working software from week two, not month six.</p></div></div><div class="step reveal"><div class="step-num">04</div><div><h4>Testing, Deployment & Support</h4><p>Comprehensive QA testing, staged rollout, staff training, and a dedicated support plan to ensure smooth adoption.</p></div></div></div>
+            </div>
+            <div class="reveal">
+                <div class="proc-card">
+                    <h3>Delivery Metrics</h3>
+                    <div class="mrow"><span class="mname">On-Time Delivery</span><div class="mbar-wrap"><div class="mbar" style="width:93%"></div></div><span class="mval">+93%</span></div><div class="mrow"><span class="mname">Bug-Free Releases</span><div class="mbar-wrap"><div class="mbar" style="width:97%"></div></div><span class="mval">+97%</span></div><div class="mrow"><span class="mname">Performance Targets</span><div class="mbar-wrap"><div class="mbar" style="width:95%"></div></div><span class="mval">+95%</span></div><div class="mrow"><span class="mname">Client Satisfaction</span><div class="mbar-wrap"><div class="mbar" style="width:98%"></div></div><span class="mval">+98%</span></div><div class="mrow"><span class="mname">Code Quality Score</span><div class="mbar-wrap"><div class="mbar" style="width:94%"></div></div><span class="mval">+94%</span></div>
+                    <div class="proc-note">Average delivery metrics across TamkinExpress custom software projects for UAE enterprises.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="reveal">
+            <h2>Ready to Build Software That <em>Scales with You?</em></h2>
+            <p>Book a free technical consultation. We'll map your requirements and give you a clear development roadmap and timeline.</p>
+            <div class="cta-btns">
+                <a href="/contact-us.html" class="btn-primary">📞 Book Free Consultation</a>
+                <a href="tel:+971588967713" class="btn-secondary">📲 +971 588967713</a>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <img src="./asset/logo_coloured.png" alt="TamkinExpress" onerror="this.style.display='none'">
+                <p>Your complete business services partner in UAE. From registration to digital excellence.</p>
+                <div class="fc">
+                    <p>📍 Office No. 49, Maxim Pharmacy Building, Musaffah M43, Abu Dhabi, UAE</p>
+                    <p>📞 +971 588967713</p>
+                    <p>✉️ info@tamkinexpress.com</p>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h5>Services</h5>
+                <ul>
+                    <li><a href="/digital-marketing.html">Digital Marketing</a></li>
+                    <li><a href="/web-development.html">Web Development</a></li>
+                    <li><a href="/mobile-app-development.html">Mobile App Development</a></li>
+                    <li><a href="/software-development.html">Software Development</a></li>
+                    <li><a href="/employment-visa.html">Employment Visa</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Company</h5>
+                <ul>
+                    <li><a href="/about.html">About Us</a></li>
+                    <li><a href="/portfolio.html">Portfolio</a></li>
+                    <li><a href="/contact-us.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Legal</h5>
+                <ul>
+                    <li><a href="/privacy">Privacy Policy</a></li>
+                    <li><a href="/terms">Terms of Service</a></li>
+                    <li><a href="/cookies">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2025 TamkinExpress. All rights reserved.</span>
+            <span>Abu Dhabi, UAE</span>
+        </div>
+    </footer>
+
+
+    <script>
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 60));
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        hamburger.addEventListener('click', () => { hamburger.classList.toggle('open'); mobileMenu.classList.toggle('open'); });
+        mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { hamburger.classList.remove('open'); mobileMenu.classList.remove('open'); }));
+        document.querySelectorAll('.reveal').forEach(el => {
+            new IntersectionObserver((entries, obs) => { entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);} }); }, {threshold:0.12}).observe(el);
+        });
+    </script>
+
+</body>
+</html>
