@@ -1,750 +1,485 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notary Court Services UAE | Document Notarization Abu Dhabi | Tamkin Express</title>
-    <meta name="description" content="Professional notary court services in UAE. Document notarization, power of attorney, affidavits and legal document authentication in Abu Dhabi and Dubai. Tamkin Express.">
-    <meta name="keywords" content="notary court UAE, document notarization Abu Dhabi, notary services Dubai, power of attorney UAE, affidavit notarization UAE, legal document notarization UAE">
-    <link rel="canonical" href="https://tamkinexpress.ae/notary-court.html">
-    <meta property="og:title" content="Notary Court Services UAE | Tamkin Express">
-    <meta property="og:description" content="Professional document notarization and notary court services in Abu Dhabi and Dubai UAE.">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Notary Court Services UAE | Tamkin Express">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "name": "Notary Court Services UAE",
-      "provider": {
-        "@type": "LocalBusiness",
-        "name": "Tamkin Express",
-        "telephone": "+971506512466",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Office No. 49, Maxim Pharmacy Building, Musaffah M43",
-          "addressLocality": "Abu Dhabi",
-          "addressCountry": "AE"
-        }
-      },
-      "description": "Professional notary court services including document notarization, power of attorney and affidavits in Abu Dhabi and Dubai UAE.",
-      "areaServed": "United Arab Emirates"
-    }
-    </script>
-
-    <style>
-        :root {
-            --dark: #0a0a0f;
-            --dark2: #12121a;
-            --dark3: #0f1f1c;
-            --gold: #00d4a8;
-            --gold2: #00f0c0;
-            --gold-light: rgba(0, 212, 168, 0.12);
-            --white: #f0faf8;
-            --gray: #7a9990;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-
-        body {
-            font-family: 'DM Sans', sans-serif;
-            background: var(--dark);
-            color: var(--white);
-            overflow-x: hidden;
-        }
-
-        /* ── NAV ── */
-        .navbar {
-            position: fixed;
-            top: 0; left: 0; right: 0;
-            z-index: 999;
-            background: rgba(10,10,15,0.92);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(0,212,168,0.15);
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 14px 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .nav-menu { display: flex; gap: 28px; align-items: center; }
-
-        .nav-link {
-            color: var(--white);
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: color 0.2s;
-            opacity: 0.8;
-        }
-
-        .nav-link:hover { color: var(--gold); opacity: 1; }
-
-        .nav-cta {
-            background: var(--gold);
-            color: var(--dark) !important;
-            padding: 10px 22px;
-            border-radius: 6px;
-            font-family: 'Syne', sans-serif;
-            font-weight: 700;
-            font-size: 0.85rem;
-            text-decoration: none;
-            transition: background 0.2s;
-        }
-
-        .nav-cta:hover { background: var(--gold2); opacity: 1; }
-
-        .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
-        .hamburger span { width: 24px; height: 2px; background: var(--white); border-radius: 2px; }
-
-        /* ── HERO ── */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            position: relative;
-            padding: 120px 5% 80px;
-            overflow: hidden;
-        }
-
-        .hero-bg {
-            position: absolute; inset: 0;
-            background:
-                radial-gradient(ellipse 60% 50% at 70% 50%, rgba(0,212,168,0.08) 0%, transparent 70%),
-                radial-gradient(ellipse 40% 40% at 20% 80%, rgba(0,212,168,0.05) 0%, transparent 60%);
-        }
-
-        .hero-grid {
-            position: absolute; inset: 0;
-            background-image:
-                linear-gradient(rgba(0,212,168,0.04) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(0,212,168,0.04) 1px, transparent 1px);
-            background-size: 60px 60px;
-        }
-
-        .hero-content { position: relative; max-width: 780px; margin: 0 auto; animation: fadeUp 0.8s ease both; text-align: center; }
-        .hero-btns { justify-content: center; }
-
-        @keyframes fadeUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: var(--gold-light);
-            border: 1px solid rgba(0,212,168,0.3);
-            padding: 7px 16px;
-            border-radius: 50px;
-            font-size: 0.78rem;
-            font-weight: 500;
-            color: var(--gold);
-            margin-bottom: 28px;
-        }
-
-        .hero-badge::before {
-            content: '';
-            width: 7px; height: 7px;
-            background: var(--gold);
-            border-radius: 50%;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
-
-        .hero h1 {
-            font-family: 'Syne', sans-serif;
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            font-weight: 800;
-            line-height: 1.1;
-            margin-bottom: 24px;
-            letter-spacing: -1px;
-        }
-
-        .teal { color: var(--gold); }
-
-        .hero p { font-size: 1.1rem; color: var(--gray); line-height: 1.7; margin: 0 auto 40px; max-width: 540px; }
-
-        .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
-
-        .btn-primary {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: var(--gold);
-            color: var(--dark);
-            padding: 15px 30px;
-            border-radius: 8px;
-            font-family: 'Syne', sans-serif;
-            font-weight: 700;
-            font-size: 0.95rem;
-            text-decoration: none;
-            transition: all 0.2s;
-        }
-
-        .btn-primary:hover { background: var(--gold2); transform: translateY(-2px); }
-
-        .btn-secondary {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: transparent;
-            color: var(--white);
-            padding: 15px 30px;
-            border-radius: 8px;
-            border: 1px solid rgba(255,255,255,0.15);
-            font-family: 'Syne', sans-serif;
-            font-weight: 600;
-            font-size: 0.95rem;
-            text-decoration: none;
-            transition: all 0.2s;
-        }
-
-        .btn-secondary:hover { border-color: var(--gold); color: var(--gold); }
-
-        .hero-stats {
-            position: absolute;
-            right: 5%; top: 50%;
-            transform: translateY(-50%);
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            animation: fadeUp 0.8s 0.3s ease both;
-        }
-
-        .stat-card {
-            background: var(--dark2);
-            border: 1px solid rgba(0,212,168,0.15);
-            border-radius: 12px;
-            padding: 24px 30px;
-            text-align: center;
-            min-width: 160px;
-        }
-
-        .stat-number { font-family: 'Syne', sans-serif; font-size: 2rem; font-weight: 800; color: var(--gold); display: block; }
-        .stat-label { font-size: 0.8rem; color: var(--gray); margin-top: 4px; }
-
-        /* ── COMMONS ── */
-        .section-label { font-size: 0.78rem; font-weight: 600; letter-spacing: 3px; color: var(--gold); text-transform: uppercase; margin-bottom: 16px; }
-
-        .section-title {
-            font-family: 'Syne', sans-serif;
-            font-size: clamp(1.8rem, 3vw, 2.5rem);
-            font-weight: 800;
-            line-height: 1.2;
-            margin-bottom: 50px;
-            letter-spacing: -0.5px;
-        }
-
-        .container { max-width: 1200px; margin: 0 auto; }
-
-        /* ── SERVICES ── */
-        .services { padding: 100px 5%; background: var(--dark2); }
-
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
-
-        .service-card {
-            background: var(--dark);
-            border: 1px solid rgba(255,255,255,0.06);
-            border-radius: 14px;
-            padding: 32px;
-            transition: all 0.3s;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0;
-            height: 2px;
-            background: linear-gradient(90deg, var(--gold), transparent);
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-
-        .service-card:hover { border-color: rgba(0,212,168,0.2); transform: translateY(-4px); }
-        .service-card:hover::before { opacity: 1; }
-
-        .service-icon { width: 52px; height: 52px; background: var(--gold-light); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-bottom: 20px; }
-
-        .service-card h3 { font-family: 'Syne', sans-serif; font-size: 1.05rem; font-weight: 700; margin-bottom: 12px; }
-
-        .service-card ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
-        .service-card ul li { font-size: 0.85rem; color: var(--gray); display: flex; align-items: center; gap: 8px; }
-        .service-card ul li::before { content: '→'; color: var(--gold); font-size: 0.75rem; }
-
-        /* ── STEPS ── */
-        .steps { padding: 100px 5%; }
-
-        .steps-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 2px;
-            background: rgba(0,212,168,0.08);
-            border-radius: 16px;
-            overflow: hidden;
-        }
-
-        .step { background: var(--dark); padding: 40px 30px; transition: background 0.2s; }
-        .step:hover { background: var(--dark3); }
-
-        .step-num { font-family: 'Syne', sans-serif; font-size: 3rem; font-weight: 800; color: rgba(0,212,168,0.15); line-height: 1; margin-bottom: 20px; }
-        .step h3 { font-family: 'Syne', sans-serif; font-size: 1rem; font-weight: 700; margin-bottom: 10px; }
-        .step p { font-size: 0.86rem; color: var(--gray); line-height: 1.6; }
-
-        /* ── WHY ── */
-        .why { padding: 100px 5%; background: var(--dark2); }
-
-        .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
-
-        .why-list { list-style: none; }
-        .why-item { display: flex; gap: 16px; padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
-        .why-item:last-child { border-bottom: none; }
-
-        .why-check { width: 28px; height: 28px; min-width: 28px; background: var(--gold-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--gold); font-size: 0.75rem; margin-top: 2px; }
-
-        .why-text h4 { font-family: 'Syne', sans-serif; font-size: 1rem; font-weight: 700; margin-bottom: 6px; }
-        .why-text p { font-size: 0.87rem; color: var(--gray); line-height: 1.6; }
-
-        .info-box { background: var(--dark3); border: 1px solid rgba(0,212,168,0.12); border-radius: 20px; padding: 40px; }
-        .info-box h3 { font-family: 'Syne', sans-serif; font-size: 1.2rem; font-weight: 700; margin-bottom: 24px; color: var(--gold); }
-
-        .info-list { list-style: none; }
-        .info-item { display: flex; align-items: flex-start; gap: 12px; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.05); font-size: 0.87rem; color: var(--gray); line-height: 1.5; }
-        .info-item:last-child { border-bottom: none; }
-        .info-item::before { content: '📄'; font-size: 1rem; margin-top: 1px; }
-
-        /* ── CONTACT ── */
-        .contact { padding: 100px 5%; position: relative; }
-        .contact-bg { position: absolute; inset: 0; background: radial-gradient(ellipse 50% 60% at 50% 50%, rgba(0,212,168,0.05) 0%, transparent 70%); }
-        .contact-inner { position: relative; max-width: 700px; margin: 0 auto; text-align: center; }
-        .contact-inner > p { color: var(--gray); margin-bottom: 50px; font-size: 1rem; }
-
-        .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; text-align: left; }
-        .form-group { display: flex; flex-direction: column; gap: 8px; }
-        .form-group.full { grid-column: 1 / -1; }
-        .form-group label { font-size: 0.82rem; font-weight: 500; color: var(--gray); }
-
-        .form-group input, .form-group select, .form-group textarea {
-            background: var(--dark2);
-            border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 8px;
-            padding: 13px 16px;
-            color: var(--white);
-            font-family: 'DM Sans', sans-serif;
-            font-size: 0.92rem;
-            outline: none;
-            transition: border-color 0.2s;
-        }
-
-        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--gold); }
-        .form-group select option { background: var(--dark2); }
-        .form-group textarea { resize: vertical; min-height: 100px; }
-
-        .form-submit {
-            grid-column: 1 / -1;
-            background: var(--gold);
-            color: var(--dark);
-            border: none;
-            padding: 15px 30px;
-            border-radius: 8px;
-            font-family: 'Syne', sans-serif;
-            font-weight: 700;
-            font-size: 1rem;
-            cursor: pointer;
-            width: 100%;
-            transition: all 0.2s;
-            margin-top: 8px;
-        }
-
-        .form-submit:hover { background: var(--gold2); transform: translateY(-2px); }
-
-        .or-divider { display: flex; align-items: center; gap: 16px; margin: 28px 0; color: var(--gray); font-size: 0.85rem; }
-        .or-divider::before, .or-divider::after { content: ''; flex: 1; height: 1px; background: rgba(255,255,255,0.08); }
-
-        .whatsapp-btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            background: #25D366;
-            color: white;
-            padding: 15px 30px;
-            border-radius: 8px;
-            font-family: 'Syne', sans-serif;
-            font-weight: 700;
-            font-size: 1rem;
-            text-decoration: none;
-            transition: all 0.2s;
-        }
-
-        .whatsapp-btn:hover { background: #1ebe5d; transform: translateY(-2px); }
-
-        /* ── FOOTER ── */
-        .footer { background: var(--dark2); border-top: 1px solid rgba(0,212,168,0.1); padding: 60px 5% 30px; }
-
-        .footer-content { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
-
-        .footer-section p { color: var(--gray); font-size: 0.87rem; line-height: 1.7; margin-top: 16px; }
-        .contact-info p { margin-top: 8px !important; font-size: 0.85rem; }
-
-        .footer-section h4 { font-family: 'Syne', sans-serif; font-size: 0.95rem; font-weight: 700; color: var(--white); margin-bottom: 16px; }
-
-        .footer-section ul { list-style: none; }
-        .footer-section ul li { margin-bottom: 10px; }
-        .footer-section ul li a { color: var(--gray); text-decoration: none; font-size: 0.87rem; transition: color 0.2s; }
-        .footer-section ul li a:hover { color: var(--gold); }
-
-        .footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.05); flex-wrap: wrap; gap: 16px; }
-        .footer-bottom p { color: var(--gray); font-size: 0.82rem; }
-        .social-links { display: flex; gap: 20px; }
-        .social-link { color: var(--gray); text-decoration: none; font-size: 0.85rem; transition: color 0.2s; }
-        .social-link:hover { color: var(--gold); }
-
-        /* ── FLOAT WA ── */
-        .float-wa {
-            position: fixed;
-            bottom: 30px; right: 30px;
-            width: 56px; height: 56px;
-            background: #25D366;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.5rem;
-            text-decoration: none;
-            z-index: 998;
-            box-shadow: 0 4px 20px rgba(37,211,102,0.4);
-            transition: transform 0.2s;
-        }
-
-        .float-wa:hover { transform: scale(1.1); }
-
-        /* ── RESPONSIVE ── */
-        @media (max-width: 900px) {
-            .hero-stats { display: none; }
-            .why-grid { grid-template-columns: 1fr; gap: 40px; }
-            .footer-content { grid-template-columns: 1fr 1fr; }
-        }
-
-        @media (max-width: 600px) {
-            .form-grid { grid-template-columns: 1fr; }
-            .form-group.full, .form-submit { grid-column: 1; }
-            .footer-content { grid-template-columns: 1fr; }
-            .nav-menu { display: none; }
-            .hamburger { display: flex; }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Notary & Court Services UAE | TamkinExpress – Document Authentication</title>
+<meta name="description" content="Professional notary and court services in UAE. Document authentication, legal certifications, power of attorney, and official proceedings — fast and reliable by TamkinExpress.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Varela&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./asset/css/style.css">
+<style>
+:root{
+  --teal:#00d4c8;--teal-dim:rgba(0,212,200,0.10);--teal-glow:rgba(0,212,200,0.28);
+  --dark:#070b0b;--dark2:#0d1515;--card:#111c1c;--border:rgba(0,212,200,0.13);
+  --text:#d8ecea;--muted:#6b9290;--white:#fff;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+.navbar,.pro-hero,.services-wrap,section,.final-cta,.site-footer{position:relative;z-index:1;}
+
+/* NAVBAR */
+.navbar{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(7,11,11,0.95);backdrop-filter:blur(20px);border-bottom:1px solid rgba(0,212,200,0.1);}
+.nav-container{max-width:1200px;margin:0 auto;padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:70px;}
+.nav-logo a{display:flex;align-items:center;}
+.nav-menu{display:flex;list-style:none;gap:0;align-items:center;}
+.nav-menu li{display:flex;align-items:center;}
+.nav-menu li:not(:first-child)::before{content:'•';color:rgba(0,212,200,0.35);font-size:.5rem;margin:0 .9rem;}
+.nav-link{color:#8a9e9c;font-size:.88rem;font-weight:500;text-decoration:none;transition:color .2s;white-space:nowrap;font-family:'Montserrat',sans-serif;}
+.nav-link:hover,.nav-link.active{color:#fff;}.nav-link.active{color:var(--teal);}
+@media(max-width:768px){.nav-menu{display:none;}}
+
+/* HERO */
+.pro-hero{min-height:100vh;display:flex;align-items:center;padding:9rem 6% 6rem;position:relative;overflow:hidden;}
+.hero-glow{position:absolute;top:-10%;right:-5%;width:600px;height:600px;background:radial-gradient(circle,rgba(0,212,200,0.09),transparent 65%);border-radius:50%;pointer-events:none;transition:transform .1s ease-out;}
+.hero-grid-bg{position:absolute;inset:0;background-image:linear-gradient(rgba(0,212,200,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,212,200,0.04) 1px,transparent 1px);background-size:55px 55px;mask-image:radial-gradient(ellipse 80% 70% at 60% 40%,black,transparent);}
+.hero-inner{position:relative;max-width:1200px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;}
+.hero-tag{display:inline-flex;align-items:center;gap:.5rem;font-size:.72rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--teal);margin-bottom:1.4rem;opacity:0;animation:fadeUp .7s .1s ease forwards;}
+.hero-tag::before{content:'';width:20px;height:1px;background:var(--teal);}
+.pro-hero h1{font-size:clamp(2.2rem,4.5vw,3.8rem);font-weight:700;line-height:1.12;color:var(--white);letter-spacing:-.02em;opacity:0;animation:fadeUp .7s .2s ease forwards;}
+.pro-hero h1 em{font-style:normal;color:var(--teal);}
+.hero-desc{margin-top:1.4rem;font-size:.97rem;line-height:1.85;color:var(--muted);opacity:0;animation:fadeUp .7s .32s ease forwards;}
+.hero-ctas{display:flex;gap:1rem;flex-wrap:wrap;margin-top:2.2rem;opacity:0;animation:fadeUp .7s .44s ease forwards;}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.78rem 1.7rem;border-radius:6px;font-weight:600;font-size:.88rem;text-decoration:none;transition:all .25s;font-family:'Montserrat',sans-serif;}
+.btn-solid{background:var(--teal);color:#000;transition:transform .2s cubic-bezier(.34,1.56,.64,1),box-shadow .2s ease;}
+.btn-solid:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 8px 28px rgba(0,212,200,0.32);}
+.btn-outline{border:1px solid rgba(0,212,200,0.3);color:var(--text);}
+.btn-outline:hover{border-color:var(--teal);color:var(--teal);}
+.hero-card-wrap{position:relative;opacity:0;animation:fadeLeft .8s .3s ease forwards;}
+.hero-stat-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:2.5rem;position:relative;overflow:hidden;animation:glowPulse 3s ease-in-out 1.2s 2;}
+.hero-stat-card::before{content:'';position:absolute;top:-40px;right:-40px;width:180px;height:180px;background:radial-gradient(circle,var(--teal-glow),transparent 70%);border-radius:50%;}
+.stat-row{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:1.8rem;}
+.stat-item{padding:1.2rem;background:rgba(0,0,0,0.3);border-radius:10px;border:1px solid var(--border);}
+.stat-val{font-size:1.9rem;font-weight:700;color:var(--teal);letter-spacing:-.03em;}
+.stat-lbl{font-size:.75rem;color:var(--muted);margin-top:.3rem;text-transform:uppercase;letter-spacing:.06em;}
+.trust-bar{display:flex;align-items:center;gap:.8rem;padding-top:1.4rem;border-top:1px solid var(--border);}
+.trust-dot{width:8px;height:8px;border-radius:50%;background:var(--teal);flex-shrink:0;}
+.trust-text{font-size:.83rem;color:var(--muted);line-height:1.5;}
+
+/* SECTIONS */
+.divider{height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent);margin:0 5%;}
+.sec{padding:6rem 6%;max-width:1200px;margin:0 auto;}
+.sec-label{font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--teal);margin-bottom:.8rem;text-align:center;}
+.sec-title{font-size:clamp(1.7rem,3vw,2.5rem);font-weight:700;color:var(--white);line-height:1.2;letter-spacing:-.02em;margin-bottom:1rem;text-align:center;}
+.sec-title em{font-style:normal;color:var(--teal);}
+.sec-sub{color:var(--muted);font-size:.95rem;line-height:1.8;max-width:580px;text-align:center;margin:0 auto;}
+
+/* SERVICE CARDS */
+.services-wrap{background:var(--dark2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.services-inner{max-width:1200px;margin:0 auto;padding:6rem 6%;}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem;}
+.svc-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:2rem;position:relative;overflow:hidden;transition:border-color .3s,transform .3s;}
+.svc-card:hover{border-color:rgba(0,212,200,0.4);transform:translateY(-6px);box-shadow:0 12px 40px rgba(0,212,200,0.08);}
+.svc-card::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--teal-dim),transparent 60%);opacity:0;transition:opacity .3s;}
+.svc-card:hover::after{opacity:1;}
+.svc-num{font-size:.7rem;font-weight:700;letter-spacing:.15em;color:var(--teal);margin-bottom:1rem;position:relative;z-index:1;}
+.svc-icon{width:46px;height:46px;border-radius:10px;background:var(--teal-dim);border:1px solid rgba(0,212,200,0.2);display:flex;align-items:center;justify-content:center;font-size:1.2rem;margin-bottom:1.2rem;position:relative;z-index:1;}
+.svc-title{font-weight:700;color:var(--white);font-size:1rem;margin-bottom:.6rem;position:relative;z-index:1;}
+.svc-desc{color:var(--muted);font-size:.86rem;line-height:1.65;position:relative;z-index:1;}
+.svc-line{position:absolute;bottom:0;left:2rem;width:0;height:2px;background:var(--teal);transition:width .4s ease;}
+.svc-card:hover .svc-line{width:50px;}
+
+/* PROCESS */
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-top:3rem;}
+.proc-step{background:var(--card);padding:2rem 1.8rem;position:relative;transition:background .3s;}
+.proc-step:hover{background:rgba(0,212,200,0.06);}
+.proc-n{font-size:3rem;font-weight:700;letter-spacing:-.04em;color:rgba(0,212,200,0.07);line-height:1;margin-bottom:1rem;transition:color .3s;}
+.proc-step:hover .proc-n{color:rgba(0,212,200,0.2);}
+.proc-title{font-weight:700;color:var(--white);font-size:.93rem;margin-bottom:.5rem;}
+.proc-desc{color:var(--muted);font-size:.84rem;line-height:1.6;}
+.proc-arrow{position:absolute;top:50%;right:-1px;width:24px;height:24px;background:var(--teal);clip-path:polygon(0 0,100% 50%,0 100%);opacity:.15;transform:translateY(-50%);}
+.proc-step:last-child .proc-arrow{display:none;}
+
+/* WHY */
+.why-layout{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;margin-top:3rem;}
+.why-list{display:flex;flex-direction:column;gap:.9rem;}
+.why-item{display:flex;gap:1rem;align-items:flex-start;padding:1.4rem 1.6rem;background:var(--card);border:1px solid var(--border);border-radius:10px;transition:border-color .25s,background .25s,transform .25s;}
+.why-item:hover{border-color:rgba(0,212,200,0.35);transform:translateX(4px);}
+.why-check{width:22px;height:22px;flex-shrink:0;background:var(--teal-dim);border:1px solid rgba(0,212,200,0.3);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--teal);font-size:.7rem;margin-top:.15rem;}
+.why-item strong{display:block;font-weight:700;color:var(--white);font-size:.92rem;margin-bottom:.3rem;}
+.why-item span{color:var(--muted);font-size:.85rem;line-height:1.6;}
+.cta-box{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:2.8rem;position:sticky;top:5.5rem;}
+.cta-box h3{font-size:1.4rem;font-weight:700;color:var(--white);margin-bottom:.8rem;line-height:1.35;}
+.cta-box h3 span{color:var(--teal);}
+.cta-box p{color:var(--muted);font-size:.9rem;line-height:1.75;margin-bottom:1.6rem;}
+.cta-box .btn-solid{display:block;text-align:center;width:100%;}
+.cta-note{text-align:center;margin-top:.8rem;color:var(--muted);font-size:.77rem;}
+
+/* FINAL CTA */
+.final-cta{padding:7rem 6%;text-align:center;background:linear-gradient(180deg,var(--dark) 0%,var(--dark2) 100%);border-top:1px solid var(--border);position:relative;overflow:hidden;}
+.final-cta::before{content:'';position:absolute;bottom:-60px;left:50%;transform:translateX(-50%);width:600px;height:400px;background:radial-gradient(ellipse,rgba(0,212,200,0.09),transparent 70%);}
+.final-cta *{position:relative;}
+.final-cta h2{font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:700;color:var(--white);line-height:1.2;letter-spacing:-.02em;margin-bottom:1rem;}
+.final-cta h2 em{font-style:normal;color:var(--teal);}
+.final-cta p{color:var(--muted);font-size:.97rem;line-height:1.75;max-width:480px;margin:0 auto 2rem;}
+
+/* FOOTER */
+.site-footer{background:#0a0f0f;border-top:1px solid var(--border);padding:4rem 5% 0;}
+.footer-inner{max-width:1200px;margin:0 auto;}
+.footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:3rem;padding-bottom:3rem;}
+.footer-col-title{color:var(--teal);font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;font-weight:600;margin-bottom:1rem;}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:.6rem;}
+.footer-links a{color:#aaa;text-decoration:none;font-size:.87rem;transition:color .2s;}
+.footer-links a:hover{color:var(--teal);}
+.footer-bottom{border-top:1px solid var(--border);padding:1.4rem 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+.footer-bottom p{color:#666;font-size:.8rem;}
+.footer-social{display:flex;gap:1.5rem;}
+.footer-social a{color:#666;text-decoration:none;font-size:.82rem;transition:color .2s;}
+.footer-social a:hover{color:var(--teal);}
+
+/* ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(28px);}to{opacity:1;transform:none;}}
+@keyframes fadeLeft{from{opacity:0;transform:translateX(40px);}to{opacity:1;transform:none;}}
+@keyframes glowPulse{0%,100%{box-shadow:0 0 0 0 rgba(0,212,200,0);}50%{box-shadow:0 0 24px 4px rgba(0,212,200,0.18);}}
+.reveal{opacity:0;transform:translateY(32px);transition:opacity .75s cubic-bezier(.16,1,.3,1),transform .75s cubic-bezier(.16,1,.3,1);}
+.reveal.visible{opacity:1;transform:none;}
+.reveal-left{opacity:0;transform:translateX(-32px);transition:opacity .75s cubic-bezier(.16,1,.3,1),transform .75s cubic-bezier(.16,1,.3,1);}
+.reveal-left.visible{opacity:1;transform:none;}
+.reveal-scale{opacity:0;transform:scale(0.93);transition:opacity .7s ease,transform .7s ease;}
+.reveal-scale.visible{opacity:1;transform:scale(1);}
+.svc-grid .reveal:nth-child(1){transition-delay:.05s;}
+.svc-grid .reveal:nth-child(2){transition-delay:.15s;}
+.svc-grid .reveal:nth-child(3){transition-delay:.25s;}
+.svc-grid .reveal:nth-child(4){transition-delay:.35s;}
+.svc-grid .reveal:nth-child(5){transition-delay:.45s;}
+.svc-grid .reveal:nth-child(6){transition-delay:.55s;}
+
+@media(max-width:960px){
+  .hero-inner,.why-layout{grid-template-columns:1fr;gap:3rem;}
+  .hero-card-wrap{order:-1;}
+  .svc-grid{grid-template-columns:1fr 1fr;}
+  .process-grid{grid-template-columns:1fr 1fr;}
+  .cta-box{position:static;}
+  .footer-grid{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:600px){
+  .svc-grid,.process-grid{grid-template-columns:1fr;}
+  .pro-hero{padding-top:7rem;}
+}
+</style>
 </head>
 <body>
 
-<!-- NAV -->
+<!-- FULL PAGE BACKGROUND -->
+<canvas id="bg-canvas" style="position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;opacity:1;"></canvas>
+
+<!-- NAVBAR -->
 <nav class="navbar">
-    <div class="nav-container">
-        <div class="nav-logo">
-            <a href="./index.html" style="text-decoration: none;">
-                <img src="./asset/logo_coloured.png" alt="TamkinExpress Logo" style="height:50px;width:140px;">
-            </a>
-        </div>
-        <div class="nav-menu" id="nav-menu">
-            <a href="./index.html" class="nav-link">Home</a>
-            <a href="./index.html#about" class="nav-link">About</a>
-            <a href="./index.html#services" class="nav-link">Services</a>
-            <a href="./index.html#portfolio" class="nav-link">Portfolio</a>
-            <a href="./index.html#contact" class="nav-link">Contact</a>
-        </div>
-        <div class="nav-cta">
-            <a href="./index.html#contact" class="nav-cta">Get Started</a>
-        </div>
-        <div class="hamburger" id="hamburger">
-            <span></span><span></span><span></span>
-        </div>
+  <div class="nav-container">
+    <div class="nav-logo">
+      <a href="/"><img src="./asset/logo_coloured.png" alt="TamkinExpress Logo" style="height:50px;width:140px;"></a>
     </div>
+    <ul class="nav-menu">
+      <li><a href="/" class="nav-link">Home</a></li>
+      <li><a href="/about.html" class="nav-link">About Us</a></li>
+      <li><a href="/#services" class="nav-link active">Services</a></li>
+      <li><a href="/portfolio.html" class="nav-link">Portfolio</a></li>
+      <li><a href="https://tamkinexpress.ae/contact-us.html" class="nav-link">Contact</a></li>
+    </ul>
+  </div>
 </nav>
 
 <!-- HERO -->
-<section class="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-grid"></div>
-    <div class="hero-content">
-        <div class="hero-badge">UAE Notary Court Specialists</div>
-        <h1>Notary Court<br><span class="teal">Services in UAE</span><br>Fast & Reliable</h1>
-        <p>Tamkin Express handles all notary court services in Abu Dhabi and Dubai — from power of attorney and affidavits to legal document notarization with full government compliance.</p>
-        <div class="hero-btns">
-            <a href="#contact" class="btn-primary"><span>Get Started</span><span>→</span></a>
-            <a href="https://wa.me/+971506512466?text=Hi%20Tamkin%20Express%2C%20I%20need%20Notary%20Court%20services%20in%20UAE"
-               class="btn-secondary" aria-label="WhatsApp Tamkin Express for Notary Court services">
-                <span>💬</span><span>WhatsApp Us</span>
-            </a>
+<section class="pro-hero">
+  <div class="hero-glow"></div>
+  <div class="hero-grid-bg"></div>
+  <canvas id="particles" style="position:absolute;inset:0;pointer-events:none;z-index:0;"></canvas>
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="hero-tag">Notary & Court Services — UAE</div>
+      <h1>Legal documents,<br><em>authenticated right.</em></h1>
+      <p class="hero-desc">TamkinExpress provides professional notary and court services across UAE — document authentication, power of attorney, legal certifications, and official proceedings handled accurately and swiftly.</p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn btn-solid">Get Started Today</a>
+        <a href="#services" class="btn btn-outline">View All Services</a>
+      </div>
+    </div>
+    <div class="hero-card-wrap">
+      <div class="hero-stat-card">
+        <div class="stat-row">
+          <div class="stat-item">
+            <div class="stat-val" data-target="400" data-suffix="+">0</div>
+            <div class="stat-lbl">Documents Notarized</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-val" data-target="24" data-suffix="h">0</div>
+            <div class="stat-lbl">Avg. Turnaround</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-val" data-target="100" data-suffix="%">0</div>
+            <div class="stat-lbl">Acceptance Rate</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-val" data-target="5" data-suffix="★">0</div>
+            <div class="stat-lbl">Client Rating</div>
+          </div>
         </div>
+        <div class="trust-bar">
+          <div class="trust-dot"></div>
+          <p class="trust-text">Trusted by individuals and businesses across Abu Dhabi, Dubai & all UAE for notary and court documentation.</p>
+        </div>
+      </div>
     </div>
-    <div class="hero-stats">
-        <div class="stat-card"><span class="stat-number">3000+</span><span class="stat-label">Documents Notarized</span></div>
-        <div class="stat-card"><span class="stat-number">5★</span><span class="stat-label">Google Rating</span></div>
-        <div class="stat-card"><span class="stat-number">Same Day</span><span class="stat-label">Express Available</span></div>
-    </div>
+  </div>
 </section>
+
+<div class="divider"></div>
 
 <!-- SERVICES -->
-<section class="services" id="services">
-    <div class="container">
-        <div class="section-label">What We Handle</div>
-        <h2 class="section-title">Notary Court Services in UAE</h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="service-icon">📝</div>
-                <h3>Power of Attorney</h3>
-                <ul>
-                    <li>General Power of Attorney</li>
-                    <li>Special Power of Attorney</li>
-                    <li>Property POA</li>
-                    <li>Business POA</li>
-                    <li>POA Cancellation</li>
-                </ul>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">📜</div>
-                <h3>Affidavits & Declarations</h3>
-                <ul>
-                    <li>Statutory Declarations</li>
-                    <li>Sworn Affidavits</li>
-                    <li>Undertaking Letters</li>
-                    <li>No Objection Certificates</li>
-                    <li>Consent Letters</li>
-                </ul>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">🏠</div>
-                <h3>Property Documents</h3>
-                <ul>
-                    <li>Sale & Purchase Agreements</li>
-                    <li>Tenancy Contract Notarization</li>
-                    <li>Title Deed Authentication</li>
-                    <li>Mortgage Documents</li>
-                    <li>Property Transfer Deeds</li>
-                </ul>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">🏢</div>
-                <h3>Business Documents</h3>
-                <ul>
-                    <li>Memorandum of Association</li>
-                    <li>Articles of Association</li>
-                    <li>Board Resolutions</li>
-                    <li>Partnership Agreements</li>
-                    <li>Commercial Contracts</li>
-                </ul>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">👤</div>
-                <h3>Personal Documents</h3>
-                <ul>
-                    <li>Marriage & Divorce Deeds</li>
-                    <li>Will & Testament</li>
-                    <li>Inheritance Documents</li>
-                    <li>Guardianship Papers</li>
-                    <li>Personal Undertakings</li>
-                </ul>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">⚡</div>
-                <h3>Express Notarization</h3>
-                <ul>
-                    <li>Same Day Service</li>
-                    <li>Document Pickup & Delivery</li>
-                    <li>Online Appointment Booking</li>
-                    <li>Abu Dhabi Notary Court</li>
-                    <li>Dubai Notary Court</li>
-                </ul>
-            </div>
-        </div>
+<section class="services-wrap" id="services">
+  <div class="services-inner">
+    <p class="sec-label">What We Handle</p>
+    <h2 class="sec-title">Complete notary & court<br><em>services, end to end.</em></h2>
+    <p class="sec-sub">From simple document notarization to full court proceedings support — we handle every legal documentation need in the UAE.</p>
+    <div class="svc-grid">
+      <div class="svc-card reveal">
+        <div class="svc-num">01</div>
+        <div class="svc-icon">✍️</div>
+        <div class="svc-title">Document Notarization</div>
+        <div class="svc-desc">Official notarization of personal, commercial, and legal documents through UAE notary public authorities.</div>
+        <div class="svc-line"></div>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-num">02</div>
+        <div class="svc-icon">📜</div>
+        <div class="svc-title">Power of Attorney</div>
+        <div class="svc-desc">Drafting, notarization, and attestation of general and special power of attorney documents for UAE use.</div>
+        <div class="svc-line"></div>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-num">03</div>
+        <div class="svc-icon">🔐</div>
+        <div class="svc-title">Legal Certifications</div>
+        <div class="svc-desc">Official certifications of educational degrees, commercial documents, and personal certificates for legal proceedings.</div>
+        <div class="svc-line"></div>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-num">04</div>
+        <div class="svc-icon">⚖️</div>
+        <div class="svc-title">Court Filing & Support</div>
+        <div class="svc-desc">Assistance with court submissions, case filings, and judicial documentation across UAE court systems.</div>
+        <div class="svc-line"></div>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-num">05</div>
+        <div class="svc-icon">🏛️</div>
+        <div class="svc-title">MOJ Attestation</div>
+        <div class="svc-desc">Ministry of Justice attestation for all document types — contracts, agreements, and legal certificates.</div>
+        <div class="svc-line"></div>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-num">06</div>
+        <div class="svc-icon">🌐</div>
+        <div class="svc-title">Embassy Attestation</div>
+        <div class="svc-desc">Full embassy attestation services for documents required for use outside UAE — fast and accurate processing.</div>
+        <div class="svc-line"></div>
+      </div>
     </div>
+  </div>
 </section>
 
-<!-- STEPS -->
-<section class="steps">
-    <div class="container">
-        <div class="section-label">How It Works</div>
-        <h2 class="section-title">Simple 5-Step Process</h2>
-        <div class="steps-grid">
-            <div class="step"><div class="step-num">01</div><h3>Free Consultation</h3><p>Contact us to understand what type of notarization is required for your specific document and purpose.</p></div>
-            <div class="step"><div class="step-num">02</div><h3>Document Preparation</h3><p>We prepare or review your document to ensure it meets all notary court requirements before submission.</p></div>
-            <div class="step"><div class="step-num">03</div><h3>Translation (if needed)</h3><p>Arabic legal translation arranged if your document needs to be translated before notarization.</p></div>
-            <div class="step"><div class="step-num">04</div><h3>Notary Court Visit</h3><p>Our PRO officer accompanies or represents you at the notary court for signature and stamping.</p></div>
-            <div class="step"><div class="step-num">05</div><h3>Document Delivery</h3><p>Receive your fully notarized document — ready for use in UAE for any legal or official purpose.</p></div>
-        </div>
+<!-- PROCESS -->
+<section>
+  <div class="sec">
+    <p class="sec-label">How It Works</p>
+    <h2 class="sec-title">Simple process.<br><em>Fast results.</em></h2>
+    <div class="process-grid reveal-scale">
+      <div class="proc-step">
+        <div class="proc-n">01</div>
+        <div class="proc-title">Consultation</div>
+        <div class="proc-desc">Tell us what document you need notarized or certified. We advise on the correct legal process.</div>
+        <div class="proc-arrow"></div>
+      </div>
+      <div class="proc-step">
+        <div class="proc-n">02</div>
+        <div class="proc-title">Document Review</div>
+        <div class="proc-desc">We verify all documents are complete and correct before submission to avoid rejections.</div>
+        <div class="proc-arrow"></div>
+      </div>
+      <div class="proc-step">
+        <div class="proc-n">03</div>
+        <div class="proc-title">Official Submission</div>
+        <div class="proc-desc">Our team submits to the notary public or court authority and tracks the status throughout.</div>
+        <div class="proc-arrow"></div>
+      </div>
+      <div class="proc-step">
+        <div class="proc-n">04</div>
+        <div class="proc-title">Delivery</div>
+        <div class="proc-desc">Authenticated documents delivered to you with full confirmation. We follow up until complete.</div>
+      </div>
     </div>
+  </div>
 </section>
 
-<!-- WHY US -->
-<section class="why">
-    <div class="container">
-        <div class="section-label">Why Choose Us</div>
-        <h2 class="section-title">Trusted Notary Court Partner<br>in Abu Dhabi & Dubai</h2>
-        <div class="why-grid">
-            <ul class="why-list">
-                <li class="why-item">
-                    <div class="why-check">✓</div>
-                    <div class="why-text"><h4>Abu Dhabi & Dubai Courts</h4><p>We handle notarization at both Abu Dhabi Notary Court and Dubai Notary Court with full compliance.</p></div>
-                </li>
-                <li class="why-item">
-                    <div class="why-check">✓</div>
-                    <div class="why-text"><h4>Same Day Service</h4><p>Urgent notarization available — same day processing for critical documents when needed.</p></div>
-                </li>
-                <li class="why-item">
-                    <div class="why-check">✓</div>
-                    <div class="why-text"><h4>All Document Types</h4><p>From personal affidavits to complex business agreements — we handle all notarization needs.</p></div>
-                </li>
-                <li class="why-item">
-                    <div class="why-check">✓</div>
-                    <div class="why-text"><h4>Pickup & Delivery</h4><p>Door-to-door document collection and delivery across Abu Dhabi, Dubai and Sharjah.</p></div>
-                </li>
-                <li class="why-item">
-                    <div class="why-check">✓</div>
-                    <div class="why-text"><h4>Arabic Translation Support</h4><p>In-house legal translation team for documents requiring Arabic translation before notarization.</p></div>
-                </li>
-            </ul>
-            <div class="info-box">
-                <h3>Documents Required</h3>
-                <ul class="info-list">
-                    <li class="info-item">Original Document to be Notarized</li>
-                    <li class="info-item">Passport Copy of All Parties</li>
-                    <li class="info-item">Emirates ID Copy</li>
-                    <li class="info-item">UAE Visa Copy (if applicable)</li>
-                    <li class="info-item">Arabic Translation (if document is in English)</li>
-                    <li class="info-item">Trade License (for business documents)</li>
-                    <li class="info-item">Authorization Letter (if representing another party)</li>
-                </ul>
-                <p style="font-size:0.8rem; color:var(--gray); margin-top:20px;">* Requirements vary by document type. Contact us for exact checklist.</p>
-            </div>
-        </div>
+<div class="divider"></div>
+
+<!-- WHY -->
+<section style="background:var(--dark2);border-top:1px solid var(--border);">
+  <div class="sec">
+    <p class="sec-label">Why TamkinExpress</p>
+    <h2 class="sec-title">Not just a notary agent.<br>Your <em>legal documentation partner.</em></h2>
+    <div class="why-layout">
+      <ul class="why-list">
+        <li class="why-item reveal-left">
+          <div class="why-check">✓</div>
+          <div>
+            <strong>UAE Legal System Expertise</strong>
+            <span>Deep knowledge of UAE notary public procedures, court systems, and Ministry of Justice requirements.</span>
+          </div>
+        </li>
+        <li class="why-item reveal-left">
+          <div class="why-check">✓</div>
+          <div>
+            <strong>24–48 Hour Turnaround</strong>
+            <span>Most notarization and certification requests processed within 24–48 hours. Urgent cases handled same day.</span>
+          </div>
+        </li>
+        <li class="why-item reveal-left">
+          <div class="why-check">✓</div>
+          <div>
+            <strong>Zero Rejection Guarantee</strong>
+            <span>Our thorough review process ensures every document is correctly prepared — accepted first time, every time.</span>
+          </div>
+        </li>
+        <li class="why-item reveal-left">
+          <div class="why-check">✓</div>
+          <div>
+            <strong>Dedicated Legal Handler</strong>
+            <span>One dedicated professional manages your case. Full transparency, direct contact, zero confusion.</span>
+          </div>
+        </li>
+      </ul>
+      <div class="cta-box reveal">
+        <h3>Need notary or court<br><span>services now?</span></h3>
+        <p>Talk to our legal documentation specialists today. Get a clear quote and timeline — no hidden fees, no surprises.</p>
+        <a href="https://tamkinexpress.ae/contact-us.html" class="btn btn-solid">Talk to a Specialist</a>
+        <p class="cta-note">📞 +971 588967713 · Fast response guaranteed</p>
+      </div>
     </div>
+  </div>
 </section>
 
-<!-- CONTACT FORM -->
-<section class="contact" id="contact">
-    <div class="contact-bg"></div>
-    <div class="contact-inner">
-        <div class="section-label">Get Started</div>
-        <h2 class="section-title">Free Consultation</h2>
-        <p>Fill in the form and our notary specialist will contact you within 2 hours.</p>
-        <form class="form-grid" name="notary-form" id="notary-form">
-            <div class="form-group">
-                <label for="fname">Full Name *</label>
-                <input type="text" id="fname" name="name" placeholder="Your full name" required>
-            </div>
-            <div class="form-group">
-                <label for="phone">Phone Number *</label>
-                <input type="tel" id="phone" name="number" placeholder="+971 XX XXX XXXX" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" placeholder="your@email.com">
-            </div>
-            <div class="form-group">
-                <label for="service">Service Required</label>
-                <select id="service" name="service">
-                    <option value="">Select service</option>
-                    <option value="poa">Power of Attorney</option>
-                    <option value="affidavit">Affidavit / Declaration</option>
-                    <option value="property">Property Documents</option>
-                    <option value="business">Business Documents</option>
-                    <option value="personal">Personal Documents</option>
-                    <option value="express">Express Notarization</option>
-                    <option value="other">Other</option>
-                </select>
-            </div>
-            <div class="form-group full">
-                <label for="msg">Message</label>
-                <textarea id="msg" name="msg" placeholder="Tell us about your notarization requirements..."></textarea>
-            </div>
-            <button type="submit" class="form-submit">Submit — Get Free Consultation</button>
-        </form>
-        <div class="or-divider">or contact us directly</div>
-        <a href="https://wa.me/+971506512466?text=Hi%20Tamkin%20Express%2C%20I%20need%20Notary%20Court%20services%20in%20UAE"
-           class="whatsapp-btn" aria-label="WhatsApp Tamkin Express for Notary Court services">
-            <span>💬</span><span>Chat on WhatsApp — +971 506512466</span>
-        </a>
-    </div>
+<!-- FINAL CTA -->
+<section class="final-cta" id="contact">
+  <p class="sec-label">Get Started</p>
+  <h2>Stop stressing about<br><em>legal documentation.</em></h2>
+  <p>Let TamkinExpress handle every notarization, attestation, and court filing — accurately and on time.</p>
+  <a href="https://tamkinexpress.ae/contact-us.html" class="btn btn-solid">Plan a Consultation →</a>
 </section>
 
 <!-- FOOTER -->
-<footer class="footer" id="footer">
-    <div class="container">
-        <div class="footer-content">
-            <div class="footer-section">
-                <img src="./asset/logo_coloured.png" style="height:70px;width:190px;" alt="TamkinExpress Logo">
-                <p>Your trusted partner for business registration and complete business services in UAE.</p>
-                <div class="contact-info">
-                    <p>📍 Office No. 49 - Maxim Pharmacy Building - Musaffah M43 - Abudhabi - UAE</p>
-                    <p>📞 <a href="tel:+971506512466" style="color:var(--gold);">+971 506512466</a></p>
-                    <p>✉️ <a href="/cdn-cgi/l/email-protection#147d7a727b546075797f7d7a716c64667167673a777b79" style="color:var(--gold);"><span class="__cf_email__" data-cfemail="422b2c242d0236232f292b2c273a32302731316c212d2f">[email&#160;protected]</span></a></p>
-                </div>
-            </div>
-            <div class="footer-section">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="./golden-visa.html">Golden Visa</a></li>
-                    <li><a href="./employment-visa.html">Employment Visa</a></li>
-                    <li><a href="./pro-services.html">PRO Services</a></li>
-                    <li><a href="./legal-translation.html">Legal Translation</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Other Services</h4>
-                <ul>
-                    <li><a href="./digital-marketing.html">Digital Marketing</a></li>
-                    <li><a href="./cicpa.html">CICPA Passes</a></li>
-                    <li><a href="./certificate-attestation.html">Certificate Attestation</a></li>
-                    <li><a href="./legal-contracts.html">Legal Contracts</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Company</h4>
-                <ul>
-                    <li><a href="./index.html#about">About Us</a></li>
-                    <li><a href="./index.html#portfolio">Portfolio</a></li>
-                    <li><a href="./index.html#contact">Contact</a></li>
-                    <li><a href="./index.html#careers">Careers</a></li>
-                </ul>
-            </div>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <img src="./asset/logo_coloured.png" style="height:60px;width:170px;margin-bottom:1rem;" alt="TamkinExpress Logo">
+        <p style="color:#aaa;font-size:.88rem;line-height:1.7;max-width:220px;">Your trusted partner for business registration and complete business services in UAE.</p>
+        <div style="margin-top:1rem;display:flex;flex-direction:column;gap:.4rem;">
+          <p style="color:#aaa;font-size:.85rem;">📍 Office No. 49, Musaffah M43, Abu Dhabi – UAE</p>
+          <p style="color:#aaa;font-size:.85rem;">📞 +971 588967713</p>
+          <p style="color:#aaa;font-size:.85rem;">✉️ info@tamkinexpress.com</p>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 TamkinExpress. All rights reserved.</p>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/company/tamkin-express-business-services-llc" class="social-link">LinkedIn</a>
-                <a href="https://x.com/tamkinexpress" class="social-link">Twitter</a>
-                <a href="https://www.instagram.com/tamkin.express/" class="social-link">Instagram</a>
-            </div>
-        </div>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title">Visa Services</h4>
+        <ul class="footer-links">
+          <li><a href="./golden-visa.html">Golden Visa</a></li>
+          <li><a href="./employment-visa.html">Employment Visa</a></li>
+          <li><a href="./employment-visa.html">Family Visa</a></li>
+          <li><a href="./cicpa.html">CICPA Passes</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title">Other Services</h4>
+        <ul class="footer-links">
+          <li><a href="./pro-services.html">PRO Services</a></li>
+          <li><a href="./ministry-of-labour.html">Ministry of Labour</a></li>
+          <li><a href="./notary-court.html" style="color:var(--teal);">Notary & Court</a></li>
+          <li><a href="./legal-translation.html">Legal Translation</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title">Company</h4>
+        <ul class="footer-links">
+          <li><a href="/about.html">About Us</a></li>
+          <li><a href="/portfolio.html">Portfolio</a></li>
+          <li><a href="/contact-us.html">Contact</a></li>
+        </ul>
+      </div>
     </div>
+    <div class="footer-bottom">
+      <p>© 2025 TamkinExpress. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="#">LinkedIn</a>
+        <a href="#">Twitter</a>
+        <a href="#">Instagram</a>
+      </div>
+    </div>
+  </div>
 </footer>
 
-<!-- FLOATING WHATSAPP -->
-<a href="https://wa.me/+971506512466" class="float-wa" aria-label="WhatsApp Tamkin Express">💬</a>
-
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="./asset/js/main.js" type="module" defer></script>
 <script>
-const scriptURL = 'https://script.google.com/macros/s/AKfycbxSgJW29b_i_Gk8VpDBmwYDPrnpE9n_wuZI_DcWi3HP-RMheIxE7x_YjMJVtgA2oVSHIQ/exec';
-const form = document.getElementById('notary-form');
-if(form) {
-    form.addEventListener('submit', e => {
-        e.preventDefault();
-        fetch(scriptURL, { method: 'POST', body
+/* 1. FULL PAGE BACKGROUND */
+(function(){
+  const bgCanvas=document.getElementById('bg-canvas'),bgCtx=bgCanvas.getContext('2d');
+  let bW,bH;
+  function bgResize(){bW=bgCanvas.width=window.innerWidth;bH=bgCanvas.height=window.innerHeight;}
+  bgResize();window.addEventListener('resize',bgResize);
+  const orbs=Array.from({length:8},()=>({x:Math.random()*window.innerWidth,y:Math.random()*window.innerHeight,r:180+Math.random()*200,vx:(Math.random()-.5)*.3,vy:(Math.random()-.5)*.3,alpha:.03+Math.random()*.04,phase:Math.random()*Math.PI*2}));
+  const GRID=55;let tick2=0;
+  function drawBg(){
+    bgCtx.clearRect(0,0,bW,bH);tick2+=.008;
+    const scrollY=window.scrollY*.2;
+    bgCtx.lineWidth=1;
+    for(let x=0;x<bW;x+=GRID){const a=0.06+0.04*Math.sin(tick2+x*.01);bgCtx.strokeStyle=`rgba(0,212,200,${a})`;bgCtx.beginPath();bgCtx.moveTo(x,0);bgCtx.lineTo(x,bH);bgCtx.stroke();}
+    for(let y=-GRID;y<bH+GRID;y+=GRID){const w=Math.sin(tick2*1.5+y*.015)*14,a=0.05+0.03*Math.sin(tick2+y*.02);bgCtx.strokeStyle=`rgba(0,212,200,${a})`;bgCtx.beginPath();bgCtx.moveTo(0,y+(scrollY%GRID)+w);bgCtx.lineTo(bW,y+(scrollY%GRID)-w);bgCtx.stroke();}
+    orbs.forEach(o=>{
+      o.x+=o.vx;o.y+=o.vy;o.phase+=.012;
+      if(o.x<-o.r)o.x=bW+o.r;if(o.x>bW+o.r)o.x=-o.r;if(o.y<-o.r)o.y=bH+o.r;if(o.y>bH+o.r)o.y=-o.r;
+      const p=o.alpha*(.5+.5*Math.sin(o.phase)),g=bgCtx.createRadialGradient(o.x,o.y,0,o.x,o.y,o.r);
+      g.addColorStop(0,`rgba(0,212,200,${p*2.5})`);g.addColorStop(.4,`rgba(0,212,200,${p*1.2})`);g.addColorStop(1,'rgba(0,212,200,0)');
+      bgCtx.beginPath();bgCtx.arc(o.x,o.y,o.r,0,Math.PI*2);bgCtx.fillStyle=g;bgCtx.fill();
+    });
+    [0,.5].forEach(off=>{
+      const sx=((tick2*100+off*(bW+bH))%(bW+bH));
+      bgCtx.beginPath();bgCtx.moveTo(sx-bH,0);bgCtx.lineTo(sx,bH);
+      const sg=bgCtx.createLinearGradient(sx-bH,0,sx,bH);
+      sg.addColorStop(0,'rgba(0,212,200,0)');sg.addColorStop(.5,'rgba(0,212,200,0.10)');sg.addColorStop(1,'rgba(0,212,200,0)');
+      bgCtx.strokeStyle=sg;bgCtx.lineWidth=2.5;bgCtx.stroke();
+    });
+    [[0,0],[bW,0],[0,bH],[bW,bH]].forEach(([cx,cy],i)=>{
+      const r=(tick2*60+i*80)%300,a=Math.max(0,.12*(1-r/300));
+      bgCtx.beginPath();bgCtx.arc(cx,cy,r,0,Math.PI*2);bgCtx.strokeStyle=`rgba(0,212,200,${a})`;bgCtx.lineWidth=1.5;bgCtx.stroke();
+    });
+    requestAnimationFrame(drawBg);
+  }
+  drawBg();
+})();
+
+/* 2. HERO PARTICLES */
+(function(){
+  const c=document.getElementById('particles'),ctx=c.getContext('2d');
+  let W,H,ps=[];
+  function resize(){W=c.width=c.offsetWidth;H=c.height=c.offsetHeight;}
+  resize();window.addEventListener('resize',resize);
+  class P{constructor(){this.reset();}reset(){this.x=Math.random()*W;this.y=Math.random()*H;this.r=Math.random()*1.5+.3;this.vx=(Math.random()-.5)*.4;this.vy=(Math.random()-.5)*.4;this.alpha=Math.random()*.5+.1;this.life=0;this.maxLife=Math.random()*300+200;}update(){this.x+=this.vx;this.y+=this.vy;this.life++;if(this.life>this.maxLife||this.x<0||this.x>W||this.y<0||this.y>H)this.reset();}draw(){ctx.beginPath();ctx.arc(this.x,this.y,this.r,0,Math.PI*2);ctx.fillStyle=`rgba(0,212,200,${this.alpha*Math.sin(Math.PI*this.life/this.maxLife)})`;ctx.fill();}}
+  for(let i=0;i<130;i++)ps.push(new P());
+  function loop(){ctx.clearRect(0,0,W,H);ps.forEach(p=>{p.update();p.draw();});for(let i=0;i<ps.length;i++)for(let j=i+1;j<ps.length;j++){const dx=ps[i].x-ps[j].x,dy=ps[i].y-ps[j].y,d=Math.sqrt(dx*dx+dy*dy);if(d<90){ctx.beginPath();ctx.strokeStyle=`rgba(0,212,200,${.06*(1-d/90)})`;ctx.lineWidth=.5;ctx.moveTo(ps[i].x,ps[i].y);ctx.lineTo(ps[j].x,ps[j].y);ctx.stroke();}}requestAnimationFrame(loop);}
+  loop();
+})();
+
+/* 3. SCROLL REVEAL */
+const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}});},{threshold:.12});
+document.querySelectorAll('.reveal,.reveal-left,.reveal-scale').forEach(el=>io.observe(el));
+
+/* 4. NUMBER COUNTER */
+function animCounter(el){const target=parseInt(el.dataset.target),suffix=el.dataset.suffix||'',dur=1800,start=performance.now();function tick(now){const p=Math.min((now-start)/dur,1),ease=1-Math.pow(1-p,3);el.textContent=Math.floor(ease*target)+suffix;if(p<1)requestAnimationFrame(tick);else el.textContent=target+suffix;}requestAnimationFrame(tick);}
+const cio=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting&&e.target.dataset.target){animCounter(e.target);cio.unobserve(e.target);}});},{threshold:.5});
+document.querySelectorAll('.stat-val[data-target]').forEach(el=>cio.observe(el));
+
+/* 5. MOUSE PARALLAX */
+window.addEventListener('mousemove',e=>{const g=document.querySelector('.hero-glow');if(!g)return;const x=(e.clientX/window.innerWidth-.5)*30,y=(e.clientY/window.innerHeight-.5)*30;g.style.transform=`translate(${x}px,${y}px)`;});
+</script>
+</body>
+</html>
