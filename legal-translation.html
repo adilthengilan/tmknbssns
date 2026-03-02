@@ -1,254 +1,367 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Legal Translation Services UAE | TamkinExpress</title>
-    <meta name="description" content="Professional legal translation services in UAE. Certified translation of legal documents, contracts, and official papers across all emirates.">
-    <meta name="keywords" content="legal translation UAE, certified translation Dubai, document translation UAE, official translation UAE">
-    <link rel="canonical" href="https://tamkinexpress.com/legal-translation.html">
-    <meta property="og:title" content="Legal Translation Services UAE | TamkinExpress">
-    <meta property="og:description" content="Professional legal translation services in UAE. Certified translation of legal documents, contracts, and official papers across all emirates.">
-    <meta property="og:type" content="website">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Varela&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./asset/css/style.css">
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Legal Translation Services UAE | Certified Legal Translator Dubai | TamkinExpress</title>
+<meta name="description" content="Looking for certified legal translation in UAE? TamkinExpress offers professional legal translation services in Dubai including contracts, court documents, certificates, and more in Arabic & English."/>
+<meta name="keywords" content="legal translation UAE, certified legal translation Dubai, Arabic English legal translator, court document translation UAE, contract translation Dubai"/>
+<link rel="canonical" href="https://tamkinexpress.com/legal-translation.html"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "TamkinExpress",
+  "url": "https://tamkinexpress.com/legal-translation.html",
+  "description": "TamkinExpress is one of the best legal translation agencies in UAE offering certified Arabic-English translation for contracts, court documents, and official certificates.",
+  "telephone": "+971506512466",
+  "areaServed": { "@type": "Country", "name": "United Arab Emirates" },
+  "address": { "@type": "PostalAddress", "addressLocality": "Dubai", "addressCountry": "AE" }
+}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --teal:      #00d4a8;
+    --teal-dim:  rgba(0,212,168,0.13);
+    --teal-glow: rgba(0,212,168,0.35);
+    --bg1:       #000000;
+    --bg2:       #0a0a0a;
+    --bg3:       #111111;
+    --card:      rgba(15,15,15,0.8);
+    --border:    rgba(0,212,168,0.18);
+    --white:     #ffffff;
+    --muted:     #7a90b8;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; color: var(--white); background: var(--bg1); overflow-x: hidden; }
+
+  /* BG */
+  .bg-wrap {
+    position: fixed; inset: 0; z-index: 0;
+    background:
+      radial-gradient(ellipse 100% 70% at 0% 0%,   #0d0d0d 0%, transparent 55%),
+      radial-gradient(ellipse 80%  80% at 100% 100%, #080808 0%, transparent 55%),
+      radial-gradient(ellipse 55%  45% at 50% 40%,  #111111 0%, transparent 60%),
+      linear-gradient(160deg, #000000 0%, #0a0a0a 40%, #111111 70%, #000000 100%);
+  }
+  .bg-wrap::after {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 50% 40% at 80% 8%,  rgba(0,212,168,0.06) 0%, transparent 55%),
+      radial-gradient(ellipse 40% 30% at 15% 90%, rgba(0,212,168,0.04) 0%, transparent 55%);
+  }
+  .bg-grid {
+    position: fixed; inset: 0; z-index: 0;
+    background-image:
+      repeating-linear-gradient(90deg, rgba(0,212,168,0.028) 0,rgba(0,212,168,0.028) 1px,transparent 1px,transparent 100px),
+      repeating-linear-gradient(0deg,  rgba(0,212,168,0.028) 0,rgba(0,212,168,0.028) 1px,transparent 1px,transparent 100px);
+    pointer-events: none;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 15px 56px;
+    background: rgba(0,0,0,0.92);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+  }
+  .logo { display: flex; align-items: center; gap: 10px; font-family: 'Syne',sans-serif; font-size: 1.1rem; font-weight: 800; color: var(--teal); }
+  .logo-box { width: 32px; height: 32px; background: linear-gradient(135deg,#00d4a8,#00ffcc); border-radius: 7px; display: flex; align-items: center; justify-content: center; font-size: 0.9rem; color: #020b1e; font-weight: 900; }
+  .nav-links { display: flex; gap: 26px; align-items: center; }
+  .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.82rem; font-weight: 500; letter-spacing: .05em; text-transform: uppercase; transition: color .2s; }
+  .nav-links a:hover { color: var(--teal); }
+  .nav-cta { background: var(--teal) !important; color: #020b1e !important; padding: 8px 20px; border-radius: 6px; font-weight: 700 !important; transition: box-shadow .2s,transform .2s !important; }
+  .nav-cta:hover { box-shadow: 0 0 20px var(--teal-glow) !important; transform: translateY(-1px) !important; }
+
+  /* HERO */
+  .hero { position: relative; z-index: 1; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 130px 56px 70px; }
+  .badge { display: inline-flex; align-items: center; gap: 8px; background: var(--teal-dim); border: 1px solid var(--border); border-radius: 100px; padding: 6px 16px; font-size: .72rem; font-weight: 600; color: var(--teal); letter-spacing: .1em; text-transform: uppercase; margin-bottom: 24px; width: fit-content; animation: up .7s ease both; }
+  .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--teal); animation: blink 2s infinite; }
+  @keyframes blink { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.3;transform:scale(1.6)} }
+  .hero h1 { font-family: 'Syne',sans-serif; font-size: clamp(2.8rem,6vw,5rem); font-weight: 800; line-height: 1.08; max-width: 700px; animation: up .7s .1s ease both; }
+  .hero h1 em { font-style: normal; color: var(--teal); }
+  .hero > p { font-size: .98rem; color: var(--muted); max-width: 500px; line-height: 1.8; margin-top: 16px; animation: up .7s .2s ease both; }
+  .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 34px; animation: up .7s .3s ease both; }
+  .btn-teal { background: var(--teal); color: #020b1e; padding: 13px 30px; border-radius: 8px; font-weight: 700; font-size: .9rem; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: box-shadow .25s,transform .25s; }
+  .btn-teal:hover { box-shadow: 0 0 28px var(--teal-glow); transform: translateY(-2px); }
+  .btn-line { background: transparent; color: var(--white); padding: 13px 30px; border-radius: 8px; font-weight: 500; font-size: .9rem; text-decoration: none; border: 1px solid rgba(255,255,255,.18); display: inline-flex; align-items: center; gap: 8px; transition: border-color .25s,color .25s; }
+  .btn-line:hover { border-color: var(--teal); color: var(--teal); }
+  .hero-nums { display: flex; gap: 40px; flex-wrap: wrap; margin-top: 52px; padding-top: 34px; border-top: 1px solid var(--border); animation: up .7s .4s ease both; }
+  .n-v { font-family: 'Syne',sans-serif; font-size: 1.9rem; font-weight: 800; color: var(--teal); }
+  .n-l { font-size: .75rem; color: var(--muted); margin-top: 3px; text-transform: uppercase; letter-spacing: .07em; }
+
+  /* SECTIONS */
+  section { position: relative; z-index: 1; }
+  .wrap { padding: 88px 56px; }
+  .tag  { font-size: .7rem; font-weight: 600; text-transform: uppercase; letter-spacing: .15em; color: var(--teal); display: block; margin-bottom: 9px; }
+  h2.ttl { font-family: 'Syne',sans-serif; font-size: clamp(1.8rem,3.5vw,2.7rem); font-weight: 800; line-height: 1.15; }
+  h2.ttl em { font-style: normal; color: var(--teal); }
+  .sub  { font-size: .93rem; color: var(--muted); max-width: 460px; line-height: 1.8; margin-top: 11px; }
+
+  /* SERVICES */
+  .svc-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(270px,1fr)); gap: 18px; margin-top: 44px; }
+  .svc { background: var(--card); border: 1px solid var(--border); border-radius: 15px; padding: 28px 24px; position: relative; overflow: hidden; transition: transform .3s,box-shadow .3s; }
+  .svc::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg,transparent,var(--teal),transparent); transform: scaleX(0); transform-origin: center; transition: transform .4s; }
+  .svc:hover { transform: translateY(-6px); box-shadow: 0 16px 44px rgba(0,0,0,.45); }
+  .svc:hover::before { transform: scaleX(1); }
+  .svc-ico { width: 46px; height: 46px; background: var(--teal-dim); border: 1px solid var(--border); border-radius: 11px; display: flex; align-items: center; justify-content: center; font-size: 1.25rem; margin-bottom: 16px; }
+  .svc h3 { font-family: 'Syne',sans-serif; font-size: 1rem; font-weight: 700; margin-bottom: 7px; }
+  .svc p  { font-size: .82rem; color: var(--muted); line-height: 1.7; }
+
+  /* STATS */
+  .stats-band { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); background: rgba(0,212,168,.04); }
+  .stats-row { display: flex; flex-wrap: wrap; }
+  .s-cell { flex: 1; min-width: 150px; padding: 38px 24px; text-align: center; border-right: 1px solid var(--border); transition: background .3s; }
+  .s-cell:last-child { border-right: none; }
+  .s-cell:hover { background: rgba(0,212,168,.08); }
+  .s-ico { font-size: 1.5rem; margin-bottom: 8px; }
+  .s-n { font-family: 'Syne',sans-serif; font-size: 2rem; font-weight: 800; color: var(--teal); }
+  .s-l { font-size: .75rem; color: var(--muted); margin-top: 4px; text-transform: uppercase; letter-spacing: .07em; }
+
+  /* PLATFORMS */
+  .pills { display: flex; flex-wrap: wrap; gap: 11px; margin-top: 38px; }
+  .pill { display: flex; align-items: center; gap: 8px; background: var(--card); border: 1px solid var(--border); border-radius: 100px; padding: 9px 18px; font-size: .84rem; font-weight: 500; transition: border-color .2s,color .2s,transform .2s; }
+  .pill:hover { border-color: var(--teal); color: var(--teal); transform: translateY(-2px); }
+  .pill span { font-size: 1rem; }
+
+  /* PACKAGES */
+  .pkg-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; margin-top: 44px; }
+  .pkg { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 32px 26px; position: relative; overflow: hidden; transition: transform .3s,box-shadow .3s; }
+  .pkg.hot { border-color: var(--teal); }
+  .pkg.hot::after { content: 'POPULAR'; position: absolute; top: 16px; right: 16px; background: var(--teal); color: #020b1e; font-size: .6rem; font-weight: 800; padding: 3px 10px; border-radius: 100px; letter-spacing: .1em; }
+  .pkg:hover { transform: translateY(-5px); box-shadow: 0 16px 44px rgba(0,0,0,.4); }
+  .pkg-n { font-size: .7rem; font-weight: 600; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); margin-bottom: 7px; }
+  .pkg-p { font-family: 'Syne',sans-serif; font-size: 1.9rem; font-weight: 800; margin-bottom: 4px; }
+  .pkg-p span { font-size: .8rem; color: var(--muted); font-family: 'Inter',sans-serif; font-weight: 400; }
+  .pkg-d { font-size: .8rem; color: var(--muted); line-height: 1.65; margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid var(--border); }
+  .pkg-list { display: flex; flex-direction: column; gap: 9px; margin-bottom: 24px; }
+  .pkg-li { display: flex; align-items: center; gap: 9px; font-size: .82rem; }
+  .pkg-li::before { content: '✦'; color: var(--teal); font-size: .65rem; flex-shrink: 0; }
+  .pkg-btn { display: block; text-align: center; padding: 11px; border-radius: 8px; font-weight: 700; font-size: .85rem; text-decoration: none; transition: transform .2s,box-shadow .2s; }
+  .pkg-btn-o { border: 1px solid var(--border); color: var(--white); }
+  .pkg-btn-o:hover { border-color: var(--teal); color: var(--teal); }
+  .pkg-btn-t { background: var(--teal); color: #020b1e; }
+  .pkg-btn-t:hover { box-shadow: 0 6px 22px var(--teal-glow); transform: translateY(-2px); }
+
+  /* CTA */
+  .cta-sec { padding: 88px 56px; text-align: center; background: radial-gradient(ellipse 60% 60% at 50% 50%,rgba(0,212,168,.05) 0%,transparent 70%); }
+  .cta-box { max-width: 620px; margin: 0 auto; background: var(--card); border: 1px solid var(--border); border-radius: 20px; padding: 52px 44px; position: relative; overflow: hidden; }
+  .cta-box::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg,transparent,var(--teal),transparent); }
+  .cta-box h2 { font-family: 'Syne',sans-serif; font-size: 1.9rem; font-weight: 800; margin-bottom: 11px; }
+  .cta-box h2 em { font-style: normal; color: var(--teal); }
+  .cta-box p { color: var(--muted); font-size: .93rem; line-height: 1.75; margin-bottom: 28px; }
+  .cta-btns { display: flex; gap: 11px; justify-content: center; flex-wrap: wrap; }
+
+  /* FOOTER */
+  footer {
+    padding: 48px 56px 28px;
+    border-top: 1px solid var(--border);
+    background: rgba(0,0,0,0.6);
+  }
+  .footer-top {
+    display: grid; grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 40px; margin-bottom: 36px;
+  }
+  .footer-brand strong { font-family: 'Syne',sans-serif; font-size: 1.1rem; color: var(--teal); display: block; margin-bottom: 10px; }
+  .footer-brand p { font-size: .82rem; color: var(--muted); line-height: 1.75; max-width: 280px; }
+  .footer-col h4 { font-family: 'Syne',sans-serif; font-size: .78rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: var(--teal); margin-bottom: 14px; }
+  .footer-col a, .footer-col p { display: block; font-size: .82rem; color: var(--muted); text-decoration: none; margin-bottom: 8px; transition: color .2s; }
+  .footer-col a:hover { color: var(--teal); }
+  .footer-bottom {
+    padding-top: 24px; border-top: 1px solid var(--border);
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: .75rem; color: var(--muted); flex-wrap: wrap; gap: 10px;
+  }
+  .footer-bottom a { color: var(--teal); text-decoration: none; }
+
+  /* WA */
+  .wa { position: fixed; bottom: 26px; right: 26px; z-index: 999; width: 52px; height: 52px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.35rem; text-decoration: none; box-shadow: 0 6px 22px rgba(37,211,102,.45); animation: waP 2.5s infinite; transition: transform .2s; }
+  .wa:hover { transform: scale(1.1); }
+  @keyframes waP { 0%,100%{box-shadow:0 6px 22px rgba(37,211,102,.4)} 50%{box-shadow:0 6px 34px rgba(37,211,102,.7)} }
+
+  @keyframes up { from{opacity:0;transform:translateY(22px)} to{opacity:1;transform:translateY(0)} }
+
+  @media (max-width:900px) {
+    nav { padding: 14px 20px; }
+    .nav-links { display: none; }
+    .hero, .wrap, .cta-sec { padding-left: 20px; padding-right: 20px; }
+    .stats-row { flex-direction: column; }
+    .s-cell { border-right: none; border-bottom: 1px solid var(--border); }
+    .pkg-grid { grid-template-columns: 1fr; max-width: 360px; }
+    .cta-box { padding: 34px 20px; }
+    footer { padding: 36px 20px; }
+    .footer-top { grid-template-columns: 1fr; gap: 28px; }
+    .footer-bottom { flex-direction: column; text-align: center; }
+  }
+</style>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="./index.html" style="text-decoration: none;">
-                    <span class="logo-text">TAMKINEXPRESS</span>
-                    <span class="logo-subtitle">Complete Business Services</span>
-                </a>
-            </div>
-            <div class="nav-menu" id="nav-menu">
-                <a href="./index.html" class="nav-link">Home</a>
-                <a href="./index.html#about" class="nav-link">About</a>
-                <a href="./index.html#services" class="nav-link">Services</a>
-                <a href="./index.html#portfolio" class="nav-link">Portfolio</a>
-                <a href="./index.html#contact" class="nav-link">Contact</a>
-            </div>
-            <div class="nav-cta">
-                <a href="./index.html#contact" class="cta-button primary">Get Started</a>
-            </div>
-            <div class="hamburger" id="hamburger">
-                <span></span><span></span><span></span>
-            </div>
-        </div>
-    </nav>
+<div class="bg-wrap"></div>
+<div class="bg-grid"></div>
 
-    <!-- Hero Section -->
-    <section class="hero service-hero">
-        <div class="hero-background"></div>
-        <div class="container">
-            <div class="hero-content">
-                <h1>Legal Translation Services in UAE</h1>
-                <p class="hero-subtitle">We provide certified and professional legal translation of all official documents, contracts, and legal papers for businesses and individuals across all UAE emirates.</p>
-                <div class="hero-cta">
-                    <a href="#contact" class="cta-button primary" style="padding:8px 16px; font-size:14px; border-radius:6px;">
-                        <span class="button-icon">📞</span> Get Started
-                    </a>
-                    <a href="#services" class="cta-button secondary" style="padding:8px 16px; font-size:14px; border-radius:6px;">
-                        <span class="button-icon">📋</span> View Services
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- NAV -->
+<nav>
+  <div class="logo"><div class="logo-box">✦</div>TamkinExpress</div>
+  <div class="nav-links">
+    <a href="#services">Services</a>
+    <a href="#packages">Packages</a>
+    <a href="#contact" class="nav-cta">Free Quote</a>
+  </div>
+</nav>
 
-    <!-- Overview Section -->
-    <section class="service-overview">
-        <div class="container">
-            <div class="overview-content">
-                <div class="overview-text">
-                    <h2>Why Choose TamkinExpress for Legal Translation Services?</h2>
-                    <p>TamkinExpress has extensive experience in certified legal translation across all official languages recognized in the UAE. Our expert team of certified translators ensures accurate, legally compliant translations of all your important documents with minimal delays.</p>
-                    <div class="overview-features">
-                        <div class="feature-item">
-                            <div class="feature-icon">✅</div>
-                            <div class="feature-content">
-                                <h4>Certified Translators</h4>
-                                <p>Ministry of Justice approved certified translators</p>
-                            </div>
-                        </div>
-                        <div class="feature-item">
-                            <div class="feature-icon">⚡</div>
-                            <div class="feature-content">
-                                <h4>Fast Turnaround</h4>
-                                <p>Express delivery available for urgent translations</p>
-                            </div>
-                        </div>
-                        <div class="feature-item">
-                            <div class="feature-icon">🏆</div>
-                            <div class="feature-content">
-                                <h4>Legally Accepted</h4>
-                                <p>Accepted by all UAE government authorities</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="overview-stats">
-                    <div class="stat-card"><span class="stat-number">1000+</span><span class="stat-label">Documents Translated</span></div>
-                    <div class="stat-card"><span class="stat-number">20+</span><span class="stat-label">Languages Supported</span></div>
-                    <div class="stat-card"><span class="stat-number">7</span><span class="stat-label">Emirates Covered</span></div>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="badge"><span class="dot"></span>UAE Certified Legal Translation</div>
+  <h1>Trusted <em>Legal Translation</em><br>Services in UAE</h1>
+  <p>Certified, accurate, and officially recognised legal translation in Arabic & English — for courts, government, and business across the UAE.</p>
+  <div class="hero-btns">
+    <a href="#contact" class="btn-teal">📄 Get Free Quote →</a>
+    <a href="#services" class="btn-line">⚖️ Our Services</a>
+  </div>
+  <div class="hero-nums">
+    <div><div class="n-v">99.8%</div><div class="n-l">Accuracy Rate</div></div>
+    <div><div class="n-v">5,000+</div><div class="n-l">Documents Translated</div></div>
+    <div><div class="n-v">8+ Yrs</div><div class="n-l">UAE Legal Expertise</div></div>
+  </div>
+</section>
 
-    <!-- Services Details Section -->
-    <section class="services-details" id="services">
-        <div class="container">
-            <h2 class="section-title">Our Legal Translation Services</h2>
-            <div class="services-grid-detailed">
-                <div class="service-detail-card">
-                    <div class="service-detail-icon">📋</div>
-                    <h3>Consultation & Assessment</h3>
-                    <ul class="service-features">
-                        <li>Free Initial Consultation</li>
-                        <li>Document Type Assessment</li>
-                        <li>Language Pair Confirmation</li>
-                        <li>Timeline Planning</li>
-                        <li>Cost Estimation</li>
-                    </ul>
-                    <div class="service-price">Free Consultation</div>
-                </div>
-                <div class="service-detail-card">
-                    <div class="service-detail-icon">🌐</div>
-                    <h3>Legal Document Translation</h3>
-                    <ul class="service-features">
-                        <li>Contracts & Agreements</li>
-                        <li>Court Documents</li>
-                        <li>Power of Attorney</li>
-                        <li>Memorandums & Articles</li>
-                        <li>Corporate Documents</li>
-                    </ul>
-                    <div class="service-price">Starting from AED 150/page</div>
-                </div>
-                <div class="service-detail-card">
-                    <div class="service-detail-icon">📄</div>
-                    <h3>Personal Document Translation</h3>
-                    <ul class="service-features">
-                        <li>Birth & Marriage Certificates</li>
-                        <li>Passports & IDs</li>
-                        <li>Educational Certificates</li>
-                        <li>Medical Reports</li>
-                        <li>Employment Documents</li>
-                    </ul>
-                    <div class="service-price">Starting from AED 100/page</div>
-                </div>
-                <div class="service-detail-card">
-                    <div class="service-detail-icon">✅</div>
-                    <h3>Certification & Attestation</h3>
-                    <ul class="service-features">
-                        <li>Certified Translation Stamp</li>
-                        <li>Notarization Support</li>
-                        <li>Ministry Attestation</li>
-                        <li>Embassy Attestation</li>
-                        <li>Apostille Services</li>
-                    </ul>
-                    <div class="service-price">Starting from AED 200</div>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- SERVICES -->
+<section id="services"><div class="wrap">
+  <span class="tag">What We Translate</span>
+  <h2 class="ttl">Full-Scope <em>Legal Translation</em></h2>
+  <p class="sub">Every document handled with precision and confidentiality — certified for UAE courts and government authorities.</p>
+  <div class="svc-grid">
+    <div class="svc"><div class="svc-ico">⚖️</div><h3>Court Documents</h3><p>Judgements, summons, witness statements, and legal proceedings — certified for UAE federal and local courts.</p></div>
+    <div class="svc"><div class="svc-ico">📜</div><h3>Contracts & Agreements</h3><p>Business contracts, MOUs, NDAs, employment agreements translated with full legal accuracy.</p></div>
+    <div class="svc"><div class="svc-ico">🏛️</div><h3>Government Certificates</h3><p>Birth, marriage, death, divorce certificates and official ID documents for ministries and embassies.</p></div>
+    <div class="svc"><div class="svc-ico">🏢</div><h3>Corporate Documents</h3><p>MOA, AOA, trade licences, board resolutions, and company incorporation documents.</p></div>
+    <div class="svc"><div class="svc-ico">🩺</div><h3>Medical & Insurance</h3><p>Medical reports, insurance policies, and healthcare legal documents for UAE regulatory bodies.</p></div>
+    <div class="svc"><div class="svc-ico">✈️</div><h3>Immigration & Visa</h3><p>Visa applications, residency permits, passport translations, and embassy-certified documents.</p></div>
+  </div>
+</div></section>
 
-    <!-- Process Section -->
-    <section class="process-section">
-        <div class="container">
-            <h2 class="section-title">Our Process</h2>
-            <div class="process-steps">
-                <div class="process-step">
-                    <div class="step-number">01</div>
-                    <div class="step-content"><h4>Initial Consultation</h4><p>Free consultation to assess your translation requirements and document types.</p></div>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">02</div>
-                    <div class="step-content"><h4>Document Submission</h4><p>Submit your documents securely for review and processing.</p></div>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">03</div>
-                    <div class="step-content"><h4>Translation</h4><p>Certified translators translate your documents with precision and accuracy.</p></div>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">04</div>
-                    <div class="step-content"><h4>Quality Review</h4><p>Thorough proofreading and quality check by a second certified translator.</p></div>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">05</div>
-                    <div class="step-content"><h4>Certification</h4><p>Official stamp and signature from our Ministry of Justice approved translators.</p></div>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">06</div>
-                    <div class="step-content"><h4>Delivery</h4><p>Final handover of translated documents with ongoing support if needed.</p></div>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- STATS -->
+<div class="stats-band">
+  <div class="stats-row">
+    <div class="s-cell"><div class="s-ico">📋</div><div class="s-n">5,000+</div><div class="s-l">Documents Delivered</div></div>
+    <div class="s-cell"><div class="s-ico">🌍</div><div class="s-n">20+</div><div class="s-l">Languages Supported</div></div>
+    <div class="s-cell"><div class="s-ico">⚡</div><div class="s-n">24 hrs</div><div class="s-l">Express Turnaround</div></div>
+    <div class="s-cell"><div class="s-ico">🏅</div><div class="s-n">100%</div><div class="s-l">Certified & Official</div></div>
+  </div>
+</div>
 
-    <!-- Final CTA Section -->
-    <section class="final-cta">
-        <div class="container">
-            <h2 class="cta-title">Need Legal Translation Assistance?</h2>
-            <p class="cta-subtitle">Let our certified translators handle your documents efficiently and accurately</p>
-            <a href="#contact" class="cta-button primary large"><span class="button-icon">🚀</span> Get Started Today</a>
-        </div>
-    </section>
+<!-- LANGUAGES / PLATFORMS -->
+<section><div class="wrap" style="padding-top:60px">
+  <span class="tag">Languages We Cover</span>
+  <h2 class="ttl">Every Language, <em>One Team</em></h2>
+  <div class="pills">
+    <div class="pill"><span>🇦🇪</span>Arabic</div>
+    <div class="pill"><span>🇬🇧</span>English</div>
+    <div class="pill"><span>🇫🇷</span>French</div>
+    <div class="pill"><span>🇩🇪</span>German</div>
+    <div class="pill"><span>🇪🇸</span>Spanish</div>
+    <div class="pill"><span>🇮🇹</span>Italian</div>
+    <div class="pill"><span>🇷🇺</span>Russian</div>
+    <div class="pill"><span>🇨🇳</span>Chinese</div>
+    <div class="pill"><span>🇮🇳</span>Hindi / Urdu</div>
+    <div class="pill"><span>🇵🇭</span>Tagalog</div>
+    <div class="pill"><span>🇹🇷</span>Turkish</div>
+    <div class="pill"><span>🇧🇩</span>Bengali</div>
+  </div>
+</div></section>
 
-    <!-- Footer -->
-    <footer class="footer" id="contact">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>TamkinExpress</h3>
-                    <p>Your trusted partner for business registration and complete business services in UAE.</p>
-                    <div class="contact-info">
-                        <p>📍 Dubai, United Arab Emirates</p>
-                        <p>📞 +971 506512466</p>
-                        <p>✉️ info@tamkinexpress.com</p>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="./golden-visa.html">Golden Visa</a></li>
-                        <li><a href="./employment-visa.html">Employment Visa</a></li>
-                        <li><a href="./pro-services.html">PRO Services</a></li>
-                        <li><a href="./legal-translation.html">Legal Translation</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Other Services</h4>
-                    <ul>
-                        <li><a href="./digital-marketing.html">Digital Marketing</a></li>
-                        <li><a href="./cicpa.html">CICPA Passes</a></li>
-                        <li><a href="./certificate-attestation.html">Certificate Attestation</a></li>
-                        <li><a href="./legal-contracts.html">Legal Contracts</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="./index.html#about">About Us</a></li>
-                        <li><a href="./index.html#portfolio">Portfolio</a></li>
-                        <li><a href="./index.html#contact">Contact</a></li>
-                        <li><a href="./index.html#careers">Careers</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 TamkinExpress. All rights reserved.</p>
-                <div class="social-links">
-                    <a href="" class="social-link">LinkedIn</a>
-                    <a href="https://x.com/tamkinexpress" class="social-link">Twitter</a>
-                    <a href="https://www.instagram.com/tamkin.express/" class="social-link">Instagram</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <script src="./asset/js/main.js" type="module"></script>
+<!-- PACKAGES -->
+<section id="packages"><div class="wrap">
+  <span class="tag">Pricing</span>
+  <h2 class="ttl">Simple, <em>Transparent</em> Plans</h2>
+  <p class="sub">All plans include certified stamp, dedicated translator, and fast turnaround with full confidentiality.</p>
+  <div class="pkg-grid">
+    <div class="pkg">
+      <div class="pkg-n">Standard</div>
+      <div class="pkg-p">AED 150 <span>/ page</span></div>
+      <div class="pkg-d">For individuals and small document sets.</div>
+      <div class="pkg-list">
+        <div class="pkg-li">Up to 5 pages</div>
+        <div class="pkg-li">Certified Translation</div>
+        <div class="pkg-li">3–5 Business Days</div>
+        <div class="pkg-li">Arabic ↔ English</div>
+      </div>
+      <a href="#contact" class="pkg-btn pkg-btn-o">Get Started</a>
+    </div>
+    <div class="pkg hot">
+      <div class="pkg-n">Business</div>
+      <div class="pkg-p">AED 120 <span>/ page</span></div>
+      <div class="pkg-d">For companies, contracts, and bulk documents.</div>
+      <div class="pkg-list">
+        <div class="pkg-li">6–50 pages</div>
+        <div class="pkg-li">Certified + Notarised</div>
+        <div class="pkg-li">2–3 Business Days</div>
+        <div class="pkg-li">Multi-language support</div>
+        <div class="pkg-li">Dedicated Account Manager</div>
+      </div>
+      <a href="#contact" class="pkg-btn pkg-btn-t">Get Started →</a>
+    </div>
+    <div class="pkg">
+      <div class="pkg-n">Enterprise</div>
+      <div class="pkg-p">Custom <span>pricing</span></div>
+      <div class="pkg-d">For law firms, corporates, and government bodies.</div>
+      <div class="pkg-list">
+        <div class="pkg-li">Unlimited volume</div>
+        <div class="pkg-li">Express 24-hr service</div>
+        <div class="pkg-li">Legalisation & Attestation</div>
+        <div class="pkg-li">Dedicated legal team</div>
+      </div>
+      <a href="#contact" class="pkg-btn pkg-btn-o">Request Quote</a>
+    </div>
+  </div>
+</div></section>
+
+<!-- CTA -->
+<section class="cta-sec" id="contact">
+  <div class="cta-box">
+    <h2>Need a <em>Certified</em><br>Legal Translation?</h2>
+    <p>Send us your document for a free quote. Our certified translators deliver accurate, legally recognised translations — fast and confidential.</p>
+    <div class="cta-btns">
+      <a href="https://wa.me/971506512466" class="btn-teal">💬 WhatsApp Now</a>
+      <a href="mailto:info@tamkinexpress.com" class="btn-line">✉️ Email Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <strong>TamkinExpress</strong>
+      <p>One of the best legal translation agencies in UAE — providing certified Arabic-English translation for courts, government, and businesses across Dubai and the UAE.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <a href="#services">Court Document Translation</a>
+      <a href="#services">Contract Translation UAE</a>
+      <a href="#services">Certificate Translation</a>
+      <a href="#services">Corporate Document Translation</a>
+      <a href="#services">Immigration Translation</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact Us</h4>
+      <p>📍 Dubai, United Arab Emirates</p>
+      <a href="tel:+971506512466">📞 +971 506512466</a>
+      <a href="mailto:info@tamkinexpress.com">✉️ info@tamkinexpress.com</a>
+      <a href="https://wa.me/971506512466">💬 WhatsApp Us</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 <a href="https://tamkinexpress.com">TamkinExpress</a>. All rights reserved.</span>
+    <span>Certified Legal Translation · Dubai · Abu Dhabi · Sharjah · UAE</span>
+  </div>
+</footer>
+
+<a href="https://wa.me/971506512466" class="wa" title="WhatsApp">💬</a>
 </body>
 </html>
