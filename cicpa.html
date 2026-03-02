@@ -1,286 +1,420 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CICPA & Security Passes UAE | TamkinExpress</title>
-    <meta name="description" content="Efficient assistance in obtaining CICPA and other security passes required for access to restricted and government areas in the UAE.">
-    <meta name="keywords" content="CICPA UAE, security pass UAE, restricted area pass Dubai, CICPA application, government area access UAE">
-    <link rel="canonical" href="https://tamkinexpress.com/cicpa.html">
-    <meta property="og:title" content="CICPA & Security Passes UAE | TamkinExpress">
-    <meta property="og:description" content="Efficient assistance in obtaining CICPA and other security passes for restricted areas in UAE.">
-    <meta property="og:type" content="website">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Varela&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./asset/css/style.css">
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>CICPA & Security Passes UAE | TamkinExpress</title>
+<meta name="description" content="Efficient assistance in obtaining CICPA and other security passes required for access to restricted and government areas in the UAE."/>
+<meta name="keywords" content="CICPA UAE, security pass UAE, restricted area pass Dubai, CICPA application, government area access UAE"/>
+<link rel="canonical" href="https://tamkinexpress.com/cicpa.html"/>
+<meta property="og:title" content="CICPA & Security Passes UAE | TamkinExpress"/>
+<meta property="og:description" content="Efficient assistance in obtaining CICPA and other security passes for restricted areas in UAE."/>
+<meta property="og:type" content="website"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "TamkinExpress",
+  "url": "https://tamkinexpress.com/cicpa.html",
+  "description": "TamkinExpress helps professionals obtain CICPA certification in UAE with expert guidance and fast processing.",
+  "telephone": "+971506512466",
+  "areaServed": { "@type": "Country", "name": "United Arab Emirates" },
+  "address": { "@type": "PostalAddress", "addressLocality": "Dubai", "addressCountry": "AE" }
+}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --teal:      #00d4a8;
+    --teal-dim:  rgba(0,212,168,0.13);
+    --teal-glow: rgba(0,212,168,0.35);
+    --bg:        #000000;
+    --card:      rgba(15,15,15,0.85);
+    --card2:     rgba(18,18,18,0.9);
+    --border:    rgba(0,212,168,0.18);
+    --white:     #ffffff;
+    --muted:     #7a90b8;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; color: var(--white); background: var(--bg); overflow-x: hidden; }
+
+  /* BG */
+  .bg-wrap {
+    position: fixed; inset: 0; z-index: 0;
+    background:
+      radial-gradient(ellipse 90% 60% at 0% 0%,   #0d0d0d 0%, transparent 55%),
+      radial-gradient(ellipse 70% 70% at 100% 100%, #080808 0%, transparent 55%),
+      linear-gradient(160deg, #000000 0%, #0a0a0a 50%, #000000 100%);
+  }
+  .bg-wrap::after {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 45% 35% at 85% 8%,  rgba(0,212,168,0.07) 0%, transparent 55%),
+      radial-gradient(ellipse 35% 25% at 10% 92%, rgba(0,212,168,0.05) 0%, transparent 55%);
+  }
+  .bg-grid {
+    position: fixed; inset: 0; z-index: 0;
+    background-image:
+      repeating-linear-gradient(90deg, rgba(0,212,168,0.025) 0,rgba(0,212,168,0.025) 1px,transparent 1px,transparent 100px),
+      repeating-linear-gradient(0deg,  rgba(0,212,168,0.025) 0,rgba(0,212,168,0.025) 1px,transparent 1px,transparent 100px);
+    pointer-events: none;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 15px 56px;
+    background: rgba(0,0,0,0.92);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+  }
+  .logo { display: flex; align-items: center; gap: 10px; font-family: 'Syne',sans-serif; font-size: 1.1rem; font-weight: 800; color: var(--teal); text-decoration: none; }
+  .logo-box { width: 32px; height: 32px; background: linear-gradient(135deg,#00d4a8,#00ffcc); border-radius: 7px; display: flex; align-items: center; justify-content: center; font-size: 0.9rem; color: #000; font-weight: 900; }
+  .nav-links { display: flex; gap: 26px; align-items: center; }
+  .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.82rem; font-weight: 500; letter-spacing: .05em; text-transform: uppercase; transition: color .2s; }
+  .nav-links a:hover { color: var(--teal); }
+  .nav-cta { background: var(--teal) !important; color: #000 !important; padding: 8px 20px; border-radius: 6px; font-weight: 700 !important; transition: box-shadow .2s,transform .2s !important; }
+  .nav-cta:hover { box-shadow: 0 0 20px var(--teal-glow) !important; transform: translateY(-1px) !important; }
+
+  /* HERO */
+  .hero { position: relative; z-index: 1; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 130px 56px 70px; }
+  .badge { display: inline-flex; align-items: center; gap: 8px; background: var(--teal-dim); border: 1px solid var(--border); border-radius: 100px; padding: 6px 16px; font-size: .72rem; font-weight: 600; color: var(--teal); letter-spacing: .1em; text-transform: uppercase; margin-bottom: 24px; width: fit-content; animation: up .7s ease both; }
+  .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--teal); animation: blink 2s infinite; }
+  @keyframes blink { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.3;transform:scale(1.6)} }
+  .hero h1 { font-family: 'Syne',sans-serif; font-size: clamp(2.6rem,6vw,4.8rem); font-weight: 800; line-height: 1.08; max-width: 740px; animation: up .7s .1s ease both; }
+  .hero h1 em { font-style: normal; color: var(--teal); }
+  .hero > p { font-size: .98rem; color: var(--muted); max-width: 520px; line-height: 1.8; margin-top: 16px; animation: up .7s .2s ease both; }
+  .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 34px; animation: up .7s .3s ease both; }
+  .btn-teal { background: var(--teal); color: #000; padding: 13px 30px; border-radius: 8px; font-weight: 700; font-size: .9rem; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: box-shadow .25s,transform .25s; }
+  .btn-teal:hover { box-shadow: 0 0 28px var(--teal-glow); transform: translateY(-2px); }
+  .btn-line { background: transparent; color: var(--white); padding: 13px 30px; border-radius: 8px; font-weight: 500; font-size: .9rem; text-decoration: none; border: 1px solid rgba(255,255,255,.18); display: inline-flex; align-items: center; gap: 8px; transition: border-color .25s,color .25s; }
+  .btn-line:hover { border-color: var(--teal); color: var(--teal); }
+  .hero-nums { display: flex; gap: 40px; flex-wrap: wrap; margin-top: 52px; padding-top: 34px; border-top: 1px solid var(--border); animation: up .7s .4s ease both; }
+  .n-v { font-family: 'Syne',sans-serif; font-size: 1.9rem; font-weight: 800; color: var(--teal); }
+  .n-l { font-size: .75rem; color: var(--muted); margin-top: 3px; text-transform: uppercase; letter-spacing: .07em; }
+
+  /* SECTIONS */
+  section { position: relative; z-index: 1; }
+  .wrap { padding: 88px 56px; }
+  .tag { font-size: .7rem; font-weight: 600; text-transform: uppercase; letter-spacing: .15em; color: var(--teal); display: block; margin-bottom: 9px; }
+  h2.ttl { font-family: 'Syne',sans-serif; font-size: clamp(1.8rem,3.5vw,2.7rem); font-weight: 800; line-height: 1.15; }
+  h2.ttl em { font-style: normal; color: var(--teal); }
+  .sub { font-size: .93rem; color: var(--muted); max-width: 480px; line-height: 1.8; margin-top: 11px; }
+
+  /* WHAT IS CICPA */
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; margin-top: 48px; }
+  .about-text p { font-size: .92rem; color: var(--muted); line-height: 1.85; margin-bottom: 16px; }
+  .about-text p strong { color: var(--white); }
+  .about-highlights { display: flex; flex-direction: column; gap: 14px; margin-top: 24px; }
+  .hl { display: flex; align-items: flex-start; gap: 12px; font-size: .88rem; }
+  .hl-ico { width: 32px; height: 32px; flex-shrink: 0; background: var(--teal-dim); border: 1px solid var(--border); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: .9rem; }
+  .hl p { color: var(--muted); line-height: 1.6; }
+  .hl p strong { color: var(--white); display: block; margin-bottom: 2px; }
+
+  .about-card { background: var(--card); border: 1px solid var(--border); border-radius: 18px; padding: 36px; position: relative; overflow: hidden; }
+  .about-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, transparent, var(--teal), transparent); }
+  .about-card h3 { font-family: 'Syne',sans-serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 6px; }
+  .about-card .ac-sub { font-size: .82rem; color: var(--muted); margin-bottom: 24px; }
+  .cert-list { display: flex; flex-direction: column; gap: 12px; }
+  .cert-row { display: flex; justify-content: space-between; align-items: center; padding: 11px 14px; background: rgba(0,0,0,0.5); border: 1px solid rgba(0,212,168,0.1); border-radius: 8px; font-size: .84rem; }
+  .cert-badge { background: var(--teal-dim); color: var(--teal); font-size: .7rem; font-weight: 700; padding: 3px 10px; border-radius: 100px; border: 1px solid var(--border); }
+
+  /* SERVICES / CERTIFICATIONS */
+  .svc-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(270px,1fr)); gap: 18px; margin-top: 44px; }
+  .svc { background: var(--card); border: 1px solid var(--border); border-radius: 15px; padding: 28px 24px; position: relative; overflow: hidden; transition: transform .3s,box-shadow .3s; }
+  .svc::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg,transparent,var(--teal),transparent); transform: scaleX(0); transform-origin: center; transition: transform .4s; }
+  .svc:hover { transform: translateY(-6px); box-shadow: 0 16px 44px rgba(0,0,0,.5); }
+  .svc:hover::before { transform: scaleX(1); }
+  .svc-ico { width: 46px; height: 46px; background: var(--teal-dim); border: 1px solid var(--border); border-radius: 11px; display: flex; align-items: center; justify-content: center; font-size: 1.25rem; margin-bottom: 16px; }
+  .svc h3 { font-family: 'Syne',sans-serif; font-size: 1rem; font-weight: 700; margin-bottom: 7px; }
+  .svc p { font-size: .82rem; color: var(--muted); line-height: 1.7; }
+  .svc-tag { display: inline-block; margin-top: 14px; font-size: .7rem; font-weight: 600; background: var(--teal-dim); border: 1px solid var(--border); color: var(--teal); padding: 3px 11px; border-radius: 100px; }
+
+  /* WHO CAN APPLY */
+  .eligibility-section { background: rgba(0,212,168,.03); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .elig-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 18px; margin-top: 44px; }
+  .elig-card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 26px 22px; text-align: center; transition: transform .3s, border-color .3s; }
+  .elig-card:hover { transform: translateY(-4px); border-color: var(--teal); }
+  .elig-ico { font-size: 2rem; margin-bottom: 12px; }
+  .elig-card h4 { font-family: 'Syne',sans-serif; font-size: .95rem; font-weight: 700; margin-bottom: 6px; }
+  .elig-card p { font-size: .8rem; color: var(--muted); line-height: 1.65; }
+
+  /* PROCESS STEPS */
+  .process-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(180px,1fr)); gap: 18px; margin-top: 44px; position: relative; }
+  .process-grid::before { content: ''; position: absolute; top: 28px; left: 28px; right: 28px; height: 1px; background: linear-gradient(90deg,var(--teal),rgba(0,212,168,.04)); z-index: 0; }
+  .p-step { text-align: center; position: relative; z-index: 1; }
+  .p-num { width: 56px; height: 56px; margin: 0 auto 16px; background: linear-gradient(135deg,#00d4a8,#00ffcc); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Syne',sans-serif; font-size: 1.1rem; font-weight: 800; color: #000; box-shadow: 0 0 26px rgba(0,212,168,.28); }
+  .p-step h4 { font-size: .88rem; font-weight: 600; margin-bottom: 6px; }
+  .p-step p { font-size: .78rem; color: var(--muted); line-height: 1.6; }
+
+  /* WHY US */
+  .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; margin-top: 48px; }
+  .why-list { display: flex; flex-direction: column; gap: 20px; }
+  .why-item { display: flex; gap: 16px; align-items: flex-start; }
+  .why-num { width: 36px; height: 36px; flex-shrink: 0; background: var(--teal-dim); border: 1px solid var(--border); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-family: 'Syne',sans-serif; font-size: .85rem; font-weight: 800; color: var(--teal); }
+  .why-item h4 { font-size: .93rem; font-weight: 600; margin-bottom: 4px; }
+  .why-item p { font-size: .82rem; color: var(--muted); line-height: 1.65; }
+  .why-panel { background: var(--card); border: 1px solid var(--border); border-radius: 18px; padding: 36px; position: relative; overflow: hidden; }
+  .why-panel::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, transparent, var(--teal), transparent); }
+  .why-panel h3 { font-family: 'Syne',sans-serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 6px; }
+  .why-panel .wp-sub { font-size: .83rem; color: var(--muted); line-height: 1.7; margin-bottom: 24px; }
+  .doc-list { display: flex; flex-direction: column; gap: 12px; }
+  .doc-row { display: flex; align-items: center; gap: 10px; padding: 11px 14px; background: rgba(0,0,0,0.5); border: 1px solid rgba(0,212,168,0.1); border-radius: 8px; font-size: .84rem; }
+  .doc-row span:first-child { font-size: 1rem; }
+
+  /* FAQ */
+  .faq-section { background: rgba(0,212,168,.025); border-top: 1px solid var(--border); }
+  .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 44px; }
+  .faq-item { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 24px 22px; transition: border-color .25s; }
+  .faq-item:hover { border-color: var(--teal); }
+  .faq-item h4 { font-family: 'Syne',sans-serif; font-size: .92rem; font-weight: 700; margin-bottom: 8px; color: var(--white); }
+  .faq-item p { font-size: .82rem; color: var(--muted); line-height: 1.7; }
+
+  /* CTA */
+  .cta-sec { padding: 88px 56px; text-align: center; background: radial-gradient(ellipse 60% 60% at 50% 50%,rgba(0,212,168,.05) 0%,transparent 70%); }
+  .cta-box { max-width: 640px; margin: 0 auto; background: var(--card); border: 1px solid var(--border); border-radius: 20px; padding: 52px 44px; position: relative; overflow: hidden; }
+  .cta-box::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg,transparent,var(--teal),transparent); }
+  .cta-box h2 { font-family: 'Syne',sans-serif; font-size: 1.9rem; font-weight: 800; margin-bottom: 11px; }
+  .cta-box h2 em { font-style: normal; color: var(--teal); }
+  .cta-box p { color: var(--muted); font-size: .93rem; line-height: 1.75; margin-bottom: 28px; }
+  .cta-btns { display: flex; gap: 11px; justify-content: center; flex-wrap: wrap; }
+
+  /* FOOTER */
+  footer { padding: 48px 56px 28px; border-top: 1px solid var(--border); background: rgba(0,0,0,0.6); }
+  .footer-top { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 40px; margin-bottom: 36px; }
+  .footer-brand strong { font-family: 'Syne',sans-serif; font-size: 1.1rem; color: var(--teal); display: block; margin-bottom: 10px; }
+  .footer-brand p { font-size: .82rem; color: var(--muted); line-height: 1.75; max-width: 280px; }
+  .footer-col h4 { font-family: 'Syne',sans-serif; font-size: .78rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: var(--teal); margin-bottom: 14px; }
+  .footer-col a, .footer-col p { display: block; font-size: .82rem; color: var(--muted); text-decoration: none; margin-bottom: 8px; transition: color .2s; }
+  .footer-col a:hover { color: var(--teal); }
+  .footer-bottom { padding-top: 24px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; font-size: .75rem; color: var(--muted); flex-wrap: wrap; gap: 10px; }
+  .footer-bottom a { color: var(--teal); text-decoration: none; }
+
+  /* WA */
+  .wa { position: fixed; bottom: 26px; right: 26px; z-index: 999; width: 52px; height: 52px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.35rem; text-decoration: none; box-shadow: 0 6px 22px rgba(37,211,102,.45); animation: waP 2.5s infinite; transition: transform .2s; }
+  .wa:hover { transform: scale(1.1); }
+  @keyframes waP { 0%,100%{box-shadow:0 6px 22px rgba(37,211,102,.4)} 50%{box-shadow:0 6px 34px rgba(37,211,102,.7)} }
+  @keyframes up { from{opacity:0;transform:translateY(22px)} to{opacity:1;transform:translateY(0)} }
+
+  /* RESPONSIVE */
+  @media (max-width:900px) {
+    nav { padding: 14px 20px; }
+    .nav-links { display: none; }
+    .hero, .wrap, .cta-sec { padding-left: 20px; padding-right: 20px; }
+    .about-grid, .why-grid { grid-template-columns: 1fr; gap: 30px; }
+    .faq-grid { grid-template-columns: 1fr; }
+    .process-grid::before { display: none; }
+    .footer-top { grid-template-columns: 1fr; gap: 28px; }
+    .footer-bottom { flex-direction: column; text-align: center; }
+    footer { padding: 36px 20px; }
+    .cta-box { padding: 34px 20px; }
+  }
+</style>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="./index.html" style="text-decoration: none;">
-                    <span class="logo-text">TAMKINEXPRESS</span>
-                    <span class="logo-subtitle">Complete Business Services</span>
-                </a>
-            </div>
-            <div class="nav-menu" id="nav-menu">
-                <a href="./index.html" class="nav-link">Home</a>
-                <a href="./index.html#about" class="nav-link">About</a>
-                <a href="./index.html#services" class="nav-link">Services</a>
-                <a href="./index.html#portfolio" class="nav-link">Portfolio</a>
-                <a href="./index.html#contact" class="nav-link">Contact</a>
-            </div>
-            <div class="nav-cta">
-                <a href="./index.html#contact" class="cta-button primary">Get Started</a>
-            </div>
-            <div class="hamburger" id="hamburger">
-                <span></span><span></span><span></span>
-            </div>
-        </div>
-    </nav>
-<!-- Navigation -->
-    <section class="hero service-hero">
-        <div class="hero-background"></div>
-        <div class="container">
-            <div class="hero-content">
-                <h1>CICPA & Other Security Passes in UAE</h1>
-                <p class="hero-subtitle">Efficient assistance in obtaining CICPA and other security passes required for access to restricted and government areas in the UAE.</p>
-                <div class="hero-cta">
-                    <a href="#contact" class="cta-button primary" style="padding:8px 16px; font-size:14px; border-radius:6px;">
-                        <span class="button-icon">📞</span> Apply Now
-                    </a>
-                    <a href="#services" class="cta-button secondary" style="padding:8px 16px; font-size:14px; border-radius:6px;">
-                        <span class="button-icon">📋</span> View Services
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+<div class="bg-wrap"></div>
+<div class="bg-grid"></div>
 
-    <section class="service-overview">
-        <div class="container">
-            <div class="overview-content">
-                <div class="overview-text">
-                    <h2>Why Choose TamkinExpress for CICPA & Security Passes?</h2>
-                    <p>TamkinExpress has extensive experience in processing CICPA passes and other security clearances required for working in restricted zones, critical infrastructure, and government areas across the UAE. Our team ensures fast, accurate processing with minimal delays.</p>
-                    <div class="overview-features">
-                        <div class="feature-item">
-                            <div class="feature-icon">✅</div>
-                            <div class="feature-content">
-                                <h4>Fast Processing</h4>
-                                <p>Quick turnaround for all security pass applications</p>
-                            </div>
-                        </div>
-                        <div class="feature-item">
-                            <div class="feature-icon">⚡</div>
-                            <div class="feature-content">
-                                <h4>Expert Knowledge</h4>
-                                <p>Deep understanding of UAE security pass requirements</p>
-                            </div>
-                        </div>
-                        <div class="feature-item">
-                            <div class="feature-icon">🏆</div>
-                            <div class="feature-content">
-                                <h4>High Approval Rate</h4>
-                                <p>Proven track record of successful pass approvals</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="overview-stats">
-                    <div class="stat-card"><span class="stat-number">500+</span><span class="stat-label">Passes Obtained</span></div>
-                    <div class="stat-card"><span class="stat-number">96%</span><span class="stat-label">Approval Rate</span></div>
-                    <div class="stat-card"><span class="stat-number">48hrs</span><span class="stat-label">Avg Processing</span></div>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- NAV -->
+<nav>
+  <a href="./index.html" class="logo"><div class="logo-box">✦</div><div><span style="display:block;line-height:1">TAMKINEXPRESS</span><span style="font-size:.6rem;font-weight:500;color:var(--muted);letter-spacing:.08em">Complete Business Services</span></div></a>
+  <div class="nav-links">
+    <a href="./index.html">Home</a>
+    <a href="./index.html#about">About</a>
+    <a href="./index.html#services">Services</a>
+    <a href="./index.html#portfolio">Portfolio</a>
+    <a href="./index.html#contact">Contact</a>
+    <a href="./index.html#contact" class="nav-cta">Get Started</a>
+  </div>
+</nav>
 
-    <section class="services-details" id="services">
-        <div class="container">
-            <h2 class="section-title">Our Security Pass Services in UAE</h2>
-            <div class="services-grid-detailed">
-                <div class="service-detail-card">
-                    <div class="service-detail-icon">🛂</div>
-                    <h3>CICPA Pass</h3>
-                    <ul class="service-features">
-                        <li>New CICPA Application</li>
-                        <li>CICPA Renewal</li>
-                        <li>Lost Pass Replacement</li>
-                        <li>Category Upgrades</li>
-                        <li>Company Registration for CICPA</li>
-                    </ul>
-                    <div class="service-price">Starting from AED 800</div>
-                </div>
-                <div class="service-detail-card">
-                    <div class="service-detail-icon">✈️</div>
-                    <h3>Airport Security Pass</h3>
-                    <ul class="service-features">
-                        <li>Dubai Airport Pass</li>
-                        <li>Abu Dhabi Airport Pass</li>
-                        <li>Airside Access Pass</li>
-                        <li>Cargo Area Pass</li>
-                        <li>Annual Renewal</li>
-                    </ul>
-                    <div class="service-price">Starting from AED 1,000</div>
-                </div>
-                <div class="service-detail-card">
-                    <div class="service-detail-icon">🏗️</div>
-                    <h3>Free Zone Security Pass</h3>
-                    <ul class="service-features">
-                        <li>JAFZA Access Pass</li>
-                        <li>DAFZA Security Pass</li>
-                        <li>Khalifa Port Pass</li>
-                        <li>Industrial Zone Access</li>
-                        <li>Multi-zone Passes</li>
-                    </ul>
-                    <div class="service-price">Starting from AED 600</div>
-                </div>
-                <div class="service-detail-card">
-                    <div class="service-detail-icon">🏛️</div>
-                    <h3>Government Area Pass</h3>
-                    <ul class="service-features">
-                        <li>Military Zone Access</li>
-                        <li>Critical Infrastructure Pass</li>
-                        <li>Restricted Area Clearance</li>
-                        <li>Background Check Support</li>
-                        <li>Security Clearance Letters</li>
-                    </ul>
-                    <div class="service-price">Starting from AED 1,200</div>
-                </div>
-                <div class="service-detail-card">
-                    <div class="service-detail-icon">🚢</div>
-                    <h3>Port & Maritime Pass</h3>
-                    <ul class="service-features">
-                        <li>Jebel Ali Port Pass</li>
-                        <li>Maritime Security ID</li>
-                        <li>Vessel Access Permits</li>
-                        <li>Logistics Zone Pass</li>
-                        <li>Customs Area Access</li>
-                    </ul>
-                    <div class="service-price">Starting from AED 900</div>
-                </div>
-                <div class="service-detail-card">
-                    <div class="service-detail-icon">📋</div>
-                    <h3>Document Support</h3>
-                    <ul class="service-features">
-                        <li>Security Clearance Letters</li>
-                        <li>Good Conduct Certificates</li>
-                        <li>Background Check Processing</li>
-                        <li>Document Attestation</li>
-                        <li>Application Follow-up</li>
-                    </ul>
-                    <div class="service-price">Starting from AED 400</div>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="badge"><span class="dot"></span>Critical Infrastructure & Coastal Protection Authority</div>
+  <h1>CICPA & Security<br>Passes in <em>UAE</em> —<br>Fast & Hassle-Free</h1>
+  <p>Efficient assistance in obtaining CICPA and other security passes for restricted zones, ports, airports, and government areas across UAE.</p>
+  <div class="hero-btns">
+    <a href="#contact" class="btn-teal">📋 Start Your Application →</a>
+    <a href="#about" class="btn-line">🎓 What is CICPA?</a>
+  </div>
+  <div class="hero-nums">
+    <div><div class="n-v">500+</div><div class="n-l">Passes Obtained</div></div>
+    <div><div class="n-v">96%</div><div class="n-l">Approval Rate</div></div>
+    <div><div class="n-v">48hrs</div><div class="n-l">Avg Processing</div></div>
+  </div>
+</section>
 
-    <section class="process-section">
-        <div class="container">
-            <h2 class="section-title">Our CICPA Application Process</h2>
-            <div class="process-steps">
-                <div class="process-step">
-                    <div class="step-number">01</div>
-                    <div class="step-content"><h4>Consultation</h4><p>Understand your specific access requirements and the appropriate pass type.</p></div>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">02</div>
-                    <div class="step-content"><h4>Document Collection</h4><p>Gather passport, visa, Emirates ID, and company documents.</p></div>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">03</div>
-                    <div class="step-content"><h4>Application Submission</h4><p>Submit your application to the relevant security authority.</p></div>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">04</div>
-                    <div class="step-content"><h4>Background Verification</h4><p>Security background check and verification processing.</p></div>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">05</div>
-                    <div class="step-content"><h4>Approval</h4><p>Receive pass approval from the relevant authority.</p></div>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">06</div>
-                    <div class="step-content"><h4>Pass Collection</h4><p>Collect your security pass and begin accessing restricted areas.</p></div>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- WHAT IS CICPA -->
+<section id="about"><div class="wrap">
+  <span class="tag">About CICPA</span>
+  <h2 class="ttl">What is a <em>CICPA Pass?</em></h2>
+  <div class="about-grid">
+    <div class="about-text">
+      <p>A <strong>CICPA (Critical Infrastructure and Coastal Protection Authority)</strong> pass is required to access critical infrastructure, ports, restricted zones, and government areas across the UAE.</p>
+      <div class="about-highlights">
+        <div class="hl"><div class="hl-ico">🛂</div><p><strong>Restricted Zone Access</strong>Ports, airports, industrial & government areas.</p></div>
+        <div class="hl"><div class="hl-ico">⚡</div><p><strong>Fast Processing</strong>Standard 3–7 working days, expedited available.</p></div>
+        <div class="hl"><div class="hl-ico">🏆</div><p><strong>96% Approval Rate</strong>Proven track record across all UAE emirates.</p></div>
+      </div>
+    </div>
+    <div class="about-card">
+      <h3>Security Pass Types</h3>
+      <p class="ac-sub">We process all major security passes in UAE</p>
+      <div class="cert-list">
+        <div class="cert-row"><span>🛂 CICPA Pass</span><span class="cert-badge">From AED 800</span></div>
+        <div class="cert-row"><span>✈️ Airport Security Pass</span><span class="cert-badge">From AED 1,000</span></div>
+        <div class="cert-row"><span>🏗️ Free Zone Pass</span><span class="cert-badge">From AED 600</span></div>
+        <div class="cert-row"><span>🏛️ Government Area Pass</span><span class="cert-badge">From AED 1,200</span></div>
+        <div class="cert-row"><span>🚢 Port & Maritime Pass</span><span class="cert-badge">From AED 900</span></div>
+        <div class="cert-row"><span>📋 Document Support</span><span class="cert-badge">From AED 400</span></div>
+      </div>
+    </div>
+  </div>
+</div></section>
 
-    <section class="faq-section">
-        <div class="container">
-            <h2 class="section-title">Frequently Asked Questions</h2>
-            <div class="faq-grid">
-                <div class="faq-item"><h4>What is a CICPA pass?</h4><p>CICPA (Critical Infrastructure and Coastal Protection Authority) passes are required to access critical infrastructure, ports, and restricted zones in UAE.</p></div>
-                <div class="faq-item"><h4>How long does CICPA processing take?</h4><p>Standard processing takes 3-7 working days. We offer expedited processing for urgent requirements.</p></div>
-                <div class="faq-item"><h4>What documents are needed for a CICPA pass?</h4><p>Passport copy, valid UAE visa, Emirates ID, company trade license, and sometimes a No Objection Certificate from your employer.</p></div>
-                <div class="faq-item"><h4>How long is a CICPA pass valid?</h4><p>CICPA passes are typically valid for 1-2 years and must be renewed before expiry to maintain access.</p></div>
-                <div class="faq-item"><h4>Can my company apply for multiple CICPA passes?</h4><p>Yes, companies can apply for multiple passes for their employees. We offer bulk processing at discounted rates.</p></div>
-                <div class="faq-item"><h4>What if my CICPA pass application is rejected?</h4><p>We review the rejection reasons and guide you through the reapplication process with corrected documentation.</p></div>
-            </div>
-        </div>
-    </section>
+<!-- CERTIFICATIONS / SERVICES -->
+<section id="certifications"><div class="wrap" style="padding-top:0">
+  <span class="tag">Our Services</span>
+  <h2 class="ttl">Security Pass Services <em>in UAE</em></h2>
+  <p class="sub">From CICPA to airport and port passes — we handle all types across UAE.</p>
+  <div class="svc-grid">
+    <div class="svc"><div class="svc-ico">🛂</div><h3>CICPA Pass</h3><p>New applications, renewals, lost pass replacement, and category upgrades.</p><span class="svc-tag">From AED 800</span></div>
+    <div class="svc"><div class="svc-ico">✈️</div><h3>Airport Security Pass</h3><p>Dubai & Abu Dhabi airport passes — airside, cargo, and annual renewals.</p><span class="svc-tag">From AED 1,000</span></div>
+    <div class="svc"><div class="svc-ico">🏗️</div><h3>Free Zone Pass</h3><p>JAFZA, DAFZA, Khalifa Port, and multi-zone industrial access passes.</p><span class="svc-tag">From AED 600</span></div>
+    <div class="svc"><div class="svc-ico">🏛️</div><h3>Government Area Pass</h3><p>Military zone, critical infrastructure, and restricted area clearances.</p><span class="svc-tag">From AED 1,200</span></div>
+    <div class="svc"><div class="svc-ico">🚢</div><h3>Port & Maritime Pass</h3><p>Jebel Ali port, maritime security ID, vessel permits, and customs access.</p><span class="svc-tag">From AED 900</span></div>
+    <div class="svc"><div class="svc-ico">📋</div><h3>Document Support</h3><p>Security clearance letters, good conduct certificates, and attestation.</p><span class="svc-tag">From AED 400</span></div>
+  </div>
+</div></section>
 
-    <section class="final-cta">
-        <div class="container">
-            <h2 class="cta-title">Need a Security Pass in UAE?</h2>
-            <p class="cta-subtitle">Get your CICPA or security pass processed quickly and hassle-free</p>
-            <a href="#contact" class="cta-button primary large"><span class="button-icon">🚀</span> Apply Now</a>
-        </div>
-    </section>
+<!-- WHO CAN APPLY -->
+<section class="eligibility-section"><div class="wrap">
+  <span class="tag">Who Needs It</span>
+  <h2 class="ttl">Who Needs a <em>Security Pass?</em></h2>
+  <p class="sub">Anyone working in or regularly accessing restricted zones in UAE requires the appropriate pass.</p>
+  <div class="elig-grid">
+    <div class="elig-card"><div class="elig-ico">🏭</div><h4>Port & Logistics Workers</h4><p>Staff at Jebel Ali, Khalifa Port, and logistics zones.</p></div>
+    <div class="elig-card"><div class="elig-ico">✈️</div><h4>Aviation Personnel</h4><p>Airline, cargo, and ground staff at UAE airports.</p></div>
+    <div class="elig-card"><div class="elig-ico">🏗️</div><h4>Free Zone Employees</h4><p>Workers in JAFZA, DAFZA, and other restricted free zones.</p></div>
+    <div class="elig-card"><div class="elig-ico">🏛️</div><h4>Government Contractors</h4><p>Contractors accessing military or critical infrastructure sites.</p></div>
+    <div class="elig-card"><div class="elig-ico">🚢</div><h4>Maritime Professionals</h4><p>Crew and marine staff needing vessel or dock access.</p></div>
+  </div>
+</div></section>
 
-    <footer class="footer" id="contact">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>TamkinExpress</h3>
-                    <p>Your trusted partner for business registration and complete business services in UAE.</p>
-                    <div class="contact-info">
-                        <p>📍 Dubai, United Arab Emirates</p>
-                        <p>📞 +971 506512466</p>
-                        <p>✉️ info@tamkinexpress.com</p>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h4>Security Services</h4>
-                    <ul>
-                        <li><a href="./cicpa.html">CICPA Pass</a></li>
-                        <li><a href="./cicpa.html">Airport Pass</a></li>
-                        <li><a href="./cicpa.html">Port Pass</a></li>
-                        <li><a href="./cicpa.html">Free Zone Pass</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Other Services</h4>
-                    <ul>
-                        <li><a href="./golden-visa.html">Golden Visa</a></li>
-                        <li><a href="./pro-services.html">PRO Services</a></li>
-                        <li><a href="./employment-visa.html">Employment Visa</a></li>
-                        <li><a href="./certificate-attestation.html">Certificate Attestation</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="./index.html#about">About Us</a></li>
-                        <li><a href="./index.html#portfolio">Portfolio</a></li>
-                        <li><a href="./index.html#contact">Contact</a></li>
-                        <li><a href="./index.html#careers">Careers</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 TamkinExpress. All rights reserved.</p>
-                <div class="social-links">
-                    <a href="" class="social-link">LinkedIn</a>
-                    <a href="https://x.com/tamkinexpress" class="social-link">Twitter</a>
-                    <a href="https://www.instagram.com/tamkin.express/" class="social-link">Instagram</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <script src="./asset/js/main.js" type="module"></script>
+<!-- PROCESS -->
+<section id="process"><div class="wrap">
+  <span class="tag">How It Works</span>
+  <h2 class="ttl">Our <em>CICPA Application</em> Process</h2>
+  <div class="process-grid">
+    <div class="p-step"><div class="p-num">1</div><h4>Consultation</h4><p>Identify your access requirement & correct pass type.</p></div>
+    <div class="p-step"><div class="p-num">2</div><h4>Document Collection</h4><p>Passport, visa, Emirates ID & company documents.</p></div>
+    <div class="p-step"><div class="p-num">3</div><h4>Application Submission</h4><p>Submitted to the relevant security authority.</p></div>
+    <div class="p-step"><div class="p-num">4</div><h4>Background Verification</h4><p>Security background check and verification.</p></div>
+    <div class="p-step"><div class="p-num">5</div><h4>Approval</h4><p>Pass approved by the relevant authority.</p></div>
+    <div class="p-step"><div class="p-num">6</div><h4>Pass Collection</h4><p>Collect your pass and access restricted areas.</p></div>
+  </div>
+</div></section>
+
+<!-- WHY TAMKIN -->
+<section><div class="wrap" style="padding-top:0">
+  <span class="tag">Why TamkinExpress</span>
+  <h2 class="ttl">Your Trusted <em>CICPA Partner</em> in UAE</h2>
+  <div class="why-grid">
+    <div class="why-list">
+      <div class="why-item"><div class="why-num">01</div><div><h4>UAE Security Pass Experts</h4><p>Deep knowledge of all UAE authority requirements.</p></div></div>
+      <div class="why-item"><div class="why-num">02</div><div><h4>Arabic & English Support</h4><p>Full bilingual guidance throughout your application.</p></div></div>
+      <div class="why-item"><div class="why-num">03</div><div><h4>96% Approval Rate</h4><p>Proven track record of successful pass approvals in UAE.</p></div></div>
+      <div class="why-item"><div class="why-num">04</div><div><h4>Dedicated PRO Handler</h4><p>One contact manages everything — reachable on WhatsApp.</p></div></div>
+      <div class="why-item"><div class="why-num">05</div><div><h4>Transparent Fees</h4><p>Full cost known upfront — no surprises.</p></div></div>
+    </div>
+    <div class="why-panel">
+      <h3>Required Documents</h3>
+      <p class="wp-sub">We guide you through every document needed.</p>
+      <div class="doc-list">
+        <div class="doc-row"><span>🪪</span> Valid Passport Copy</div>
+        <div class="doc-row"><span>🪪</span> UAE Residence Visa & Emirates ID</div>
+        <div class="doc-row"><span>🏢</span> Company Trade License</div>
+        <div class="doc-row"><span>📄</span> NOC from Employer (if required)</div>
+        <div class="doc-row"><span>📷</span> Passport-size Photographs</div>
+        <div class="doc-row"><span>📝</span> Completed Application Form</div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<!-- FAQ -->
+<section class="faq-section"><div class="wrap">
+  <span class="tag">FAQ</span>
+  <h2 class="ttl">Frequently Asked <em>Questions</em></h2>
+  <div class="faq-grid">
+    <div class="faq-item"><h4>What is a CICPA pass?</h4><p>Required to access critical infrastructure, ports, and restricted zones in UAE.</p></div>
+    <div class="faq-item"><h4>How long does CICPA processing take?</h4><p>Standard 3–7 working days. Expedited processing available for urgent cases.</p></div>
+    <div class="faq-item"><h4>What documents are needed?</h4><p>Passport, valid UAE visa, Emirates ID, trade license, and sometimes an NOC.</p></div>
+    <div class="faq-item"><h4>How long is a CICPA pass valid?</h4><p>Typically 1–2 years. Must be renewed before expiry to maintain access.</p></div>
+    <div class="faq-item"><h4>Can companies apply for multiple passes?</h4><p>Yes — bulk processing available for companies at discounted rates.</p></div>
+    <div class="faq-item"><h4>What if my application is rejected?</h4><p>We review rejection reasons and guide you through reapplication with corrected docs.</p></div>
+  </div>
+</div></section>
+
+<!-- CTA -->
+<section class="cta-sec" id="contact">
+  <div class="cta-box">
+    <h2>Need a <em>Security Pass</em><br>in UAE?</h2>
+    <p>Get your CICPA or security pass processed quickly and hassle-free. Free consultation — no commitment required.</p>
+    <div class="cta-btns">
+      <a href="https://wa.me/971506512466" class="btn-teal">💬 WhatsApp Now</a>
+      <a href="/cdn-cgi/l/email-protection#f79e999198b783969a9c9e99928f8785928484d994989a" class="btn-line">✉️ Email Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contact">
+  <div class="footer-top" style="grid-template-columns:1.6fr 1fr 1fr 1fr">
+    <div class="footer-brand">
+      <strong>TamkinExpress</strong>
+      <p>Your trusted partner for business registration and complete business services in UAE.</p>
+      <div style="margin-top:14px;display:flex;flex-direction:column;gap:6px">
+        <span style="font-size:.82rem;color:var(--muted)">📍 Dubai, United Arab Emirates</span>
+        <a href="tel:+971506512466" style="font-size:.82rem;color:var(--muted);text-decoration:none">📞 +971 506512466</a>
+        <a href="mailto:info@tamkinexpress.com" style="font-size:.82rem;color:var(--muted);text-decoration:none">✉️ info@tamkinexpress.com</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Security Services</h4>
+      <a href="./cicpa.html">CICPA Pass</a>
+      <a href="./cicpa.html">Airport Pass</a>
+      <a href="./cicpa.html">Port Pass</a>
+      <a href="./cicpa.html">Free Zone Pass</a>
+    </div>
+    <div class="footer-col">
+      <h4>Other Services</h4>
+      <a href="./golden-visa.html">Golden Visa</a>
+      <a href="./pro-services.html">PRO Services</a>
+      <a href="./employment-visa.html">Employment Visa</a>
+      <a href="./certificate-attestation.html">Certificate Attestation</a>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="./index.html#about">About Us</a>
+      <a href="./index.html#portfolio">Portfolio</a>
+      <a href="./index.html#contact">Contact</a>
+      <a href="./index.html#careers">Careers</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 <a href="https://tamkinexpress.com">TamkinExpress</a>. All rights reserved.</span>
+    <div style="display:flex;gap:16px">
+      <a href="https://www.linkedin.com/company/tamkinexpress" style="color:var(--teal);text-decoration:none;font-size:.78rem">LinkedIn</a>
+      <a href="https://x.com/tamkinexpress" style="color:var(--teal);text-decoration:none;font-size:.78rem">Twitter</a>
+      <a href="https://www.instagram.com/tamkin.express/" style="color:var(--teal);text-decoration:none;font-size:.78rem">Instagram</a>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/971506512466" class="wa" title="WhatsApp">💬</a>
 </body>
 </html>
