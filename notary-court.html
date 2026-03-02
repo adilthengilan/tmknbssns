@@ -135,7 +135,8 @@
             background-size: 60px 60px;
         }
 
-        .hero-content { position: relative; max-width: 680px; animation: fadeUp 0.8s ease both; }
+        .hero-content { position: relative; max-width: 780px; margin: 0 auto; animation: fadeUp 0.8s ease both; text-align: center; }
+        .hero-btns { justify-content: center; }
 
         @keyframes fadeUp {
             from { opacity: 0; transform: translateY(30px); }
@@ -177,13 +178,7 @@
 
         .teal { color: var(--gold); }
 
-        .hero p {
-            font-size: 1.1rem;
-            color: var(--gray);
-            line-height: 1.7;
-            margin-bottom: 40px;
-            max-width: 540px;
-        }
+        .hero p { font-size: 1.1rem; color: var(--gray); line-height: 1.7; margin: 0 auto 40px; max-width: 540px; }
 
         .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
 
@@ -700,7 +695,7 @@
                 <div class="contact-info">
                     <p>📍 Office No. 49 - Maxim Pharmacy Building - Musaffah M43 - Abudhabi - UAE</p>
                     <p>📞 <a href="tel:+971506512466" style="color:var(--gold);">+971 506512466</a></p>
-                    <p>✉️ <a href="mailto:info@tamkinexpress.com" style="color:var(--gold);">info@tamkinexpress.com</a></p>
+                    <p>✉️ <a href="/cdn-cgi/l/email-protection#147d7a727b546075797f7d7a716c64667167673a777b79" style="color:var(--gold);"><span class="__cf_email__" data-cfemail="422b2c242d0236232f292b2c273a32302731316c212d2f">[email&#160;protected]</span></a></p>
                 </div>
             </div>
             <div class="footer-section">
@@ -745,20 +740,11 @@
 <!-- FLOATING WHATSAPP -->
 <a href="https://wa.me/+971506512466" class="float-wa" aria-label="WhatsApp Tamkin Express">💬</a>
 
-<script src="./asset/js/main.js" type="module" defer></script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="./asset/js/main.js" type="module" defer></script>
 <script>
 const scriptURL = 'https://script.google.com/macros/s/AKfycbxSgJW29b_i_Gk8VpDBmwYDPrnpE9n_wuZI_DcWi3HP-RMheIxE7x_YjMJVtgA2oVSHIQ/exec';
 const form = document.getElementById('notary-form');
 if(form) {
     form.addEventListener('submit', e => {
         e.preventDefault();
-        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-            .then(() => alert("Thank you! We will contact you within 2 hours."))
-            .then(() => form.reset())
-            .catch(error => console.error('Error!', error.message));
-    });
-}
-</script>
-
-</body>
-</html>
+        fetch(scriptURL, { method: 'POST', body
