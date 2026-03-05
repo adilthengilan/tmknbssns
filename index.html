@@ -770,59 +770,262 @@
 
     <!-- Impact Section -->
     <section class="impact">
-        <div class="container">
-            <h2 class="section-title">Impact we made <em>in numbers.</em></h2>
+    <div class="container">
+        <h2 class="impact-title">Impact we made <em>in numbers.</em></h2>
+        <div class="impact-grid">
 
-            <div class="impact-grid">
-                <div class="impact-card">
-                    <div class="impact-stat">
-                        <span class="stat-value">95%</span>
-                        <span class="stat-label">Business Setup Success Rate</span>
-                    </div>
-                    <div class="stat-icon">
-                        <div class="growth-chart"></div>
-                    </div>
-                </div>
+            <div class="impact-card">
+                <span class="stat-value" data-target="95" data-suffix="%">0%</span>
+                <span class="stat-label">Business Setup Success Rate</span>
+                <div class="stat-bar"><div class="stat-bar-fill"></div></div>
+            </div>
 
-                <div class="impact-card">
-                    <div class="impact-stat">
-                        <span class="stat-value">500+</span>
-                        <span class="stat-label">Businesses Launched</span>
-                    </div>
-                    <div class="stat-icon">
-                        <div class="growth-chart"></div>
-                    </div>
-                </div>
+            <div class="impact-card">
+                <span class="stat-value" data-target="500" data-suffix="+">0+</span>
+                <span class="stat-label">Businesses Launched</span>
+                <div class="stat-bar"><div class="stat-bar-fill"></div></div>
+            </div>
 
-                <div class="impact-card">
-                    <div class="impact-stat">
-                        <span class="stat-value">300%</span>
-                        <span class="stat-label">Average Revenue Growth</span>
-                    </div>
-                    <div class="stat-icon">
-                        <div class="growth-chart"></div>
-                    </div>
-                </div>
+            <div class="impact-card">
+                <span class="stat-value" data-target="300" data-suffix="%">0%</span>
+                <span class="stat-label">Average Revenue Growth</span>
+                <div class="stat-bar"><div class="stat-bar-fill"></div></div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section class="trusted">
+    <div class="container">
+        <h2 class="trusted-title">You are in the <span>right place</span></h2>
+        <div class="clients-logos">
+            <div class="logo-slider">
+                <img style="height:120px;" src="./asset/image/works-with/tas-heel.png" class="client-logo">
+                <img style="height:120px;" src="./asset/image/works-with/dubai-economy.png" class="client-logo">
+                <img style="height:120px;" src="./asset/image/works-with/amir.png" class="client-logo">
+                <img style="height:120px;" src="./asset/image/works-with/ministry of interior.png" class="client-logo">
+                <img style="height:120px;" src="./asset/image/works-with/dubai-muncipality.png" class="client-logo">
+                <img style="height:120px;" src="./asset/image/works-with/tas-heel.png" class="client-logo">
+                <img style="height:120px;" src="./asset/image/works-with/dubai-economy.png" class="client-logo">
+                <img style="height:120px;" src="./asset/image/works-with/amir.png" class="client-logo">
+                <img style="height:120px;" src="./asset/image/works-with/ministry of interior.png" class="client-logo">
+                <img style="height:120px;" src="./asset/image/works-with/dubai-muncipality.png" class="client-logo">
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Trusted Section -->
-    <section class="trusted">
-        <div class="container">
-            <h2 class="section-title">You are in the right place</h2>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&family=Outfit:wght@300;400;500;600;700&display=swap');
 
-            <div class="clients-logos" style="background-color: rgb(44, 44, 44);">
-                <div class="logo-slider">
-                    <img style="height: 80px;" src="./asset/image/works-with/tas-heel.png" class="client-logo"></img>
-                    <img style="height: 80px;"src="./asset/image/works-with/dubai-economy.png" class="client-logo"></img>
-                    <img style="height: 80px;"src="./asset/image/works-with/amir.png" class="client-logo"></img>
-                    <img style="height: 80px;" src="./asset/image/works-with/ministry of interior.png" class="client-logo"></img>
-                    <img style="height: 80px;"src="./asset/image/works-with/dubai-muncipality.png" class="client-logo"></img>
-                    <!-- <div class="client-logo">StartupSuccess</div>
-                    <div class="client-logo">TechCorp</div>
-                    <div class="client-logo">InnovateUAE</div> -->
-                </div>
-            </div>
-        </div>
-    </section>
+/* ── Impact ── */
+.impact {
+    background: #000;
+    padding: 90px 0 100px;
+    text-align: center;
+}
+
+.impact-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: -0.01em;
+    margin-bottom: 52px;
+    line-height: 1.1;
+}
+
+.impact-title em {
+    font-style: italic;
+    color: #00d4a8;
+}
+
+.impact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .impact-grid { grid-template-columns: 1fr; max-width: 360px; }
+}
+
+.impact-card {
+    background: #0a0a0a;
+    border: 1px solid #1a1a1a;
+    border-radius: 18px;
+    padding: 44px 28px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.impact-card::before {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 75%;
+    height: 70px;
+    background: radial-gradient(ellipse at center bottom, rgba(0,212,168,0.15) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.impact-card:hover {
+    border-color: rgba(0,212,168,0.3);
+    transform: translateY(-5px);
+    box-shadow: 0 14px 44px rgba(0,212,168,0.08);
+}
+
+.stat-value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3.5rem, 6vw, 5rem);
+    font-weight: 700;
+    color: #00d4a8;
+    letter-spacing: -0.03em;
+    line-height: 1;
+    margin-bottom: 12px;
+    display: block;
+}
+
+.stat-label {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 400;
+    color: #666;
+    letter-spacing: 0.04em;
+    margin-bottom: 28px;
+    display: block;
+    text-transform: uppercase;
+}
+
+.stat-bar {
+    width: 100%;
+    height: 10px;
+    background: #1a1a1a;
+    border-radius: 100px;
+    overflow: hidden;
+}
+
+.stat-bar-fill {
+    height: 100%;
+    width: 0%;
+    border-radius: 100px;
+    background: linear-gradient(90deg, #006e55 0%, #00d4a8 55%, #00ffe5 100%);
+    box-shadow: 0 0 12px rgba(0,212,168,0.65), 0 0 28px rgba(0,212,168,0.3);
+    transition: width 1.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ── Trusted ── */
+.trusted {
+    background: #000;
+    padding: 70px 0 90px;
+    text-align: center;
+    border-top: 1px solid #111;
+}
+
+.trusted-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: -0.01em;
+    margin-bottom: 48px;
+    line-height: 1.1;
+}
+
+.trusted-title span { color: #00d4a8; }
+
+.clients-logos {
+    background: #0d0d0d !important;
+    border: 1px solid #1a1a1a;
+    border-radius: 14px;
+    padding: 36px 0;
+    overflow: hidden;
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.clients-logos::before,
+.clients-logos::after {
+    content: '';
+    position: absolute;
+    top: 0; bottom: 0;
+    width: 80px;
+    z-index: 2;
+    pointer-events: none;
+}
+.clients-logos::before {
+    left: 0;
+    background: linear-gradient(90deg, #0d0d0d, transparent);
+}
+.clients-logos::after {
+    right: 0;
+    background: linear-gradient(-90deg, #0d0d0d, transparent);
+}
+
+.logo-slider {
+    display: flex;
+    align-items: center;
+    gap: 52px;
+    padding: 0 40px;
+    animation: logoScroll 22s linear infinite;
+    width: max-content;
+}
+
+.logo-slider:hover { animation-play-state: paused; }
+
+.client-logo {
+    opacity: 0.5;
+    filter: grayscale(1) brightness(1.5);
+    transition: opacity 0.3s, filter 0.3s;
+    flex-shrink: 0;
+}
+
+.client-logo:hover {
+    opacity: 1;
+    filter: grayscale(0) brightness(1);
+}
+
+@keyframes logoScroll {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+</style>
+
+<script>
+(function() {
+    const cards = document.querySelectorAll('.impact-card');
+    const obs = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            const card = entry.target;
+            const valEl = card.querySelector('.stat-value');
+            const barFill = card.querySelector('.stat-bar-fill');
+            const target = +valEl.dataset.target;
+            const suffix = valEl.dataset.suffix;
+            let start = null;
+            const dur = 1800;
+            const tick = (ts) => {
+                if (!start) start = ts;
+                const p = Math.min((ts - start) / dur, 1);
+                const ease = 1 - Math.pow(1 - p, 3);
+                valEl.textContent = Math.floor(ease * target) + suffix;
+                if (p < 1) requestAnimationFrame(tick);
+            };
+            requestAnimationFrame(tick);
+            setTimeout(() => { barFill.style.width = '85%'; }, 150);
+            obs.unobserve(card);
+        });
+    }, { threshold: 0.35 });
+    cards.forEach(c => obs.observe(c));
+})();
+</script>
