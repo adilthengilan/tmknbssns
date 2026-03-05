@@ -301,235 +301,185 @@
     </section>
 <section id="services">
     <!-- Services Section -->
-   <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Services I Provide</title>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --teal: #00d4a8;
-    --teal-glow: rgba(0, 212, 168, 0.18);
-    --teal-dim: rgba(0, 212, 168, 0.08);
-    --bg: #0d0d0d;
-    --card-bg: #141414;
-    --card-border: #1e1e1e;
-    --text: #ffffff;
-    --muted: #888;
-  }
-
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
   body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: 'DM Sans', sans-serif;
+    background: #000000;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
     min-height: 100vh;
-    padding: 60px 20px 80px;
-  }
-
-  /* Background subtle grid */
-  body::before {
-    content: '';
-    position: fixed;
-    inset: 0;
-    background-image:
-      linear-gradient(rgba(0,212,168,0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(0,212,168,0.03) 1px, transparent 1px);
-    background-size: 40px 40px;
-    pointer-events: none;
-    z-index: 0;
+    padding: 70px 24px 90px;
   }
 
   .wrapper {
-    max-width: 1100px;
+    max-width: 1140px;
     margin: 0 auto;
-    position: relative;
-    z-index: 1;
   }
 
-  /* Heading */
-  .section-heading {
+  /* ── Heading ── */
+  .section-label {
     text-align: center;
-    margin-bottom: 56px;
-    animation: fadeDown 0.7s ease both;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #00d4a8;
+    margin-bottom: 10px;
+    animation: fadeDown 0.5s ease both;
   }
 
-  .section-heading h2 {
-    font-family: 'Syne', sans-serif;
-    font-size: clamp(2rem, 4vw, 2.8rem);
-    font-weight: 800;
-    letter-spacing: -0.02em;
+  .section-title {
+    text-align: center;
+    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin-bottom: 54px;
+    animation: fadeDown 0.6s ease 0.1s both;
   }
 
-  .section-heading h2 span {
-    color: var(--teal);
-  }
+  .section-title span { color: #00d4a8; }
 
-  .section-heading p {
-    color: var(--muted);
-    margin-top: 10px;
-    font-size: 0.95rem;
-    font-weight: 300;
-  }
-
-  /* Grid */
-  .services-grid {
+  /* ── Grid ── */
+  .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 18px;
   }
 
-  @media (max-width: 768px) {
-    .services-grid { grid-template-columns: repeat(2, 1fr); }
-  }
-  @media (max-width: 480px) {
-    .services-grid { grid-template-columns: 1fr; }
-  }
+  @media (max-width: 860px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 520px)  { .grid { grid-template-columns: 1fr; } }
 
-  /* Card */
+  /* ── Card ── */
   .card {
-    background: var(--card-bg);
-    border: 1px solid var(--card-border);
-    border-radius: 16px;
-    padding: 28px 24px 24px;
+    background: #0a0a0a;
+    border: 1px solid #1c1c1c;
+    border-radius: 14px;
+    padding: 30px 26px 26px;
     position: relative;
     overflow: hidden;
-    cursor: pointer;
-    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-    animation: fadeUp 0.6s ease both;
     text-decoration: none;
-    display: block;
     color: inherit;
+    display: flex;
+    flex-direction: column;
+    transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    animation: fadeUp 0.55s ease both;
   }
 
-  .card:nth-child(1)  { animation-delay: 0.05s; }
-  .card:nth-child(2)  { animation-delay: 0.10s; }
-  .card:nth-child(3)  { animation-delay: 0.15s; }
-  .card:nth-child(4)  { animation-delay: 0.20s; }
-  .card:nth-child(5)  { animation-delay: 0.25s; }
-  .card:nth-child(6)  { animation-delay: 0.30s; }
-  .card:nth-child(7)  { animation-delay: 0.35s; }
-  .card:nth-child(8)  { animation-delay: 0.40s; }
-  .card:nth-child(9)  { animation-delay: 0.45s; }
-  .card:nth-child(10) { animation-delay: 0.50s; }
-  .card:nth-child(11) { animation-delay: 0.55s; }
-  .card:nth-child(12) { animation-delay: 0.60s; }
+  .card:nth-child(1)  { animation-delay: 0.04s; }
+  .card:nth-child(2)  { animation-delay: 0.08s; }
+  .card:nth-child(3)  { animation-delay: 0.12s; }
+  .card:nth-child(4)  { animation-delay: 0.16s; }
+  .card:nth-child(5)  { animation-delay: 0.20s; }
+  .card:nth-child(6)  { animation-delay: 0.24s; }
+  .card:nth-child(7)  { animation-delay: 0.28s; }
+  .card:nth-child(8)  { animation-delay: 0.32s; }
+  .card:nth-child(9)  { animation-delay: 0.36s; }
+  .card:nth-child(10) { animation-delay: 0.40s; }
+  .card:nth-child(11) { animation-delay: 0.44s; }
+  .card:nth-child(12) { animation-delay: 0.48s; }
 
-  /* Left accent bar */
+  /* left teal bar */
   .card::before {
     content: '';
     position: absolute;
-    top: 18px;
-    left: 0;
-    width: 3px;
-    height: 44px;
-    background: var(--teal);
+    left: 0; top: 22px;
+    width: 3px; height: 38px;
+    background: #00d4a8;
     border-radius: 0 3px 3px 0;
     transition: height 0.3s ease;
   }
 
-  /* Glow on hover */
-  .card::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(ellipse at 20% 20%, var(--teal-dim) 0%, transparent 65%);
-    opacity: 0;
-    transition: opacity 0.4s ease;
-  }
-
   .card:hover {
+    border-color: rgba(0,212,168,0.38);
     transform: translateY(-5px);
-    border-color: rgba(0,212,168,0.35);
-    box-shadow: 0 12px 40px rgba(0,212,168,0.12);
+    box-shadow: 0 12px 40px rgba(0,212,168,0.09);
   }
 
-  .card:hover::before { height: 60px; }
-  .card:hover::after  { opacity: 1; }
+  .card:hover::before { height: 54px; }
 
-  /* Icon bubble */
-  .icon-wrap {
-    width: 54px;
-    height: 54px;
-    border-radius: 14px;
-    background: var(--teal-dim);
-    border: 1px solid rgba(0,212,168,0.2);
+  /* icon */
+  .icon-box {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    background: rgba(0,212,168,0.07);
+    border: 1px solid rgba(0,212,168,0.16);
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 18px;
-    position: relative;
-    z-index: 1;
-    transition: background 0.3s ease, border-color 0.3s ease;
+    margin-bottom: 20px;
+    flex-shrink: 0;
+    transition: background 0.3s, border-color 0.3s;
   }
 
-  .card:hover .icon-wrap {
-    background: rgba(0,212,168,0.15);
-    border-color: rgba(0,212,168,0.5);
+  .card:hover .icon-box {
+    background: rgba(0,212,168,0.13);
+    border-color: rgba(0,212,168,0.42);
   }
 
-  .icon-wrap svg {
-    width: 26px;
-    height: 26px;
-    fill: var(--teal);
-    stroke: var(--teal);
+  .icon-box svg {
+    width: 23px;
+    height: 23px;
+    stroke: #00d4a8;
+    fill: none;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
   }
 
-  /* Text */
   .card-title {
-    font-family: 'Syne', sans-serif;
-    font-size: 1.05rem;
-    font-weight: 700;
-    margin-bottom: 8px;
-    position: relative;
-    z-index: 1;
+    font-size: 0.96rem;
+    font-weight: 600;
+    margin-bottom: 9px;
+    line-height: 1.35;
   }
 
   .card-desc {
-    font-size: 0.83rem;
-    color: var(--muted);
-    line-height: 1.6;
-    margin-bottom: 18px;
-    position: relative;
-    z-index: 1;
+    font-size: 0.79rem;
     font-weight: 300;
+    color: #6b6b6b;
+    line-height: 1.68;
+    flex-grow: 1;
+    margin-bottom: 20px;
   }
 
-  /* Learn more */
   .learn-more {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    font-size: 0.82rem;
+    font-size: 0.77rem;
     font-weight: 500;
-    color: var(--teal);
-    position: relative;
-    z-index: 1;
-    transition: gap 0.25s ease;
+    color: #00d4a8;
+    margin-top: auto;
+    transition: gap 0.2s;
   }
 
   .learn-more svg {
-    width: 14px;
-    height: 14px;
-    stroke: var(--teal);
-    fill: none;
-    transition: transform 0.25s ease;
+    width: 13px; height: 13px;
+    stroke: #00d4a8; fill: none;
+    stroke-width: 2.2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: transform 0.2s;
   }
 
   .card:hover .learn-more { gap: 10px; }
   .card:hover .learn-more svg { transform: translateX(3px); }
 
-  /* Animations */
   @keyframes fadeDown {
-    from { opacity: 0; transform: translateY(-20px); }
+    from { opacity: 0; transform: translateY(-16px); }
     to   { opacity: 1; transform: translateY(0); }
   }
-
   @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(30px); }
+    from { opacity: 0; transform: translateY(26px); }
     to   { opacity: 1; transform: translateY(0); }
   }
 </style>
@@ -537,131 +487,117 @@
 <body>
 
 <div class="wrapper">
-  <div class="section-heading">
-    <h2>Services <span>I Provide</span></h2>
-    <p>Professional business & legal solutions tailored for you</p>
-  </div>
+  <p class="section-label">Our Specialization</p>
+  <h2 class="section-title">Services <span>I Provide</span></h2>
 
-  <div class="services-grid">
+  <div class="grid">
 
-    <!-- 1. Business Registration -->
     <a class="card" href="business-registration.html">
-      <div class="icon-wrap">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 7h8M8 11h8M8 15h5"/></svg>
+      <div class="icon-box">
+        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 7h8M8 11h8M8 15h5"/></svg>
       </div>
       <div class="card-title">Business Registration</div>
-      <div class="card-desc">Seamless company formation & registration services across all jurisdictions.</div>
-      <span class="learn-more">Learn more <svg viewBox="0 0 24 24" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      <div class="card-desc">Business registration in UAE made simple with expert company setup for mainland, free zone, and offshore.</div>
+      <span class="learn-more">Learn more <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
     </a>
 
-    <!-- 2. Employment Visa -->
     <a class="card" href="employment-visa.html">
-      <div class="icon-wrap">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M12 12m-3 0a3 3 0 1 0 6 0 3 3 0 1 0-6 0M2 10h20"/></svg>
+      <div class="icon-box">
+        <svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><circle cx="12" cy="12" r="3"/><path d="M2 10h20"/></svg>
       </div>
       <div class="card-title">Employment Visa</div>
-      <div class="card-desc">End-to-end work permit & employment visa processing for professionals.</div>
-      <span class="learn-more">Learn more <svg viewBox="0 0 24 24" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      <div class="card-desc">Expert assistance in securing employment visas with streamlined documentation and hassle-free processing.</div>
+      <span class="learn-more">Learn more <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
     </a>
 
-    <!-- 3. Digital Marketing -->
     <a class="card" href="digital-marketing.html">
-      <div class="icon-wrap">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l4-4 4 4 4-6 4 6"/><circle cx="19" cy="6" r="2"/></svg>
+      <div class="icon-box">
+        <svg viewBox="0 0 24 24"><path d="M3 12l4-4 4 4 4-6 4 6"/><circle cx="19" cy="6" r="2"/></svg>
       </div>
       <div class="card-title">Digital Marketing</div>
-      <div class="card-desc">Strategic online marketing to amplify your brand and drive real growth.</div>
-      <span class="learn-more">Learn more <svg viewBox="0 0 24 24" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      <div class="card-desc">Comprehensive digital marketing solutions to elevate your brand and drive measurable business growth online.</div>
+      <span class="learn-more">Learn more <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
     </a>
 
-    <!-- 4. Golden Visa -->
     <a class="card" href="golden-visa.html">
-      <div class="icon-wrap">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      <div class="icon-box">
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
       </div>
       <div class="card-title">Golden Visa</div>
-      <div class="card-desc">Long-term UAE residency through investment — expert guidance at every step.</div>
-      <span class="learn-more">Learn more <svg viewBox="0 0 24 24" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      <div class="card-desc">Navigate the golden visa process with expert guidance for long-term residency and investment opportunities.</div>
+      <span class="learn-more">Learn more <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
     </a>
 
-    <!-- 5. CICPA -->
     <a class="card" href="cicpa.html">
-      <div class="icon-wrap">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 8h10M7 16h6"/></svg>
+      <div class="icon-box">
+        <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 8h10"/></svg>
       </div>
       <div class="card-title">CICPA</div>
-      <div class="card-desc">Certified Immigration & Corporate Professional Advisory services.</div>
-      <span class="learn-more">Learn more <svg viewBox="0 0 24 24" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      <div class="card-desc">Professional CICPA registration and compliance services ensuring your business meets all regulatory requirements.</div>
+      <span class="learn-more">Learn more <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
     </a>
 
-    <!-- 6. Ministry of Economy -->
     <a class="card" href="ministry-of-economy.html">
-      <div class="icon-wrap">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V10l7-7 7 7v11"/><path d="M9 21v-6h6v6"/></svg>
+      <div class="icon-box">
+        <svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V10l7-7 7 7v11"/><path d="M9 21v-6h6v6"/></svg>
       </div>
       <div class="card-title">Ministry of Economy</div>
-      <div class="card-desc">Official approvals, trade licenses & compliance with Ministry of Economy.</div>
-      <span class="learn-more">Learn more <svg viewBox="0 0 24 24" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      <div class="card-desc">Comprehensive support for Ministry of Economy procedures including licensing, permits, and business registration.</div>
+      <span class="learn-more">Learn more <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
     </a>
 
-    <!-- 7. PRO Services -->
     <a class="card" href="pro-services.html">
-      <div class="icon-wrap">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+      <div class="icon-box">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
       </div>
       <div class="card-title">PRO Services</div>
-      <div class="card-desc">Public Relations Officer services for all government paperwork & liaisoning.</div>
-      <span class="learn-more">Learn more <svg viewBox="0 0 24 24" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      <div class="card-desc">Complete PRO services handling all government documentation, visa processing, and corporate compliance.</div>
+      <span class="learn-more">Learn more <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
     </a>
 
-    <!-- 8. Ministry of Labour -->
     <a class="card" href="ministry-of-labour.html">
-      <div class="icon-wrap">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      <div class="icon-box">
+        <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
       </div>
       <div class="card-title">Ministry of Labour</div>
-      <div class="card-desc">Labour card processing, work permits, and MOL approvals made simple.</div>
-      <span class="learn-more">Learn more <svg viewBox="0 0 24 24" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      <div class="card-desc">Expert handling of Ministry of Labour services including labor cards, work permits, and employee documentation.</div>
+      <span class="learn-more">Learn more <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
     </a>
 
-    <!-- 9. Notary & Court -->
     <a class="card" href="notary-court.html">
-      <div class="icon-wrap">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L4 6v6c0 5 3.6 9.7 8 11 4.4-1.3 8-6 8-11V6l-8-4z"/><path d="M9 12l2 2 4-4"/></svg>
+      <div class="icon-box">
+        <svg viewBox="0 0 24 24"><path d="M12 2L4 6v6c0 5 3.6 9.7 8 11 4.4-1.3 8-6 8-11V6l-8-4z"/><path d="M9 12l2 2 4-4"/></svg>
       </div>
-      <div class="card-title">Notary & Court</div>
-      <div class="card-desc">Notarization, attestation, and court document services handled efficiently.</div>
-      <span class="learn-more">Learn more <svg viewBox="0 0 24 24" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      <div class="card-title">Notary &amp; Court</div>
+      <div class="card-desc">Professional notary and court services for document authentication, certifications, and official proceedings.</div>
+      <span class="learn-more">Learn more <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
     </a>
 
-    <!-- 10. Legal Translation -->
     <a class="card" href="legal-translation.html">
-      <div class="icon-wrap">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8l6 6M4 14l6-6 2-3M2 5h7M7 2v3"/><path d="M22 22l-5-10-5 10M14 18h6"/></svg>
+      <div class="icon-box">
+        <svg viewBox="0 0 24 24"><path d="M5 8l6 6M4 14l6-6 2-3M2 5h7M7 2v3"/><path d="M22 22l-5-10-5 10M14 18h6"/></svg>
       </div>
       <div class="card-title">Legal Translation</div>
-      <div class="card-desc">Certified legal translation for official documents in multiple languages.</div>
-      <span class="learn-more">Learn more <svg viewBox="0 0 24 24" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      <div class="card-desc">Certified legal translation services ensuring accuracy and compliance for all your official document needs.</div>
+      <span class="learn-more">Learn more <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
     </a>
 
-    <!-- 11. Legal Contracts -->
     <a class="card" href="legal-contracts.html">
-      <div class="icon-wrap">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+      <div class="icon-box">
+        <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
       </div>
       <div class="card-title">Legal Contracts</div>
-      <div class="card-desc">Drafting, reviewing and enforcing legally binding contracts and agreements.</div>
-      <span class="learn-more">Learn more <svg viewBox="0 0 24 24" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      <div class="card-desc">Expert drafting and review of legal contracts ensuring your interests are protected with comprehensive legal support.</div>
+      <span class="learn-more">Learn more <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
     </a>
 
-    <!-- 12. Bonus / Extra Service slot -->
-    <a class="card" href="#">
-      <div class="icon-wrap">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+    <a class="card" href="certificate-attestation.html">
+      <div class="icon-box">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="5"/><path d="M9 9l2 2 4-4"/><path d="M6.5 17.5L5 22l7-2 7 2-1.5-4.5"/></svg>
       </div>
-      <div class="card-title">More Services</div>
-      <div class="card-desc">Additional consultancy and business support services available on request.</div>
-      <span class="learn-more">Learn more <svg viewBox="0 0 24 24" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      <div class="card-title">Certificate Attestation</div>
+      <div class="card-desc">Fast and reliable certificate attestation for educational, personal, and commercial documents worldwide.</div>
+      <span class="learn-more">Learn more <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
     </a>
 
   </div>
