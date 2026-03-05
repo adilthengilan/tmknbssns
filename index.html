@@ -849,113 +849,105 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <!-- <section class="final-cta">
-        <div class="container">
-            <h2 class="cta-title">Start building with TamkinExpress</h2>
-            <a href="#contact" class="cta-button primary large">
-                <span class="button-icon">📞</span>
-                Plan a consultation
-            </a>
-        </div>
-    </section> -->
-    
+ <!-- CTA -->
+<section class="cta-section">
+    <h2>Ready to be our<br>next <em>success story?</em></h2>
+    <p>Join 500+ UAE businesses that chose strategy over guesswork — and never looked back.</p>
+    <div class="cta-buttons">
+        <a href="/contact-us.html" class="btn-primary">Plan a Consultation →</a>
+        <a href="/#services" class="btn-secondary">View Services</a>
+    </div>
+</section>
+
 <!-- FOOTER -->
 <footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-grid">
-      <div class="footer-col">
-        <img src="./asset/logo_coloured.png" style="height:60px;width:170px;margin-bottom:1rem;" alt="TamkinExpress Logo">
-        <p style="color:#aaa;font-size:.88rem;line-height:1.7;max-width:220px;">Your trusted partner for business registration and complete business services in UAE.</p>
-        <div style="margin-top:1rem;display:flex;flex-direction:column;gap:.4rem;">
-          <p style="color:#aaa;font-size:.85rem;">📍 Office No. 49, Musaffah M43, Abu Dhabi – UAE</p>
-          <p style="color:#aaa;font-size:.85rem;">📞 +971 588967713</p>
-          <p style="color:#aaa;font-size:.85rem;">✉️ info@tamkinexpress.com</p>
+    <div class="footer-inner">
+        <div class="footer-grid">
+            <div>
+                <img src="./asset/logo_coloured.png" style="height:60px;width:170px;margin-bottom:1rem;" alt="TamkinExpress">
+                <p style="color:#aaa;font-size:.88rem;line-height:1.7;max-width:220px;">Your trusted partner for business registration and complete business services in UAE.</p>
+                <div style="margin-top:1rem;display:flex;flex-direction:column;gap:.4rem;">
+                    <p style="color:#aaa;font-size:.85rem;">📍 Office No. 49, Musaffah M43, Abu Dhabi – UAE</p>
+                    <p style="color:#aaa;font-size:.85rem;">📞 +971 588967713</p>
+                    <p style="color:#aaa;font-size:.85rem;">✉️ info@tamkinexpress.com</p>
+                </div>
+            </div>
+            <div>
+                <h4 class="footer-col-title">Visa Services</h4>
+                <ul class="footer-links">
+                    <li><a href="./golden-visa.html">Golden Visa</a></li>
+                    <li><a href="./employment-visa.html">Employment Visa</a></li>
+                    <li><a href="./employment-visa.html">Family Visa</a></li>
+                    <li><a href="./cicpa.html">CICPA Passes</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="footer-col-title">Other Services</h4>
+                <ul class="footer-links">
+                    <li><a href="./digital-marketing.html">Digital Marketing</a></li>
+                    <li><a href="./pro-services.html">PRO Services</a></li>
+                    <li><a href="./legal-translation.html">Legal Translation</a></li>
+                    <li><a href="./certificate-attestation.html">Certificate Attestation</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="footer-col-title">Company</h4>
+                <ul class="footer-links">
+                    <li><a href="./about.html">About Us</a></li>
+                    <li><a href="./portfolio.html">Portfolio</a></li>
+                    <li><a href="./contact-us.html">Contact</a></li>
+                </ul>
+            </div>
         </div>
-      </div>
-      <div class="footer-col">
-        <h4 class="footer-col-title">Visa Services</h4>
-        <ul class="footer-links">
-          <li><a href="./golden-visa.html">Golden Visa</a></li>
-          <li><a href="./employment-visa.html">Employment Visa</a></li>
-          <li><a href="./employment-visa.html">Family Visa</a></li>
-          <li><a href="./cicpa.html">CICPA Passes</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4 class="footer-col-title">Other Services</h4>
-        <ul class="footer-links">
-          <li><a href="./digital-marketing.html">Digital Marketing</a></li>
-          <li><a href="./pro-services.html">PRO Services</a></li>
-          <li><a href="./legal-translation.html">Legal Translation</a></li>
-          <li><a href="./certificate-attestation.html">Certificate Attestation</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4 class="footer-col-title">Company</h4>
-        <ul class="footer-links">
-          <li><a href="/about.html">About Us</a></li>
-          <li><a href="/portfolio.html">Portfolio</a></li>
-          <li><a href="/contact-us.html">Contact</a></li>
-        </ul>
-      </div>
+        <div class="footer-bottom">
+            <p>© 2025 TamkinExpress. All rights reserved.</p>
+            <div class="footer-social">
+                <a href="#">LinkedIn</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+            </div>
+        </div>
     </div>
-    <div class="footer-bottom">
-      <p>© 2025 TamkinExpress. All rights reserved.</p>
-      <div class="footer-social">
-        <a href="#">LinkedIn</a>
-        <a href="#">Twitter</a>
-        <a href="#">Instagram</a>
-      </div>
-    </div>
-  </div>
 </footer>
 
 <script>
-// ── Navbar scroll effect ──
-window.addEventListener('scroll', () => {
-  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 40);
-});
-
-// ── Universal reveal observer ──
-const io = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.classList.add('visible');
-      io.unobserve(e.target);
+    function filterCards(cat, btn) {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        document.querySelectorAll('.portfolio-card').forEach(card => {
+            card.style.display = (cat === 'all' || card.dataset.cat === cat) ? '' : 'none';
+        });
     }
-  });
-}, { threshold: 0.12 });
-
-document.querySelectorAll(
-  '.reveal, .reveal-left, .reveal-right, .reveal-scale, .section-label, .section-title, .final-cta > p, .final-cta .btn-solid'
-).forEach(el => io.observe(el));
-
-// ── Val header labels ──
-const valHeaderIo = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.querySelectorAll('.section-label, .section-title').forEach((el, i) => {
-        setTimeout(() => el.classList.add('visible'), i * 150);
-      });
-      valHeaderIo.unobserve(e.target);
+    const obs = new IntersectionObserver(entries => {
+        entries.forEach((e, i) => { if (e.isIntersecting) { setTimeout(() => e.target.classList.add('in-view'), i * 100); obs.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.portfolio-card').forEach(c => obs.observe(c));
+    const secObs = new IntersectionObserver(entries => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in-view'); secObs.unobserve(e.target); } });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.filter-section, .cta-section').forEach(el => secObs.observe(el));
+    const container = document.getElementById('particles');
+    for (let i = 0; i < 18; i++) {
+        const p = document.createElement('div'); p.className = 'particle';
+        const size = Math.random() * 4 + 2;
+        p.style.cssText = `left:${Math.random()*100}%;top:${Math.random()*100}%;width:${size}px;height:${size}px;opacity:${Math.random()*0.5+0.2};animation-duration:${Math.random()*6+5}s;animation-delay:${Math.random()*4}s;background:${Math.random()>0.5?'#00d2cc':'#ffffff'};`;
+        container.appendChild(p);
     }
-  });
-}, { threshold: 0.2 });
-document.querySelectorAll('.val-header').forEach(el => valHeaderIo.observe(el));
-
-// ── Final CTA stagger ──
-const ctaIo = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.querySelectorAll('.section-label, .section-title, p, .btn-solid').forEach((el, i) => {
-        setTimeout(() => el.classList.add('visible'), i * 150);
-      });
-      ctaIo.unobserve(e.target);
-    }
-  });
-}, { threshold: 0.2 });
-document.querySelectorAll('.final-cta').forEach(el => ctaIo.observe(el));
+    window.addEventListener('scroll', () => {
+        const nav = document.querySelector('.navbar');
+        nav.style.background = window.scrollY > 50 ? 'rgba(10,10,11,0.98)' : 'rgba(10,10,11,0.9)';
+        nav.style.borderBottomColor = window.scrollY > 50 ? 'rgba(0,210,204,0.15)' : 'rgba(255,255,255,0.08)';
+    });
+    document.querySelectorAll('.portfolio-card').forEach(card => {
+        card.addEventListener('mousemove', e => {
+            const rect = card.getBoundingClientRect();
+            const x = (e.clientX - rect.left) / rect.width - 0.5;
+            const y = (e.clientY - rect.top) / rect.height - 0.5;
+            card.style.transform = `translateY(-8px) rotateX(${-y*6}deg) rotateY(${x*6}deg)`;
+        });
+        card.addEventListener('mouseleave', () => { card.style.transform = ''; card.style.transition = 'all 0.5s ease'; });
+        card.addEventListener('mouseenter', () => { card.style.transition = 'transform 0.1s ease, border-color 0.4s, box-shadow 0.4s'; });
+    });
 </script>
 </body>
 </html>
