@@ -1272,28 +1272,51 @@
     </div>
   </footer>
 
-    <script>
-    // Hamburger menu
-    const hamburger = document.getElementById('hamburger');
-    const navMenu = document.getElementById('navMenu');
-    hamburger.addEventListener('click', () => {
-      navMenu.classList.toggle('open');
-    });
-    document.querySelectorAll('.nav-link').forEach(link => {
-      link.addEventListener('click', () => navMenu.classList.remove('open'));
-    });
+<script>
+// ── Navbar scroll effect ──
+window.addEventListener('scroll', () => {
+  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 40);
+});
 
-    // Scroll reveal
-    const reveals = document.querySelectorAll('.reveal');
-    const revealObs = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          revealObs.unobserve(entry.target);
-        }
+// ── Universal reveal observer ──
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      io.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.12 });
+
+document.querySelectorAll(
+  '.reveal, .reveal-left, .reveal-right, .reveal-scale, .section-label, .section-title, .final-cta > p, .final-cta .btn-solid'
+).forEach(el => io.observe(el));
+
+// ── Val header labels ──
+const valHeaderIo = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.querySelectorAll('.section-label, .section-title').forEach((el, i) => {
+        setTimeout(() => el.classList.add('visible'), i * 150);
       });
-    }, { threshold: 0.12 });
-    reveals.forEach(el => revealObs.observe(el));
-  </script>
+      valHeaderIo.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.2 });
+document.querySelectorAll('.val-header').forEach(el => valHeaderIo.observe(el));
+
+// ── Final CTA stagger ──
+const ctaIo = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.querySelectorAll('.section-label, .section-title, p, .btn-solid').forEach((el, i) => {
+        setTimeout(() => el.classList.add('visible'), i * 150);
+      });
+      ctaIo.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.2 });
+document.querySelectorAll('.final-cta').forEach(el => ctaIo.observe(el));
+</script>
 </body>
 </html>
