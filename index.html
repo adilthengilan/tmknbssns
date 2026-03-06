@@ -1221,7 +1221,6 @@
     
 <!-- FOOTER -->
 <footer class="site-footer">
-  <div class="footer-inner">
     <div class="footer-grid">
       <div class="footer-col">
         <img src="./asset/logo_coloured.png" style="height:60px;width:170px;margin-bottom:1rem;" alt="TamkinExpress Logo">
@@ -1243,32 +1242,58 @@
         </ul>
       </div>
 
-    <!-- Other Services -->
-    <div class="nav-col">
-      <h4>Other Services</h4>
-      <ul>
-        <li><a href="#">Digital Marketing</a></li>
-        <li><a href="#">PRO Services</a></li>
-        <li><a href="#">Legal Translation</a></li>
-        <li><a href="#">Certificate Attestation</a></li>
-      </ul>
+      <div class="footer-col">
+        <h4 class="footer-col-title">Other Services</h4>
+        <ul class="footer-links">
+          <li><a href="./digital-marketing.html">Digital Marketing</a></li>
+          <li><a href="./pro-services.html">PRO Services</a></li>
+          <li><a href="./legal-translation.html">Legal Translation</a></li>
+          <li><a href="./certificate-attestation.html">Certificate Attestation</a></li>
+        </ul>
+      </div>
 
-    <!-- Company -->
-    <div class="nav-col">
-      <h4>Company</h4>
-      <ul>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-      
-   <!-- Bottom Bar -->
-  <div class="footer-bottom">
-    <span class="footer-copy">© 2025 TamkinExpress. All rights reserved.</span>
-    <div class="footer-social">
-        <a href="#">LinkedIn</a>
-        <a href="#">Twitter</a>
-        <a href="#">Instagram</a>
-      </ul>
+      <div class="footer-col">
+        <h4 class="footer-col-title">Company</h4>
+        <ul class="footer-links">
+          <li><a href="/about.html">About Us</a></li>
+          <li><a href="/portfolio.html">Portfolio</a></li>
+          <li><a href="/contact-us.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2025 TamkinExpress. All rights reserved.</span>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/profile.php?id=61563209741328" target="_blank">Facebook</a>
+        <a href="https://www.instagram.com/tamkinexpress" target="_blank">Instagram</a>
+        <a href="https://x.com/tamkinexpress" target="_blank">Twitter</a>
+      </div>
     </div>
   </footer>
+
+    <script>
+    // Hamburger menu
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('navMenu');
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('open');
+    });
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => navMenu.classList.remove('open'));
+    });
+
+    // Scroll reveal
+    const reveals = document.querySelectorAll('.reveal');
+    const revealObs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    reveals.forEach(el => revealObs.observe(el));
+  </script>
+</body>
+</html>
