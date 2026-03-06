@@ -1041,233 +1041,282 @@
   <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tamkin Footer</title>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Nunito:wght@300;400;600&display=swap');
+ <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tamkin Express Footer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --bg: #000000;
+      --bg-footer: #000000;
+      --teal: #00b5a3;
+      --teal-light: #00cbb7;
+      --text: #c8d8d6;
+      --text-muted: #7a9e9b;
+      --border: rgba(0,181,163,0.15);
+    }
 
-  body {
-    background: #000000;
-    font-family: 'Nunito', sans-serif;
-    min-height: 100vh;
-    display: flex;
-    align-items: flex-end;
-  }
+        body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg);
+    }
 
-  footer {
-    width: 100%;
-    background: #000000;
-    padding: 48px 24px 24px;
-    border-top: 1px solid rgba(0,200,190,0.15);
-  }
-
-  .footer-grid {
-    display: grid;
-    grid-template-columns: 1.4fr 1fr 1fr 0.8fr;
-    gap: 32px;
-    max-width: 1200px;
-    margin: 0 auto;
-    align-items: start;
-  }
-
-  /* Logo & Info Column */
-  .brand-col {}
-
-  .logo-wrap {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 14px;
-  }
-
-  .logo-icon {
-    width: 44px;
-    height: 44px;
-    background: #00c8be;
-    clip-path: polygon(0 0, 70% 0, 100% 30%, 100% 100%, 30% 100%, 0 70%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    color: #0f1923;
-    font-size: 18px;
-  }
-
-  .logo-text {
-    font-family: 'Rajdhani', sans-serif;
-    font-size: 26px;
-    font-weight: 700;
-    color: #00c8be;
-    letter-spacing: 1px;
-  }
-
-  .tagline {
-    color: #8a9bb0;
-    font-size: 13px;
-    line-height: 1.6;
-    margin-bottom: 20px;
-    max-width: 220px;
-  }
-
-  .contact-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 8px;
-    color: #8a9bb0;
-    font-size: 12.5px;
-    margin-bottom: 8px;
-    line-height: 1.5;
-  }
-
-  .contact-item .icon {
-    font-size: 13px;
-    flex-shrink: 0;
-    margin-top: 1px;
-  }
-
-  /* Nav Columns */
-  .nav-col {}
-
-  .col-title {
-    font-family: 'Rajdhani', sans-serif;
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    color: #00c8be;
-    text-transform: uppercase;
-    margin-bottom: 16px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid rgba(0,200,190,0.2);
-  }
-
-  .nav-col ul {
-    list-style: none;
-  }
-
-  .nav-col ul li {
-    margin-bottom: 10px;
-  }
-
-  .nav-col ul li a {
-    color: #8a9bb0;
-    text-decoration: none;
-    font-size: 13.5px;
-    font-weight: 400;
-    transition: color 0.2s, padding-left 0.2s;
-    display: block;
-  }
-
-  .nav-col ul li a:hover {
-    color: #00c8be;
-    padding-left: 4px;
-  }
-
-  /* Bottom bar */
-  .footer-bottom {
-    max-width: 1200px;
-    margin: 32px auto 0;
-    padding-top: 16px;
-    border-top: 1px solid rgba(255,255,255,0.06);
-    color: #4a5568;
-    font-size: 12px;
-    text-align: center;
-  }
-
-  /* ── MOBILE: keep same 4-col grid, just scale down ── */
-  @media (max-width: 640px) {
+        /* ── FOOTER ── */
     footer {
-      padding: 32px 12px 20px;
+      background: var(--bg-footer);
+      border-top: 1px solid var(--border);
+      padding: 64px 80px 0;
     }
 
-    .footer-grid {
-      grid-template-columns: 1fr 1fr;
-      gap: 24px 16px;
+         .footer-main {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr 1fr 0.8fr;
+      gap: 48px;
+      padding-bottom: 56px;
     }
 
-    .brand-col {
-      grid-column: 1 / -1; /* full width on top */
+       /* Brand column */
+    .brand-col {}
+
+
+       .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 22px;
+      text-decoration: none;
+    }
+       .logo-icon {
+      width: 42px;
+      height: 42px;
     }
 
-    .tagline { max-width: 100%; }
+        .logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+    }
 
-    .logo-text { font-size: 22px; }
+        .logo-arabic {
+      font-size: 13px;
+      color: var(--teal);
+      letter-spacing: 1px;
+    }
 
-    .col-title { font-size: 11px; letter-spacing: 1.5px; }
+        .logo-en {
+      font-size: 22px;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: -0.5px;
+    }
 
-    .nav-col ul li a { font-size: 12px; }
+       .brand-desc {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      line-height: 1.75;
+      margin-bottom: 28px;
+      max-width: 280px;
+    }
 
-    .contact-item { font-size: 11.5px; }
-  }
-</style>
-</head>
-<body>
+       .contact-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
 
-<footer>
-  <div class="footer-grid">
+      .contact-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 13px;
+      color: var(--text);
+    }
 
-    <!-- Brand Column -->
-    <div class="brand-col">
-      <div class="logo-wrap">
-        <div class="logo-icon">T</div>
-        <span class="logo-text">tamkin</span>
+       .contact-icon {
+      flex-shrink: 0;
+      width: 16px;
+      height: 16px;
+      margin-top: 1px;
+    }
+
+       /* Nav columns */
+    .nav-col {}
+
+      .nav-col h4 {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 22px;
+    }
+
+       .nav-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+      .nav-col ul li a {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s, padding-left 0.2s;
+      display: inline-block;
+    }
+
+        .nav-col ul li a:hover {
+      color: var(--teal-light);
+      padding-left: 4px;
+    }
+
+        /* ── FOOTER BOTTOM ── */
+    .footer-bottom {
+      border-top: 1px solid var(--border);
+      padding: 20px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .footer-copy {
+      font-size: 12.5px;
+      color: var(--text-muted);
+          }
+
+    .social-links {
+      display: flex;
+      gap: 24px;
+         }
+
+    .social-links a {
+      font-size: 12.5px;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+         .social-links a:hover {
+      color: var(--teal-light);
+    }
+
+      @media (max-width: 900px) {
+      footer { padding: 48px 24px 0; }
+      .footer-main {
+        grid-template-columns: 1fr 1fr;
+        gap: 36px;
+      }
+    }
+
+        @media (max-width: 560px) {
+      .footer-main { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+    }
+  </style>
+  </head>
+    
+<!-- FOOTER -->
+<footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <img src="./asset/logo_coloured.png" style="height:60px;width:170px;margin-bottom:1rem;" alt="TamkinExpress Logo">
+        <p style="color:#aaa;font-size:.88rem;line-height:1.7;max-width:220px;">Your trusted partner for business registration and complete business services in UAE.</p>
+        <div style="margin-top:1rem;display:flex;flex-direction:column;gap:.4rem;">
+          <p style="color:#aaa;font-size:.85rem;">📍 Office No. 49, Musaffah M43, Abu Dhabi – UAE</p>
+          <p style="color:#aaa;font-size:.85rem;">📞 +971 588967713</p>
+          <p style="color:#aaa;font-size:.85rem;">✉️ info@tamkinexpress.com</p>
+        </div>
       </div>
-      <p class="tagline">Your trusted partner for business registration and complete business services in UAE.</p>
 
-      <div class="contact-item">
-        <span class="icon">📍</span>
-        <span>Office No. 49, Musaffah M43, Abu Dhabi – UAE</span>
+          <div class="footer-col">
+        <h4 class="footer-col-title">Visa Services</h4>
+        <ul class="footer-links">
+          <li><a href="./golden-visa.html">Golden Visa</a></li>
+          <li><a href="./employment-visa.html">Employment Visa</a></li>
+          <li><a href="./employment-visa.html">Family Visa</a></li>
+          <li><a href="./cicpa.html">CICPA Passes</a></li>
+        </ul>
       </div>
-      <div class="contact-item">
-        <span class="icon">📞</span>
-        <span>+971 588967713</span>
-      </div>
-      <div class="contact-item">
-        <span class="icon">✉️</span>
-        <span>info@tamkinexpress.com</span>
-      </div>
+
+         <div class="footer-col">
+        <h4 class="footer-col-title">Other Services</h4>
+        <ul class="footer-links">
+          <li><a href="./digital-marketing.html">Digital Marketing</a></li>
+          <li><a href="./pro-services.html">PRO Services</a></li>
+          <li><a href="./legal-translation.html">Legal Translation</a></li>
+          <li><a href="./certificate-attestation.html">Certificate Attestation</a></li>
+        </ul>
+         </div>
+
+         <div class="footer-col">
+        <h4 class="footer-col-title">Company</h4>
+        <ul class="footer-links">
+          <li><a href="/about.html">About Us</a></li>
+          <li><a href="/portfolio.html">Portfolio</a></li>
+          <li><a href="/contact-us.html">Contact</a></li>
+        </ul>
+           </div>
     </div>
 
-    <!-- Visa Services -->
-    <div class="nav-col">
-      <div class="col-title">Visa Services</div>
-      <ul>
-        <li><a href="#">Golden Visa</a></li>
-        <li><a href="#">Employment Visa</a></li>
-        <li><a href="#">Family Visa</a></li>
-        <li><a href="#">CICPA Passes</a></li>
-      </ul>
-    </div>
+     <div class="footer-bottom">
+      <span class="footer-copy">© 2025 TamkinExpress. All rights reserved.</span>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/profile.php?id=61563209741328" target="_blank">Facebook</a>
+        <a href="https://www.instagram.com/tamkinexpress" target="_blank">Instagram</a>
+        <a href="https://x.com/tamkinexpress" target="_blank">Twitter</a>
+      </div>
+        </div>
+  </footer>
 
-    <!-- Other Services -->
-    <div class="nav-col">
-      <div class="col-title">Other Services</div>
-      <ul>
-        <li><a href="#">Digital Marketing</a></li>
-        <li><a href="#">PRO Services</a></li>
-        <li><a href="#">Legal Translation</a></li>
-        <li><a href="#">Certificate Attestation</a></li>
-      </ul>
-    </div>
+    <script>
+// ── Navbar scroll effect ──
+window.addEventListener('scroll', () => {
+  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 40);
+});
 
-    <!-- Company -->
-    <div class="nav-col">
-      <div class="col-title">Company</div>
-      <ul>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </div>
+// ── Universal reveal observer ──
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      io.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.12 });
 
-  </div>
+document.querySelectorAll(
+  '.reveal, .reveal-left, .reveal-right, .reveal-scale, .section-label, .section-title, .final-cta > p, .final-cta .btn-solid'
+).forEach(el => io.observe(el));
 
-  <div class="footer-bottom">
-    © 2025 TamkinExpress. All rights reserved.
-  </div>
-</footer>
+// ── Val header labels ──
+const valHeaderIo = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.querySelectorAll('.section-label, .section-title').forEach((el, i) => {
+        setTimeout(() => el.classList.add('visible'), i * 150);
+      });
+      valHeaderIo.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.2 });
+document.querySelectorAll('.val-header').forEach(el => valHeaderIo.observe(el));
 
+// ── Final CTA stagger ──
+const ctaIo = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.querySelectorAll('.section-label, .section-title, p, .btn-solid').forEach((el, i) => {
+        setTimeout(() => el.classList.add('visible'), i * 150);
+      });
+      ctaIo.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.2 });
+document.querySelectorAll('.final-cta').forEach(el => ctaIo.observe(el));
+</script>
 </body>
 </html>
