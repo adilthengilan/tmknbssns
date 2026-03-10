@@ -1038,3 +1038,271 @@
 })();
 </script>
 
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tamkin Express Footer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0d1f1e;
+      --bg-footer: #0b1a19;
+      --teal: #00b5a3;
+      --teal-light: #00cbb7;
+      --text: #c8d8d6;
+      --text-muted: #7a9e9b;
+      --border: rgba(0,181,163,0.15);
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--bg-footer);
+      border-top: 1px solid var(--border);
+      padding: 64px 80px 0;
+    }
+
+    .footer-main {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr 1fr 0.8fr;
+      gap: 48px;
+      padding-bottom: 56px;
+    }
+
+    /* Brand column */
+    .brand-col {}
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 22px;
+      text-decoration: none;
+    }
+
+    .logo-icon {
+      width: 42px;
+      height: 42px;
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+    }
+
+    .logo-arabic {
+      font-size: 13px;
+      color: var(--teal);
+      letter-spacing: 1px;
+    }
+
+    .logo-en {
+      font-size: 22px;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: -0.5px;
+    }
+
+    .brand-desc {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      line-height: 1.75;
+      margin-bottom: 28px;
+      max-width: 280px;
+    }
+
+    .contact-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .contact-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 13px;
+      color: var(--text);
+    }
+
+    .contact-icon {
+      flex-shrink: 0;
+      width: 16px;
+      height: 16px;
+      margin-top: 1px;
+    }
+
+    /* Nav columns */
+    .nav-col {}
+
+    .nav-col h4 {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 22px;
+    }
+
+    .nav-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .nav-col ul li a {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s, padding-left 0.2s;
+      display: inline-block;
+    }
+
+    .nav-col ul li a:hover {
+      color: var(--teal-light);
+      padding-left: 4px;
+    }
+
+    /* ── FOOTER BOTTOM ── */
+    .footer-bottom {
+      border-top: 1px solid var(--border);
+      padding: 20px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .footer-copy {
+      font-size: 12.5px;
+      color: var(--text-muted);
+    }
+
+    .social-links {
+      display: flex;
+      gap: 24px;
+    }
+
+    .social-links a {
+      font-size: 12.5px;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .social-links a:hover {
+      color: var(--teal-light);
+    }
+
+    @media (max-width: 900px) {
+      footer { padding: 48px 24px 0; }
+      .footer-main {
+        grid-template-columns: 1fr 1fr;
+        gap: 36px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .footer-main { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<footer>
+  <div class="footer-main">
+
+    <!-- Brand Column -->
+    <div class="brand-col">
+      <a href="https://tamkinexpress.ae/" class="logo">
+        <img src="https://tamkinexpress.com/asset/image/tamkin-logo.png" alt="Tamkin Express" style="height: 52px; width: auto;" />
+      </a>
+
+      <p class="brand-desc">
+        Your trusted partner for business registration and complete business services in UAE.
+      </p>
+
+      <ul class="contact-list">
+        <li>
+          <!-- Location icon -->
+          <svg class="contact-icon" viewBox="0 0 16 16" fill="none">
+            <path d="M8 1.5A4.5 4.5 0 0 0 3.5 6c0 3.5 4.5 8.5 4.5 8.5S12.5 9.5 12.5 6A4.5 4.5 0 0 0 8 1.5zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" fill="#e05c6e"/>
+          </svg>
+          Office No. 49, Musaffah M43, Abu Dhabi – UAE
+        </li>
+        <li>
+          <!-- Phone icon -->
+          <svg class="contact-icon" viewBox="0 0 16 16" fill="none">
+            <path d="M3.5 2A1.5 1.5 0 0 0 2 3.5v1C2 10.299 6.701 15 12.5 15h1a1.5 1.5 0 0 0 1.5-1.5v-1.379a1.5 1.5 0 0 0-.966-1.4l-1.938-.646a1.5 1.5 0 0 0-1.6.4l-.458.458A7.5 7.5 0 0 1 5.067 5.96l.458-.458a1.5 1.5 0 0 0 .4-1.6L5.279 1.966A1.5 1.5 0 0 0 3.879 2H3.5z" fill="#00b5a3"/>
+          </svg>
+          +971 588967713
+        </li>
+        <li>
+          <!-- Email icon -->
+          <svg class="contact-icon" viewBox="0 0 16 16" fill="none">
+            <rect x="1" y="3" width="14" height="10" rx="2" stroke="#00b5a3" stroke-width="1.5"/>
+            <path d="M1.5 4l6.5 5 6.5-5" stroke="#00b5a3" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+          info@tamkinexpress.com
+        </li>
+      </ul>
+    </div>
+
+    <!-- Visa Services -->
+    <div class="nav-col">
+      <h4>Visa Services</h4>
+      <ul>
+        <li><a href="#">Golden Visa</a></li>
+        <li><a href="#">Employment Visa</a></li>
+        <li><a href="#">Family Visa</a></li>
+        <li><a href="#">CICPA Passes</a></li>
+      </ul>
+    </div>
+
+    <!-- Other Services -->
+    <div class="nav-col">
+      <h4>Other Services</h4>
+      <ul>
+        <li><a href="#">Digital Marketing</a></li>
+        <li><a href="#">PRO Services</a></li>
+        <li><a href="#">Legal Translation</a></li>
+        <li><a href="#">Certificate Attestation</a></li>
+      </ul>
+    </div>
+
+    <!-- Company -->
+    <div class="nav-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2025 TamkinExpress. All rights reserved.</span>
+    <div class="social-links">
+      <a href="#">LinkedIn</a>
+      <a href="#">Twitter</a>
+      <a href="#">Instagram</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
