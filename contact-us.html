@@ -1,77 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <meta charset="UTF-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Us – TamkinExpress</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Varela&display=swap" rel="stylesheet">
-  <!-- Same CSS as main site -->
   <link rel="stylesheet" href="./asset/css/style.css">
   <style>
-    /* ── FORCE BLACK BACKGROUND ── */
-    html, body { background: #0a0a0a !important; color: #0a0a0a !important; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    /* ── CONTACT PAGE SPECIFIC ── */
-    .contact-hero {
-      margin-top: 80px;  
-      padding: 4rem 2rem 2rem; 
-      text-align: center;
-      background: #0a0a0a;
-    }
-    .contact-hero h1 {
-      font-size: clamp(1.8rem, 3vw, 2.8rem);
-      font-weight: 400;
-      line-height: 1.2;
-      margin-bottom: 1rem;
-      color: #0a0a0a;
+    html, body {
+      background: #0a0a0a !important;
+      color: #fff !important;
       font-family: 'Montserrat', sans-serif;
-    }
-    .contact-hero h1 span { color: #00d4c8; font-style: italic; font-weight: 400; }
-    .contact-hero p {
-      color: #999;
-      font-size: 1rem;
-      max-width: 500px;
-      margin: 0 auto 2.5rem;
-      line-height: 1.75;
+      overflow-x: hidden;
     }
 
+    /* ══════════════════════════════════════
+       FLOATING ORBS
+    ══════════════════════════════════════ */
+    .orb {
+      position: fixed;
+      border-radius: 50%;
+      filter: blur(90px);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .orb-1 {
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, #00d4c8, transparent 70%);
+      top: -150px; left: -100px;
+      opacity: 0.10;
+      animation: orbFloat1 20s ease-in-out infinite;
+    }
+    .orb-2 {
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, #00a89e, transparent 70%);
+      bottom: 10%; right: -100px;
+      opacity: 0.07;
+      animation: orbFloat2 25s ease-in-out infinite;
+    }
+    .orb-3 {
+      width: 300px; height: 300px;
+      background: radial-gradient(circle, #00d4c8, transparent 70%);
+      top: 50%; left: 40%;
+      opacity: 0.05;
+      animation: orbFloat3 30s ease-in-out infinite;
+    }
+    @keyframes orbFloat1 {
+      0%   { transform: translate(0, 0) scale(1); }
+      33%  { transform: translate(80px, 60px) scale(1.1); }
+      66%  { transform: translate(-40px, 100px) scale(0.95); }
+      100% { transform: translate(0, 0) scale(1); }
+    }
+    @keyframes orbFloat2 {
+      0%   { transform: translate(0, 0) scale(1); }
+      50%  { transform: translate(-80px, -60px) scale(1.15); }
+      100% { transform: translate(0, 0) scale(1); }
+    }
+    @keyframes orbFloat3 {
+      0%   { transform: translate(0, 0); }
+      25%  { transform: translate(60px, -40px); }
+      75%  { transform: translate(-60px, 40px); }
+      100% { transform: translate(0, 0); }
+    }
+
+    /* ══════════════════════════════════════
+       FLOATING PARTICLES
+    ══════════════════════════════════════ */
+    .particles-wrap {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+    .particle {
+      position: absolute;
+      width: 2px; height: 2px;
+      background: #00d4c8;
+      border-radius: 50%;
+      opacity: 0;
+      animation: particleRise linear infinite;
+    }
+    @keyframes particleRise {
+      0%   { transform: translateY(100vh) scale(0); opacity: 0; }
+      10%  { opacity: 0.5; }
+      90%  { opacity: 0.15; }
+      100% { transform: translateY(-10vh) scale(1); opacity: 0; }
+    }
+
+
+
+
+
+
+    /* ══════════════════════════════════════
+       PAGE CONTENT (above bg)
+    ══════════════════════════════════════ */
+    .page-content { position: relative; z-index: 2; }
+
+    /* HERO */
     .contact-section {
       margin-top: 80px;
-      padding: 4rem 2rem 2rem;
+      padding: 5rem 2rem 2.5rem;
       text-align: center;
-      background: #0a0a0a;
+      background: transparent !important;
     }
-
-    .contact-section .small-heading {
-      font-size: 0.75rem;
+    .contact-section .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.72rem;
       font-weight: 600;
-      letter-spacing: 0.15em;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
       color: #00d4c8;
+      border: 1px solid rgba(0,212,200,0.25);
+      border-radius: 50px;
+      padding: 0.4rem 1rem;
       margin-bottom: 1.5rem;
+      animation: fadeUp 0.8s ease both;
     }
-
+    .contact-section .eyebrow::before {
+      content: '';
+      width: 6px; height: 6px;
+      background: #00d4c8;
+      border-radius: 50%;
+      animation: pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50%       { transform: scale(1.5); opacity: 0.5; }
+    }
     .contact-section h1 {
       font-size: clamp(2.5rem, 5vw, 4.5rem);
       font-weight: 900;
-      line-height: 1.15;
+      line-height: 1.1;
       letter-spacing: -0.02em;
-      margin-bottom: 1.5rem;
-      text-align: center;
+      margin-bottom: 1rem;
+      color: #fff;
+      animation: fadeUp 0.8s 0.15s ease both;
+    }
+    .contact-section .sub {
+      color: #666;
+      font-size: 1rem;
+      margin-bottom: 2.5rem;
+      animation: fadeUp 0.8s 0.25s ease both;
     }
 
-    .contact-section .subheading {
-      color: #999;
-      font-size: 1.05rem;
-      max-width: 700px;
-      margin: 0 auto 2.5rem;
-      line-height: 1.7;
-      text-align: center;
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
     }
 
-    /* ── MAIN GRID ── */
+    /* CONTACT GRID */
     .contact-wrap {
       max-width: 1100px;
       margin: 0 auto;
@@ -80,22 +166,32 @@
       grid-template-columns: 1fr 1.4fr;
       gap: 2rem;
       align-items: start;
+      background: transparent !important;
     }
 
-    /* ── INFO CARDS ── */
+    /* INFO CARDS */
     .info-col { display: flex; flex-direction: column; gap: 1rem; }
-
     .info-card {
-      background: #161616;
+      background: rgba(22,22,22,0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
       border: 1px solid rgba(255,255,255,0.07);
       border-radius: 14px;
       padding: 1.3rem 1.4rem;
       display: flex;
       align-items: flex-start;
       gap: 1rem;
-      transition: border-color 0.3s, transform 0.25s;
+      transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+      animation: fadeUp 0.8s ease both;
     }
-    .info-card:hover { border-color: rgba(0,212,200,0.3); transform: translateY(-2px); }
+    .info-card:nth-child(1) { animation-delay: 0.3s; }
+    .info-card:nth-child(2) { animation-delay: 0.4s; }
+    .info-card:nth-child(3) { animation-delay: 0.5s; }
+    .info-card:hover {
+      border-color: rgba(0,212,200,0.4);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 40px rgba(0,212,200,0.08);
+    }
     .ic-icon {
       width: 42px; height: 42px;
       background: rgba(0,212,200,0.1);
@@ -103,6 +199,11 @@
       border-radius: 10px;
       display: flex; align-items: center; justify-content: center;
       font-size: 1.1rem; flex-shrink: 0;
+      transition: background 0.3s, transform 0.3s;
+    }
+    .info-card:hover .ic-icon {
+      background: rgba(0,212,200,0.18);
+      transform: scale(1.1) rotate(-5deg);
     }
     .ic-text h3 { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #00d4c8; margin-bottom: 0.3rem; }
     .ic-text p { color: #ccc; font-size: 0.92rem; line-height: 1.55; }
@@ -114,24 +215,58 @@
       background: #25D366; color: #fff;
       font-weight: 700; font-size: 0.95rem;
       border-radius: 12px; padding: 0.85rem 1.2rem;
-      text-decoration: none; transition: opacity 0.2s, transform 0.2s;
+      text-decoration: none;
+      transition: opacity 0.2s, transform 0.2s, box-shadow 0.3s;
+      animation: fadeUp 0.8s 0.6s ease both;
+      position: relative;
+      overflow: hidden;
     }
-    .wa-btn:hover { opacity: 0.88; transform: translateY(-2px); }
+    .wa-btn::after {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 0; height: 0;
+      background: rgba(255,255,255,0.15);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      transition: width 0.4s, height 0.4s;
+    }
+    .wa-btn:hover::after { width: 300px; height: 300px; }
+    .wa-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(37,211,102,0.3); }
 
-    /* ── FORM CARD ── */
+    /* FORM CARD */
     .form-card {
-      background: #161616;
-      border: 1px solid rgba(255,255,255,0.07);
+      background: rgba(22,22,22,0.88);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255,255,255,0.08);
       border-radius: 20px;
       padding: 2.2rem 2.4rem;
-      box-shadow: 0 40px 80px rgba(0,0,0,0.4);
+      box-shadow: 0 40px 80px rgba(0,0,0,0.5), 0 0 0 1px rgba(0,212,200,0.05);
+      animation: fadeUp 0.8s 0.35s ease both;
+      position: relative;
+      overflow: hidden;
     }
+    /* Shimmer top border */
+    .form-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%;
+      width: 100%; height: 2px;
+      background: linear-gradient(90deg, transparent, #00d4c8, transparent);
+      animation: shimmer 3s ease-in-out infinite;
+    }
+    @keyframes shimmer {
+      0%   { left: -100%; }
+      100% { left: 100%; }
+    }
+
     .form-card-header {
       display: flex; justify-content: space-between; align-items: flex-start;
       margin-bottom: 1.6rem;
     }
-    .form-card-header h2 { font-size: 1.4rem; font-weight: 700; color: #fff; }
-    .form-card-header p { font-size: 0.82rem; color: #666; margin-top: 0.2rem; }
+    .form-card-header h2 { font-size: 1.4rem; font-weight: 700; color: #fff; margin-bottom: 0.2rem; }
+    .form-card-header p { font-size: 0.82rem; color: #555; }
     .send-icon {
       width: 44px; height: 44px;
       background: rgba(0,212,200,0.1);
@@ -139,13 +274,16 @@
       border-radius: 50%;
       display: flex; align-items: center; justify-content: center;
       font-size: 1.1rem; flex-shrink: 0;
+      animation: spin 10s linear infinite;
+    }
+    @keyframes spin {
+      0%   { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
     }
 
     .field { display: flex; flex-direction: column; margin-bottom: 0.9rem; }
-    .field input,
-    .field textarea,
-    .field select {
-      background: #222;
+    .field input, .field textarea, .field select {
+      background: rgba(34,34,34,0.9);
       border: 1px solid rgba(255,255,255,0.08);
       border-radius: 50px;
       padding: 0.85rem 1.2rem;
@@ -153,26 +291,25 @@
       font-family: 'Montserrat', sans-serif;
       font-size: 0.92rem;
       outline: none;
-      transition: border-color 0.2s, box-shadow 0.2s;
+      transition: border-color 0.25s, box-shadow 0.25s, background 0.25s;
       width: 100%;
       -webkit-appearance: none;
     }
     .field textarea { border-radius: 16px; resize: vertical; min-height: 110px; }
     .field select { cursor: pointer; }
-    .field input::placeholder,
-    .field textarea::placeholder { color: #555; }
-    .field input:focus,
-    .field textarea:focus,
-    .field select:focus {
+    .field input::placeholder, .field textarea::placeholder { color: #444; }
+    .field input:focus, .field textarea:focus, .field select:focus {
       border-color: #00d4c8;
-      box-shadow: 0 0 0 2px rgba(0,212,200,0.15);
+      box-shadow: 0 0 0 3px rgba(0,212,200,0.12);
+      background: rgba(0,212,200,0.04);
     }
-    .field select option { background: #222; color: #fff; }
+    .field select option { background: #1a1a1a; color: #fff; }
 
     .phone-row { display: flex; gap: 0.6rem; }
     .phone-prefix {
       display: flex; align-items: center; gap: 0.4rem;
-      background: #222; border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(34,34,34,0.9);
+      border: 1px solid rgba(255,255,255,0.08);
       border-radius: 50px; padding: 0 1rem;
       font-size: 0.88rem; color: #aaa;
       white-space: nowrap; flex-shrink: 0;
@@ -181,208 +318,301 @@
 
     .submit-btn {
       width: 100%;
-      background: #00d4c8; color: #000;
+      background: linear-gradient(135deg, #00d4c8, #00a89e);
+      color: #000;
       border: none; border-radius: 50px;
       padding: 0.95rem;
       font-family: 'Montserrat', sans-serif;
       font-weight: 700; font-size: 0.97rem;
       cursor: pointer;
-      transition: opacity 0.2s, transform 0.15s;
+      transition: transform 0.2s, box-shadow 0.3s, opacity 0.2s;
       margin-top: 0.3rem;
+      position: relative;
+      overflow: hidden;
     }
-    .submit-btn:hover { opacity: 0.85; transform: translateY(-1px); }
+    .submit-btn::after {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%;
+      width: 60%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
+      transition: left 0.4s;
+    }
+    .submit-btn:hover::after { left: 150%; }
+    .submit-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(0,212,200,0.35);
+    }
 
     .success-msg { display: none; text-align: center; padding: 2.5rem 1rem; }
     .success-msg .check { font-size: 3rem; margin-bottom: 0.8rem; }
     .success-msg h3 { font-size: 1.3rem; font-weight: 700; color: #00d4c8; margin-bottom: 0.4rem; }
     .success-msg p { color: #666; font-size: 0.88rem; }
 
+    /* ══════════════════════════════════════
+       FOOTER
+    ══════════════════════════════════════ */
+    .site-footer {
+      background: rgba(10,10,10,0.95);
+      backdrop-filter: blur(10px);
+      border-top: 1px solid rgba(255,255,255,0.07);
+      padding: 4rem 2rem 2rem;
+      position: relative;
+      z-index: 2;
+    }
+    .footer-inner { max-width: 1100px; margin: 0 auto; }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr 1fr 1fr;
+      gap: 2.5rem;
+      margin-bottom: 3rem;
+      align-items: start;
+    }
+    .footer-col h4 {
+      color: #00d4c8;
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 0 0 1rem;
+      font-weight: 600;
+    }
+    .footer-col ul {
+      list-style: none; padding: 0; margin: 0;
+      display: flex; flex-direction: column; gap: 0.6rem;
+    }
+    .footer-col ul li a {
+      color: #666; text-decoration: none;
+      font-size: 0.87rem; transition: color 0.2s;
+    }
+    .footer-col ul li a:hover { color: #00d4c8; }
+    .footer-desc { color: #555; font-size: 0.86rem; line-height: 1.75; margin: 0.6rem 0 1.2rem; }
+    .footer-contact-item {
+      color: #555; font-size: 0.84rem; margin-bottom: 0.4rem;
+      display: flex; align-items: flex-start; gap: 0.5rem; line-height: 1.5;
+    }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding-top: 1.5rem;
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 1rem;
+    }
+    .footer-bottom p { color: #333; font-size: 0.82rem; }
+    .footer-socials { display: flex; gap: 1.5rem; }
+    .footer-socials a { color: #333; text-decoration: none; font-size: 0.82rem; transition: color 0.2s; }
+    .footer-socials a:hover { color: #00d4c8; }
+
     @media (max-width: 860px) {
-      .contact-wrap { grid-template-columns: 1fr; }
-      .contact-hero { padding: 3rem 1.5rem 2rem; }
-      .contact-wrap { padding: 0 1.5rem 3rem; }
+      .contact-wrap { grid-template-columns: 1fr; padding: 0 1.5rem 3rem; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+    }
+    @media (max-width: 520px) {
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; }
     }
   </style>
 </head>
 <body>
 
-  <!-- SAME NAVBAR AS MAIN SITE -->
-  <nav class="navbar">
-    <div class="nav-container">
-      <div class="nav-logo">
-        <a href="./index.html" style="text-decoration:none;">
-          <img src="./asset/logo_coloured.png" alt="TamkinExpress Logo" style="height:50px;width:140px;">
+  <!-- BACKGROUND LAYERS -->
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+  <div class="particles-wrap" id="particles"></div>
+  <div class="page-content">
+
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <a href="./index.html" style="text-decoration:none;">
+            <img src="./asset/logo_coloured.png" alt="TamkinExpress Logo" style="height:50px;width:140px;">
+          </a>
+        </div>
+        <div class="nav-menu" id="nav-menu">
+          <a href="./index.html" class="nav-link">Home</a>
+          <a href="./index.html#about" class="nav-link">About</a>
+          <a href="./index.html#services" class="nav-link">Services</a>
+          <a href="./portfolio.html" class="nav-link">Portfolio</a>
+          <a href="./contact-us.html" class="nav-link active">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <section class="contact-section">
+      <div class="eyebrow">Get In Touch</div>
+      <h1>
+        Ready to grow your business?<br>
+        <span style="color:#00d4c8;">Let's talk.</span>
+      </h1>
+      <p class="sub">Our team responds within 24 hours</p>
+    </section>
+
+    <div class="contact-wrap">
+
+      <div class="info-col">
+        <div class="info-card">
+          <div class="ic-icon">📍</div>
+          <div class="ic-text">
+            <h3>Office Address</h3>
+            <p>Office No. 49, Maxim Pharmacy Building<br>Musaffah M43, Abu Dhabi – UAE</p>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="ic-icon">📞</div>
+          <div class="ic-text">
+            <h3>Phone</h3>
+            <p><a href="tel:+971588967713">+971 58 896 7713</a></p>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="ic-icon">✉️</div>
+          <div class="ic-text">
+            <h3>Email</h3>
+            <p><a href="mailto:info@tamkinexpress.com">info@tamkinexpress.com</a></p>
+          </div>
+        </div>
+        <a class="wa-btn" href="https://wa.me/971588967713" target="_blank">
+          💬 &nbsp;Chat on WhatsApp
         </a>
       </div>
-      <div class="nav-menu" id="nav-menu">
-        <a href="./index.html" class="nav-link">Home</a>
-        <a href="./index.html#about" class="nav-link">About</a>
-        <a href="./index.html#services" class="nav-link">Services</a>
-        <a href="./portfolio.html" class="nav-link">Portfolio</a>
-        <a href="./contact-us.html" class="nav-link active">Contact</a>
+
+      <div class="form-card">
+        <div class="form-card-header">
+          <div>
+            <h2>Send a Message</h2>
+            <p>Response within 24 hours</p>
+          </div>
+          <div class="send-icon">✈️</div>
+        </div>
+
+        <div id="contactForm">
+          <div class="field">
+            <input type="text" placeholder="Your Name" id="fname" />
+          </div>
+          <div class="field">
+            <div class="phone-row">
+              <div class="phone-prefix">🇦🇪 &nbsp;+971</div>
+              <input type="tel" placeholder="Phone Number" id="phone" />
+            </div>
+          </div>
+          <div class="field">
+            <input type="email" placeholder="Email Address" id="email" />
+          </div>
+          <div class="field">
+            <select id="service">
+              <option value="" disabled selected>Select Requirement</option>
+              <option>Business Registration</option>
+              <option>Employment &amp; Family Visa</option>
+              <option>Golden Visa</option>
+              <option>Digital Marketing</option>
+              <option>Web Development</option>
+              <option>Mobile App Development</option>
+              <option>PRO Services</option>
+              <option>CICPA &amp; Security Passes</option>
+              <option>Certificate Attestation</option>
+              <option>Legal Translation</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <textarea placeholder="Business Activity / Message…" id="message"></textarea>
+          </div>
+          <button class="submit-btn" onclick="handleSubmit()">Get Free Proposal →</button>
+        </div>
+
+        <div class="success-msg" id="successMsg">
+          <div class="check">✅</div>
+          <h3>Message Sent!</h3>
+          <p>Our team will get back to you within 24 hours.</p>
+        </div>
       </div>
+
     </div>
-  </nav>
 
-  <!-- HERO -->
- <section class="contact-section">
-</h1>
-  <h1 style="color: #ffffff; font-weight: 900;">
-  Ready to grow your business?<br>
-   <span style="color: #00d4c8;">Let’s talk.</span>
-</h1>
-   </div>
-   
-  
-  <!-- CONTACT GRID -->
-  <div class="contact-wrap">
-
-    <!-- INFO -->
-    <div class="info-col">
-      <div class="info-card">
-        <div class="ic-icon">📍</div>
-        <div class="ic-text">
-          <h3>Office Address</h3>
-          <p>Office No. 49, Maxim Pharmacy Building<br>Musaffah M43, Abu Dhabi – UAE</p>
-        </div>
-      </div>
-
-      <div class="info-card">
-        <div class="ic-icon">📞</div>
-        <div class="ic-text">
-          <h3>Phone</h3>
-          <p><a href="tel:+971588967713">+971 58 896 7713</a></p>
-        </div>
-      </div>
-
-      <div class="info-card">
-        <div class="ic-icon">✉️</div>
-        <div class="ic-text">
-          <h3>Email</h3>
-          <p><a href="info@tamkinexpress.com">info@tamkinexpress.com</a></p>
-        </div>
-      </div>
-
-      <a class="wa-btn" href="https://wa.me/971588967713" target="_blank">
-        💬 &nbsp;Chat on WhatsApp
-      </a>
-    </div>
-
-    <!-- FORM -->
-    <div class="form-card">
-      <div class="form-card-header">
-        <div>
-          <h2>Send a Message</h2>
-          <p>Response within 24 hours</p>
-        </div>
-        <div class="send-icon">✈️</div>
-      </div>
-
-      <div id="contactForm">
-        <div class="field">
-          <input type="text" placeholder="Your Name" id="fname" />
-        </div>
-
-        <div class="field">
-          <div class="phone-row">
-            <div class="phone-prefix">🇦🇪 &nbsp;+971</div>
-            <input type="tel" placeholder="Phone Number" id="phone" />
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <img src="./asset/logo_coloured.png" style="height:55px; width:160px; display:block; margin-bottom:0.6rem;">
+            <p class="footer-desc">Your trusted partner for business registration and complete business services in UAE.</p>
+            <div class="footer-contact-item">📍 <span>Office No. 49, Musaffah M43, Abu Dhabi – UAE</span></div>
+            <div class="footer-contact-item">📞 <span>+971 588967713</span></div>
+            <div class="footer-contact-item">✉️ <span>info@tamkinexpress.com</span></div>
+          </div>
+          <div class="footer-col">
+            <h4>Visa Services</h4>
+            <ul>
+              <li><a href="./golden-visa.html">Golden Visa</a></li>
+              <li><a href="./employment-visa.html">Employment Visa</a></li>
+              <li><a href="./employment-visa.html">Family Visa</a></li>
+              <li><a href="./cicpa.html">CICPA Passes</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Other Services</h4>
+            <ul>
+              <li><a href="./digital-marketing.html">Digital Marketing</a></li>
+              <li><a href="./pro-services.html">PRO Services</a></li>
+              <li><a href="./legal-translation.html">Legal Translation</a></li>
+              <li><a href="./certificate-attestation.html">Certificate Attestation</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="./about.html">About Us</a></li>
+              <li><a href="./portfolio.html">Portfolio</a></li>
+              <li><a href="./contact-us.html">Contact</a></li>
+            </ul>
           </div>
         </div>
-
-        <div class="field">
-          <input type="email" placeholder="Email Address" id="email" />
-        </div>
-
-        <div class="field">
-          <select id="service">
-            <option value="" disabled selected>Select Requirement</option>
-            <option>Business Registration</option>
-            <option>Employment & Family Visa</option>
-            <option>Golden Visa</option>
-            <option>Digital Marketing</option>
-            <option>Web Development</option>
-            <option>Mobile App Development</option>
-            <option>PRO Services</option>
-            <option>CICPA & Security Passes</option>
-            <option>Certificate Attestation</option>
-            <option>Legal Translation</option>
-            <option>Other</option>
-          </select>
-        </div>
-
-        <div class="field">
-          <textarea placeholder="Business Activity / Message…" id="message"></textarea>
-        </div>
-
-        <button class="submit-btn" onclick="handleSubmit()">Get Free Proposal →</button>
-      </div>
-
-      <div class="success-msg" id="successMsg">
-        <div class="check">✅</div>
-        <h3>Message Sent!</h3>
-        <p>Our team will get back to you within 24 hours.</p>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- SAME FOOTER AS MAIN SITE -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-section">
-          <img src="./asset/logo_coloured.png" style="height:60px; width:170px; margin-bottom:1rem;">
-          <p style="color:#aaa; font-size:0.88rem; line-height:1.7; max-width:220px;">Your trusted partner for business registration and complete business services in UAE.</p>
-          <div style="margin-top:1rem; display:flex; flex-direction:column; gap:0.4rem;">
-            <p style="color:#aaa; font-size:0.85rem;">📍 Office No. 49, Musaffah M43, Abu Dhabi – UAE</p>
-            <p style="color:#aaa; font-size:0.85rem;">📞 +971 588967713</p>
-            <p style="color:#aaa; font-size:0.85rem;">✉️ info@tamkinexpress.com</p>
+        <div class="footer-bottom">
+          <p>&copy; 2025 TamkinExpress. All rights reserved.</p>
+          <div class="footer-socials">
+            <a href="https://www.facebook.com/profile.php?id=61563209741328" target="_blank">Facebook</a>
+            <a href="https://www.instagram.com/tamkinexpress" target="_blank">Instagram</a>
+            <a href="https://x.com/tamkinexpress" target="_blank">Twitter</a>
           </div>
         </div>
-
-        <div class="footer-section">
-          <h4 style="color:#00d4c8; font-size:0.85rem; letter-spacing:0.05em; margin-bottom:1rem;">Visa Services</h4>
-          <ul style="list-style:none; display:flex; flex-direction:column; gap:0.6rem;">
-            <li><a href="./golden-visa.html" style="color:#aaa; text-decoration:none; font-size:0.88rem;">Golden Visa</a></li>
-            <li><a href="./employment-visa.html" style="color:#aaa; text-decoration:none; font-size:0.88rem;">Employment Visa</a></li>
-            <li><a href="./employment-visa.html" style="color:#aaa; text-decoration:none; font-size:0.88rem;">Family Visa</a></li>
-            <li><a href="./cicpa.html" style="color:#aaa; text-decoration:none; font-size:0.88rem;">CICPA Passes</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-section">
-          <h4 style="color:#00d4c8; font-size:0.85rem; letter-spacing:0.05em; margin-bottom:1rem;">Other Services</h4>
-          <ul style="list-style:none; display:flex; flex-direction:column; gap:0.6rem;">
-            <li><a href="./digital-marketing.html" style="color:#aaa; text-decoration:none; font-size:0.88rem;">Digital Marketing</a></li>
-            <li><a href="./pro-services.html" style="color:#aaa; text-decoration:none; font-size:0.88rem;">PRO Services</a></li>
-            <li><a href="./legal-translation.html" style="color:#aaa; text-decoration:none; font-size:0.88rem;">Legal Translation</a></li>
-            <li><a href="./certificate-attestation.html" style="color:#aaa; text-decoration:none; font-size:0.88rem;">Certificate Attestation</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-section">
-          <h4 style="color:#00d4c8; font-size:0.85rem; letter-spacing:0.05em; margin-bottom:1rem;">Company</h4>
-          <ul style="list-style:none; display:flex; flex-direction:column; gap:0.6rem;">
-            <li><a href="./about.html" style="color:#aaa; text-decoration:none; font-size:0.88rem;">About Us</a></li>
-            <li><a href="./portfolio.html" style="color:#aaa; text-decoration:none; font-size:0.88rem;">Portfolio</a></li>
-            <li><a href="./contact-us.html" style="color:#aaa; text-decoration:none; font-size:0.88rem;">Contact</a></li>
-          </ul>
-        </div>
       </div>
+    </footer>
 
-      <div class="footer-bottom">
-        <p>&copy; 2025 TamkinExpress. All rights reserved.</p>
-        <div class="social-links">
-              <a href="https://www.facebook.com/profile.php?id=61563209741328" target="_blank">Facebook</a>
-              <a href="https://www.instagram.com/tamkinexpress" target="_blank">Instagram</a>
-              <a href="https://x.com/tamkinexpress" target="_blank">Twitter</a>
-        </div>
-      </div>
-    </div>
-  </footer>
+  </div><!-- end .page-content -->
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  <script>
+    // Spawn floating particles
+    const wrap = document.getElementById('particles');
+    for (let i = 0; i < 40; i++) {
+      const p = document.createElement('div');
+      p.className = 'particle';
+      p.style.cssText = `
+        left: ${Math.random() * 100}%;
+        width: ${Math.random() * 3 + 1}px;
+        height: ${Math.random() * 3 + 1}px;
+        animation-duration: ${Math.random() * 15 + 10}s;
+        animation-delay: ${Math.random() * 15}s;
+      `;
+      wrap.appendChild(p);
+    }
+
+    // Mouse parallax on orbs
+    document.addEventListener('mousemove', (e) => {
+      const cx = e.clientX / window.innerWidth - 0.5;
+      const cy = e.clientY / window.innerHeight - 0.5;
+      document.querySelector('.orb-1').style.transform = `translate(${cx * 30}px, ${cy * 20}px)`;
+      document.querySelector('.orb-2').style.transform = `translate(${-cx * 25}px, ${-cy * 25}px)`;
+    });
+
+    // Form submit
     function handleSubmit() {
       const fname = document.getElementById('fname').value.trim();
       const email = document.getElementById('email').value.trim();
+      if (!fname || !email) {
+        alert('Please fill in your name and email.');
+        return;
+      }
+      document.getElementById('contactForm').style.display = 'none';
+      document.getElementById('successMsg').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
