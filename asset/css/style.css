@@ -696,6 +696,7 @@ section {
     /* margin-top: 10px; */
     background: var(--bg-primary);
     border-top: 1px solid rgba(255, 255, 255, 0.1);
+      background-color: #000000;
 }
 
 .footer-content {
