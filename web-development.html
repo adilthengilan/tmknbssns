@@ -116,6 +116,61 @@
         .mval { font-size:13px; font-weight:600; color:var(--teal); min-width:36px; text-align:right; }
         .proc-note { margin-top:24px; padding:16px; background:rgba(0,212,168,0.08); border-radius:10px; border:1px solid rgba(0,212,168,0.2); font-size:12px; color:var(--muted); line-height:1.7; font-weight:300; }
 
+        /* ===== FAQ ===== */
+        .faq-section {
+            background: #000;
+            position: relative;
+            overflow: hidden;
+        }
+        .faq-section::before {
+            content: '';
+            position: absolute;
+            bottom: -100px; right: -100px;
+            width: 600px; height: 600px;
+            background: radial-gradient(circle, rgba(0,212,168,0.05) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        .faq-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .faq-header .section-sub { margin: 0 auto; }
+        .faq-list { display: flex; flex-direction: column; }
+        .faq-item { border-bottom: 1px solid rgba(0,212,168,0.12); overflow: hidden; }
+        .faq-item:first-child { border-top: 1px solid rgba(0,212,168,0.12); }
+        .faq-question {
+            width: 100%; background: none; border: none; cursor: pointer;
+            display: flex; align-items: center; justify-content: space-between;
+            gap: 20px; padding: 28px 0; text-align: left; transition: all 0.3s ease;
+        }
+        .faq-question:hover .faq-q-text { color: var(--teal); }
+        .faq-q-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 18px; font-weight: 600;
+            color: var(--text); line-height: 1.4;
+            transition: color 0.3s ease; flex: 1;
+        }
+        .faq-icon {
+            width: 36px; height: 36px; border-radius: 50%;
+            border: 1.5px solid rgba(0,212,168,0.3);
+            display: flex; align-items: center; justify-content: center;
+            flex-shrink: 0; transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
+        }
+        .faq-icon svg { width: 14px; height: 14px; stroke: var(--teal); transition: transform 0.4s cubic-bezier(0.4,0,0.2,1); }
+        .faq-item.open .faq-icon { background: var(--teal); border-color: var(--teal); transform: rotate(180deg); }
+        .faq-item.open .faq-icon svg { stroke: #000; }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.45s cubic-bezier(0.4,0,0.2,1); }
+        .faq-item.open .faq-answer { max-height: 400px; }
+        .faq-answer-inner { padding: 0 0 28px 0; }
+        .faq-answer-inner p { font-family: 'DM Sans', sans-serif; font-size: 14.5px; font-weight: 300; color: var(--muted); line-height: 1.85; }
+        .faq-answer-inner p + p { margin-top: 12px; }
+
         /* CTA */
         .cta-section { background:linear-gradient(135deg,rgba(0,212,168,0.1) 0%,rgba(0,212,168,0.03) 50%,transparent 100%); border-top:1px solid rgba(0,212,168,0.15); text-align:center; padding:100px 40px; }
         .cta-section h2 { font-family:'Playfair Display',serif; font-size:clamp(36px,5vw,60px); font-weight:900; line-height:1.15; margin-bottom:20px; }
@@ -158,6 +213,7 @@
             .footer-inner{grid-template-columns:1fr;}
             .hero-stats{gap:28px;}
             .stat-div{display:none;}
+            .faq-q-text{font-size:16px;}
         }
     </style>
 </head>
@@ -198,15 +254,6 @@
         </div>
     </div>
 
-
-    <!-- ═══════════════════════════════════════════════
-         HERO — H1 optimised for:
-         • "website development in dubai"
-         • "web design in dubai"
-         Line 1 (plain)   → "Website Development &"
-         Line 2 (plain)   → "Web Design in Dubai —"
-         Line 3 (teal/italic, keyword anchor) → "Built for Your Business."
-    ════════════════════════════════════════════════ -->
     <section class="hero">
         <div class="hero-bg"></div>
         <div class="hero-badge">Website Development &amp; Web Design in Dubai</div>
@@ -231,7 +278,6 @@
             <div class="stat-item"><span class="stat-num">Secure</span><span class="stat-label">Enterprise-Grade</span></div>
         </div>
     </section>
-
 
     <section class="svc-section" id="services">
         <div class="svc-header reveal">
@@ -312,6 +358,105 @@
         </div>
     </section>
 
+    <!-- ===== FAQ ===== -->
+    <section class="faq-section" id="faq">
+        <div class="faq-container">
+            <div class="faq-header reveal">
+                <span class="section-label">Got Questions?</span>
+                <h2 class="section-title">Frequently Asked <span class="hl">Questions</span></h2>
+                <p class="section-sub">Technical and strategic questions about web development and web design in Dubai — answered.</p>
+            </div>
+
+            <div class="faq-list reveal">
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-q-text">What tech stack do you use for website development in Dubai?</span>
+                        <span class="faq-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>We choose based on your requirements — not a preset template. Typically React or Next.js on the frontend, Node.js or Python on the backend, PostgreSQL or MongoDB for data, and AWS or Azure for infrastructure. Every decision is driven by your performance, security, and budget needs.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-q-text">How do you handle data security and compliance for UAE-based web applications?</span>
+                        <span class="faq-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>All builds include end-to-end encryption, RBAC, and OWASP Top 10 protection as standard. For regulated industries, we host on UAE-region cloud nodes to satisfy data sovereignty requirements and run a full security audit before every deployment.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-q-text">Can you integrate our web application with UAE government portals and third-party APIs?</span>
+                        <span class="faq-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>Yes — we've integrated MOHRE, TAMM, FTA VAT APIs, and payment gateways like Telr and PayTabs, as well as SAP, Oracle, and logistics platforms. Every integration is built with proper error handling and retry logic so a third-party outage never breaks your operations.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-q-text">What is the difference between a custom web application and an off-the-shelf solution like WordPress?</span>
+                        <span class="faq-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>WordPress is ideal for content sites — fast and affordable. Custom development makes sense when you need proprietary business logic, high scalability, or deep integrations that plugins can't support. We'll always recommend the right fit for your goals, not the more expensive option.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-q-text">How do you ensure the web application remains maintainable and scalable after handover?</span>
+                        <span class="faq-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>You receive full source code ownership, technical documentation, and an API reference. We follow clean architecture principles so any developer can extend the system without reverse-engineering it. Retainer maintenance packages are available for ongoing patches, updates, and feature work.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-q-text">What is your approach to performance optimisation for web applications serving the UAE market?</span>
+                        <span class="faq-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>We host on UAE or GCC cloud nodes to minimise latency, and implement SSR, Redis caching, CDN, and query optimisation at the application layer. Every app is load-tested before launch — our target is Lighthouse 90+ and sub-2-second load times on UAE mobile connections.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <section class="cta-section">
         <div class="reveal">
             <h2>Ready to Build Your <em>Dubai Website?</em></h2>
@@ -322,7 +467,6 @@
             </div>
         </div>
     </section>
-
 
     <footer>
         <div class="footer-inner">
@@ -368,7 +512,6 @@
         </div>
     </footer>
 
-
     <script>
         const navbar = document.getElementById('navbar');
         window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 60));
@@ -378,6 +521,21 @@
         mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { hamburger.classList.remove('open'); mobileMenu.classList.remove('open'); }));
         document.querySelectorAll('.reveal').forEach(el => {
             new IntersectionObserver((entries, obs) => { entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);} }); }, {threshold:0.12}).observe(el);
+        });
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.querySelector('.faq-question').addEventListener('click', () => {
+                const isOpen = item.classList.contains('open');
+                document.querySelectorAll('.faq-item').forEach(i => {
+                    i.classList.remove('open');
+                    i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+                });
+                if (!isOpen) {
+                    item.classList.add('open');
+                    item.querySelector('.faq-question').setAttribute('aria-expanded', 'true');
+                }
+            });
         });
     </script>
 
