@@ -231,7 +231,6 @@
             animation: pulse 2s infinite;
         }
 
-        /* ===== SEO H1 ===== */
         .hero h1 {
             font-family: 'Playfair Display', serif;
             font-weight: 900;
@@ -241,17 +240,9 @@
             animation: fadeUp 0.6s 0.1s ease both;
         }
 
-        /* Line 1 — plain white */
-        .hero h1 .line-1 {
-            display: block;
-        }
+        .hero h1 .line-1 { display: block; }
+        .hero h1 .line-2 { display: block; }
 
-        /* Line 2 — plain white */
-        .hero h1 .line-2 {
-            display: block;
-        }
-
-        /* Line 3 — italic teal gradient (SEO keyword: Digital Marketing Agency in Dubai & UAE) */
         .hero h1 .line-teal {
             display: block;
             font-style: italic;
@@ -326,7 +317,6 @@
 
         .cta-divider { color: var(--muted); font-size: 13px; }
 
-        /* Stats row */
         .hero-stats {
             display: flex;
             gap: 60px;
@@ -575,6 +565,121 @@
         }
         .platform-pill span { font-size: 20px; }
 
+        /* ===== FAQ SECTION ===== */
+        .faq-section {
+            background: #000;
+            position: relative;
+            overflow: hidden;
+        }
+        .faq-section::before {
+            content: '';
+            position: absolute;
+            bottom: -100px; right: -100px;
+            width: 600px; height: 600px;
+            background: radial-gradient(circle, rgba(0,212,168,0.05) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        .faq-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .faq-header .section-sub { margin: 0 auto; }
+
+        .faq-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid rgba(0,212,168,0.12);
+            overflow: hidden;
+        }
+        .faq-item:first-child {
+            border-top: 1px solid rgba(0,212,168,0.12);
+        }
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 28px 0;
+            text-align: left;
+            transition: all 0.3s ease;
+        }
+        .faq-question:hover .faq-q-text { color: var(--teal); }
+
+        .faq-q-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--text);
+            line-height: 1.4;
+            transition: color 0.3s ease;
+            flex: 1;
+        }
+
+        .faq-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            border: 1.5px solid rgba(0,212,168,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            background: transparent;
+        }
+        .faq-icon svg {
+            width: 14px; height: 14px;
+            stroke: var(--teal);
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .faq-item.open .faq-icon {
+            background: var(--teal);
+            border-color: var(--teal);
+            transform: rotate(180deg);
+        }
+        .faq-item.open .faq-icon svg {
+            stroke: #000;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1), padding 0.3s ease;
+        }
+        .faq-item.open .faq-answer {
+            max-height: 400px;
+        }
+
+        .faq-answer-inner {
+            padding: 0 0 28px 0;
+        }
+        .faq-answer-inner p {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 14.5px;
+            font-weight: 300;
+            color: var(--muted);
+            line-height: 1.85;
+        }
+        .faq-answer-inner p + p {
+            margin-top: 12px;
+        }
+
         /* ===== CTA SECTION ===== */
         .cta-section {
             background: linear-gradient(135deg, rgba(0,212,168,0.1) 0%, rgba(0,212,168,0.03) 50%, transparent 100%);
@@ -664,6 +769,7 @@
             .footer-inner { grid-template-columns: 1fr; }
             .hero-stats { gap: 30px; }
             .stat-divider { display: none; }
+            .faq-q-text { font-size: 16px; }
         }
     </style>
 </head>
@@ -703,7 +809,7 @@
         <a href="/portfolio.html" class="mobile-link">Portfolio</a>
         <div class="mobile-menu-btns">
             <a href="tel:+971588967713" class="mobile-cta-outline">📞 Call Us</a>
-            <a href="/contact-us.html" class="mobile-cta">Get Free Quote</a>
+            <a href="/contact-us.html" class="mobile-cta">Get Free Consultation</a>
         </div>
     </div>
 
@@ -713,12 +819,6 @@
 
         <div class="hero-badge">Digital Marketing Agency — Dubai & UAE</div>
 
-        <!--
-            SEO H1 — Keyword-optimised:
-            Targets: "digital marketing agency dubai", "digital marketing company dubai",
-            "marketing agency dubai", "digital marketing in uae", "digital marketing dubai"
-            Natural, readable, matches searcher intent.
-        -->
         <h1>
             <span class="line-1"> Digital Marketing</span>
             <span class="line-2">Agency in Dubai &amp;</span>
@@ -929,6 +1029,123 @@
         </div>
     </section>
 
+    <!-- ===== FAQ ===== -->
+    <section class="faq-section" id="faq">
+        <div class="faq-container">
+            <div class="faq-header reveal">
+                <span class="section-label">Got Questions?</span>
+                <h2 class="section-title">Frequently Asked <span class="highlight">Questions</span></h2>
+                <p class="section-sub">Everything you need to know about our digital marketing services in Dubai & UAE.</p>
+            </div>
+
+            <div class="faq-list reveal">
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-q-text">What digital marketing services does TamkinExpress offer in the UAE?</span>
+                        <span class="faq-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>TamkinExpress offers a full suite of digital marketing services tailored for the UAE market — including Search Engine Optimization (SEO), Google Ads Management, Social Media Marketing, Content Marketing, AI Optimization (AIO), and Generative Engine Optimization (GEO).</p>
+                            <p>Whether you're a startup in Dubai or an established enterprise in Abu Dhabi, we build custom strategies that drive real, measurable growth for your business.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-q-text">How long does it take to see results from SEO in Dubai?</span>
+                        <span class="faq-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>SEO is a long-term investment. Most businesses in Dubai and the UAE begin seeing meaningful improvements in organic rankings and traffic within 3–6 months of a consistent SEO strategy.</p>
+                            <p>Factors such as your industry's competitiveness, your existing domain authority, and the quality of content all influence the timeline. Our team provides monthly performance reports so you always know exactly where things stand.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-q-text">What is the minimum budget required for Google Ads in the UAE?</span>
+                        <span class="faq-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>There's no universal minimum, but for Google Ads campaigns in Dubai to be competitive and generate meaningful leads, we typically recommend a monthly ad spend of AED 3,000–5,000 as a starting point for most industries.</p>
+                            <p>Our team carefully allocates your budget across keywords, audiences, and ad formats to ensure every dirham works as hard as possible. We'll always be upfront about what's achievable at your specific budget level.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-q-text">How do you approach multilingual SEO for Arabic and English audiences in the UAE?</span>
+                        <span class="faq-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>The UAE has a uniquely bilingual digital landscape — a significant share of high-intent searches happen in Arabic, yet most businesses only optimize for English. We build dual-language SEO strategies using hreflang tags, Arabic keyword research tailored to Gulf dialect search behavior, and culturally adapted content that resonates with both expat and Emirati audiences.</p>
+                            <p>This approach effectively doubles your addressable organic market and captures search demand your competitors are completely ignoring.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-q-text">What is AIO and GEO, and why does my business need them?</span>
+                        <span class="faq-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>AIO (AI Optimization) ensures your brand appears when people search using AI tools like ChatGPT, Gemini, and Microsoft Copilot. GEO (Generative Engine Optimization) goes a step further — it optimizes your content so it gets cited and recommended directly inside AI-generated answers.</p>
+                            <p>As AI-powered search rapidly replaces traditional Google searches, businesses that invest in AIO and GEO now will have a major competitive advantage. We help you get ahead of this shift before your competitors do.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-q-text">How does TamkinExpress measure ROI and campaign success?</span>
+                        <span class="faq-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>We track performance across every channel using a combination of Google Analytics 4, Search Console, Google Ads dashboards, and custom reporting tools. Key metrics include cost per lead (CPL), return on ad spend (ROAS), organic keyword rankings, conversion rates, and revenue attribution.</p>
+                            <p>Every client receives a detailed monthly report with full transparency on what's working, what's been adjusted, and where we're heading next — no vanity metrics, just numbers tied directly to your business goals.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <!-- ===== CTA ===== -->
     <section class="cta-section">
         <div class="reveal">
@@ -1025,6 +1242,27 @@
             link.addEventListener('click', () => {
                 hamburger.classList.remove('open');
                 mobileMenu.classList.remove('open');
+            });
+        });
+
+        // FAQ Accordion
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const btn = item.querySelector('.faq-question');
+            btn.addEventListener('click', () => {
+                const isOpen = item.classList.contains('open');
+
+                // Close all
+                faqItems.forEach(i => {
+                    i.classList.remove('open');
+                    i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+                });
+
+                // Toggle clicked
+                if (!isOpen) {
+                    item.classList.add('open');
+                    btn.setAttribute('aria-expanded', 'true');
+                }
             });
         });
     </script>
