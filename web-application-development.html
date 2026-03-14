@@ -116,6 +116,27 @@
         .mval { font-size:13px; font-weight:600; color:var(--teal); min-width:36px; text-align:right; }
         .proc-note { margin-top:24px; padding:16px; background:rgba(0,212,168,0.08); border-radius:10px; border:1px solid rgba(0,212,168,0.2); font-size:12px; color:var(--muted); line-height:1.7; font-weight:300; }
 
+        /* ===== FAQ ===== */
+        .faq-section { background:#000; position:relative; overflow:hidden; }
+        .faq-section::before { content:''; position:absolute; bottom:-100px; right:-100px; width:600px; height:600px; background:radial-gradient(circle,rgba(0,212,168,0.05) 0%,transparent 70%); pointer-events:none; }
+        .faq-container { max-width:900px; margin:0 auto; position:relative; z-index:1; }
+        .faq-header { text-align:center; margin-bottom:60px; }
+        .faq-header .section-sub { margin:0 auto; }
+        .faq-list { display:flex; flex-direction:column; }
+        .faq-item { border-bottom:1px solid rgba(0,212,168,0.12); overflow:hidden; }
+        .faq-item:first-child { border-top:1px solid rgba(0,212,168,0.12); }
+        .faq-question { width:100%; background:none; border:none; cursor:pointer; display:flex; align-items:center; justify-content:space-between; gap:20px; padding:28px 0; text-align:left; transition:all 0.3s ease; }
+        .faq-question:hover .faq-q-text { color:var(--teal); }
+        .faq-q-text { font-family:'Playfair Display',serif; font-size:18px; font-weight:600; color:var(--text); line-height:1.4; transition:color 0.3s ease; flex:1; }
+        .faq-icon { width:36px; height:36px; border-radius:50%; border:1.5px solid rgba(0,212,168,0.3); display:flex; align-items:center; justify-content:center; flex-shrink:0; transition:all 0.4s cubic-bezier(0.4,0,0.2,1); }
+        .faq-icon svg { width:14px; height:14px; stroke:var(--teal); transition:transform 0.4s cubic-bezier(0.4,0,0.2,1); }
+        .faq-item.open .faq-icon { background:var(--teal); border-color:var(--teal); transform:rotate(180deg); }
+        .faq-item.open .faq-icon svg { stroke:#000; }
+        .faq-answer { max-height:0; overflow:hidden; transition:max-height 0.45s cubic-bezier(0.4,0,0.2,1); }
+        .faq-item.open .faq-answer { max-height:400px; }
+        .faq-answer-inner { padding:0 0 28px 0; }
+        .faq-answer-inner p { font-family:'DM Sans',sans-serif; font-size:14.5px; font-weight:300; color:var(--muted); line-height:1.85; }
+
         /* CTA */
         .cta-section { background:linear-gradient(135deg,rgba(0,212,168,0.1) 0%,rgba(0,212,168,0.03) 50%,transparent 100%); border-top:1px solid rgba(0,212,168,0.15); text-align:center; padding:100px 40px; }
         .cta-section h2 { font-family:'Playfair Display',serif; font-size:clamp(36px,5vw,60px); font-weight:900; line-height:1.15; margin-bottom:20px; }
@@ -158,8 +179,9 @@
             .footer-inner{grid-template-columns:1fr;}
             .hero-stats{gap:28px;}
             .stat-div{display:none;}
+            .faq-q-text{font-size:16px;}
         }
-</style>
+    </style>
 </head>
 <body>
 
@@ -198,12 +220,11 @@
         </div>
     </div>
 
-
     <section class="hero">
         <div class="hero-bg"></div>
         <div class="hero-badge">Web Application Development UAE</div>
         <h1>
-              <span style="display:block;">Best Web Application Development </span>
+            <span style="display:block;">Best Web Application Development </span>
             <span class="line-teal">Company in Dubai.</span>
         </h1>
         <p class="hero-sub">We build powerful, scalable web applications that automate your operations, delight your customers, and give you a competitive edge in the UAE market.</p>
@@ -222,7 +243,7 @@
             <p class="section-sub">Tailored for UAE businesses — built to deliver real results from day one.</p>
         </div>
         <div class="svc-grid">
-            <div class="svc-card reveal ">
+            <div class="svc-card reveal">
                 <div class="card-icon">🏢</div>
                 <h3>Business Portals</h3>
                 <p>Custom portals for employee management, vendor systems, and client dashboards — built to fit your exact workflow.</p>
@@ -243,7 +264,7 @@
                 <div class="tags"><span class="tag">CRM</span><span class="tag">ERP</span><span class="tag">UAE VAT</span><span class="tag">HR Module</span></div>
                 <a href="/contact-us.html" class="card-link">Get Started →</a>
             </div>
-            <div class="svc-card reveal ">
+            <div class="svc-card reveal">
                 <div class="card-icon">🤖</div>
                 <h3>Process Automation</h3>
                 <p>Replace manual, repetitive tasks with smart automation — from invoice generation to approval workflows and reporting.</p>
@@ -263,7 +284,8 @@
                 <p>Connect your web app to third-party tools — CRMs, payment gateways, government portals, ERP systems, and more.</p>
                 <div class="tags"><span class="tag">REST API</span><span class="tag">Webhooks</span><span class="tag">Payment</span><span class="tag">Gov Portals</span></div>
                 <a href="/contact-us.html" class="card-link">Get Started →</a>
-            </div></div>
+            </div>
+        </div>
     </section>
 
     <section class="proc-section">
@@ -272,14 +294,97 @@
                 <span class="section-label reveal">How We Work</span>
                 <h2 class="section-title reveal">Our <span class="hl">Process</span></h2>
                 <p class="section-sub reveal" style="margin-bottom:36px;">Transparent, efficient, and results-oriented — every step of the way.</p>
-                <div class="steps"><div class="step reveal"><div class="step-num">01</div><div><h4>Requirements Workshop</h4><p>We sit with your team to document every feature, user role, and business rule — nothing is left to assumption.</p></div></div><div class="step reveal"><div class="step-num">02</div><div><h4>Architecture Design</h4><p>We design the technical architecture — database schema, API structure, and scalability plan — before writing code.</p></div></div><div class="step reveal"><div class="step-num">03</div><div><h4>Iterative Development</h4><p>We build in phases with regular demos and feedback cycles, so you see real progress from week two.</p></div></div><div class="step reveal"><div class="step-num">04</div><div><h4>Deployment & Training</h4><p>We deploy to cloud infrastructure, configure security, and train your team — then stay on for ongoing support.</p></div></div></div>
+                <div class="steps">
+                    <div class="step reveal"><div class="step-num">01</div><div><h4>Requirements Workshop</h4><p>We sit with your team to document every feature, user role, and business rule — nothing is left to assumption.</p></div></div>
+                    <div class="step reveal"><div class="step-num">02</div><div><h4>Architecture Design</h4><p>We design the technical architecture — database schema, API structure, and scalability plan — before writing code.</p></div></div>
+                    <div class="step reveal"><div class="step-num">03</div><div><h4>Iterative Development</h4><p>We build in phases with regular demos and feedback cycles, so you see real progress from week two.</p></div></div>
+                    <div class="step reveal"><div class="step-num">04</div><div><h4>Deployment & Training</h4><p>We deploy to cloud infrastructure, configure security, and train your team — then stay on for ongoing support.</p></div></div>
+                </div>
             </div>
             <div class="reveal">
                 <div class="proc-card">
                     <h3>Delivery Metrics</h3>
-                    <div class="mrow"><span class="mname">Feature Delivery</span><div class="mbar-wrap"><div class="mbar" style="width:95%"></div></div><span class="mval">+95%</span></div><div class="mrow"><span class="mname">Security Audit Pass</span><div class="mbar-wrap"><div class="mbar" style="width:100%"></div></div><span class="mval">+100%</span></div><div class="mrow"><span class="mname">Performance Score</span><div class="mbar-wrap"><div class="mbar" style="width:92%"></div></div><span class="mval">+92%</span></div><div class="mrow"><span class="mname">Client Satisfaction</span><div class="mbar-wrap"><div class="mbar" style="width:97%"></div></div><span class="mval">+97%</span></div><div class="mrow"><span class="mname">Uptime</span><div class="mbar-wrap"><div class="mbar" style="width:99%"></div></div><span class="mval">+99%</span></div>
+                    <div class="mrow"><span class="mname">Feature Delivery</span><div class="mbar-wrap"><div class="mbar" style="width:95%"></div></div><span class="mval">+95%</span></div>
+                    <div class="mrow"><span class="mname">Security Audit Pass</span><div class="mbar-wrap"><div class="mbar" style="width:100%"></div></div><span class="mval">+100%</span></div>
+                    <div class="mrow"><span class="mname">Performance Score</span><div class="mbar-wrap"><div class="mbar" style="width:92%"></div></div><span class="mval">+92%</span></div>
+                    <div class="mrow"><span class="mname">Client Satisfaction</span><div class="mbar-wrap"><div class="mbar" style="width:97%"></div></div><span class="mval">+97%</span></div>
+                    <div class="mrow"><span class="mname">Uptime</span><div class="mbar-wrap"><div class="mbar" style="width:99%"></div></div><span class="mval">+99%</span></div>
                     <div class="proc-note">Average delivery metrics across TamkinExpress web application projects for UAE businesses.</div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="faq-section" id="faq">
+        <div class="faq-container">
+            <div class="faq-header reveal">
+                <span class="section-label">Got Questions?</span>
+                <h2 class="section-title">Frequently Asked <span class="hl">Questions</span></h2>
+                <p class="section-sub">Technical questions about web application development in the UAE — answered.</p>
+            </div>
+            <div class="faq-list reveal">
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-q-text">How do you architect web applications to handle concurrent users at scale in the UAE?</span>
+                        <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+                    </button>
+                    <div class="faq-answer"><div class="faq-answer-inner">
+                        <p>We design for horizontal scalability from the start — stateless API layers, load-balanced application servers, read replicas for the database, and Redis-backed session and caching layers. For traffic spikes, we use auto-scaling groups on AWS or Azure so capacity expands automatically without manual intervention or downtime.</p>
+                    </div></div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-q-text">What is your approach to multi-tenancy for SaaS applications built for the UAE market?</span>
+                        <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+                    </button>
+                    <div class="faq-answer"><div class="faq-answer-inner">
+                        <p>We implement schema-per-tenant or row-level isolation depending on your data sensitivity and compliance requirements. For regulated UAE sectors, hard tenant isolation with separate schemas or databases is standard. For cost-efficient SaaS, row-level security with strict query scoping works well and is easier to maintain at scale.</p>
+                    </div></div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-q-text">How do you handle real-time data in dashboards and operational web apps?</span>
+                        <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+                    </button>
+                    <div class="faq-answer"><div class="faq-answer-inner">
+                        <p>We use WebSockets or Server-Sent Events for true real-time push — no polling. For data-heavy dashboards, we combine a materialized view layer in the database with an event-driven update pipeline so the UI reflects live state without hammering your primary database with expensive queries.</p>
+                    </div></div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-q-text">Can you build web applications that comply with UAE VAT reporting and FTA integration requirements?</span>
+                        <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+                    </button>
+                    <div class="faq-answer"><div class="faq-answer-inner">
+                        <p>Yes. We've built financial modules with 5% UAE VAT calculation, tax invoice generation compliant with FTA formatting standards, and automated VAT return data exports. Where required, we integrate directly with the FTA's API to automate return submission and reconciliation — removing the manual step entirely.</p>
+                    </div></div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-q-text">What CI/CD and deployment pipeline do you set up for ongoing releases?</span>
+                        <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+                    </button>
+                    <div class="faq-answer"><div class="faq-answer-inner">
+                        <p>We configure a full CI/CD pipeline using GitHub Actions or GitLab CI — automated testing, linting, Docker image builds, and environment-specific deployments (staging → production) with one-click rollback. Every release is zero-downtime using blue-green or rolling deployment strategies.</p>
+                    </div></div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-q-text">How do you approach database design for complex UAE business workflows with multiple entities?</span>
+                        <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+                    </button>
+                    <div class="faq-answer"><div class="faq-answer-inner">
+                        <p>We start with a domain model workshop before writing a single schema. Relationships, indexing strategy, normalisation trade-offs, and audit trail requirements are all decided upfront. For write-heavy workflows we use event sourcing where appropriate — keeping a full history of state changes, which is particularly valuable for UAE compliance and dispute resolution.</p>
+                    </div></div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -294,7 +399,6 @@
             </div>
         </div>
     </section>
-
 
     <footer>
         <div class="footer-inner">
@@ -340,7 +444,6 @@
         </div>
     </footer>
 
-
     <script>
         const navbar = document.getElementById('navbar');
         window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 60));
@@ -350,6 +453,21 @@
         mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { hamburger.classList.remove('open'); mobileMenu.classList.remove('open'); }));
         document.querySelectorAll('.reveal').forEach(el => {
             new IntersectionObserver((entries, obs) => { entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);} }); }, {threshold:0.12}).observe(el);
+        });
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.querySelector('.faq-question').addEventListener('click', () => {
+                const isOpen = item.classList.contains('open');
+                document.querySelectorAll('.faq-item').forEach(i => {
+                    i.classList.remove('open');
+                    i.querySelector('.faq-question').setAttribute('aria-expanded','false');
+                });
+                if (!isOpen) {
+                    item.classList.add('open');
+                    item.querySelector('.faq-question').setAttribute('aria-expanded','true');
+                }
+            });
         });
     </script>
 
