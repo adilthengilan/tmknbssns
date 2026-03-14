@@ -116,6 +116,146 @@
         .mval { font-size:13px; font-weight:600; color:var(--teal); min-width:36px; text-align:right; }
         .proc-note { margin-top:24px; padding:16px; background:rgba(0,212,168,0.08); border-radius:10px; border:1px solid rgba(0,212,168,0.2); font-size:12px; color:var(--muted); line-height:1.7; font-weight:300; }
 
+        /* ===== FAQ SECTION ===== */
+        .faq-section {
+            background: #000;
+            position: relative;
+            overflow: hidden;
+        }
+        .faq-section::before {
+            content: '';
+            position: absolute;
+            bottom: -100px;
+            right: -100px;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(0,212,168,0.07) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .faq-wrap {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1.6fr;
+            gap: 80px;
+            align-items: start;
+        }
+        .faq-left {
+            position: sticky;
+            top: 100px;
+        }
+        .faq-left .section-sub { margin-bottom: 32px; }
+        .faq-contact-box {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 28px;
+            margin-top: 10px;
+        }
+        .faq-contact-box p {
+            font-size: 13px;
+            color: var(--muted);
+            font-weight: 300;
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+        .faq-contact-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--teal);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            border-bottom: 1px solid rgba(0,212,168,0.3);
+            padding-bottom: 2px;
+            transition: all 0.3s ease;
+        }
+        .faq-contact-link:hover {
+            color: #00ffc8;
+            border-bottom-color: #00ffc8;
+            gap: 12px;
+        }
+        .faq-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+        .faq-item {
+            border-bottom: 1px solid rgba(255,255,255,0.07);
+            overflow: hidden;
+        }
+        .faq-item:first-child {
+            border-top: 1px solid rgba(255,255,255,0.07);
+        }
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            text-align: left;
+            cursor: pointer;
+            padding: 26px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            color: #fff;
+            font-family: 'Playfair Display', serif;
+            font-size: 17px;
+            font-weight: 600;
+            line-height: 1.4;
+            transition: color 0.3s ease;
+        }
+        .faq-question:hover { color: var(--teal); }
+        .faq-item.open .faq-question { color: var(--teal); }
+        .faq-icon {
+            flex-shrink: 0;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            border: 1.5px solid rgba(0,212,168,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.35s ease;
+            background: transparent;
+        }
+        .faq-icon svg {
+            width: 14px;
+            height: 14px;
+            stroke: var(--teal);
+            fill: none;
+            stroke-width: 2.5;
+            stroke-linecap: round;
+            transition: transform 0.35s ease;
+        }
+        .faq-item.open .faq-icon {
+            background: var(--teal);
+            border-color: var(--teal);
+            transform: rotate(180deg);
+        }
+        .faq-item.open .faq-icon svg { stroke: #000; }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1), padding 0.4s ease;
+        }
+        .faq-item.open .faq-answer {
+            max-height: 400px;
+        }
+        .faq-answer-inner {
+            padding: 0 0 26px 0;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 14px;
+            font-weight: 300;
+            color: var(--muted);
+            line-height: 1.85;
+        }
+        .faq-answer-inner strong {
+            color: rgba(255,255,255,0.75);
+            font-weight: 500;
+        }
+
         /* CTA */
         .cta-section { background:linear-gradient(135deg,rgba(0,212,168,0.1) 0%,rgba(0,212,168,0.03) 50%,transparent 100%); border-top:1px solid rgba(0,212,168,0.15); text-align:center; padding:100px 40px; }
         .cta-section h2 { font-family:'Playfair Display',serif; font-size:clamp(36px,5vw,60px); font-weight:900; line-height:1.15; margin-bottom:20px; }
@@ -148,6 +288,8 @@
         /* RESPONSIVE */
         @media(max-width:900px){
             .proc-wrap{grid-template-columns:1fr;gap:50px;}
+            .faq-wrap{grid-template-columns:1fr;gap:40px;}
+            .faq-left{position:static;}
             .footer-inner{grid-template-columns:1fr 1fr;}
             .nav-menu,.nav-buttons{display:none;}
             .hamburger{display:flex;}
@@ -158,8 +300,9 @@
             .footer-inner{grid-template-columns:1fr;}
             .hero-stats{gap:28px;}
             .stat-div{display:none;}
+            .faq-question{font-size:15px;}
         }
-</style>
+    </style>
 </head>
 <body>
 
@@ -219,7 +362,7 @@
             <p class="section-sub">Tailored for UAE businesses — built to deliver real results from day one.</p>
         </div>
         <div class="svc-grid">
-            <div class="svc-card reveal ">
+            <div class="svc-card reveal">
                 <div class="card-icon">⚙️</div>
                 <h3>Custom ERP Systems</h3>
                 <p>Purpose-built enterprise resource planning systems that manage your entire business — HR, finance, inventory, and operations in one platform.</p>
@@ -240,7 +383,7 @@
                 <div class="tags"><span class="tag">Dashboards</span><span class="tag">Reports</span><span class="tag">Forecasting</span><span class="tag">Data Warehouse</span></div>
                 <a href="/contact-us.html" class="card-link">Get Started →</a>
             </div>
-            <div class="svc-card reveal ">
+            <div class="svc-card reveal">
                 <div class="card-icon">🔐</div>
                 <h3>Accounting & Finance Software</h3>
                 <p>UAE-compliant accounting systems with VAT filing, payroll, expense management, and financial reporting built in.</p>
@@ -260,7 +403,8 @@
                 <p>We architect, deploy, and manage your software on cloud infrastructure with CI/CD pipelines, monitoring, and auto-scaling.</p>
                 <div class="tags"><span class="tag">AWS</span><span class="tag">Azure</span><span class="tag">Docker</span><span class="tag">CI/CD</span></div>
                 <a href="/contact-us.html" class="card-link">Get Started →</a>
-            </div></div>
+            </div>
+        </div>
     </section>
 
     <section class="proc-section">
@@ -277,6 +421,108 @@
                     <div class="mrow"><span class="mname">On-Time Delivery</span><div class="mbar-wrap"><div class="mbar" style="width:93%"></div></div><span class="mval">+93%</span></div><div class="mrow"><span class="mname">Bug-Free Releases</span><div class="mbar-wrap"><div class="mbar" style="width:97%"></div></div><span class="mval">+97%</span></div><div class="mrow"><span class="mname">Performance Targets</span><div class="mbar-wrap"><div class="mbar" style="width:95%"></div></div><span class="mval">+95%</span></div><div class="mrow"><span class="mname">Client Satisfaction</span><div class="mbar-wrap"><div class="mbar" style="width:98%"></div></div><span class="mval">+98%</span></div><div class="mrow"><span class="mname">Code Quality Score</span><div class="mbar-wrap"><div class="mbar" style="width:94%"></div></div><span class="mval">+94%</span></div>
                     <div class="proc-note">Average delivery metrics across TamkinExpress custom software projects for UAE enterprises.</div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FAQ SECTION ===== -->
+    <section class="faq-section" id="faq">
+        <div class="faq-wrap">
+            <div class="faq-left reveal">
+                <span class="section-label">Got Questions?</span>
+                <h2 class="section-title">Frequently Asked <span class="hl">Questions</span></h2>
+                <p class="section-sub">Everything you need to know about our software development process, pricing, and timelines.</p>
+                <div class="faq-contact-box">
+                    <p>Still have a question? Our team is happy to help you find the right solution for your business.</p>
+                    <a href="/contact-us.html" class="faq-contact-link">Talk to an Expert →</a>
+                </div>
+            </div>
+            <div class="faq-list reveal r1">
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        How long does it take to build custom software?
+                        <span class="faq-icon"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Timelines vary based on project complexity. A focused automation tool or department module typically takes <strong>4–8 weeks</strong>. A full ERP or enterprise platform can take <strong>3–6 months</strong>. We work in 2-week sprints, so you'll see working software from the very first sprint — not months later. During discovery, we provide a detailed timeline with milestones before any development begins.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        How much does custom software development cost in the UAE?
+                        <span class="faq-icon"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Costs depend on the scope, complexity, and number of integrations required. We provide <strong>fixed-price quotes</strong> after a free discovery session — no hidden fees or surprise invoices. Projects start from AED 15,000 for focused tools, up to AED 200,000+ for full enterprise platforms. Every quote includes development, testing, deployment, and a post-launch support period.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        Will the software be UAE VAT and compliance compliant?
+                        <span class="faq-icon"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Yes. All our financial and accounting systems are built with <strong>UAE VAT regulations</strong> in mind from the ground up — including VAT return filing formats, tax invoice standards, and FTA compliance. We stay updated with regulatory changes so your software remains compliant as rules evolve.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        Can you integrate with our existing systems?
+                        <span class="faq-icon"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Absolutely. We specialize in integrations with popular platforms including <strong>Zoho, SAP, QuickBooks, Salesforce, WooCommerce, Shopify, government portals, and banking APIs</strong>. During the architecture phase, we map all your existing systems and design a seamless integration plan so nothing runs in isolation.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        Who owns the software and source code?
+                        <span class="faq-icon"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <strong>You do — 100%.</strong> Upon final payment, full intellectual property and source code ownership transfers to your company. We provide complete documentation, codebase handover, and onboarding for your internal team. You're never locked in or dependent on us to keep your software running.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        Do you provide ongoing support after launch?
+                        <span class="faq-icon"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Yes. Every project includes a <strong>30-day post-launch warranty</strong> covering bug fixes at no extra cost. Beyond that, we offer flexible support retainers — from on-demand fixes to dedicated monthly maintenance plans with SLA guarantees. Many of our clients opt for our lifetime support package for complete peace of mind.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        Can you build software for my specific industry?
+                        <span class="faq-icon"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Yes. We have delivered custom solutions across <strong>real estate, healthcare, logistics, retail, hospitality, construction, and professional services</strong> in the UAE. Each project starts with deep-dive discovery workshops to understand your industry's unique workflows, regulations, and operational challenges before a single line of code is written.
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -323,12 +569,12 @@
                 </ul>
             </div>
             <div class="footer-col">
-                  <h5>Visa Services</h5>
+                <h5>Visa Services</h5>
                 <ul>
-          <li><a href="./golden-visa.html">Golden Visa</a></li>
-          <li><a href="./employment-visa.html">Employment Visa</a></li>
-          <li><a href="./employment-visa.html">Family Visa</a></li>
-          <li><a href="./cicpa.html">CICPA Passes</a></li>
+                    <li><a href="./golden-visa.html">Golden Visa</a></li>
+                    <li><a href="./employment-visa.html">Employment Visa</a></li>
+                    <li><a href="./employment-visa.html">Family Visa</a></li>
+                    <li><a href="./cicpa.html">CICPA Passes</a></li>
                 </ul>
             </div>
         </div>
@@ -340,14 +586,49 @@
 
 
     <script>
+        // Navbar scroll
         const navbar = document.getElementById('navbar');
         window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 60));
+
+        // Mobile menu
         const hamburger = document.getElementById('hamburger');
         const mobileMenu = document.getElementById('mobileMenu');
-        hamburger.addEventListener('click', () => { hamburger.classList.toggle('open'); mobileMenu.classList.toggle('open'); });
-        mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { hamburger.classList.remove('open'); mobileMenu.classList.remove('open'); }));
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('open');
+            mobileMenu.classList.toggle('open');
+        });
+        mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+            hamburger.classList.remove('open');
+            mobileMenu.classList.remove('open');
+        }));
+
+        // Reveal on scroll
         document.querySelectorAll('.reveal').forEach(el => {
-            new IntersectionObserver((entries, obs) => { entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);} }); }, {threshold:0.12}).observe(el);
+            new IntersectionObserver((entries, obs) => {
+                entries.forEach(e => {
+                    if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+                });
+            }, { threshold: 0.12 }).observe(el);
+        });
+
+        // FAQ accordion
+        document.querySelectorAll('.faq-question').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.closest('.faq-item');
+                const isOpen = item.classList.contains('open');
+
+                // Close all
+                document.querySelectorAll('.faq-item.open').forEach(i => {
+                    i.classList.remove('open');
+                    i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+                });
+
+                // Open clicked if it was closed
+                if (!isOpen) {
+                    item.classList.add('open');
+                    btn.setAttribute('aria-expanded', 'true');
+                }
+            });
         });
     </script>
 
