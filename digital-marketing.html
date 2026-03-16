@@ -988,7 +988,75 @@
                     </div>
         </div>
     </section>
+<!-- FAQ Section -->
+<style>
+.faq-sec{padding:6rem 6%;background:var(--dark2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.faq-sec .faq-wrap{max-width:860px;margin:0 auto;}
+.faq-item-box{border-bottom:1px solid var(--border);}
+.faq-q{width:100%;background:none;border:none;text-align:left;padding:1.4rem 0;font-family:'Montserrat',sans-serif;font-size:.95rem;font-weight:600;color:var(--text);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;transition:color .2s;}
+.faq-q:hover{color:var(--teal);}
+.faq-plus{width:28px;height:28px;min-width:28px;background:var(--teal-dim);border:1px solid rgba(0,212,200,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--teal);font-size:1.2rem;transition:transform .3s;}
+.faq-item-box.open .faq-plus{transform:rotate(45deg);}
+.faq-ans{max-height:0;overflow:hidden;transition:max-height .4s ease;}
+.faq-item-box.open .faq-ans{max-height:300px;}
+.faq-ans p{padding-bottom:1.4rem;color:var(--muted);font-size:.88rem;line-height:1.8;}
+</style>
 
+<section class="faq-sec" id="faq">
+  <div class="faq-wrap">
+    <p class="sec-label">FAQ</p>
+    <h2 class="sec-title" style="text-align:left;margin-bottom:2.5rem;">Frequently Asked Questions — <em>UAE Golden Visa</em></h2>
+
+    <div class="faq-item-box">
+      <button class="faq-q">Who is eligible for UAE Golden Visa?<span class="faq-plus">+</span></button>
+      <div class="faq-ans"><p>UAE Golden Visa is available for investors (AED 2M+ investment), entrepreneurs, skilled professionals (doctors, engineers, IT specialists), outstanding students, and their family members. Tamkin Express provides a free eligibility assessment.</p></div>
+    </div>
+
+    <div class="faq-item-box">
+      <button class="faq-q">How long does UAE Golden Visa processing take?<span class="faq-plus">+</span></button>
+      <div class="faq-ans"><p>UAE Golden Visa processing typically takes 30 days from document submission to approval. Tamkin Express manages the complete process including document preparation, ICA submission, and follow-up.</p></div>
+    </div>
+
+    <div class="faq-item-box">
+      <button class="faq-q">How much does UAE Golden Visa cost?<span class="faq-plus">+</span></button>
+      <div class="faq-ans"><p>UAE Golden Visa government fees range from AED 3,800 to AED 5,500 depending on category. Professional service fees apply separately. Contact Tamkin Express for a full transparent cost breakdown.</p></div>
+    </div>
+
+    <div class="faq-item-box">
+      <button class="faq-q">Can I sponsor my family on UAE Golden Visa?<span class="faq-plus">+</span></button>
+      <div class="faq-ans"><p>Yes. UAE Golden Visa holders can sponsor their spouse, children, and parents for UAE residency. Tamkin Express handles the complete family sponsorship process alongside your Golden Visa application.</p></div>
+    </div>
+
+    <div class="faq-item-box">
+      <button class="faq-q">Can Tamkin Express process UAE Golden Visa from Abu Dhabi?<span class="faq-plus">+</span></button>
+      <div class="faq-ans"><p>Yes. Tamkin Express is based in Abu Dhabi (Office No. 49, Musaffah M43) and handles UAE Golden Visa applications for clients across Abu Dhabi, Dubai, and all UAE emirates.</p></div>
+    </div>
+  </div>
+</section>
+
+<script>
+// FAQ accordion
+document.querySelectorAll('.faq-q').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var item=this.parentElement,wasOpen=item.classList.contains('open');
+    document.querySelectorAll('.faq-item-box').forEach(function(i){i.classList.remove('open');});
+    if(!wasOpen) item.classList.add('open');
+  });
+});
+// Counter threshold fix
+(function(){
+  var cio2=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting&&!e.target.dataset.done){
+        e.target.dataset.done='1';
+        var target=parseInt(e.target.dataset.target),suffix=e.target.dataset.suffix||'',dur=1800,start=performance.now();
+        (function tick(now){var p=Math.min((now-start)/dur,1),ease=1-Math.pow(1-p,3);e.target.textContent=Math.floor(ease*target)+suffix;if(p<1)requestAnimationFrame(tick);else e.target.textContent=target+suffix;})(performance.now());
+      }
+    });
+  },{threshold:0.1});
+  document.querySelectorAll('.stat-val[data-target]').forEach(function(el){cio2.observe(el);});
+})();
+</script>
      <!-- ===== CTA ===== -->
     <section class="cta-section">
         <div class="reveal">
