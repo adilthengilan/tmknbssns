@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Digital Marketing Insights | TamkinExpress</title>
+<title>Digital Marketing Blog | TamkinExpress</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Montserrat:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
@@ -51,8 +51,20 @@ footer { background:#000; border-top:1px solid rgba(0,212,168,0.1); padding:60px
 .footer-col a { color:var(--muted); text-decoration:none; font-size:13px; font-weight:300; transition:color 0.3s; }
 .footer-col a:hover { color:#fff; }
 .footer-bottom { max-width:1200px; margin:24px auto 0; display:flex; justify-content:space-between; align-items:center; font-size:12px; color:rgba(255,255,255,0.3); }
-@media(max-width:900px){.footer-inner{grid-template-columns:1fr 1fr;}.nav-menu,.nav-buttons{display:none;}.hamburger{display:flex;}}
-@media(max-width:600px){.navbar{padding:0 20px;}.footer-inner{grid-template-columns:1fr;}}
+.modal-overlay { position:fixed; inset:0; background:rgba(0,0,0,0.85); z-index:9999; display:none; align-items:center; justify-content:center; padding:24px; }
+.modal-overlay.active { display:flex; }
+.modal-box { background:#0F1116; border:1px solid rgba(0,212,168,0.25); border-radius:20px; padding:44px 40px; max-width:560px; width:100%; position:relative; animation:modalIn 0.3s ease; }
+@keyframes modalIn { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
+.modal-close { position:absolute; top:18px; right:20px; background:none; border:none; cursor:pointer; color:rgba(255,255,255,0.4); font-size:22px; line-height:1; transition:color 0.2s; }
+.modal-close:hover { color:#00d4a8; }
+.modal-cat { color:#00d4a8; font-size:10px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; display:block; margin-bottom:14px; }
+.modal-title { font-family:'Playfair Display',serif; font-size:22px; font-weight:700; color:#fff; line-height:1.4; margin:0 0 18px; }
+.modal-para { font-family:'DM Sans',sans-serif; font-size:14px; font-weight:300; color:rgba(255,255,255,0.55); line-height:1.85; margin:0 0 28px; }
+.modal-btn { display:inline-flex; align-items:center; gap:8px; background:#00d4a8; color:#000; padding:13px 28px; border-radius:100px; font-family:'Montserrat',sans-serif; font-size:12.5px; font-weight:700; text-decoration:none; letter-spacing:0.8px; text-transform:uppercase; }
+.arrow-btn { background:none; border:1.5px solid rgba(0,212,168,0.3); border-radius:50%; width:36px; height:36px; display:flex; align-items:center; justify-content:center; cursor:pointer; flex-shrink:0; margin-top:4px; transition:all 0.3s ease; color:#00d4a8; font-size:15px; }
+.arrow-btn:hover { background:#00d4a8; color:#000; border-color:#00d4a8; }
+@media(max-width:900px){ .footer-inner{grid-template-columns:1fr 1fr;} .nav-menu,.nav-buttons{display:none;} .hamburger{display:flex;} }
+@media(max-width:600px){ .navbar{padding:0 20px;} .footer-inner{grid-template-columns:1fr;} .modal-box{padding:32px 24px;} }
 </style>
 </head>
 <body>
@@ -89,86 +101,63 @@ footer { background:#000; border-top:1px solid rgba(0,212,168,0.1); padding:60px
   <div style="position:absolute;inset:0;background:radial-gradient(ellipse 60% 70% at 50% 50%,rgba(0,212,168,0.05) 0%,transparent 70%);pointer-events:none;"></div>
   <div style="position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(0,212,168,0.4),transparent);"></div>
   <div style="position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(0,212,168,0.4),transparent);"></div>
-
   <div style="position:relative;z-index:1;max-width:860px;margin:0 auto;">
-
-    <div style="text-align:center;margin-bottom:64px;">
-      <span style="display:inline-flex;align-items:center;gap:10px;color:#00d4a8;font-size:11px;font-weight:600;letter-spacing:4px;text-transform:uppercase;margin-bottom:20px;">
-        <span style="width:28px;height:1px;background:#00d4a8;display:inline-block;"></span>
+    <div style="text-align:center;margin-bottom:60px;">
+      <span style="display:inline-flex;align-items:center;gap:10px;color:#00d4a8;font-size:11px;font-weight:600;letter-spacing:4px;text-transform:uppercase;margin-bottom:18px;">
+        <span style="width:24px;height:1px;background:#00d4a8;display:inline-block;"></span>
         From Our Blog
-        <span style="width:28px;height:1px;background:#00d4a8;display:inline-block;"></span>
+        <span style="width:24px;height:1px;background:#00d4a8;display:inline-block;"></span>
       </span>
-      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(32px,4vw,52px);font-weight:900;color:#fff;line-height:1.12;margin:0 0 16px;">
-        Grow Smarter with<br>
-        <span style="font-style:italic;background:linear-gradient(90deg,#00d4a8 20%,#fff 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Expert Marketing Insights</span>
+      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(32px,4vw,52px);font-weight:900;color:#fff;line-height:1.12;margin:0;">
+        Digital Marketing<br>
+        <span style="font-style:italic;background:linear-gradient(90deg,#00d4a8 20%,#fff 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Insights & Guides</span>
       </h2>
-      <p style="font-family:'DM Sans',sans-serif;font-size:15px;font-weight:300;color:rgba(255,255,255,0.45);line-height:1.8;max-width:480px;margin:0 auto;">Practical strategies, real UAE market data, and expert perspectives to help your business grow faster online.</p>
     </div>
-
     <div style="border-top:1px solid rgba(0,212,168,0.15);">
-    <div style="padding:34px 0;border-bottom:1px solid rgba(255,255,255,0.06);display:flex;align-items:flex-start;justify-content:space-between;gap:40px;">
+    <div style="padding:32px 0;border-bottom:1px solid rgba(255,255,255,0.06);display:flex;align-items:flex-start;justify-content:space-between;gap:40px;">
       <div style="flex:1;">
-        <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px;">
-          <span style="background:rgba(0,212,168,0.1);border:1px solid rgba(0,212,168,0.25);color:#00d4a8;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:4px 12px;border-radius:100px;">SEO Strategy</span>
-          <span style="color:rgba(255,255,255,0.25);font-size:11px;font-weight:400;">6 min read</span>
-        </div>
-        <h3 style="font-family:'Playfair Display',serif;font-size:19px;font-weight:700;color:#fff;line-height:1.45;margin:0 0 10px;">The 7 SEO Mistakes UAE Businesses Make That Kill Their Google Rankings</h3>
-        <p style="font-family:'DM Sans',sans-serif;font-size:13.5px;font-weight:300;color:rgba(255,255,255,0.45);line-height:1.8;margin:0;">Most Dubai businesses are losing organic traffic to the same fixable errors. We break down what they are — and exactly how to fix them before your competitors do.</p>
+        <span style="color:#00d4a8;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;display:block;margin-bottom:12px;">SEO</span>
+        <h3 style="font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:#fff;line-height:1.4;margin:0 0 10px;">How to Rank #1 on Google in Dubai: 2025 SEO Guide</h3>
+        <p style="font-family:'DM Sans',sans-serif;font-size:13.5px;font-weight:300;color:rgba(255,255,255,0.45);line-height:1.75;margin:0;">The exact strategies driving top rankings for UAE businesses right now.</p>
       </div>
-      <a href="/blog.html" style="display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;border:1.5px solid rgba(0,212,168,0.3);color:#00d4a8;font-size:16px;text-decoration:none;flex-shrink:0;margin-top:8px;transition:all 0.3s ease;">→</a>
+      <button class="arrow-btn" onclick="openModal('SEO','How to Rank #1 on Google in Dubai: 2025 SEO Guide','Ranking on Google in Dubai requires a combination of precise on-page optimisation, authoritative backlinks, and deep understanding of UAE search behavior. This guide walks through keyword research for Gulf audiences, technical SEO fundamentals, and the content strategy that consistently earns top positions for competitive Dubai search terms in 2025.')">→</button>
     </div>
-    <div style="padding:34px 0;border-bottom:1px solid rgba(255,255,255,0.06);display:flex;align-items:flex-start;justify-content:space-between;gap:40px;">
+    <div style="padding:32px 0;border-bottom:1px solid rgba(255,255,255,0.06);display:flex;align-items:flex-start;justify-content:space-between;gap:40px;">
       <div style="flex:1;">
-        <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px;">
-          <span style="background:rgba(0,212,168,0.1);border:1px solid rgba(0,212,168,0.25);color:#00d4a8;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:4px 12px;border-radius:100px;">Google Ads</span>
-          <span style="color:rgba(255,255,255,0.25);font-size:11px;font-weight:400;">7 min read</span>
-        </div>
-        <h3 style="font-family:'Playfair Display',serif;font-size:19px;font-weight:700;color:#fff;line-height:1.45;margin:0 0 10px;">How We Cut a UAE Client's Google Ads Cost by 40% Without Losing Leads</h3>
-        <p style="font-family:'DM Sans',sans-serif;font-size:13.5px;font-weight:300;color:rgba(255,255,255,0.45);line-height:1.8;margin:0;">A behind-the-scenes look at the campaign restructuring, negative keyword strategy, and bid adjustments that transformed an underperforming account.</p>
+        <span style="color:#00d4a8;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;display:block;margin-bottom:12px;">Google Ads</span>
+        <h3 style="font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:#fff;line-height:1.4;margin:0 0 10px;">Google Ads vs SEO: Which Drives Better ROI in UAE?</h3>
+        <p style="font-family:'DM Sans',sans-serif;font-size:13.5px;font-weight:300;color:rgba(255,255,255,0.45);line-height:1.75;margin:0;">We analysed 50+ UAE campaigns to answer this once and for all.</p>
       </div>
-      <a href="/blog.html" style="display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;border:1.5px solid rgba(0,212,168,0.3);color:#00d4a8;font-size:16px;text-decoration:none;flex-shrink:0;margin-top:8px;transition:all 0.3s ease;">→</a>
+      <button class="arrow-btn" onclick="openModal('Google Ads','Google Ads vs SEO: Which Drives Better ROI in UAE?','After analysing over 50 campaigns across Dubai and Abu Dhabi, the answer depends heavily on your industry, timeline, and budget. Google Ads delivers immediate visibility and measurable leads from day one, while SEO compounds over time to deliver lower cost-per-acquisition at scale. This article breaks down the data and gives you a clear decision framework for your UAE business.')">→</button>
     </div>
-    <div style="padding:34px 0;border-bottom:1px solid rgba(255,255,255,0.06);display:flex;align-items:flex-start;justify-content:space-between;gap:40px;">
+    <div style="padding:32px 0;border-bottom:1px solid rgba(255,255,255,0.06);display:flex;align-items:flex-start;justify-content:space-between;gap:40px;">
       <div style="flex:1;">
-        <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px;">
-          <span style="background:rgba(0,212,168,0.1);border:1px solid rgba(0,212,168,0.25);color:#00d4a8;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:4px 12px;border-radius:100px;">Social Media</span>
-          <span style="color:rgba(255,255,255,0.25);font-size:11px;font-weight:400;">5 min read</span>
-        </div>
-        <h3 style="font-family:'Playfair Display',serif;font-size:19px;font-weight:700;color:#fff;line-height:1.45;margin:0 0 10px;">Why 90% of UAE Brands Fail on Instagram — And How to Be the 10%</h3>
-        <p style="font-family:'DM Sans',sans-serif;font-size:13.5px;font-weight:300;color:rgba(255,255,255,0.45);line-height:1.8;margin:0;">Posting consistently isn't enough. We reveal the content framework, engagement strategy, and posting cadence that actually builds a loyal Dubai audience.</p>
+        <span style="color:#00d4a8;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;display:block;margin-bottom:12px;">Social Media</span>
+        <h3 style="font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:#fff;line-height:1.4;margin:0 0 10px;">Instagram vs LinkedIn for UAE B2B Brands in 2025</h3>
+        <p style="font-family:'DM Sans',sans-serif;font-size:13.5px;font-weight:300;color:rgba(255,255,255,0.45);line-height:1.75;margin:0;">Which platform actually converts for professional services in the Gulf.</p>
       </div>
-      <a href="/blog.html" style="display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;border:1.5px solid rgba(0,212,168,0.3);color:#00d4a8;font-size:16px;text-decoration:none;flex-shrink:0;margin-top:8px;transition:all 0.3s ease;">→</a>
+      <button class="arrow-btn" onclick="openModal('Social Media','Instagram vs LinkedIn for UAE B2B Brands in 2025','For B2B brands targeting decision-makers in Dubai and the UAE, LinkedIn consistently outperforms Instagram in lead quality and conversion rate — but Instagram wins on brand awareness and reach. This guide shows you how to allocate your content effort across both platforms based on your industry, target audience, and sales cycle length.')">→</button>
     </div>
-    <div style="padding:34px 0;border-bottom:1px solid rgba(255,255,255,0.06);display:flex;align-items:flex-start;justify-content:space-between;gap:40px;">
+    <div style="padding:32px 0;border-bottom:1px solid rgba(255,255,255,0.06);display:flex;align-items:flex-start;justify-content:space-between;gap:40px;">
       <div style="flex:1;">
-        <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px;">
-          <span style="background:rgba(0,212,168,0.1);border:1px solid rgba(0,212,168,0.25);color:#00d4a8;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:4px 12px;border-radius:100px;">AI Search</span>
-          <span style="color:rgba(255,255,255,0.25);font-size:11px;font-weight:400;">6 min read</span>
-        </div>
-        <h3 style="font-family:'Playfair Display',serif;font-size:19px;font-weight:700;color:#fff;line-height:1.45;margin:0 0 10px;">Your UAE Business Isn't Showing Up in ChatGPT. Here's Why — and How to Fix It</h3>
-        <p style="font-family:'DM Sans',sans-serif;font-size:13.5px;font-weight:300;color:rgba(255,255,255,0.45);line-height:1.8;margin:0;">AI search is now where high-intent buyers start their journey. We explain GEO and AIO in plain English and what steps to take this month.</p>
+        <span style="color:#00d4a8;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;display:block;margin-bottom:12px;">AIO / GEO</span>
+        <h3 style="font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:#fff;line-height:1.4;margin:0 0 10px;">What is GEO and Why UAE Businesses Need It Now</h3>
+        <p style="font-family:'DM Sans',sans-serif;font-size:13.5px;font-weight:300;color:rgba(255,255,255,0.45);line-height:1.75;margin:0;">AI search is replacing traditional Google results — here's how to adapt.</p>
       </div>
-      <a href="/blog.html" style="display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;border:1.5px solid rgba(0,212,168,0.3);color:#00d4a8;font-size:16px;text-decoration:none;flex-shrink:0;margin-top:8px;transition:all 0.3s ease;">→</a>
+      <button class="arrow-btn" onclick="openModal('AIO / GEO','What is GEO and Why UAE Businesses Need It Now','Generative Engine Optimisation is the practice of structuring your content so AI systems like ChatGPT, Gemini, and Perplexity cite and recommend your brand in their responses. As UAE consumers increasingly turn to AI for product and service recommendations, businesses that invest in GEO now will have a significant first-mover advantage over competitors still focused solely on traditional SEO.')">→</button>
     </div>
-    <div style="padding:34px 0;display:flex;align-items:flex-start;justify-content:space-between;gap:40px;">
+    <div style="padding:32px 0;display:flex;align-items:flex-start;justify-content:space-between;gap:40px;">
       <div style="flex:1;">
-        <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px;">
-          <span style="background:rgba(0,212,168,0.1);border:1px solid rgba(0,212,168,0.25);color:#00d4a8;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:4px 12px;border-radius:100px;">ROI</span>
-          <span style="color:rgba(255,255,255,0.25);font-size:11px;font-weight:400;">5 min read</span>
-        </div>
-        <h3 style="font-family:'Playfair Display',serif;font-size:19px;font-weight:700;color:#fff;line-height:1.45;margin:0 0 10px;">How to Calculate the True ROI of Digital Marketing for Your UAE Business</h3>
-        <p style="font-family:'DM Sans',sans-serif;font-size:13.5px;font-weight:300;color:rgba(255,255,255,0.45);line-height:1.8;margin:0;">Stop guessing whether your marketing spend is working. This is the exact framework we use with clients to track every dirham back to real revenue.</p>
+        <span style="color:#00d4a8;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;display:block;margin-bottom:12px;">Content Marketing</span>
+        <h3 style="font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:#fff;line-height:1.4;margin:0 0 10px;">How to Build a Content Strategy That Converts in UAE</h3>
+        <p style="font-family:'DM Sans',sans-serif;font-size:13.5px;font-weight:300;color:rgba(255,255,255,0.45);line-height:1.75;margin:0;">From blog posts to video scripts — a practical content framework for Dubai.</p>
       </div>
-      <a href="/blog.html" style="display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;border:1.5px solid rgba(0,212,168,0.3);color:#00d4a8;font-size:16px;text-decoration:none;flex-shrink:0;margin-top:8px;transition:all 0.3s ease;">→</a>
+      <button class="arrow-btn" onclick="openModal('Content Marketing','How to Build a Content Strategy That Converts in UAE','A strong content strategy for the UAE market must account for bilingual audiences, platform-specific formats, and the high content consumption rate of Gulf professionals. This guide gives you a practical 90-day content framework covering blog posts, LinkedIn articles, short-form video, and email — each mapped to a specific stage of the buyer journey.')">→</button>
     </div>
     </div>
-
-    <div style="text-align:center;margin-top:52px;">
-      <a href="/blog.html" style="display:inline-flex;align-items:center;gap:10px;background:#00d4a8;color:#000;padding:15px 38px;border-radius:100px;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;text-decoration:none;letter-spacing:0.8px;text-transform:uppercase;">
-        View All Articles →
-      </a>
+    <div style="text-align:center;margin-top:48px;">
+      <a href="/contact-us.html" style="display:inline-flex;align-items:center;gap:10px;background:#00d4a8;color:#000;padding:15px 36px;border-radius:100px;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;text-decoration:none;letter-spacing:0.8px;text-transform:uppercase;">Get Started Today →</a>
     </div>
-
   </div>
 </section></div>
 <footer>
@@ -179,7 +168,7 @@ footer { background:#000; border-top:1px solid rgba(0,212,168,0.1); padding:60px
       <div class="fc">
         <p>📍 Office No. 49, Maxim Pharmacy Building, Musaffah M43, Abu Dhabi, UAE</p>
         <p>📞 +971 588967713</p>
-        <p>✉️ <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="98f1f6fef7d8ecf9f5f3f1f6fde0e8eafdebebb6fbf7f5">[email&#160;protected]</a></p>
+        <p>✉️ info@tamkinexpress.com</p>
       </div>
     </div>
     <div class="footer-col">
@@ -215,9 +204,31 @@ footer { background:#000; border-top:1px solid rgba(0,212,168,0.1); padding:60px
     <span>Abu Dhabi, UAE</span>
   </div>
 </footer>
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<div class="modal-overlay" id="modal" onclick="closeOnBg(event)">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <span class="modal-cat" id="mCat"></span>
+    <h3 class="modal-title" id="mTitle"></h3>
+    <p class="modal-para" id="mPara"></p>
+    <a href="/contact-us.html" class="modal-btn">Get Started Today →</a>
+  </div>
+</div>
+<script>
   const navbar=document.getElementById('navbar');
   window.addEventListener('scroll',()=>navbar.classList.toggle('scrolled',window.scrollY>60));
   const hamburger=document.getElementById('hamburger');
   const mobileMenu=document.getElementById('mobileMenu');
-  hamburger.addEventListener('click',()=>{hamburger.classList.t
+  hamburger.addEventListener('click',()=>{hamburger.classList.toggle('open');mobileMenu.classList.toggle('open');});
+  mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{hamburger.classList.remove('open');mobileMenu.classList.remove('open');}));
+  function openModal(cat,title,para){
+    document.getElementById('mCat').textContent=cat;
+    document.getElementById('mTitle').textContent=title;
+    document.getElementById('mPara').textContent=para;
+    document.getElementById('modal').classList.add('active');
+  }
+  function closeModal(){document.getElementById('modal').classList.remove('active');}
+  function closeOnBg(e){if(e.target===document.getElementById('modal'))closeModal();}
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
+</script>
+</body>
+</html>
