@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Personal Branding Blog | TamkinExpress</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Montserrat:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root { --teal: #00d4a8; --teal-dim: rgba(0,212,168,0.15); --bg: #000; --card-bg: #0F1116; --text: #fff; --muted: rgba(255,255,255,0.55); --border: rgba(0,212,168,0.2); }
+html { scroll-behavior: smooth; }
+body { font-family: 'Montserrat', sans-serif; background: var(--bg); color: var(--text); overflow-x: hidden; }
+.navbar { position:fixed; top:0; left:0; right:0; z-index:1000; padding:0 48px; height:72px; display:flex; align-items:center; justify-content:space-between; background:rgba(0,0,0,0.75); backdrop-filter:blur(24px); -webkit-backdrop-filter:blur(24px); border-bottom:1px solid rgba(0,212,168,0.12); transition:background 0.4s ease,box-shadow 0.4s ease; }
+.navbar.scrolled { background:rgba(0,0,0,0.96); box-shadow:0 4px 30px rgba(0,0,0,0.5); }
+.nav-logo a { display:flex; align-items:center; text-decoration:none; }
+.nav-logo img { height:44px; width:124px; object-fit:contain; display:block; }
+.nav-logo-text { font-family:'Playfair Display',serif; font-size:20px; font-weight:700; color:var(--teal); display:none; }
+.nav-right { display:flex; align-items:center; gap:36px; }
+.nav-menu { display:flex; gap:32px; list-style:none; align-items:center; }
+.nav-link { color:rgba(255,255,255,0.72); text-decoration:none; font-size:13px; font-weight:500; letter-spacing:0.4px; transition:color 0.25s ease; position:relative; padding-bottom:2px; }
+.nav-link::after { content:''; position:absolute; bottom:-2px; left:0; width:0; height:1.5px; background:var(--teal); transition:width 0.3s ease; }
+.nav-link:hover,.nav-link.active { color:var(--teal); }
+.nav-link:hover::after,.nav-link.active::after { width:100%; }
+.nav-buttons { display:flex; align-items:center; gap:10px; }
+.nav-btn-outline { display:inline-flex; align-items:center; gap:7px; color:var(--teal); border:1.5px solid rgba(0,212,168,0.4); padding:9px 22px; border-radius:100px; font-size:12.5px; font-weight:600; text-decoration:none; transition:all 0.3s ease; white-space:nowrap; }
+.nav-btn-outline:hover { background:var(--teal-dim); border-color:var(--teal); }
+.nav-cta { display:inline-flex; align-items:center; gap:7px; background:var(--teal); color:#000; padding:10px 24px; border-radius:100px; font-size:12.5px; font-weight:700; text-decoration:none; transition:all 0.3s ease; white-space:nowrap; }
+.nav-cta:hover { background:#00ffc8; transform:translateY(-1px); box-shadow:0 6px 20px rgba(0,212,168,0.35); }
+.hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:6px; background:none; border:none; z-index:1100; }
+.hamburger span { display:block; width:24px; height:2px; background:#fff; border-radius:2px; transition:all 0.3s ease; }
+.hamburger.open span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity:0; }
+.hamburger.open span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
+.mobile-menu { display:none; position:fixed; top:72px; left:0; right:0; background:rgba(0,0,0,0.97); border-bottom:1px solid rgba(0,212,168,0.15); padding:24px 32px 32px; flex-direction:column; gap:4px; z-index:999; transform:translateY(-10px); opacity:0; pointer-events:none; transition:all 0.3s ease; }
+.mobile-menu.open { opacity:1; transform:translateY(0); pointer-events:all; display:flex; }
+.mobile-link { color:rgba(255,255,255,0.8); text-decoration:none; font-size:15px; font-weight:500; padding:14px 0; border-bottom:1px solid rgba(255,255,255,0.06); transition:color 0.2s; }
+.mobile-link:hover { color:var(--teal); }
+.mobile-menu-btns { display:flex; flex-direction:column; gap:10px; margin-top:20px; }
+.mobile-cta { background:var(--teal); color:#000; text-align:center; padding:13px; border-radius:100px; font-weight:700; font-size:13px; text-decoration:none; }
+.mobile-cta-outline { border:1.5px solid rgba(0,212,168,0.4); color:var(--teal); text-align:center; padding:12px; border-radius:100px; font-weight:600; font-size:13px; text-decoration:none; }
+footer { background:#000; border-top:1px solid rgba(0,212,168,0.1); padding:60px 40px 30px; }
+.footer-inner { max-width:1200px; margin:0 auto; display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:50px; padding-bottom:40px; border-bottom:1px solid rgba(255,255,255,0.06); }
+.footer-brand img { height:50px; width:140px; object-fit:contain; margin-bottom:16px; display:block; }
+.footer-brand p { font-size:13px; color:var(--muted); line-height:1.8; font-weight:300; margin-bottom:14px; }
+.footer-brand .fc p { font-size:12.5px; color:var(--muted); margin-bottom:8px; font-weight:300; }
+.footer-col h5 { font-size:12px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--teal); margin-bottom:20px; }
+.footer-col ul { list-style:none; }
+.footer-col li { margin-bottom:10px; }
+.footer-col a { color:var(--muted); text-decoration:none; font-size:13px; font-weight:300; transition:color 0.3s; }
+.footer-col a:hover { color:#fff; }
+.footer-bottom { max-width:1200px; margin:24px auto 0; display:flex; justify-content:space-between; align-items:center; font-size:12px; color:rgba(255,255,255,0.3); }
+.modal-overlay { position:fixed; inset:0; background:rgba(0,0,0,0.85); z-index:9999; display:none; align-items:center; justify-content:center; padding:24px; }
+.modal-overlay.active { display:flex; }
+.modal-box { background:#0F1116; border:1px solid rgba(0,212,168,0.25); border-radius:20px; padding:44px 40px; max-width:560px; width:100%; position:relative; animation:modalIn 0.3s ease; }
+@keyframes modalIn { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
+.modal-close { position:absolute; top:18px; right:20px; background:none; border:none; cursor:pointer; color:rgba(255,255,255,0.4); font-size:22px; line-height:1; transition:color 0.2s; }
+.modal-close:hover { color:#00d4a8; }
+.modal-cat { color:#00d4a8; font-size:10px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; display:block; margin-bottom:14px; }
+.modal-title { font-family:'Playfair Display',serif; font-size:22px; font-weight:700; color:#fff; line-height:1.4; margin:0 0 18px; }
+.modal-para { font-family:'DM Sans',sans-serif; font-size:14px; font-weight:300; color:rgba(255,255,255,0.55); line-height:1.85; margin:0 0 28px; }
+.modal-btn { display:inline-flex; align-items:center; gap:8px; background:#00d4a8; color:#000; padding:13px 28px; border-radius:100px; font-family:'Montserrat',sans-serif; font-size:12.5px; font-weight:700; text-decoration:none; letter-spacing:0.8px; text-transform:uppercase; }
+.arrow-btn { background:none; border:1.5px solid rgba(0,212,168,0.3); border-radius:50%; width:36px; height:36px; display:flex; align-items:center; justify-content:center; cursor:pointer; flex-shrink:0; margin-top:4px; transition:all 0.3s ease; color:#00d4a8; font-size:15px; }
+.arrow-btn:hover { background:#00d4a8; color:#000; border-color:#00d4a8; }
+@media(max-width:900px){ .footer-inner{grid-template-columns:1fr 1fr;} .nav-menu,.nav-buttons{display:none;} .hamburger{display:flex;} }
+@media(max-width:600px){ .navbar{padding:0 20px;} .footer-inner{grid-template-columns:1fr;} .modal-box{padding:32px 24px;} }
+</style>
+</head>
+<body>
+<nav class="navbar" id="navbar">
+  <div class="nav-logo">
+    <a href="/"><img src="./asset/logo_coloured.png" alt="TamkinExpress" onerror="this.style.display='none';this.nextSibling.style.display='block'"><span class="nav-logo-text">TamkinExpress</span></a>
+  </div>
+  <div class="nav-right">
+    <ul class="nav-menu">
+      <li><a href="/" class="nav-link">Home</a></li>
+      <li><a href="/about.html" class="nav-link">About Us</a></li>
+      <li><a href="#services" class="nav-link active">Services</a></li>
+      <li><a href="/portfolio.html" class="nav-link">Portfolio</a></li>
+    </ul>
+    <div class="nav-buttons">
+      <a href="tel:+971588967713" class="nav-btn-outline">📞 Call Us</a>
+      <a href="/contact-us.html" class="nav-cta">Get Free Quote</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="/" class="mobile-link">Home</a>
+  <a href="/about.html" class="mobile-link">About Us</a>
+  <a href="#services" class="mobile-link">Services</a>
+  <a href="/portfolio.html" class="mobile-link">Portfolio</a>
+  <div class="mobile-menu-btns">
+    <a href="tel:+971588967713" class="mobile-cta-outline">📞 Call Us</a>
+    <a href="/contact-us.html" class="mobile-cta">Get Free Quote</a>
+  </div>
+</div>
+<div style="padding-top:72px;">
+<section style="position:relative;background:#000;padding:100px 40px;overflow:hidden;">
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse 60% 70% at 50% 50%,rgba(0,212,168,0.05) 0%,transparent 70%);pointer-events:none;"></div>
+  <div style="position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(0,212,168,0.4),transparent);"></div>
+  <div style="position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(0,212,168,0.4),transparent);"></div>
+  <div style="position:relative;z-index:1;max-width:860px;margin:0 auto;">
+    <div style="text-align:center;margin-bottom:60px;">
+      <span style="display:inline-flex;align-items:center;gap:10px;color:#00d4a8;font-size:11px;font-weight:600;letter-spacing:4px;text-transform:uppercase;margin-bottom:18px;">
+        <span style="width:24px;height:1px;background:#00d4a8;display:inline-block;"></span>
+        From Our Blog
+        <span style="width:24px;height:1px;background:#00d4a8;display:inline-block;"></span>
+      </span>
+      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(32px,4vw,52px);font-weight:900;color:#fff;line-height:1.12;margin:0;">
+        Personal Branding<br>
+        <span style="font-style:italic;background:linear-gradient(90deg,#00d4a8 20%,#fff 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Insights & Guides</span>
+      </h2>
+    </div>
+    <div style="border-top:1px solid rgba(0,212,168,0.15);">
+    <div style="padding:32px 0;border-bottom:1px solid rgba(255,255,255,0.06);display:flex;align-items:flex-start;justify-content:space-between;gap:40px;">
+      <div style="flex:1;">
+        <span style="color:#00d4a8;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;display:block;margin-bottom:12px;">LinkedIn</span>
+        <h3 style="font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:#fff;line-height:1.4;margin:0 0 10px;">How to Build a LinkedIn Profile That Generates Leads in UAE</h3>
+        <p style="font-family:'DM Sans',sans-serif;font-size:13.5px;font-weight:300;color:rgba(255,255,255,0.45);line-height:1.75;margin:0;">The exact profile optimisation steps that turn LinkedIn into an inbound lead machine.</p>
+      </div>
+      <button class="arrow-btn" onclick="openModal('LinkedIn','How to Build a LinkedIn Profile That Generates Leads in UAE','A well-optimised LinkedIn profile is the highest-ROI personal branding asset a UAE professional can have. This guide walks through every section of your LinkedIn profile — headline, about, experience, featured, and skills — with specific optimisation techniques that consistently increase profile views, connection requests, and inbound enquiries from decision-makers across the UAE.')">→</button>
+    </div>
+    <div style="padding:32px 0;border-bottom:1px solid rgba(255,255,255,0.06);display:flex;align-items:flex-start;justify-content:space-between;gap:40px;">
+      <div style="flex:1;">
+        <span style="color:#00d4a8;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;display:block;margin-bottom:12px;">Authority Building</span>
+        <h3 style="font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:#fff;line-height:1.4;margin:0 0 10px;">5 Ways UAE Professionals Build Industry Authority Online</h3>
+        <p style="font-family:'DM Sans',sans-serif;font-size:13.5px;font-weight:300;color:rgba(255,255,255,0.45);line-height:1.75;margin:0;">Content and visibility strategies to become the go-to expert in your field.</p>
+      </div>
+      <button class="arrow-btn" onclick="openModal('Authority Building','5 Ways UAE Professionals Build Industry Authority Online','Industry authority in the UAE market is built through consistent, visible expertise — not just years of experience. This article covers the five highest-impact strategies UAE executives and entrepreneurs use to build professional authority online, from LinkedIn thought leadership and podcast guesting to press features, speaking engagements, and strategic content partnerships.')">→</button>
+    </div>
+    <div style="padding:32px 0;border-bottom:1px solid rgba(255,255,255,0.06);display:flex;align-items:flex-start;justify-content:space-between;gap:40px;">
+      <div style="flex:1;">
+        <span style="color:#00d4a8;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;display:block;margin-bottom:12px;">Content Strategy</span>
+        <h3 style="font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:#fff;line-height:1.4;margin:0 0 10px;">The Personal Branding Content Strategy That Works in Dubai</h3>
+        <p style="font-family:'DM Sans',sans-serif;font-size:13.5px;font-weight:300;color:rgba(255,255,255,0.45);line-height:1.75;margin:0;">A practical weekly content framework for busy UAE executives who want results.</p>
+      </div>
+      <button class="arrow-btn" onclick="openModal('Content Strategy','The Personal Branding Content Strategy That Works in Dubai','Most UAE professionals fail at personal branding not because they lack expertise, but because they lack a consistent content system. This guide gives you a practical weekly content framework — designed for busy executives — that builds your personal brand on LinkedIn and beyond without requiring more than 90 minutes of your time per week.')">→</button>
+    </div>
+    <div style="padding:32px 0;border-bottom:1px solid rgba(255,255,255,0.06);display:flex;align-items:flex-start;justify-content:space-between;gap:40px;">
+      <div style="flex:1;">
+        <span style="color:#00d4a8;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;display:block;margin-bottom:12px;">Personal Brand</span>
+        <h3 style="font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:#fff;line-height:1.4;margin:0 0 10px;">Why Your Personal Brand Is Your Most Valuable Business Asset in UAE</h3>
+        <p style="font-family:'DM Sans',sans-serif;font-size:13.5px;font-weight:300;color:rgba(255,255,255,0.45);line-height:1.75;margin:0;">How personal credibility translates to higher fees and faster business growth.</p>
+      </div>
+      <button class="arrow-btn" onclick="openModal('Personal Brand','Why Your Personal Brand Is Your Most Valuable Business Asset in UAE','In the UAE\'s relationship-driven business culture, who you are professionally is often more important than what your company offers. This article examines how a strong personal brand directly impacts your ability to command premium fees, attract high-quality partnerships, close deals faster, and build the kind of professional reputation that generates referrals without asking.')">→</button>
+    </div>
+    <div style="padding:32px 0;display:flex;align-items:flex-start;justify-content:space-between;gap:40px;">
+      <div style="flex:1;">
+        <span style="color:#00d4a8;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;display:block;margin-bottom:12px;">Media</span>
+        <h3 style="font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:#fff;line-height:1.4;margin:0 0 10px;">How to Get Featured in UAE Media as an Industry Expert</h3>
+        <p style="font-family:'DM Sans',sans-serif;font-size:13.5px;font-weight:300;color:rgba(255,255,255,0.45);line-height:1.75;margin:0;">PR pitching, podcast guesting, and speaking strategies for Dubai and Abu Dhabi.</p>
+      </div>
+      <button class="arrow-btn" onclick="openModal('Media','How to Get Featured in UAE Media as an Industry Expert','Being featured in UAE media publications, podcasts, and industry events is one of the fastest ways to accelerate your personal brand in Dubai and Abu Dhabi. This practical guide covers how to identify the right media outlets for your industry, craft a compelling expert pitch, prepare for your first podcast appearance, and leverage every media feature for maximum visibility.')">→</button>
+    </div>
+    </div>
+    <div style="text-align:center;margin-top:48px;">
+      <a href="/contact-us.html" style="display:inline-flex;align-items:center;gap:10px;background:#00d4a8;color:#000;padding:15px 36px;border-radius:100px;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;text-decoration:none;letter-spacing:0.8px;text-transform:uppercase;">Get Started Today →</a>
+    </div>
+  </div>
+</section></div>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="./asset/logo_coloured.png" alt="TamkinExpress" onerror="this.style.display='none'">
+      <p>Your complete business services partner in UAE. From registration to digital excellence.</p>
+      <div class="fc">
+        <p>📍 Office No. 49, Maxim Pharmacy Building, Musaffah M43, Abu Dhabi, UAE</p>
+        <p>📞 +971 588967713</p>
+        <p>✉️ info@tamkinexpress.com</p>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Services</h5>
+      <ul>
+        <li><a href="/digital-marketing.html">Digital Marketing</a></li>
+        <li><a href="/web-development.html">Web Development</a></li>
+        <li><a href="/mobile-app-development.html">Mobile App Development</a></li>
+        <li><a href="/software-development.html">Software Development</a></li>
+        <li><a href="/employment-visa.html">Employment Visa</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Company</h5>
+      <ul>
+        <li><a href="/about.html">About Us</a></li>
+        <li><a href="/portfolio.html">Portfolio</a></li>
+        <li><a href="/contact-us.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Visa Services</h5>
+      <ul>
+        <li><a href="./golden-visa.html">Golden Visa</a></li>
+        <li><a href="./employment-visa.html">Employment Visa</a></li>
+        <li><a href="./employment-visa.html">Family Visa</a></li>
+        <li><a href="./cicpa.html">CICPA Passes</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 TamkinExpress. All rights reserved.</span>
+    <span>Abu Dhabi, UAE</span>
+  </div>
+</footer>
+<div class="modal-overlay" id="modal" onclick="closeOnBg(event)">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <span class="modal-cat" id="mCat"></span>
+    <h3 class="modal-title" id="mTitle"></h3>
+    <p class="modal-para" id="mPara"></p>
+    <a href="/contact-us.html" class="modal-btn">Get Started Today →</a>
+  </div>
+</div>
+<script>
+  const navbar=document.getElementById('navbar');
+  window.addEventListener('scroll',()=>navbar.classList.toggle('scrolled',window.scrollY>60));
+  const hamburger=document.getElementById('hamburger');
+  const mobileMenu=document.getElementById('mobileMenu');
+  hamburger.addEventListener('click',()=>{hamburger.classList.toggle('open');mobileMenu.classList.toggle('open');});
+  mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{hamburger.classList.remove('open');mobileMenu.classList.remove('open');}));
+  function openModal(cat,title,para){
+    document.getElementById('mCat').textContent=cat;
+    document.getElementById('mTitle').textContent=title;
+    document.getElementById('mPara').textContent=para;
+    document.getElementById('modal').classList.add('active');
+  }
+  function closeModal(){document.getElementById('modal').classList.remove('active');}
+  function closeOnBg(e){if(e.target===document.getElementById('modal'))closeModal();}
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
+</script>
+</body>
+</html>
