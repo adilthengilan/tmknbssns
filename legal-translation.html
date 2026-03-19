@@ -313,7 +313,90 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
 
 <div class="divider"></div>
 
+<!-- FAQ Section -->
+<style>
+.faq-sec{padding:6rem 6%;background:var(--dark2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.faq-sec .faq-wrap{max-width:860px;margin:0 auto;}
+.faq-item-box{border-bottom:1px solid var(--border);}
+.faq-q{width:100%;background:none;border:none;text-align:left;padding:1.4rem 0;font-family:'Montserrat',sans-serif;font-size:.95rem;font-weight:600;color:var(--text);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;transition:color .2s;}
+.faq-q:hover{color:var(--teal);}
+.faq-plus{width:28px;height:28px;min-width:28px;background:var(--teal-dim);border:1px solid rgba(0,212,200,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--teal);font-size:1.2rem;transition:transform .3s;}
+.faq-item-box.open .faq-plus{transform:rotate(45deg);}
+.faq-ans{max-height:0;overflow:hidden;transition:max-height .4s ease;}
+.faq-item-box.open .faq-ans{max-height:300px;}
+.faq-ans p{padding-bottom:1.4rem;color:var(--muted);font-size:.88rem;line-height:1.8;}
+</style>
 
+<section class="faq-sec" id="faq">
+  <div class="faq-wrap">
+    <p class="sec-label">FAQ</p>
+    <h2 class="sec-title" style="text-align:left;margin-bottom:2.5rem;">Frequently Asked Questions — <em>Legal Translation Servicesin UAE</em></h2>
+
+    <div class="faq-item-box">
+      <button class="faq-q">What is certified legal translation and why do I need it in UAE?<span class="faq-plus">+</span></button>
+      <div class="faq-ans"><p>Certified legal translation is an officially verified translation of a document, stamped and signed by a Ministry of Justice (MOJ) approved translator in the UAE. It is required whenever you submit foreign-language documents to UAE government authorities, courts, embassies, or institutions — including visa applications, business registration, and legal proceedings. Uncertified translations are routinely rejected.</p></div>
+    </div>
+
+    <div class="faq-item-box">
+      <button class="faq-q">How long does legal translation take in UAE?<span class="faq-plus">+</span></button>
+      <div class="faq-ans"><p>Most standard documents — such as certificates, contracts, and personal IDs — are translated and certified within 24 hours. For longer or more complex documents, turnaround is typically 2–3 business days. Same-day urgent service is also available. Once you submit your document, we confirm the exact timeline before we begin.</p></div>
+    </div>
+
+    <div class="faq-item-box">
+      <button class="faq-q">Which languages do you translate to and from?<span class="faq-plus">+</span></button>
+      <div class="faq-ans"><p>We provide certified translation across 30+ languages including Arabic, English, French, Hindi, Urdu, Tagalog, Malayalam, Bengali, Chinese, Spanish, and more. All translations are handled by native-level certified translators with expertise in legal terminology. If your language is not listed, <a href="https://tamkinexpress.ae/contact-us.html">contact us</a> and we will confirm availability.</p></div>
+    </div>
+
+    <div class="faq-item-box">
+      <button class="faq-q">Are your translations accepted by UAE courts and government authorities?<span class="faq-plus">+</span></button>
+      <div class="faq-ans"><p>Yes. All translations provided by TamkinExpress are certified by MOJ-approved translators and accepted by UAE courts, the Ministry of Foreign Affairs, Ministry of Education, free zone authorities, and embassies across all emirates. Our 100% acceptance rate reflects the quality and compliance standards we uphold on every document.</p></div>
+    </div>
+
+    <div class="faq-item-box">
+      <button class="faq-q">What types of documents can you translate?<span class="faq-plus">+</span></button>
+      <div class="faq-ans"><p>We translate all categories of legal and official documents including contracts and agreements, educational certificates and transcripts, court judgments and affidavits, passports and personal IDs, birth and marriage certificates, corporate documents such as trade licenses and MOAs, and medical and financial records. If you are unsure whether your document qualifies, <a href="https://tamkinexpress.ae/contact-us.html">get in touch</a> and we will advise you.</p></div>
+    </div>
+
+    <div class="faq-item-box">
+      <button class="faq-q">Do I need to visit your office to submit documents?<span class="faq-plus">+</span></button>
+      <div class="faq-ans"><p>No. You can submit your documents digitally via email or WhatsApp. We handle everything remotely and deliver the certified translated document back to you — either digitally or as a physical stamped copy, depending on your requirement. In-person drop-off at our Abu Dhabi office is also available if preferred.</p></div>
+    </div>
+
+     <div class="faq-item-box">
+      <button class="faq-q">How much does certified legal translation cost in UAE?<span class="faq-plus">+</span></button>
+      <div class="faq-ans"><p>Translation costs depend on the document type, word count, language pair, and whether urgent turnaround is required. We offer competitive, transparent pricing with no hidden fees. <a href="https://tamkinexpress.ae/contact-us.html">Request a free quote</a> and we will provide a clear breakdown within the hour.</p></div>
+    </div>
+
+    <div class="faq-item-box">
+      <button class="faq-q">Why choose Tamkin Express for Legal Translation?<span class="faq-plus">+</span></button>
+      <div class="faq-ans"><p>UAE government certified, 24-hour express delivery, legal terminology accuracy, and 30+ languages — Arabic, English, Hindi, Malayalam and more.</p></div>
+    </div>
+  </div>
+</section>
+
+<script>
+// FAQ accordion
+document.querySelectorAll('.faq-q').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var item=this.parentElement,wasOpen=item.classList.contains('open');
+    document.querySelectorAll('.faq-item-box').forEach(function(i){i.classList.remove('open');});
+    if(!wasOpen) item.classList.add('open');
+  });
+});
+// Counter threshold fix
+(function(){
+  var cio2=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting&&!e.target.dataset.done){
+        e.target.dataset.done='1';
+        var target=parseInt(e.target.dataset.target),suffix=e.target.dataset.suffix||'',dur=1800,start=performance.now();
+        (function tick(now){var p=Math.min((now-start)/dur,1),ease=1-Math.pow(1-p,3);e.target.textContent=Math.floor(ease*target)+suffix;if(p<1)requestAnimationFrame(tick);else e.target.textContent=target+suffix;})(performance.now());
+      }
+    });
+  },{threshold:0.1});
+  document.querySelectorAll('.stat-val[data-target]').forEach(function(el){cio2.observe(el);});
+})();
+</script>
 
 <!-- FINAL CTA -->
 <section class="final-cta" id="contact">
