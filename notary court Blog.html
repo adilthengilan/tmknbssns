@@ -51,20 +51,78 @@ footer { background:#000; border-top:1px solid rgba(0,212,168,0.1); padding:60px
 .footer-col a { color:var(--muted); text-decoration:none; font-size:13px; font-weight:300; transition:color 0.3s; }
 .footer-col a:hover { color:#fff; }
 .footer-bottom { max-width:1200px; margin:24px auto 0; display:flex; justify-content:space-between; align-items:center; font-size:12px; color:rgba(255,255,255,0.3); }
-.modal-overlay { position:fixed; inset:0; background:rgba(0,0,0,0.85); z-index:9999; display:none; align-items:center; justify-content:center; padding:24px; }
-.modal-overlay.active { display:flex; }
-.modal-box { background:#0F1116; border:1px solid rgba(0,212,168,0.25); border-radius:20px; padding:44px 40px; max-width:560px; width:100%; position:relative; animation:modalIn 0.3s ease; }
-@keyframes modalIn { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
-.modal-close { position:absolute; top:18px; right:20px; background:none; border:none; cursor:pointer; color:rgba(255,255,255,0.4); font-size:22px; line-height:1; transition:color 0.2s; }
-.modal-close:hover { color:#00d4a8; }
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeUp { from{opacity:0;transform:translateY(32px)} to{opacity:1;transform:translateY(0)} }
+@keyframes fadeIn { from{opacity:0} to{opacity:1} }
+@keyframes shimmer { 0%,100%{background-position:0% 50%} 50%{background-position:100% 50%} }
+@keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.4;transform:scale(0.7)} }
+@keyframes modalIn { from{opacity:0;transform:translateY(24px) scale(0.97)} to{opacity:1;transform:translateY(0) scale(1)} }
+@keyframes lineGrow { from{width:0;opacity:0} to{width:24px;opacity:1} }
+@keyframes borderPulse { 0%,100%{border-color:rgba(0,212,168,0.15)} 50%{border-color:rgba(0,212,168,0.4)} }
+@keyframes arrowBounce { 0%,100%{transform:translateX(0)} 50%{transform:translateX(3px)} }
+@keyframes btnGlow { 0%,100%{box-shadow:0 0 0 rgba(0,212,168,0)} 50%{box-shadow:0 0 20px rgba(0,212,168,0.3)} }
+
+.blog-section { position:relative; background:#000; padding:100px 40px; overflow:hidden; }
+.blog-section::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 60% 70% at 50% 50%,rgba(0,212,168,0.05) 0%,transparent 70%); pointer-events:none; }
+.blog-top-line,.blog-bot-line { position:absolute; left:0; right:0; height:1px; }
+.blog-top-line { top:0; background:linear-gradient(90deg,transparent,rgba(0,212,168,0.4),transparent); animation:fadeIn 1s ease both; }
+.blog-bot-line { bottom:0; background:linear-gradient(90deg,transparent,rgba(0,212,168,0.4),transparent); animation:fadeIn 1s 0.2s ease both; }
+.blog-inner { position:relative; z-index:1; max-width:860px; margin:0 auto; }
+
+.blog-heading-wrap { text-align:center; margin-bottom:60px; }
+.blog-label-wrap { display:inline-flex; align-items:center; gap:10px; color:#00d4a8; font-size:11px; font-weight:600; letter-spacing:4px; text-transform:uppercase; margin-bottom:18px; opacity:0; animation:fadeUp 0.7s 0.2s ease forwards; }
+.blog-label-line { width:0; height:1px; background:#00d4a8; animation:lineGrow 0.6s 0.6s ease forwards; }
+.blog-h2 { font-family:'Playfair Display',serif; font-size:clamp(32px,4vw,52px); font-weight:900; color:#fff; line-height:1.12; margin:0; opacity:0; animation:fadeUp 0.7s 0.35s ease forwards; }
+.blog-h2-gradient { font-style:italic; background:linear-gradient(90deg,#00d4a8 20%,#fff 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; background-size:200%; animation:shimmer 4s 1s ease-in-out infinite; }
+
+.blog-list { border-top:1px solid rgba(0,212,168,0.15); animation:borderPulse 3s ease infinite; }
+.blog-row { padding:32px 0; border-bottom:1px solid rgba(255,255,255,0.06); display:flex; align-items:flex-start; justify-content:space-between; gap:40px; opacity:0; transform:translateY(24px); transition:opacity 0.6s ease, transform 0.6s ease, border-color 0.3s ease; }
+.blog-row:last-child { border-bottom:none; }
+.blog-row.visible { opacity:1; transform:translateY(0); }
+.blog-row:hover { border-color:rgba(0,212,168,0.2); }
+.blog-row-content { flex:1; }
+.blog-cat { color:#00d4a8; font-size:10px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; display:block; margin-bottom:12px; transition:letter-spacing 0.3s ease; }
+.blog-row:hover .blog-cat { letter-spacing:2px; }
+.blog-title { font-family:'Playfair Display',serif; font-size:20px; font-weight:700; color:#fff; line-height:1.4; margin:0 0 10px; transition:color 0.3s ease; position:relative; display:inline-block; }
+.blog-title::after { content:''; position:absolute; bottom:-2px; left:0; width:0; height:1px; background:#00d4a8; transition:width 0.4s ease; }
+.blog-row:hover .blog-title { color:rgba(255,255,255,0.9); }
+.blog-row:hover .blog-title::after { width:100%; }
+.blog-desc { font-family:'DM Sans',sans-serif; font-size:13.5px; font-weight:300; color:rgba(255,255,255,0.45); line-height:1.75; margin:0; transition:color 0.3s ease; }
+.blog-row:hover .blog-desc { color:rgba(255,255,255,0.6); }
+
+.arrow-btn { background:none; border:1.5px solid rgba(0,212,168,0.3); border-radius:50%; width:38px; height:38px; display:flex; align-items:center; justify-content:center; cursor:pointer; flex-shrink:0; margin-top:4px; color:#00d4a8; font-size:16px; position:relative; overflow:hidden; transition:all 0.35s cubic-bezier(0.4,0,0.2,1); }
+.arrow-btn::before { content:''; position:absolute; inset:0; background:#00d4a8; border-radius:50%; transform:scale(0); transition:transform 0.35s cubic-bezier(0.4,0,0.2,1); }
+.arrow-btn span { position:relative; z-index:1; transition:color 0.35s ease, transform 0.35s ease; display:block; }
+.arrow-btn:hover { border-color:#00d4a8; box-shadow:0 0 16px rgba(0,212,168,0.3); }
+.arrow-btn:hover::before { transform:scale(1); }
+.arrow-btn:hover span { color:#000; transform:translateX(2px); }
+
+.blog-cta-wrap { text-align:center; margin-top:48px; opacity:0; transform:translateY(20px); transition:opacity 0.6s ease, transform 0.6s ease; }
+.blog-cta-wrap.visible { opacity:1; transform:translateY(0); }
+.blog-cta-btn { display:inline-flex; align-items:center; gap:10px; background:#00d4a8; color:#000; padding:15px 36px; border-radius:100px; font-family:'Montserrat',sans-serif; font-size:13px; font-weight:700; text-decoration:none; letter-spacing:0.8px; text-transform:uppercase; transition:all 0.3s ease; position:relative; overflow:hidden; }
+.blog-cta-btn::before { content:''; position:absolute; inset:0; background:rgba(255,255,255,0.15); transform:translateX(-100%); transition:transform 0.4s ease; }
+.blog-cta-btn:hover { background:#00ffc8; transform:translateY(-2px); box-shadow:0 12px 28px rgba(0,212,168,0.4); animation:btnGlow 2s ease infinite; }
+.blog-cta-btn:hover::before { transform:translateX(100%); }
+.blog-cta-btn:hover .btn-arrow { animation:arrowBounce 0.6s ease infinite; }
+.btn-arrow { display:inline-block; transition:transform 0.3s ease; }
+
+/* Modal */
+.modal-overlay { position:fixed; inset:0; background:rgba(0,0,0,0); z-index:9999; display:flex; align-items:center; justify-content:center; padding:24px; pointer-events:none; transition:background 0.3s ease; }
+.modal-overlay.active { background:rgba(0,0,0,0.85); pointer-events:all; }
+.modal-box { background:#0F1116; border:1px solid rgba(0,212,168,0.25); border-radius:20px; padding:44px 40px; max-width:560px; width:100%; position:relative; opacity:0; transform:translateY(24px) scale(0.97); transition:all 0.35s cubic-bezier(0.4,0,0.2,1); }
+.modal-overlay.active .modal-box { opacity:1; transform:translateY(0) scale(1); }
+.modal-close { position:absolute; top:18px; right:20px; background:none; border:none; cursor:pointer; color:rgba(255,255,255,0.4); font-size:22px; line-height:1; transition:all 0.2s ease; width:32px; height:32px; display:flex; align-items:center; justify-content:center; border-radius:50%; }
+.modal-close:hover { color:#00d4a8; background:rgba(0,212,168,0.1); transform:rotate(90deg); }
 .modal-cat { color:#00d4a8; font-size:10px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; display:block; margin-bottom:14px; }
 .modal-title { font-family:'Playfair Display',serif; font-size:22px; font-weight:700; color:#fff; line-height:1.4; margin:0 0 18px; }
 .modal-para { font-family:'DM Sans',sans-serif; font-size:14px; font-weight:300; color:rgba(255,255,255,0.55); line-height:1.85; margin:0 0 28px; }
-.modal-btn { display:inline-flex; align-items:center; gap:8px; background:#00d4a8; color:#000; padding:13px 28px; border-radius:100px; font-family:'Montserrat',sans-serif; font-size:12.5px; font-weight:700; text-decoration:none; letter-spacing:0.8px; text-transform:uppercase; }
-.arrow-btn { background:none; border:1.5px solid rgba(0,212,168,0.3); border-radius:50%; width:36px; height:36px; display:flex; align-items:center; justify-content:center; cursor:pointer; flex-shrink:0; margin-top:4px; transition:all 0.3s ease; color:#00d4a8; font-size:15px; }
-.arrow-btn:hover { background:#00d4a8; color:#000; border-color:#00d4a8; }
+.modal-divider { width:40px; height:1px; background:rgba(0,212,168,0.4); margin:0 0 24px; }
+.modal-btn { display:inline-flex; align-items:center; gap:8px; background:#00d4a8; color:#000; padding:13px 28px; border-radius:100px; font-family:'Montserrat',sans-serif; font-size:12.5px; font-weight:700; text-decoration:none; letter-spacing:0.8px; text-transform:uppercase; transition:all 0.3s ease; }
+.modal-btn:hover { background:#00ffc8; transform:translateY(-1px); box-shadow:0 8px 20px rgba(0,212,168,0.35); }
+
 @media(max-width:900px){ .footer-inner{grid-template-columns:1fr 1fr;} .nav-menu,.nav-buttons{display:none;} .hamburger{display:flex;} }
-@media(max-width:600px){ .navbar{padding:0 20px;} .footer-inner{grid-template-columns:1fr;} .modal-box{padding:32px 24px;} }
+@media(max-width:600px){ .navbar{padding:0 20px;} .footer-inner{grid-template-columns:1fr;} .modal-box{padding:32px 24px;} .blog-section{padding:80px 20px;} }
 </style>
 </head>
 <body>
@@ -97,66 +155,62 @@ footer { background:#000; border-top:1px solid rgba(0,212,168,0.1); padding:60px
   </div>
 </div>
 <div style="padding-top:72px;">
-<section style="position:relative;background:#000;padding:100px 40px;overflow:hidden;">
-  <div style="position:absolute;inset:0;background:radial-gradient(ellipse 60% 70% at 50% 50%,rgba(0,212,168,0.05) 0%,transparent 70%);pointer-events:none;"></div>
-  <div style="position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(0,212,168,0.4),transparent);"></div>
-  <div style="position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(0,212,168,0.4),transparent);"></div>
-  <div style="position:relative;z-index:1;max-width:860px;margin:0 auto;">
-    <div style="text-align:center;margin-bottom:60px;">
-      <span style="display:inline-flex;align-items:center;gap:10px;color:#00d4a8;font-size:11px;font-weight:600;letter-spacing:4px;text-transform:uppercase;margin-bottom:18px;">
-        <span style="width:24px;height:1px;background:#00d4a8;display:inline-block;"></span>
+<section class="blog-section">
+  <div class="blog-top-line"></div>
+  <div class="blog-bot-line"></div>
+  <div class="blog-inner">
+    <div class="blog-heading-wrap">
+      <div class="blog-label-wrap">
+        <span class="blog-label-line"></span>
         From Our Blog
-        <span style="width:24px;height:1px;background:#00d4a8;display:inline-block;"></span>
-      </span>
-      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(32px,4vw,52px);font-weight:900;color:#fff;line-height:1.12;margin:0;">
-        Notary & Court Services<br>
-        <span style="font-style:italic;background:linear-gradient(90deg,#00d4a8 20%,#fff 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Insights & Guides</span>
-      </h2>
-    </div>
-    <div style="border-top:1px solid rgba(0,212,168,0.15);">
-    <div style="padding:32px 0;border-bottom:1px solid rgba(255,255,255,0.06);display:flex;align-items:flex-start;justify-content:space-between;gap:40px;">
-      <div style="flex:1;">
-        <span style="color:#00d4a8;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;display:block;margin-bottom:12px;">Notarisation</span>
-        <h3 style="font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:#fff;line-height:1.4;margin:0 0 10px;">What is Notarisation and When Do You Need It in the UAE?</h3>
-        <p style="font-family:'DM Sans',sans-serif;font-size:13.5px;font-weight:300;color:rgba(255,255,255,0.45);line-height:1.75;margin:0;">A practical guide to notary public services for individuals and businesses in the UAE.</p>
+        <span class="blog-label-line"></span>
       </div>
-      <button class="arrow-btn" onclick="openModal('Notarisation','What is Notarisation and When Do You Need It in the UAE?','Notarisation in the UAE involves having a document certified by a UAE Notary Public — a government-appointed official who verifies the authenticity of signatures, the identity of signing parties, and the legal validity of the document. Notarised documents are required for Power of Attorney instruments, company resolutions, property transfer agreements, commercial contracts, and many government applications. This guide explains when notarisation is required, where to get documents notarised in Dubai and Abu Dhabi, and what to bring to the appointment.')">→</button>
+      <h2 class="blog-h2">Notary & Court Services<br><span class="blog-h2-gradient">Insights & Guides</span></h2>
     </div>
-    <div style="padding:32px 0;border-bottom:1px solid rgba(255,255,255,0.06);display:flex;align-items:flex-start;justify-content:space-between;gap:40px;">
-      <div style="flex:1;">
-        <span style="color:#00d4a8;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;display:block;margin-bottom:12px;">Power of Attorney</span>
-        <h3 style="font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:#fff;line-height:1.4;margin:0 0 10px;">UAE Power of Attorney: How to Draft, Notarise, and Use It Legally</h3>
-        <p style="font-family:'DM Sans',sans-serif;font-size:13.5px;font-weight:300;color:rgba(255,255,255,0.45);line-height:1.75;margin:0;">Everything individuals and businesses need to know about POA in the UAE.</p>
+    <div class="blog-list">
+      <div class="blog-row">
+        <div class="blog-row-content">
+          <span class="blog-cat">Notarisation</span>
+          <div class="blog-title">What is Notarisation and When Do You Need It in the UAE?</div>
+          <p class="blog-desc">A practical guide to notary public services for individuals and businesses in the UAE.</p>
+        </div>
+        <button class="arrow-btn" onclick="openModal('Notarisation','What is Notarisation and When Do You Need It in the UAE?','Notarisation in the UAE involves having a document certified by a UAE Notary Public — a government-appointed official who verifies the authenticity of signatures, the identity of signing parties, and the legal validity of the document. Notarised documents are required for Power of Attorney instruments, company resolutions, property transfer agreements, commercial contracts, and many government applications.')"><span>→</span></button>
       </div>
-      <button class="arrow-btn" onclick="openModal('Power of Attorney','UAE Power of Attorney: How to Draft, Notarise, and Use It Legally','A Power of Attorney allows one person or entity to legally act on behalf of another in the UAE — for property transactions, business dealings, court representation, or government applications. UAE POAs must be notarised by a UAE Notary Public to be legally valid. If the grantor is outside the UAE, the POA must be notarised in their home country and attested through the UAE Embassy and MOFA. This guide covers how to draft a valid UAE POA, the notarisation process, and how to ensure it is accepted by UAE authorities.')">→</button>
-    </div>
-    <div style="padding:32px 0;border-bottom:1px solid rgba(255,255,255,0.06);display:flex;align-items:flex-start;justify-content:space-between;gap:40px;">
-      <div style="flex:1;">
-        <span style="color:#00d4a8;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;display:block;margin-bottom:12px;">Company Documents</span>
-        <h3 style="font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:#fff;line-height:1.4;margin:0 0 10px;">Notarising Company Documents in UAE: Memorandum, Resolutions & Contracts</h3>
-        <p style="font-family:'DM Sans',sans-serif;font-size:13.5px;font-weight:300;color:rgba(255,255,255,0.45);line-height:1.75;margin:0;">Which corporate documents require notarisation and how to get them done.</p>
+      <div class="blog-row">
+        <div class="blog-row-content">
+          <span class="blog-cat">Power of Attorney</span>
+          <div class="blog-title">UAE Power of Attorney: How to Draft, Notarise, and Use It Legally</div>
+          <p class="blog-desc">Everything individuals and businesses need to know about POA in the UAE.</p>
+        </div>
+        <button class="arrow-btn" onclick="openModal('Power of Attorney','UAE Power of Attorney: How to Draft, Notarise, and Use It Legally','A Power of Attorney allows one person or entity to legally act on behalf of another in the UAE — for property transactions, business dealings, court representation, or government applications. UAE POAs must be notarised by a UAE Notary Public to be legally valid. If the grantor is outside the UAE, the POA must be notarised in their home country and attested through the UAE Embassy and MOFA.')"><span>→</span></button>
       </div>
-      <button class="arrow-btn" onclick="openModal('Company Documents','Notarising Company Documents in UAE: Memorandum, Resolutions & Contracts','Many corporate documents in the UAE require notarisation to be legally enforceable — including Memorandums of Association, shareholder resolutions, director appointment letters, and significant commercial contracts. The process requires all signing parties to be present with valid Emirates ID or passport, and the notary will verify identities and witness signatures. This guide explains which company documents require notarisation in the UAE, the cost and timeline involved, and the difference between notarisation and attestation for corporate documents.')">→</button>
-    </div>
-    <div style="padding:32px 0;border-bottom:1px solid rgba(255,255,255,0.06);display:flex;align-items:flex-start;justify-content:space-between;gap:40px;">
-      <div style="flex:1;">
-        <span style="color:#00d4a8;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;display:block;margin-bottom:12px;">Court Procedures</span>
-        <h3 style="font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:#fff;line-height:1.4;margin:0 0 10px;">UAE Court Procedures for Businesses: A Plain Language Guide</h3>
-        <p style="font-family:'DM Sans',sans-serif;font-size:13.5px;font-weight:300;color:rgba(255,255,255,0.45);line-height:1.75;margin:0;">How UAE courts work, case timelines, and what to expect as a business litigant.</p>
+      <div class="blog-row">
+        <div class="blog-row-content">
+          <span class="blog-cat">Company Documents</span>
+          <div class="blog-title">Notarising Company Documents in UAE: Memorandum, Resolutions & Contracts</div>
+          <p class="blog-desc">Which corporate documents require notarisation and how to get them done.</p>
+        </div>
+        <button class="arrow-btn" onclick="openModal('Company Documents','Notarising Company Documents in UAE: Memorandum, Resolutions & Contracts','Many corporate documents in the UAE require notarisation to be legally enforceable — including Memorandums of Association, shareholder resolutions, director appointment letters, and significant commercial contracts. The process requires all signing parties to be present with valid Emirates ID or passport, and the notary will verify identities and witness signatures.')"><span>→</span></button>
       </div>
-      <button class="arrow-btn" onclick="openModal('Court Procedures','UAE Court Procedures for Businesses: A Plain Language Guide','The UAE court system operates across three tiers — Court of First Instance, Court of Appeal, and Court of Cassation — with cases conducted primarily in Arabic. Civil and commercial cases in UAE courts follow a written pleadings process rather than the oral arguments common in common law systems. This guide explains how UAE court procedures work for commercial disputes, the realistic timeline for resolution, the role of court experts and translators, and how businesses can prepare their documentation for court proceedings.')">→</button>
-    </div>
-    <div style="padding:32px 0;display:flex;align-items:flex-start;justify-content:space-between;gap:40px;">
-      <div style="flex:1;">
-        <span style="color:#00d4a8;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;display:block;margin-bottom:12px;">Enforcement</span>
-        <h3 style="font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:#fff;line-height:1.4;margin:0 0 10px;">Enforcing Court Judgments in the UAE: What Happens After You Win?</h3>
-        <p style="font-family:'DM Sans',sans-serif;font-size:13.5px;font-weight:300;color:rgba(255,255,255,0.45);line-height:1.75;margin:0;">The enforcement process for UAE civil and commercial court judgments.</p>
+      <div class="blog-row">
+        <div class="blog-row-content">
+          <span class="blog-cat">Court Procedures</span>
+          <div class="blog-title">UAE Court Procedures for Businesses: A Plain Language Guide</div>
+          <p class="blog-desc">How UAE courts work, case timelines, and what to expect as a business litigant.</p>
+        </div>
+        <button class="arrow-btn" onclick="openModal('Court Procedures','UAE Court Procedures for Businesses: A Plain Language Guide','The UAE court system operates across three tiers — Court of First Instance, Court of Appeal, and Court of Cassation — with cases conducted primarily in Arabic. Civil and commercial cases in UAE courts follow a written pleadings process rather than the oral arguments common in common law systems. This guide explains how UAE court procedures work for commercial disputes, the realistic timeline for resolution, and how businesses can prepare their documentation for court proceedings.')"><span>→</span></button>
       </div>
-      <button class="arrow-btn" onclick="openModal('Enforcement','Enforcing Court Judgments in the UAE: What Happens After You Win?','Winning a court judgment in the UAE is only the first step — enforcing that judgment against a non-paying defendant requires a separate enforcement application through the Court of Execution. The enforcement process includes asset freezes, bank account attachments, travel bans, and property seizures. Cross-border enforcement of UAE judgments is possible under bilateral agreements with certain countries. This guide explains the UAE judgment enforcement process, the tools available to creditors, and the typical timeline from judgment to actual recovery.')">→</button>
+      <div class="blog-row">
+        <div class="blog-row-content">
+          <span class="blog-cat">Enforcement</span>
+          <div class="blog-title">Enforcing Court Judgments in the UAE: What Happens After You Win?</div>
+          <p class="blog-desc">The enforcement process for UAE civil and commercial court judgments.</p>
+        </div>
+        <button class="arrow-btn" onclick="openModal('Enforcement','Enforcing Court Judgments in the UAE: What Happens After You Win?','Winning a court judgment in the UAE is only the first step — enforcing that judgment against a non-paying defendant requires a separate enforcement application through the Court of Execution. The enforcement process includes asset freezes, bank account attachments, travel bans, and property seizures. This guide explains the UAE judgment enforcement process, the tools available to creditors, and the typical timeline from judgment to actual recovery.')"><span>→</span></button>
+      </div>
     </div>
-    </div>
-    <div style="text-align:center;margin-top:48px;">
-      <a href="/contact-us.html" style="display:inline-flex;align-items:center;gap:10px;background:#00d4a8;color:#000;padding:15px 36px;border-radius:100px;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;text-decoration:none;letter-spacing:0.8px;text-transform:uppercase;">Get Started Today →</a>
+    <div class="blog-cta-wrap">
+      <a href="/contact-us.html" class="blog-cta-btn">Get Started Today <span class="btn-arrow">→</span></a>
     </div>
   </div>
 </section></div>
@@ -209,6 +263,7 @@ footer { background:#000; border-top:1px solid rgba(0,212,168,0.1); padding:60px
     <button class="modal-close" onclick="closeModal()">✕</button>
     <span class="modal-cat" id="mCat"></span>
     <h3 class="modal-title" id="mTitle"></h3>
+    <div class="modal-divider"></div>
     <p class="modal-para" id="mPara"></p>
     <a href="/contact-us.html" class="modal-btn">Get Started Today →</a>
   </div>
@@ -220,13 +275,38 @@ footer { background:#000; border-top:1px solid rgba(0,212,168,0.1); padding:60px
   const mobileMenu=document.getElementById('mobileMenu');
   hamburger.addEventListener('click',()=>{hamburger.classList.toggle('open');mobileMenu.classList.toggle('open');});
   mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{hamburger.classList.remove('open');mobileMenu.classList.remove('open');}));
+
+  // Stagger reveal for rows
+  const rows = document.querySelectorAll('.blog-row');
+  const ctaWrap = document.querySelector('.blog-cta-wrap');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  rows.forEach((row, i) => {
+    row.style.transitionDelay = (i * 0.1) + 's';
+    observer.observe(row);
+  });
+  if (ctaWrap) {
+    ctaWrap.style.transitionDelay = (rows.length * 0.1 + 0.1) + 's';
+    observer.observe(ctaWrap);
+  }
+
   function openModal(cat,title,para){
     document.getElementById('mCat').textContent=cat;
     document.getElementById('mTitle').textContent=title;
     document.getElementById('mPara').textContent=para;
     document.getElementById('modal').classList.add('active');
+    document.body.style.overflow='hidden';
   }
-  function closeModal(){document.getElementById('modal').classList.remove('active');}
+  function closeModal(){
+    document.getElementById('modal').classList.remove('active');
+    document.body.style.overflow='';
+  }
   function closeOnBg(e){if(e.target===document.getElementById('modal'))closeModal();}
   document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
 </script>
