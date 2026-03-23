@@ -1,1 +1,5 @@
-
+Redirect 301 /attestation.html https://tamkinexpress.ae/certificate-attestation.html
+Redirect 301 /visaProcessing.html https://tamkinexpress.ae/employment-visa.html
+Redirect 301 /translation.html https://tamkinexpress.ae/legal-translation.html
+Redirect 301 /coportativeService.html https://tamkinexpress.ae/pro-services.html
+Redirect 301 /seo-services-uae.html https://tamkinexpress.ae/digital-marketing.html
