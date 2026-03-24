@@ -76,6 +76,9 @@ footer { background:#000; border-top:1px solid rgba(0,212,168,0.1); padding:60px
 .blog-h2 { font-family:'Playfair Display',serif; font-size:clamp(32px,4vw,52px); font-weight:900; color:#fff; line-height:1.12; margin:0; opacity:0; animation:fadeUp 0.7s 0.35s ease forwards; }
 .blog-h2-gradient { font-style:italic; background:linear-gradient(90deg,#00d4a8 20%,#fff 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; background-size:200%; animation:shimmer 4s 1s ease-in-out infinite; }
 
+/* Intro text block */
+.blog-intro { font-family:'DM Sans',sans-serif; font-size:14.5px; font-weight:300; color:rgba(255,255,255,0.5); line-height:1.9; text-align:center; max-width:680px; margin:0 auto 48px; opacity:0; animation:fadeUp 0.7s 0.5s ease forwards; }
+
 .blog-list { border-top:1px solid rgba(0,212,168,0.15); animation:borderPulse 3s ease infinite; }
 .blog-row { padding:32px 0; border-bottom:1px solid rgba(255,255,255,0.06); display:flex; align-items:flex-start; justify-content:space-between; gap:40px; opacity:0; transform:translateY(24px); transition:opacity 0.6s ease, transform 0.6s ease, border-color 0.3s ease; }
 .blog-row:last-child { border-bottom:none; }
@@ -90,6 +93,16 @@ footer { background:#000; border-top:1px solid rgba(0,212,168,0.1); padding:60px
 .blog-row:hover .blog-title::after { width:100%; }
 .blog-desc { font-family:'DM Sans',sans-serif; font-size:13.5px; font-weight:300; color:rgba(255,255,255,0.45); line-height:1.75; margin:0; transition:color 0.3s ease; }
 .blog-row:hover .blog-desc { color:rgba(255,255,255,0.6); }
+
+/* Extended description visible directly on page */
+.blog-desc-extended { font-family:'DM Sans',sans-serif; font-size:13px; font-weight:300; color:rgba(255,255,255,0.35); line-height:1.85; margin:10px 0 0; transition:color 0.3s ease; }
+.blog-row:hover .blog-desc-extended { color:rgba(255,255,255,0.5); }
+
+/* Section divider label */
+.blog-section-label { display:flex; align-items:center; gap:14px; margin:52px 0 8px; opacity:0; transform:translateY(16px); transition:opacity 0.6s ease,transform 0.6s ease; }
+.blog-section-label.visible { opacity:1; transform:translateY(0); }
+.blog-section-label span { color:#00d4a8; font-size:10px; font-weight:700; letter-spacing:2.5px; text-transform:uppercase; }
+.blog-section-label::after { content:''; flex:1; height:1px; background:linear-gradient(90deg,rgba(0,212,168,0.3),transparent); }
 
 .arrow-btn { background:none; border:1.5px solid rgba(0,212,168,0.3); border-radius:50%; width:38px; height:38px; display:flex; align-items:center; justify-content:center; cursor:pointer; flex-shrink:0; margin-top:4px; color:#00d4a8; font-size:16px; position:relative; overflow:hidden; transition:all 0.35s cubic-bezier(0.4,0,0.2,1); }
 .arrow-btn::before { content:''; position:absolute; inset:0; background:#00d4a8; border-radius:50%; transform:scale(0); transition:transform 0.35s cubic-bezier(0.4,0,0.2,1); }
@@ -106,6 +119,12 @@ footer { background:#000; border-top:1px solid rgba(0,212,168,0.1); padding:60px
 .blog-cta-btn:hover::before { transform:translateX(100%); }
 .blog-cta-btn:hover .btn-arrow { animation:arrowBounce 0.6s ease infinite; }
 .btn-arrow { display:inline-block; transition:transform 0.3s ease; }
+
+/* Bottom editorial note */
+.blog-editorial { margin-top:60px; padding:28px 32px; border:1px solid rgba(0,212,168,0.12); border-left:3px solid rgba(0,212,168,0.5); border-radius:4px; opacity:0; transform:translateY(20px); transition:opacity 0.6s ease,transform 0.6s ease; }
+.blog-editorial.visible { opacity:1; transform:translateY(0); }
+.blog-editorial p { font-family:'DM Sans',sans-serif; font-size:13px; font-weight:300; color:rgba(255,255,255,0.4); line-height:1.9; }
+.blog-editorial p strong { color:rgba(255,255,255,0.65); font-weight:500; }
 
 /* Modal */
 .modal-overlay { position:fixed; inset:0; background:rgba(0,0,0,0); z-index:9999; display:flex; align-items:center; justify-content:center; padding:24px; pointer-events:none; transition:background 0.3s ease; }
@@ -159,6 +178,7 @@ footer { background:#000; border-top:1px solid rgba(0,212,168,0.1); padding:60px
   <div class="blog-top-line"></div>
   <div class="blog-bot-line"></div>
   <div class="blog-inner">
+
     <div class="blog-heading-wrap">
       <div class="blog-label-wrap">
         <span class="blog-label-line"></span>
@@ -167,51 +187,127 @@ footer { background:#000; border-top:1px solid rgba(0,212,168,0.1); padding:60px
       </div>
       <h2 class="blog-h2">Ministry of Economy<br><span class="blog-h2-gradient">Insights & Guides</span></h2>
     </div>
+
+    <!-- INTRO PARAGRAPH -->
+    <p class="blog-intro">The UAE Ministry of Economy governs a wide range of business activities — from intellectual property and trademark registration to commercial agency law, trade remedies, and economic substance compliance. Whether you are a startup establishing your first brand or a multinational navigating UAE regulatory requirements, understanding the Ministry's processes is essential to operating legally and competitively in the Emirates. TamkinExpress has helped hundreds of businesses across Abu Dhabi and the UAE manage their Ministry of Economy obligations with clarity, speed, and full compliance.</p>
+
     <div class="blog-list">
+
+      <!-- ROW 1 -->
       <div class="blog-row">
         <div class="blog-row-content">
           <span class="blog-cat">Trademark Registration</span>
           <div class="blog-title">How to Register a Trademark with the UAE Ministry of Economy</div>
           <p class="blog-desc">Protecting your brand name, logo, and intellectual property in the UAE.</p>
+          <p class="blog-desc-extended">Trademark registration in the UAE is handled exclusively by the Ministry of Economy and grants the owner exclusive legal rights to use a brand name, logo, slogan, or distinctive mark across all seven Emirates. The registration process involves an initial trademark search to confirm availability, submission of the application with the required documentation — including a clear representation of the mark, the applicant's trade licence, and a power of attorney if filing through an agent — followed by a mandatory publication period in two local newspapers, a 30-day opposition window, and finally the issuance of the registration certificate valid for 10 years and renewable indefinitely. Businesses operating without a registered trademark have no legal recourse if a competitor copies their brand identity, making early registration one of the most cost-effective forms of legal protection available in the UAE market.</p>
         </div>
         <button class="arrow-btn" onclick="openModal('Trademark Registration','How to Register a Trademark with the UAE Ministry of Economy','Registering a trademark with the UAE Ministry of Economy gives you exclusive legal rights to your brand name, logo, and associated marks across the UAE market. The process involves a trademark search, filing the application with the required documentation, a publication period, and final registration certificate issuance. Without registration, your brand has no legal protection against copying or infringement. This guide walks through the complete trademark registration process, costs, and timelines for UAE businesses.')"><span>→</span></button>
       </div>
+
+      <!-- ROW 2 -->
       <div class="blog-row">
         <div class="blog-row-content">
           <span class="blog-cat">Commercial Agency</span>
           <div class="blog-title">UAE Commercial Agency Registration: What Businesses Need to Know</div>
           <p class="blog-desc">How to register and protect your distribution agreements under UAE law.</p>
+          <p class="blog-desc-extended">Under Federal Law No. 3 of 2022, a UAE commercial agency agreement must be registered with the Ministry of Economy's Commercial Agencies Register to be legally enforceable. A registered commercial agent holds exclusive territorial rights over the distribution, sale, or promotion of a foreign principal's products or services, and cannot be terminated or circumvented without the agent's consent or a court ruling. Registration requires a copy of the agency agreement, the agent's valid trade licence, the principal's company documents attested by UAE authorities, and proof of the agreed territory and product category. Failure to register leaves agents exposed to termination without compensation, while foreign principals who bypass registered agents face import bans and legal action. Given the complexity of UAE commercial agency law and its significant commercial implications, professional guidance through the registration process is strongly recommended.</p>
         </div>
         <button class="arrow-btn" onclick="openModal('Commercial Agency','UAE Commercial Agency Registration: What Businesses Need to Know','UAE commercial agency law grants registered agents exclusive protection over their distribution territory — meaning a foreign principal cannot legally terminate or bypass a registered agent without going through a legally prescribed process. Registering a commercial agency with the Ministry of Economy provides significant legal protection for distributors and agents. This guide explains who needs to register, the registration requirements, and the legal protections the registration provides.')"><span>→</span></button>
       </div>
+
+      <!-- ROW 3 -->
       <div class="blog-row">
         <div class="blog-row-content">
           <span class="blog-cat">IP Protection</span>
           <div class="blog-title">Protecting Your Intellectual Property in UAE: Copyright, Patents & Trademarks</div>
           <p class="blog-desc">A practical guide to IP registration and enforcement for UAE businesses.</p>
+          <p class="blog-desc-extended">The UAE offers robust intellectual property protection across four main categories: trademarks, patents, copyrights, and industrial designs. Trademarks and patents are registered through the Ministry of Economy, while copyright protection attaches automatically to original creative works upon creation under Federal Law No. 38 of 2021. Patents in the UAE require a formal application demonstrating novelty, inventive step, and industrial applicability, and may also be filed through the Gulf Cooperation Council Patent Office for broader GCC-wide protection. Industrial designs — the aesthetic appearance of a product — must be registered separately with the Ministry to receive protection. Enforcement of IP rights in the UAE has strengthened significantly in recent years, with the Ministry conducting regular market inspection campaigns and coordinating with customs authorities to seize counterfeit goods at ports of entry. Businesses that take proactive steps to register and document their IP rights are in a far stronger position to pursue infringers through both civil and criminal channels.</p>
         </div>
         <button class="arrow-btn" onclick="openModal('IP Protection','Protecting Your Intellectual Property in UAE: Copyright, Patents & Trademarks','Intellectual property protection in the UAE covers trademarks, patents, copyrights, and industrial designs — each with its own registration authority and legal framework. The Ministry of Economy handles trademark and patent registration, while copyright protection is automatic upon creation. This guide explains how to protect each type of intellectual property in the UAE, the costs and timelines involved, and what steps to take if your IP is infringed upon by a competitor.')"><span>→</span></button>
       </div>
+
+      <!-- ROW 4 -->
       <div class="blog-row">
         <div class="blog-row-content">
           <span class="blog-cat">Anti-Dumping</span>
           <div class="blog-title">UAE Ministry of Economy Anti-Dumping and Trade Remedies Explained</div>
           <p class="blog-desc">How UAE import protection measures affect businesses and importers.</p>
+          <p class="blog-desc-extended">The UAE Ministry of Economy administers three categories of trade remedy measures in accordance with WTO agreements: anti-dumping duties on imports sold below normal market value, countervailing duties on subsidised imports that distort fair competition, and safeguard measures to provide temporary relief to domestic industries facing a sudden surge in imports. UAE manufacturers who believe their industry is being injured by unfairly priced or subsidised imports can file a formal complaint with the Ministry's Trade Remedies Department, triggering an investigation that typically runs six to twelve months. Importers of goods subject to existing trade remedy measures must ensure their customs declarations accurately reflect the applicable duty rates — errors can result in significant back-duty assessments and penalties. Staying informed about active investigations and published duty orders is essential for any business engaged in importing or manufacturing in the UAE.</p>
         </div>
         <button class="arrow-btn" onclick="openModal('Anti-Dumping','UAE Ministry of Economy Anti-Dumping and Trade Remedies Explained','The UAE Ministry of Economy administers anti-dumping, countervailing duty, and safeguard measures to protect domestic industries from unfairly priced imports. UAE importers and manufacturers need to understand these trade remedy mechanisms — both to protect their own businesses and to ensure their import activities remain compliant. This guide explains how UAE anti-dumping investigations work and how businesses can file complaints or defend against investigations.')"><span>→</span></button>
       </div>
+
+      <!-- ROW 5 -->
       <div class="blog-row">
         <div class="blog-row-content">
           <span class="blog-cat">Economic Substance</span>
           <div class="blog-title">UAE Economic Substance Regulations: Compliance Guide for Businesses</div>
           <p class="blog-desc">Understanding ESR obligations and how to meet the annual reporting requirements.</p>
+          <p class="blog-desc-extended">Introduced in 2019 in response to the EU's concerns about base erosion and profit shifting, the UAE's Economic Substance Regulations require companies conducting certain Relevant Activities — including banking, insurance, investment fund management, lease-finance, headquarters, shipping, holding company, intellectual property, and distribution and service centre activities — to demonstrate that they have adequate physical presence, qualified employees, and operating expenditure in the UAE proportionate to their income. Annual ESR notifications must be filed within six months of the company's financial year-end, and the ESR report is due within twelve months. Penalties for non-compliance start at AED 20,000 for a failure to file notification, rise to AED 400,000 for failure to meet the substance test, and can result in automatic exchange of information with foreign tax authorities and potential licence suspension. Companies that are unsure whether their activities fall within the scope of ESR should seek professional advice early — proactive compliance is far less costly than remediation after a penalty has been assessed.</p>
         </div>
         <button class="arrow-btn" onclick="openModal('Economic Substance','UAE Economic Substance Regulations: Compliance Guide for Businesses','UAE Economic Substance Regulations require certain businesses — particularly those in financial services, holding company, IP, and headquarters activities — to demonstrate genuine economic activity in the UAE. Annual ESR notifications and reports must be filed with the relevant licensing authority. Non-compliance results in penalties of up to AED 400,000 and potential licence suspension. This guide explains which businesses are subject to ESR and how to file compliant annual reports.')"><span>→</span></button>
       </div>
+
+      <!-- SECTION DIVIDER -->
+      <div class="blog-section-label">
+        <span>More Guides</span>
+      </div>
+
+      <!-- ROW 6 — NEW -->
+      <div class="blog-row">
+        <div class="blog-row-content">
+          <span class="blog-cat">Business Registration</span>
+          <div class="blog-title">How to Register a Company in Abu Dhabi: A Step-by-Step Guide</div>
+          <p class="blog-desc">Everything you need to know about setting up a mainland business in the UAE capital.</p>
+          <p class="blog-desc-extended">Registering a mainland company in Abu Dhabi requires approval from the Department of Economic Development (ADDED), and for certain business activities, additional approvals from sector-specific regulators such as the Ministry of Economy, the Health Authority, or the UAE Central Bank. The process begins with selecting a trade name that complies with UAE naming regulations, followed by initial approval, drafting of the Memorandum of Association, securing a physical office address, and final licence issuance. Since the UAE's landmark 2021 Companies Law amendments, foreign investors can now hold 100% ownership of most mainland business activities without requiring a local UAE national shareholder — a significant change that has made Abu Dhabi an even more attractive destination for international entrepreneurs and investors. Understanding which business activities still require strategic local partnerships, and which free zone structures may be more appropriate for specific business models, is critical before committing to a registration structure that may be difficult or expensive to change later.</p>
+        </div>
+        <button class="arrow-btn" onclick="openModal('Business Registration','How to Register a Company in Abu Dhabi: A Step-by-Step Guide','Mainland company registration in Abu Dhabi involves ADDED approval, trade name reservation, initial approval, MOA drafting, office lease, and licence issuance. Since 2021, 100% foreign ownership is permitted for most activities. This guide covers the full process, required documents, timelines, and how to choose the right structure for your business goals in the UAE.')"><span>→</span></button>
+      </div>
+
+      <!-- ROW 7 — NEW -->
+      <div class="blog-row">
+        <div class="blog-row-content">
+          <span class="blog-cat">Consumer Protection</span>
+          <div class="blog-title">UAE Consumer Protection Law: What Every Business Must Know</div>
+          <p class="blog-desc">Understanding your obligations under Federal Decree-Law No. 5 of 2023 on Consumer Protection.</p>
+          <p class="blog-desc-extended">The UAE's Consumer Protection Law, administered by the Ministry of Economy, places significant obligations on suppliers, retailers, and e-commerce businesses operating in the UAE market. Businesses must provide clear, accurate pricing in UAE Dirhams, display mandatory product information in Arabic, honour advertised warranties and after-sales service commitments, and handle consumer complaints within prescribed timeframes. The Ministry's Consumer Protection Department operates a complaint portal and hotline that allows UAE consumers to file complaints directly against businesses — complaints that can result in warnings, fines, and in serious cases, licence suspension. With the rapid growth of e-commerce in the UAE, the law has also introduced specific obligations for online sellers, including clear return and refund policies, accurate product descriptions, and data protection compliance. Businesses that proactively align their operations with UAE consumer protection requirements not only avoid regulatory risk but also build the trust and reputation that drives customer loyalty in the competitive UAE market.</p>
+        </div>
+        <button class="arrow-btn" onclick="openModal('Consumer Protection','UAE Consumer Protection Law: What Every Business Must Know','Federal Decree-Law No. 5 of 2023 on Consumer Protection places obligations on all businesses selling goods or services in the UAE — including pricing transparency, Arabic labelling, warranty compliance, and complaint handling. The Ministry of Economy enforces these rules with fines and licence suspensions. This guide explains your key obligations and how to ensure your business is fully compliant.')"><span>→</span></button>
+      </div>
+
+      <!-- ROW 8 — NEW -->
+      <div class="blog-row">
+        <div class="blog-row-content">
+          <span class="blog-cat">Pricing Compliance</span>
+          <div class="blog-title">Price Control & Monitoring in the UAE: What Businesses Need to Understand</div>
+          <p class="blog-desc">How the Ministry of Economy's price monitoring affects retail, FMCG, and supply chain businesses.</p>
+          <p class="blog-desc-extended">The UAE Ministry of Economy operates a national price monitoring programme that tracks the retail prices of a basket of essential goods and commodities — with particular intensity during Ramadan, Eid, and periods of supply chain disruption. Retailers and suppliers of controlled or monitored goods must ensure their pricing is consistent with Ministry guidance, and are prohibited from engaging in price gouging, unjustified price increases, or anti-competitive pricing behaviour. Violations can attract fines and, for repeat offenders, mandatory referral to the public prosecution. The Ministry also enforces laws against commercial fraud, which include penalties for selling counterfeit goods, misrepresenting product quality or origin, and issuing fraudulent commercial documents. For businesses in food retail, pharmacy, fuel distribution, and construction materials, staying current with Ministry pricing circulars and alerts is an essential part of regulatory compliance in the UAE.</p>
+        </div>
+        <button class="arrow-btn" onclick="openModal('Pricing Compliance','Price Control & Monitoring in the UAE: What Businesses Need to Understand','The Ministry of Economy monitors retail prices for essential goods and can impose fines on businesses engaged in price gouging or unjustified price increases. This guide explains which sectors are most affected, how the monitoring programme works, and the steps businesses should take to stay compliant with UAE pricing regulations.')"><span>→</span></button>
+      </div>
+
+      <!-- ROW 9 — NEW -->
+      <div class="blog-row">
+        <div class="blog-row-content">
+          <span class="blog-cat">Foreign Investment</span>
+          <div class="blog-title">UAE Foreign Direct Investment Law: Opportunities for International Investors</div>
+          <p class="blog-desc">How Federal Law No. 19 of 2018 and its amendments open the UAE economy to global capital.</p>
+          <p class="blog-desc-extended">The UAE's Foreign Direct Investment (FDI) Law, administered by the Ministry of Economy through the Foreign Direct Investment Office (FDIO), established a positive list of business activities in which 100% foreign ownership is permitted without requiring a local UAE national partner. Subsequent updates expanded this list significantly, and the 2021 Commercial Companies Law amendments extended 100% foreign ownership to the vast majority of mainland commercial activities. For activities that remain subject to foreign ownership restrictions — primarily in strategic sectors such as defence, certain media activities, and select professional services — the Ministry of Economy evaluates applications on a case-by-case basis. International investors considering establishing a presence in the UAE should conduct a thorough activity-level analysis before choosing between a mainland licence, a free zone structure, or a branch office, as each has different ownership, operational, and tax implications in the context of the UAE's corporate tax framework introduced in 2023.</p>
+        </div>
+        <button class="arrow-btn" onclick="openModal('Foreign Investment','UAE Foreign Direct Investment Law: Opportunities for International Investors','The UAE FDI Law and 2021 Companies Law amendments now permit 100% foreign ownership for most mainland business activities. The Ministry of Economy\'s FDIO evaluates applications in restricted sectors. This guide explains the FDI positive list, ownership structures available to international investors, and how to choose the right setup for your UAE market entry strategy.')"><span>→</span></button>
+      </div>
+
+    </div><!-- end .blog-list -->
+
+    <!-- EDITORIAL NOTE -->
+    <div class="blog-editorial">
+      <p><strong>About these guides:</strong> The articles and summaries published on this page are prepared by the TamkinExpress business advisory team and are intended as general information only. UAE regulations are updated frequently — always verify current requirements with the relevant authority or consult a qualified UAE legal or business adviser before taking action. TamkinExpress offers professional Ministry of Economy liaison services, trademark registration, commercial agency registration, ESR compliance support, and business setup assistance across Abu Dhabi and the UAE. <strong>Contact us for a free consultation.</strong></p>
     </div>
+
     <div class="blog-cta-wrap">
       <a href="/contact-us.html" class="blog-cta-btn">Get Started Today <span class="btn-arrow">→</span></a>
     </div>
+
   </div>
 </section></div>
 <footer>
@@ -276,9 +372,8 @@ footer { background:#000; border-top:1px solid rgba(0,212,168,0.1); padding:60px
   hamburger.addEventListener('click',()=>{hamburger.classList.toggle('open');mobileMenu.classList.toggle('open');});
   mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{hamburger.classList.remove('open');mobileMenu.classList.remove('open');}));
 
-  // Stagger reveal for rows
-  const rows = document.querySelectorAll('.blog-row');
-  const ctaWrap = document.querySelector('.blog-cta-wrap');
+  // Stagger reveal for rows + labels + editorial
+  const revealEls = document.querySelectorAll('.blog-row, .blog-cta-wrap, .blog-section-label, .blog-editorial');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -286,15 +381,17 @@ footer { background:#000; border-top:1px solid rgba(0,212,168,0.1); padding:60px
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.12 });
+  }, { threshold: 0.1 });
+
+  const rows = document.querySelectorAll('.blog-row');
   rows.forEach((row, i) => {
-    row.style.transitionDelay = (i * 0.1) + 's';
+    row.style.transitionDelay = (i * 0.08) + 's';
     observer.observe(row);
   });
-  if (ctaWrap) {
-    ctaWrap.style.transitionDelay = (rows.length * 0.1 + 0.1) + 's';
-    observer.observe(ctaWrap);
-  }
+
+  document.querySelectorAll('.blog-cta-wrap, .blog-section-label, .blog-editorial').forEach(el => {
+    observer.observe(el);
+  });
 
   function openModal(cat,title,para){
     document.getElementById('mCat').textContent=cat;
