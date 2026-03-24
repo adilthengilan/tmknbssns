@@ -210,16 +210,64 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
 .svc-grid .reveal:nth-child(4){transition-delay:.35s;}
 .svc-grid .reveal:nth-child(5){transition-delay:.45s;}
 .svc-grid .reveal:nth-child(6){transition-delay:.55s;}
+
+/* ── NEW CONTENT SECTION STYLES (match existing theme exactly) ── */
+.info-section{padding:6rem 6%;max-width:1200px;margin:0 auto;}
+.info-section.dark-bg{background:var(--dark2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);max-width:100%;padding:6rem 6%;}
+.info-section.dark-bg .info-inner{max-width:1200px;margin:0 auto;}
+.prose-block{color:var(--muted);font-size:.95rem;line-height:1.9;margin-top:1.5rem;}
+.prose-block p{margin-bottom:1.2rem;}
+.prose-block p:last-child{margin-bottom:0;}
+.prose-block strong{color:var(--text);font-weight:600;}
+.prose-block em{color:var(--teal);font-style:normal;}
+.two-col-prose{display:grid;grid-template-columns:1fr 1fr;gap:4rem;margin-top:2rem;align-items:start;}
+.two-col-prose .prose-block{margin-top:0;}
+.highlight-band{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:2.5rem 3rem;margin-top:3rem;position:relative;overflow:hidden;}
+.highlight-band::before{content:'';position:absolute;top:-60px;right:-60px;width:220px;height:220px;background:radial-gradient(circle,var(--teal-glow),transparent 70%);border-radius:50%;pointer-events:none;}
+.highlight-band h3{font-size:1.25rem;font-weight:700;color:var(--white);margin-bottom:1rem;letter-spacing:-.01em;}
+.highlight-band h3 em{color:var(--teal);font-style:normal;}
+.highlight-band p{color:var(--muted);font-size:.92rem;line-height:1.85;}
+.license-types-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem;}
+.license-type-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:2rem;position:relative;overflow:hidden;transition:border-color .3s,transform .3s;}
+.license-type-card:hover{border-color:rgba(0,212,200,0.4);transform:translateY(-5px);}
+.license-type-card::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--teal-dim),transparent 60%);opacity:0;transition:opacity .3s;}
+.license-type-card:hover::after{opacity:1;}
+.ltc-icon{font-size:1.8rem;margin-bottom:1rem;}
+.ltc-title{font-weight:700;color:var(--white);font-size:1rem;margin-bottom:.7rem;position:relative;z-index:1;}
+.ltc-desc{color:var(--muted);font-size:.86rem;line-height:1.7;position:relative;z-index:1;}
+.inline-teal{color:var(--teal);font-weight:600;}
+.industry-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-top:3rem;}
+.industry-cell{background:var(--card);padding:1.8rem 1.5rem;transition:background .3s;}
+.industry-cell:hover{background:rgba(0,212,200,0.06);}
+.ind-icon{font-size:1.4rem;margin-bottom:.6rem;}
+.ind-title{font-weight:700;color:var(--white);font-size:.88rem;margin-bottom:.4rem;}
+.ind-desc{color:var(--muted);font-size:.8rem;line-height:1.6;}
+.checklist-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:2.5rem;}
+.checklist-item{display:flex;gap:.8rem;align-items:flex-start;padding:1.2rem 1.4rem;background:var(--card);border:1px solid var(--border);border-radius:10px;transition:border-color .25s;}
+.checklist-item:hover{border-color:rgba(0,212,200,0.35);}
+.cl-check{width:20px;height:20px;min-width:20px;background:var(--teal-dim);border:1px solid rgba(0,212,200,0.3);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--teal);font-size:.65rem;margin-top:.1rem;}
+.cl-text{color:var(--muted);font-size:.86rem;line-height:1.6;}
+.cl-text strong{color:var(--text);display:block;margin-bottom:.2rem;font-size:.88rem;}
+.emirate-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem;}
+.emirate-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.8rem 2rem;position:relative;overflow:hidden;transition:border-color .3s,transform .3s;}
+.emirate-card:hover{border-color:rgba(0,212,200,0.4);transform:translateY(-5px);}
+.emc-flag{font-size:1.5rem;margin-bottom:.8rem;}
+.emc-title{font-weight:700;color:var(--white);font-size:.95rem;margin-bottom:.5rem;}
+.emc-desc{color:var(--muted);font-size:.84rem;line-height:1.65;}
+.tip-row{display:flex;gap:1rem;align-items:flex-start;padding:1.2rem 1.6rem;background:rgba(0,212,200,0.04);border-left:3px solid var(--teal);border-radius:0 8px 8px 0;margin-top:1rem;}
+.tip-row p{color:var(--muted);font-size:.88rem;line-height:1.7;}
+.tip-row p strong{color:var(--text);}
 @media(max-width:960px){
-  .hero-inner,.why-layout{grid-template-columns:1fr;gap:3rem;}
+  .hero-inner,.why-layout,.two-col-prose{grid-template-columns:1fr;gap:3rem;}
   .hero-card-wrap{order:-1;}
-  .svc-grid{grid-template-columns:1fr 1fr;}
-  .process-grid{grid-template-columns:1fr 1fr;}
+  .svc-grid,.license-types-grid,.emirate-cards{grid-template-columns:1fr 1fr;}
+  .process-grid,.industry-strip{grid-template-columns:1fr 1fr;}
   .cta-box{position:static;}
   .footer-grid{grid-template-columns:1fr 1fr;}
+  .checklist-grid{grid-template-columns:1fr;}
 }
 @media(max-width:600px){
-  .svc-grid,.process-grid{grid-template-columns:1fr;}
+  .svc-grid,.process-grid,.license-types-grid,.emirate-cards,.checklist-grid,.industry-strip{grid-template-columns:1fr;}
   .pro-hero{padding-top:7rem;}
 }
 </style>
@@ -377,6 +425,283 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
 
 <div class="divider"></div>
 
+<!-- ══════════════════════════════════════════════════════════════════
+     NEW SECTION 1 — Understanding the Ministry of Economy UAE
+     ══════════════════════════════════════════════════════════════════ -->
+<section class="info-section dark-bg">
+  <div class="info-inner">
+    <p class="sec-label">Why It Matters</p>
+    <h2 class="sec-title">Understanding the <em>Ministry of Economy UAE</em></h2>
+    <div class="two-col-prose reveal">
+      <div class="prose-block">
+        <p>The <strong>Ministry of Economy UAE</strong> is the primary federal authority responsible for regulating commercial activities, protecting intellectual property, and ensuring that businesses operating across the United Arab Emirates comply with national economic policies. Every company that intends to conduct trade on the UAE mainland must register with or obtain approval from the Ministry of Economy before commencing operations.</p>
+        <p>Founded with the mandate of supporting economic diversification and sustainable growth, the Ministry of Economy oversees a broad range of functions including <em>trade license issuance</em>, trademark and intellectual property registration, anti-commercial fraud enforcement, and the regulation of commercial agencies. Understanding how the Ministry works — and what it requires — is essential for any entrepreneur, investor, or business owner looking to establish a credible and compliant presence in the UAE.</p>
+        <p>For most businesses, navigating Ministry of Economy requirements independently can be complex and time-consuming. Government portals, document requirements, and approval timelines frequently change, and a single incorrect submission can delay your license by weeks. This is precisely why working with an experienced business services provider like <strong>Tamkin Express</strong> gives your company a significant advantage from day one.</p>
+      </div>
+      <div class="prose-block">
+        <p>The UAE's federal structure means that certain Ministry of Economy approvals are required at the national level, while emirate-level authorities such as the Abu Dhabi Department of Economic Development (ADDED) or Dubai Economy and Tourism (DET) handle the issuance of actual trade licenses. <em>Both layers of regulation must be satisfied</em> for a mainland business to operate legally, and Tamkin Express is experienced in managing both simultaneously to avoid delays.</p>
+        <p>Since the UAE Vision 2031 initiative was launched, the Ministry of Economy has accelerated digital transformation across its services. Many applications can now be submitted via the MOHRE and Ministry of Economy online portals. However, understanding which documents to upload, how to classify business activities correctly, and how to respond to government queries still requires expert knowledge. Our team stays fully updated on all regulatory changes so your application moves forward without interruption.</p>
+        <p>Whether you are launching a new business, expanding an existing operation, renewing an expiring trade license, or protecting your brand through trademark registration, <strong>Tamkin Express</strong> provides end-to-end support across every Ministry of Economy touchpoint in Abu Dhabi, Dubai, and all seven UAE emirates.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     NEW SECTION 2 — Types of Trade Licenses
+     ══════════════════════════════════════════════════════════════════ -->
+<section>
+  <div class="info-section">
+    <p class="sec-label">License Categories</p>
+    <h2 class="sec-title">Types of <em>Trade Licenses in UAE</em></h2>
+    <p class="sec-sub">The Ministry of Economy recognises distinct license categories based on the nature of your business activity. Choosing the correct license type from the outset avoids costly amendments later.</p>
+    <div class="license-types-grid">
+      <div class="license-type-card reveal">
+        <div class="ltc-icon">🏪</div>
+        <div class="ltc-title">Commercial License</div>
+        <div class="ltc-desc">Issued to businesses engaged in buying and selling goods, import and export, trading, retail, and general commerce. Commercial licenses are the most widely issued category in the UAE and are required for any business that involves the movement of physical products. Activities range from general trading to specialised commodity trading, wholesale distribution, and e-commerce operations.</div>
+      </div>
+      <div class="license-type-card reveal">
+        <div class="ltc-icon">⚙️</div>
+        <div class="ltc-title">Industrial License</div>
+        <div class="ltc-desc">Required for companies involved in manufacturing, processing, assembling, or transforming raw materials into finished goods. Industrial licenses require additional approvals from relevant authorities and must comply with zoning regulations. Tamkin Express coordinates all necessary sector approvals alongside the core Ministry of Economy registration for industrial ventures.</div>
+      </div>
+      <div class="license-type-card reveal">
+        <div class="ltc-icon">👔</div>
+        <div class="ltc-title">Professional License</div>
+        <div class="ltc-desc">Granted to individuals and firms offering specialised professional or consultancy services such as legal, accounting, engineering, medical, educational, or management consulting. Professional license holders are typically required to demonstrate relevant qualifications. This license type allows 100% foreign ownership in many activity categories under UAE foreign ownership reforms.</div>
+      </div>
+      <div class="license-type-card reveal">
+        <div class="ltc-icon">🏨</div>
+        <div class="ltc-title">Tourism License</div>
+        <div class="ltc-desc">Issued for businesses in the hospitality, travel, and tourism sector including hotels, travel agencies, tour operators, and related services. Tourism licenses require coordination between the Ministry of Economy and the Department of Culture and Tourism in Abu Dhabi or the corresponding authority in the relevant emirate.</div>
+      </div>
+      <div class="license-type-card reveal">
+        <div class="ltc-icon">🌾</div>
+        <div class="ltc-title">Agricultural License</div>
+        <div class="ltc-desc">Covers businesses involved in farming, fisheries, livestock, food production, and agri-related activities. Agricultural licenses may require additional approvals from the Ministry of Climate Change and Environment. Tamkin Express manages multi-agency coordination to ensure all required clearances are obtained efficiently.</div>
+      </div>
+      <div class="license-type-card reveal">
+        <div class="ltc-icon">💻</div>
+        <div class="ltc-title">Media & Technology License</div>
+        <div class="ltc-desc">Designed for companies operating in the digital, media production, IT services, software development, and communications sectors. Certain media activities require National Media Council (NMC) approval in addition to the Ministry of Economy registration. Our team ensures all sector-specific approvals are secured to keep your business fully compliant.</div>
+      </div>
+    </div>
+
+    <div class="highlight-band reveal">
+      <h3>Not sure which license type suits your <em>business activity</em>?</h3>
+      <p>Choosing the wrong license category is one of the most common and costly mistakes new businesses make in the UAE. The wrong classification can result in rejected applications, fines, or the need to restart the process entirely. Tamkin Express provides a free initial consultation to assess your business activities, recommend the correct license type, identify any sector-specific approvals required, and outline the fastest route to Ministry of Economy approval for your specific situation. Contact our Abu Dhabi team today to schedule your consultation.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     NEW SECTION 3 — Documents Required
+     ══════════════════════════════════════════════════════════════════ -->
+<section class="info-section dark-bg">
+  <div class="info-inner">
+    <p class="sec-label">Document Checklist</p>
+    <h2 class="sec-title">Documents Required for <em>Ministry of Economy Registration</em></h2>
+    <p class="sec-sub">Accurate, complete documentation is the single biggest factor in achieving a fast, first-time approval. Below is a general checklist — exact requirements vary by license type and business structure.</p>
+    <div class="checklist-grid reveal">
+      <div class="checklist-item">
+        <div class="cl-check">✓</div>
+        <div class="cl-text"><strong>Passport Copies</strong>All shareholders and company managers must provide clear, valid passport copies. For UAE residents, a copy of the residence visa page is also required alongside the passport.</div>
+      </div>
+      <div class="checklist-item">
+        <div class="cl-check">✓</div>
+        <div class="cl-text"><strong>Emirates ID</strong>Current Emirates ID copies for all UAE-resident shareholders and directors. If shareholders are non-residents, a notarised copy of the passport and entry stamp may be required.</div>
+      </div>
+      <div class="checklist-item">
+        <div class="cl-check">✓</div>
+        <div class="cl-text"><strong>Trade Name Approval</strong>An approved trade name reservation certificate from the relevant licensing authority. Trade names must be unique, comply with UAE naming conventions, and must not include references to religion or government bodies without special approval.</div>
+      </div>
+      <div class="checklist-item">
+        <div class="cl-check">✓</div>
+        <div class="cl-text"><strong>Memorandum of Association (MOA)</strong>A legally drafted and attested Memorandum of Association outlining shareholder details, ownership percentages, capital structure, and the scope of permitted business activities. The MOA must be notarised by a UAE Notary Public.</div>
+      </div>
+      <div class="checklist-item">
+        <div class="cl-check">✓</div>
+        <div class="cl-text"><strong>Tenancy Contract (Ejari)</strong>A valid tenancy contract or Ejari-registered lease for the company's registered business address. The premises must be appropriate for the licensed activity — residential addresses are not accepted for most commercial license types.</div>
+      </div>
+      <div class="checklist-item">
+        <div class="cl-check">✓</div>
+        <div class="cl-text"><strong>No Objection Certificate (NOC)</strong>If any shareholder or manager is currently sponsored by another UAE employer, a No Objection Certificate from that sponsor is required. This ensures compliance with UAE labour and residency regulations.</div>
+      </div>
+      <div class="checklist-item">
+        <div class="cl-check">✓</div>
+        <div class="cl-text"><strong>Initial Approval Certificate</strong>An initial approval from the Department of Economic Development (DED) or relevant authority must be obtained before the final Ministry of Economy submission. Tamkin Express manages this step on your behalf to prevent delays.</div>
+      </div>
+      <div class="checklist-item">
+        <div class="cl-check">✓</div>
+        <div class="cl-text"><strong>Sector-Specific Approvals</strong>Depending on your business activity, additional approvals may be required from sector authorities such as the Health Authority, Municipality, Dubai Civil Aviation Authority, or National Media Council. Our team identifies and coordinates all required third-party approvals.</div>
+      </div>
+    </div>
+
+    <div class="tip-row reveal">
+      <p><strong>Pro Tip from Tamkin Express:</strong> Document requirements are updated regularly by the Ministry of Economy and emirate-level authorities. Submitting outdated or incorrectly attested documents is one of the leading causes of application rejection. Our team verifies every document against current requirements before submission to ensure your application is approved the first time.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     NEW SECTION 4 — Trademark Registration Deep Dive
+     ══════════════════════════════════════════════════════════════════ -->
+<section>
+  <div class="info-section">
+    <p class="sec-label">Brand Protection</p>
+    <h2 class="sec-title">Trademark Registration Through the <em>Ministry of Economy UAE</em></h2>
+    <div class="two-col-prose reveal">
+      <div class="prose-block">
+        <p>Your brand is one of your most valuable business assets. Registering your trademark through the <strong>Ministry of Economy UAE</strong> provides legal protection for your business name, logo, slogan, or product identity across all seven emirates. Without a registered trademark, competitors can legally use similar names or logos, damaging your market position and customer trust.</p>
+        <p>The Ministry of Economy's Intellectual Property Department manages trademark registration in the UAE. The process involves submitting an application specifying the trademark class — the UAE follows the international Nice Classification system of 45 trademark classes covering goods and services. Applications are examined for conflicts with existing marks and published in the official trademark journal for a 30-day opposition period before final registration is granted.</p>
+        <p>A registered UAE trademark is valid for <em>10 years from the application date</em> and can be renewed indefinitely. It gives you exclusive rights to use the mark commercially in the UAE and provides a legal basis to take action against infringers. For businesses with operations beyond the UAE, Tamkin Express can also advise on GCC-wide trademark protection strategies.</p>
+      </div>
+      <div class="prose-block">
+        <p>Common mistakes in the trademark registration process include applying under the wrong trademark class, submitting poorly formatted artwork, or failing to respond to examiner queries within the required timeframe. Each of these errors can result in delays of months or outright rejection of your application. Tamkin Express manages the entire trademark registration process from initial clearance searches through to certificate delivery.</p>
+        <p>Our trademark services include a <strong>comprehensive clearance search</strong> to identify any conflicting marks before you file, professional application preparation, active monitoring of the examination and publication phases, and prompt handling of any office actions or third-party oppositions. We also maintain a reminder system to notify you ahead of your renewal deadline so your trademark protection never lapses.</p>
+        <p>Whether you are registering a brand new business name, protecting a logo ahead of a UAE product launch, or formalising trademark protection for an established business, Tamkin Express delivers transparent, efficient trademark services at competitive rates. Contact us today for a precise quote and timeline tailored to your specific trademark requirements.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     NEW SECTION 5 — Industries We Serve
+     ══════════════════════════════════════════════════════════════════ -->
+<section class="info-section dark-bg">
+  <div class="info-inner">
+    <p class="sec-label">Sectors We Support</p>
+    <h2 class="sec-title">Ministry of Economy Services Across <em>All UAE Industries</em></h2>
+    <p class="sec-sub">Tamkin Express provides Ministry of Economy business licensing and compliance support to companies operating in a broad range of industries throughout the UAE.</p>
+    <div class="industry-strip reveal-scale">
+      <div class="industry-cell">
+        <div class="ind-icon">🏗️</div>
+        <div class="ind-title">Construction & Real Estate</div>
+        <div class="ind-desc">Trade licenses, contractor registrations, and regulatory approvals for construction firms, real estate developers, and property management companies operating across UAE.</div>
+      </div>
+      <div class="industry-cell">
+        <div class="ind-icon">🚗</div>
+        <div class="ind-title">Automotive & Transport</div>
+        <div class="ind-desc">Commercial registrations and compliance filings for vehicle dealers, spare parts traders, logistics operators, and freight companies requiring Ministry of Economy approvals.</div>
+      </div>
+      <div class="industry-cell">
+        <div class="ind-icon">🍽️</div>
+        <div class="ind-title">Food & Hospitality</div>
+        <div class="ind-desc">Business licensing for restaurants, catering companies, food manufacturing, and hospitality businesses including coordination with municipality and tourism authorities.</div>
+      </div>
+      <div class="industry-cell">
+        <div class="ind-icon">💊</div>
+        <div class="ind-title">Healthcare & Pharma</div>
+        <div class="ind-desc">Ministry of Economy trade license services for healthcare providers, pharmaceutical distributors, medical device importers, and health supplement businesses with health authority coordination.</div>
+      </div>
+      <div class="industry-cell">
+        <div class="ind-icon">📦</div>
+        <div class="ind-title">Trading & Import/Export</div>
+        <div class="ind-desc">General and specialised trading licenses for businesses engaged in domestic and international trade, import, export, and re-export across UAE ports and free zone corridors.</div>
+      </div>
+      <div class="industry-cell">
+        <div class="ind-icon">🎓</div>
+        <div class="ind-title">Education & Training</div>
+        <div class="ind-desc">Professional and commercial licenses for schools, training institutes, tutoring centres, and educational technology businesses operating in the UAE education sector.</div>
+      </div>
+      <div class="industry-cell">
+        <div class="ind-icon">💡</div>
+        <div class="ind-title">Technology & Innovation</div>
+        <div class="ind-desc">Business licensing and commercial registration services for software developers, IT consultancies, AI companies, and technology startups entering the UAE market.</div>
+      </div>
+      <div class="industry-cell">
+        <div class="ind-icon">💰</div>
+        <div class="ind-title">Finance & Consulting</div>
+        <div class="ind-desc">Professional license registration for financial advisories, management consultancies, accounting firms, and business service providers requiring Ministry of Economy clearance.</div>
+      </div>
+    </div>
+
+    <div class="prose-block reveal" style="margin-top:2.5rem;">
+      <p>No matter which sector your business operates in, the Ministry of Economy registration requirements must be correctly fulfilled for your company to operate legally on the UAE mainland. <strong>Tamkin Express has deep experience</strong> across all of the above industries and many more. Our advisors understand the sector-specific nuances — including which third-party government approvals are needed, which business activity codes to select, and how to structure your license for maximum operational flexibility. Reach out to our Abu Dhabi office today to discuss your specific industry requirements.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     NEW SECTION 6 — Emirates Coverage
+     ══════════════════════════════════════════════════════════════════ -->
+<section>
+  <div class="info-section">
+    <p class="sec-label">UAE-Wide Coverage</p>
+    <h2 class="sec-title">Ministry of Economy Services Across <em>All Seven Emirates</em></h2>
+    <p class="sec-sub">Tamkin Express handles Ministry of Economy business licensing and compliance across all UAE emirates. Whether you are based in Abu Dhabi or operating across multiple emirates, we manage every aspect of your federal and emirate-level registrations.</p>
+    <div class="emirate-cards">
+      <div class="emirate-card reveal">
+        <div class="emc-flag">🏛️</div>
+        <div class="emc-title">Abu Dhabi</div>
+        <div class="emc-desc">Our home base. Tamkin Express is headquartered in Musaffah M43, Abu Dhabi and specialises in coordinating Ministry of Economy approvals alongside ADDED (Abu Dhabi Department of Economic Development) trade license registration and renewal across all Abu Dhabi sectors and free zones.</div>
+      </div>
+      <div class="emirate-card reveal">
+        <div class="emc-flag">🌆</div>
+        <div class="emc-title">Dubai</div>
+        <div class="emc-desc">We provide Ministry of Economy services for Dubai-based businesses in coordination with Dubai Economy and Tourism (DET). Our team manages federal trademark registration, commercial registration, and compliance approvals for businesses across all Dubai districts and industrial areas.</div>
+      </div>
+      <div class="emirate-card reveal">
+        <div class="emc-flag">🌊</div>
+        <div class="emc-title">Sharjah</div>
+        <div class="emc-desc">Full Ministry of Economy service support for Sharjah businesses, including trade license coordination with Sharjah Economic Development Department (SEDD) and federal-level trademark and commercial registration services for businesses operating in Sharjah's commercial and industrial zones.</div>
+      </div>
+      <div class="emirate-card reveal">
+        <div class="emc-flag">⚓</div>
+        <div class="emc-title">Ajman, RAK & UAQ</div>
+        <div class="emc-desc">Tamkin Express extends Ministry of Economy services to businesses in Ajman, Ras Al Khaimah, and Umm Al Quwain. We coordinate federal Ministry approvals alongside emirate-level licensing authority requirements, ensuring complete and compliant registration for businesses in the northern emirates.</div>
+      </div>
+      <div class="emirate-card reveal">
+        <div class="emc-flag">🌐</div>
+        <div class="emc-title">Fujairah</div>
+        <div class="emc-desc">Ministry of Economy licensing support for businesses in Fujairah, the UAE's only emirate on the east coast. We handle federal registration requirements, trademark protection, and commercial documentation for companies operating in Fujairah's port, trade, and industrial sectors.</div>
+      </div>
+      <div class="emirate-card reveal">
+        <div class="emc-flag">🤝</div>
+        <div class="emc-title">Multi-Emirate Operations</div>
+        <div class="emc-desc">For businesses operating across multiple emirates, Tamkin Express coordinates all Ministry of Economy federal requirements alongside each relevant emirate-level licensing authority. We ensure consistent compliance and help you avoid the common pitfalls of multi-emirate business registration in the UAE.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     NEW SECTION 7 — Why Choose Tamkin Express
+     ══════════════════════════════════════════════════════════════════ -->
+<section class="info-section dark-bg">
+  <div class="info-inner">
+    <p class="sec-label">Our Advantage</p>
+    <h2 class="sec-title">Why Businesses Choose <em>Tamkin Express</em> for Ministry of Economy Services</h2>
+    <div class="two-col-prose reveal">
+      <div class="prose-block">
+        <p>The UAE business services market includes many agents who claim to offer Ministry of Economy services. What sets Tamkin Express apart is our combination of <em>deep regulatory expertise</em>, a proven track record of successful applications, and a client-first approach that prioritises transparency at every step.</p>
+        <p><strong>We do not outsource your application.</strong> Every Ministry of Economy case handled by Tamkin Express is managed by our own in-house team of experienced PRO and business setup specialists who are familiar with the latest Ministry requirements, portal updates, and government procedures. You deal directly with our team, not with third-party intermediaries.</p>
+        <p><strong>We offer complete document support.</strong> One of the most common reasons Ministry of Economy applications are rejected or delayed is incomplete or incorrectly prepared documentation. Tamkin Express prepares every document to the exact specifications required by the Ministry, checking for common issues such as incorrect notarisation, outdated forms, or missing attachments before submission.</p>
+      </div>
+      <div class="prose-block">
+        <p><strong>We provide real-time status updates.</strong> Once your application is submitted, we track its progress through Ministry of Economy systems and keep you informed at every stage. If the Ministry raises any queries or requests additional information, our team responds promptly — typically within the same business day — to avoid any unnecessary delays in your approval timeline.</p>
+        <p><strong>We offer competitive, transparent pricing.</strong> All Ministry of Economy service fees at Tamkin Express are quoted upfront, including government fees, typing fees, and professional service charges. There are no hidden costs. You know exactly what you will pay before we begin, and our pricing is benchmarked to be among the most competitive in Abu Dhabi and the wider UAE market.</p>
+        <p><strong>We provide end-to-end continuity.</strong> Our relationship with your business does not end when your trade license is issued. Tamkin Express provides ongoing license renewal reminders, compliance monitoring, and amendment services to ensure your business remains fully compliant with Ministry of Economy requirements throughout its lifecycle in the UAE. Call us today at <em>+971 588 967 713</em> to get started.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
 <!-- ===== BLOG ===== -->
 <section style="position:relative;background:#070b0b;padding:100px 40px;text-align:center;overflow:hidden;font-family:'Montserrat',sans-serif;">
   <div style="position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 50% 50%,rgba(0,212,200,0.07) 0%,transparent 70%);pointer-events:none;"></div>
@@ -448,6 +773,21 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
       <button class="faq-q">Why choose Tamkin Express for Ministry of Economy Services?<span class="faq-plus">+</span></button>
       <div class="faq-ans"><p>Deep UAE licensing expertise, fast 48-hour processing, zero rejection documentation, and end-to-end support from business setup to licence renewal.</p></div>
     </div>
+
+    <div class="faq-item-box">
+      <button class="faq-q">Can I renew my trade license through Tamkin Express without visiting government offices?<span class="faq-plus">+</span></button>
+      <div class="faq-ans"><p>Yes. Tamkin Express handles the full trade license renewal process on your behalf, including document collection, government portal submission, payment processing, and delivery of the renewed license. In most cases, you do not need to visit any government office.</p></div>
+    </div>
+
+    <div class="faq-item-box">
+      <button class="faq-q">Do I need a local UAE sponsor or partner to get a Ministry of Economy trade license?<span class="faq-plus">+</span></button>
+      <div class="faq-ans"><p>Following the UAE's 2021 foreign ownership reforms, many business activities on the UAE mainland now allow 100% foreign ownership without requiring a local UAE sponsor. However, certain regulated activities still require a local partner or service agent arrangement. Tamkin Express advises on ownership structure options based on your specific business activity during the initial consultation.</p></div>
+    </div>
+
+    <div class="faq-item-box">
+      <button class="faq-q">How do I protect my trademark if someone is already using my brand name in UAE?<span class="faq-plus">+</span></button>
+      <div class="faq-ans"><p>If another party is using your brand name or a confusingly similar mark in the UAE, you may have grounds for a trademark infringement or unfair competition claim through the Ministry of Economy's intellectual property enforcement channels. Tamkin Express can advise on the appropriate steps to protect your brand and, where necessary, refer you to specialist IP legal counsel.</p></div>
+    </div>
   </div>
 </section>
 
@@ -474,6 +814,7 @@ document.querySelectorAll('.faq-q').forEach(function(btn){
   document.querySelectorAll('.stat-val[data-target]').forEach(function(el){cio2.observe(el);});
 })();
 </script>
+
 <!-- FINAL CTA -->
 <section class="final-cta" id="contact">
   <p class="sec-label">Get Started</p>
