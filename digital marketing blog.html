@@ -107,6 +107,48 @@ footer { background:#000; border-top:1px solid rgba(0,212,168,0.1); padding:60px
 .blog-cta-btn:hover .btn-arrow { animation:arrowBounce 0.6s ease infinite; }
 .btn-arrow { display:inline-block; transition:transform 0.3s ease; }
 
+/* ===== FEATURED ARTICLE SECTION ===== */
+.featured-section { position:relative; background:#000; padding:80px 40px 0; overflow:hidden; }
+.featured-section::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 50% 60% at 30% 50%,rgba(0,212,168,0.04) 0%,transparent 70%); pointer-events:none; }
+.featured-inner { position:relative; z-index:1; max-width:860px; margin:0 auto; }
+.featured-label-wrap { display:inline-flex; align-items:center; gap:10px; color:#00d4a8; font-size:11px; font-weight:600; letter-spacing:4px; text-transform:uppercase; margin-bottom:18px; opacity:0; animation:fadeUp 0.7s 0.2s ease forwards; }
+.featured-label-line { width:24px; height:1px; background:#00d4a8; }
+.featured-h2 { font-family:'Playfair Display',serif; font-size:clamp(28px,3.5vw,44px); font-weight:900; color:#fff; line-height:1.15; margin:0 0 16px; opacity:0; animation:fadeUp 0.7s 0.35s ease forwards; }
+.featured-h2-gradient { font-style:italic; background:linear-gradient(90deg,#00d4a8 20%,#fff 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+.featured-intro { font-family:'DM Sans',sans-serif; font-size:15px; font-weight:300; color:rgba(255,255,255,0.5); line-height:1.9; margin:0 0 52px; max-width:680px; opacity:0; animation:fadeUp 0.7s 0.5s ease forwards; }
+
+/* Article body styles */
+.article-block { opacity:0; transform:translateY(24px); transition:opacity 0.6s ease, transform 0.6s ease; margin-bottom:0; }
+.article-block.visible { opacity:1; transform:translateY(0); }
+
+.article-section { padding:40px 0; border-bottom:1px solid rgba(255,255,255,0.05); }
+.article-section:last-child { border-bottom:none; }
+.article-section-tag { color:#00d4a8; font-size:10px; font-weight:700; letter-spacing:2px; text-transform:uppercase; display:block; margin-bottom:14px; }
+.article-h3 { font-family:'Playfair Display',serif; font-size:22px; font-weight:700; color:#fff; line-height:1.4; margin:0 0 16px; }
+.article-body { font-family:'DM Sans',sans-serif; font-size:14.5px; font-weight:300; color:rgba(255,255,255,0.55); line-height:1.9; }
+.article-body p { margin-bottom:16px; }
+.article-body p:last-child { margin-bottom:0; }
+.article-body strong { color:rgba(255,255,255,0.85); font-weight:500; }
+
+/* Callout box */
+.callout-box { background:rgba(0,212,168,0.06); border:1px solid rgba(0,212,168,0.18); border-radius:14px; padding:28px 32px; margin:28px 0; transition:border-color 0.3s ease; }
+.callout-box:hover { border-color:rgba(0,212,168,0.32); }
+.callout-box p { font-family:'DM Sans',sans-serif; font-size:14px; font-weight:300; color:rgba(255,255,255,0.6); line-height:1.85; margin:0; }
+.callout-box p strong { color:#00d4a8; font-weight:600; }
+
+/* Stat row */
+.stat-row { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin:32px 0; }
+.stat-card { background:#0F1116; border:1px solid rgba(0,212,168,0.12); border-radius:14px; padding:24px 20px; text-align:center; transition:all 0.3s ease; }
+.stat-card:hover { border-color:rgba(0,212,168,0.35); transform:translateY(-3px); box-shadow:0 10px 28px rgba(0,212,168,0.08); }
+.stat-num { font-family:'Playfair Display',serif; font-size:32px; font-weight:900; color:#00d4a8; display:block; margin-bottom:6px; }
+.stat-label { font-size:11px; font-weight:500; color:rgba(255,255,255,0.4); letter-spacing:0.5px; }
+
+/* Bullet list */
+.article-list { list-style:none; margin:20px 0; padding:0; }
+.article-list li { font-family:'DM Sans',sans-serif; font-size:14px; font-weight:300; color:rgba(255,255,255,0.55); line-height:1.85; padding:9px 0 9px 22px; position:relative; border-bottom:1px solid rgba(255,255,255,0.04); }
+.article-list li:last-child { border-bottom:none; }
+.article-list li::before { content:''; position:absolute; left:0; top:50%; width:7px; height:7px; border-radius:50%; background:#00d4a8; transform:translateY(-50%); opacity:0.7; }
+
 /* Modal */
 .modal-overlay { position:fixed; inset:0; background:rgba(0,0,0,0); z-index:9999; display:flex; align-items:center; justify-content:center; padding:24px; pointer-events:none; transition:background 0.3s ease; }
 .modal-overlay.active { background:rgba(0,0,0,0.85); pointer-events:all; }
@@ -121,8 +163,8 @@ footer { background:#000; border-top:1px solid rgba(0,212,168,0.1); padding:60px
 .modal-btn { display:inline-flex; align-items:center; gap:8px; background:#00d4a8; color:#000; padding:13px 28px; border-radius:100px; font-family:'Montserrat',sans-serif; font-size:12.5px; font-weight:700; text-decoration:none; letter-spacing:0.8px; text-transform:uppercase; transition:all 0.3s ease; }
 .modal-btn:hover { background:#00ffc8; transform:translateY(-1px); box-shadow:0 8px 20px rgba(0,212,168,0.35); }
 
-@media(max-width:900px){ .footer-inner{grid-template-columns:1fr 1fr;} .nav-menu,.nav-buttons{display:none;} .hamburger{display:flex;} }
-@media(max-width:600px){ .navbar{padding:0 20px;} .footer-inner{grid-template-columns:1fr;} .modal-box{padding:32px 24px;} .blog-section{padding:80px 20px;} }
+@media(max-width:900px){ .footer-inner{grid-template-columns:1fr 1fr;} .nav-menu,.nav-buttons{display:none;} .hamburger{display:flex;} .stat-row{grid-template-columns:1fr 1fr;} }
+@media(max-width:600px){ .navbar{padding:0 20px;} .footer-inner{grid-template-columns:1fr;} .modal-box{padding:32px 24px;} .blog-section{padding:80px 20px;} .featured-section{padding:60px 20px 0;} .stat-row{grid-template-columns:1fr;} .callout-box{padding:22px 20px;} }
 </style>
 </head>
 <body>
@@ -154,7 +196,10 @@ footer { background:#000; border-top:1px solid rgba(0,212,168,0.1); padding:60px
     <a href="/contact-us.html" class="mobile-cta">Get Free Quote</a>
   </div>
 </div>
+
 <div style="padding-top:72px;">
+
+<!-- ===== ORIGINAL BLOG LIST SECTION ===== -->
 <section class="blog-section">
   <div class="blog-top-line"></div>
   <div class="blog-bot-line"></div>
@@ -213,7 +258,147 @@ footer { background:#000; border-top:1px solid rgba(0,212,168,0.1); padding:60px
       <a href="/contact-us.html" class="blog-cta-btn">Get Started Today <span class="btn-arrow">→</span></a>
     </div>
   </div>
-</section></div>
+</section>
+
+<!-- ===== EXTENDED CONTENT SECTION ===== -->
+<section class="featured-section">
+  <div class="featured-inner">
+    <div class="featured-label-wrap">
+      <span class="featured-label-line"></span>
+      Deep Dive
+      <span class="featured-label-line"></span>
+    </div>
+    <h2 class="featured-h2">The Complete UAE Digital<br><span class="featured-h2-gradient">Marketing Playbook for 2025</span></h2>
+    <p class="featured-intro">The UAE digital landscape is unlike any other market in the world. With one of the highest smartphone penetration rates globally, a truly multilingual consumer base, and an economy that rewards early movers, businesses that master digital marketing here gain a compounding advantage that competitors struggle to close. This guide covers everything you need to know — from SEO to paid media, social platforms to AI-driven search — backed by real campaign data from across the Emirates.</p>
+
+    <!-- Section 1 -->
+    <div class="article-block">
+      <div class="article-section">
+        <span class="article-section-tag">SEO Strategy</span>
+        <h3 class="article-h3">Why SEO in the UAE Demands a Different Approach</h3>
+        <div class="article-body">
+          <p>Search engine optimisation in Dubai and Abu Dhabi is not simply a copy-paste of Western SEO principles. The UAE has a uniquely diverse audience — over 200 nationalities living and working in a single market — which means search intent, language preferences, and device behaviour vary considerably depending on the sector and target demographic.</p>
+          <p>The first thing any serious UAE SEO campaign must address is <strong>bilingual keyword strategy</strong>. While English dominates professional and B2B searches, Arabic-language queries are growing rapidly in consumer sectors like real estate, retail, healthcare, and government services. Businesses that optimise for both languages consistently capture a larger share of organic traffic than those that treat Arabic as an afterthought.</p>
+          <p>Technical SEO matters more here too. Google's crawling behaviour in the region, combined with the high proportion of mobile-first users accessing content over 5G networks, means that Core Web Vitals — particularly Largest Contentful Paint and Cumulative Layout Shift — directly affect your visibility in competitive categories. Sites loading in under 2.5 seconds on mobile consistently outrank slower competitors, even when those slower sites have stronger backlink profiles.</p>
+          <p><strong>Local SEO</strong> is the highest-leverage opportunity for businesses with a physical presence. A fully optimised Google Business Profile, consistent NAP (Name, Address, Phone) citations across UAE directories, and a stream of authentic customer reviews can place a business in the coveted map pack for high-intent searches — driving foot traffic and phone enquiries without any paid spend.</p>
+        </div>
+        <div class="callout-box">
+          <p><strong>Key insight:</strong> UAE businesses that invest in both English and Arabic SEO simultaneously generate, on average, 2.4x more organic leads than those optimising for a single language. The Arabic search audience is underserved — and that represents an enormous opportunity.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="article-block">
+      <div class="stat-row">
+        <div class="stat-card">
+          <span class="stat-num">91%</span>
+          <span class="stat-label">UAE internet users on mobile</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">3.2×</span>
+          <span class="stat-label">Higher CTR with Google map pack listing</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">68%</span>
+          <span class="stat-label">B2B buyers research online before contact</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="article-block">
+      <div class="article-section">
+        <span class="article-section-tag">Paid Advertising</span>
+        <h3 class="article-h3">Running Google Ads in the UAE Without Burning Budget</h3>
+        <div class="article-body">
+          <p>Google Ads in the UAE is a high-reward channel — but only when managed with precision. The average cost-per-click in competitive industries like real estate, legal services, and finance can exceed AED 60. At that rate, a poorly structured campaign with weak quality scores will drain budget within days without delivering meaningful results.</p>
+          <p>The most common mistake we see from UAE businesses running their own Google Ads is relying on broad match keywords without proper negative keyword lists. In a market where the search audience mixes multiple nationalities with different terminology for the same product, broad match can trigger your ads for completely irrelevant queries — wasting spend and inflating your average cost-per-acquisition.</p>
+          <p>The solution is a tightly structured campaign architecture: <strong>exact and phrase match keywords</strong> at the core, supported by a comprehensive negative keyword library built specifically for the UAE market, and ad copy that reflects the specific pain points of Gulf professionals. When combined with smart bidding strategies calibrated against actual lead data, this approach typically reduces cost-per-lead by 35–50% within the first 90 days compared to unmanaged campaigns.</p>
+          <p>Remarketing is another dramatically underused lever in the UAE. Studies consistently show that buyers in high-consideration categories — property, business services, luxury goods — visit multiple websites before making a decision. A well-structured remarketing campaign keeps your brand visible throughout that decision journey, often converting leads who would otherwise have gone to a competitor who simply stayed in front of them longer.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="article-block">
+      <div class="article-section">
+        <span class="article-section-tag">Social Media Marketing</span>
+        <h3 class="article-h3">Social Media in the UAE: Platform, Content, and Timing</h3>
+        <div class="article-body">
+          <p>The UAE has one of the highest social media penetration rates in the world — over 99% of internet users are active on at least one social platform. But platform preference varies significantly by industry, seniority level, and nationality within the UAE audience, which is why a one-size-fits-all social strategy almost always underperforms.</p>
+          <p>For <strong>B2C brands</strong> in lifestyle, food and beverage, fashion, and hospitality, Instagram and TikTok are the primary acquisition channels. Short-form video content consistently outperforms static images in reach and engagement, and Reels in particular are being prioritised by Instagram's algorithm across the GCC. The ideal posting cadence for UAE lifestyle brands is four to five times per week, with content scheduled between 7–9 PM local time when engagement peaks.</p>
+          <p>For <strong>B2B brands</strong> — consulting firms, technology providers, legal practices, and professional service businesses — LinkedIn is the clear leader in lead quality. Decision-makers in the UAE are active LinkedIn users, and the platform's targeting capabilities allow you to reach managing directors, C-suite executives, and procurement managers across specific industries with precision. Long-form thought leadership content paired with targeted sponsored posts is the combination that drives the most consistent pipeline from LinkedIn in this market.</p>
+        </div>
+        <div class="callout-box">
+          <p><strong>Platform recommendation by business type:</strong> B2C lifestyle and consumer goods → <strong>Instagram + TikTok</strong>. B2B professional services → <strong>LinkedIn + Google Search</strong>. E-commerce and retail → <strong>Meta Ads + Google Shopping</strong>. Real estate → <strong>Google Search + Instagram + WhatsApp remarketing</strong>.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 4 -->
+    <div class="article-block">
+      <div class="article-section">
+        <span class="article-section-tag">AI & GEO</span>
+        <h3 class="article-h3">Generative Engine Optimisation: The Next Frontier for UAE Brands</h3>
+        <div class="article-body">
+          <p>Search behaviour is changing faster than most businesses realise. A growing percentage of consumers — particularly younger, tech-forward UAE residents — are now turning to AI tools like ChatGPT, Perplexity, and Google's AI Overviews to research products, services, and companies before making decisions. This shift has created an entirely new discipline: <strong>Generative Engine Optimisation (GEO)</strong>.</p>
+          <p>GEO is the practice of structuring your content, brand presence, and online authority so that AI systems cite and recommend your business in their generated responses. Unlike traditional SEO, which focuses on ranking in a list of blue links, GEO is about becoming the authoritative source that AI models reference when answering questions in your category.</p>
+          <p>The businesses that will win in this new environment are those that build deep, expert-level content covering the questions their target customers are asking — content that demonstrates genuine authority, is structured in a way that AI systems can parse and summarise, and is published consistently across trusted platforms. This includes long-form guides, FAQ pages, industry data, case studies, and expert commentary that would credibly appear in an AI-generated response.</p>
+          <p>For UAE businesses, the GEO opportunity is particularly significant because very few local companies have begun investing in this area. First-mover brands that establish AI-cited authority in their categories now will be extraordinarily difficult to displace once the market catches up.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 5 -->
+    <div class="article-block">
+      <div class="article-section">
+        <span class="article-section-tag">Content Marketing</span>
+        <h3 class="article-h3">Building a Content Engine That Works for the UAE Market</h3>
+        <div class="article-body">
+          <p>Content marketing remains one of the highest-ROI long-term investments a UAE business can make — but only when it is built around a clear strategy, not a calendar of random posts. The most effective content programmes we have seen in the UAE share a common characteristic: every piece of content is mapped to a specific stage of the buyer journey and a specific conversion goal.</p>
+          <p>At the <strong>awareness stage</strong>, content should answer the broad questions your target audience is asking before they even know they need your service. For a business registration firm, this might be blog posts like "How to start a business in Dubai" or "Freezone vs mainland company — what's the difference?" These attract high-volume organic searches and build trust with prospects who are months away from being ready to buy.</p>
+          <p>At the <strong>consideration stage</strong>, content needs to differentiate your business from competitors and demonstrate capability. Detailed case studies, comparison guides, service explainers, and video testimonials all perform well here. This is also where email nurture sequences play a critical role — keeping your brand relevant to prospects who have shown interest but are not yet ready to commit.</p>
+          <p>At the <strong>decision stage</strong>, content should reduce friction and build confidence. Clear pricing information, transparent process guides, client success stories with measurable results, and strong calls-to-action that make it easy to take the next step — these are the elements that convert interested prospects into paying customers.</p>
+        </div>
+        <ul class="article-list">
+          <li>Publish at least two long-form blog posts per month targeting UAE-specific search terms</li>
+          <li>Create one detailed case study per quarter showcasing measurable client results</li>
+          <li>Maintain a consistent LinkedIn posting schedule of three to four times per week</li>
+          <li>Build an email sequence of five to seven touchpoints for every new lead captured</li>
+          <li>Repurpose long-form content into short-form video clips for Instagram and TikTok</li>
+          <li>Refresh top-performing blog posts every six months to maintain search rankings</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Section 6 -->
+    <div class="article-block">
+      <div class="article-section">
+        <span class="article-section-tag">Why TamkinExpress</span>
+        <h3 class="article-h3">What Makes a Digital Marketing Partner Right for Your UAE Business</h3>
+        <div class="article-body">
+          <p>The UAE is a market where relationships, local knowledge, and speed of execution matter enormously. A digital marketing agency that understands the cultural nuance of communicating with Gulf consumers, the technical landscape of UAE digital infrastructure, and the regulatory environment across different emirates will consistently outperform one that treats the UAE as simply another English-speaking market.</p>
+          <p>At TamkinExpress, every campaign we build starts with a deep audit of your current digital presence — your website's technical health, your existing search rankings, your social media performance, and your competitors' strategies. From this foundation, we build a tailored roadmap that prioritises the channels and tactics most likely to drive measurable results for your specific business model, industry, and growth goals.</p>
+          <p>We work with businesses across Abu Dhabi, Dubai, Sharjah, and the wider UAE — from early-stage startups building their first digital presence to established enterprises looking to scale their online revenue. Our team combines strategic marketing expertise with hands-on execution across SEO, Google Ads, social media, content, and the emerging discipline of AI search optimisation.</p>
+          <p>If you are serious about growing your business through digital marketing in 2025, the best first step is a conversation. We will take the time to understand your goals, analyse your current position, and share a clear perspective on what is possible — with no pressure and no generic pitch decks.</p>
+        </div>
+        <div class="callout-box">
+          <p><strong>Ready to grow?</strong> Get in touch with the TamkinExpress team today for a free digital marketing audit. We will review your website, search rankings, and social media presence and give you an honest assessment of the biggest opportunities available to your business right now.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Final CTA -->
+    <div class="blog-cta-wrap" style="padding-bottom:100px;">
+      <a href="/contact-us.html" class="blog-cta-btn">Get Your Free Audit <span class="btn-arrow">→</span></a>
+    </div>
+
+  </div>
+</section>
+
+</div>
+
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
@@ -258,6 +443,7 @@ footer { background:#000; border-top:1px solid rgba(0,212,168,0.1); padding:60px
     <span>Abu Dhabi, UAE</span>
   </div>
 </footer>
+
 <div class="modal-overlay" id="modal" onclick="closeOnBg(event)">
   <div class="modal-box">
     <button class="modal-close" onclick="closeModal()">✕</button>
@@ -268,6 +454,7 @@ footer { background:#000; border-top:1px solid rgba(0,212,168,0.1); padding:60px
     <a href="/contact-us.html" class="modal-btn">Get Started Today →</a>
   </div>
 </div>
+
 <script>
   const navbar=document.getElementById('navbar');
   window.addEventListener('scroll',()=>navbar.classList.toggle('scrolled',window.scrollY>60));
@@ -276,9 +463,11 @@ footer { background:#000; border-top:1px solid rgba(0,212,168,0.1); padding:60px
   hamburger.addEventListener('click',()=>{hamburger.classList.toggle('open');mobileMenu.classList.toggle('open');});
   mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{hamburger.classList.remove('open');mobileMenu.classList.remove('open');}));
 
-  // Stagger reveal for rows
+  // Stagger reveal for blog rows
   const rows = document.querySelectorAll('.blog-row');
-  const ctaWrap = document.querySelector('.blog-cta-wrap');
+  const ctaWraps = document.querySelectorAll('.blog-cta-wrap');
+  const articleBlocks = document.querySelectorAll('.article-block');
+
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -286,15 +475,22 @@ footer { background:#000; border-top:1px solid rgba(0,212,168,0.1); padding:60px
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.12 });
+  }, { threshold: 0.1 });
+
   rows.forEach((row, i) => {
     row.style.transitionDelay = (i * 0.1) + 's';
     observer.observe(row);
   });
-  if (ctaWrap) {
-    ctaWrap.style.transitionDelay = (rows.length * 0.1 + 0.1) + 's';
-    observer.observe(ctaWrap);
-  }
+
+  ctaWraps.forEach(w => {
+    w.style.transitionDelay = (rows.length * 0.1 + 0.1) + 's';
+    observer.observe(w);
+  });
+
+  articleBlocks.forEach((block, i) => {
+    block.style.transitionDelay = (i * 0.08) + 's';
+    observer.observe(block);
+  });
 
   function openModal(cat,title,para){
     document.getElementById('mCat').textContent=cat;
