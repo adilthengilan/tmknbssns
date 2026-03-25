@@ -63,18 +63,41 @@ footer { background:#000; border-top:1px solid rgba(0,212,168,0.1); padding:60px
 @keyframes arrowBounce { 0%,100%{transform:translateX(0)} 50%{transform:translateX(3px)} }
 @keyframes btnGlow { 0%,100%{box-shadow:0 0 0 rgba(0,212,168,0)} 50%{box-shadow:0 0 20px rgba(0,212,168,0.3)} }
 
-.blog-section { position:relative; background:#000; padding:100px 40px; overflow:hidden; }
-.blog-section::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 60% 70% at 50% 50%,rgba(0,212,168,0.05) 0%,transparent 70%); pointer-events:none; }
+/* ===== HERO SECTION ===== */
+.blog-hero { position:relative; background:#000; padding:120px 40px 80px; overflow:hidden; text-align:center; }
+.blog-hero::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 70% 80% at 50% 40%,rgba(0,212,168,0.07) 0%,transparent 70%); pointer-events:none; }
+.blog-hero-inner { position:relative; z-index:1; max-width:780px; margin:0 auto; }
+.blog-label-wrap { display:inline-flex; align-items:center; gap:10px; color:#00d4a8; font-size:11px; font-weight:600; letter-spacing:4px; text-transform:uppercase; margin-bottom:20px; opacity:0; animation:fadeUp 0.7s 0.2s ease forwards; }
+.blog-label-line { width:0; height:1px; background:#00d4a8; animation:lineGrow 0.6s 0.6s ease forwards; }
+.blog-hero-h1 { font-family:'Playfair Display',serif; font-size:clamp(36px,5vw,62px); font-weight:900; color:#fff; line-height:1.1; margin:0 0 22px; opacity:0; animation:fadeUp 0.7s 0.35s ease forwards; }
+.blog-hero-gradient { font-style:italic; background:linear-gradient(90deg,#00d4a8 20%,#fff 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; background-size:200%; animation:shimmer 4s 1s ease-in-out infinite; }
+.blog-hero-sub { font-family:'DM Sans',sans-serif; font-size:15px; font-weight:300; color:rgba(255,255,255,0.5); line-height:1.8; max-width:600px; margin:0 auto 36px; opacity:0; animation:fadeUp 0.7s 0.5s ease forwards; }
+.blog-hero-stats { display:flex; justify-content:center; gap:48px; opacity:0; animation:fadeUp 0.7s 0.65s ease forwards; }
+.stat-item { text-align:center; }
+.stat-num { font-family:'Playfair Display',serif; font-size:28px; font-weight:900; color:#00d4a8; display:block; }
+.stat-label { font-size:11px; font-weight:500; letter-spacing:1px; color:rgba(255,255,255,0.4); text-transform:uppercase; display:block; margin-top:4px; }
+
+/* ===== INTRO SECTION ===== */
+.blog-intro { position:relative; background:#000; padding:0 40px 60px; }
+.blog-intro-inner { max-width:860px; margin:0 auto; }
+.intro-card { background:#0F1116; border:1px solid rgba(0,212,168,0.15); border-radius:16px; padding:40px 44px; position:relative; overflow:hidden; opacity:0; transform:translateY(24px); transition:opacity 0.6s ease, transform 0.6s ease; }
+.intro-card.visible { opacity:1; transform:translateY(0); }
+.intro-card::before { content:''; position:absolute; top:0; left:0; right:0; height:2px; background:linear-gradient(90deg,transparent,#00d4a8,transparent); }
+.intro-card-label { color:#00d4a8; font-size:10px; font-weight:700; letter-spacing:2px; text-transform:uppercase; display:block; margin-bottom:14px; }
+.intro-card-title { font-family:'Playfair Display',serif; font-size:22px; font-weight:700; color:#fff; line-height:1.4; margin:0 0 18px; }
+.intro-card-text { font-family:'DM Sans',sans-serif; font-size:14px; font-weight:300; color:rgba(255,255,255,0.55); line-height:1.9; }
+.intro-card-text + .intro-card-text { margin-top:14px; }
+
+/* ===== MAIN BLOG SECTION ===== */
+.blog-section { position:relative; background:#000; padding:60px 40px 100px; overflow:hidden; }
+.blog-section::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 60% 70% at 50% 50%,rgba(0,212,168,0.04) 0%,transparent 70%); pointer-events:none; }
 .blog-top-line,.blog-bot-line { position:absolute; left:0; right:0; height:1px; }
 .blog-top-line { top:0; background:linear-gradient(90deg,transparent,rgba(0,212,168,0.4),transparent); animation:fadeIn 1s ease both; }
 .blog-bot-line { bottom:0; background:linear-gradient(90deg,transparent,rgba(0,212,168,0.4),transparent); animation:fadeIn 1s 0.2s ease both; }
 .blog-inner { position:relative; z-index:1; max-width:860px; margin:0 auto; }
-
-.blog-heading-wrap { text-align:center; margin-bottom:60px; }
-.blog-label-wrap { display:inline-flex; align-items:center; gap:10px; color:#00d4a8; font-size:11px; font-weight:600; letter-spacing:4px; text-transform:uppercase; margin-bottom:18px; opacity:0; animation:fadeUp 0.7s 0.2s ease forwards; }
-.blog-label-line { width:0; height:1px; background:#00d4a8; animation:lineGrow 0.6s 0.6s ease forwards; }
-.blog-h2 { font-family:'Playfair Display',serif; font-size:clamp(32px,4vw,52px); font-weight:900; color:#fff; line-height:1.12; margin:0; opacity:0; animation:fadeUp 0.7s 0.35s ease forwards; }
-.blog-h2-gradient { font-style:italic; background:linear-gradient(90deg,#00d4a8 20%,#fff 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; background-size:200%; animation:shimmer 4s 1s ease-in-out infinite; }
+.blog-section-label { color:#00d4a8; font-size:10px; font-weight:700; letter-spacing:3px; text-transform:uppercase; display:block; margin-bottom:10px; }
+.blog-section-title { font-family:'Playfair Display',serif; font-size:clamp(24px,3vw,36px); font-weight:900; color:#fff; line-height:1.2; margin:0 0 40px; }
+.blog-section-title span { font-style:italic; background:linear-gradient(90deg,#00d4a8 20%,#fff 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
 
 .blog-list { border-top:1px solid rgba(0,212,168,0.15); animation:borderPulse 3s ease infinite; }
 .blog-row { padding:32px 0; border-bottom:1px solid rgba(255,255,255,0.06); display:flex; align-items:flex-start; justify-content:space-between; gap:40px; opacity:0; transform:translateY(24px); transition:opacity 0.6s ease, transform 0.6s ease, border-color 0.3s ease; }
@@ -88,8 +111,10 @@ footer { background:#000; border-top:1px solid rgba(0,212,168,0.1); padding:60px
 .blog-title::after { content:''; position:absolute; bottom:-2px; left:0; width:0; height:1px; background:#00d4a8; transition:width 0.4s ease; }
 .blog-row:hover .blog-title { color:rgba(255,255,255,0.9); }
 .blog-row:hover .blog-title::after { width:100%; }
-.blog-desc { font-family:'DM Sans',sans-serif; font-size:13.5px; font-weight:300; color:rgba(255,255,255,0.45); line-height:1.75; margin:0; transition:color 0.3s ease; }
+.blog-desc { font-family:'DM Sans',sans-serif; font-size:13.5px; font-weight:300; color:rgba(255,255,255,0.45); line-height:1.75; margin:0 0 10px; transition:color 0.3s ease; }
 .blog-row:hover .blog-desc { color:rgba(255,255,255,0.6); }
+.blog-body { font-family:'DM Sans',sans-serif; font-size:13px; font-weight:300; color:rgba(255,255,255,0.35); line-height:1.85; margin:0; transition:color 0.3s ease; }
+.blog-row:hover .blog-body { color:rgba(255,255,255,0.5); }
 
 .arrow-btn { background:none; border:1.5px solid rgba(0,212,168,0.3); border-radius:50%; width:38px; height:38px; display:flex; align-items:center; justify-content:center; cursor:pointer; flex-shrink:0; margin-top:4px; color:#00d4a8; font-size:16px; position:relative; overflow:hidden; transition:all 0.35s cubic-bezier(0.4,0,0.2,1); }
 .arrow-btn::before { content:''; position:absolute; inset:0; background:#00d4a8; border-radius:50%; transform:scale(0); transition:transform 0.35s cubic-bezier(0.4,0,0.2,1); }
@@ -98,6 +123,33 @@ footer { background:#000; border-top:1px solid rgba(0,212,168,0.1); padding:60px
 .arrow-btn:hover::before { transform:scale(1); }
 .arrow-btn:hover span { color:#000; transform:translateX(2px); }
 
+/* ===== KEY POINTS SECTION ===== */
+.keypoints-section { position:relative; background:#000; padding:0 40px 80px; }
+.keypoints-inner { max-width:860px; margin:0 auto; }
+.kp-grid { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+.kp-card { background:#0F1116; border:1px solid rgba(0,212,168,0.12); border-radius:14px; padding:28px 30px; position:relative; overflow:hidden; opacity:0; transform:translateY(20px); transition:opacity 0.5s ease, transform 0.5s ease, border-color 0.3s ease; }
+.kp-card.visible { opacity:1; transform:translateY(0); }
+.kp-card:hover { border-color:rgba(0,212,168,0.3); }
+.kp-card::before { content:''; position:absolute; top:0; left:0; width:3px; height:100%; background:linear-gradient(180deg,#00d4a8,transparent); border-radius:14px 0 0 14px; }
+.kp-icon { font-size:22px; margin-bottom:12px; display:block; }
+.kp-title { font-family:'Playfair Display',serif; font-size:16px; font-weight:700; color:#fff; margin:0 0 8px; }
+.kp-text { font-family:'DM Sans',sans-serif; font-size:13px; font-weight:300; color:rgba(255,255,255,0.45); line-height:1.8; }
+
+/* ===== WHY MATTERS SECTION ===== */
+.why-section { position:relative; background:#000; padding:0 40px 80px; }
+.why-inner { max-width:860px; margin:0 auto; }
+.why-block { background:#0F1116; border:1px solid rgba(0,212,168,0.12); border-radius:16px; padding:44px; position:relative; overflow:hidden; opacity:0; transform:translateY(24px); transition:opacity 0.6s ease, transform 0.6s ease; }
+.why-block.visible { opacity:1; transform:translateY(0); }
+.why-block::after { content:''; position:absolute; bottom:0; right:0; width:200px; height:200px; background:radial-gradient(circle,rgba(0,212,168,0.06) 0%,transparent 70%); pointer-events:none; }
+.why-block-label { color:#00d4a8; font-size:10px; font-weight:700; letter-spacing:2px; text-transform:uppercase; display:block; margin-bottom:14px; }
+.why-block-title { font-family:'Playfair Display',serif; font-size:22px; font-weight:700; color:#fff; line-height:1.4; margin:0 0 22px; }
+.why-list { list-style:none; display:flex; flex-direction:column; gap:14px; }
+.why-list li { display:flex; gap:14px; align-items:flex-start; }
+.why-dot { width:6px; height:6px; border-radius:50%; background:#00d4a8; flex-shrink:0; margin-top:7px; }
+.why-list-text { font-family:'DM Sans',sans-serif; font-size:14px; font-weight:300; color:rgba(255,255,255,0.55); line-height:1.8; }
+.why-list-text strong { color:#fff; font-weight:500; }
+
+/* ===== CTA SECTION ===== */
 .blog-cta-wrap { text-align:center; margin-top:48px; opacity:0; transform:translateY(20px); transition:opacity 0.6s ease, transform 0.6s ease; }
 .blog-cta-wrap.visible { opacity:1; transform:translateY(0); }
 .blog-cta-btn { display:inline-flex; align-items:center; gap:10px; background:#00d4a8; color:#000; padding:15px 36px; border-radius:100px; font-family:'Montserrat',sans-serif; font-size:13px; font-weight:700; text-decoration:none; letter-spacing:0.8px; text-transform:uppercase; transition:all 0.3s ease; position:relative; overflow:hidden; }
@@ -106,6 +158,9 @@ footer { background:#000; border-top:1px solid rgba(0,212,168,0.1); padding:60px
 .blog-cta-btn:hover::before { transform:translateX(100%); }
 .blog-cta-btn:hover .btn-arrow { animation:arrowBounce 0.6s ease infinite; }
 .btn-arrow { display:inline-block; transition:transform 0.3s ease; }
+
+/* ===== DIVIDER ===== */
+.section-divider { max-width:860px; margin:0 auto 60px; height:1px; background:linear-gradient(90deg,transparent,rgba(0,212,168,0.3),transparent); }
 
 /* Modal */
 .modal-overlay { position:fixed; inset:0; background:rgba(0,0,0,0); z-index:9999; display:flex; align-items:center; justify-content:center; padding:24px; pointer-events:none; transition:background 0.3s ease; }
@@ -121,8 +176,8 @@ footer { background:#000; border-top:1px solid rgba(0,212,168,0.1); padding:60px
 .modal-btn { display:inline-flex; align-items:center; gap:8px; background:#00d4a8; color:#000; padding:13px 28px; border-radius:100px; font-family:'Montserrat',sans-serif; font-size:12.5px; font-weight:700; text-decoration:none; letter-spacing:0.8px; text-transform:uppercase; transition:all 0.3s ease; }
 .modal-btn:hover { background:#00ffc8; transform:translateY(-1px); box-shadow:0 8px 20px rgba(0,212,168,0.35); }
 
-@media(max-width:900px){ .footer-inner{grid-template-columns:1fr 1fr;} .nav-menu,.nav-buttons{display:none;} .hamburger{display:flex;} }
-@media(max-width:600px){ .navbar{padding:0 20px;} .footer-inner{grid-template-columns:1fr;} .modal-box{padding:32px 24px;} .blog-section{padding:80px 20px;} }
+@media(max-width:900px){ .footer-inner{grid-template-columns:1fr 1fr;} .nav-menu,.nav-buttons{display:none;} .hamburger{display:flex;} .kp-grid{grid-template-columns:1fr;} .blog-hero-stats{gap:28px;} }
+@media(max-width:600px){ .navbar{padding:0 20px;} .footer-inner{grid-template-columns:1fr;} .modal-box{padding:32px 24px;} .blog-section{padding:60px 20px 80px;} .blog-hero{padding:100px 20px 60px;} .blog-intro{padding:0 20px 40px;} .keypoints-section{padding:0 20px 60px;} .why-section{padding:0 20px 60px;} .intro-card{padding:28px 24px;} .why-block{padding:28px 24px;} }
 </style>
 </head>
 <body>
@@ -154,66 +209,181 @@ footer { background:#000; border-top:1px solid rgba(0,212,168,0.1); padding:60px
     <a href="/contact-us.html" class="mobile-cta">Get Free Quote</a>
   </div>
 </div>
+
 <div style="padding-top:72px;">
-<section class="blog-section">
-  <div class="blog-top-line"></div>
-  <div class="blog-bot-line"></div>
-  <div class="blog-inner">
-    <div class="blog-heading-wrap">
+
+  <!-- ===== HERO ===== -->
+  <section class="blog-hero">
+    <div class="blog-hero-inner">
       <div class="blog-label-wrap">
         <span class="blog-label-line"></span>
-        From Our Blog
+        Ministry of Labour
         <span class="blog-label-line"></span>
       </div>
-      <h2 class="blog-h2">Ministry of Labour<br><span class="blog-h2-gradient">Insights & Guides</span></h2>
-    </div>
-    <div class="blog-list">
-      <div class="blog-row">
-        <div class="blog-row-content">
-          <span class="blog-cat">MOHRE Overview</span>
-          <div class="blog-title">How MOHRE Regulates Employment in the UAE: What Employers Must Know</div>
-          <p class="blog-desc">A complete guide to the Ministry of Human Resources and Emiratisation obligations.</p>
+      <h1 class="blog-hero-h1">UAE Labour Law<br><span class="blog-hero-gradient">Insights & Guides</span></h1>
+      <p class="blog-hero-sub">Everything UAE employers and employees need to know about MOHRE regulations, work permits, Emiratisation, and labour compliance — explained clearly, without the legal jargon.</p>
+      <div class="blog-hero-stats">
+        <div class="stat-item">
+          <span class="stat-num">5+</span>
+          <span class="stat-label">Expert Guides</span>
         </div>
-        <button class="arrow-btn" onclick="openModal('MOHRE Overview','How MOHRE Regulates Employment in the UAE: What Employers Must Know','The UAE Ministry of Human Resources and Emiratisation (MOHRE) governs all aspects of employment in the private sector — from work permit issuance and labour contracts to dispute resolution and Emiratisation quotas. Employers who fail to comply with MOHRE regulations face permit freezes, fines, and legal proceedings. This guide explains the key MOHRE obligations for UAE private sector employers and the most common compliance failures.')"><span>→</span></button>
-      </div>
-      <div class="blog-row">
-        <div class="blog-row-content">
-          <span class="blog-cat">Work Permit</span>
-          <div class="blog-title">UAE Work Permit Categories Explained: Which Permit Does Your Employee Need?</div>
-          <p class="blog-desc">A breakdown of all MOHRE work permit types and their eligibility requirements.</p>
+        <div class="stat-item">
+          <span class="stat-num">2025</span>
+          <span class="stat-label">Up to Date</span>
         </div>
-        <button class="arrow-btn" onclick="openModal('Work Permit','UAE Work Permit Categories Explained: Which Permit Does Your Employee Need?','MOHRE issues several categories of work permits in the UAE, each with different eligibility criteria, costs, and restrictions. Category 1 permits are for degree-qualified professionals, Category 2 for skilled workers, and Category 3 for unskilled labour — each with different fee structures. There are also special permits for part-time workers, domestic workers, and Emiratis. This guide explains every MOHRE work permit category and which permit is appropriate for different employee types.')"><span>→</span></button>
-      </div>
-      <div class="blog-row">
-        <div class="blog-row-content">
-          <span class="blog-cat">Labour Contract</span>
-          <div class="blog-title">UAE Labour Contracts: What Must Be Included Under UAE Labour Law?</div>
-          <p class="blog-desc">The mandatory terms, notice periods, and end-of-service entitlements every employer must know.</p>
+        <div class="stat-item">
+          <span class="stat-num">100%</span>
+          <span class="stat-label">MOHRE Aligned</span>
         </div>
-        <button class="arrow-btn" onclick="openModal('Labour Contract','UAE Labour Contracts: What Must Be Included Under UAE Labour Law?','UAE Labour Law requires all employment contracts to be registered with MOHRE and to include specific mandatory terms — job title, basic salary, allowances, working hours, leave entitlement, and notice period. Unlimited contracts were abolished in 2022, replaced by fixed-term contracts of up to 3 years. This guide explains what must be included in a compliant UAE labour contract and the end-of-service gratuity calculation under the current Labour Law.')"><span>→</span></button>
-      </div>
-      <div class="blog-row">
-        <div class="blog-row-content">
-          <span class="blog-cat">Emiratisation</span>
-          <div class="blog-title">UAE Emiratisation Quotas in 2025: What Private Sector Employers Must Comply With</div>
-          <p class="blog-desc">The Nafis programme, Emiratisation targets, and the fines for non-compliance.</p>
-        </div>
-        <button class="arrow-btn" onclick="openModal('Emiratisation','UAE Emiratisation Quotas in 2025: What Private Sector Employers Must Comply With','The UAE government requires private sector companies with 50 or more employees to meet annual Emiratisation targets — with the quota increasing by 2% per year until 2026. Companies that miss their targets are subject to monthly fines of AED 6,000 per unfulfilled Emirati position. This guide explains the current Emiratisation targets, how to calculate your company obligation, and the practical steps to meet your quota.')"><span>→</span></button>
-      </div>
-      <div class="blog-row">
-        <div class="blog-row-content">
-          <span class="blog-cat">Labour Disputes</span>
-          <div class="blog-title">How to Handle UAE Labour Disputes Through MOHRE: A Practical Guide</div>
-          <p class="blog-desc">The complaint process, mediation timeline, and when to escalate to Labour Court.</p>
-        </div>
-        <button class="arrow-btn" onclick="openModal('Labour Disputes','How to Handle UAE Labour Disputes Through MOHRE: A Practical Guide','When an employment dispute arises in the UAE, both employers and employees must first file a complaint with MOHRE before escalating to Labour Court. MOHRE conducts a mandatory conciliation stage, typically resolved within 2–3 weeks. If conciliation fails, the case is referred to the Labour Court. This practical guide explains how to file a MOHRE labour complaint, what to expect during the conciliation process, and how to prepare your case effectively.')"><span>→</span></button>
       </div>
     </div>
-    <div class="blog-cta-wrap">
-      <a href="/contact-us.html" class="blog-cta-btn">Get Started Today <span class="btn-arrow">→</span></a>
+  </section>
+
+  <!-- ===== INTRO ===== -->
+  <section class="blog-intro">
+    <div class="blog-intro-inner">
+      <div class="intro-card">
+        <span class="intro-card-label">Why This Matters</span>
+        <h2 class="intro-card-title">Navigating UAE Labour Regulations Without Getting It Wrong</h2>
+        <p class="intro-card-text">The UAE's employment landscape has undergone significant transformation over the past few years. With the introduction of Federal Decree-Law No. 33 of 2021, the abolition of unlimited contracts, expanded Emiratisation mandates, and a more structured dispute resolution framework — employers and HR professionals are under greater pressure than ever to stay compliant.</p>
+        <p class="intro-card-text">Missing a MOHRE deadline, misclassifying a work permit, or falling short of your Emiratisation quota can result in permit freezes, monthly fines, and reputational damage. This resource hub is designed to give you accurate, practical guidance on the regulations that affect your business most — from onboarding new hires to resolving disputes and meeting government targets.</p>
+      </div>
     </div>
-  </div>
-</section></div>
+  </section>
+
+  <!-- ===== KEY POINTS GRID ===== -->
+  <section class="keypoints-section">
+    <div class="keypoints-inner">
+      <div class="section-divider" style="margin-bottom:40px;"></div>
+      <span class="blog-section-label" style="display:block;margin-bottom:8px;">At a Glance</span>
+      <h2 class="blog-section-title" style="font-family:'Playfair Display',serif;font-size:clamp(22px,3vw,32px);font-weight:900;color:#fff;margin:0 0 32px;">What Every UAE Employer <span style="font-style:italic;background:linear-gradient(90deg,#00d4a8 20%,#fff 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Must Know in 2025</span></h2>
+      <div class="kp-grid">
+        <div class="kp-card">
+          <span class="kp-icon">📋</span>
+          <h3 class="kp-title">All Contracts Are Now Fixed-Term</h3>
+          <p class="kp-text">Unlimited contracts were phased out in 2022. All employment contracts must now be fixed-term for a maximum of 3 years, renewable upon agreement. Non-compliant contracts can be disputed.</p>
+        </div>
+        <div class="kp-card">
+          <span class="kp-icon">🎯</span>
+          <h3 class="kp-title">Emiratisation Targets Rise Every Year</h3>
+          <p class="kp-text">Private sector companies with 50+ employees must increase their Emirati workforce by 2% annually until 2026. Missing targets triggers fines of AED 6,000 per month per unfilled position.</p>
+        </div>
+        <div class="kp-card">
+          <span class="kp-icon">🛂</span>
+          <h3 class="kp-title">Work Permit Categories Are Strictly Enforced</h3>
+          <p class="kp-text">Each permit type — Category 1, 2, or 3 — has specific eligibility criteria and fee structures. Misclassifying a worker's permit can lead to fines, cancellations, and delayed renewals.</p>
+        </div>
+        <div class="kp-card">
+          <span class="kp-icon">⚖️</span>
+          <h3 class="kp-title">MOHRE Conciliation Comes Before Court</h3>
+          <p class="kp-text">Any labour dispute must go through MOHRE's mandatory conciliation stage first. Only if mediation fails within 2–3 weeks is the case referred to the Labour Court for formal proceedings.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ARTICLES LIST ===== -->
+  <section class="blog-section">
+    <div class="blog-top-line"></div>
+    <div class="blog-inner">
+      <span class="blog-section-label">From Our Blog</span>
+      <h2 class="blog-section-title">Ministry of Labour <span>Guides & Insights</span></h2>
+
+      <div class="blog-list">
+
+        <div class="blog-row">
+          <div class="blog-row-content">
+            <span class="blog-cat">MOHRE Overview</span>
+            <div class="blog-title">How MOHRE Regulates Employment in the UAE: What Employers Must Know</div>
+            <p class="blog-desc">A complete guide to the Ministry of Human Resources and Emiratisation obligations.</p>
+            <p class="blog-body">The UAE Ministry of Human Resources and Emiratisation (MOHRE) oversees every aspect of private sector employment — from issuing work permits and registering labour contracts to managing Emiratisation targets and resolving disputes. Employers who fail to meet their MOHRE obligations risk permit freezes, financial penalties, and legal proceedings that can disrupt operations significantly. Understanding your obligations before they become violations is not optional — it is essential.</p>
+          </div>
+          <button class="arrow-btn" onclick="openModal('MOHRE Overview','How MOHRE Regulates Employment in the UAE: What Employers Must Know','The UAE Ministry of Human Resources and Emiratisation (MOHRE) governs all aspects of employment in the private sector — from work permit issuance and labour contracts to dispute resolution and Emiratisation quotas. Employers who fail to comply with MOHRE regulations face permit freezes, fines, and legal proceedings. This guide explains the key MOHRE obligations for UAE private sector employers and the most common compliance failures.')"><span>→</span></button>
+        </div>
+
+        <div class="blog-row">
+          <div class="blog-row-content">
+            <span class="blog-cat">Work Permit</span>
+            <div class="blog-title">UAE Work Permit Categories Explained: Which Permit Does Your Employee Need?</div>
+            <p class="blog-desc">A breakdown of all MOHRE work permit types and their eligibility requirements.</p>
+            <p class="blog-body">MOHRE issues several distinct categories of work permits, each designed for a specific type of worker. Category 1 covers degree-qualified professionals, Category 2 applies to skilled workers with relevant experience, and Category 3 covers unskilled labour — each carrying different fee structures and processing timelines. There are also dedicated permits for part-time workers, domestic workers, and Emirati nationals re-entering the workforce. Choosing the wrong category — even unintentionally — can result in delays, rejections, and compliance flags on your company's MOHRE profile.</p>
+          </div>
+          <button class="arrow-btn" onclick="openModal('Work Permit','UAE Work Permit Categories Explained: Which Permit Does Your Employee Need?','MOHRE issues several categories of work permits in the UAE, each with different eligibility criteria, costs, and restrictions. Category 1 permits are for degree-qualified professionals, Category 2 for skilled workers, and Category 3 for unskilled labour — each with different fee structures. There are also special permits for part-time workers, domestic workers, and Emiratis. This guide explains every MOHRE work permit category and which permit is appropriate for different employee types.')"><span>→</span></button>
+        </div>
+
+        <div class="blog-row">
+          <div class="blog-row-content">
+            <span class="blog-cat">Labour Contract</span>
+            <div class="blog-title">UAE Labour Contracts: What Must Be Included Under UAE Labour Law?</div>
+            <p class="blog-desc">The mandatory terms, notice periods, and end-of-service entitlements every employer must know.</p>
+            <p class="blog-body">Under UAE Labour Law, all employment contracts must be registered with MOHRE and must include specific mandatory clauses — job title, basic salary, allowances, working hours, annual leave entitlement, and notice period. Since the 2022 reforms abolished unlimited contracts, all new agreements must be fixed-term for up to 3 years. End-of-service gratuity calculations have also been updated, and non-compliant contracts expose employers to dispute risks. Getting the contract right from day one protects both parties and reduces the risk of costly claims later.</p>
+          </div>
+          <button class="arrow-btn" onclick="openModal('Labour Contract','UAE Labour Contracts: What Must Be Included Under UAE Labour Law?','UAE Labour Law requires all employment contracts to be registered with MOHRE and to include specific mandatory terms — job title, basic salary, allowances, working hours, leave entitlement, and notice period. Unlimited contracts were abolished in 2022, replaced by fixed-term contracts of up to 3 years. This guide explains what must be included in a compliant UAE labour contract and the end-of-service gratuity calculation under the current Labour Law.')"><span>→</span></button>
+        </div>
+
+        <div class="blog-row">
+          <div class="blog-row-content">
+            <span class="blog-cat">Emiratisation</span>
+            <div class="blog-title">UAE Emiratisation Quotas in 2025: What Private Sector Employers Must Comply With</div>
+            <p class="blog-desc">The Nafis programme, Emiratisation targets, and the fines for non-compliance.</p>
+            <p class="blog-body">The UAE's Emiratisation drive is one of the most significant workforce policy shifts in the region. Private sector companies with 50 or more employees are required to increase their Emirati headcount by 2% each year until 2026 — and the government is actively monitoring compliance through the Nafis platform. Companies that miss their annual targets face monthly fines of AED 6,000 per unfilled Emirati position, which accumulate quickly. The programme also offers financial incentives for businesses that exceed their targets, making proactive planning both a risk management and a cost optimisation strategy.</p>
+          </div>
+          <button class="arrow-btn" onclick="openModal('Emiratisation','UAE Emiratisation Quotas in 2025: What Private Sector Employers Must Comply With','The UAE government requires private sector companies with 50 or more employees to meet annual Emiratisation targets — with the quota increasing by 2% per year until 2026. Companies that miss their targets are subject to monthly fines of AED 6,000 per unfulfilled Emirati position. This guide explains the current Emiratisation targets, how to calculate your company obligation, and the practical steps to meet your quota.')"><span>→</span></button>
+        </div>
+
+        <div class="blog-row">
+          <div class="blog-row-content">
+            <span class="blog-cat">Labour Disputes</span>
+            <div class="blog-title">How to Handle UAE Labour Disputes Through MOHRE: A Practical Guide</div>
+            <p class="blog-desc">The complaint process, mediation timeline, and when to escalate to Labour Court.</p>
+            <p class="blog-body">Labour disputes in the UAE follow a structured resolution process designed to encourage settlement before litigation. Both employers and employees must file a complaint through MOHRE before any case can reach the Labour Court — and MOHRE's conciliation stage typically resolves disputes within 2 to 3 weeks. If an agreement is not reached, the case is referred to the relevant court. Whether you are an employer facing a wrongful termination claim or an employee dealing with unpaid wages, understanding the process, required documentation, and realistic timelines is the difference between a resolved dispute and an expensive, prolonged legal battle.</p>
+          </div>
+          <button class="arrow-btn" onclick="openModal('Labour Disputes','How to Handle UAE Labour Disputes Through MOHRE: A Practical Guide','When an employment dispute arises in the UAE, both employers and employees must first file a complaint with MOHRE before escalating to Labour Court. MOHRE conducts a mandatory conciliation stage, typically resolved within 2–3 weeks. If conciliation fails, the case is referred to the Labour Court. This practical guide explains how to file a MOHRE labour complaint, what to expect during the conciliation process, and how to prepare your case effectively.')"><span>→</span></button>
+        </div>
+
+      </div>
+
+      <div class="blog-cta-wrap">
+        <a href="/contact-us.html" class="blog-cta-btn">Get Expert Help Today <span class="btn-arrow">→</span></a>
+      </div>
+    </div>
+    <div class="blog-bot-line"></div>
+  </section>
+
+  <!-- ===== WHY TAMKIN ===== -->
+  <section class="why-section">
+    <div class="why-inner">
+      <div class="why-block">
+        <span class="why-block-label">Why TamkinExpress</span>
+        <h2 class="why-block-title">Labour Compliance Is Not Something You Want to Figure Out Under Pressure</h2>
+        <ul class="why-list">
+          <li>
+            <div class="why-dot"></div>
+            <p class="why-list-text"><strong>MOHRE permit applications and renewals</strong> handled correctly the first time — no back-and-forth, no rejected submissions, no delays holding up your hire.</p>
+          </li>
+          <li>
+            <div class="why-dot"></div>
+            <p class="why-list-text"><strong>Labour contract preparation and registration</strong> in full compliance with the 2022 Labour Law reforms, including gratuity calculations and fixed-term structures.</p>
+          </li>
+          <li>
+            <div class="why-dot"></div>
+            <p class="why-list-text"><strong>Emiratisation strategy and quota management</strong> — we help you calculate your obligations, identify recruitment pathways, and avoid the monthly AED 6,000 fines per unfilled position.</p>
+          </li>
+          <li>
+            <div class="why-dot"></div>
+            <p class="why-list-text"><strong>Labour dispute representation</strong> at the MOHRE conciliation stage — whether you are responding to a complaint or initiating one, having the right documentation and a clear position matters.</p>
+          </li>
+          <li>
+            <div class="why-dot"></div>
+            <p class="why-list-text"><strong>Ongoing compliance monitoring</strong> so that regulatory changes — new quotas, updated fee structures, revised permit categories — are flagged to you before they become a problem.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</div>
+
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
@@ -258,6 +428,7 @@ footer { background:#000; border-top:1px solid rgba(0,212,168,0.1); padding:60px
     <span>Abu Dhabi, UAE</span>
   </div>
 </footer>
+
 <div class="modal-overlay" id="modal" onclick="closeOnBg(event)">
   <div class="modal-box">
     <button class="modal-close" onclick="closeModal()">✕</button>
@@ -268,6 +439,7 @@ footer { background:#000; border-top:1px solid rgba(0,212,168,0.1); padding:60px
     <a href="/contact-us.html" class="modal-btn">Get Started Today →</a>
   </div>
 </div>
+
 <script>
   const navbar=document.getElementById('navbar');
   window.addEventListener('scroll',()=>navbar.classList.toggle('scrolled',window.scrollY>60));
@@ -276,25 +448,20 @@ footer { background:#000; border-top:1px solid rgba(0,212,168,0.1); padding:60px
   hamburger.addEventListener('click',()=>{hamburger.classList.toggle('open');mobileMenu.classList.toggle('open');});
   mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{hamburger.classList.remove('open');mobileMenu.classList.remove('open');}));
 
-  // Stagger reveal for rows
-  const rows = document.querySelectorAll('.blog-row');
-  const ctaWrap = document.querySelector('.blog-cta-wrap');
+  const allObserved = document.querySelectorAll('.blog-row, .blog-cta-wrap, .intro-card, .kp-card, .why-block');
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
+    entries.forEach((entry, idx) => {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.12 });
-  rows.forEach((row, i) => {
-    row.style.transitionDelay = (i * 0.1) + 's';
-    observer.observe(row);
+  }, { threshold: 0.1 });
+
+  allObserved.forEach((el, i) => {
+    el.style.transitionDelay = (i * 0.08) + 's';
+    observer.observe(el);
   });
-  if (ctaWrap) {
-    ctaWrap.style.transitionDelay = (rows.length * 0.1 + 0.1) + 's';
-    observer.observe(ctaWrap);
-  }
 
   function openModal(cat,title,para){
     document.getElementById('mCat').textContent=cat;
