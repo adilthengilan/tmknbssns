@@ -1,598 +1,208 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
-    <!-- ✅ SEO OPTIMIZED TITLE -->
-    <title>Personal Branding Agency in UAE & Dubai | TamkinExpress</title>
-
-    <!-- ✅ SEO META DESCRIPTION -->
-    <meta name="description" content="TamkinExpress is UAE & Dubai's top personal branding agency. Discover the benefits of personal branding, why personal branding matters, and how our personal branding companies help you grow.">
-
-    <!-- ✅ SEO KEYWORDS -->
-    <meta name="keywords" content="personal branding in uae, personal branding dubai, branding in uae, personal branding companies, why personal branding, benefits of personal branding, personal branding agency dubai">
-
-    <!-- ✅ CANONICAL -->
-    <link rel="canonical" href="https://tamkinexpress.com/personal-branding.html">
-
-    <!-- ✅ OG TAGS -->
-    <meta property="og:title" content="Personal Branding Agency in UAE & Dubai | TamkinExpress">
-    <meta property="og:description" content="UAE & Dubai's leading personal branding company. We help executives, entrepreneurs, and professionals build authority, grow influence, and dominate their industry.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://tamkinexpress.com/personal-branding.html">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Montserrat:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-
-    <style>
-        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-        :root {
-            --teal: #00d4a8; --teal-dim: rgba(0,212,168,0.15);
-            --bg: #000; --card-bg: #0F1116;
-            --text: #fff; --muted: rgba(255,255,255,0.55);
-            --border: rgba(0,212,168,0.2);
-        }
-        html { scroll-behavior: smooth; }
-        body { font-family: 'Montserrat', sans-serif; background: var(--bg); color: var(--text); overflow-x: hidden; }
-
-        /* ── NAVBAR ── */
-        .navbar { position: fixed; top:0; left:0; right:0; z-index:1000; padding:0 48px; height:72px; display:flex; align-items:center; justify-content:space-between; background:rgba(0,0,0,0.75); backdrop-filter:blur(24px); -webkit-backdrop-filter:blur(24px); border-bottom:1px solid rgba(0,212,168,0.12); transition:background 0.4s ease,box-shadow 0.4s ease; }
-        .navbar.scrolled { background:rgba(0,0,0,0.96); box-shadow:0 4px 30px rgba(0,0,0,0.5); }
-        .nav-logo a { display:flex; align-items:center; text-decoration:none; }
-        .nav-logo img { height:44px; width:124px; object-fit:contain; display:block; }
-        .nav-logo-text { font-family:'Playfair Display',serif; font-size:20px; font-weight:700; color:var(--teal); display:none; }
-        .nav-right { display:flex; align-items:center; gap:36px; }
-        .nav-menu { display:flex; gap:32px; list-style:none; align-items:center; }
-        .nav-link { color:rgba(255,255,255,0.72); text-decoration:none; font-size:13px; font-weight:500; letter-spacing:0.4px; transition:color 0.25s ease; position:relative; padding-bottom:2px; }
-        .nav-link::after { content:''; position:absolute; bottom:-2px; left:0; width:0; height:1.5px; background:var(--teal); transition:width 0.3s ease; }
-        .nav-link:hover,.nav-link.active { color:var(--teal); }
-        .nav-link:hover::after,.nav-link.active::after { width:100%; }
-        .nav-buttons { display:flex; align-items:center; gap:10px; }
-        .nav-btn-outline { display:inline-flex; align-items:center; gap:7px; color:var(--teal); border:1.5px solid rgba(0,212,168,0.4); padding:9px 22px; border-radius:100px; font-size:12.5px; font-weight:600; text-decoration:none; transition:all 0.3s ease; white-space:nowrap; }
-        .nav-btn-outline:hover { background:var(--teal-dim); border-color:var(--teal); }
-        .nav-cta { display:inline-flex; align-items:center; gap:7px; background:var(--teal); color:#000; padding:10px 24px; border-radius:100px; font-size:12.5px; font-weight:700; text-decoration:none; transition:all 0.3s ease; white-space:nowrap; }
-        .nav-cta:hover { background:#00ffc8; transform:translateY(-1px); box-shadow:0 6px 20px rgba(0,212,168,0.35); }
-        .hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:6px; background:none; border:none; z-index:1100; }
-        .hamburger span { display:block; width:24px; height:2px; background:#fff; border-radius:2px; transition:all 0.3s ease; }
-        .hamburger.open span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
-        .hamburger.open span:nth-child(2) { opacity:0; }
-        .hamburger.open span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
-        .mobile-menu { display:none; position:fixed; top:72px; left:0; right:0; background:rgba(0,0,0,0.97); border-bottom:1px solid rgba(0,212,168,0.15); padding:24px 32px 32px; flex-direction:column; gap:4px; z-index:999; transform:translateY(-10px); opacity:0; pointer-events:none; transition:all 0.3s ease; }
-        .mobile-menu.open { opacity:1; transform:translateY(0); pointer-events:all; display:flex; }
-        .mobile-link { color:rgba(255,255,255,0.8); text-decoration:none; font-size:15px; font-weight:500; padding:14px 0; border-bottom:1px solid rgba(255,255,255,0.06); transition:color 0.2s; }
-        .mobile-link:hover { color:var(--teal); }
-        .mobile-menu-btns { display:flex; flex-direction:column; gap:10px; margin-top:20px; }
-        .mobile-cta { background:var(--teal); color:#000; text-align:center; padding:13px; border-radius:100px; font-weight:700; font-size:13px; text-decoration:none; }
-        .mobile-cta-outline { border:1.5px solid rgba(0,212,168,0.4); color:var(--teal); text-align:center; padding:12px; border-radius:100px; font-weight:600; font-size:13px; text-decoration:none; }
-
-        /* ── HERO ── */
-        .hero { min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; position:relative; overflow:hidden; padding:120px 40px 80px; text-align:center; }
-        .hero-bg { position:absolute; inset:0; background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(0,212,168,0.12) 0%,transparent 70%),radial-gradient(ellipse 40% 40% at 80% 80%,rgba(0,212,168,0.06) 0%,transparent 60%); pointer-events:none; }
-        .hero-badge { display:inline-flex; align-items:center; gap:8px; background:rgba(0,212,168,0.1); border:1px solid rgba(0,212,168,0.3); border-radius:100px; padding:8px 18px; font-size:12px; font-weight:600; color:var(--teal); letter-spacing:2px; text-transform:uppercase; margin-bottom:32px; animation:fadeUp 0.6s ease both; }
-        .hero-badge::before { content:''; width:6px; height:6px; border-radius:50%; background:var(--teal); animation:pulse 2s infinite; }
-        .hero h1 { font-family:'Playfair Display',serif; font-weight:900; font-size:clamp(38px,5.8vw,72px); line-height:1.1; margin-bottom:28px; animation:fadeUp 0.6s 0.1s ease both; }
-        .h1-line1 { display:block; font-size:clamp(15px,2vw,22px); font-family:'Montserrat',sans-serif; font-weight:600; letter-spacing:3px; text-transform:uppercase; color:var(--muted); margin-bottom:10px; }
-        .h1-line2 { display:block; }
-        .h1-line3 { display:block; }
-        .line-teal { font-style:italic; background:linear-gradient(90deg,var(--teal) 0%,#fff 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; background-size:200%; animation:shimmer 4s ease-in-out infinite; }
-        .hero-sub { font-family:'DM Sans',sans-serif; font-size:16px; font-weight:300; line-height:1.8; color:var(--muted); max-width:560px; margin:0 auto 50px; animation:fadeUp 0.6s 0.2s ease both; }
-        .hero-cta { display:flex; align-items:center; gap:20px; flex-wrap:wrap; justify-content:center; animation:fadeUp 0.6s 0.3s ease both; }
-        .btn-primary { display:inline-flex; align-items:center; gap:10px; background:var(--teal); color:#000; padding:16px 32px; border-radius:100px; font-size:14px; font-weight:700; text-decoration:none; transition:all 0.3s ease; }
-        .btn-primary:hover { background:#00ffc8; transform:translateY(-2px); box-shadow:0 12px 30px rgba(0,212,168,0.35); }
-        .btn-secondary { display:inline-flex; align-items:center; gap:10px; color:var(--teal); border:1px solid var(--border); padding:16px 32px; border-radius:100px; font-size:14px; font-weight:600; text-decoration:none; transition:all 0.3s ease; }
-        .btn-secondary:hover { background:var(--teal-dim); border-color:var(--teal); }
-        .cta-divider { color:var(--muted); font-size:13px; }
-        .hero-stats { display:flex; gap:56px; justify-content:center; margin-top:64px; flex-wrap:wrap; animation:fadeUp 0.6s 0.4s ease both; }
-        .stat-item { text-align:center; }
-        .stat-num { font-family:'Playfair Display',serif; font-size:38px; font-weight:700; color:var(--teal); display:block; }
-        .stat-label { font-size:11px; color:var(--muted); font-weight:500; letter-spacing:1px; text-transform:uppercase; margin-top:4px; }
-        .stat-div { width:1px; background:rgba(0,212,168,0.2); align-self:stretch; }
-
-        /* ── WHY PERSONAL BRANDING ── */
-        .why-section { background:#060608; padding:100px 40px; }
-        .why-wrap { max-width:1200px; margin:0 auto; }
-        .why-header { text-align:center; margin-bottom:60px; }
-        .why-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:24px; }
-        .why-card { background:var(--card-bg); border-radius:16px; padding:32px 28px; border:1px solid rgba(0,212,168,0.1); transition:all 0.35s ease; position:relative; overflow:hidden; }
-        .why-card::after { content:''; position:absolute; bottom:0; left:0; right:0; height:3px; background:linear-gradient(90deg,var(--teal),transparent); transform:scaleX(0); transform-origin:left; transition:transform 0.4s ease; }
-        .why-card:hover { transform:translateY(-8px); border-color:rgba(0,212,168,0.3); box-shadow:0 20px 40px rgba(0,212,168,0.12); }
-        .why-card:hover::after { transform:scaleX(1); }
-        .why-icon { font-size:32px; margin-bottom:16px; display:block; }
-        .why-card h3 { font-family:'Playfair Display',serif; font-size:18px; font-weight:600; margin-bottom:10px; }
-        .why-card p { font-size:13px; color:var(--muted); line-height:1.75; font-weight:300; }
-
-        /* ── SERVICES ── */
-        .svc-section { background:#000; padding:100px 40px; }
-        .svc-header { text-align:center; margin-bottom:60px; }
-        .svc-header .section-sub { margin:0 auto; }
-        .svc-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:28px; max-width:1300px; margin:0 auto; }
-        .svc-card { background:var(--card-bg); border-radius:20px; padding:38px 32px; border-left:5px solid var(--teal); position:relative; overflow:hidden; transition:all 0.4s cubic-bezier(0.4,0,0.2,1); }
-        .svc-card::before { content:''; position:absolute; inset:0; background:linear-gradient(135deg,rgba(0,212,168,0.12) 0%,rgba(0,212,168,0.04) 50%,transparent 100%); opacity:0; transition:opacity 0.4s ease; }
-        .svc-card:hover { transform:translateY(-10px); box-shadow:0 24px 48px rgba(0,212,168,0.2); }
-        .svc-card:hover::before { opacity:1; }
-        .svc-card > * { position:relative; z-index:1; }
-        .card-icon { width:62px; height:62px; border-radius:50%; background:var(--teal-dim); border:2px solid var(--border); display:flex; align-items:center; justify-content:center; margin-bottom:22px; font-size:26px; transition:all 0.4s ease; }
-        .svc-card:hover .card-icon { transform:scale(1.1) rotate(5deg); background:rgba(0,212,168,0.22); border-color:rgba(0,212,168,0.5); }
-        .svc-card h3 { font-family:'Playfair Display',serif; font-size:21px; font-weight:600; margin-bottom:12px; }
-        .svc-card p { font-size:13.5px; font-weight:300; color:var(--muted); line-height:1.75; margin-bottom:20px; }
-        .tags { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:20px; }
-        .tag { background:rgba(0,212,168,0.08); border:1px solid rgba(0,212,168,0.2); color:var(--teal); border-radius:100px; padding:4px 12px; font-size:11px; font-weight:600; }
-        .card-link { display:inline-flex; align-items:center; color:var(--teal); text-decoration:none; font-size:12.5px; font-weight:700; letter-spacing:1px; text-transform:uppercase; gap:6px; border-bottom:1px solid transparent; padding-bottom:2px; transition:all 0.3s ease; }
-        .card-link:hover { color:#00ffc8; border-bottom-color:#00ffc8; gap:10px; }
-
-        /* ── SECTIONS SHARED ── */
-        .section-label { color:var(--teal); font-size:12px; font-weight:600; letter-spacing:4px; text-transform:uppercase; margin-bottom:14px; display:block; }
-        .section-title { font-family:'Playfair Display',serif; font-size:clamp(32px,4vw,52px); font-weight:700; line-height:1.2; margin-bottom:16px; }
-        .section-title .hl { color:var(--teal); }
-        .section-sub { font-size:15px; font-weight:300; color:var(--muted); max-width:520px; line-height:1.8; }
-
-        /* ── PROCESS ── */
-        .proc-section { background:#060608; position:relative; overflow:hidden; padding:100px 40px; }
-        .proc-section::before { content:''; position:absolute; top:-200px; left:50%; transform:translateX(-50%); width:800px; height:800px; background:radial-gradient(circle,rgba(0,212,168,0.06) 0%,transparent 70%); pointer-events:none; }
-        .proc-wrap { max-width:1100px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; }
-        .steps { display:flex; flex-direction:column; }
-        .step { display:flex; gap:22px; padding:26px 0; border-bottom:1px solid rgba(255,255,255,0.06); transition:all 0.3s ease; }
-        .step:last-child { border-bottom:none; }
-        .step-num { font-family:'Playfair Display',serif; font-size:17px; font-weight:700; color:var(--teal); width:42px; height:42px; border-radius:50%; border:2px solid var(--border); display:flex; align-items:center; justify-content:center; flex-shrink:0; transition:all 0.3s ease; }
-        .step:hover .step-num { color:#000; background:var(--teal); }
-        .step h4 { font-family:'Playfair Display',serif; font-size:17px; font-weight:600; margin-bottom:6px; }
-        .step p { font-size:13px; color:var(--muted); font-weight:300; line-height:1.7; }
-        .proc-card { background:var(--card-bg); border-radius:20px; padding:36px; border:1px solid var(--border); }
-        .proc-card h3 { font-family:'Playfair Display',serif; font-size:24px; margin-bottom:22px; }
-        .mrow { display:flex; justify-content:space-between; align-items:center; padding:13px 0; border-bottom:1px solid rgba(255,255,255,0.06); }
-        .mrow:last-of-type { border-bottom:none; }
-        .mname { font-size:13px; color:var(--muted); }
-        .mbar-wrap { flex:1; margin:0 14px; height:4px; background:rgba(255,255,255,0.08); border-radius:4px; overflow:hidden; }
-        .mbar { height:100%; background:var(--teal); border-radius:4px; animation:growBar 1.5s ease both; }
-        .mval { font-size:13px; font-weight:600; color:var(--teal); min-width:36px; text-align:right; }
-        .proc-note { margin-top:24px; padding:16px; background:rgba(0,212,168,0.08); border-radius:10px; border:1px solid rgba(0,212,168,0.2); font-size:12px; color:var(--muted); line-height:1.7; font-weight:300; }
-
-        /* ── FAQ ── */
-        .faq-section { background:#000; padding:100px 40px; }
-        .faq-wrap { max-width:860px; margin:0 auto; }
-        .faq-header { text-align:center; margin-bottom:56px; }
-        .faq-list { border-top:1px solid rgba(0,212,168,0.15); }
-        .faq-item { border-bottom:1px solid rgba(0,212,168,0.15); }
-        .faq-q { width:100%; background:none; border:none; cursor:pointer; display:flex; align-items:center; justify-content:space-between; padding:24px 0; gap:20px; text-align:left; }
-        .faq-q-text { font-family:'Playfair Display',serif; font-size:17px; font-weight:600; color:#fff; line-height:1.4; transition:color 0.3s ease; }
-        .faq-item.open .faq-q-text { color:var(--teal); }
-        .faq-icon { width:32px; height:32px; border-radius:50%; border:1.5px solid rgba(0,212,168,0.3); display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:20px; font-weight:300; color:var(--teal); transition:all 0.35s ease; line-height:1; }
-        .faq-item.open .faq-icon { background:var(--teal); color:#000; border-color:var(--teal); transform:rotate(45deg); }
-        .faq-a { max-height:0; overflow:hidden; transition:max-height 0.4s ease; }
-        .faq-item.open .faq-a { max-height:300px; }
-        .faq-a p { font-size:14px; color:var(--muted); line-height:1.8; font-weight:300; padding-bottom:24px; padding-right:52px; }
-
-        /* ── CTA ── */
-        .cta-section { background:linear-gradient(135deg,rgba(0,212,168,0.1) 0%,rgba(0,212,168,0.03) 50%,transparent 100%); border-top:1px solid rgba(0,212,168,0.15); text-align:center; padding:100px 40px; }
-        .cta-section h2 { font-family:'Playfair Display',serif; font-size:clamp(36px,5vw,60px); font-weight:900; line-height:1.15; margin-bottom:20px; }
-        .cta-section h2 em { font-style:italic; color:var(--teal); }
-        .cta-section p { color:var(--muted); font-size:15px; font-weight:300; max-width:460px; margin:0 auto 40px; line-height:1.8; }
-        .cta-btns { display:flex; gap:20px; justify-content:center; flex-wrap:wrap; }
-
-        /* ── FOOTER ── */
-        footer { background:#000; border-top:1px solid rgba(0,212,168,0.1); padding:60px 40px 30px; }
-        .footer-inner { max-width:1200px; margin:0 auto; display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:50px; padding-bottom:40px; border-bottom:1px solid rgba(255,255,255,0.06); }
-        .footer-brand img { height:50px; width:140px; object-fit:contain; margin-bottom:16px; display:block; }
-        .footer-brand p { font-size:13px; color:var(--muted); line-height:1.8; font-weight:300; margin-bottom:14px; }
-        .footer-brand .fc p { font-size:12.5px; color:var(--muted); margin-bottom:8px; font-weight:300; }
-        .footer-col h5 { font-size:12px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--teal); margin-bottom:20px; }
-        .footer-col ul { list-style:none; }
-        .footer-col li { margin-bottom:10px; }
-        .footer-col a { color:var(--muted); text-decoration:none; font-size:13px; font-weight:300; transition:color 0.3s; }
-        .footer-col a:hover { color:#fff; }
-        .footer-bottom { max-width:1200px; margin:24px auto 0; display:flex; justify-content:space-between; align-items:center; font-size:12px; color:rgba(255,255,255,0.3); }
-
-        /* ── ANIMATIONS ── */
-        @keyframes fadeUp { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:translateY(0)} }
-        @keyframes shimmer { 0%,100%{background-position:0% 50%} 50%{background-position:100% 50%} }
-        @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(0.7)} }
-        @keyframes growBar { from{width:0} }
-        .reveal { opacity:0; transform:translateY(30px); transition:opacity 0.7s ease,transform 0.7s ease; }
-        .reveal.visible { opacity:1; transform:none; }
-        .r1{transition-delay:0.1s} .r2{transition-delay:0.2s} .r3{transition-delay:0.3s}
-
-        /* ── RESPONSIVE ── */
-        @media(max-width:900px){
-            .proc-wrap{grid-template-columns:1fr;gap:50px;}
-            .footer-inner{grid-template-columns:1fr 1fr;}
-            .nav-menu,.nav-buttons{display:none;}
-            .hamburger{display:flex;}
-        }
-        @media(max-width:600px){
-            .why-section,.svc-section,.proc-section,.faq-section,.cta-section{padding:70px 20px;}
-            .navbar{padding:0 20px;}
-            .footer-inner{grid-template-columns:1fr;}
-            .hero-stats{gap:28px;}
-            .stat-div{display:none;}
-            .hero{padding:100px 20px 70px;}
-            .faq-q-text{font-size:15px;}
-            .faq-a p{padding-right:0;}
-        }
-    </style>
-</head>
-<body>
-
-    <!-- ── NAVBAR ── -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-logo">
-            <a href="/">
-                <img src="./asset/logo_coloured.png" alt="TamkinExpress Personal Branding UAE"
-                      onerror="this.style.display='none';this.nextSibling.style.display='block'">
-                <span class="nav-logo-text">TamkinExpress</span>
-            </a>
-        </div>
-        <div class="nav-right">
-            <ul class="nav-menu">
-                <li><a href="/" class="nav-link">Home</a></li>
-                <li><a href="/about.html" class="nav-link">About Us</a></li>
-                <li><a href="#services" class="nav-link active">Services</a></li>
-                <li><a href="/portfolio.html" class="nav-link">Portfolio</a></li>
-            </ul>
-            <div class="nav-buttons">
-                <a href="tel:+971588967713" class="nav-btn-outline">📞 Call Us</a>
-                <a href="/contact-us.html" class="nav-cta">Get Free Quote</a>
-            </div>
-            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-                <span></span><span></span><span></span>
-            </button>
-        </div>
-    </nav>
-    <div class="mobile-menu" id="mobileMenu">
-        <a href="/" class="mobile-link">Home</a>
-        <a href="/about.html" class="mobile-link">About Us</a>
-        <a href="#services" class="mobile-link">Services</a>
-        <a href="/portfolio.html" class="mobile-link">Portfolio</a>
-        <div class="mobile-menu-btns">
-            <a href="tel:+971588967713" class="mobile-cta-outline">📞 Call Us</a>
-            <a href="/contact-us.html" class="mobile-cta">Get Free Quote</a>
-        </div>
-    </div>
-
-
-    <!-- ── HERO ── -->
-    <section class="hero">
-        <div class="hero-bg"></div>
-        <div class="hero-badge">Personal Branding UAE</div>
-        <h1><span style="display:block;">Your Name is</span><span style="display:block;">Your Most Valuable</span><span class="line-teal">Brand Asset.</span></h1>
-        <p class="hero-sub">We help UAE executives, entrepreneurs, and professionals build compelling personal brands — from LinkedIn authority to content strategy, visual identity, and media presence.</p>
-        <div class="hero-cta">
-            <a href="/contact-us.html" class="btn-primary">📞 Get Free Consultation</a>
-            <span class="cta-divider">or</span>
-            <a href="#services" class="btn-secondary">Explore Services ↓</a>
-        </div>
-        <div class="hero-stats">
-            <div class="stat-item"><span class="stat-num">200+</span><span class="stat-label">Brands Built</span></div>
-            <div class="stat-div"></div>
-            <div class="stat-item"><span class="stat-num">3x</span><span class="stat-label">Avg. Audience Growth</span></div>
-            <div class="stat-div"></div>
-            <div class="stat-item"><span class="stat-num">LinkedIn</span><span class="stat-label">Top 1% Profiles</span></div>
-            <div class="stat-div"></div>
-            <div class="stat-item"><span class="stat-num">6 Weeks</span><span class="stat-label">Brand Launch</span></div>
-        </div>
-    </section>
-
-
-    <!-- ── WHY PERSONAL BRANDING ── -->
-    <section class="why-section" id="why-personal-branding">
-        <div class="why-wrap">
-            <div class="why-header reveal">
-                <span class="section-label">Why Personal Branding Matters</span>
-                <h2 class="section-title">Benefits of <span class="hl">Personal Branding</span> in UAE</h2>
-                <p class="section-sub" style="margin:0 auto;">In UAE's competitive market, your personal brand is your most powerful business asset. Here's why top professionals invest in branding in UAE.</p>
-            </div>
-            <div class="why-grid">
-                <div class="why-card reveal">
-                    <span class="why-icon">🏆</span>
-                    <h3>Build Authority in Your Niche</h3>
-                    <p>A strong personal brand positions you as the go-to expert in UAE's crowded market — attracting clients, media, and opportunities without cold outreach.</p>
-                </div>
-                <div class="why-card reveal r1">
-                    <span class="why-icon">💰</span>
-                    <h3>Command Premium Pricing</h3>
-                    <p>Professionals with an established personal brand in Dubai can charge 2–5x more for their services — your brand becomes your pricing power.</p>
-                </div>
-                <div class="why-card reveal r2">
-                    <span class="why-icon">🤝</span>
-                    <h3>Attract Better Opportunities</h3>
-                    <p>Investors, partners, and employers in UAE search online before meetings. A compelling personal brand ensures you win before the room.</p>
-                </div>
-                <div class="why-card reveal">
-                    <span class="why-icon">📣</span>
-                    <h3>Grow Your Network Fast</h3>
-                    <p>One of the key benefits of personal branding is organic network growth — the right content puts you in front of decision-makers across UAE and beyond.</p>
-                </div>
-                <div class="why-card reveal r1">
-                    <span class="why-icon">🛡️</span>
-                    <h3>Own Your Online Reputation</h3>
-                    <p>In branding in UAE, what Google shows about you matters. We ensure your digital presence reflects your true expertise and professionalism.</p>
-                </div>
-                <div class="why-card reveal r2">
-                    <span class="why-icon">🚀</span>
-                    <h3>Accelerate Business Growth</h3>
-                    <p>Personal branding companies like TamkinExpress help you turn visibility into revenue — more leads, more clients, more business in UAE's dynamic economy.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- ── SERVICES ── -->
-    <section class="svc-section" id="services">
-        <div class="svc-header reveal">
-            <span class="section-label">What We Offer</span>
-            <h2 class="section-title">Our <span class="hl">Personal Branding</span> Services in Dubai &amp; UAE</h2>
-            <p class="section-sub">As a leading personal branding company in UAE, we deliver tailored solutions built for real results from day one.</p>
-        </div>
-        <div class="svc-grid">
-            <div class="svc-card reveal">
-                <div class="card-icon">💡</div>
-                <h3>Brand Strategy</h3>
-                <p>We define your unique positioning, target audience, core message, and competitive edge — the foundation of a powerful personal brand in UAE.</p>
-                <div class="tags"><span class="tag">Positioning</span><span class="tag">Messaging</span><span class="tag">Audience</span><span class="tag">USP</span></div>
-                <a href="/contact-us.html" class="card-link">Get Started →</a>
-            </div>
-            <div class="svc-card reveal r1">
-                <div class="card-icon">🎨</div>
-                <h3>Visual Identity</h3>
-                <p>Professional headshots, brand colours, typography, and design templates that make you instantly recognisable across every platform in Dubai and the UAE.</p>
-                <div class="tags"><span class="tag">Logo</span><span class="tag">Colours</span><span class="tag">Headshots</span><span class="tag">Templates</span></div>
-                <a href="/contact-us.html" class="card-link">Get Started →</a>
-            </div>
-            <div class="svc-card reveal r2">
-                <div class="card-icon">💼</div>
-                <h3>LinkedIn Optimisation</h3>
-                <p>Transform your LinkedIn into a lead-generating asset — optimised profile, content strategy, and thought leadership posts that build authority across UAE.</p>
-                <div class="tags"><span class="tag">Profile Optimisation</span><span class="tag">Content Strategy</span><span class="tag">Engagement</span><span class="tag">DMs</span></div>
-                <a href="/contact-us.html" class="card-link">Get Started →</a>
-            </div>
-            <div class="svc-card reveal">
-                <div class="card-icon">✍️</div>
-                <h3>Content Creation</h3>
-                <p>We write your blogs, LinkedIn articles, email newsletters, and social posts — consistently communicating your expertise and values across the UAE market.</p>
-                <div class="tags"><span class="tag">Ghostwriting</span><span class="tag">Blog Posts</span><span class="tag">Newsletters</span><span class="tag">Social Content</span></div>
-                <a href="/contact-us.html" class="card-link">Get Started →</a>
-            </div>
-            <div class="svc-card reveal r1">
-                <div class="card-icon">🎙️</div>
-                <h3>Media &amp; PR</h3>
-                <p>We position you as an industry expert through podcast placements, press features, speaking opportunities, and media outreach in Dubai and the UAE.</p>
-                <div class="tags"><span class="tag">Press Coverage</span><span class="tag">Podcast Guesting</span><span class="tag">Speaking</span><span class="tag">Interviews</span></div>
-                <a href="/contact-us.html" class="card-link">Get Started →</a>
-            </div>
-            <div class="svc-card reveal r2">
-                <div class="card-icon">📈</div>
-                <h3>Growth Analytics</h3>
-                <p>Monthly reporting on brand growth — follower growth, content reach, website traffic, and lead enquiries — so you can see the ROI of personal branding in UAE.</p>
-                <div class="tags"><span class="tag">Analytics</span><span class="tag">Monthly Reports</span><span class="tag">KPIs</span><span class="tag">Lead Tracking</span></div>
-                <a href="/contact-us.html" class="card-link">Get Started →</a>
-            </div>
-        </div>
-    </section>
-
-
-   <!-- ===== BLOG ===== -->
-<section style="position:relative;background:#000;padding:100px 40px;text-align:center;overflow:hidden;font-family:'Montserrat',sans-serif;">
-    <div style="position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 50% 50%,rgba(0,212,168,0.07) 0%,transparent 70%);pointer-events:none;"></div>
-    <div style="position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(0,212,168,0.4),transparent);"></div>
-    <div style="position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(0,212,168,0.4),transparent);"></div>
-    <div style="position:relative;z-index:1;max-width:600px;margin:0 auto;">
-        <span style="display:inline-flex;align-items:center;gap:10px;color:#00d4a8;font-size:11px;font-weight:600;letter-spacing:4px;text-transform:uppercase;margin-bottom:22px;">
-            <span style="display:inline-block;width:28px;height:1px;background:#00d4a8;"></span>
-             Our Blog
-            <span style="display:inline-block;width:28px;height:1px;background:#00d4a8;"></span>
-        </span>
-        <h2 style="font-family:'Playfair Display',serif;font-size:clamp(38px,5vw,60px);font-weight:900;color:#fff;line-height:1.12;margin:0 0 40px;">
-            Expert Insights &amp;<br>
-            <span style="font-style:italic;background:linear-gradient(90deg,#00d4a8 20%,#fff 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Industry Resources</span>
-        </h2>
-        <a href="Blog personal branding.html" style="display:inline-flex;align-items:center;gap:10px;background:#00d4a8;color:#000;padding:16px 38px;border-radius:100px;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;text-decoration:none;letter-spacing:0.8px;text-transform:uppercase;">
-            Explore the Blog →
-        </a>
-    </div>
-</section>
-
-    <!-- ── FAQ ── -->
-    <section class="faq-section" id="faq">
-        <div class="faq-wrap">
-            <div class="faq-header reveal">
-                <span class="section-label">FAQ</span>
-                <h2 class="section-title">Frequently Asked <span class="hl">Questions</span></h2>
-                <p class="section-sub" style="margin:0 auto;">Everything you need to know about personal branding in UAE &amp; Dubai.</p>
-            </div>
-            <div class="faq-list" id="faqList">
-
-                <div class="faq-item reveal">
-                    <button class="faq-q" aria-expanded="false">
-                        <span class="faq-q-text">What is personal branding and why does it matter in UAE?</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-a">
-                        <p>Personal branding is the process of defining and promoting what you stand for as a professional — your expertise, values, and unique story. In the UAE's highly competitive market, where trust and reputation drive business decisions, a strong personal brand helps you stand out, attract premium clients, and open doors that cold outreach never could.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item reveal r1">
-                    <button class="faq-q" aria-expanded="false">
-                        <span class="faq-q-text">How long does it take to build a personal brand?</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-a">
-                        <p>We launch your core brand — strategy, visual identity, LinkedIn optimisation, and initial content — within 6 weeks. Measurable results like increased profile views, inbound enquiries, and follower growth typically appear within the first 90 days. Long-term authority positioning is a 6–12 month journey, and we're with you every step.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item reveal r2">
-                    <button class="faq-q" aria-expanded="false">
-                        <span class="faq-q-text">Do you work with individuals or only companies?</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-a">
-                        <p>We specialise in individuals — executives, entrepreneurs, consultants, doctors, lawyers, and other professionals across the UAE. Whether you're a C-suite leader in Dubai or a startup founder in Abu Dhabi, our personal branding packages are tailored to your specific goals and industry.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item reveal">
-                    <button class="faq-q" aria-expanded="false">
-                        <span class="faq-q-text">What platforms do you focus on for personal branding?</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-a">
-                        <p>LinkedIn is our primary platform for most UAE professionals, given its reach with decision-makers and investors. Depending on your industry, we also build presence on Instagram, X (Twitter), YouTube, and through personal websites and blog content. We create a platform strategy aligned with where your ideal audience actually spends their time.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item reveal r1">
-                    <button class="faq-q" aria-expanded="false">
-                        <span class="faq-q-text">What makes TamkinExpress different from other personal branding companies in UAE?</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-a">
-                        <p>Unlike generic agencies, we combine deep knowledge of the UAE business landscape with a proven, data-driven methodology. We handle everything in-house — strategy, content writing, design, and analytics — so your brand voice remains consistent. Our Abu Dhabi-based team understands local culture, industry nuances, and the UAE audience on a level global agencies simply cannot match.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item reveal r2">
-                    <button class="faq-q" aria-expanded="false">
-                        <span class="faq-q-text">How much does personal branding cost in Dubai?</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-a">
-                        <p>Our personal branding packages are customised based on your goals, current presence, and the scope of services required. We offer flexible engagement models — from one-time brand launches to ongoing monthly retainers. Book a free consultation and we'll recommend the best plan for your budget and objectives.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item reveal">
-                    <button class="faq-q" aria-expanded="false">
-                        <span class="faq-q-text">Do I need to be active on social media myself?</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-a">
-                        <p>Not heavily. We handle content creation, scheduling, and community management on your behalf. Our ghostwriting team captures your authentic voice so the content feels genuinely you — without demanding hours of your time. We keep your involvement minimal while maximising your brand's visibility and impact.</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-
-    <!-- ── CTA ── -->
-    <section class="cta-section">
-        <div class="reveal">
-            <h2>Ready to Own Your <em>Industry?</em></h2>
-            <p>Book a free brand audit. As a top personal branding company in Dubai &amp; UAE, we'll show you exactly how to become the go-to expert in your field.</p>
-            <div class="cta-btns">
-                <a href="/contact-us.html" class="btn-primary">📞 Book Free Consultation</a>
-                <a href="tel:+971588967713" class="btn-secondary">📲 +971 588967713</a>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- ── FOOTER ── -->
-    <footer>
-        <div class="footer-inner">
-            <div class="footer-brand">
-                <img src="./asset/logo_coloured.png" alt="TamkinExpress Personal Branding Agency UAE" onerror="this.style.display='none'">
-                <p>UAE &amp; Dubai's leading personal branding company. From strategy to digital excellence.</p>
-                <div class="fc">
-                    <p>📍 Office No. 49, Maxim Pharmacy Building, Musaffah M43, Abu Dhabi, UAE</p>
-                    <p>📞 +971 588967713</p>
-                    <p>✉️ info@tamkinexpress.com</p>
-                </div>
-            </div>
-            <div class="footer-col">
-                <h5>Services</h5>
-                <ul>
-                    <li><a href="/digital-marketing.html">Digital Marketing</a></li>
-                    <li><a href="/web-development.html">Web Development</a></li>
-                    <li><a href="/mobile-app-development.html">Mobile App Development</a></li>
-                    <li><a href="/software-development.html">Software Development</a></li>
-                    <li><a href="/employment-visa.html">Employment Visa</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h5>Company</h5>
-                <ul>
-                    <li><a href="/about.html">About Us</a></li>
-                    <li><a href="/portfolio.html">Portfolio</a></li>
-                    <li><a href="/contact-us.html">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h5>Legal</h5>
-                <ul>
-                    <li><a href="/privacy">Privacy Policy</a></li>
-                    <li><a href="/terms">Terms of Service</a></li>
-                    <li><a href="/cookies">Cookie Policy</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <span>© 2025 TamkinExpress. All rights reserved.</span>
-            <span>Abu Dhabi, UAE</span>
-        </div>
-    </footer>
-
-
-    <!-- ── SCHEMA MARKUP (JSON-LD) ── -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "TamkinExpress Personal Branding Agency",
-      "description": "Personal branding agency in UAE and Dubai helping executives, entrepreneurs, and professionals build powerful personal brands.",
-      "url": "https://tamkinexpress.com/personal-branding.html",
-      "telephone": "+971588967713",
-      "email": "info@tamkinexpress.com",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Office No. 49, Maxim Pharmacy Building, Musaffah M43",
-        "addressLocality": "Abu Dhabi",
-        "addressCountry": "AE"
-      },
-      "areaServed": ["UAE", "Dubai", "Abu Dhabi"],
-      "serviceType": "Personal Branding",
-      "priceRange": "$$"
-    }
-    </script>
-
-    <script>
-        // Navbar scroll
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 60));
-
-        // Hamburger
-        const hamburger = document.getElementById('hamburger');
-        const mobileMenu = document.getElementById('mobileMenu');
-        hamburger.addEventListener('click', () => { hamburger.classList.toggle('open'); mobileMenu.classList.toggle('open'); });
-        mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { hamburger.classList.remove('open'); mobileMenu.classList.remove('open'); }));
-
-        // Reveal on scroll
-        document.querySelectorAll('.reveal').forEach(el => {
-            new IntersectionObserver((entries, obs) => {
-                entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); } });
-            }, {threshold:0.12}).observe(el);
-        });
-
-        // FAQ Accordion
-        document.getElementById('faqList').addEventListener('click', function(e) {
-            const btn = e.target.closest('.faq-q');
-            if (!btn) return;
-            const item = btn.closest('.faq-item');
-            const isOpen = item.classList.contains('open');
-            document.querySelectorAll('.faq-item.open').forEach(el => {
-                el.classList.remove('open');
-                el.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
-            });
-            if (!isOpen) {
-                item.classList.add('open');
-                btn.setAttribute('aria-expanded', 'true');
-            }
-        });
-    </script>
-
-</body>
-</html>
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Personal Branding Agency in UAE & Dubai | TamkinExpress</title><meta name="description" content="Personal branding agency in UAE & Dubai. We help executives, entrepreneurs, and professionals build compelling personal brands — LinkedIn, content strategy, visual identity, media presence."><link rel="canonical" href="https://tamkinexpress.ae/personal-branding.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Montserrat:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+:root{--teal:#00d4a8;--teal-dim:rgba(0,212,168,0.15);--bg:#000;--card-bg:#0F1116;--text:#fff;--muted:rgba(255,255,255,0.55);--border:rgba(0,212,168,0.2);}
+html{scroll-behavior:smooth;}
+body{font-family:'Montserrat',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;}
+.navbar{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0 48px;height:72px;display:flex;align-items:center;justify-content:space-between;background:rgba(0,0,0,0.75);backdrop-filter:blur(24px);border-bottom:1px solid rgba(0,212,168,0.12);transition:background 0.4s,box-shadow 0.4s;}
+.navbar.scrolled{background:rgba(0,0,0,0.95);box-shadow:0 4px 30px rgba(0,0,0,0.5);}
+.nav-logo a{display:flex;align-items:center;text-decoration:none;}
+.nav-logo img{height:44px;width:124px;object-fit:contain;display:block;}
+.nav-logo-text{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--teal);display:none;}
+.nav-right{display:flex;align-items:center;gap:36px;}
+.nav-menu{display:flex;gap:32px;list-style:none;align-items:center;}
+.nav-link{color:rgba(255,255,255,0.72);text-decoration:none;font-size:13px;font-weight:500;letter-spacing:0.4px;transition:color 0.25s;position:relative;padding-bottom:2px;}
+.nav-link::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:1.5px;background:var(--teal);transition:width 0.3s;}
+.nav-link:hover,.nav-link.active{color:var(--teal);}.nav-link:hover::after,.nav-link.active::after{width:100%;}
+.nav-buttons{display:flex;align-items:center;gap:10px;}
+.nav-btn-outline{display:inline-flex;align-items:center;gap:7px;color:var(--teal);border:1.5px solid rgba(0,212,168,0.4);padding:9px 22px;border-radius:100px;font-size:12.5px;font-weight:600;text-decoration:none;transition:all 0.3s;white-space:nowrap;}
+.nav-btn-outline:hover{background:var(--teal-dim);border-color:var(--teal);}
+.nav-cta{display:inline-flex;align-items:center;gap:7px;background:var(--teal);color:#000;padding:10px 24px;border-radius:100px;font-size:12.5px;font-weight:700;text-decoration:none;transition:all 0.3s;white-space:nowrap;}
+.nav-cta:hover{background:#00ffc8;transform:translateY(-1px);box-shadow:0 6px 20px rgba(0,212,168,0.35);}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;background:none;border:none;z-index:1100;}
+.hamburger span{display:block;width:24px;height:2px;background:#fff;border-radius:2px;transition:all 0.3s;}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.hamburger.open span:nth-child(2){opacity:0;}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+.mobile-menu{display:none;position:fixed;top:72px;left:0;right:0;background:rgba(0,0,0,0.97);border-bottom:1px solid rgba(0,212,168,0.15);padding:24px 32px 32px;flex-direction:column;gap:4px;z-index:999;transform:translateY(-10px);opacity:0;pointer-events:none;transition:all 0.3s;}
+.mobile-menu.open{opacity:1;transform:translateY(0);pointer-events:all;display:flex;}
+.mobile-link{color:rgba(255,255,255,0.8);text-decoration:none;font-size:15px;font-weight:500;padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.06);transition:color 0.2s;}
+.mobile-link:hover{color:var(--teal);}
+.mobile-menu-btns{display:flex;flex-direction:column;gap:10px;margin-top:20px;}
+.mobile-cta{background:var(--teal);color:#000;text-align:center;padding:13px;border-radius:100px;font-weight:700;font-size:13px;text-decoration:none;}
+.mobile-cta-outline{border:1.5px solid rgba(0,212,168,0.4);color:var(--teal);text-align:center;padding:12px;border-radius:100px;font-weight:600;font-size:13px;text-decoration:none;}
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:120px 40px 80px;text-align:center;}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(0,212,168,0.12) 0%,transparent 70%),radial-gradient(ellipse 40% 40% at 80% 80%,rgba(0,212,168,0.06) 0%,transparent 60%);pointer-events:none;}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(0,212,168,0.1);border:1px solid rgba(0,212,168,0.3);border-radius:100px;padding:8px 18px;font-size:12px;font-weight:600;color:var(--teal);letter-spacing:2px;text-transform:uppercase;margin-bottom:32px;animation:fadeUp 0.6s ease both;}
+.hero-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--teal);animation:pulse 2s infinite;}
+.hero h1{font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(36px,5.5vw,70px);line-height:1.12;margin-bottom:28px;animation:fadeUp 0.6s 0.1s ease both;}
+.hero h1 .line-1,.hero h1 .line-2{display:block;}
+.hero h1 .line-teal{display:block;font-style:italic;background:linear-gradient(90deg,var(--teal) 0%,#fff 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;background-size:200%;animation:shimmer 4s ease-in-out infinite,fadeUp 0.6s 0.15s ease both;}
+.hero-sub{font-family:'DM Sans',sans-serif;font-size:16px;font-weight:300;line-height:1.8;color:var(--muted);max-width:580px;margin:0 auto 50px;animation:fadeUp 0.6s 0.2s ease both;}
+.hero-cta{display:flex;align-items:center;gap:20px;flex-wrap:wrap;justify-content:center;animation:fadeUp 0.6s 0.3s ease both;}
+.btn-primary{display:inline-flex;align-items:center;gap:10px;background:var(--teal);color:#000;padding:16px 32px;border-radius:6px;font-size:14px;font-weight:700;letter-spacing:0.5px;text-decoration:none;transition:all 0.3s;text-transform:uppercase;}
+.btn-primary:hover{background:#00ffc8;transform:translateY(-2px);box-shadow:0 12px 30px rgba(0,212,168,0.35);}
+.btn-secondary{display:inline-flex;align-items:center;gap:10px;color:var(--teal);border:1px solid var(--border);padding:16px 32px;border-radius:6px;font-size:14px;font-weight:600;text-decoration:none;transition:all 0.3s;text-transform:uppercase;}
+.btn-secondary:hover{background:var(--teal-dim);border-color:var(--teal);}
+.cta-divider{color:var(--muted);font-size:13px;}
+.hero-stats{display:flex;gap:60px;justify-content:center;margin-top:70px;flex-wrap:wrap;animation:fadeUp 0.6s 0.4s ease both;}
+.stat-item{text-align:center;}
+.stat-num{font-family:'Playfair Display',serif;font-size:40px;font-weight:700;color:var(--teal);display:block;}
+.stat-label{font-size:12px;color:var(--muted);font-weight:500;letter-spacing:1px;text-transform:uppercase;margin-top:4px;}
+.stat-divider{width:1px;background:rgba(0,212,168,0.2);align-self:stretch;}
+section{padding:100px 40px;}
+.section-label{color:var(--teal);font-size:12px;font-weight:600;letter-spacing:4px;text-transform:uppercase;margin-bottom:14px;display:block;}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(32px,4vw,52px);font-weight:700;line-height:1.2;margin-bottom:16px;}
+.section-title .highlight{color:var(--teal);}
+.section-sub{font-size:15px;font-weight:300;color:var(--muted);max-width:520px;line-height:1.8;}
+.services-section{background:#000;}
+.services-header{text-align:center;margin-bottom:60px;}
+.services-header .section-sub{margin:0 auto;}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:30px;max-width:1300px;margin:0 auto;}
+.service-card{background:var(--card-bg);border-radius:20px;padding:40px 35px;border-left:5px solid var(--teal);position:relative;overflow:hidden;transition:all 0.4s cubic-bezier(0.4,0,0.2,1);}
+.service-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,212,168,0.12) 0%,rgba(0,212,168,0.04) 50%,transparent 100%);opacity:0;transition:opacity 0.4s;}
+.service-card:hover{transform:translateY(-10px);box-shadow:0 24px 48px rgba(0,212,168,0.2);}
+.service-card:hover::before{opacity:1;}
+.service-card>*{position:relative;z-index:1;}
+.card-icon{width:64px;height:64px;border-radius:50%;background:var(--teal-dim);border:2px solid var(--border);display:flex;align-items:center;justify-content:center;margin-bottom:24px;transition:all 0.4s;font-size:26px;}
+.service-card:hover .card-icon{transform:scale(1.1) rotate(5deg);background:rgba(0,212,168,0.22);border-color:rgba(0,212,168,0.5);}
+.service-card h3{font-family:'Playfair Display',serif;font-size:22px;font-weight:600;margin-bottom:14px;}
+.service-card p{font-size:13.5px;font-weight:300;color:var(--muted);line-height:1.75;margin-bottom:22px;}
+.card-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px;}
+.tag{background:rgba(0,212,168,0.08);border:1px solid rgba(0,212,168,0.2);color:var(--teal);border-radius:100px;padding:4px 12px;font-size:11px;font-weight:600;letter-spacing:0.5px;}
+.card-link{display:inline-flex;align-items:center;color:var(--teal);text-decoration:none;font-size:12.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;transition:all 0.3s;gap:6px;border-bottom:1px solid transparent;padding-bottom:2px;}
+.card-link:hover{color:#00ffc8;border-bottom-color:#00ffc8;gap:10px;}
+.content-section{background:#060608;}
+.content-inner{max-width:1100px;margin:0 auto;}
+.content-grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:50px;}
+.content-card{background:var(--card-bg);border-radius:16px;padding:32px 28px;border-top:3px solid var(--teal);transition:transform 0.3s,box-shadow 0.3s;}
+.content-card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(0,212,168,0.15);}
+.content-card-icon{font-size:28px;margin-bottom:16px;}
+.content-card h4{font-family:'Playfair Display',serif;font-size:18px;font-weight:600;margin-bottom:10px;}
+.content-card p{font-size:13px;font-weight:300;color:var(--muted);line-height:1.75;}
+.two-col-section{background:#000;}
+.two-col-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start;}
+.two-col-text p{font-family:'DM Sans',sans-serif;font-size:14.5px;font-weight:300;color:var(--muted);line-height:1.9;margin-bottom:1.2rem;}
+.two-col-text p strong{color:#fff;font-weight:600;}
+.checklist{display:flex;flex-direction:column;gap:14px;margin-top:12px;}
+.check-item{display:flex;align-items:flex-start;gap:12px;padding:16px 18px;background:var(--card-bg);border-radius:10px;border:1px solid rgba(0,212,168,0.15);transition:border-color 0.25s,transform 0.25s;}
+.check-item:hover{border-color:rgba(0,212,168,0.35);transform:translateX(4px);}
+.check-dot{width:8px;height:8px;border-radius:50%;background:var(--teal);flex-shrink:0;margin-top:5px;}
+.check-text strong{display:block;font-size:13.5px;font-weight:600;color:#fff;margin-bottom:3px;}
+.check-text span{font-size:12.5px;color:var(--muted);font-weight:300;line-height:1.6;}
+.process-section{background:#060608;}
+.process-container{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
+.process-steps{display:flex;flex-direction:column;gap:0;}
+.step{display:flex;gap:24px;padding:28px 0;border-bottom:1px solid rgba(255,255,255,0.06);transition:all 0.3s;}
+.step:last-child{border-bottom:none;}
+.step:hover .step-num{color:#000;background:var(--teal);}
+.step-num{font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:var(--teal);width:44px;height:44px;border-radius:50%;border:2px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all 0.3s;}
+.step-content h4{font-family:'Playfair Display',serif;font-size:18px;font-weight:600;margin-bottom:6px;}
+.step-content p{font-size:13px;color:var(--muted);font-weight:300;line-height:1.7;}
+.process-card{background:var(--card-bg);border-radius:20px;padding:40px;border:1px solid var(--border);}
+.process-card h3{font-family:'Playfair Display',serif;font-size:24px;margin-bottom:8px;}
+.tech-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px;}
+.tech-item{background:rgba(0,212,168,0.06);border:1px solid rgba(0,212,168,0.15);border-radius:8px;padding:12px 14px;}
+.tech-label{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);margin-bottom:4px;}
+.tech-val{font-size:13px;font-weight:500;color:#fff;}
+.blog-section{position:relative;background:#000;padding:100px 40px;text-align:center;overflow:hidden;}
+.blog-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 50% 50%,rgba(0,212,168,0.07) 0%,transparent 70%);pointer-events:none;}
+.blog-top-line,.blog-bot-line{position:absolute;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(0,212,168,0.4),transparent);}
+.blog-top-line{top:0;}.blog-bot-line{bottom:0;}
+.blog-inner{position:relative;z-index:1;max-width:600px;margin:0 auto;}
+.blog-label{display:inline-flex;align-items:center;gap:10px;color:#00d4a8;font-size:11px;font-weight:600;letter-spacing:4px;text-transform:uppercase;margin-bottom:22px;}
+.blog-label span{display:inline-block;width:28px;height:1px;background:#00d4a8;}
+.blog-h2{font-family:'Playfair Display',serif;font-size:clamp(38px,5vw,60px);font-weight:900;color:#fff;line-height:1.12;margin:0 0 40px;}
+.blog-h2 em{font-style:italic;background:linear-gradient(90deg,#00d4a8 20%,#fff 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.blog-btn{display:inline-flex;align-items:center;gap:10px;background:#00d4a8;color:#000;padding:16px 38px;border-radius:100px;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;text-decoration:none;letter-spacing:0.8px;text-transform:uppercase;transition:all 0.3s;}
+.blog-btn:hover{background:#00ffc8;transform:translateY(-2px);box-shadow:0 12px 28px rgba(0,212,168,0.4);}
+.faq-section{background:#060608;position:relative;overflow:hidden;}
+.faq-section::before{content:'';position:absolute;bottom:-100px;right:-100px;width:600px;height:600px;background:radial-gradient(circle,rgba(0,212,168,0.05) 0%,transparent 70%);pointer-events:none;}
+.faq-container{max-width:900px;margin:0 auto;position:relative;z-index:1;}
+.faq-header{text-align:center;margin-bottom:60px;}
+.faq-header .section-sub{margin:0 auto;}
+.faq-list{display:flex;flex-direction:column;gap:0;}
+.faq-item{border-bottom:1px solid rgba(0,212,168,0.12);overflow:hidden;}
+.faq-item:first-child{border-top:1px solid rgba(0,212,168,0.12);}
+.faq-question{width:100%;background:none;border:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:28px 0;text-align:left;transition:all 0.3s;}
+.faq-question:hover .faq-q-text{color:var(--teal);}
+.faq-q-text{font-family:'Playfair Display',serif;font-size:18px;font-weight:600;color:var(--text);line-height:1.4;transition:color 0.3s;flex:1;}
+.faq-icon{width:36px;height:36px;border-radius:50%;border:1.5px solid rgba(0,212,168,0.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all 0.4s cubic-bezier(0.4,0,0.2,1);background:transparent;}
+.faq-icon svg{width:14px;height:14px;stroke:var(--teal);transition:transform 0.4s cubic-bezier(0.4,0,0.2,1);}
+.faq-item.open .faq-icon{background:var(--teal);border-color:var(--teal);transform:rotate(180deg);}
+.faq-item.open .faq-icon svg{stroke:#000;}
+.faq-answer{max-height:0;overflow:hidden;transition:max-height 0.45s cubic-bezier(0.4,0,0.2,1);}
+.faq-item.open .faq-answer{max-height:400px;}
+.faq-answer-inner{padding:0 0 28px 0;}
+.faq-answer-inner p{font-family:'DM Sans',sans-serif;font-size:14.5px;font-weight:300;color:var(--muted);line-height:1.85;}
+.faq-answer-inner p+p{margin-top:12px;}
+.cta-section{background:linear-gradient(135deg,rgba(0,212,168,0.1) 0%,rgba(0,212,168,0.03) 50%,transparent 100%);border-top:1px solid rgba(0,212,168,0.15);text-align:center;padding:100px 40px;}
+.cta-section h2{font-family:'Playfair Display',serif;font-size:clamp(36px,5vw,62px);font-weight:900;line-height:1.15;margin-bottom:20px;}
+.cta-section h2 em{font-style:italic;color:var(--teal);}
+.cta-section p{color:var(--muted);font-size:15px;font-weight:300;max-width:460px;margin:0 auto 40px;line-height:1.8;}
+.cta-btns{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;}
+footer{background:#000;border-top:1px solid rgba(0,212,168,0.1);padding:60px 40px 30px;}
+.footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:50px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.06);}
+.footer-brand img{height:50px;width:140px;object-fit:contain;margin-bottom:16px;display:block;}
+.footer-brand p{font-size:13px;color:var(--muted);line-height:1.8;font-weight:300;margin-bottom:16px;}
+.footer-contact p{font-size:12.5px;color:var(--muted);margin-bottom:8px;font-weight:300;}
+.footer-col h5{font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--teal);margin-bottom:20px;}
+.footer-col ul{list-style:none;}
+.footer-col li{margin-bottom:10px;}
+.footer-col a{color:var(--muted);text-decoration:none;font-size:13px;font-weight:300;transition:color 0.3s;}
+.footer-col a:hover{color:#fff;}
+.footer-bottom{max-width:1200px;margin:24px auto 0;display:flex;justify-content:space-between;align-items:center;font-size:12px;color:rgba(255,255,255,0.3);}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+@keyframes shimmer{0%,100%{background-position:0% 50%;}50%{background-position:100% 50%;}}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:0.5;transform:scale(0.7);}}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity 0.7s ease,transform 0.7s ease;}
+.reveal.visible{opacity:1;transform:none;}
+.reveal-delay-1{transition-delay:0.1s;}.reveal-delay-2{transition-delay:0.2s;}
+@media(max-width:900px){.process-container,.two-col-inner{grid-template-columns:1fr;gap:50px;}.footer-inner{grid-template-columns:1fr 1fr;}.nav-menu,.nav-buttons{display:none;}.hamburger{display:flex;}.content-grid-3{grid-template-columns:1fr 1fr;}}
+@media(max-width:600px){section{padding:70px 20px;}.navbar{padding:16px 20px;}.footer-inner{grid-template-columns:1fr;}.hero-stats{gap:30px;}.stat-divider{display:none;}.content-grid-3{grid-template-columns:1fr;}.faq-q-text{font-size:16px;}}</style></head><body>
+<nav class="navbar" id="navbar">
+  <div class="nav-logo"><a href="/"><img src="./asset/logo_coloured.png" alt="TamkinExpress" onerror="this.style.display='none';this.nextSibling.style.display='block'"><span class="nav-logo-text">TamkinExpress</span></a></div>
+  <div class="nav-right">
+    <ul class="nav-menu"><li><a href="/" class="nav-link">Home</a></li><li><a href="/about.html" class="nav-link">About Us</a></li><li><a href="#services" class="nav-link active">Services</a></li><li><a href="/portfolio.html" class="nav-link">Portfolio</a></li></ul>
+    <div class="nav-buttons"><a href="tel:+971588967713" class="nav-btn-outline">📞 Call Us</a><a href="/contact-us.html" class="nav-cta">Get Free Quote</a></div>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="/" class="mobile-link">Home</a><a href="/about.html" class="mobile-link">About Us</a><a href="#services" class="mobile-link">Services</a><a href="/portfolio.html" class="mobile-link">Portfolio</a>
+  <div class="mobile-menu-btns"><a href="tel:+971588967713" class="mobile-cta-outline">📞 Call Us</a><a href="/contact-us.html" class="mobile-cta">Get Free Consultation</a></div>
+</div>
+<section class="hero"><div class="hero-bg"></div><div class="hero-badge">Personal Branding — UAE & Dubai</div>
+<h1><span class="line-1">Your Name is</span><span class="line-2">Your Most Valuable</span><span class="line-teal">Brand Asset.</span></h1>
+<p class="hero-sub">We help UAE executives, entrepreneurs, and professionals build compelling personal brands — from LinkedIn authority to content strategy, visual identity, and media presence. Turn your expertise into visibility and your visibility into business growth.</p>
+<div class="hero-cta"><a href="/contact-us.html" class="btn-primary">&#128222; Get Free Consultation</a><span class="cta-divider">or</span><a href="#services" class="btn-secondary">Explore Services &#8595;</a></div>
+<div class="hero-stats"><div class="stat-item"><span class="stat-num">200+</span><span class="stat-label">Brands Built</span></div><div class="stat-divider"></div><div class="stat-item"><span class="stat-num">3x</span><span class="stat-label">Avg. Audience Growth</span></div><div class="stat-divider"></div><div class="stat-item"><span class="stat-num">LinkedIn</span><span class="stat-label">Top 1% Profiles</span></div><div class="stat-divider"></div><div class="stat-item"><span class="stat-num">6 Weeks</span><span class="stat-label">Brand Launch</span></div></div></section>
+<section class="services-section" id="services"><div class="services-header reveal"><span class="section-label">What We Offer</span><h2 class="section-title">Personal Branding <span class="highlight">Services in UAE</span></h2><p class="section-sub">As a leading personal branding company in UAE, we deliver tailored solutions built for real results from day one.</p></div><div class="services-grid"><div class="service-card reveal "><div class="card-icon">💡</div><h3>Brand Strategy</h3><p>We define your unique positioning, target audience, core message, and competitive edge — the strategic foundation of a powerful personal brand in the UAE market.</p><div class="card-tags"><span class="tag">Positioning</span><span class="tag">Messaging</span><span class="tag">Audience</span><span class="tag">USP</span></div><a href="/contact-us.html" class="card-link">Get Started &#8594;</a></div><div class="service-card reveal reveal-delay-1"><div class="card-icon">🎨</div><h3>Visual Identity</h3><p>Professional headshots, brand colours, typography, and design templates that make you instantly recognisable across every platform in Dubai and the UAE.</p><div class="card-tags"><span class="tag">Logo</span><span class="tag">Colours</span><span class="tag">Headshots</span><span class="tag">Templates</span></div><a href="/contact-us.html" class="card-link">Get Started &#8594;</a></div><div class="service-card reveal reveal-delay-2"><div class="card-icon">💼</div><h3>LinkedIn Optimisation</h3><p>Transform your LinkedIn into a lead-generating asset — optimised profile, content strategy, and thought leadership posts that build authority across UAE decision-makers.</p><div class="card-tags"><span class="tag">Profile Optimisation</span><span class="tag">Content Strategy</span><span class="tag">Engagement</span><span class="tag">DMs</span></div><a href="/contact-us.html" class="card-link">Get Started &#8594;</a></div><div class="service-card reveal "><div class="card-icon">✍️</div><h3>Content Creation</h3><p>We write your blogs, LinkedIn articles, email newsletters, and social posts — consistently communicating your expertise and values across the UAE market.</p><div class="card-tags"><span class="tag">Ghostwriting</span><span class="tag">Blog Posts</span><span class="tag">Newsletters</span><span class="tag">Social Content</span></div><a href="/contact-us.html" class="card-link">Get Started &#8594;</a></div><div class="service-card reveal reveal-delay-1"><div class="card-icon">🎙️</div><h3>Media & PR</h3><p>We position you as an industry expert through podcast placements, press features, speaking opportunities, and media outreach in Dubai and across the UAE.</p><div class="card-tags"><span class="tag">Press Coverage</span><span class="tag">Podcast Guesting</span><span class="tag">Speaking</span><span class="tag">Interviews</span></div><a href="/contact-us.html" class="card-link">Get Started &#8594;</a></div><div class="service-card reveal reveal-delay-2"><div class="card-icon">📈</div><h3>Growth Analytics</h3><p>Monthly reporting on brand growth — follower growth, content reach, website traffic, and lead enquiries — so you can see the ROI of personal branding in UAE.</p><div class="card-tags"><span class="tag">Analytics</span><span class="tag">Monthly Reports</span><span class="tag">KPIs</span><span class="tag">Lead Tracking</span></div><a href="/contact-us.html" class="card-link">Get Started &#8594;</a></div></div></section>
+<section class="content-section"><div class="content-inner"><div class="reveal" style="text-align:center;margin-bottom:50px;"><span class="section-label">Benefits of Personal Branding</span><h2 class="section-title" style="text-align:center;">Why Personal Branding <span class="highlight">Matters in UAE</span></h2><p class="section-sub" style="margin:0 auto;">In UAE's competitive market, your personal brand is your most powerful business asset. Here is why top professionals invest in personal branding.</p></div><div class="content-grid-3"><div class="content-card reveal "><div class="content-card-icon">🏆</div><h4>Build Authority in Your Niche</h4><p>A strong personal brand positions you as the go-to expert in UAE's crowded market — attracting clients, media, and opportunities without cold outreach or referrals.</p></div><div class="content-card reveal reveal-delay-1"><div class="content-card-icon">💰</div><h4>Command Premium Pricing</h4><p>Professionals with an established personal brand in Dubai can charge 2–5x more for their services. Your brand becomes your most powerful pricing lever.</p></div><div class="content-card reveal reveal-delay-2"><div class="content-card-icon">🚀</div><h4>Accelerate Business Growth</h4><p>Personal branding turns visibility into revenue — more inbound leads, more qualified clients, and more high-value business in UAE's dynamic economy.</p></div></div></div></section>
+<section class="two-col-section"><div class="two-col-inner"><div class="two-col-text reveal reveal-delay-1"><span class="section-label">UAE Personal Branding Strategy</span><h2 class="section-title">Building Authority in the <span class="highlight">UAE Market</span></h2><p>Personal branding in the UAE is uniquely challenging. The market is highly international — you're competing for attention alongside professionals from across the world, many of whom have built brands in markets with far greater social media infrastructure than the UAE.</p><p>The UAE's decision-maker community, however, is also uniquely concentrated. LinkedIn in the UAE punches above its weight — executives at UAE companies are highly active on the platform, and a well-built LinkedIn profile backed by consistent thought leadership content can drive direct inbound enquiries from the exact companies you want to work with.</p><p>TamkinExpress combines deep knowledge of the UAE business landscape with a proven, data-driven methodology. We handle everything in-house — strategy, content writing, design, and analytics — so your brand voice remains entirely consistent across every touchpoint.</p></div><div class="reveal"><div class="checklist"><div class="check-item"><div class="check-dot"></div><div class="check-text"><strong>LinkedIn Thought Leadership</strong><span>Weekly posts, articles, and comments that position you as a trusted voice in your specific UAE industry and audience.</span></div></div><div class="check-item"><div class="check-dot"></div><div class="check-text"><strong>Arabic & English Content</strong><span>Content in both English and Arabic where relevant — reaching both expat and Emirati decision-makers in the UAE market.</span></div></div><div class="check-item"><div class="check-dot"></div><div class="check-text"><strong>Google Search Presence</strong><span>Personal website, blog content, and PR placements that ensure Google returns your story when UAE clients search your name.</span></div></div><div class="check-item"><div class="check-dot"></div><div class="check-text"><strong>UAE Media & Podcast Placements</strong><span>Strategic outreach to UAE business publications, podcasts, and speaking platforms where your target clients pay attention.</span></div></div><div class="check-item"><div class="check-dot"></div><div class="check-text"><strong>Visual Brand Consistency</strong><span>Coordinated headshots, cover images, brand colours, and design templates across LinkedIn, Instagram, and your website.</span></div></div></div></div></div></section>
+<section class="process-section"><div class="process-container"><div class="reveal reveal-delay-1"><span class="section-label">How We Build Your Brand</span><h2 class="section-title">Our <span class="highlight">Brand Building Process</span></h2><p style="color:var(--muted);font-size:14px;line-height:1.8;margin-bottom:30px;">Every personal brand starts with understanding your story, your expertise, your audience, and your goals — then moves through a structured 6-week brand launch.</p><div class="process-steps"><div class="step"><div class="step-num">01</div><div class="step-content"><h4>Brand Audit & Discovery</h4><p>We audit your existing online presence, identify your positioning gaps, and map your target audience in the UAE market before recommending a strategy.</p></div></div><div class="step"><div class="step-num">02</div><div class="step-content"><h4>Strategy & Visual Identity</h4><p>Your positioning statement, key messages, content pillars, platform strategy, and visual identity — all defined and approved before any content goes live.</p></div></div><div class="step"><div class="step-num">03</div><div class="step-content"><h4>Content Production & Launch</h4><p>Professional headshots, LinkedIn optimisation, initial content library, and your first 4 weeks of scheduled content — your brand launches fully formed.</p></div></div><div class="step"><div class="step-num">04</div><div class="step-content"><h4>Growth & Optimisation</h4><p>Monthly content creation, community engagement, analytics review, and strategy refinement — building compounding brand growth over time.</p></div></div></div></div><div class="reveal"><div class="process-card"><h3>Our Toolkit</h3><p style="color:var(--muted);font-size:13px;margin-bottom:8px;line-height:1.7;">Chosen for your specific needs — not a preset template.</p><div class="tech-grid"><div class="tech-item"><div class="tech-label">Primary Platform</div><div class="tech-val">LinkedIn</div></div><div class="tech-item"><div class="tech-label">Secondary</div><div class="tech-val">Instagram / X</div></div><div class="tech-item"><div class="tech-label">PR & Media</div><div class="tech-val">UAE Publications</div></div><div class="tech-item"><div class="tech-label">Content</div><div class="tech-val">Ghostwriting / Design</div></div><div class="tech-item"><div class="tech-label">Analytics</div><div class="tech-val">Monthly Reporting</div></div><div class="tech-item"><div class="tech-label">Launch</div><div class="tech-val">6 Weeks</div></div></div></div></div></div></section>
+<section class="blog-section"><div class="blog-top-line"></div><div class="blog-bot-line"></div><div class="blog-inner"><div class="blog-label"><span></span>Our Blog<span></span></div><h2 class="blog-h2">Expert Insights &amp;<br><em>Industry Resources</em></h2><a href="Blog personal branding.html" class="blog-btn">Explore the Blog &#8594;</a></div></section>
+<section class="faq-section" id="faq"><div class="faq-container"><div class="faq-header reveal"><span class="section-label">Got Questions?</span><h2 class="section-title">Frequently Asked <span class="highlight">Questions</span></h2><p class="section-sub">Everything you need to know about personal branding in UAE & Dubai.</p></div><div class="faq-list reveal"><div class="faq-item"><button class="faq-question" aria-expanded="false"><span class="faq-q-text">What is personal branding and why does it matter in UAE?</span><span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span></button><div class="faq-answer"><div class="faq-answer-inner"><p>Personal branding is the process of defining and promoting what you stand for as a professional — your expertise, values, and unique story.</p><p>In the UAE's highly competitive market, where trust and reputation drive business decisions, a strong personal brand helps you stand out, attract premium clients, and open doors that cold outreach never could.</p></div></div></div><div class="faq-item"><button class="faq-question" aria-expanded="false"><span class="faq-q-text">How long does it take to build a personal brand?</span><span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span></button><div class="faq-answer"><div class="faq-answer-inner"><p>We launch your core brand — strategy, visual identity, LinkedIn optimisation, and initial content — within 6 weeks. Measurable results like increased profile views and inbound enquiries typically appear within the first 90 days.</p><p>Long-term authority positioning is a 6–12 month journey, and we're with you every step.</p></div></div></div><div class="faq-item"><button class="faq-question" aria-expanded="false"><span class="faq-q-text">Do you work with individuals or only companies?</span><span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span></button><div class="faq-answer"><div class="faq-answer-inner"><p>We specialise in individuals — executives, entrepreneurs, consultants, doctors, lawyers, and other professionals across the UAE.</p><p>Whether you're a C-suite leader in Dubai or a startup founder in Abu Dhabi, our personal branding packages are tailored to your specific goals and industry.</p></div></div></div><div class="faq-item"><button class="faq-question" aria-expanded="false"><span class="faq-q-text">What platforms do you focus on for personal branding?</span><span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span></button><div class="faq-answer"><div class="faq-answer-inner"><p>LinkedIn is our primary platform for most UAE professionals, given its reach with decision-makers and investors.</p><p>Depending on your industry, we also build presence on Instagram, X (Twitter), YouTube, and through personal websites and blog content.</p></div></div></div><div class="faq-item"><button class="faq-question" aria-expanded="false"><span class="faq-q-text">What makes TamkinExpress different from other personal branding companies?</span><span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span></button><div class="faq-answer"><div class="faq-answer-inner"><p>Unlike generic agencies, we combine deep knowledge of the UAE business landscape with a proven, data-driven methodology. We handle everything in-house — strategy, content writing, design, and analytics.</p><p>Our Abu Dhabi-based team understands local culture, industry nuances, and the UAE audience on a level global agencies cannot match.</p></div></div></div><div class="faq-item"><button class="faq-question" aria-expanded="false"><span class="faq-q-text">Do I need to be active on social media myself?</span><span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span></button><div class="faq-answer"><div class="faq-answer-inner"><p>Not heavily. We handle content creation, scheduling, and community management on your behalf. Our ghostwriting team captures your authentic voice so the content feels genuinely you.</p><p>We keep your involvement minimal while maximising your brand's visibility and impact across the UAE market.</p></div></div></div></div></div></section>
+<section class="cta-section"><div class="reveal"><h2>Ready to Own Your <em>Industry?</em></h2><p>Book a free brand audit. We'll show you exactly how to become the go-to expert in your field across UAE and beyond.</p><div class="cta-btns"><a href="/contact-us.html" class="btn-primary">&#128222; Book Free Consultation</a><a href="tel:+971588967713" class="btn-secondary">&#128242; +971 588967713</a></div></div></section>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand"><img src="./asset/logo_coloured.png" alt="TamkinExpress" onerror="this.style.display='none'"><p>Your complete business services partner in UAE. From registration to digital excellence.</p><div class="footer-contact"><p>📍 Office No. 49, Maxim Pharmacy Building, Musaffah M43, Abu Dhabi, UAE</p><p>📞 +971 588967713</p><p>✉️ info@tamkinexpress.com</p></div></div>
+    <div class="footer-col"><h5>Services</h5><ul><li><a href="/digital-marketing.html">Digital Marketing</a></li><li><a href="/web-development.html">Web Development</a></li><li><a href="/mobile-app-development.html">Mobile App Development</a></li><li><a href="/software-development.html">Software Development</a></li></ul></div>
+    <div class="footer-col"><h5>Company</h5><ul><li><a href="/about.html">About Us</a></li><li><a href="/portfolio.html">Portfolio</a></li><li><a href="/contact-us.html">Contact</a></li></ul></div>
+    <div class="footer-col"><h5>Visa Services</h5><ul><li><a href="./golden-visa.html">Golden Visa</a></li><li><a href="./employment-visa.html">Employment Visa</a></li><li><a href="./cicpa.html">CICPA Passes</a></li><li><a href="./pro-services.html">PRO Services</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><span>© 2025 TamkinExpress. All rights reserved.</span><span>Abu Dhabi, UAE</span></div>
+</footer><script>const revealEls=document.querySelectorAll('.reveal');
+const observer=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);}});},{threshold:0.12});
+revealEls.forEach(el=>observer.observe(el));
+const navbar=document.getElementById('navbar');
+window.addEventListener('scroll',()=>navbar.classList.toggle('scrolled',window.scrollY>60));
+const hamburger=document.getElementById('hamburger');
+const mobileMenu=document.getElementById('mobileMenu');
+hamburger.addEventListener('click',()=>{hamburger.classList.toggle('open');mobileMenu.classList.toggle('open');});
+mobileMenu.querySelectorAll('a').forEach(link=>{link.addEventListener('click',()=>{hamburger.classList.remove('open');mobileMenu.classList.remove('open');});});
+const faqItems=document.querySelectorAll('.faq-item');
+faqItems.forEach(item=>{const btn=item.querySelector('.faq-question');btn.addEventListener('click',()=>{const isOpen=item.classList.contains('open');faqItems.forEach(i=>{i.classList.remove('open');i.querySelector('.faq-question').setAttribute('aria-expanded','false');});if(!isOpen){item.classList.add('open');btn.setAttribute('aria-expanded','true');}});});</script></body></html>
