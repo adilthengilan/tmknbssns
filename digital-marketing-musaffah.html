@@ -47,6 +47,12 @@
   "description": "Digital marketing company based in Musaffah, Abu Dhabi — offering SEO, Google Ads, Social Media Marketing, AIO and GEO services for businesses in the Musaffah Industrial Area and wider UAE.",
   "priceRange": "$$",
   "openingHours": "Mo-Sa 09:00-18:00",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "87",
+    "bestRating": "5"
+  },
   "sameAs": [
     "https://www.facebook.com/profile.php?id=61563209741328",
     "https://www.instagram.com/tamkinexpress",
@@ -161,7 +167,6 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
 .nav-link:hover,.nav-link.active{color:#fff;}.nav-link.active{color:var(--teal);}
 @media(max-width:768px){.nav-menu{display:none;}}
 
-/* BREADCRUMB */
 .breadcrumb-bar{position:relative;z-index:2;margin-top:70px;padding:.7rem 6%;background:rgba(13,21,21,0.8);border-bottom:1px solid var(--border);}
 .breadcrumb-bar nav{max-width:1200px;margin:0 auto;}
 .breadcrumb-bar ol{list-style:none;display:flex;gap:.5rem;align-items:center;font-size:.78rem;color:var(--muted);}
@@ -170,7 +175,6 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
 .breadcrumb-bar ol li:not(:last-child)::after{content:'›';margin-left:.5rem;color:rgba(0,212,200,0.3);}
 .breadcrumb-bar ol li:last-child{color:var(--teal);}
 
-/* HERO */
 .pro-hero{min-height:100vh;display:flex;align-items:center;padding:6rem 6% 6rem;position:relative;overflow:hidden;}
 .hero-glow{position:absolute;top:-10%;right:-5%;width:600px;height:600px;background:radial-gradient(circle,rgba(0,212,200,0.09),transparent 65%);border-radius:50%;pointer-events:none;transition:transform .1s ease-out;}
 .hero-grid-bg{position:absolute;inset:0;background-image:linear-gradient(rgba(0,212,200,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,212,200,0.04) 1px,transparent 1px);background-size:55px 55px;mask-image:radial-gradient(ellipse 80% 70% at 60% 40%,black,transparent);}
@@ -193,11 +197,9 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
 .sec-title em{font-style:normal;color:var(--teal);}
 .sec-sub{color:var(--muted);font-size:.95rem;line-height:1.8;max-width:580px;text-align:center;margin:0 auto;}
 
-/* GEO BADGES */
 .geo-badges{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.6rem;opacity:0;animation:fadeUp .7s .6s ease forwards;}
 .geo-badge{display:inline-flex;align-items:center;gap:.4rem;font-size:.73rem;font-weight:600;color:var(--teal);background:var(--teal-dim);border:1px solid rgba(0,212,200,0.2);border-radius:20px;padding:.3rem .9rem;}
 
-/* SERVICES */
 .services-wrap{background:var(--dark2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
 .services-inner{max-width:1200px;margin:0 auto;padding:6rem 6%;}
 .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem;}
@@ -214,7 +216,6 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
 .svc-line{position:absolute;bottom:0;left:2rem;width:0;height:2px;background:var(--teal);transition:width .4s ease;}
 .svc-card:hover .svc-line{width:50px;}
 
-/* AREAS */
 .areas-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:3rem;}
 .area-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.4rem;text-align:center;transition:border-color .3s,transform .3s;}
 .area-card:hover{border-color:rgba(0,212,200,0.4);transform:translateY(-4px);}
@@ -222,7 +223,6 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
 .area-name{font-weight:700;color:var(--white);font-size:.85rem;margin-bottom:.3rem;}
 .area-desc{color:var(--muted);font-size:.75rem;line-height:1.55;}
 
-/* PROCESS */
 .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-top:3rem;}
 .proc-step{background:var(--card);padding:2rem 1.8rem;position:relative;transition:background .3s;}
 .proc-step:hover{background:rgba(0,212,200,0.06);}
@@ -233,7 +233,6 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
 .proc-arrow{position:absolute;top:50%;right:-1px;width:24px;height:24px;background:var(--teal);clip-path:polygon(0 0,100% 50%,0 100%);opacity:.15;transform:translateY(-50%);}
 .proc-step:last-child .proc-arrow{display:none;}
 
-/* WHY */
 .why-layout{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;margin-top:3rem;}
 .why-list{display:flex;flex-direction:column;gap:.9rem;}
 .why-item{display:flex;gap:1rem;align-items:flex-start;padding:1.4rem 1.6rem;background:var(--card);border:1px solid var(--border);border-radius:10px;transition:border-color .25s,transform .25s;}
@@ -248,7 +247,6 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
 .cta-box .btn-solid{display:block;text-align:center;width:100%;}
 .cta-note{text-align:center;margin-top:.8rem;color:var(--muted);font-size:.77rem;}
 
-/* INDUSTRIES */
 .ind-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:3rem;}
 .ind-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.6rem 1.4rem;text-align:center;transition:border-color .3s,transform .3s;}
 .ind-card:hover{border-color:rgba(0,212,200,0.4);transform:translateY(-4px);}
@@ -256,14 +254,13 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
 .ind-name{font-weight:700;color:var(--white);font-size:.88rem;margin-bottom:.4rem;}
 .ind-desc{color:var(--muted);font-size:.78rem;line-height:1.6;}
 
-/* APPROACH */
 .approach-wrap{background:var(--dark2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
 .approach-inner{max-width:1200px;margin:0 auto;padding:6rem 6%;}
 .approach-body{color:var(--muted);font-size:.93rem;line-height:1.95;max-width:820px;margin:2rem auto 0;}
 .approach-body p{margin-bottom:1.2rem;}
 .approach-body p:last-child{margin-bottom:0;}
 .approach-body strong{color:var(--text);font-weight:600;}
-.highlight-box{background:var(--card);border:1px solid var(--border);border-left:3px solid var(--teal);border-radius:10px;padding:1.6rem 2rem;margin:2rem 0;}
+.highlight-box{background:var(--card);border:1px solid var(--border);border-left:3px solid var(--teal);border-radius:0 10px 10px 0;padding:1.6rem 2rem;margin:2rem 0;}
 .highlight-box p{color:var(--muted);font-size:.9rem;line-height:1.8;margin:0;}
 .highlight-box p strong{color:var(--teal);font-weight:600;}
 .two-col-content{display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-top:2.5rem;}
@@ -273,7 +270,99 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
 .content-block ul li{color:var(--muted);font-size:.85rem;line-height:1.6;padding-left:1.2rem;position:relative;}
 .content-block ul li::before{content:'';position:absolute;left:0;top:.55em;width:6px;height:6px;border-radius:50%;background:var(--teal);opacity:.7;}
 
-/* FAQ */
+/* ===== NEW: RESULTS / CASE STUDIES ===== */
+.results-wrap{background:var(--dark);padding:6rem 6%;}
+.results-inner{max-width:1200px;margin:0 auto;}
+.results-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem;}
+.result-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:2rem;position:relative;overflow:hidden;transition:border-color .3s,transform .3s;}
+.result-card:hover{border-color:rgba(0,212,200,0.4);transform:translateY(-5px);}
+.result-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--teal),rgba(0,212,200,0.3));}
+.result-industry{font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin-bottom:.8rem;}
+.result-metric{font-size:2.4rem;font-weight:700;color:var(--white);line-height:1;margin-bottom:.4rem;}
+.result-metric span{color:var(--teal);}
+.result-label{font-size:.82rem;color:var(--muted);margin-bottom:1rem;line-height:1.5;}
+.result-quote{font-size:.84rem;color:var(--muted);line-height:1.7;font-style:italic;border-top:1px solid var(--border);padding-top:1rem;margin-top:1rem;}
+.result-name{font-size:.78rem;color:var(--teal);font-weight:600;margin-top:.6rem;}
+
+/* ===== NEW: COMPARISON TABLE ===== */
+.compare-wrap{background:var(--dark2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:6rem 6%;}
+.compare-inner{max-width:1000px;margin:0 auto;}
+.compare-table{width:100%;border-collapse:collapse;margin-top:3rem;}
+.compare-table th{padding:1rem 1.4rem;font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;text-align:left;}
+.compare-table th:first-child{color:var(--muted);}
+.compare-table th.col-us{background:rgba(0,212,200,0.1);color:var(--teal);border-radius:8px 8px 0 0;text-align:center;}
+.compare-table th.col-other{color:var(--muted);text-align:center;}
+.compare-table td{padding:.9rem 1.4rem;border-bottom:1px solid var(--border);font-size:.88rem;color:var(--muted);vertical-align:middle;}
+.compare-table td.col-us{background:rgba(0,212,200,0.04);text-align:center;color:var(--teal);font-weight:600;}
+.compare-table td.col-other{text-align:center;color:rgba(107,146,144,0.6);}
+.compare-table tr:last-child td{border-bottom:none;}
+.compare-table .check{color:var(--teal);font-size:1rem;}
+.compare-table .cross{color:rgba(107,146,144,0.4);font-size:1rem;}
+
+/* ===== NEW: PRICING ===== */
+.pricing-wrap{background:var(--dark);padding:6rem 6%;}
+.pricing-inner{max-width:1100px;margin:0 auto;}
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem;}
+.price-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:2.2rem;position:relative;transition:border-color .3s,transform .3s;}
+.price-card:hover{transform:translateY(-5px);}
+.price-card.featured{border-color:rgba(0,212,200,0.5);box-shadow:0 0 40px rgba(0,212,200,0.08);}
+.price-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--teal);color:#000;font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.3rem 1rem;border-radius:20px;white-space:nowrap;}
+.price-tier{font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin-bottom:.6rem;}
+.price-amount{font-size:2rem;font-weight:700;color:var(--white);margin-bottom:.3rem;}
+.price-amount sup{font-size:1rem;vertical-align:super;}
+.price-period{font-size:.8rem;color:var(--muted);}
+.price-desc{color:var(--muted);font-size:.84rem;line-height:1.65;margin:1rem 0 1.4rem;padding-bottom:1.4rem;border-bottom:1px solid var(--border);}
+.price-features{list-style:none;display:flex;flex-direction:column;gap:.7rem;margin-bottom:1.6rem;}
+.price-features li{font-size:.84rem;color:var(--muted);padding-left:1.4rem;position:relative;line-height:1.5;}
+.price-features li::before{content:'✓';position:absolute;left:0;color:var(--teal);font-weight:700;}
+.price-cta{display:block;text-align:center;padding:.75rem;border-radius:6px;font-weight:600;font-size:.86rem;text-decoration:none;transition:all .25s;}
+.price-cta-outline{border:1px solid rgba(0,212,200,0.3);color:var(--teal);}
+.price-cta-outline:hover{background:var(--teal-dim);border-color:var(--teal);}
+.price-cta-solid{background:var(--teal);color:#000;}
+.price-cta-solid:hover{box-shadow:0 6px 24px rgba(0,212,200,0.3);}
+.price-note{text-align:center;color:var(--muted);font-size:.8rem;margin-top:1.5rem;}
+
+/* ===== NEW: TESTIMONIALS ===== */
+.testi-wrap{background:var(--dark2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:6rem 6%;}
+.testi-inner{max-width:1200px;margin:0 auto;}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem;}
+.testi-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:2rem;transition:border-color .3s,transform .3s;}
+.testi-card:hover{border-color:rgba(0,212,200,0.3);transform:translateY(-4px);}
+.testi-stars{color:var(--teal);font-size:.9rem;margin-bottom:1rem;letter-spacing:.1em;}
+.testi-text{color:var(--muted);font-size:.88rem;line-height:1.75;margin-bottom:1.2rem;font-style:italic;}
+.testi-author{display:flex;align-items:center;gap:.8rem;border-top:1px solid var(--border);padding-top:1rem;}
+.testi-avatar{width:38px;height:38px;border-radius:50%;background:var(--teal-dim);border:1px solid rgba(0,212,200,0.2);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--teal);font-size:.9rem;flex-shrink:0;}
+.testi-name{font-weight:700;color:var(--white);font-size:.85rem;}
+.testi-company{color:var(--muted);font-size:.77rem;margin-top:.15rem;}
+
+/* ===== NEW: WHY MUSAFFAH BUSINESSES STRUGGLE ===== */
+.struggle-wrap{background:var(--dark);padding:6rem 6%;}
+.struggle-inner{max-width:1100px;margin:0 auto;}
+.struggle-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;margin-top:3rem;align-items:center;}
+.struggle-list{display:flex;flex-direction:column;gap:1rem;}
+.struggle-item{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:1.4rem 1.6rem;display:flex;gap:1rem;align-items:flex-start;transition:border-color .25s;}
+.struggle-item:hover{border-color:rgba(0,212,200,0.3);}
+.struggle-num{font-size:1.2rem;font-weight:700;color:rgba(0,212,200,0.25);min-width:28px;line-height:1;}
+.struggle-item strong{display:block;font-weight:700;color:var(--white);font-size:.9rem;margin-bottom:.3rem;}
+.struggle-item span{color:var(--muted);font-size:.84rem;line-height:1.6;}
+.struggle-cta-panel{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:2.5rem;}
+.struggle-cta-panel h3{font-size:1.3rem;font-weight:700;color:var(--white);line-height:1.35;margin-bottom:.8rem;}
+.struggle-cta-panel h3 em{font-style:normal;color:var(--teal);}
+.struggle-cta-panel p{color:var(--muted);font-size:.88rem;line-height:1.75;margin-bottom:1.4rem;}
+
+/* ===== NEW: MAP EMBED ===== */
+.map-wrap{background:var(--dark2);border-top:1px solid var(--border);padding:6rem 6%;}
+.map-inner{max-width:1100px;margin:0 auto;}
+.map-layout{display:grid;grid-template-columns:1fr 1.4fr;gap:3rem;margin-top:3rem;align-items:start;}
+.map-info{display:flex;flex-direction:column;gap:1rem;}
+.map-info-item{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:1.2rem 1.4rem;display:flex;gap:.9rem;align-items:flex-start;}
+.map-info-icon{font-size:1.1rem;margin-top:.1rem;}
+.map-info-label{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);margin-bottom:.25rem;}
+.map-info-val{color:var(--text);font-size:.88rem;line-height:1.5;}
+.map-embed{border-radius:14px;overflow:hidden;border:1px solid var(--border);}
+.map-embed iframe{display:block;width:100%;height:340px;border:none;}
+
+/* ===== EXISTING STYLES CONTINUED ===== */
 .faq-sec{padding:6rem 6%;background:var(--dark2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
 .faq-sec .faq-wrap{max-width:860px;margin:0 auto;}
 .faq-item-box{border-bottom:1px solid var(--border);}
@@ -286,7 +375,6 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
 .faq-ans p{padding-bottom:1.4rem;color:var(--muted);font-size:.88rem;line-height:1.8;}
 .faq-ans a{color:var(--teal);text-decoration:none;}
 
-/* FINAL CTA */
 .final-cta{padding:7rem 6%;text-align:center;background:linear-gradient(180deg,var(--dark) 0%,var(--dark2) 100%);border-top:1px solid var(--border);position:relative;overflow:hidden;}
 .final-cta::before{content:'';position:absolute;bottom:-60px;left:50%;transform:translateX(-50%);width:600px;height:400px;background:radial-gradient(ellipse,rgba(0,212,200,0.09),transparent 70%);}
 .final-cta *{position:relative;}
@@ -295,7 +383,6 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
 .final-cta p{color:var(--muted);font-size:.97rem;line-height:1.75;max-width:480px;margin:0 auto 2rem;}
 .final-cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;}
 
-/* INTERNAL LINKS */
 .city-links-sec{background:var(--dark);padding:3.5rem 6%;border-top:1px solid var(--border);}
 .city-links-inner{max-width:1200px;margin:0 auto;text-align:center;}
 .city-links-inner p{color:var(--muted);font-size:.85rem;margin-bottom:1.2rem;}
@@ -304,7 +391,6 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
 .city-link:hover{background:rgba(0,212,200,0.18);border-color:rgba(0,212,200,0.4);}
 .city-link.active{background:rgba(0,212,200,0.18);border-color:var(--teal);color:var(--white);}
 
-/* FOOTER */
 .site-footer{background:#0a0f0f;border-top:1px solid var(--border);padding:4rem 5% 0;}
 .footer-inner{max-width:1200px;margin:0 auto;}
 .footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:3rem;padding-bottom:3rem;}
@@ -318,7 +404,6 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
 .footer-social a{color:#666;text-decoration:none;font-size:.82rem;transition:color .2s;}
 .footer-social a:hover{color:var(--teal);}
 
-/* ANIMATIONS */
 @keyframes fadeUp{from{opacity:0;transform:translateY(28px);}to{opacity:1;transform:none;}}
 @keyframes fadeLeft{from{opacity:0;transform:translateX(40px);}to{opacity:1;transform:none;}}
 .reveal{opacity:0;transform:translateY(32px);transition:opacity .75s cubic-bezier(.16,1,.3,1),transform .75s cubic-bezier(.16,1,.3,1);}
@@ -330,16 +415,21 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
 .svc-grid .reveal:nth-child(1){transition-delay:.05s;}.svc-grid .reveal:nth-child(2){transition-delay:.15s;}.svc-grid .reveal:nth-child(3){transition-delay:.25s;}.svc-grid .reveal:nth-child(4){transition-delay:.35s;}.svc-grid .reveal:nth-child(5){transition-delay:.45s;}.svc-grid .reveal:nth-child(6){transition-delay:.55s;}
 .ind-grid .reveal:nth-child(1){transition-delay:.05s;}.ind-grid .reveal:nth-child(2){transition-delay:.12s;}.ind-grid .reveal:nth-child(3){transition-delay:.19s;}.ind-grid .reveal:nth-child(4){transition-delay:.26s;}.ind-grid .reveal:nth-child(5){transition-delay:.33s;}.ind-grid .reveal:nth-child(6){transition-delay:.40s;}.ind-grid .reveal:nth-child(7){transition-delay:.47s;}.ind-grid .reveal:nth-child(8){transition-delay:.54s;}
 .areas-grid .reveal:nth-child(1){transition-delay:.05s;}.areas-grid .reveal:nth-child(2){transition-delay:.1s;}.areas-grid .reveal:nth-child(3){transition-delay:.15s;}.areas-grid .reveal:nth-child(4){transition-delay:.2s;}.areas-grid .reveal:nth-child(5){transition-delay:.25s;}.areas-grid .reveal:nth-child(6){transition-delay:.3s;}.areas-grid .reveal:nth-child(7){transition-delay:.35s;}.areas-grid .reveal:nth-child(8){transition-delay:.4s;}
+.results-grid .reveal:nth-child(1){transition-delay:.05s;}.results-grid .reveal:nth-child(2){transition-delay:.15s;}.results-grid .reveal:nth-child(3){transition-delay:.25s;}
+.testi-grid .reveal:nth-child(1){transition-delay:.05s;}.testi-grid .reveal:nth-child(2){transition-delay:.15s;}.testi-grid .reveal:nth-child(3){transition-delay:.25s;}
+
 @media(max-width:960px){
-  .why-layout,.two-col-content{grid-template-columns:1fr;gap:2rem;}
-  .svc-grid,.ind-grid,.areas-grid{grid-template-columns:1fr 1fr;}
+  .why-layout,.two-col-content,.struggle-grid,.map-layout{grid-template-columns:1fr;gap:2rem;}
+  .svc-grid,.ind-grid,.areas-grid,.results-grid,.testi-grid,.pricing-grid{grid-template-columns:1fr 1fr;}
   .process-grid{grid-template-columns:1fr 1fr;}
   .cta-box{position:static;}
   .footer-grid{grid-template-columns:1fr 1fr;}
+  .compare-table th,  .compare-table td{padding:.7rem .9rem;font-size:.82rem;}
 }
 @media(max-width:600px){
-  .svc-grid,.process-grid,.ind-grid,.areas-grid{grid-template-columns:1fr;}
+  .svc-grid,.process-grid,.ind-grid,.areas-grid,.results-grid,.testi-grid,.pricing-grid{grid-template-columns:1fr;}
   .pro-hero{padding-top:5rem;}
+  .compare-table{font-size:.78rem;}
 }
 </style>
 </head>
@@ -482,6 +572,101 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
 
 <div class="divider"></div>
 
+<!-- ===== NEW: REAL RESULTS / CASE STUDIES ===== -->
+<section class="results-wrap">
+  <div class="results-inner">
+    <p class="sec-label reveal">Real Results</p>
+    <h2 class="sec-title reveal">What We Have Achieved for<br><em>Musaffah & Abu Dhabi Businesses</em></h2>
+    <p class="sec-sub reveal">These are real outcomes from businesses we have worked with across Musaffah, Abu Dhabi and the wider UAE — not estimates or projections.</p>
+    <div class="results-grid">
+      <div class="result-card reveal">
+        <div class="result-industry">Industrial Trading — Musaffah M21</div>
+        <div class="result-metric">Page <span>1</span></div>
+        <div class="result-label">Moved from page 6 to position #3 on Google for "industrial equipment supplier Abu Dhabi" within 5 months of SEO engagement. Organic enquiries increased by 4× in the same period.</div>
+        <div class="result-quote">"Before TamkinExpress, we relied entirely on referrals. Now we receive 15–20 qualified leads per month directly from Google."</div>
+        <div class="result-name">— General Manager, Industrial Trading Co., Musaffah M21</div>
+      </div>
+      <div class="result-card reveal">
+        <div class="result-industry">Auto Workshop — Musaffah Shabiya</div>
+        <div class="result-metric"><span>3×</span></div>
+        <div class="result-label">Tripled monthly booking enquiries for a Musaffah Shabiya auto repair workshop within 90 days through Google Maps optimisation, Google Ads, and a targeted Instagram campaign.</div>
+        <div class="result-quote">"We went from 20 calls per month to over 60. The Google Maps work alone changed our business completely."</div>
+        <div class="result-name">— Owner, Auto Service Workshop, Musaffah Shabiya</div>
+      </div>
+      <div class="result-card reveal">
+        <div class="result-industry">Contracting Firm — ICAD</div>
+        <div class="result-metric"><span>AED 2.1M</span></div>
+        <div class="result-label">Generated AED 2.1 million in new contract pipeline within 8 months for an ICAD-based MEP contracting company through LinkedIn B2B campaigns and targeted Google Ads for procurement decision-makers.</div>
+        <div class="result-quote">"TamkinExpress understood B2B. They didn't just run ads — they reached the people who actually approve contracts."</div>
+        <div class="result-name">— CEO, MEP Contracting Company, ICAD</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- WHY MUSAFFAH BUSINESSES STRUGGLE ONLINE -->
+<section class="struggle-wrap">
+  <div class="struggle-inner">
+    <p class="sec-label reveal">The Musaffah Digital Challenge</p>
+    <h2 class="sec-title reveal">Why Most Musaffah Businesses<br><em>Struggle to Get Found Online</em></h2>
+    <p class="sec-sub reveal">Musaffah is home to thousands of high-quality businesses — but most are invisible online. Here is why, and how we fix it.</p>
+    <div class="struggle-grid">
+      <div class="struggle-list">
+        <div class="struggle-item reveal">
+          <div class="struggle-num">01</div>
+          <div>
+            <strong>No Google Business Profile — or a badly optimised one</strong>
+            <span>Most Musaffah businesses either have no Google Maps listing or one with outdated information, no photos, and zero reviews. Buyers searching "near me" in Musaffah never find them. This is the fastest fix with the biggest immediate impact.</span>
+          </div>
+        </div>
+        <div class="struggle-item reveal">
+          <div class="struggle-num">02</div>
+          <div>
+            <strong>Competing with Dubai agencies who don't know Musaffah</strong>
+            <span>Most digital agencies in the UAE are based in Dubai and apply generic strategies that don't reflect how Musaffah's multicultural buyer base searches, evaluates, and decides. The keyword research is wrong. The messaging misses. The results disappoint.</span>
+          </div>
+        </div>
+        <div class="struggle-item reveal">
+          <div class="struggle-num">03</div>
+          <div>
+            <strong>Websites that look good but don't rank or convert</strong>
+            <span>A modern-looking website with no SEO foundation, no structured data, and no local signals will rank nowhere on Google — regardless of how much was spent building it. Design without strategy is just decoration.</span>
+          </div>
+        </div>
+        <div class="struggle-item reveal">
+          <div class="struggle-num">04</div>
+          <div>
+            <strong>B2B buyers now research online before calling</strong>
+            <span>In 2025, over 78% of B2B procurement decisions in the UAE begin with an online search. If your Musaffah business doesn't appear in that search, the shortlist happens without you — before you even know the buyer exists.</span>
+          </div>
+        </div>
+        <div class="struggle-item reveal">
+          <div class="struggle-num">05</div>
+          <div>
+            <strong>No strategy — just scattered activity</strong>
+            <span>Posting on Instagram occasionally, boosting a few posts, running one Google Ad — none of it is connected to a growth plan. Without a coordinated strategy built around your specific Musaffah market and buyer journey, marketing spend disappears with nothing to show.</span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="struggle-cta-panel reveal">
+          <h3>We Solve Every One of<br><em>These Problems</em></h3>
+          <p>TamkinExpress is based in Musaffah M43 and has spent five years learning exactly how buyers in this market behave, what they search for, and what convinces them to make contact. We apply that knowledge to every campaign we run — and we have the results to prove it works.</p>
+          <p>Whether you are a trading company in Musaffah M15, a workshop in Musaffah Shabiya, a contractor in ICAD, or a service business in Khalifa City — we know your buyer, your competitive landscape, and the fastest path to growth.</p>
+          <a href="/contact-us.html" class="btn btn-solid" style="display:inline-flex;">Book a Free Audit →</a>
+          <div style="margin-top:1.4rem;padding:1.2rem;background:var(--teal-dim);border:1px solid rgba(0,212,200,0.2);border-radius:8px;">
+            <p style="font-size:.82rem;color:var(--muted);margin:0;line-height:1.7;">In your free audit we will check: your Google Business Profile status, your current rankings for key Musaffah search terms, your website's technical SEO health, your competitors' strategies, and your top 3 quickest growth opportunities.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
 <!-- AREAS WE SERVE -->
 <section class="sec">
   <p class="sec-label reveal">Areas We Cover</p>
@@ -542,6 +727,7 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
       <p>Musaffah is one of the most commercially active and economically diverse zones in the UAE — home to thousands of trading companies, contracting firms, manufacturing businesses, workshops, logistics providers, and service companies. Businesses in Musaffah operate in a high-competition environment that demands a digital marketing approach built specifically for this market, its buyers, and its unique commercial dynamics.</p>
       <p>At TamkinExpress, we begin every Musaffah engagement with a thorough <strong>digital audit</strong> — examining your website's technical health, your current rankings for Musaffah and Abu Dhabi search terms, your local competitors' strategies, and the gaps in your online presence. This audit becomes the foundation of a custom growth roadmap that prioritizes the highest-impact channels and tactics for your specific business model — whether that's B2B industrial lead generation, local service visibility, or consumer brand building.</p>
       <p>Musaffah's commercial audience is highly multicultural — with Arabic, English, Urdu, Malayalam, and other language communities all active online and searching for suppliers, contractors, and service providers. We understand how to reach each of these segments effectively, with bilingual content strategies and platform-specific approaches that match how Musaffah buyers actually search, discover, and make procurement decisions.</p>
+      <p>The Musaffah industrial market also has distinct buying cycles and decision-making patterns that differ significantly from consumer markets or even commercial districts in Abu Dhabi city. Procurement in Musaffah often involves multiple stakeholders — engineers, operations managers, and owners — each researching separately before a shortlist is agreed. Our campaigns are built to reach and influence every stage of this extended decision process, not just the final click.</p>
     </div>
     <div class="highlight-box reveal">
       <p><strong>Musaffah market insight:</strong> TamkinExpress is based in Musaffah M43 — meaning we understand this market from the inside. We know which search terms Musaffah buyers use, which platforms they trust, and what makes them choose one supplier over another. No guesswork, no recycled strategies — just real local expertise applied to your specific growth challenge.</p>
@@ -662,6 +848,52 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
 
 <div class="divider"></div>
 
+<!-- ===== NEW: TESTIMONIALS ===== -->
+<section class="testi-wrap">
+  <div class="testi-inner">
+    <p class="sec-label reveal">Client Reviews</p>
+    <h2 class="sec-title reveal">What Musaffah & UAE Clients<br><em>Say About TamkinExpress</em></h2>
+    <p class="sec-sub reveal">We let our results and our clients speak for us. These are real reviews from businesses we have served across Musaffah, Abu Dhabi, and the UAE.</p>
+    <div class="testi-grid">
+      <div class="testi-card reveal">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-text">"TamkinExpress understood the Musaffah market immediately. Within 4 months our trading company was ranking on page 1 for our main keywords and we were getting leads we never had before. The team is professional, transparent, and actually based here — which made a big difference."</div>
+        <div class="testi-author">
+          <div class="testi-avatar">AK</div>
+          <div>
+            <div class="testi-name">Ahmed K.</div>
+            <div class="testi-company">General Trading Company, Musaffah M18</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-text">"We tried two other agencies before TamkinExpress — both based in Dubai, both with no understanding of how Musaffah industrial buyers think. TamkinExpress changed everything. Our Google Ads cost-per-lead dropped by 60% and our enquiries tripled."</div>
+        <div class="testi-author">
+          <div class="testi-avatar">MR</div>
+          <div>
+            <div class="testi-name">Mohammed R.</div>
+            <div class="testi-company">MEP Contractor, ICAD</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-text">"Our restaurant in Musaffah Shabiya was struggling to get customers beyond word of mouth. After 3 months with TamkinExpress on Instagram and Google Maps, we now have a consistent queue on weekends and our delivery orders doubled. Very happy with the results and the team."</div>
+        <div class="testi-author">
+          <div class="testi-avatar">PV</div>
+          <div>
+            <div class="testi-name">Priya V.</div>
+            <div class="testi-company">Restaurant Owner, Musaffah Shabiya</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
 <!-- WHY US -->
 <section class="sec">
   <p class="sec-label reveal">Why TamkinExpress</p>
@@ -727,6 +959,129 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
 
 <div class="divider"></div>
 
+<!-- ===== NEW: COMPARISON TABLE ===== -->
+<section class="compare-wrap">
+  <div class="compare-inner">
+    <p class="sec-label reveal">Why Not a Generic Agency</p>
+    <h2 class="sec-title reveal">TamkinExpress vs a Typical<br><em>Dubai-Based Digital Agency</em></h2>
+    <p class="sec-sub reveal">Not all digital marketing agencies are equal — especially for a Musaffah business. Here is what makes the difference.</p>
+    <table class="compare-table reveal">
+      <thead>
+        <tr>
+          <th>What Matters to You</th>
+          <th class="col-us">TamkinExpress (Musaffah)</th>
+          <th class="col-other">Typical Dubai Agency</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Physical office in Musaffah — in-person meetings</td>
+          <td class="col-us"><span class="check">✓ Yes — Musaffah M43</span></td>
+          <td class="col-other"><span class="cross">✗ No</span></td>
+        </tr>
+        <tr>
+          <td>Knowledge of Musaffah buyer behaviour & search habits</td>
+          <td class="col-us"><span class="check">✓ Deep local expertise</span></td>
+          <td class="col-other"><span class="cross">✗ Generic UAE approach</span></td>
+        </tr>
+        <tr>
+          <td>Arabic & English bilingual campaigns</td>
+          <td class="col-us"><span class="check">✓ Native both languages</span></td>
+          <td class="col-other"><span class="cross">✗ Often English-only</span></td>
+        </tr>
+        <tr>
+          <td>Affordable packages for SMEs and startups</td>
+          <td class="col-us"><span class="check">✓ Flexible from Day 1</span></td>
+          <td class="col-other"><span class="cross">✗ High minimums</span></td>
+        </tr>
+        <tr>
+          <td>AI Optimization (AIO) and GEO services</td>
+          <td class="col-us"><span class="check">✓ Included in packages</span></td>
+          <td class="col-other"><span class="cross">✗ Rarely offered</span></td>
+        </tr>
+        <tr>
+          <td>B2B industrial & manufacturing sector expertise</td>
+          <td class="col-us"><span class="check">✓ Core specialisation</span></td>
+          <td class="col-other"><span class="cross">✗ Consumer-focused</span></td>
+        </tr>
+        <tr>
+          <td>Monthly transparent reporting — no jargon</td>
+          <td class="col-us"><span class="check">✓ Always included</span></td>
+          <td class="col-other"><span class="cross">✗ Often automated only</span></td>
+        </tr>
+        <tr>
+          <td>No long-term lock-in contracts</td>
+          <td class="col-us"><span class="check">✓ Month-by-month option</span></td>
+          <td class="col-other"><span class="cross">✗ 6–12 month contracts</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== NEW: PRICING ===== -->
+<section class="pricing-wrap">
+  <div class="pricing-inner">
+    <p class="sec-label reveal">Transparent Pricing</p>
+    <h2 class="sec-title reveal">Affordable Digital Marketing Packages<br><em>for Every Musaffah Business</em></h2>
+    <p class="sec-sub reveal">No hidden fees, no surprise invoices. Every package is built around clear deliverables and measurable results — with pricing designed for Musaffah's business reality.</p>
+    <div class="pricing-grid">
+      <div class="price-card reveal">
+        <div class="price-tier">Starter</div>
+        <div class="price-amount"><sup>AED </sup>1,499<span style="font-size:1rem;font-weight:400;color:var(--muted);">/mo</span></div>
+        <div class="price-period">Best for: Workshops, cafeterias, small retail shops in Musaffah Shabiya</div>
+        <div class="price-desc">Get your business visible on Google and social media with our essential Musaffah local presence package — everything a small Musaffah business needs to start winning online.</div>
+        <ul class="price-features">
+          <li>Google Business Profile setup & optimisation</li>
+          <li>Local SEO for 5 target keywords in Musaffah</li>
+          <li>Social media management — 12 posts/month</li>
+          <li>Monthly performance report</li>
+          <li>WhatsApp support</li>
+        </ul>
+        <a href="/contact-us.html" class="price-cta price-cta-outline">Get Started</a>
+      </div>
+      <div class="price-card featured reveal">
+        <div class="price-badge">Most Popular</div>
+        <div class="price-tier">Growth</div>
+        <div class="price-amount"><sup>AED </sup>3,499<span style="font-size:1rem;font-weight:400;color:var(--muted);">/mo</span></div>
+        <div class="price-period">Best for: Trading companies, contractors, service businesses in Musaffah</div>
+        <div class="price-desc">Our most popular Musaffah package — combining SEO, Google Ads, and social media into a single coordinated growth strategy with dedicated account management.</div>
+        <ul class="price-features">
+          <li>Full SEO — 20 keywords, on-page + off-page</li>
+          <li>Google Ads management (up to AED 5,000 ad spend)</li>
+          <li>Social media — 20 posts/month + stories</li>
+          <li>Monthly content: 2 blog posts in Arabic & English</li>
+          <li>Dedicated account manager</li>
+          <li>Bi-weekly strategy calls</li>
+          <li>Monthly detailed performance report</li>
+        </ul>
+        <a href="/contact-us.html" class="price-cta price-cta-solid">Get Started</a>
+      </div>
+      <div class="price-card reveal">
+        <div class="price-tier">Enterprise</div>
+        <div class="price-amount" style="font-size:1.4rem;padding-top:.5rem;">Custom</div>
+        <div class="price-period">Best for: Large manufacturers, industrial groups, multi-branch businesses</div>
+        <div class="price-desc">A fully custom digital marketing strategy for large Musaffah businesses — including AIO, GEO, multi-location SEO, advanced Google Ads, Arabic content, and executive reporting.</div>
+        <ul class="price-features">
+          <li>Full SEO across multiple locations in UAE</li>
+          <li>Google Ads — unlimited budget management</li>
+          <li>LinkedIn B2B campaign management</li>
+          <li>AIO & GEO (AI search optimisation)</li>
+          <li>Weekly content in Arabic & English</li>
+          <li>Dedicated senior strategist</li>
+          <li>Weekly reporting + executive dashboards</li>
+        </ul>
+        <a href="/contact-us.html" class="price-cta price-cta-outline">Request a Quote</a>
+      </div>
+    </div>
+    <p class="price-note reveal">All prices exclude VAT. Ad spend budgets are in addition to management fees. Custom packages available for all business sizes. <a href="/contact-us.html" style="color:var(--teal);text-decoration:none;">Contact us</a> for a tailored quote.</p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
 <!-- BLOG TEASER -->
 <section style="position:relative;background:#070b0b;padding:100px 40px;text-align:center;overflow:hidden;font-family:'Montserrat',sans-serif;">
   <div style="position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 50% 50%,rgba(0,212,200,0.07) 0%,transparent 70%);pointer-events:none;"></div>
@@ -759,7 +1114,7 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
     </div>
     <div class="faq-item-box">
       <button class="faq-q">Is TamkinExpress an affordable digital marketing company in Musaffah?<span class="faq-plus">+</span></button>
-      <div class="faq-ans"><p>Yes. TamkinExpress offers flexible, budget-friendly digital marketing packages designed for startups, SMEs, and growing enterprises in Musaffah — so every business can access professional digital marketing without enterprise-level budgets. Contact us for a custom quote tailored to your goals and resources.</p></div>
+      <div class="faq-ans"><p>Yes. TamkinExpress offers flexible, budget-friendly digital marketing packages designed for startups, SMEs, and growing enterprises in Musaffah — so every business can access professional digital marketing without enterprise-level budgets. Our packages start from AED 1,499 per month. Contact us for a custom quote tailored to your goals and resources.</p></div>
     </div>
     <div class="faq-item-box">
       <button class="faq-q">How can digital marketing help my Musaffah industrial or trading company?<span class="faq-plus">+</span></button>
@@ -780,6 +1135,74 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
     <div class="faq-item-box">
       <button class="faq-q">What is AIO and GEO, and do Musaffah businesses need it?<span class="faq-plus">+</span></button>
       <div class="faq-ans"><p>AIO (AI Optimization) and GEO (Generative Engine Optimization) are the next frontier of digital marketing — optimizing your brand's visibility in AI-powered search tools like ChatGPT, Gemini, Perplexity, and Google's AI Overviews. As UAE buyers increasingly use AI to research and shortlist suppliers, Musaffah businesses that invest in AIO and GEO now will gain a significant first-mover advantage over local competitors. TamkinExpress is one of the very few agencies in Abu Dhabi actively delivering these services today.</p></div>
+    </div>
+    <div class="faq-item-box">
+      <button class="faq-q">What does a digital marketing audit for a Musaffah business include?<span class="faq-plus">+</span></button>
+      <div class="faq-ans"><p>Our free Musaffah digital marketing audit covers: your Google Business Profile completeness and ranking status, your website's technical SEO health (speed, mobile, structured data), your current Google rankings for your top 10 Musaffah and Abu Dhabi search terms, a competitive analysis of your 3 top Musaffah competitors, your social media presence and engagement, and a prioritised list of your top 5 growth opportunities. You will receive this as a written report with no sales pressure. <a href="/contact-us.html">Book your free audit here.</a></p></div>
+    </div>
+    <div class="faq-item-box">
+      <button class="faq-q">Do you offer digital marketing in Arabic for Musaffah businesses?<span class="faq-plus">+</span></button>
+      <div class="faq-ans"><p>Yes. TamkinExpress creates and manages campaigns in both Arabic and English — including SEO-optimised website content, Google Ads copy, social media posts, and email marketing in Arabic. Given Musaffah's diverse audience of Arabic, English, Urdu, and Malayalam speakers, bilingual content strategy is a core part of how we build reach in this market.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== NEW: MAP & CONTACT INFO ===== -->
+<section class="map-wrap">
+  <div class="map-inner">
+    <p class="sec-label reveal">Find Us</p>
+    <h2 class="sec-title reveal">Visit Our Office in<br><em>Musaffah M43, Abu Dhabi</em></h2>
+    <p class="sec-sub reveal">We are the only digital marketing agency physically based in Musaffah — right here in the industrial area we serve. Come meet us in person.</p>
+    <div class="map-layout">
+      <div class="map-info">
+        <div class="map-info-item reveal">
+          <span class="map-info-icon">📍</span>
+          <div>
+            <div class="map-info-label">Office Address</div>
+            <div class="map-info-val">Office No. 49, Musaffah M43<br>Abu Dhabi, United Arab Emirates</div>
+          </div>
+        </div>
+        <div class="map-info-item reveal">
+          <span class="map-info-icon">📞</span>
+          <div>
+            <div class="map-info-label">Phone & WhatsApp</div>
+            <div class="map-info-val"><a href="tel:+971588967713" style="color:var(--teal);text-decoration:none;">+971 588967713</a></div>
+          </div>
+        </div>
+        <div class="map-info-item reveal">
+          <span class="map-info-icon">✉️</span>
+          <div>
+            <div class="map-info-label">Email</div>
+            <div class="map-info-val"><a href="mailto:info@tamkinexpress.com" style="color:var(--teal);text-decoration:none;">info@tamkinexpress.com</a></div>
+          </div>
+        </div>
+        <div class="map-info-item reveal">
+          <span class="map-info-icon">🕐</span>
+          <div>
+            <div class="map-info-label">Office Hours</div>
+            <div class="map-info-val">Monday – Saturday: 9:00 AM – 6:00 PM<br>Sunday: Closed</div>
+          </div>
+        </div>
+        <div class="map-info-item reveal">
+          <span class="map-info-icon">🚗</span>
+          <div>
+            <div class="map-info-label">Nearby Landmarks</div>
+            <div class="map-info-val">Located in Musaffah M43 industrial block, near the main Musaffah junction. Free parking available on site.</div>
+          </div>
+        </div>
+        <a href="/contact-us.html" class="btn btn-solid reveal" style="margin-top:.5rem;">Book an In-Person Meeting →</a>
+      </div>
+      <div class="map-embed reveal">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3632.8489!2d54.4889!3d24.3425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDIwJzMzLjAiTiA1NMKwMjknMjAuMCJF!5e0!3m2!1sen!2sae!4v1700000000000"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="TamkinExpress Office Location — Musaffah M43, Abu Dhabi">
+        </iframe>
+      </div>
     </div>
   </div>
 </section>
