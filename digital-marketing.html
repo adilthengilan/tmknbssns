@@ -18,7 +18,14 @@
   "url": "https://tamkinexpress.ae/digital-marketing.html",
   "telephone": "+971588967713",
   "address": {"@type":"PostalAddress","streetAddress":"Office No. 49, Musaffah M43","addressLocality":"Abu Dhabi","addressCountry":"AE"},
-  "description": "Digital marketing company in Abu Dhabi offering SEO, Google Ads, Social Media Marketing, AIO and GEO services."
+  "description": "Digital marketing company in Abu Dhabi offering SEO, Google Ads, Social Media Marketing, AIO and GEO services.",
+  "areaServed": [
+    {"@type": "Place", "name": "Musaffah"},
+    {"@type": "Place", "name": "Musaffah Industrial Area"},
+    {"@type": "City", "name": "Abu Dhabi"},
+    {"@type": "City", "name": "Dubai"},
+    {"@type": "State", "name": "United Arab Emirates"}
+  ]
 }
 </script>
 <script type="application/ld+json">
@@ -29,7 +36,8 @@
     {"@type":"Question","name":"What does a digital marketing company in Abu Dhabi do?","acceptedAnswer":{"@type":"Answer","text":"A digital marketing company in Abu Dhabi like TamkinExpress helps businesses grow online through SEO, Google Ads, social media marketing, content creation, and AI-based strategies tailored to the UAE market."}},
     {"@type":"Question","name":"Is TamkinExpress an affordable digital marketing company in Abu Dhabi?","acceptedAnswer":{"@type":"Answer","text":"Yes. TamkinExpress offers flexible, budget-friendly digital marketing packages for startups, SMEs, and enterprises in Abu Dhabi."}},
     {"@type":"Question","name":"How long does it take to see results from digital marketing in Abu Dhabi?","acceptedAnswer":{"@type":"Answer","text":"SEO typically shows results within 3–6 months. Google Ads can generate leads within days. TamkinExpress sets realistic timelines based on your business goals."}},
-    {"@type":"Question","name":"Why choose TamkinExpress as your digital marketing company in Abu Dhabi?","acceptedAnswer":{"@type":"Answer","text":"With 5+ years in the UAE market, 500+ businesses grown, and 95% client retention, TamkinExpress delivers measurable results at affordable rates."}}
+    {"@type":"Question","name":"Why choose TamkinExpress as your digital marketing company in Abu Dhabi?","acceptedAnswer":{"@type":"Answer","text":"With 5+ years in the UAE market, 500+ businesses grown, and 95% client retention, TamkinExpress delivers measurable results at affordable rates."}},
+    {"@type":"Question","name":"Does TamkinExpress serve businesses in Musaffah?","acceptedAnswer":{"@type":"Answer","text":"Yes. TamkinExpress is physically based in Musaffah M43, Abu Dhabi and serves businesses across the Musaffah Industrial Area, ICAD, Musaffah Shabiya, and all surrounding zones with SEO, Google Ads, social media, and AI optimization services."}}
   ]
 }
 </script>
@@ -158,6 +166,25 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
 .content-block ul li{color:var(--muted);font-size:.85rem;line-height:1.6;padding-left:1.2rem;position:relative;}
 .content-block ul li::before{content:'';position:absolute;left:0;top:.55em;width:6px;height:6px;border-radius:50%;background:var(--teal);opacity:.7;}
 
+/* CITY LINKS */
+.city-links-sec{background:var(--dark);padding:3.5rem 6%;border-top:1px solid var(--border);}
+.city-links-inner{max-width:1200px;margin:0 auto;text-align:center;}
+.city-links-inner p{color:var(--muted);font-size:.85rem;margin-bottom:1.2rem;}
+.city-links{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;}
+.city-link{display:inline-flex;align-items:center;gap:.4rem;font-size:.8rem;font-weight:600;color:var(--teal);background:var(--teal-dim);border:1px solid rgba(0,212,200,0.2);border-radius:6px;padding:.45rem 1rem;text-decoration:none;transition:all .2s;}
+.city-link:hover{background:rgba(0,212,200,0.18);border-color:rgba(0,212,200,0.4);}
+.city-link.active{background:rgba(0,212,200,0.18);border-color:var(--teal);color:var(--white);}
+
+/* MUSAFFAH SPOTLIGHT */
+.musaffah-spotlight{background:var(--dark2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:5rem 6%;}
+.musaffah-spotlight-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;}
+.msf-zone-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+.msf-zone-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.4rem;text-align:center;transition:border-color .3s,transform .3s;}
+.msf-zone-card:hover{border-color:rgba(0,212,200,0.4);transform:translateY(-4px);}
+.msf-zone-icon{font-size:1.4rem;margin-bottom:.5rem;display:block;}
+.msf-zone-name{font-weight:700;color:var(--white);font-size:.85rem;margin-bottom:.3rem;}
+.msf-zone-desc{color:var(--muted);font-size:.75rem;}
+
 /* FAQ */
 .faq-sec{padding:6rem 6%;background:var(--dark2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
 .faq-sec .faq-wrap{max-width:860px;margin:0 auto;}
@@ -219,14 +246,14 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
 .ind-grid .reveal:nth-child(7){transition-delay:.47s;}
 .ind-grid .reveal:nth-child(8){transition-delay:.54s;}
 @media(max-width:960px){
-  .why-layout,.two-col-content{grid-template-columns:1fr;gap:2rem;}
+  .why-layout,.two-col-content,.musaffah-spotlight-inner{grid-template-columns:1fr;gap:2rem;}
   .svc-grid,.ind-grid{grid-template-columns:1fr 1fr;}
   .process-grid{grid-template-columns:1fr 1fr;}
   .cta-box{position:static;}
   .footer-grid{grid-template-columns:1fr 1fr;}
 }
 @media(max-width:600px){
-  .svc-grid,.process-grid,.ind-grid{grid-template-columns:1fr;}
+  .svc-grid,.process-grid,.ind-grid,.msf-zone-grid{grid-template-columns:1fr;}
   .pro-hero{padding-top:7rem;}
 }
 </style>
@@ -543,6 +570,56 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
 
 <div class="divider"></div>
 
+<!-- ============================================================ -->
+<!-- NEW: MUSAFFAH SPOTLIGHT — links to Musaffah page editorially -->
+<!-- ============================================================ -->
+<section class="musaffah-spotlight">
+  <div class="musaffah-spotlight-inner">
+    <div>
+      <p style="font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--teal);margin-bottom:.8rem;">📍 Based in Musaffah M43</p>
+      <h2 style="font-size:clamp(1.6rem,2.8vw,2.2rem);font-weight:700;color:var(--white);line-height:1.2;letter-spacing:-.02em;margin-bottom:1rem;">Digital Marketing for<br><span style="color:var(--teal);">Musaffah Businesses</span></h2>
+      <p style="color:var(--muted);font-size:.92rem;line-height:1.85;margin-bottom:1rem;">Our office is physically located in <strong style="color:var(--text);">Musaffah M43, Abu Dhabi</strong> — making TamkinExpress the closest digital marketing agency to businesses across the Musaffah Industrial Area, ICAD, and Musaffah Shabiya. We serve trading companies, contractors, workshops, manufacturers, and service providers right here in the heart of Musaffah.</p>
+      <p style="color:var(--muted);font-size:.92rem;line-height:1.85;margin-bottom:1.4rem;">From <strong style="color:var(--text);">local SEO</strong> and <strong style="color:var(--text);">Google Ads</strong> to LinkedIn B2B campaigns and AI optimization — we know exactly what Musaffah buyers search for and how to put your business directly in front of them at the moment they are looking.</p>
+      <p style="color:var(--muted);font-size:.92rem;line-height:1.85;margin-bottom:2rem;">Musaffah's industrial economy is unique — a dense mix of trading firms, fabricators, logistics companies, auto workshops, and professional service providers all competing for the same buyers online. TamkinExpress builds digital marketing strategies that reflect this reality, with sector-specific keyword targeting, bilingual content, and B2B lead generation built specifically for the Musaffah market.</p>
+      <a href="/digital-marketing-musaffah.html" style="display:inline-flex;align-items:center;gap:.5rem;background:var(--teal);color:#000;padding:.78rem 1.7rem;border-radius:6px;font-weight:700;font-size:.88rem;text-decoration:none;transition:transform .2s,box-shadow .2s;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 24px rgba(0,212,200,0.3)';" onmouseout="this.style.transform='none';this.style.boxShadow='none';">See Musaffah Digital Marketing Services →</a>
+    </div>
+    <div class="msf-zone-grid">
+      <div class="msf-zone-card">
+        <span class="msf-zone-icon">🏭</span>
+        <div class="msf-zone-name">Industrial Area</div>
+        <div class="msf-zone-desc">Musaffah M1–M43</div>
+      </div>
+      <div class="msf-zone-card">
+        <span class="msf-zone-icon">🏢</span>
+        <div class="msf-zone-name">Musaffah Shabiya</div>
+        <div class="msf-zone-desc">Retail & Services</div>
+      </div>
+      <div class="msf-zone-card">
+        <span class="msf-zone-icon">⚙️</span>
+        <div class="msf-zone-name">ICAD</div>
+        <div class="msf-zone-desc">Manufacturing Zone</div>
+      </div>
+      <div class="msf-zone-card">
+        <span class="msf-zone-icon">🚛</span>
+        <div class="msf-zone-name">Logistics & Trade</div>
+        <div class="msf-zone-desc">B2B Lead Generation</div>
+      </div>
+      <div class="msf-zone-card">
+        <span class="msf-zone-icon">🔧</span>
+        <div class="msf-zone-name">Auto Workshops</div>
+        <div class="msf-zone-desc">Local SEO & Maps</div>
+      </div>
+      <div class="msf-zone-card">
+        <span class="msf-zone-icon">🌐</span>
+        <div class="msf-zone-name">UAE-Wide Reach</div>
+        <div class="msf-zone-desc">Beyond Musaffah</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
 <!-- BLOG TEASER -->
 <section style="position:relative;background:#070b0b;padding:100px 40px;text-align:center;overflow:hidden;font-family:'Montserrat',sans-serif;">
   <div style="position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 50% 50%,rgba(0,212,200,0.07) 0%,transparent 70%);pointer-events:none;"></div>
@@ -564,6 +641,23 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
   </div>
 </section>
 
+<!-- ============================================================ -->
+<!-- NEW: CITY LINKS — two-way internal linking to all city pages -->
+<!-- ============================================================ -->
+<div class="city-links-sec">
+  <div class="city-links-inner">
+    <p>TamkinExpress provides digital marketing services across the UAE — explore our location pages:</p>
+    <div class="city-links">
+      <a href="/digital-marketing.html" class="city-link active">🇦🇪 UAE Overview</a>
+      <a href="/digital-marketing-abudhabi.html" class="city-link">🏛️ Abu Dhabi</a>
+      <a href="/digital-marketing-musaffah.html" class="city-link">🏭 Musaffah</a>
+      <a href="/digital-marketing-dubai.html" class="city-link">🌆 Dubai</a>
+      <a href="/digital-marketing-sharjah.html" class="city-link">🏙️ Sharjah</a>
+      <a href="/digital-marketing-ajman.html" class="city-link">🌴 Ajman</a>
+    </div>
+  </div>
+</div>
+
 <!-- FAQ -->
 <section class="faq-sec" id="faq">
   <div class="faq-wrap">
@@ -580,6 +674,10 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
     <div class="faq-item-box">
       <button class="faq-q">Are you the best digital marketing company in Abu Dhabi for small business?<span class="faq-plus">+</span></button>
       <div class="faq-ans"><p>TamkinExpress specializes in helping small businesses compete and win online. We offer cost-effective strategies that deliver big results without stretching your budget — making us the go-to digital marketing partner for small businesses in Abu Dhabi. We understand that every dirham counts, and we structure our campaigns to maximize return at every budget level.</p></div>
+    </div>
+    <div class="faq-item-box">
+      <button class="faq-q">Does TamkinExpress serve businesses in Musaffah?<span class="faq-plus">+</span></button>
+      <div class="faq-ans"><p>Yes. TamkinExpress is physically based in <strong>Musaffah M43</strong>, Abu Dhabi — making us the nearest digital marketing agency to businesses in the Musaffah Industrial Area, ICAD, and Musaffah Shabiya. We offer in-person meetings and have specific expertise in B2B digital marketing for Musaffah's industrial and trading businesses. <a href="/digital-marketing-musaffah.html">See our dedicated Musaffah digital marketing page</a> for full details.</p></div>
     </div>
     <div class="faq-item-box">
       <button class="faq-q">How long does it take to see results from digital marketing in Abu Dhabi?<span class="faq-plus">+</span></button>
@@ -627,7 +725,9 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
       <div class="footer-col">
         <h4 class="footer-col-title">Digital Services</h4>
         <ul class="footer-links">
-          <li><a href="./digital-marketing.html" style="color:var(--teal);">Digital Marketing</a></li>
+          <!-- CHANGED: split into two links, Musaffah added -->
+          <li><a href="./digital-marketing.html" style="color:var(--teal);">Digital Marketing UAE</a></li>
+          <li><a href="./digital-marketing-musaffah.html">Digital Marketing Musaffah</a></li>
           <li><a href="./business-registration.html">Business Registration</a></li>
           <li><a href="./pro-services.html">PRO Services</a></li>
           <li><a href="./portfolio.html">Our Portfolio</a></li>
