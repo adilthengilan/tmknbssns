@@ -539,50 +539,105 @@
 </section>
 
 <!-- FOOTER -->
-<footer>
-    <div class="footer-inner">
-        <div class="footer-brand">
-            <img src="./asset/logo_coloured.png" alt="TamkinExpress" onerror="this.style.display='none'">
-            <p>Your complete business services partner in UAE. From registration to digital excellence.</p>
-            <div class="footer-contact">
-                <p>📍 Office No. 49, Maxim Pharmacy Building, Musaffah M43, Abu Dhabi, UAE</p>
-                <p>📞 +971 588967713</p>
-                <p>✉️ info@tamkinexpress.com</p>
-            </div>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <img src="./asset/logo_coloured.png" style="height:60px;width:170px;margin-bottom:1rem;" alt="TamkinExpress Logo">
+        <p style="color:#aaa;font-size:.88rem;line-height:1.7;max-width:220px;">Your trusted partner for business registration and complete business services in UAE.</p>
+        <div style="margin-top:1rem;display:flex;flex-direction:column;gap:.4rem;">
+          <p style="color:#aaa;font-size:.85rem;">📍 Office No. 49, Musaffah M43, Abu Dhabi – UAE</p>
+          <p style="color:#aaa;font-size:.85rem;">📞 +971 588967713</p>
+          <p style="color:#aaa;font-size:.85rem;">✉️ info@tamkinexpress.com</p>
         </div>
-        <div class="footer-col"><h5>Services</h5><ul><li><a href="/digital-marketing.html">Digital Marketing</a></li><li><a href="/web-development.html">Web Development</a></li><li><a href="/business-registration.html">Business Registration</a></li><li><a href="/employment-visa.html">Employment Visa</a></li></ul></div>
-        <div class="footer-col"><h5>Company</h5><ul><li><a href="/about.html">About Us</a></li><li><a href="/portfolio.html">Portfolio</a></li><li><a href="/contact-us.html">Contact</a></li></ul></div>
-        <div class="footer-col"><h5>Visa Services</h5><ul><li><a href="./golden-visa.html">Golden Visa</a></li><li><a href="./employment-visa.html">Employment Visa</a></li><li><a href="./cicpa.html">CICPA Passes</a></li><li><a href="./pro-services.html">PRO Services</a></li></ul></div>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title">city</h4>
+        <ul class="footer-links">
+          <li><a href="./best-cicpa-pass-sharjah.html">cicpa sharjah</a></li>
+          <li><a href="./best-cicpa-pass-ajman.html">cicpa ajman</a></li>
+          <li><a href="./best-cicpa-pass-musaffah-abu-dhabi.html">cicpa musaffah</a></li>
+          <li><a href="./best-cicpa-pass-umm-al-quwain.html" style="color:var(--teal);">cicpa fujairah</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title">Other Services</h4>
+        <ul class="footer-links">
+          <li><a href="./pro-services.html">PRO Services</a></li>
+          <li><a href="./ministry-of-economy.html">Ministry of Economy</a></li>
+          <li><a href="./notary-court.html">Notary & Court</a></li>
+          <li><a href="./certificate-attestation.html">Certificate Attestation</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title">Company</h4>
+        <ul class="footer-links">
+          <li><a href="/about.html">About Us</a></li>
+          <li><a href="/portfolio.html">Portfolio</a></li>
+          <li><a href="/contact-us.html">Contact</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="footer-bottom"><span>© 2025 TamkinExpress. All rights reserved.</span><span>Dubai, UAE</span></div>
+    <div class="footer-bottom">
+      <p>© 2025 TamkinExpress. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/profile.php?id=61563209741328" target="_blank">Facebook</a>
+        <a href="https://www.instagram.com/tamkinexpress" target="_blank">Instagram</a>
+        <a href="https://x.com/tamkinexpress" target="_blank">Twitter</a>
+      </div>
+    </div>
+  </div>
 </footer>
 
 <script>
-const revealEls=document.querySelectorAll('.reveal');
-const observer=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);}});},{threshold:0.12});
-revealEls.forEach(el=>observer.observe(el));
-
-document.querySelectorAll('[style*="opacity:0"]').forEach(el=>{
-  const io2=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='none';io2.unobserve(e.target);}});},{threshold:0.12});
-  io2.observe(el);
-});
-
-const navbar=document.getElementById('navbar');
-window.addEventListener('scroll',()=>navbar.classList.toggle('scrolled',window.scrollY>60));
-const hamburger=document.getElementById('hamburger');
-const mobileMenu=document.getElementById('mobileMenu');
-hamburger.addEventListener('click',()=>{hamburger.classList.toggle('open');mobileMenu.classList.toggle('open');});
-mobileMenu.querySelectorAll('a').forEach(link=>{link.addEventListener('click',()=>{hamburger.classList.remove('open');mobileMenu.classList.remove('open');});});
-
-const faqItems=document.querySelectorAll('.faq-item');
-faqItems.forEach(item=>{
-    const btn=item.querySelector('.faq-question');
-    btn.addEventListener('click',()=>{
-        const isOpen=item.classList.contains('open');
-        faqItems.forEach(i=>{i.classList.remove('open');i.querySelector('.faq-question').setAttribute('aria-expanded','false');});
-        if(!isOpen){item.classList.add('open');btn.setAttribute('aria-expanded','true');}
+/* 1. FULL PAGE BACKGROUND */
+(function(){
+  const bgCanvas=document.getElementById('bg-canvas'),bgCtx=bgCanvas.getContext('2d');
+  let bW,bH;
+  function bgResize(){bW=bgCanvas.width=window.innerWidth;bH=bgCanvas.height=window.innerHeight;}
+  bgResize();window.addEventListener('resize',bgResize);
+  const orbs=Array.from({length:8},()=>({x:Math.random()*window.innerWidth,y:Math.random()*window.innerHeight,r:180+Math.random()*200,vx:(Math.random()-.5)*.3,vy:(Math.random()-.5)*.3,alpha:.03+Math.random()*.04,phase:Math.random()*Math.PI*2}));
+  const GRID=55;let tick2=0;
+  function drawBg(){
+    bgCtx.clearRect(0,0,bW,bH);tick2+=.008;
+    const scrollY=window.scrollY*.2;
+    bgCtx.lineWidth=1;
+    for(let x=0;x<bW;x+=GRID){const a=0.06+0.04*Math.sin(tick2+x*.01);bgCtx.strokeStyle=`rgba(0,212,200,${a})`;bgCtx.beginPath();bgCtx.moveTo(x,0);bgCtx.lineTo(x,bH);bgCtx.stroke();}
+    for(let y=-GRID;y<bH+GRID;y+=GRID){const w=Math.sin(tick2*1.5+y*.015)*14,a=0.05+0.03*Math.sin(tick2+y*.02);bgCtx.strokeStyle=`rgba(0,212,200,${a})`;bgCtx.beginPath();bgCtx.moveTo(0,y+(scrollY%GRID)+w);bgCtx.lineTo(bW,y+(scrollY%GRID)-w);bgCtx.stroke();}
+    orbs.forEach(o=>{
+      o.x+=o.vx;o.y+=o.vy;o.phase+=.012;
+      if(o.x<-o.r)o.x=bW+o.r;if(o.x>bW+o.r)o.x=-o.r;if(o.y<-o.r)o.y=bH+o.r;if(o.y>bH+o.r)o.y=-o.r;
+      const p=o.alpha*(.5+.5*Math.sin(o.phase)),g=bgCtx.createRadialGradient(o.x,o.y,0,o.x,o.y,o.r);
+      g.addColorStop(0,`rgba(0,212,200,${p*2.5})`);g.addColorStop(.4,`rgba(0,212,200,${p*1.2})`);g.addColorStop(1,'rgba(0,212,200,0)');
+      bgCtx.beginPath();bgCtx.arc(o.x,o.y,o.r,0,Math.PI*2);bgCtx.fillStyle=g;bgCtx.fill();
     });
-});
+    [0,.5].forEach(off=>{
+      const sx=((tick2*100+off*(bW+bH))%(bW+bH));
+      bgCtx.beginPath();bgCtx.moveTo(sx-bH,0);bgCtx.lineTo(sx,bH);
+      const sg=bgCtx.createLinearGradient(sx-bH,0,sx,bH);
+      sg.addColorStop(0,'rgba(0,212,200,0)');sg.addColorStop(.5,'rgba(0,212,200,0.10)');sg.addColorStop(1,'rgba(0,212,200,0)');
+      bgCtx.strokeStyle=sg;bgCtx.lineWidth=2.5;bgCtx.stroke();
+    });
+    [[0,0],[bW,0],[0,bH],[bW,bH]].forEach(([cx,cy],i)=>{
+      const r=(tick2*60+i*80)%300,a=Math.max(0,.12*(1-r/300));
+      bgCtx.beginPath();bgCtx.arc(cx,cy,r,0,Math.PI*2);bgCtx.strokeStyle=`rgba(0,212,200,${a})`;bgCtx.lineWidth=1.5;bgCtx.stroke();
+    });
+    requestAnimationFrame(drawBg);
+  }
+  drawBg();
+})();
+
+/* 2. SCROLL REVEAL */
+const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}});},{threshold:.12});
+document.querySelectorAll('.reveal,.reveal-left,.reveal-scale').forEach(el=>io.observe(el));
+
+/* 3. NUMBER COUNTER */
+function animCounter(el){const target=parseInt(el.dataset.target),suffix=el.dataset.suffix||'',dur=1800,start=performance.now();function tick(now){const p=Math.min((now-start)/dur,1),ease=1-Math.pow(1-p,3);el.textContent=Math.floor(ease*target)+suffix;if(p<1)requestAnimationFrame(tick);else el.textContent=target+suffix;}requestAnimationFrame(tick);}
+const cio=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting&&e.target.dataset.target){animCounter(e.target);cio.unobserve(e.target);}});},{threshold:.5});
+document.querySelectorAll('.stat-val[data-target]').forEach(el=>cio.observe(el));
+
+/* 4. MOUSE PARALLAX */
+window.addEventListener('mousemove',e=>{const g=document.querySelector('.hero-glow');if(!g)return;const x=(e.clientX/window.innerWidth-.5)*30,y=(e.clientY/window.innerHeight-.5)*30;g.style.transform=`translate(${x}px,${y}px)`;});
 </script>
 </body>
 </html>
