@@ -192,3 +192,53 @@
   </script>
 </body>
 </html>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <img src="./asset/logo_coloured.png" alt="TamkinExpress" onerror="this.style.display='none'">
+            <p>Your complete business services partner in UAE. From registration to digital excellence.</p>
+            <div class="footer-contact">
+                <p>📍 Office No. 49, Maxim Pharmacy Building, Musaffah M43, Abu Dhabi, UAE</p>
+                <p>📞 +971 588967713</p>
+                <p>✉️ info@tamkinexpress.com</p>
+            </div>
+        </div>
+        <div class="footer-col"><h5>city</h5><ul><li><a href="/No1 web design & web development company in dubai ,uae.html">dubai</a></li><li><a href="/professional web design & web development in abu dhabi,uae.html">abu dhabi</a></li><li><a href="/web-development & web-design service in ajman.html">ajman</a></li><li><a href="/top web-development & web-design company in fujairah.html">fujairah</a></li></ul></div>
+         <div class="footer-col"><h5></h5><ul><li><a href="./best web-development in sharjah.html">sharjah</a></li><li><a href="./web-development company in ummu al quwain.html">ummu al quwain</a></li><li><a href="./web-development service in ras al khaimah,uae.html">ras al khaima</a></li><li><a href="./best web-development & web-design company mussafah.html">musaffah</a></li></ul></div>
+        <div class="footer-col"><h5>Company</h5><ul><li><a href="/about.html">About Us</a></li><li><a href="/portfolio.html">Portfolio</a></li><li><a href="/contact-us.html">Contact</a></li></ul></div>
+       
+    </div>
+    <div class="footer-bottom"><span>© 2025 TamkinExpress. All rights reserved.</span><span>Dubai, UAE</span></div>
+</footer>
+
+<script>
+const revealEls=document.querySelectorAll('.reveal');
+const observer=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);}});},{threshold:0.12});
+revealEls.forEach(el=>observer.observe(el));
+
+document.querySelectorAll('[style*="opacity:0"]').forEach(el=>{
+  const io2=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='none';io2.unobserve(e.target);}});},{threshold:0.12});
+  io2.observe(el);
+});
+
+const navbar=document.getElementById('navbar');
+window.addEventListener('scroll',()=>navbar.classList.toggle('scrolled',window.scrollY>60));
+const hamburger=document.getElementById('hamburger');
+const mobileMenu=document.getElementById('mobileMenu');
+hamburger.addEventListener('click',()=>{hamburger.classList.toggle('open');mobileMenu.classList.toggle('open');});
+mobileMenu.querySelectorAll('a').forEach(link=>{link.addEventListener('click',()=>{hamburger.classList.remove('open');mobileMenu.classList.remove('open');});});
+
+const faqItems=document.querySelectorAll('.faq-item');
+faqItems.forEach(item=>{
+    const btn=item.querySelector('.faq-question');
+    btn.addEventListener('click',()=>{
+        const isOpen=item.classList.contains('open');
+        faqItems.forEach(i=>{i.classList.remove('open');i.querySelector('.faq-question').setAttribute('aria-expanded','false');});
+        if(!isOpen){item.classList.add('open');btn.setAttribute('aria-expanded','true');}
+    });
+});
+</script>
+</body>
+</html>
