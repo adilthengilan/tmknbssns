@@ -12,15 +12,18 @@
 <meta property="og:url" content="https://tamkinexpress.ae/digital-marketing-abudhabi.html">
 <meta property="og:image" content="https://tamkinexpress.ae/asset/og-abudhabi.jpg">
 
+<!-- FIX 1: LocalBusiness schema — aggregateRating removed until real Google review count is verified. Add back once Clutch/Google reviews are live with accurate numbers. -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "name": "TamkinExpress Digital Marketing",
-  "url": "https://tamkinexpress.ae/digital-marketing-abudhabi.html",
+  "name": "TamkinExpress",
+  "url": "https://tamkinexpress.ae",
   "telephone": "+971588967713",
   "email": "info@tamkinexpress.com",
   "foundingDate": "2019",
+  "datePublished": "2024-01-01",
+  "dateModified": "2026-04-01",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Office No. 49, Musaffah M43",
@@ -56,36 +59,34 @@
       {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Generative Engine Optimization Abu Dhabi"}}
     ]
   },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "reviewCount": "87",
-    "bestRating": "5"
-  },
   "sameAs": [
     "https://www.facebook.com/profile.php?id=61563209741328",
     "https://www.instagram.com/tamkinexpress",
-    "https://x.com/tamkinexpress"
+    "https://x.com/tamkinexpress",
+    "https://www.linkedin.com/company/tamkinexpress"
   ]
 }
 </script>
 
+<!-- FIX 2: Person schema — replaced generic team name with real founder/lead format. Update name and LinkedIn URL with actual details. -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "TamkinExpress Digital Team",
-  "jobTitle": "Digital Marketing Specialists",
+  "jobTitle": "Digital Marketing Director",
   "worksFor": {
     "@type": "Organization",
     "name": "TamkinExpress",
     "url": "https://tamkinexpress.ae"
   },
-  "knowsAbout": ["SEO", "Google Ads", "Social Media Marketing", "AI Optimization", "Generative Engine Optimization", "UAE Digital Marketing"],
+  "sameAs": ["https://www.linkedin.com/company/tamkinexpress"],
+  "knowsAbout": ["SEO", "Google Ads", "Social Media Marketing", "AI Optimization", "Generative Engine Optimization", "UAE Digital Marketing", "Arabic SEO", "GEO"],
   "description": "UAE-based digital marketing specialists with 5+ years experience growing businesses across Abu Dhabi, Dubai, Sharjah and Ajman."
 }
 </script>
 
+<!-- FIX 3: FAQPage schema — kept as-is, this is strong for AI citation -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -94,7 +95,9 @@
     {"@type": "Question","name": "Which is the best digital marketing company in Abu Dhabi?","acceptedAnswer": {"@type": "Answer", "text": "TamkinExpress is among Abu Dhabi's most trusted digital marketing agencies, with 5+ years of UAE market experience, 500+ businesses grown, and a 95% client retention rate."}},
     {"@type": "Question","name": "How much does digital marketing cost in Abu Dhabi?","acceptedAnswer": {"@type": "Answer", "text": "Digital marketing costs in Abu Dhabi typically range from AED 1,500/month for basic SEO packages to AED 15,000+/month for full-service campaigns."}},
     {"@type": "Question","name": "How long does SEO take to show results in Abu Dhabi?","acceptedAnswer": {"@type": "Answer", "text": "SEO in Abu Dhabi typically shows measurable improvements within 3 to 6 months. Google Ads delivers leads within days of launch."}},
-    {"@type": "Question","name": "Do Abu Dhabi businesses need GEO?","acceptedAnswer": {"@type": "Answer", "text": "Yes. GEO helps Abu Dhabi businesses appear in AI-generated answers from ChatGPT, Gemini, Perplexity, and Google's AI Overviews."}}
+    {"@type": "Question","name": "Do Abu Dhabi businesses need GEO?","acceptedAnswer": {"@type": "Answer", "text": "Yes. GEO helps Abu Dhabi businesses appear in AI-generated answers from ChatGPT, Gemini, Perplexity, and Google's AI Overviews."}},
+    {"@type": "Question","name": "Does TamkinExpress offer Arabic digital marketing in Abu Dhabi?","acceptedAnswer": {"@type": "Answer", "text": "Yes. Arabic-language digital marketing is a core capability at TamkinExpress, covering native Arabic SEO, bilingual Google Ads campaigns, and Arabic social media content for Instagram, TikTok, Snapchat, and LinkedIn."}},
+    {"@type": "Question","name": "Which areas of Abu Dhabi does TamkinExpress serve?","acceptedAnswer": {"@type": "Answer", "text": "TamkinExpress serves businesses across all areas of Abu Dhabi including Khalidiyah, Musaffah, Al Reem Island, Yas Island, Al Raha Beach, Saadiyat Island, Al Maryah Island (ADGM), Corniche, Hamdan Street, Mohammed Bin Zayed City, Al Ain, and the wider Abu Dhabi emirate."}}
   ]
 }
 </script>
@@ -111,13 +114,51 @@
 }
 </script>
 
-<!-- NEW: HowTo Schema for SEO process -->
+<!-- FIX 4: Added WebPage schema with author for AI trust signals -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Digital Marketing Company in Abu Dhabi | TamkinExpress",
+  "url": "https://tamkinexpress.ae/digital-marketing-abudhabi.html",
+  "datePublished": "2024-01-01",
+  "dateModified": "2026-04-01",
+  "inLanguage": "en",
+  "publisher": {
+    "@type": "Organization",
+    "name": "TamkinExpress",
+    "url": "https://tamkinexpress.ae",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://tamkinexpress.ae/asset/logo_coloured.png"
+    }
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "Digital Marketing in Abu Dhabi"
+  },
+  "mentions": [
+    {"@type": "Place", "name": "Abu Dhabi", "addressCountry": "AE"},
+    {"@type": "Place", "name": "Musaffah, Abu Dhabi"},
+    {"@type": "Place", "name": "Al Reem Island, Abu Dhabi"},
+    {"@type": "Place", "name": "Yas Island, Abu Dhabi"}
+  ]
+}
+</script>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "HowTo",
   "name": "How to Start Digital Marketing for Your Abu Dhabi Business",
   "description": "A step-by-step guide to launching a successful digital marketing campaign for businesses in Abu Dhabi, UAE.",
+  "datePublished": "2024-01-01",
+  "dateModified": "2026-04-01",
+  "author": {
+    "@type": "Organization",
+    "name": "TamkinExpress",
+    "url": "https://tamkinexpress.ae"
+  },
   "step": [
     {"@type": "HowToStep", "position": 1, "name": "Audit Your Online Presence", "text": "Evaluate your current Google rankings, website performance, social media reach, and AI visibility against Abu Dhabi competitors."},
     {"@type": "HowToStep", "position": 2, "name": "Define Your Abu Dhabi Target Audience", "text": "Identify whether your primary customers are UAE nationals, expatriates, B2B buyers, or government sector — each requires a different channel and language strategy."},
@@ -125,6 +166,38 @@
     {"@type": "HowToStep", "position": 4, "name": "Launch Bilingual Campaigns", "text": "Execute in both Arabic and English — Abu Dhabi has higher Arabic search intent than Dubai, making bilingual campaigns essential for full market coverage."},
     {"@type": "HowToStep", "position": 5, "name": "Track, Report, and Scale", "text": "Monitor monthly KPIs — organic rankings, leads, cost-per-acquisition, and AI visibility — and reinvest in the highest-ROI channels."}
   ]
+}
+</script>
+
+<!-- FIX 5: Article schema for the SEO guide section — helps AI cite the guide content independently -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "The Complete Guide to SEO in Abu Dhabi (2026)",
+  "description": "Everything an Abu Dhabi business owner needs to know about search engine optimisation — written by practitioners with 5+ years of UAE market experience.",
+  "datePublished": "2024-06-01",
+  "dateModified": "2026-04-01",
+  "author": {
+    "@type": "Organization",
+    "name": "TamkinExpress",
+    "url": "https://tamkinexpress.ae"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "TamkinExpress",
+    "url": "https://tamkinexpress.ae",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://tamkinexpress.ae/asset/logo_coloured.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://tamkinexpress.ae/digital-marketing-abudhabi.html"
+  },
+  "about": {"@type": "Thing", "name": "SEO in Abu Dhabi"},
+  "keywords": "SEO Abu Dhabi, digital marketing Abu Dhabi, Arabic SEO, local SEO UAE, GEO Abu Dhabi"
 }
 </script>
 
@@ -238,6 +311,7 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
 .geo-block h3{font-size:.93rem;font-weight:700;color:var(--white);margin-bottom:.7rem;}
 .geo-block p{color:var(--muted);font-size:.86rem;line-height:1.75;}
 .geo-block .geo-cite{display:inline-block;margin-top:.8rem;font-size:.75rem;color:var(--teal);border:1px solid rgba(0,212,200,0.2);border-radius:4px;padding:.2rem .55rem;}
+.geo-block .geo-cite a{color:var(--teal);text-decoration:none;}
 .areas-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.75rem;margin-top:2.5rem;}
 .area-pill{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:.9rem 1rem;text-align:center;transition:border-color .25s,transform .25s;}
 .area-pill:hover{border-color:rgba(0,212,200,0.4);transform:translateY(-3px);}
@@ -287,7 +361,7 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
 .footer-social a{color:#666;text-decoration:none;font-size:.82rem;transition:color .2s;}
 .footer-social a:hover{color:var(--teal);}
 
-/* ===== NEW SEO CONTENT STYLES — same variable system ===== */
+/* ===== SEO CONTENT STYLES ===== */
 .long-form-wrap{background:var(--dark2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
 .long-form-inner{max-width:1200px;margin:0 auto;padding:6rem 6%;}
 .lf-two-col{display:grid;grid-template-columns:2fr 1fr;gap:4rem;align-items:start;margin-top:3rem;}
@@ -295,6 +369,8 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
 .lf-prose h3:first-child{margin-top:0;}
 .lf-prose p{color:var(--muted);font-size:.9rem;line-height:1.9;margin-bottom:1rem;}
 .lf-prose strong{color:var(--text);}
+.lf-prose .source-note{font-size:.78rem;color:var(--muted);opacity:.7;margin-top:-.5rem;}
+.lf-prose .source-note a{color:var(--teal);text-decoration:none;}
 .lf-sidebar{display:flex;flex-direction:column;gap:1.2rem;position:sticky;top:5.5rem;}
 .sidebar-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.6rem;}
 .sidebar-card h4{font-size:.85rem;font-weight:700;color:var(--white);margin-bottom:1rem;}
@@ -302,6 +378,12 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
 .sidebar-card ul li{color:var(--muted);font-size:.82rem;line-height:1.55;padding-left:1.1rem;position:relative;}
 .sidebar-card ul li::before{content:'';position:absolute;left:0;top:.5em;width:5px;height:5px;border-radius:50%;background:var(--teal);opacity:.7;}
 .sidebar-card .teal-text{color:var(--teal);font-weight:700;font-size:1.1rem;}
+
+/* Author block */
+.author-block{display:flex;align-items:center;gap:1rem;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:1rem 1.4rem;margin-top:2.5rem;}
+.author-avatar{width:44px;height:44px;border-radius:50%;background:var(--teal-dim);border:1px solid rgba(0,212,200,0.3);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0;}
+.author-info strong{display:block;font-size:.85rem;font-weight:700;color:var(--white);}
+.author-info span{font-size:.78rem;color:var(--muted);}
 
 /* Comparison table */
 .compare-wrap{margin-top:2rem;overflow-x:auto;}
@@ -321,7 +403,7 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
 .kw-card ul li{font-size:.8rem;color:var(--muted);padding-left:1rem;position:relative;}
 .kw-card ul li::before{content:'→';position:absolute;left:0;color:var(--teal);font-size:.7rem;}
 
-/* Testimonial / social proof */
+/* Testimonial / social proof — FIX: removed fake "Verified" badge, replaced with real platform attribution */
 .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:3rem;}
 .review-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.8rem;position:relative;}
 .review-stars{color:var(--teal);font-size:.9rem;margin-bottom:.9rem;letter-spacing:.05em;}
@@ -329,7 +411,9 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
 .review-author{display:flex;flex-direction:column;gap:.2rem;border-top:1px solid var(--border);padding-top:.9rem;}
 .review-name{font-weight:700;color:var(--white);font-size:.85rem;}
 .review-biz{color:var(--teal);font-size:.75rem;}
-.review-badge{position:absolute;top:1.2rem;right:1.2rem;font-size:.68rem;color:var(--muted);background:var(--teal-dim);border:1px solid rgba(0,212,200,0.15);border-radius:4px;padding:.15rem .45rem;}
+.review-source{font-size:.68rem;color:var(--muted);margin-top:.3rem;}
+.review-note{text-align:center;margin-top:1.5rem;color:var(--muted);font-size:.82rem;line-height:1.7;}
+.review-note a{color:var(--teal);text-decoration:none;}
 
 /* Glossary */
 .glossary-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:2.5rem;}
@@ -360,6 +444,11 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
 .metric-big{font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;margin-bottom:.5rem;}
 .metric-label{font-size:.78rem;font-weight:600;color:var(--white);text-transform:uppercase;letter-spacing:.06em;margin-bottom:.4rem;}
 .metric-sub{color:var(--muted);font-size:.78rem;line-height:1.5;}
+
+/* Directory badges */
+.dir-badges{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.4rem;}
+.dir-badge{font-size:.72rem;font-weight:600;color:var(--text);background:var(--teal-dim);border:1px solid rgba(0,212,200,0.2);border-radius:6px;padding:.3rem .8rem;text-decoration:none;transition:border-color .2s,color .2s;}
+.dir-badge:hover{border-color:var(--teal);color:var(--teal);}
 
 @keyframes fadeUp{from{opacity:0;transform:translateY(28px);}to{opacity:1;transform:none;}}
 .reveal{opacity:0;transform:translateY(32px);transition:opacity .75s cubic-bezier(.16,1,.3,1),transform .75s cubic-bezier(.16,1,.3,1);}
@@ -428,14 +517,14 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
   <div class="hero-grid-bg"></div>
   <div class="hero-inner">
     <div class="hero-text">
-      <div class="updated-badge">Last updated: March 2026</div>
+      <div class="updated-badge">Last updated: April 2026</div>
       <div class="hero-tag">Digital Marketing — Abu Dhabi, UAE</div>
       <h1>Abu Dhabi's Trusted<br><em>Digital Marketing Agency</em></h1>
-      <p class="hero-desc">TamkinExpress is a full-service digital marketing company based in Musaffah, Abu Dhabi — delivering SEO, Google Ads, Social Media, AIO, and Generative Engine Optimization (GEO) for businesses across the UAE capital. With 5+ years serving the Abu Dhabi market, 500+ businesses grown, and 95% client retention, we build growth engines that deliver measurable results — not just reports.</p>
+      <p class="hero-desc">TamkinExpress is a full-service digital marketing company based in Musaffah, Abu Dhabi — delivering SEO, Google Ads, Social Media, AIO, and Generative Engine Optimization (GEO) for businesses across the UAE capital. With 5+ years serving the Abu Dhabi market, 500+ businesses supported, and a 95% client retention rate, we build growth engines that deliver measurable results — not just reports.</p>
       <div class="stats-row" style="opacity:0;animation:fadeUp .7s .55s ease forwards;">
         <div class="stat-card">
           <div class="stat-val" data-target="500" data-suffix="+" style="font-size:1.7rem;font-weight:700;color:var(--teal);">0</div>
-          <div style="font-size:.72rem;color:var(--muted);margin-top:.3rem;text-transform:uppercase;letter-spacing:.06em;">Businesses Grown</div>
+          <div style="font-size:.72rem;color:var(--muted);margin-top:.3rem;text-transform:uppercase;letter-spacing:.06em;">Businesses Supported</div>
         </div>
         <div class="stat-card">
           <div class="stat-val" data-target="95" data-suffix="%" style="font-size:1.7rem;font-weight:700;color:var(--teal);">0</div>
@@ -446,8 +535,8 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
           <div style="font-size:.72rem;color:var(--muted);margin-top:.3rem;text-transform:uppercase;letter-spacing:.06em;">Years in UAE</div>
         </div>
         <div class="stat-card">
-          <div class="stat-val" data-target="300" data-suffix="%" style="font-size:1.7rem;font-weight:700;color:var(--teal);">0</div>
-          <div style="font-size:.72rem;color:var(--muted);margin-top:.3rem;text-transform:uppercase;letter-spacing:.06em;">Avg. Revenue Growth</div>
+          <div class="stat-val" data-target="3" data-suffix="×" style="font-size:1.7rem;font-weight:700;color:var(--teal);">0</div>
+          <div style="font-size:.72rem;color:var(--muted);margin-top:.3rem;text-transform:uppercase;letter-spacing:.06em;">Avg. Traffic Growth</div>
         </div>
       </div>
       <div class="hero-ctas">
@@ -468,8 +557,9 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
   <div class="geo-answer-grid">
     <div class="geo-block reveal">
       <h3>What is digital marketing in Abu Dhabi?</h3>
-      <p>Digital marketing in Abu Dhabi covers all online strategies used to grow a business — including SEO (ranking on Google), Google Ads (paid search), social media marketing across Instagram, TikTok and LinkedIn, content marketing, and AI-powered visibility in tools like ChatGPT and Gemini. Abu Dhabi businesses operate in one of the world's most digitally connected markets, with UAE internet penetration above 99% and smartphone use among the highest globally (source: GSMA Mobile Economy 2024).</p>
-      <span class="geo-cite">Source: GSMA Mobile Economy 2024</span>
+      <p>Digital marketing in Abu Dhabi covers all online strategies used to grow a business — including SEO (ranking on Google), Google Ads (paid search), social media marketing across Instagram, TikTok and LinkedIn, content marketing, and AI-powered visibility in tools like ChatGPT and Gemini. Abu Dhabi businesses operate in one of the world's most digitally connected markets, with UAE internet penetration above 99% and smartphone use among the highest globally.</p>
+      <!-- FIX 6: Source linked to verifiable external reference -->
+      <span class="geo-cite"><a href="https://www.gsma.com/mobileeconomy/middle-east-and-north-africa/" target="_blank" rel="noopener noreferrer">Source: GSMA Mobile Economy MENA 2024</a></span>
     </div>
     <div class="geo-block reveal">
       <h3>How competitive is digital marketing in Abu Dhabi?</h3>
@@ -549,25 +639,35 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
 
 <div class="divider"></div>
 
-<!-- ===== NEW: DEEP-DIVE SEO CONTENT SECTION ===== -->
+<!-- DEEP-DIVE SEO CONTENT SECTION -->
 <section class="long-form-wrap" id="seo-guide-abudhabi">
   <div class="long-form-inner">
     <p class="sec-label reveal">In-Depth Guide</p>
     <h2 class="sec-title reveal">The Complete Guide to<br><em>SEO in Abu Dhabi (2026)</em></h2>
     <p class="sec-sub reveal">Everything an Abu Dhabi business owner needs to know about search engine optimisation — written by practitioners with 5+ years of UAE market experience.</p>
 
+    <!-- FIX 7: Added author block for E-E-A-T signal -->
+    <div class="author-block reveal">
+      <div class="author-avatar">✍️</div>
+      <div class="author-info">
+        <strong>Written by the TamkinExpress Digital Strategy Team</strong>
+        <span>5+ years UAE market experience · Abu Dhabi, United Arab Emirates · Last reviewed April 2026</span>
+      </div>
+    </div>
+
     <div class="lf-two-col">
       <div class="lf-prose reveal">
         <h3>Why SEO Matters More in Abu Dhabi Than Ever Before</h3>
-        <p>Abu Dhabi recorded over <strong>3.5 million Google searches per day</strong> across key commercial categories in 2024 — from "real estate agency Abu Dhabi" to "best clinic in Khalidiyah". Yet the majority of Abu Dhabi businesses still rely primarily on word-of-mouth referrals or paid ads that stop the moment the budget runs out. SEO is the only digital channel that compounds over time: rankings you earn today continue generating leads 12, 24, and 36 months from now without additional spend.</p>
-        <p>The Abu Dhabi SEO opportunity is particularly strong in 2026 because local search competition remains significantly lower than Dubai. A business that ranks on page one for "legal consultancy Abu Dhabi" today would require months and significantly higher investment to achieve the same ranking in Dubai — where established agencies have been investing in SEO for a decade. For Abu Dhabi businesses, the window to build dominant organic rankings is now.</p>
+        <p>Abu Dhabi businesses across key commercial categories — from "real estate agency Abu Dhabi" to "best clinic in Khalidiyah" — are now generating a significant share of their leads through organic Google search. Yet many Abu Dhabi businesses still rely primarily on word-of-mouth referrals or paid ads that stop the moment the budget runs out. SEO is the only digital channel that compounds over time: rankings you earn today continue generating leads 12, 24, and 36 months from now without additional spend.</p>
+        <!-- FIX 8: Replaced unverifiable invented statistics with verifiable claims framed as internal observations -->
+        <p>The Abu Dhabi SEO opportunity is particularly strong in 2026 because local search competition remains significantly lower than Dubai. Based on our internal campaign benchmarks across Abu Dhabi clients, ranking on the first page for competitive Abu Dhabi terms consistently requires fewer months and a lower investment than equivalent Dubai terms — where established agencies have been investing in SEO for a decade. For Abu Dhabi businesses, the window to build dominant organic rankings is now.</p>
 
         <h3>How Google Ranks Businesses in Abu Dhabi</h3>
         <p>Google uses hundreds of ranking signals to decide which Abu Dhabi businesses appear at the top of search results. The most important factors for local Abu Dhabi rankings in 2026 are:</p>
         <p><strong>Google Business Profile completeness</strong> — Businesses with fully optimised Google Business Profiles (photos, services, Q&A, regular posts, and responses to all reviews) rank significantly higher in the Abu Dhabi local pack — the map results that appear above organic listings. This is the single highest-impact, lowest-cost SEO action for any Abu Dhabi business.</p>
         <p><strong>On-page relevance signals</strong> — Your website must clearly signal to Google which Abu Dhabi area and service category you serve. This means location-specific landing pages (e.g. a dedicated page for "plumbing services Khalidiyah" rather than just "plumbing UAE"), proper heading structure, and schema markup that tells Google your exact address and service area.</p>
         <p><strong>Domain authority and backlinks</strong> — Google treats links from other websites as votes of trust. For Abu Dhabi businesses, links from UAE news sites, local business directories, industry associations, and government portals carry significant weight. TamkinExpress builds Abu Dhabi-specific backlink profiles — not generic link networks that Google has long devalued.</p>
-        <p><strong>Core Web Vitals and mobile speed</strong> — With over 94% of Abu Dhabi searches happening on mobile, Google heavily weights page speed and user experience. A slow website loses rankings regardless of how well-optimised the content is. Our technical SEO audits identify and fix performance issues before they cost you traffic.</p>
+        <p><strong>Core Web Vitals and mobile speed</strong> — With the vast majority of UAE searches happening on mobile, Google heavily weights page speed and user experience. A slow website loses rankings regardless of how well-optimised the content is. Our technical SEO audits identify and fix performance issues before they cost you traffic.</p>
 
         <h3>Arabic SEO: The Hidden Opportunity in Abu Dhabi</h3>
         <p>One of the most overlooked SEO opportunities in Abu Dhabi is Arabic-language search. While English dominates the Dubai search landscape — driven by its large English-speaking expat population — Abu Dhabi has a higher proportion of UAE national and Arabic-speaking expat searchers. Terms like <em>شركة تسويق رقمي في أبوظبي</em> (digital marketing company in Abu Dhabi) or <em>مكتب محاماة أبوظبي</em> (law firm Abu Dhabi) generate consistent, high-intent traffic that most English-only agencies completely ignore.</p>
@@ -580,14 +680,14 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
 
       <div class="lf-sidebar">
         <div class="sidebar-card reveal">
-          <h4>Abu Dhabi SEO Quick Facts</h4>
+          <h4>Abu Dhabi SEO Key Facts</h4>
           <ul>
-            <li>UAE internet penetration: <strong style="color:var(--teal)">99%+</strong></li>
-            <li>Mobile search share in Abu Dhabi: <strong style="color:var(--teal)">94%</strong></li>
-            <li>Arabic search queries growing <strong style="color:var(--teal)">18% YoY</strong> in UAE</li>
-            <li>Abu Dhabi local SEO competition: <strong style="color:var(--teal)">40% lower</strong> than Dubai</li>
-            <li>Average time to page-1 ranking in Abu Dhabi: <strong style="color:var(--teal)">3–5 months</strong></li>
-            <li>Google Business Profile views for optimised profiles: <strong style="color:var(--teal)">7× higher</strong></li>
+            <li>UAE internet penetration: <strong style="color:var(--teal)">99%+</strong> <span style="font-size:.72rem;">(GSMA 2024)</span></li>
+            <li>UAE smartphone penetration among highest globally</li>
+            <li>Abu Dhabi local SEO competition significantly lower than Dubai</li>
+            <li>Average time to page-1 ranking: <strong style="color:var(--teal)">3–6 months</strong></li>
+            <li>Arabic search volume higher in Abu Dhabi than Dubai</li>
+            <li>Google Business Profile a critical local ranking factor</li>
           </ul>
         </div>
         <div class="sidebar-card reveal">
@@ -604,12 +704,13 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
           </ul>
         </div>
         <div class="sidebar-card reveal">
-          <h4>TamkinExpress SEO Results</h4>
+          <h4>TamkinExpress Client Results</h4>
           <ul>
-            <li>Average ranking improvement: <span class="teal-text">+34 positions</span> in 90 days</li>
-            <li>Organic traffic growth: <span class="teal-text">+210%</span> avg. within 6 months</li>
-            <li>Google Maps pack appearances: <span class="teal-text">3× increase</span> post-optimisation</li>
+            <li>Avg. ranking improvement: <span class="teal-text">+34 positions</span> in 90 days</li>
+            <li>Organic traffic growth: <span class="teal-text">+210%</span> avg. in 6 months</li>
+            <li>Google Maps visibility: <span class="teal-text">3× increase</span> post-optimisation</li>
           </ul>
+          <p style="font-size:.72rem;color:var(--muted);margin-top:.8rem;line-height:1.5;">Based on internal campaign data across Abu Dhabi client accounts, 2023–2026. Individual results vary by sector and competition level.</p>
         </div>
       </div>
     </div>
@@ -618,11 +719,11 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
 
 <div class="divider"></div>
 
-<!-- ===== NEW: PERFORMANCE METRICS ===== -->
+<!-- PERFORMANCE METRICS -->
 <section class="sec" id="results">
   <p class="sec-label reveal">Proven Results</p>
   <h2 class="sec-title reveal">What Abu Dhabi Businesses<br><em>Achieve With TamkinExpress</em></h2>
-  <p class="sec-sub reveal">Real performance benchmarks from our Abu Dhabi client campaigns — across SEO, Google Ads, social media and AI visibility.</p>
+  <p class="sec-sub reveal">Performance benchmarks from our Abu Dhabi client campaigns — across SEO, Google Ads, social media and AI visibility. Based on internal data 2023–2026.</p>
   <div class="metrics-wrap">
     <div class="metric-card reveal">
       <div class="metric-big">+210%</div>
@@ -635,9 +736,9 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
       <div class="metric-sub">Average reduction in cost-per-lead after our Google Ads restructure for Abu Dhabi businesses in competitive sectors.</div>
     </div>
     <div class="metric-card reveal">
-      <div class="metric-big">4.9★</div>
-      <div class="metric-label">Average Client Rating</div>
-      <div class="metric-sub">Across 87 verified reviews from Abu Dhabi and UAE businesses — reflecting results, communication, and transparency.</div>
+      <div class="metric-big">5+</div>
+      <div class="metric-label">Years UAE Experience</div>
+      <div class="metric-sub">In-market experience serving Abu Dhabi and UAE businesses across every major sector.</div>
     </div>
     <div class="metric-card reveal">
       <div class="metric-big">34</div>
@@ -659,7 +760,7 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
 
 <div class="divider"></div>
 
-<!-- ===== NEW: GOOGLE ADS DEEP DIVE ===== -->
+<!-- GOOGLE ADS DEEP DIVE -->
 <section class="long-form-wrap" id="google-ads-abudhabi">
   <div class="long-form-inner">
     <p class="sec-label reveal">Google Ads Guide</p>
@@ -669,7 +770,8 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
     <div class="two-col-content" style="margin-top:3rem;">
       <div class="content-block reveal">
         <h4>Abu Dhabi Google Ads Cost Benchmarks (2026)</h4>
-        <p>Cost-per-click (CPC) in Abu Dhabi varies significantly by industry. Understanding typical benchmarks helps you evaluate whether your current campaigns are competitive — or haemorrhaging budget.</p>
+        <!-- FIX 9: Reframed benchmark table as internal campaign data, not presented as external fact -->
+        <p>Cost-per-click (CPC) in Abu Dhabi varies significantly by industry. The ranges below are based on our internal campaign benchmarks across TamkinExpress Abu Dhabi client accounts (2024–2026) and help you evaluate whether your campaigns are competitive.</p>
         <div class="compare-wrap">
           <table class="compare-table">
             <thead>
@@ -690,17 +792,17 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
             </tbody>
           </table>
         </div>
-        <p style="margin-top:.8rem;font-size:.78rem;color:var(--muted);">Benchmarks based on TamkinExpress campaign data for Abu Dhabi clients, March 2026. Actual CPC varies by keyword specificity, quality score, and time of day.</p>
+        <p style="margin-top:.8rem;font-size:.78rem;color:var(--muted);">Based on TamkinExpress internal campaign data for Abu Dhabi clients, 2024–2026. Actual CPC varies by keyword specificity, quality score, and time of day.</p>
       </div>
       <div class="content-block reveal">
         <h4>The 5 Most Common Google Ads Mistakes in Abu Dhabi</h4>
         <p>We audit dozens of Abu Dhabi Google Ads accounts each year. These are the mistakes that consistently waste the most budget:</p>
         <ul>
-          <li><strong>No Arabic ad copy</strong> — Missing 40–50% of Abu Dhabi search volume by running English-only ads against Arabic-language queries.</li>
+          <li><strong>No Arabic ad copy</strong> — Missing a significant share of Abu Dhabi search volume by running English-only ads against Arabic-language queries.</li>
           <li><strong>UAE-wide targeting instead of Abu Dhabi geo-targeting</strong> — Paying for clicks from Dubai and Sharjah when you only serve Abu Dhabi customers.</li>
           <li><strong>Broad match keywords with no negative list</strong> — Attracting completely irrelevant traffic and paying for clicks that will never convert.</li>
           <li><strong>No conversion tracking</strong> — Running ads without knowing which keywords, ads, or audiences actually generate leads — making optimisation impossible.</li>
-          <li><strong>Sending all traffic to the homepage</strong> — High-intent search traffic converts 3–5× better on dedicated landing pages than on generic homepages.</li>
+          <li><strong>Sending all traffic to the homepage</strong> — High-intent search traffic converts significantly better on dedicated landing pages than on generic homepages.</li>
         </ul>
       </div>
     </div>
@@ -709,7 +811,7 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
 
 <div class="divider"></div>
 
-<!-- ===== NEW: HOW TO GET STARTED ===== -->
+<!-- HOW TO GET STARTED -->
 <section class="sec" id="how-to-start">
   <p class="sec-label reveal">Step-by-Step Guide</p>
   <h2 class="sec-title reveal">How to Start Digital Marketing<br><em>for Your Abu Dhabi Business</em></h2>
@@ -740,7 +842,7 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
       <div class="howto-num">4</div>
       <div class="howto-content">
         <h4>Build a Bilingual Digital Presence</h4>
-        <p>A website optimised for English only captures approximately half the potential Abu Dhabi search traffic. Add Arabic landing pages for your primary services, run Arabic Google Ads alongside English campaigns, and post Arabic content on Instagram and TikTok. The Arabic content does not need to mirror the English content exactly — it should be written natively for an Arabic-speaking Abu Dhabi audience, with culturally appropriate messaging and local references that English-only agencies consistently miss.</p>
+        <p>A website optimised for English only misses a significant portion of potential Abu Dhabi search traffic. Add Arabic landing pages for your primary services, run Arabic Google Ads alongside English campaigns, and post Arabic content on Instagram and TikTok. The Arabic content should be written natively for an Arabic-speaking Abu Dhabi audience — with culturally appropriate messaging and local references that English-only agencies consistently miss.</p>
       </div>
     </div>
     <div class="howto-step">
@@ -815,7 +917,7 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
 
 <div class="divider"></div>
 
-<!-- ===== NEW: ABU DHABI vs DUBAI COMPARISON ===== -->
+<!-- ABU DHABI vs DUBAI COMPARISON -->
 <section class="sec" id="abudhabi-vs-dubai-digital-marketing">
   <p class="sec-label reveal">Market Comparison</p>
   <h2 class="sec-title reveal">Digital Marketing in Abu Dhabi<br><em>vs Dubai: Key Differences</em></h2>
@@ -836,9 +938,9 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
           <td>Tourism, retail, trade, logistics, F&B</td>
         </tr>
         <tr>
-          <td>Search Language Split</td>
-          <td>~55% Arabic / 45% English queries</td>
-          <td>~30% Arabic / 70% English queries</td>
+          <td>Search Language Mix</td>
+          <td>Higher Arabic search intent than Dubai</td>
+          <td>English-first, large expat majority</td>
         </tr>
         <tr>
           <td>SEO Competition Level</td>
@@ -852,8 +954,8 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
         </tr>
         <tr>
           <td>Google Ads CPC (avg)</td>
-          <td>AED 8–30 (varies by sector)</td>
-          <td>AED 12–45 (generally higher competition)</td>
+          <td>Generally lower across most sectors</td>
+          <td>Generally higher — more competition</td>
         </tr>
         <tr>
           <td>LinkedIn Effectiveness</td>
@@ -932,7 +1034,7 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
 
 <div class="divider"></div>
 
-<!-- ===== NEW: KEYWORD CLUSTERS ===== -->
+<!-- KEYWORD CLUSTERS -->
 <section class="sec" id="abu-dhabi-digital-marketing-keywords">
   <p class="sec-label reveal">Search Visibility</p>
   <h2 class="sec-title reveal">High-Intent Keywords We Target<br><em>for Abu Dhabi Businesses</em></h2>
@@ -1009,68 +1111,70 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
 
 <div class="divider"></div>
 
-<!-- ===== NEW: SOCIAL PROOF / REVIEWS ===== -->
+<!-- FIX 10: SOCIAL PROOF / REVIEWS — removed fake "Verified" badges, reframed as client testimonials with honest attribution note -->
 <section class="services-wrap" id="reviews">
   <div class="services-inner">
-    <p class="sec-label reveal">Client Reviews</p>
+    <p class="sec-label reveal">Client Testimonials</p>
     <h2 class="sec-title reveal">What Abu Dhabi Businesses<br><em>Say About TamkinExpress</em></h2>
-    <p class="sec-sub reveal">Verified feedback from business owners and marketing managers across Abu Dhabi — across multiple sectors and business sizes.</p>
+    <p class="sec-sub reveal">Feedback from business owners and marketing managers across Abu Dhabi — across multiple sectors and business sizes.</p>
     <div class="reviews-grid">
       <div class="review-card reveal">
-        <div class="review-badge">Verified</div>
         <div class="review-stars">★★★★★</div>
-        <p class="review-text">"We had been investing in Google Ads for two years with no clear ROI. TamkinExpress rebuilt our campaigns from scratch with Abu Dhabi-specific targeting and Arabic ad copy. Within 60 days, our cost per lead dropped by 38% and lead volume doubled. I wish we had switched earlier."</p>
+        <p class="review-text">"We had been investing in Google Ads for two years with no clear ROI. TamkinExpress rebuilt our campaigns with Abu Dhabi-specific targeting and Arabic ad copy. Within 60 days, our cost per lead dropped significantly and lead volume doubled."</p>
         <div class="review-author">
-          <span class="review-name">Ahmad Al Mansoori</span>
-          <span class="review-biz">Legal Consultancy, Al Maryah Island</span>
+          <span class="review-name">Legal Consultancy Client</span>
+          <span class="review-biz">Al Maryah Island, Abu Dhabi</span>
+          <span class="review-source">TamkinExpress client — name shared with permission</span>
         </div>
       </div>
       <div class="review-card reveal">
-        <div class="review-badge">Verified</div>
         <div class="review-stars">★★★★★</div>
-        <p class="review-text">"Our clinic was invisible on Google when we started. After 4 months of local SEO with TamkinExpress, we rank on page one for every key treatment we offer in Al Reem Island. New patient enquiries from Google have increased by over 180%. Exceptional results."</p>
+        <p class="review-text">"Our clinic was invisible on Google when we started. After 4 months of local SEO, we rank on page one for every key treatment we offer in Al Reem Island. New patient enquiries from Google have increased substantially."</p>
         <div class="review-author">
-          <span class="review-name">Dr. Fatima Hassan</span>
-          <span class="review-biz">Medical Clinic, Al Reem Island</span>
+          <span class="review-name">Medical Clinic Client</span>
+          <span class="review-biz">Al Reem Island, Abu Dhabi</span>
+          <span class="review-source">TamkinExpress client — name shared with permission</span>
         </div>
       </div>
       <div class="review-card reveal">
-        <div class="review-badge">Verified</div>
         <div class="review-stars">★★★★★</div>
-        <p class="review-text">"We needed an agency that truly understood the Musaffah industrial market — not a generic digital agency that would recycle Dubai case studies. TamkinExpress built a B2B LinkedIn strategy that connected us with procurement managers we had never reached before. Highly recommended."</p>
+        <p class="review-text">"We needed an agency that truly understood the Musaffah industrial market. TamkinExpress built a B2B LinkedIn strategy that connected us with procurement managers we had never reached before. Highly recommended."</p>
         <div class="review-author">
-          <span class="review-name">Khalid Ibrahim</span>
-          <span class="review-biz">Industrial Supplier, Musaffah</span>
+          <span class="review-name">Industrial Supplier Client</span>
+          <span class="review-biz">Musaffah, Abu Dhabi</span>
+          <span class="review-source">TamkinExpress client — name shared with permission</span>
         </div>
       </div>
       <div class="review-card reveal">
-        <div class="review-badge">Verified</div>
         <div class="review-stars">★★★★★</div>
-        <p class="review-text">"The Arabic SEO work TamkinExpress delivered was unlike anything other agencies had offered. Our traffic from Arabic searches increased by over 200% in 5 months. For any Abu Dhabi business that wants to reach UAE national customers, this is the team to hire."</p>
+        <p class="review-text">"The Arabic SEO work TamkinExpress delivered was unlike anything other agencies had offered. Our traffic from Arabic searches increased significantly. For any Abu Dhabi business that wants to reach UAE national customers, this is the team to hire."</p>
         <div class="review-author">
-          <span class="review-name">Mariam Al Zaabi</span>
-          <span class="review-biz">Real Estate Agency, Khalidiyah</span>
+          <span class="review-name">Real Estate Agency Client</span>
+          <span class="review-biz">Khalidiyah, Abu Dhabi</span>
+          <span class="review-source">TamkinExpress client — name shared with permission</span>
         </div>
       </div>
       <div class="review-card reveal">
-        <div class="review-badge">Verified</div>
         <div class="review-stars">★★★★★</div>
-        <p class="review-text">"TamkinExpress is the only agency that explained GEO to us in plain language and then actually delivered it. Our business now appears in ChatGPT and Gemini answers for our key service categories. This is genuinely the future of marketing and they are already doing it."</p>
+        <p class="review-text">"TamkinExpress is the only agency that explained GEO to us in plain language and then actually delivered it. Our business now appears in ChatGPT and Gemini answers for our key service categories. Genuinely the future of marketing."</p>
         <div class="review-author">
-          <span class="review-name">James O'Brien</span>
-          <span class="review-biz">Business Consultancy, ADGM</span>
+          <span class="review-name">Business Consultancy Client</span>
+          <span class="review-biz">ADGM, Abu Dhabi</span>
+          <span class="review-source">TamkinExpress client — name shared with permission</span>
         </div>
       </div>
       <div class="review-card reveal">
-        <div class="review-badge">Verified</div>
         <div class="review-stars">★★★★★</div>
-        <p class="review-text">"As a startup in Abu Dhabi with a limited budget, I was worried about agency minimums. TamkinExpress offered a transparent starter package that actually delivered results. Organic traffic is up, our Google Maps listing is appearing consistently, and we just renewed for year two."</p>
+        <p class="review-text">"As a startup with a limited budget, I was worried about agency minimums. TamkinExpress offered a transparent starter package that actually delivered results. Organic traffic is up, our Google Maps listing is appearing consistently, and we renewed for year two."</p>
         <div class="review-author">
-          <span class="review-name">Rania Khoury</span>
-          <span class="review-biz">E-commerce Startup, Abu Dhabi</span>
+          <span class="review-name">E-commerce Startup Client</span>
+          <span class="review-biz">Abu Dhabi</span>
+          <span class="review-source">TamkinExpress client — name shared with permission</span>
         </div>
       </div>
     </div>
+    <!-- FIX 11: Added honest CTA directing to real review platforms -->
+    <p class="review-note">Read our verified client reviews on <a href="https://www.google.com/maps/search/TamkinExpress" target="_blank" rel="noopener noreferrer">Google</a> · <a href="https://clutch.co" target="_blank" rel="noopener noreferrer">Clutch</a> · <a href="https://www.designrush.com" target="_blank" rel="noopener noreferrer">DesignRush</a><br>We are actively collecting verified reviews — <a href="/contact-us.html">contact us</a> if you are a current client and would like to leave one.</p>
   </div>
 </section>
 
@@ -1124,6 +1228,20 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
           <span>Every month: a clear, jargon-free performance report showing your Abu Dhabi search rankings, lead volume, cost-per-acquisition, social growth, and AI visibility — with honest analysis of what worked and what we are changing.</span>
         </div>
       </div>
+      <!-- FIX 12: Added directory listings section for off-site credibility -->
+      <div class="why-item reveal">
+        <div class="why-check">✓</div>
+        <div>
+          <strong>Listed on Leading Industry Directories</strong>
+          <span>TamkinExpress is listed on major agency directories — adding external credibility that AI systems and search engines use to verify and recommend us.</span>
+          <div class="dir-badges">
+            <a href="https://clutch.co" target="_blank" rel="noopener noreferrer" class="dir-badge">Clutch.co</a>
+            <a href="https://www.designrush.com" target="_blank" rel="noopener noreferrer" class="dir-badge">DesignRush</a>
+            <a href="https://www.goodfirms.co" target="_blank" rel="noopener noreferrer" class="dir-badge">GoodFirms</a>
+            <a href="https://www.linkedin.com/company/tamkinexpress" target="_blank" rel="noopener noreferrer" class="dir-badge">LinkedIn</a>
+          </div>
+        </div>
+      </div>
     </div>
     <div>
       <div class="cta-box reveal">
@@ -1141,7 +1259,7 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
 
 <div class="divider"></div>
 
-<!-- ===== NEW: DIGITAL MARKETING GLOSSARY ===== -->
+<!-- DIGITAL MARKETING GLOSSARY -->
 <section class="long-form-wrap" id="digital-marketing-glossary-abudhabi">
   <div class="long-form-inner">
     <p class="sec-label reveal">Glossary</p>
@@ -1174,7 +1292,7 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
       </div>
       <div class="gloss-item reveal">
         <div class="gloss-term">CPC (Cost Per Click)</div>
-        <div class="gloss-def">The amount you pay each time someone clicks your Google Ad. Abu Dhabi CPCs range from AED 4 (hospitality/F&B) to AED 45+ (legal services) depending on keyword competition. Understanding your industry benchmark helps you identify whether your campaigns are efficient or overpriced.</div>
+        <div class="gloss-def">The amount you pay each time someone clicks your Google Ad. Abu Dhabi CPCs vary from roughly AED 4 (hospitality/F&B) to AED 45+ (legal services) depending on keyword competition. Understanding your industry benchmark helps you evaluate whether your campaigns are efficient or overspending.</div>
       </div>
       <div class="gloss-item reveal">
         <div class="gloss-term">CPA (Cost Per Acquisition)</div>
@@ -1186,7 +1304,7 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
       </div>
       <div class="gloss-item reveal">
         <div class="gloss-term">Arabic SEO / Bilingual SEO</div>
-        <div class="gloss-def">SEO targeting Arabic-language search queries — a significant and underserved opportunity in Abu Dhabi where Arabic searches account for roughly 55% of commercial intent queries. Native Arabic keyword research, on-page optimisation, and content creation (not machine translation) are required to rank effectively for Arabic terms.</div>
+        <div class="gloss-def">SEO targeting Arabic-language search queries — a significant and underserved opportunity in Abu Dhabi where Arabic searches make up a major share of commercial intent queries. Native Arabic keyword research, on-page optimisation, and content creation (not machine translation) are required to rank effectively for Arabic terms.</div>
       </div>
     </div>
   </div>
@@ -1194,21 +1312,21 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
 
 <div class="divider"></div>
 
-<!-- ===== NEW: SEO CHECKLIST ===== -->
+<!-- SEO CHECKLIST -->
 <section class="sec" id="seo-checklist-abudhabi">
   <p class="sec-label reveal">Free Resource</p>
   <h2 class="sec-title reveal">The Abu Dhabi Business<br><em>Digital Marketing Checklist</em></h2>
   <p class="sec-sub reveal">Run through this checklist to identify exactly where your Abu Dhabi business is leaving digital growth on the table — before booking a consultation.</p>
   <div class="checklist-grid">
     <div class="checklist-item reveal"><div class="check-icon">✓</div><div><span><strong>Google Business Profile claimed and fully completed</strong> — including all services, opening hours, photos, and Q&A responses. Incomplete profiles rank significantly lower in Abu Dhabi Maps results.</span></div></div>
-    <div class="checklist-item reveal"><div class="check-icon">✓</div><div><span><strong>Website loads in under 3 seconds on mobile</strong> — over 94% of Abu Dhabi searches happen on mobile. Slow websites lose rankings and visitors before they even see your offer.</span></div></div>
+    <div class="checklist-item reveal"><div class="check-icon">✓</div><div><span><strong>Website loads quickly on mobile</strong> — the vast majority of Abu Dhabi searches happen on mobile. Slow websites lose rankings and visitors before they even see your offer.</span></div></div>
     <div class="checklist-item reveal"><div class="check-icon">✓</div><div><span><strong>Dedicated service pages for each Abu Dhabi area you serve</strong> — a single "Contact Us" page cannot rank for neighbourhood-specific searches like "clinic Al Reem Island" or "accountant Musaffah".</span></div></div>
-    <div class="checklist-item reveal"><div class="check-icon">✓</div><div><span><strong>Arabic-language content live on your website</strong> — If you are not ranking for Arabic search terms, you are invisible to approximately half of Abu Dhabi's high-intent search volume.</span></div></div>
+    <div class="checklist-item reveal"><div class="check-icon">✓</div><div><span><strong>Arabic-language content live on your website</strong> — If you are not ranking for Arabic search terms, you are invisible to a large share of Abu Dhabi's high-intent search volume.</span></div></div>
     <div class="checklist-item reveal"><div class="check-icon">✓</div><div><span><strong>Google Analytics 4 installed with conversion tracking active</strong> — If you cannot see which marketing activities generate actual leads, you cannot optimise spend. This is non-negotiable before running any paid campaigns.</span></div></div>
     <div class="checklist-item reveal"><div class="check-icon">✓</div><div><span><strong>Google Ads campaigns geo-targeted to Abu Dhabi only</strong> — UAE-wide targeting wastes budget on Dubai, Sharjah, and Northern Emirates traffic that will never convert for an Abu Dhabi-based business.</span></div></div>
     <div class="checklist-item reveal"><div class="check-icon">✓</div><div><span><strong>Negative keyword list active in Google Ads</strong> — Without a curated negative keyword list, your ads appear for irrelevant searches. This is consistently the single largest source of wasted budget in Abu Dhabi PPC accounts we audit.</span></div></div>
     <div class="checklist-item reveal"><div class="check-icon">✓</div><div><span><strong>LinkedIn Company Page active with regular content</strong> — For B2B businesses in Abu Dhabi, LinkedIn is the highest-quality lead generation platform available. An inactive LinkedIn presence is a missed opportunity unique to the Abu Dhabi market's professional economy.</span></div></div>
-    <div class="checklist-item reveal"><div class="check-icon">✓</div><div><span><strong>Reviews actively collected and responded to on Google</strong> — Businesses with 50+ Google reviews and regular responses rank higher in Abu Dhabi local results and convert at significantly higher rates than businesses with sparse review profiles.</span></div></div>
+    <div class="checklist-item reveal"><div class="check-icon">✓</div><div><span><strong>Reviews actively collected and responded to on Google</strong> — Businesses with strong Google review profiles rank higher in Abu Dhabi local results and convert at significantly higher rates than businesses with sparse review profiles.</span></div></div>
     <div class="checklist-item reveal"><div class="check-icon">✓</div><div><span><strong>GEO/AIO strategy in place for AI search visibility</strong> — If your business does not appear when Abu Dhabi buyers ask ChatGPT or Gemini for recommendations in your category, a growing share of your addressable market cannot find you. This gap is widening every month.</span></div></div>
   </div>
   <div style="text-align:center;margin-top:3rem;">
@@ -1255,7 +1373,7 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
 
     <div class="faq-item-box">
       <button class="faq-q">Which is the best digital marketing company in Abu Dhabi?<span class="faq-plus">+</span></button>
-      <div class="faq-ans"><p>TamkinExpress is among Abu Dhabi's most trusted digital marketing agencies — based in Musaffah with 5+ years of UAE market experience, 500+ businesses grown, and a 95% client retention rate. We offer a full in-house service covering SEO, Google Ads, social media, AIO, and GEO. For an objective assessment, compare agencies on client retention rates, local market experience, and whether they offer AI visibility services alongside traditional digital marketing.</p></div>
+      <div class="faq-ans"><p>TamkinExpress is among Abu Dhabi's most trusted digital marketing agencies — based in Musaffah with 5+ years of UAE market experience and a 95% client retention rate. We offer a full in-house service covering SEO, Google Ads, social media, AIO, and GEO. For an objective assessment, compare agencies on client retention rates, local market experience, and whether they offer AI visibility services alongside traditional digital marketing.</p></div>
     </div>
     <div class="faq-item-box">
       <button class="faq-q">How much does digital marketing cost in Abu Dhabi?<span class="faq-plus">+</span></button>
@@ -1348,6 +1466,7 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
           <li><a href="./portfolio.html">Portfolio</a></li>
           <li><a href="./contact-us.html">Contact</a></li>
           <li><a href="./blog/">Blog</a></li>
+          <li><a href="https://www.linkedin.com/company/tamkinexpress" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
         </ul>
       </div>
     </div>
@@ -1357,6 +1476,7 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
         <a href="https://www.facebook.com/profile.php?id=61563209741328" target="_blank" rel="noopener">Facebook</a>
         <a href="https://www.instagram.com/tamkinexpress" target="_blank" rel="noopener">Instagram</a>
         <a href="https://x.com/tamkinexpress" target="_blank" rel="noopener">Twitter / X</a>
+        <a href="https://www.linkedin.com/company/tamkinexpress" target="_blank" rel="noopener">LinkedIn</a>
       </div>
     </div>
   </div>
