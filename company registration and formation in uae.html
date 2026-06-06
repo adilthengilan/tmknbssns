@@ -1,0 +1,1600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Company Registration and Formation in UAE | TamkinExpress</title>
+<meta name="description" content="Complete company registration and formation in UAE — mainland, free zone, offshore. Fast, compliant, expert-managed setup from AED 12,000. Abu Dhabi & Dubai." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --brand: #03A59F;
+    --brand-dark: #028a85;
+    --brand-light: #e0f7f6;
+    --navy: #000000;
+    --navy2: #0a0a0a;
+    --navy3: #111111;
+    --card-bg: #0d0d0d;
+    --text-primary: #ffffff;
+    --text-secondary: #a3afc4;
+    --text-muted: #6b7a96;
+    --border: rgba(255,255,255,0.07);
+    --border-brand: rgba(3,165,159,0.28);
+    --radius: 12px;
+    --radius-lg: 18px;
+    --font: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font);
+    background: var(--navy);
+    color: var(--text-primary);
+    line-height: 1.6;
+    font-size: 16px;
+    overflow-x: hidden;
+  }
+
+  a { text-decoration: none; color: inherit; }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(0,0,0,0.94);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 68px;
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: -0.3px;
+  }
+
+  .nav-logo span { color: var(--brand); }
+
+  .nav-logo-icon {
+    width: 36px;
+    height: 36px;
+    background: var(--brand);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 14px;
+    color: #000;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+    color: var(--text-secondary);
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--brand); }
+
+  .nav-cta {
+    background: var(--brand);
+    color: #000 !important;
+    padding: 9px 20px;
+    border-radius: 8px;
+    font-weight: 600 !important;
+    font-size: 14px !important;
+    transition: background 0.2s, transform 0.15s !important;
+  }
+
+  .nav-cta:hover { background: var(--brand-dark) !important; transform: translateY(-1px); }
+
+  /* ── HERO ── */
+  .hero {
+    padding: 90px 5% 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(3,165,159,0.08);
+    border: 1px solid var(--border-brand);
+    color: var(--brand);
+    padding: 6px 14px;
+    border-radius: 100px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    letter-spacing: 0.3px;
+  }
+
+  .hero-badge::before {
+    content: '';
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--brand);
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.3); }
+  }
+
+  .hero h1 {
+    font-size: clamp(32px, 4vw, 50px);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -1px;
+    margin-bottom: 22px;
+  }
+
+  .hero h1 em {
+    font-style: normal;
+    color: var(--brand);
+  }
+
+  .hero-desc {
+    font-size: 17px;
+    color: var(--text-secondary);
+    line-height: 1.75;
+    margin-bottom: 36px;
+    max-width: 480px;
+  }
+
+  .hero-btns {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    background: var(--brand);
+    color: #000;
+    padding: 14px 28px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 15px;
+    transition: all 0.2s;
+    display: inline-block;
+  }
+
+  .btn-primary:hover { background: var(--brand-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(3,165,159,0.28); }
+
+  .btn-outline {
+    border: 1.5px solid var(--border-brand);
+    color: var(--brand);
+    padding: 14px 28px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.2s;
+    display: inline-block;
+    background: transparent;
+  }
+
+  .btn-outline:hover { background: rgba(3,165,159,0.07); transform: translateY(-2px); }
+
+  /* Hero card */
+  .hero-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--brand), #028a85, transparent);
+  }
+
+  .hero-stat-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .hero-stat {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 18px;
+    text-align: center;
+  }
+
+  .hero-stat .num {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--brand);
+    line-height: 1;
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .hero-stat .lbl {
+    font-size: 12px;
+    color: var(--text-muted);
+    font-weight: 500;
+  }
+
+  .hero-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .hero-step {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    color: var(--text-secondary);
+  }
+
+  .hero-step-dot {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: rgba(3,165,159,0.1);
+    border: 1px solid var(--border-brand);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--brand);
+    flex-shrink: 0;
+  }
+
+  /* ── STATS BAR ── */
+  .stats-bar {
+    background: var(--navy3);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 28px 5%;
+  }
+
+  .stats-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    text-align: center;
+  }
+
+  .stat-item .big {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--brand);
+    display: block;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+
+  .stat-item .small {
+    font-size: 13px;
+    color: var(--text-muted);
+    font-weight: 500;
+  }
+
+  /* ── SECTION COMMON ── */
+  section { padding: 80px 5%; }
+
+  .section-inner { max-width: 1200px; margin: 0 auto; }
+
+  .section-tag {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--brand);
+    margin-bottom: 14px;
+  }
+
+  .section-title {
+    font-size: clamp(26px, 3vw, 40px);
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+    margin-bottom: 14px;
+  }
+
+  .section-title em {
+    font-style: normal;
+    color: var(--brand);
+  }
+
+  .section-sub {
+    font-size: 17px;
+    color: var(--text-secondary);
+    max-width: 560px;
+    line-height: 1.7;
+    margin-bottom: 50px;
+  }
+
+  /* ── SERVICES GRID ── */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .service-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 28px;
+    transition: border-color 0.25s, transform 0.25s;
+    cursor: default;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .service-card:hover {
+    border-color: var(--border-brand);
+    transform: translateY(-4px);
+  }
+
+  .service-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--brand);
+    transform: scaleX(0);
+    transition: transform 0.25s;
+    transform-origin: left;
+  }
+
+  .service-card:hover::after { transform: scaleX(1); }
+
+  .service-icon {
+    width: 48px;
+    height: 48px;
+    background: rgba(3,165,159,0.09);
+    border: 1px solid var(--border-brand);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    margin-bottom: 18px;
+  }
+
+  .service-num {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--brand);
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    display: block;
+  }
+
+  .service-card h3 {
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--text-primary);
+  }
+
+  .service-card p {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.65;
+  }
+
+  /* ── PROCESS ── */
+  .process-section { background: var(--navy2); }
+
+  .process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    position: relative;
+  }
+
+  .process-grid::before {
+    content: '';
+    position: absolute;
+    top: 32px;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: var(--border-brand);
+    z-index: 0;
+  }
+
+  .process-step {
+    padding: 0 20px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .process-num {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: #000;
+    border: 2px solid var(--brand);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--brand);
+    margin: 0 auto 20px;
+  }
+
+  .process-step h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  .process-step p {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.65;
+  }
+
+  /* ── STRUCTURES ── */
+  .structures-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .structure-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+    transition: border-color 0.2s;
+  }
+
+  .structure-card.featured {
+    border-color: var(--brand);
+    position: relative;
+  }
+
+  .structure-card.featured::before {
+    content: 'Most Popular';
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--brand);
+    color: #000;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 14px;
+    border-radius: 100px;
+    white-space: nowrap;
+    letter-spacing: 0.5px;
+  }
+
+  .structure-card h3 {
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 8px;
+  }
+
+  .structure-card .price {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--brand);
+    margin: 16px 0 4px;
+  }
+
+  .structure-card .price span {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-muted);
+  }
+
+  .structure-card p {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+    line-height: 1.65;
+  }
+
+  .features-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 28px;
+  }
+
+  .features-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 14px;
+    color: var(--text-secondary);
+  }
+
+  .features-list li::before {
+    content: '✓';
+    color: var(--brand);
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  /* ── DOCUMENTS ── */
+  .docs-section { background: var(--navy2); }
+
+  .docs-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+
+  .doc-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .doc-item:last-child { border-bottom: none; }
+
+  .doc-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: rgba(3,165,159,0.07);
+    border: 1px solid var(--border-brand);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+
+  .doc-item h4 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+
+  .doc-item p {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+
+  /* timeline */
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: relative;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0; bottom: 0;
+    width: 1px;
+    background: var(--border-brand);
+  }
+
+  .tl-item {
+    display: flex;
+    gap: 20px;
+    padding-bottom: 24px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .tl-dot {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #000;
+    border: 2px solid var(--brand);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--brand);
+    flex-shrink: 0;
+  }
+
+  .tl-content h4 { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+
+  .tl-content p { font-size: 13px; color: var(--text-muted); line-height: 1.55; }
+
+  .tl-tag {
+    display: inline-block;
+    font-size: 11px;
+    background: rgba(3,165,159,0.09);
+    color: var(--brand);
+    border: 1px solid var(--border-brand);
+    border-radius: 100px;
+    padding: 2px 10px;
+    margin-bottom: 5px;
+    font-weight: 600;
+  }
+
+  /* ── FAQ ── */
+  .faq-list { max-width: 760px; margin: 0 auto; }
+
+  .faq-item {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    margin-bottom: 12px;
+    overflow: hidden;
+    background: var(--card-bg);
+    transition: border-color 0.2s;
+  }
+
+  .faq-item.open { border-color: var(--border-brand); }
+
+  .faq-q {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 20px 24px;
+    color: var(--text-primary);
+    font-family: var(--font);
+    font-size: 15px;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .faq-q .arrow {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: rgba(3,165,159,0.09);
+    border: 1px solid var(--border-brand);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 14px;
+    color: var(--brand);
+    transition: transform 0.25s;
+  }
+
+  .faq-item.open .faq-q .arrow { transform: rotate(45deg); }
+
+  .faq-a {
+    display: none;
+    padding: 0 24px 20px;
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.75;
+  }
+
+  .faq-item.open .faq-a { display: block; }
+
+  /* ── WHY US ── */
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  .why-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 26px 22px;
+    text-align: center;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+
+  .why-card:hover { border-color: var(--border-brand); transform: translateY(-4px); }
+
+  .why-card .icon {
+    font-size: 32px;
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  .why-card h3 {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  .why-card p {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  /* ── CTA ── */
+  .cta-section {
+    background: linear-gradient(135deg, rgba(3,165,159,0.07) 0%, rgba(2,138,133,0.04) 100%);
+    border-top: 1px solid var(--border-brand);
+    border-bottom: 1px solid var(--border-brand);
+    text-align: center;
+    padding: 80px 5%;
+  }
+
+  .cta-section h2 {
+    font-size: clamp(28px, 3.5vw, 44px);
+    font-weight: 800;
+    margin-bottom: 16px;
+    letter-spacing: -0.5px;
+  }
+
+  .cta-section p {
+    font-size: 17px;
+    color: var(--text-secondary);
+    margin-bottom: 36px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cta-btns {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* ── CONTACT FORM ── */
+  .contact-section { background: var(--navy2); }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+  }
+
+  .contact-info h2 {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 16px;
+    letter-spacing: -0.5px;
+  }
+
+  .contact-info p {
+    font-size: 15px;
+    color: var(--text-muted);
+    margin-bottom: 32px;
+    line-height: 1.7;
+  }
+
+  .contact-detail {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 18px;
+  }
+
+  .contact-detail .icon {
+    width: 40px;
+    height: 40px;
+    background: rgba(3,165,159,0.07);
+    border: 1px solid var(--border-brand);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+
+  .contact-detail h4 {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 2px;
+    font-weight: 500;
+  }
+
+  .contact-detail p { font-size: 15px; font-weight: 600; margin: 0; }
+
+  .contact-form {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 36px;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .form-group {
+    margin-bottom: 18px;
+  }
+
+  .form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: 7px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px 14px;
+    color: var(--text-primary);
+    font-family: var(--font);
+    font-size: 14px;
+    transition: border-color 0.2s;
+    outline: none;
+    appearance: none;
+  }
+
+  .form-group select option { background: #0a0a0a; }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus { border-color: var(--brand); }
+
+  .form-group input::placeholder,
+  .form-group textarea::placeholder { color: var(--text-muted); }
+
+  .form-group textarea { resize: vertical; min-height: 100px; }
+
+  .btn-submit {
+    width: 100%;
+    background: var(--brand);
+    color: #000;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    font-family: var(--font);
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+    margin-top: 4px;
+  }
+
+  .btn-submit:hover { background: var(--brand-dark); transform: translateY(-1px); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--navy3);
+    border-top: 1px solid var(--border);
+    padding: 60px 5% 28px;
+  }
+
+  .footer-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .footer-brand p {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin: 14px 0 20px;
+    max-width: 280px;
+  }
+
+  .footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .footer-contact span {
+    font-size: 13px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+
+  .footer-col h4 {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+  }
+
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+
+  .footer-col ul a {
+    font-size: 14px;
+    color: var(--text-muted);
+    transition: color 0.2s;
+  }
+
+  .footer-col ul a:hover { color: var(--brand); }
+
+  .footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+
+  .socials { display: flex; gap: 12px; }
+
+  .social-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    transition: border-color 0.2s, background 0.2s;
+  }
+
+  .social-icon:hover { border-color: var(--brand); background: rgba(3,165,159,0.08); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    .hero { grid-template-columns: 1fr; }
+    .hero-card { display: none; }
+    .services-grid { grid-template-columns: 1fr 1fr; }
+    .structures-grid { grid-template-columns: 1fr; }
+    .process-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
+    .process-grid::before { display: none; }
+    .why-grid { grid-template-columns: 1fr 1fr; }
+    .docs-grid { grid-template-columns: 1fr; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .stats-inner { grid-template-columns: 1fr 1fr; }
+    .nav-links { display: none; }
+  }
+
+  @media (max-width: 600px) {
+    .services-grid { grid-template-columns: 1fr; }
+    .process-grid { grid-template-columns: 1fr; }
+    .why-grid { grid-template-columns: 1fr 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr; }
+    .stats-inner { grid-template-columns: 1fr 1fr; }
+    section { padding: 60px 5%; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="https://tamkinexpress.ae" class="nav-logo">
+    <div class="nav-logo-icon">T</div>
+    Tamkin<span>Express</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="https://tamkinexpress.ae">Home</a></li>
+    <li><a href="https://tamkinexpress.ae/about.html">About Us</a></li>
+    <li><a href="https://tamkinexpress.ae/#services">Services</a></li>
+    <li><a href="https://tamkinexpress.ae/portfolio.html">Portfolio</a></li>
+    <li><a href="https://tamkinexpress.ae/contact-us.html" class="nav-cta">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div style="background: radial-gradient(ellipse 70% 50% at 60% 0%, rgba(3,165,159,0.07) 0%, transparent 70%);">
+<div class="hero">
+  <div class="hero-left">
+    <div class="hero-badge">Expert UAE Company Formation</div>
+    <h1>Company Registration &amp;<br /><em>Formation in UAE</em></h1>
+    <p class="hero-desc">TamkinExpress handles your complete company registration in UAE — mainland, free zone, or offshore — from trade licence to bank account, fully compliant and operational fast.</p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn-primary">Register My Company →</a>
+      <a href="#structures" class="btn-outline">View Structures</a>
+    </div>
+  </div>
+
+  <div class="hero-card">
+    <div class="hero-stat-grid">
+      <div class="hero-stat">
+        <span class="num">500+</span>
+        <span class="lbl">Companies Registered</span>
+      </div>
+      <div class="hero-stat">
+        <span class="num">7</span>
+        <span class="lbl">Avg. Days to Setup</span>
+      </div>
+      <div class="hero-stat">
+        <span class="num">40+</span>
+        <span class="lbl">Free Zones Covered</span>
+      </div>
+      <div class="hero-stat">
+        <span class="num">95%</span>
+        <span class="lbl">Compliance Rate</span>
+      </div>
+    </div>
+    <div class="hero-steps">
+      <div class="hero-step">
+        <div class="hero-step-dot">1</div>
+        Free consultation &amp; structure recommendation
+      </div>
+      <div class="hero-step">
+        <div class="hero-step-dot">2</div>
+        Document preparation &amp; trade name reservation
+      </div>
+      <div class="hero-step">
+        <div class="hero-step-dot">3</div>
+        Government submission &amp; approval tracking
+      </div>
+      <div class="hero-step">
+        <div class="hero-step-dot">4</div>
+        Licence delivery &amp; bank account opening
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat-item">
+      <span class="big">500+</span>
+      <span class="small">Companies Registered</span>
+    </div>
+    <div class="stat-item">
+      <span class="big">7 Days</span>
+      <span class="small">Average Setup Time</span>
+    </div>
+    <div class="stat-item">
+      <span class="big">40+</span>
+      <span class="small">Free Zones Covered</span>
+    </div>
+    <div class="stat-item">
+      <span class="big">95%</span>
+      <span class="small">Compliance Rate</span>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="section-inner">
+    <span class="section-tag">What We Handle</span>
+    <h2 class="section-title">Complete Company Formation<br /><em>End-to-End Setup Services</em></h2>
+    <p class="section-sub">We manage every stage of company registration in UAE — from choosing the right jurisdiction to handing you the keys to your trade licence and bank account.</p>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">🏢</div>
+        <span class="service-num">01</span>
+        <h3>Mainland Company Formation</h3>
+        <p>100% foreign ownership, LLC registration, trade licence approval, and complete access to the UAE local market and government contracts.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🏙️</div>
+        <span class="service-num">02</span>
+        <h3>Free Zone Company Setup</h3>
+        <p>100% foreign ownership, zero corporate tax, full profit repatriation — across IFZA, DMCC, RAKEZ, and 40+ UAE free zones.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🌐</div>
+        <span class="service-num">03</span>
+        <h3>Offshore Company Setup</h3>
+        <p>International company formation, zero corporate tax benefits, asset protection, and fast offshore registration in Dubai and RAK.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📄</div>
+        <span class="service-num">04</span>
+        <h3>Trade Licence Registration &amp; Renewal</h3>
+        <p>New trade licence applications, annual renewals, activity additions, and licence amendments — managed on your behalf without delays.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🏦</div>
+        <span class="service-num">05</span>
+        <h3>Corporate Bank Account Opening</h3>
+        <p>Expert assistance opening a business bank account in UAE for mainland, free zone, and offshore companies — including document support.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">✏️</div>
+        <span class="service-num">06</span>
+        <h3>Company Amendments &amp; Changes</h3>
+        <p>Name changes, shareholder amendments, activity additions, address updates, and MOA modifications — processed quickly and correctly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STRUCTURES -->
+<section id="structures" style="background: var(--navy2);">
+  <div class="section-inner">
+    <span class="section-tag">Choose Your Structure</span>
+    <h2 class="section-title">Mainland, Free Zone<br />or <em>Offshore?</em></h2>
+    <p class="section-sub">Every business has unique needs. We help you pick the right structure based on your activity, ownership goals, and long-term plans.</p>
+
+    <div class="structures-grid">
+      <div class="structure-card">
+        <h3>Mainland Company</h3>
+        <p>Best for businesses targeting the local UAE market, government contracts, or requiring physical presence across all emirates.</p>
+        <div class="price">AED 15,000 <span>/ starting from</span></div>
+        <ul class="features-list">
+          <li>100% foreign ownership allowed</li>
+          <li>Trade anywhere across UAE</li>
+          <li>Eligible for government contracts</li>
+          <li>DED / Tasheel registration</li>
+          <li>Investor &amp; employee visas included</li>
+          <li>Corporate bank account support</li>
+        </ul>
+        <a href="#contact" class="btn-outline" style="display:block; text-align:center; padding:12px;">Get Started →</a>
+      </div>
+
+      <div class="structure-card featured">
+        <h3>Free Zone Company</h3>
+        <p>Ideal for international businesses, startups, and investors seeking tax advantages, fast setup, and full ownership.</p>
+        <div class="price">AED 12,000 <span>/ starting from</span></div>
+        <ul class="features-list">
+          <li>100% foreign ownership</li>
+          <li>Zero corporate &amp; personal tax</li>
+          <li>Full profit repatriation</li>
+          <li>40+ free zones available</li>
+          <li>Fast setup: 3–5 working days</li>
+          <li>Investor visa &amp; bank support</li>
+        </ul>
+        <a href="#contact" class="btn-primary" style="display:block; text-align:center; padding:12px;">Get Started →</a>
+      </div>
+
+      <div class="structure-card">
+        <h3>Offshore Company</h3>
+        <p>Perfect for international trading, asset holding, wealth management, and businesses that don't require a physical UAE presence.</p>
+        <div class="price">AED 10,000 <span>/ starting from</span></div>
+        <ul class="features-list">
+          <li>100% foreign ownership</li>
+          <li>Zero corporate tax</li>
+          <li>Asset protection structure</li>
+          <li>RAK ICC / JAFZA options</li>
+          <li>No physical office needed</li>
+          <li>International banking access</li>
+        </ul>
+        <a href="#contact" class="btn-outline" style="display:block; text-align:center; padding:12px;">Get Started →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process-section">
+  <div class="section-inner">
+    <span class="section-tag">How It Works</span>
+    <h2 class="section-title" style="text-align:center;">Simple Process,<br /><em>Fast Results</em></h2>
+    <p class="section-sub" style="text-align:center; margin: 0 auto 60px;">From first call to licence in hand — here's exactly how TamkinExpress registers your company.</p>
+
+    <div class="process-grid">
+      <div class="process-step">
+        <div class="process-num">01</div>
+        <h3>Free Consultation</h3>
+        <p>We review your business activity, ownership goals, and visa needs — then recommend the best jurisdiction and structure.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-num">02</div>
+        <h3>Name &amp; Documents</h3>
+        <p>We reserve your trade name and prepare all incorporation documents — MOA, share certificates, and supporting paperwork.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-num">03</div>
+        <h3>Official Registration</h3>
+        <p>Our team submits to DED, the free zone authority, or offshore registry — tracking approvals and handling government queries.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-num">04</div>
+        <h3>Licence Delivered</h3>
+        <p>Trade licence and company documents are handed to you — your business is registered, legal, and ready to operate in UAE.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOCUMENTS & TIMELINE -->
+<section class="docs-section">
+  <div class="section-inner">
+    <div class="docs-grid">
+      <div>
+        <span class="section-tag">Required Documents</span>
+        <h2 class="section-title">Documents Needed for<br /><em>Company Registration UAE</em></h2>
+        <p class="section-sub" style="margin-bottom:32px;">We provide a complete checklist after your free consultation. Here's what most registrations require:</p>
+
+        <div class="doc-item">
+          <div class="doc-icon">🪪</div>
+          <div>
+            <h4>Passport Copies</h4>
+            <p>Colour copies of passports for all shareholders and managers involved in the company.</p>
+          </div>
+        </div>
+        <div class="doc-item">
+          <div class="doc-icon">🆔</div>
+          <div>
+            <h4>Emirates ID (Residents)</h4>
+            <p>Required for UAE residents who are shareholders or managers of the company.</p>
+          </div>
+        </div>
+        <div class="doc-item">
+          <div class="doc-icon">📝</div>
+          <div>
+            <h4>Trade Name Proposal</h4>
+            <p>3–5 proposed company names in order of preference for authority approval.</p>
+          </div>
+        </div>
+        <div class="doc-item">
+          <div class="doc-icon">🏬</div>
+          <div>
+            <h4>Office Tenancy / Flexi-Desk</h4>
+            <p>Ejari tenancy contract or flexi-desk agreement as proof of registered address.</p>
+          </div>
+        </div>
+        <div class="doc-item">
+          <div class="doc-icon">📋</div>
+          <div>
+            <h4>Business Activity Description</h4>
+            <p>A clear description of all business activities to be licensed under the company.</p>
+          </div>
+        </div>
+        <div class="doc-item">
+          <div class="doc-icon">🖊️</div>
+          <div>
+            <h4>MOA / SHA (if applicable)</h4>
+            <p>Memorandum of Association and Shareholder Agreement for multi-partner setups.</p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <span class="section-tag">Registration Timeline</span>
+        <h2 class="section-title">How Long Does<br /><em>Registration Take?</em></h2>
+        <p class="section-sub" style="margin-bottom:32px;">Timelines vary by jurisdiction and activity. Here's a typical breakdown:</p>
+
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-dot">D1</div>
+            <div class="tl-content">
+              <span class="tl-tag">Day 1</span>
+              <h4>Consultation &amp; Structure Decision</h4>
+              <p>Free consultation, jurisdiction selection, and trade name submission.</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot">D2</div>
+            <div class="tl-content">
+              <span class="tl-tag">Day 2–3</span>
+              <h4>Document Preparation</h4>
+              <p>MOA drafting, share certificates, and all incorporation documents prepared and signed.</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot">D4</div>
+            <div class="tl-content">
+              <span class="tl-tag">Day 3–5</span>
+              <h4>Authority Submission</h4>
+              <p>Documents submitted to DED, free zone authority, or offshore registry.</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot">D7</div>
+            <div class="tl-content">
+              <span class="tl-tag">Day 5–10</span>
+              <h4>Licence Issued</h4>
+              <p>Trade licence and incorporation certificate delivered. Company is fully registered and operational.</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot">+</div>
+            <div class="tl-content">
+              <span class="tl-tag">Post-Registration</span>
+              <h4>Bank Account &amp; Visa Processing</h4>
+              <p>We assist with corporate bank account opening and investor or employee visa applications.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section>
+  <div class="section-inner">
+    <span class="section-tag">Why TamkinExpress</span>
+    <h2 class="section-title" style="text-align:center;">One Team. <em>Every Emirate.</em><br />Zero Hassle.</h2>
+    <p class="section-sub" style="text-align:center; margin: 0 auto 50px;">We're based in Abu Dhabi and cover company registration across all UAE emirates and free zones.</p>
+
+    <div class="why-grid">
+      <div class="why-card">
+        <span class="icon">⚡</span>
+        <h3>Fast Setup</h3>
+        <p>Free zone companies in 3–5 days. Mainland in 7–10 working days. We don't waste your time.</p>
+      </div>
+      <div class="why-card">
+        <span class="icon">🔍</span>
+        <h3>Transparent Pricing</h3>
+        <p>No hidden fees. You get a full cost breakdown before we start — what you see is what you pay.</p>
+      </div>
+      <div class="why-card">
+        <span class="icon">🇦🇪</span>
+        <h3>All UAE Emirates</h3>
+        <p>Abu Dhabi, Dubai, Sharjah, RAK, Ajman, Fujairah — mainland, free zone, and offshore covered.</p>
+      </div>
+      <div class="why-card">
+        <span class="icon">🤝</span>
+        <h3>End-to-End Support</h3>
+        <p>From registration to visa, bank account, and annual renewals — one team, no vendor juggling.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section style="background: var(--navy2);">
+  <div class="section-inner">
+    <span class="section-tag">FAQ</span>
+    <h2 class="section-title" style="text-align:center;">Common Questions About<br /><em>Company Formation in UAE</em></h2>
+    <p class="section-sub" style="text-align:center; margin: 0 auto 50px;">Everything investors and business owners ask before registering their company in UAE.</p>
+
+    <div class="faq-list">
+      <div class="faq-item open">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          How long does company registration take in UAE?
+          <span class="arrow">+</span>
+        </button>
+        <div class="faq-a">Most company registrations in UAE are completed within 7 working days. Free zone setups can be faster — some in 3–5 days. TamkinExpress handles the complete process from consultation to licence delivery, tracking every step on your behalf.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          What is the cost of company registration in UAE?
+          <span class="arrow">+</span>
+        </button>
+        <div class="faq-a">Company registration costs in UAE vary by structure. Mainland company setup starts from AED 15,000–25,000. Free zone packages start from AED 12,000. Offshore from AED 10,000. Contact TamkinExpress for a transparent full cost breakdown with no hidden fees.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          What is the difference between mainland, free zone, and offshore?
+          <span class="arrow">+</span>
+        </button>
+        <div class="faq-a">Mainland companies can trade anywhere in UAE including government contracts. Free zone companies get 100% foreign ownership and tax benefits but are restricted to free zone or international trade. Offshore companies are for international business and asset holding only. TamkinExpress advises the best structure for your needs.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Can TamkinExpress handle company registration in Abu Dhabi?
+          <span class="arrow">+</span>
+        </button>
+        <div class="faq-a">Yes. TamkinExpress is based in Abu Dhabi (Office No. 49, Musaffah M43) and handles business registration across Abu Dhabi, Dubai, Sharjah, and all UAE emirates including free zones like KIZAD, ADAFZA, and more.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          What documents are required for company registration in UAE?
+          <span class="arrow">+</span>
+        </button>
+        <div class="faq-a">Passport copies of all shareholders and managers, Emirates ID for UAE residents, proposed trade name options, business activity description, and tenancy contract or flexi-desk agreement. TamkinExpress provides a complete checklist after a free consultation.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Do I need a local sponsor for UAE mainland company?
+          <span class="arrow">+</span>
+        </button>
+        <div class="faq-a">No. Since the 2021 UAE Commercial Companies Law amendments, 100% foreign ownership is permitted for mainland companies across most business activities — no local sponsor required. TamkinExpress advises on any activity-specific exceptions.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Can TamkinExpress help open a bank account after registration?
+          <span class="arrow">+</span>
+        </button>
+        <div class="faq-a">Yes. We assist with corporate bank account opening in UAE for mainland, free zone, and offshore companies — helping you prepare the right documentation and approach the most suitable banks for your business type and activity.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <h2>Your UAE Company,<br /><em style="color:var(--brand); font-style:normal;">Registered &amp; Ready</em></h2>
+  <p>Mainland, free zone, or offshore — fast, fully compliant company formation handled by experts across all UAE emirates.</p>
+  <div class="cta-btns">
+    <a href="#contact" class="btn-primary">Start Your Registration →</a>
+    <a href="tel:+971588967713" class="btn-outline">📞 +971 588 967 713</a>
+  </div>
+</section>
+
+<!-- CONTACT FORM -->
+<section id="contact" class="contact-section">
+  <div class="section-inner">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <span class="section-tag">Get Started</span>
+        <h2>Register Your Company<br /><em style="color:var(--brand);">Today</em></h2>
+        <p>Fill in the form and our team will get back to you within a few hours with a free consultation and cost estimate.</p>
+
+        <div class="contact-detail">
+          <div class="icon">📍</div>
+          <div>
+            <h4>Office Address</h4>
+            <p>Office No. 49, Musaffah M43, Abu Dhabi – UAE</p>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="icon">📞</div>
+          <div>
+            <h4>Phone / WhatsApp</h4>
+            <p>+971 588 967 713</p>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="icon">✉️</div>
+          <div>
+            <h4>Email</h4>
+            <p>info@tamkinexpress.com</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <h3 style="font-size:20px; font-weight:800; margin-bottom:24px;">Free Consultation Request</h3>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" placeholder="Your name" />
+          </div>
+          <div class="form-group">
+            <label>Phone / WhatsApp</label>
+            <input type="tel" placeholder="+971 ..." />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" placeholder="you@company.com" />
+        </div>
+        <div class="form-group">
+          <label>Company Structure</label>
+          <select>
+            <option value="">Select a structure</option>
+            <option>Mainland Company</option>
+            <option>Free Zone Company</option>
+            <option>Offshore Company</option>
+            <option>Not sure — need guidance</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Business Activity</label>
+          <input type="text" placeholder="e.g. General Trading, Consulting, IT Services..." />
+        </div>
+        <div class="form-group">
+          <label>Additional Notes (optional)</label>
+          <textarea placeholder="Any specific requirements or questions..."></textarea>
+        </div>
+        <button class="btn-submit">Submit Free Consultation Request →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="nav-logo" style="margin-bottom:0;">
+        <div class="nav-logo-icon">T</div>
+        Tamkin<span style="color:var(--brand);">Express</span>
+      </div>
+      <p>Your trusted partner for company registration, business services, and digital marketing in UAE.</p>
+      <div class="footer-contact">
+        <span>📍 Office No. 49, Musaffah M43, Abu Dhabi – UAE</span>
+        <span>📞 +971 588 967 713</span>
+        <span>✉️ info@tamkinexpress.com</span>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Visa Services</h4>
+      <ul>
+        <li><a href="https://tamkinexpress.ae/golden-visa.html">Golden Visa</a></li>
+        <li><a href="https://tamkinexpress.ae/employment-visa.html">Employment Visa</a></li>
+        <li><a href="https://tamkinexpress.ae/employment-visa.html">Family Visa</a></li>
+        <li><a href="https://tamkinexpress.ae/cicpa.html">CICPA Passes</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Business Services</h4>
+      <ul>
+        <li><a href="https://tamkinexpress.ae/business-registration.html">Business Registration</a></li>
+        <li><a href="https://tamkinexpress.ae/pro-services.html">PRO Services</a></li>
+        <li><a href="https://tamkinexpress.ae/ministry-of-economy.html">Ministry of Economy</a></li>
+        <li><a href="https://tamkinexpress.ae/certificate-attestation.html">Certificate Attestation</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="https://tamkinexpress.ae/about.html">About Us</a></li>
+        <li><a href="https://tamkinexpress.ae/portfolio.html">Portfolio</a></li>
+        <li><a href="https://tamkinexpress.ae/contact-us.html">Contact</a></li>
+        <li><a href="https://tamkinexpress.ae/digital-marketing.html">Digital Marketing</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span>© 2025 TamkinExpress. All rights reserved.</span>
+    <div class="socials">
+      <a href="https://www.facebook.com/profile.php?id=61563209741328" class="social-icon" target="_blank" rel="noopener">f</a>
+      <a href="https://www.instagram.com/tamkinexpress" class="social-icon" target="_blank" rel="noopener">ig</a>
+      <a href="https://x.com/tamkinexpress" class="social-icon" target="_blank" rel="noopener">𝕏</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+</script>
+</body>
+</html>
