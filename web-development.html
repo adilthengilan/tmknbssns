@@ -3,28 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#000000">
 
-  <!-- ═══ SEO META — UNIQUE & KEYWORD-RICH ═══ -->
-  <title>Website Development Dubai | Custom Web Apps & Portals | TamkinExpress UAE</title>
-  <meta name="description" content="TamkinExpress builds custom websites, SaaS platforms, CRM & ERP systems for Dubai & UAE businesses. React, Node.js, UAE government API integration (MOHRE, FTA, TAMM), Arabic RTL support. 40+ web apps delivered. Free consultation.">
-  <meta name="keywords" content="website development dubai, custom web application dubai, web design dubai, SaaS development UAE, CRM development dubai, ERP system UAE, MOHRE API integration, Arabic RTL web app, business portal dubai, web developer abu dhabi">
+  <!-- ═══ SEO META ═══ -->
+  <title>Website Development Dubai | Custom Web Apps | TamkinExpress</title>
+  <meta name="description" content="Custom website development in Dubai: business portals, SaaS, CRM & ERP with MOHRE, FTA & TAMM API integration and Arabic RTL. Free consultation.">
+  <meta name="keywords" content="website development dubai, web design dubai, custom web application dubai, SaaS development UAE, CRM development dubai, ERP system UAE, MOHRE API integration, Arabic RTL website">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
   <meta name="author" content="TamkinExpress">
   <link rel="canonical" href="https://tamkinexpress.ae/web-development.html">
+  <link rel="alternate" hreflang="en-AE" href="https://tamkinexpress.ae/web-development.html">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://tamkinexpress.ae/web-development.html">
-  <meta property="og:title" content="Website Development Dubai | Custom Web Apps | TamkinExpress UAE">
-  <meta property="og:description" content="Custom website development in Dubai & UAE. Business portals, SaaS platforms, CRM/ERP systems with MOHRE, FTA, TAMM API integration. Arabic RTL support. Free consultation.">
+  <meta property="og:title" content="Website Development Dubai | Custom Web Apps | TamkinExpress">
+  <meta property="og:description" content="Custom website development in Dubai & UAE: portals, SaaS, CRM/ERP with MOHRE, FTA, TAMM integration and Arabic RTL support. Free consultation.">
   <meta property="og:image" content="https://tamkinexpress.ae/asset/og-web-development.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="TamkinExpress website development in Dubai and UAE">
   <meta property="og:locale" content="en_AE">
   <meta property="og:site_name" content="TamkinExpress">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Website Development Dubai | TamkinExpress">
-  <meta name="twitter:description" content="Professional custom web development in Dubai & UAE — portals, SaaS, CRM, ERP, government API integrations.">
+  <meta name="twitter:description" content="Custom web development in Dubai & UAE: portals, SaaS, CRM, ERP and government API integrations.">
   <meta name="twitter:image" content="https://tamkinexpress.ae/asset/og-web-development.jpg">
 
   <!-- ═══ SCHEMA MARKUP ═══ -->
@@ -33,11 +38,21 @@
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "LocalBusiness",
+        "@type": "WebSite",
+        "@id": "https://tamkinexpress.ae/#website",
+        "url": "https://tamkinexpress.ae/",
+        "name": "TamkinExpress",
+        "inLanguage": "en-AE",
+        "publisher": {"@id": "https://tamkinexpress.ae/#business"}
+      },
+      {
+        "@type": ["ProfessionalService", "LocalBusiness"],
         "@id": "https://tamkinexpress.ae/#business",
         "name": "TamkinExpress",
-        "description": "Professional website development and custom web application company in Dubai and Abu Dhabi, UAE. Specializing in business portals, SaaS platforms, CRM, ERP, and UAE government API integrations.",
+        "description": "Custom website and web application development company in Abu Dhabi, serving Dubai and the UAE. Business portals, SaaS platforms, CRM, ERP and UAE government API integrations.",
         "url": "https://tamkinexpress.ae",
+        "logo": "https://tamkinexpress.ae/asset/logo_coloured.png",
+        "image": "https://tamkinexpress.ae/asset/og-web-development.jpg",
         "telephone": "+971588967713",
         "email": "info@tamkinexpress.com",
         "address": {
@@ -47,11 +62,7 @@
           "addressRegion": "Abu Dhabi",
           "addressCountry": "AE"
         },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": 24.3473,
-          "longitude": 54.5139
-        },
+        "geo": {"@type": "GeoCoordinates", "latitude": 24.3473, "longitude": 54.5139},
         "areaServed": ["Dubai", "Abu Dhabi", "Sharjah", "Ajman", "Fujairah", "Ras Al Khaimah", "Umm Al Quwain"],
         "priceRange": "$$",
         "openingHours": "Mo-Sa 09:00-18:00",
@@ -72,95 +83,61 @@
         "@type": "WebPage",
         "@id": "https://tamkinexpress.ae/web-development.html",
         "url": "https://tamkinexpress.ae/web-development.html",
-        "name": "Website Development Dubai | Custom Web Apps & Portals | TamkinExpress UAE",
-        "description": "TamkinExpress provides professional custom website development and web design in Dubai & UAE. Business portals, SaaS, CRM, ERP with Arabic RTL and UAE government API integration.",
+        "name": "Website Development Dubai | Custom Web Apps | TamkinExpress",
+        "description": "Custom website development and web design in Dubai & UAE. Business portals, SaaS, CRM, ERP with Arabic RTL and UAE government API integration.",
+        "inLanguage": "en-AE",
         "isPartOf": {"@id": "https://tamkinexpress.ae/#website"},
         "about": {"@id": "https://tamkinexpress.ae/#business"},
         "primaryImageOfPage": {"@type": "ImageObject", "url": "https://tamkinexpress.ae/asset/og-web-development.jpg"},
-        "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://tamkinexpress.ae/"},
-            {"@type": "ListItem", "position": 2, "name": "Website Development Dubai", "item": "https://tamkinexpress.ae/web-development.html"}
-          ]
-        }
+        "breadcrumb": {"@id": "https://tamkinexpress.ae/web-development.html#breadcrumb"}
       },
       {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "What tech stack does TamkinExpress use for website development in Dubai?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "TamkinExpress selects the technology stack based on your specific requirements. Typically we use React or Next.js for the frontend, Node.js or Python/Django for the backend, PostgreSQL or MongoDB for databases, and AWS or Azure UAE-region nodes for cloud infrastructure. For UAE-specific needs we integrate MOHRE, TAMM, FTA VAT APIs, and payment gateways like Telr and PayTabs."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Can TamkinExpress integrate with UAE government portals like MOHRE and FTA?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. TamkinExpress has production experience integrating MOHRE (Ministry of Labour), TAMM (Abu Dhabi government services), FTA VAT APIs, RERA systems, and UAE payment gateways including Telr, PayTabs, and Network International. All integrations include proper error handling and retry logic."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What is the difference between custom web development and WordPress for UAE businesses?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "WordPress is suitable for content-focused websites and is fast to launch. Custom web development is the right choice when your business needs proprietary logic, UAE government API integrations, Arabic RTL bilingual interfaces, VAT compliance modules, or scalability beyond what plugins can provide."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Does TamkinExpress support Arabic RTL web applications?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. TamkinExpress builds fully bilingual Arabic-English web applications with proper RTL (right-to-left) layout, Arabic typography, and locale-specific formatting — required for businesses serving UAE Arabic-speaking users."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How long does it take to build a custom web application in Dubai?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "A simple business portal typically takes 6–10 weeks. A full SaaS platform or CRM/ERP system ranges from 12–24 weeks depending on complexity, integrations, and custom features. We provide a fixed timeline after the discovery phase."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What is the cost of website development in Dubai?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Custom web development pricing in Dubai depends on scope, features, and integrations. Business portals typically start from AED 15,000. SaaS platforms and CRM/ERP systems are scoped individually. TamkinExpress provides a free consultation and detailed quote with no obligation."
-            }
-          }
+        "@type": "BreadcrumbList",
+        "@id": "https://tamkinexpress.ae/web-development.html#breadcrumb",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://tamkinexpress.ae/"},
+          {"@type": "ListItem", "position": 2, "name": "Website Development Dubai", "item": "https://tamkinexpress.ae/web-development.html"}
         ]
       },
       {
         "@type": "Service",
+        "@id": "https://tamkinexpress.ae/web-development.html#service",
         "name": "Custom Website Development Dubai",
-        "provider": {"@id": "https://tamkinexpress.ae/#business"},
-        "areaServed": {"@type": "State", "name": "Dubai, UAE"},
-        "description": "Professional custom website and web application development for Dubai and UAE businesses. Services include business portals, SaaS platforms, CRM & ERP systems, UAE government API integrations, Arabic RTL support, and data dashboards.",
         "serviceType": "Web Development",
-        "offers": {"@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "AED"}
+        "provider": {"@id": "https://tamkinexpress.ae/#business"},
+        "areaServed": {"@type": "Country", "name": "United Arab Emirates"},
+        "description": "Custom website and web application development for Dubai and UAE businesses: business portals, SaaS platforms, CRM & ERP systems, UAE government API integrations, Arabic RTL support and data dashboards."
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://tamkinexpress.ae/web-development.html#faq",
+        "mainEntity": [
+          {"@type": "Question", "name": "What does custom website development cost in Dubai?", "acceptedAnswer": {"@type": "Answer", "text": "Custom web development pricing in Dubai depends on scope, features and required integrations. Business portals typically start from AED 15,000. SaaS platforms and CRM/ERP systems are scoped individually after the discovery phase. TamkinExpress provides a free consultation and detailed fixed-price quote with no obligation."}},
+          {"@type": "Question", "name": "How long does it take to build a custom web application in Dubai?", "acceptedAnswer": {"@type": "Answer", "text": "A business portal typically takes 6–10 weeks from discovery to live deployment. A full SaaS platform or CRM/ERP system ranges from 12–24 weeks depending on feature complexity and UAE integration requirements. A fixed timeline is provided after the discovery phase."}},
+          {"@type": "Question", "name": "What tech stack do you use for website development in Dubai?", "acceptedAnswer": {"@type": "Answer", "text": "The stack is selected per project. Typically React or Next.js on the frontend, Node.js or Python/Django on the backend, PostgreSQL or MongoDB for data, and AWS or Azure UAE-region cloud nodes for infrastructure. UAE-specific needs add MOHRE, TAMM and FTA VAT API integrations and payment gateways such as Telr and PayTabs."}},
+          {"@type": "Question", "name": "Can you integrate with UAE government portals like MOHRE, FTA, and TAMM?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. TamkinExpress has production experience integrating MOHRE, TAMM, FTA VAT APIs, RERA systems and UAE payment gateways including Telr, PayTabs and Network International. Every integration includes authentication handling, error recovery, retry logic and audit logging."}},
+          {"@type": "Question", "name": "What is the difference between custom web development and WordPress for UAE businesses?", "acceptedAnswer": {"@type": "Answer", "text": "WordPress suits content-focused sites such as blogs and brochure websites and is fast to launch. Custom development is the right choice when you need proprietary business logic, UAE government API integrations, Arabic RTL bilingual interfaces, VAT compliance modules or scalability beyond what plugins offer."}},
+          {"@type": "Question", "name": "Do you support Arabic RTL web applications in Dubai?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. TamkinExpress builds fully bilingual Arabic-English web applications with proper RTL layout, Arabic typography, locale-specific number and date formatting and dual-language database structures."}},
+          {"@type": "Question", "name": "How do you ensure the web application stays maintainable after handover?", "acceptedAnswer": {"@type": "Answer", "text": "You receive full source code ownership, technical documentation, developer API reference and staff training on delivery. Optional retainer packages cover ongoing security patches, dependency updates and feature work."}}
+        ]
       }
     ]
   }
   </script>
 
-  <!-- Fonts -->
+  <!-- Fonts (same families, unused weights removed) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Montserrat:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,900&family=Montserrat:wght@300;400;500;600;700&family=DM+Sans:wght@300;500&display=swap" rel="stylesheet">
+
+  <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
 
   <style>
     *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
     :root { --teal:#00d4a8; --teal-dim:rgba(0,212,168,0.15); --teal-mid:rgba(0,212,168,0.4); --bg:#000000; --card-bg:#0F1116; --text:#ffffff; --muted:rgba(255,255,255,0.55); --border:rgba(0,212,168,0.2); }
     html { scroll-behavior:smooth; }
     body { font-family:'Montserrat',sans-serif; background:var(--bg); color:var(--text); overflow-x:hidden; }
+    a:focus-visible,button:focus-visible { outline:2px solid var(--teal); outline-offset:3px; }
 
     /* NAVBAR */
     .navbar { position:fixed; top:0; left:0; right:0; z-index:1000; padding:0 48px; height:72px; display:flex; align-items:center; justify-content:space-between; background:rgba(0,0,0,0.75); backdrop-filter:blur(24px); border-bottom:1px solid rgba(0,212,168,0.12); transition:background 0.4s ease,box-shadow 0.4s ease; }
@@ -230,6 +207,8 @@
     .ai-answer-box h2 { font-family:'Playfair Display',serif; font-size:22px; font-weight:700; margin-bottom:16px; }
     .ai-answer-box p { font-family:'DM Sans',sans-serif; font-size:14.5px; color:var(--muted); line-height:1.9; margin-bottom:12px; }
     .ai-answer-box p strong { color:#fff; }
+    .ai-answer-box p a, .two-col-text p a, .process-intro a { color:var(--teal); text-decoration:none; border-bottom:1px solid rgba(0,212,168,0.35); transition:border-color 0.25s; }
+    .ai-answer-box p a:hover, .two-col-text p a:hover, .process-intro a:hover { border-bottom-color:var(--teal); }
     .ai-entity-row { display:flex; flex-wrap:wrap; gap:10px; margin-top:20px; }
     .ai-entity { background:rgba(0,212,168,0.07); border:1px solid rgba(0,212,168,0.18); color:var(--teal); border-radius:100px; padding:5px 14px; font-size:11.5px; font-weight:600; }
 
@@ -273,7 +252,7 @@
     .two-col-section { background:#000; }
     .two-col-inner { max-width:1100px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:70px; align-items:start; }
     .two-col-text p { font-family:'DM Sans',sans-serif; font-size:14.5px; font-weight:300; color:var(--muted); line-height:1.9; margin-bottom:1.2rem; }
-    .two-col-text p strong { color:#fff; font-weight:600; }
+    .two-col-text p strong { color:#fff; font-weight:500; }
     .checklist { display:flex; flex-direction:column; gap:14px; margin-top:12px; }
     .check-item { display:flex; align-items:flex-start; gap:12px; padding:16px 18px; background:var(--card-bg); border-radius:10px; border:1px solid rgba(0,212,168,0.15); transition:border-color 0.25s,transform 0.25s; }
     .check-item:hover { border-color:rgba(0,212,168,0.35); transform:translateX(4px); }
@@ -299,8 +278,9 @@
     .step:last-child { border-bottom:none; }
     .step:hover .step-num { color:#000; background:var(--teal); }
     .step-num { font-family:'Playfair Display',serif; font-size:18px; font-weight:700; color:var(--teal); width:44px; height:44px; border-radius:50%; border:2px solid var(--border); display:flex; align-items:center; justify-content:center; flex-shrink:0; transition:all 0.3s ease; }
-    .step-content h4 { font-family:'Playfair Display',serif; font-size:18px; font-weight:600; margin-bottom:6px; }
+    .step-content h3 { font-family:'Playfair Display',serif; font-size:18px; font-weight:600; margin-bottom:6px; }
     .step-content p { font-size:13px; color:var(--muted); font-weight:300; line-height:1.7; }
+    .process-intro { color:var(--muted); font-size:14px; line-height:1.8; margin-bottom:30px; }
     .process-card { background:var(--card-bg); border-radius:20px; padding:40px; border:1px solid var(--border); }
     .process-card h3 { font-family:'Playfair Display',serif; font-size:24px; margin-bottom:8px; }
     .process-card p { font-size:13px; color:var(--muted); margin-bottom:24px; line-height:1.7; }
@@ -332,7 +312,7 @@
     .faq-list { display:flex; flex-direction:column; gap:0; }
     .faq-item { border-bottom:1px solid rgba(0,212,168,0.12); overflow:hidden; }
     .faq-item:first-child { border-top:1px solid rgba(0,212,168,0.12); }
-    .faq-question { width:100%; background:none; border:none; cursor:pointer; display:flex; align-items:center; justify-content:space-between; gap:20px; padding:28px 0; text-align:left; transition:all 0.3s ease; }
+    .faq-question { width:100%; background:none; border:none; cursor:pointer; display:flex; align-items:center; justify-content:space-between; gap:20px; padding:28px 0; text-align:left; transition:all 0.3s ease; color:inherit; }
     .faq-question:hover .faq-q-text { color:var(--teal); }
     .faq-q-text { font-family:'Playfair Display',serif; font-size:18px; font-weight:600; color:var(--text); line-height:1.4; transition:color 0.3s ease; flex:1; }
     .faq-icon { width:36px; height:36px; border-radius:50%; border:1.5px solid rgba(0,212,168,0.3); display:flex; align-items:center; justify-content:center; flex-shrink:0; transition:all 0.4s cubic-bezier(0.4,0,0.2,1); }
@@ -364,6 +344,9 @@
     .cta-section h2 em { font-style:italic; color:var(--teal); }
     .cta-section p { color:var(--muted); font-size:15px; font-weight:300; max-width:460px; margin:0 auto 40px; line-height:1.8; }
     .cta-btns { display:flex; gap:20px; justify-content:center; flex-wrap:wrap; }
+    .cta-areas { margin:44px auto 0; max-width:760px; font-size:12.5px; color:var(--muted); font-weight:300; line-height:2; }
+    .cta-areas a { color:var(--teal); text-decoration:none; margin:0 8px; white-space:nowrap; }
+    .cta-areas a:hover { color:#00ffc8; text-decoration:underline; }
 
     /* FOOTER */
     footer { background:#000; border-top:1px solid rgba(0,212,168,0.1); padding:60px 40px 30px; }
@@ -371,7 +354,7 @@
     .footer-brand img { height:50px; width:140px; object-fit:contain; margin-bottom:16px; display:block; }
     .footer-brand p { font-size:13px; color:var(--muted); line-height:1.8; font-weight:300; margin-bottom:16px; }
     .footer-contact p { font-size:12.5px; color:var(--muted); margin-bottom:8px; font-weight:300; }
-    .footer-col h5 { font-size:12px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--teal); margin-bottom:20px; }
+    .footer-col h3, .footer-col .footer-h { display:block; font-family:'Montserrat',sans-serif; font-size:12px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--teal); margin-bottom:20px; }
     .footer-col ul { list-style:none; }
     .footer-col li { margin-bottom:10px; }
     .footer-col a { color:var(--muted); text-decoration:none; font-size:13px; font-weight:300; transition:color 0.3s; }
@@ -383,6 +366,7 @@
     @keyframes shimmer { 0%,100%{background-position:0% 50%;}50%{background-position:100% 50%;} }
     @keyframes pulse { 0%,100%{opacity:1;transform:scale(1);}50%{opacity:0.5;transform:scale(0.7);} }
     .reveal { opacity:0; transform:translateY(30px); transition:opacity 0.7s ease,transform 0.7s ease; }
+    .reveal-left { transform:translateX(-30px); }
     .reveal.visible { opacity:1; transform:none; }
     .reveal-delay-1 { transition-delay:0.1s; }
     .reveal-delay-2 { transition-delay:0.2s; }
@@ -396,6 +380,10 @@
       section{padding:70px 20px;} .navbar{padding:16px 20px;} .footer-inner{grid-template-columns:1fr;}
       .hero-stats{gap:30px;} .stat-divider{display:none;} .content-grid-3{grid-template-columns:1fr;} .faq-q-text{font-size:16px;} .breadcrumb{padding:80px 20px 0;}
     }
+    @media(prefers-reduced-motion:reduce){
+      *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important;}
+      .reveal{opacity:1;transform:none;}
+    }
   </style>
 </head>
 <body>
@@ -403,7 +391,7 @@
 <!-- NAVBAR -->
 <nav class="navbar" id="navbar" aria-label="Main Navigation">
   <div class="nav-logo">
-    <a href="/"><img src="./asset/logo_coloured.png" alt="TamkinExpress — Website Development Dubai" onerror="this.style.display='none';this.nextSibling.style.display='block'"><span class="nav-logo-text">TamkinExpress</span></a>
+    <a href="/"><img src="/asset/logo_coloured.png" width="124" height="44" alt="TamkinExpress — Website Development Dubai" onerror="this.style.display='none';this.nextSibling.style.display='block'"><span class="nav-logo-text">TamkinExpress</span></a>
   </div>
   <div class="nav-right">
     <ul class="nav-menu">
@@ -416,7 +404,7 @@
       <a href="tel:+971588967713" class="nav-btn-outline">📞 Call Us</a>
       <a href="/contact-us.html" class="nav-cta">Get Free Quote</a>
     </div>
-    <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
   </div>
 </nav>
 
@@ -431,33 +419,27 @@
   </div>
 </div>
 
-<!-- BREADCRUMB — Schema + UX + SEO -->
+<!-- BREADCRUMB (structured data lives in the JSON-LD above) -->
 <nav class="breadcrumb" aria-label="Breadcrumb">
   <div class="breadcrumb-inner">
-    <ol itemscope itemtype="https://schema.org/BreadcrumbList">
-      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-        <a itemprop="item" href="/"><span itemprop="name">Home</span></a>
-        <meta itemprop="position" content="1">
-      </li>
-      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-        <span itemprop="name">Website Development Dubai</span>
-        <meta itemprop="position" content="2">
-      </li>
+    <ol>
+      <li><a href="/">Home</a></li>
+      <li aria-current="page">Website Development Dubai</li>
     </ol>
   </div>
 </nav>
 
 <!-- ═══ HERO ═══ -->
-<section class="hero" aria-labelledby="hero-heading">
+<header class="hero" aria-labelledby="hero-heading">
   <div class="hero-bg"></div>
-  <div class="hero-badge">Website Development — Dubai & UAE</div>
+  <div class="hero-badge">Website Development — Dubai &amp; UAE</div>
   <h1 id="hero-heading">
     <span class="line-1">Custom Website Development</span>
-    <span class="line-2">& Web Design in Dubai —</span>
+    <span class="line-2">&amp; Web Design in Dubai —</span>
     <span class="line-teal">Built to Grow Your Business.</span>
   </h1>
   <p class="hero-sub">
-    TamkinExpress builds <strong>custom websites, business portals, SaaS platforms, and CRM/ERP systems</strong> for Dubai & UAE businesses. From Arabic RTL support to MOHRE and FTA API integrations — every solution is engineered for the UAE market.
+    TamkinExpress builds <strong>custom websites, business portals, SaaS platforms, and CRM/ERP systems</strong> for Dubai &amp; UAE businesses. From Arabic RTL support to MOHRE and FTA API integrations — every solution is engineered for the UAE market.
   </p>
   <div class="hero-cta">
     <a href="/contact-us.html" class="btn-primary">📞 Get Free Consultation</a>
@@ -473,23 +455,24 @@
     <div class="stat-divider"></div>
     <div class="stat-item"><span class="stat-num">100%</span><span class="stat-label">Source Code Ownership</span></div>
   </div>
-</section>
+</header>
 
-<!-- ═══ AI / LLM ANSWER BOX ═══ -->
-<!-- This section is structured to be cited by AI search engines (Perplexity, ChatGPT Search, Google SGE) -->
+<main>
+
+<!-- ═══ QUICK ANSWER (AI / featured-snippet friendly) ═══ -->
 <div class="ai-answer-section">
   <div class="ai-answer-inner">
     <div class="ai-answer-label">⚡ Quick Answer</div>
     <div class="ai-answer-box">
       <h2>What is TamkinExpress and what does it do in Dubai?</h2>
       <p>
-        <strong>TamkinExpress is a custom web development company based in Abu Dhabi, UAE,</strong> serving businesses across Dubai, Sharjah, Ajman, and the wider UAE. The company specialises in building bespoke web applications, business portals, SaaS platforms, and CRM/ERP systems — not template-based websites.
+        <strong>TamkinExpress is a custom web development company based in <a href="/professional%20web%20design%20%26%20web%20development%20in%20abu%20dhabi%2Cuae.html">Abu Dhabi</a>, UAE,</strong> serving businesses across <a href="/No1%20web%20design%20%26%20web%20development%20company%20in%20dubai%20%2Cuae.html">Dubai</a>, <a href="/best%20web-development%20in%20sharjah.html">Sharjah</a>, <a href="/web-development%20%26%20web-design%20service%20in%20ajman.html">Ajman</a>, and the wider UAE. The company specialises in building bespoke web applications, business portals, SaaS platforms, and CRM/ERP systems — not template-based websites.
       </p>
       <p>
         TamkinExpress is known for <strong>UAE-specific integrations</strong> including MOHRE (Ministry of Labour), TAMM (Abu Dhabi government portal), FTA VAT APIs, and UAE payment gateways such as Telr, PayTabs, and Network International. The team also delivers fully bilingual Arabic-English web applications with proper RTL layout.
       </p>
       <p>
-        The company has delivered over 40 custom web applications for UAE businesses. All projects include UAE-region cloud hosting, OWASP security standards, full source code ownership on delivery, and technical documentation. Development timelines typically range from 6 weeks for business portals to 6 months for enterprise platforms.
+        The company has delivered over 40 custom web applications for UAE businesses — see the <a href="/portfolio.html">web development portfolio</a>. All projects include UAE-region cloud hosting, OWASP security standards, full source code ownership on delivery, and technical documentation. Development timelines typically range from 6 weeks for business portals to 6 months for enterprise platforms.
       </p>
       <div class="ai-entity-row">
         <span class="ai-entity">Web Development Dubai</span>
@@ -515,57 +498,57 @@
   <div class="services-grid">
 
     <article class="service-card reveal">
-      <div class="card-icon">🏢</div>
+      <div class="card-icon" aria-hidden="true">🏢</div>
       <h3>Business Portal Development Dubai</h3>
       <p>Custom employee portals, vendor management systems, and client dashboards built to match your exact workflow, UAE regulations, and operational structure. Role-based access, real-time data, and full audit trails included.</p>
       <div class="card-tags"><span class="tag">Role-Based Access</span><span class="tag">Dashboard</span><span class="tag">Reporting</span><span class="tag">Integrations</span></div>
-      <a href="/contact-us.html" class="card-link">Get Started →</a>
+      <a href="/contact-us.html" class="card-link">Discuss Your Portal →</a>
     </article>
 
     <article class="service-card reveal reveal-delay-1">
-      <div class="card-icon">🛠️</div>
+      <div class="card-icon" aria-hidden="true">🛠️</div>
       <h3>SaaS Platform Development UAE</h3>
       <p>Build and launch your own software-as-a-service product with subscription billing, multi-tenant architecture, and auto-scaling cloud infrastructure — ready to serve customers across the UAE and GCC region.</p>
       <div class="card-tags"><span class="tag">Multi-Tenant</span><span class="tag">Billing</span><span class="tag">API</span><span class="tag">Cloud Scaling</span></div>
-      <a href="/contact-us.html" class="card-link">Get Started →</a>
+      <a href="/contact-us.html" class="card-link">Plan Your SaaS →</a>
     </article>
 
     <article class="service-card reveal reveal-delay-2">
-      <div class="card-icon">📋</div>
-      <h3>CRM & ERP System Development Dubai</h3>
+      <div class="card-icon" aria-hidden="true">📋</div>
+      <h3>CRM &amp; ERP System Development Dubai</h3>
       <p>Custom CRM and ERP solutions built specifically for UAE business requirements — including FTA VAT compliance, MOHRE HR module integration, Arabic language support, and UAE-specific reporting formats.</p>
       <div class="card-tags"><span class="tag">CRM</span><span class="tag">ERP</span><span class="tag">UAE VAT</span><span class="tag">HR Module</span></div>
-      <a href="/contact-us.html" class="card-link">Get Started →</a>
+      <a href="/contact-us.html" class="card-link">Get a CRM/ERP Quote →</a>
     </article>
 
     <article class="service-card reveal">
-      <div class="card-icon">🤖</div>
+      <div class="card-icon" aria-hidden="true">🤖</div>
       <h3>Business Process Automation UAE</h3>
       <p>Replace manual, repetitive operations with smart automation — from invoice generation and multi-level approval workflows to UAE government reporting and employee onboarding pipelines.</p>
       <div class="card-tags"><span class="tag">Workflow Automation</span><span class="tag">Notifications</span><span class="tag">Scheduling</span><span class="tag">Reporting</span></div>
-      <a href="/contact-us.html" class="card-link">Get Started →</a>
+      <a href="/contact-us.html" class="card-link">Automate Workflows →</a>
     </article>
 
     <article class="service-card reveal reveal-delay-1">
-      <div class="card-icon">📊</div>
-      <h3>Data Dashboards & Analytics Portals</h3>
+      <div class="card-icon" aria-hidden="true">📊</div>
+      <h3>Data Dashboards &amp; Analytics Portals</h3>
       <p>Real-time analytics dashboards connecting your raw operational data to actionable business intelligence — built for UAE management, sales, and operations teams who need clarity at a glance.</p>
       <div class="card-tags"><span class="tag">Real-Time Data</span><span class="tag">Charts</span><span class="tag">KPIs</span><span class="tag">Export</span></div>
-      <a href="/contact-us.html" class="card-link">Get Started →</a>
+      <a href="/contact-us.html" class="card-link">Build Your Dashboard →</a>
     </article>
 
     <article class="service-card reveal reveal-delay-2">
-      <div class="card-icon">🔗</div>
-      <h3>UAE Government API & Third-Party Integrations</h3>
+      <div class="card-icon" aria-hidden="true">🔗</div>
+      <h3>UAE Government API &amp; Third-Party Integrations</h3>
       <p>Connect your web application to UAE government portals (MOHRE, TAMM, FTA), payment gateways (Telr, PayTabs, Network International), ERP systems (SAP, Oracle), and logistics platforms — with production-grade error handling.</p>
       <div class="card-tags"><span class="tag">REST API</span><span class="tag">MOHRE</span><span class="tag">FTA</span><span class="tag">Telr</span></div>
-      <a href="/contact-us.html" class="card-link">Get Started →</a>
+      <a href="/contact-us.html" class="card-link">Start an Integration →</a>
     </article>
 
   </div>
 </section>
 
-<!-- ═══ WHY CUSTOM — H2 + H3 structured ═══ -->
+<!-- ═══ WHY CUSTOM ═══ -->
 <section class="content-section" aria-labelledby="why-custom-heading">
   <div class="content-inner">
     <div class="reveal" style="text-align:center;margin-bottom:50px;">
@@ -575,17 +558,17 @@
     </div>
     <div class="content-grid-3">
       <div class="content-card reveal">
-        <div class="content-card-icon">⚡</div>
+        <div class="content-card-icon" aria-hidden="true">⚡</div>
         <h3>Proprietary Business Logic</h3>
         <p>Your processes are unique. Custom development encodes your specific workflows, multi-level approval chains, and business rules directly into the application — no plugins, no workarounds, no limitations.</p>
       </div>
       <div class="content-card reveal reveal-delay-1">
-        <div class="content-card-icon">🔒</div>
-        <h3>UAE Data Sovereignty & Compliance</h3>
+        <div class="content-card-icon" aria-hidden="true">🔒</div>
+        <h3>UAE Data Sovereignty &amp; Compliance</h3>
         <p>Regulated UAE industries require data hosted on UAE-region nodes and specific security certifications. We architect for these requirements from day one — not as an afterthought added after launch.</p>
       </div>
       <div class="content-card reveal reveal-delay-2">
-        <div class="content-card-icon">📈</div>
+        <div class="content-card-icon" aria-hidden="true">📈</div>
         <h3>Scales Without Per-Seat Pricing</h3>
         <p>SaaS tools charge per user and gate premium features. Custom applications scale on your terms — no surprise invoices when your team grows from 20 to 200 users.</p>
       </div>
@@ -593,7 +576,7 @@
   </div>
 </section>
 
-<!-- ═══ CUSTOM vs WORDPRESS COMPARISON ═══ -->
+<!-- ═══ CUSTOM vs WORDPRESS ═══ -->
 <section class="comparison-section" aria-labelledby="compare-heading">
   <div class="comparison-inner">
     <div class="reveal" style="text-align:center;margin-bottom:0;">
@@ -604,9 +587,9 @@
     <table class="comp-table reveal" aria-label="Custom web development versus WordPress comparison">
       <thead>
         <tr>
-          <th>Feature</th>
-          <th>Custom Development (TamkinExpress)</th>
-          <th>WordPress</th>
+          <th scope="col">Feature</th>
+          <th scope="col">Custom Development (TamkinExpress)</th>
+          <th scope="col">WordPress</th>
         </tr>
       </thead>
       <tbody>
@@ -631,7 +614,7 @@
       <p class="section-sub" style="margin:0 auto;">We select based on your performance, security, and budget requirements — not a one-size-fits-all template.</p>
     </div>
     <table class="tech-table reveal" aria-label="TamkinExpress web development technology stack">
-      <thead><tr><th>Layer</th><th>Technologies</th><th>Why We Use It</th></tr></thead>
+      <thead><tr><th scope="col">Layer</th><th scope="col">Technologies</th><th scope="col">Why We Use It</th></tr></thead>
       <tbody>
         <tr><td>Frontend</td><td>React, Next.js, TypeScript</td><td>Fast, SEO-friendly, scalable UI for UAE users</td></tr>
         <tr><td>Backend</td><td>Node.js, Python, Django</td><td>Performance, flexibility, UAE API integration support</td></tr>
@@ -647,11 +630,11 @@
 <!-- ═══ UAE SPECIFIC ═══ -->
 <section class="two-col-section" aria-labelledby="uae-heading">
   <div class="two-col-inner">
-    <div class="two-col-text" style="opacity:0;transform:translateX(-30px);transition:opacity 0.7s ease,transform 0.7s ease;">
+    <div class="two-col-text reveal reveal-left">
       <span class="section-label">Built for UAE</span>
       <h2 class="section-title" id="uae-heading">Web Development <span class="highlight">Tailored for the UAE Market</span></h2>
       <p>Building web applications for the UAE requires knowledge that generic agencies do not have. <strong>Arabic right-to-left (RTL) rendering, bilingual interfaces, UAE VAT compliance, and government API integration</strong> are not optional add-ons — they are core requirements.</p>
-      <p>TamkinExpress has direct production integration experience with <strong>MOHRE, TAMM, FTA VAT APIs, and RERA systems.</strong> We understand the authentication patterns, error handling, and documentation requirements specific to each UAE government platform.</p>
+      <p>TamkinExpress has direct production integration experience with <strong>MOHRE, TAMM, FTA VAT APIs, and RERA systems.</strong> We understand the authentication patterns, error handling, and documentation requirements specific to each UAE government platform. Browse our <a href="/portfolio.html">completed web projects</a> or <a href="/about.html">learn more about the team</a>.</p>
       <p>UAE payment processing also requires platform-specific knowledge. <strong>Telr, PayTabs, and Network International</strong> each have unique integration flows, compliance requirements, and webhook architectures. We have delivered all three in production environments.</p>
     </div>
     <div class="reveal">
@@ -669,15 +652,15 @@
 <!-- ═══ PROCESS ═══ -->
 <section class="process-section" aria-labelledby="process-heading">
   <div class="process-container">
-    <div style="opacity:0;transform:translateY(30px);transition:opacity 0.7s ease,transform 0.7s ease;">
+    <div class="reveal">
       <span class="section-label">How We Work</span>
       <h2 class="section-title" id="process-heading">Our <span class="highlight">Web Development Process</span> for Dubai Projects</h2>
-      <p style="color:var(--muted);font-size:14px;line-height:1.8;margin-bottom:30px;">Every project follows a structured, transparent process — from discovery through to deployment and long-term support. You stay informed and in control at every stage.</p>
+      <p class="process-intro">Every project follows a structured, transparent process — from discovery through to deployment and long-term support. You stay informed and in control at every stage. <a href="/contact-us.html">Book a free discovery call</a> to start.</p>
       <div class="process-steps">
-        <div class="step"><div class="step-num">01</div><div class="step-content"><h4>Discovery & Technical Architecture</h4><p>We map your operations, data flows, and UAE compliance requirements before designing the system architecture — no code written until the blueprint is approved.</p></div></div>
-        <div class="step"><div class="step-num">02</div><div class="step-content"><h4>UI/UX Design & Prototype Review</h4><p>Wireframes and interactive prototypes reviewed and signed off by your team. Arabic RTL layouts reviewed in parallel with English UI — no surprises at launch.</p></div></div>
-        <div class="step"><div class="step-num">03</div><div class="step-content"><h4>Agile Development & QA Testing</h4><p>Bi-weekly demos keep you updated. Security testing, load testing for UAE network conditions, and full QA run in parallel with development — not after the fact.</p></div></div>
-        <div class="step"><div class="step-num">04</div><div class="step-content"><h4>UAE Deployment & Ownership Handover</h4><p>Full deployment to UAE-region cloud infrastructure, staff training sessions, technical documentation, and complete source code ownership transferred to your business.</p></div></div>
+        <div class="step"><div class="step-num">01</div><div class="step-content"><h3>Discovery &amp; Technical Architecture</h3><p>We map your operations, data flows, and UAE compliance requirements before designing the system architecture — no code written until the blueprint is approved.</p></div></div>
+        <div class="step"><div class="step-num">02</div><div class="step-content"><h3>UI/UX Design &amp; Prototype Review</h3><p>Wireframes and interactive prototypes reviewed and signed off by your team. Arabic RTL layouts reviewed in parallel with English UI — no surprises at launch.</p></div></div>
+        <div class="step"><div class="step-num">03</div><div class="step-content"><h3>Agile Development &amp; QA Testing</h3><p>Bi-weekly demos keep you updated. Security testing, load testing for UAE network conditions, and full QA run in parallel with development — not after the fact.</p></div></div>
+        <div class="step"><div class="step-num">04</div><div class="step-content"><h3>UAE Deployment &amp; Ownership Handover</h3><p>Full deployment to UAE-region cloud infrastructure, staff training sessions, technical documentation, and complete source code ownership transferred to your business.</p></div></div>
       </div>
     </div>
     <div class="reveal">
@@ -695,98 +678,98 @@
 </section>
 
 <!-- ═══ BLOG ═══ -->
-<section class="blog-section">
+<section class="blog-section" aria-labelledby="blog-heading">
   <div class="blog-top-line"></div>
   <div class="blog-bot-line"></div>
   <div class="blog-inner">
     <div class="blog-label"><span></span>Our Blog<span></span></div>
-    <h2 class="blog-h2">Web Development Insights &amp;<br><em>UAE Business Resources</em></h2>
-    <a href="Blog web development.html" class="blog-btn">Explore the Blog →</a>
+    <h2 class="blog-h2" id="blog-heading">Web Development Insights &amp;<br><em>UAE Business Resources</em></h2>
+    <a href="/Blog%20web%20development.html" class="blog-btn">Explore the Blog →</a>
   </div>
 </section>
 
-<!-- ═══ FAQ — AI + SEO Optimized ═══ -->
+<!-- ═══ FAQ ═══ -->
 <section class="faq-section" id="faq" aria-labelledby="faq-heading">
   <div class="faq-container">
     <div class="faq-header reveal">
       <span class="section-label">Got Questions?</span>
       <h2 class="section-title" id="faq-heading">Website Development Dubai — <span class="highlight">Frequently Asked Questions</span></h2>
-      <p class="section-sub">Direct answers to the questions Dubai & UAE businesses ask us most often.</p>
+      <p class="section-sub">Direct answers to the questions Dubai &amp; UAE businesses ask us most often.</p>
     </div>
     <div class="faq-list reveal">
 
       <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq-a1" id="faq-q1">
           <span class="faq-q-text">What does custom website development cost in Dubai?</span>
-          <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+          <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
         </button>
-        <div class="faq-answer"><div class="faq-answer-inner">
+        <div class="faq-answer" id="faq-a1" role="region" aria-labelledby="faq-q1"><div class="faq-answer-inner">
           <p>Custom web development pricing in Dubai depends on scope, features, and required integrations. Business portals typically start from AED 15,000. SaaS platforms and CRM/ERP systems are scoped individually after the discovery phase.</p>
           <p>TamkinExpress provides a free consultation and detailed fixed-price quote with no obligation. We will always recommend the right-sized solution for your budget — not the most expensive option.</p>
         </div></div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq-a2" id="faq-q2">
           <span class="faq-q-text">How long does it take to build a custom web application in Dubai?</span>
-          <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+          <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
         </button>
-        <div class="faq-answer"><div class="faq-answer-inner">
+        <div class="faq-answer" id="faq-a2" role="region" aria-labelledby="faq-q2"><div class="faq-answer-inner">
           <p>A business portal typically takes 6–10 weeks from discovery to live deployment. A full SaaS platform or CRM/ERP system ranges from 12–24 weeks depending on feature complexity and UAE integration requirements.</p>
           <p>We provide a fixed timeline commitment after the discovery phase — with bi-weekly progress updates so there are no surprises.</p>
         </div></div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq-a3" id="faq-q3">
           <span class="faq-q-text">What tech stack do you use for website development in Dubai?</span>
-          <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+          <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
         </button>
-        <div class="faq-answer"><div class="faq-answer-inner">
+        <div class="faq-answer" id="faq-a3" role="region" aria-labelledby="faq-q3"><div class="faq-answer-inner">
           <p>We select the stack based on your specific requirements. Typically React or Next.js on the frontend, Node.js or Python/Django on the backend, PostgreSQL or MongoDB for data, and AWS or Azure UAE-region cloud nodes for infrastructure.</p>
           <p>Every technology decision is driven by your performance, security, and budget needs — not a preset template we apply to every project.</p>
         </div></div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq-a4" id="faq-q4">
           <span class="faq-q-text">Can you integrate with UAE government portals like MOHRE, FTA, and TAMM?</span>
-          <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+          <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
         </button>
-        <div class="faq-answer"><div class="faq-answer-inner">
+        <div class="faq-answer" id="faq-a4" role="region" aria-labelledby="faq-q4"><div class="faq-answer-inner">
           <p>Yes. TamkinExpress has production experience integrating MOHRE, TAMM, FTA VAT APIs, RERA systems, and UAE payment gateways including Telr, PayTabs, and Network International.</p>
           <p>Every integration includes proper authentication handling, error recovery, retry logic, and audit logging — so a third-party system outage never disrupts your core operations.</p>
         </div></div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq-a5" id="faq-q5">
           <span class="faq-q-text">What is the difference between custom web development and WordPress for UAE businesses?</span>
-          <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+          <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
         </button>
-        <div class="faq-answer"><div class="faq-answer-inner">
+        <div class="faq-answer" id="faq-a5" role="region" aria-labelledby="faq-q5"><div class="faq-answer-inner">
           <p>WordPress is the right choice for content-focused sites like blogs, news portals, or brochure websites — it is fast to launch and cost-effective. Custom development is necessary when you need proprietary business logic, UAE government API integrations, Arabic RTL bilingual interfaces, VAT compliance modules, or genuine scalability.</p>
           <p>We will always recommend the right fit for your goals. Some projects are genuinely better served by WordPress. Others require custom engineering from the ground up.</p>
         </div></div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq-a6" id="faq-q6">
           <span class="faq-q-text">Do you support Arabic RTL web applications in Dubai?</span>
-          <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+          <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
         </button>
-        <div class="faq-answer"><div class="faq-answer-inner">
+        <div class="faq-answer" id="faq-a6" role="region" aria-labelledby="faq-q6"><div class="faq-answer-inner">
           <p>Yes. TamkinExpress builds fully bilingual Arabic-English web applications with proper RTL (right-to-left) layout — not just text substitution, but full layout mirroring, Arabic typography, locale-specific number and date formatting, and dual-language database structures.</p>
           <p>This is essential for UAE businesses serving Arabic-speaking users, government clients, or operating in regulated industries requiring Arabic documentation.</p>
         </div></div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq-a7" id="faq-q7">
           <span class="faq-q-text">How do you ensure the web application stays maintainable after handover?</span>
-          <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+          <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
         </button>
-        <div class="faq-answer"><div class="faq-answer-inner">
+        <div class="faq-answer" id="faq-a7" role="region" aria-labelledby="faq-q7"><div class="faq-answer-inner">
           <p>You receive full source code ownership, technical documentation, developer API reference, and staff training on delivery. We follow clean architecture principles so any qualified developer can extend the system without reverse-engineering it.</p>
           <p>Optional retainer maintenance packages are available for ongoing security patches, dependency updates, and feature work after the initial project handover.</p>
         </div></div>
@@ -805,34 +788,46 @@
       <a href="/contact-us.html" class="btn-primary">📞 Book Free Consultation</a>
       <a href="tel:+971588967713" class="btn-secondary">📲 +971 588967713</a>
     </div>
+    <p class="cta-areas">
+      Web development &amp; web design also available in:
+      <a href="/professional%20web%20design%20%26%20web%20development%20in%20abu%20dhabi%2Cuae.html">Abu Dhabi</a>
+      <a href="/best%20web-development%20in%20sharjah.html">Sharjah</a>
+      <a href="/web-development%20%26%20web-design%20service%20in%20ajman.html">Ajman</a>
+      <a href="/top%20web-development%20%26%20web-design%20company%20in%20fujairah.html">Fujairah</a>
+      <a href="/web-development%20company%20in%20ummu%20al%20quwain.html">Umm Al Quwain</a>
+      <a href="/web-development%20service%20in%20ras%20al%20khaimah%2Cuae.html">Ras Al Khaimah</a>
+      <a href="/best%20web-development%20%26%20web-design%20company%20mussafah.html">Musaffah</a>
+    </p>
   </div>
 </section>
+
+</main>
 
 <!-- ═══ FOOTER ═══ -->
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
-      <img src="./asset/logo_coloured.png" alt="TamkinExpress Website Development Dubai" onerror="this.style.display='none'">
-      <p>Custom website development, web design, and digital solutions for Dubai & UAE businesses. From registration to digital excellence.</p>
-      <div class="footer-contact">
+      <img src="/asset/logo_coloured.png" width="140" height="50" loading="lazy" alt="TamkinExpress website development Dubai logo" onerror="this.style.display='none'">
+      <p>Custom website development, web design, and digital solutions for Dubai &amp; UAE businesses. From registration to digital excellence.</p>
+      <address class="footer-contact" style="font-style:normal;">
         <p>📍 Office No. 49, Maxim Pharmacy Building, Musaffah M43, Abu Dhabi, UAE</p>
-        <p>📞 +971 588967713</p>
-        <p>✉️ info@tamkinexpress.com</p>
-      </div>
+        <p>📞 <a href="tel:+971588967713" style="color:inherit;text-decoration:none;">+971 588967713</a></p>
+        <p>✉️ <a href="mailto:info@tamkinexpress.com" style="color:inherit;text-decoration:none;">info@tamkinexpress.com</a></p>
+      </address>
     </div>
-    <div class="footer-col"><h5>By City</h5><ul>
-      <li><a href="/No1 web design & web development company in dubai ,uae.html">Web Development Dubai</a></li>
-      <li><a href="/professional web design & web development in abu dhabi,uae.html">Web Development Abu Dhabi</a></li>
-      <li><a href="/web-development & web-design service in ajman.html">Web Development Ajman</a></li>
-      <li><a href="/top web-development & web-design company in fujairah.html">Web Development Fujairah</a></li>
+    <div class="footer-col"><h3>By City</h3><ul>
+      <li><a href="/No1%20web%20design%20%26%20web%20development%20company%20in%20dubai%20%2Cuae.html">Web Development Dubai</a></li>
+      <li><a href="/professional%20web%20design%20%26%20web%20development%20in%20abu%20dhabi%2Cuae.html">Web Development Abu Dhabi</a></li>
+      <li><a href="/web-development%20%26%20web-design%20service%20in%20ajman.html">Web Development Ajman</a></li>
+      <li><a href="/top%20web-development%20%26%20web-design%20company%20in%20fujairah.html">Web Development Fujairah</a></li>
     </ul></div>
-    <div class="footer-col"><h5>&nbsp;</h5><ul>
-      <li><a href="./best web-development in sharjah.html">Web Development Sharjah</a></li>
-      <li><a href="./web-development company in ummu al quwain.html">Web Development UAQ</a></li>
-      <li><a href="./web-development service in ras al khaimah,uae.html">Web Development RAK</a></li>
-      <li><a href="./best web-development & web-design company mussafah.html">Web Development Musaffah</a></li>
+    <div class="footer-col"><span class="footer-h" aria-hidden="true">&nbsp;</span><ul>
+      <li><a href="/best%20web-development%20in%20sharjah.html">Web Development Sharjah</a></li>
+      <li><a href="/web-development%20company%20in%20ummu%20al%20quwain.html">Web Development UAQ</a></li>
+      <li><a href="/web-development%20service%20in%20ras%20al%20khaimah%2Cuae.html">Web Development RAK</a></li>
+      <li><a href="/best%20web-development%20%26%20web-design%20company%20mussafah.html">Web Development Musaffah</a></li>
     </ul></div>
-    <div class="footer-col"><h5>Company</h5><ul>
+    <div class="footer-col"><h3>Company</h3><ul>
       <li><a href="/about.html">About TamkinExpress</a></li>
       <li><a href="/portfolio.html">Our Portfolio</a></li>
       <li><a href="/contact-us.html">Contact Us</a></li>
@@ -840,36 +835,32 @@
     </ul></div>
   </div>
   <div class="footer-bottom">
-    <span>© 2025 TamkinExpress. All rights reserved. — Custom Website Development Dubai & UAE</span>
+    <span>© 2026 TamkinExpress. All rights reserved. — Custom Website Development Dubai &amp; UAE</span>
     <span>Abu Dhabi, UAE</span>
   </div>
 </footer>
 
 <script>
   // Reveal on scroll
-  const revealEls = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
   }, { threshold: 0.12 });
-  revealEls.forEach(el => observer.observe(el));
-
-  // Inline style opacity reveals
-  document.querySelectorAll('[style*="opacity:0"]').forEach(el => {
-    const io2 = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.style.opacity = '1'; e.target.style.transform = 'none'; io2.unobserve(e.target); } });
-    }, { threshold: 0.12 });
-    io2.observe(el);
-  });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
   // Navbar scroll
   const navbar = document.getElementById('navbar');
-  window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 60));
+  window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 60), { passive: true });
 
   // Hamburger
   const hamburger = document.getElementById('hamburger');
   const mobileMenu = document.getElementById('mobileMenu');
-  hamburger.addEventListener('click', () => { hamburger.classList.toggle('open'); mobileMenu.classList.toggle('open'); });
-  mobileMenu.querySelectorAll('a').forEach(link => { link.addEventListener('click', () => { hamburger.classList.remove('open'); mobileMenu.classList.remove('open'); }); });
+  const setMenu = (open) => {
+    hamburger.classList.toggle('open', open);
+    mobileMenu.classList.toggle('open', open);
+    hamburger.setAttribute('aria-expanded', String(open));
+  };
+  hamburger.addEventListener('click', () => setMenu(!mobileMenu.classList.contains('open')));
+  mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setMenu(false)));
 
   // FAQ accordion
   const faqItems = document.querySelectorAll('.faq-item');
