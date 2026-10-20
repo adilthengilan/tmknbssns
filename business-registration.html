@@ -3,19 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Business Registration UAE | Company Formation & Setup | Abu Dhabi & Dubai | Tamkin Express</title>
+<title>Business Registration UAE | Company Setup | Tamkin Express</title>
 <link rel="canonical" href="https://tamkinexpress.ae/business-registration.html">
-<meta name="description" content="Business registration & company formation in UAE — mainland, free zone & offshore setup in Abu Dhabi, Dubai, Sharjah. Trade licence, investor visa, bank account. 100% foreign ownership. Fast 7-day setup by TamkinExpress.">
+<meta name="description" content="Business registration & company formation in UAE: mainland, free zone & offshore. Trade licence, investor visa, bank account. Free consultation.">
 <meta name="keywords" content="business registration UAE, company formation UAE, UAE company setup, register company in UAE, trade license UAE, mainland company formation UAE, free zone company setup UAE, offshore company registration UAE, LLC company formation UAE, Abu Dhabi company formation, Dubai company formation, business setup consultants UAE, 100% foreign ownership UAE, investor visa UAE business setup, UAE business registration services">
-<meta property="og:title" content="Business Registration UAE | Company Formation & Setup | Abu Dhabi & Dubai | Tamkin Express">
-<meta property="og:description" content="Complete business registration & company formation in UAE — mainland, free zone, offshore. Trade licence, bank account, investor visa. 100% foreign ownership. Fast 7-day setup.">
+<meta property="og:title" content="Business Registration UAE | Company Setup | Tamkin Express">
+<meta property="og:description" content="Complete business registration & company formation in UAE: mainland, free zone and offshore. Trade licence, bank account, investor visa. Free consultation.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://tamkinexpress.ae/business-registration.html">
+<meta property="og:image" content="https://tamkinexpress.ae/asset/logo_coloured.png">
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
+  "@id": "https://tamkinexpress.ae/#business",
   "name": "Tamkin Express",
   "description": "UAE business registration and company formation experts. Mainland, free zone, and offshore company setup in Abu Dhabi, Dubai, Sharjah and all UAE emirates. Trade licence, investor visa, and corporate bank account services.",
   "url": "https://tamkinexpress.ae",
@@ -47,11 +49,7 @@
   "@type": "Service",
   "name": "Business Registration UAE",
   "alternateName": ["Company Formation UAE", "UAE Company Setup", "Register Company UAE"],
-  "provider": {
-    "@type": "Organization",
-    "name": "Tamkin Express",
-    "url": "https://tamkinexpress.ae"
-  },
+  "provider": { "@id": "https://tamkinexpress.ae/#business" },
   "serviceType": "Business Registration and Company Formation",
   "areaServed": {
     "@type": "Country",
@@ -64,6 +62,17 @@
     "availability": "https://schema.org/InStock",
     "description": "UAE company formation and business registration packages. Contact for transparent pricing."
   }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tamkinexpress.ae/" },
+    { "@type": "ListItem", "position": 2, "name": "Business Registration UAE", "item": "https://tamkinexpress.ae/business-registration.html" }
+  ]
 }
 </script>
 
@@ -164,7 +173,7 @@
   "description": "Complete guide to business registration and company formation in UAE including mainland LLC, free zone, and offshore company setup. Covers required documents, registration timelines, costs, investor visa, and free zone options in Abu Dhabi and Dubai.",
   "url": "https://tamkinexpress.ae/business-registration.html",
   "datePublished": "2024-01-01",
-  "dateModified": "2025-06-01",
+  "dateModified": "2026-10-20",
   "keywords": "business registration UAE, company formation UAE, register company UAE, trade license UAE, mainland company UAE, free zone company UAE, offshore company UAE, Abu Dhabi company formation, Dubai company formation, investor visa UAE, 100% foreign ownership UAE",
   "author": {
     "@type": "Person",
@@ -188,6 +197,8 @@
 }
 </script>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -245,6 +256,10 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
 .sec-title em{font-style:normal;color:var(--teal);}
 .sec-sub{color:var(--muted);font-size:.95rem;line-height:1.8;max-width:580px;text-align:center;margin:0 auto;}
 
+/* INTERNAL LINKS inside content */
+.hero-desc a,.svc-desc a,.proc-desc a,.why-desc a,.faq-ans a,.direct-answer-block a{color:var(--teal);text-decoration:none;border-bottom:1px solid rgba(0,212,200,0.35);transition:border-color .2s;}
+.hero-desc a:hover,.svc-desc a:hover,.proc-desc a:hover,.why-desc a:hover,.faq-ans a:hover,.direct-answer-block a:hover{border-bottom-color:var(--teal);}
+
 /* DIRECT ANSWER BLOCK */
 .direct-answer-block{
   background:rgba(0,212,200,0.05);
@@ -298,7 +313,7 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
 .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem;}
 .svc-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:2rem;position:relative;overflow:hidden;transition:border-color .3s,transform .3s;}
 .svc-card:hover{border-color:rgba(0,212,200,0.4);transform:translateY(-6px);box-shadow:0 12px 40px rgba(0,212,200,0.08);}
-.svc-card::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--teal-dim),transparent 60%);opacity:0;transition:opacity .3s;}
+.svc-card::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--teal-dim),transparent 60%);opacity:0;transition:opacity .3s;pointer-events:none;}
 .svc-card:hover::after{opacity:1;}
 .svc-num{font-size:.7rem;font-weight:700;letter-spacing:.15em;color:var(--teal);margin-bottom:1rem;position:relative;z-index:1;}
 .svc-icon{width:46px;height:46px;border-radius:10px;background:var(--teal-dim);border:1px solid rgba(0,212,200,0.2);display:flex;align-items:center;justify-content:center;font-size:1.2rem;margin-bottom:1.2rem;position:relative;z-index:1;}
@@ -325,6 +340,13 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
 .why-icon{font-size:2rem;margin-bottom:1rem;}
 .why-title{font-weight:700;color:var(--white);font-size:.95rem;margin-bottom:.5rem;}
 .why-desc{color:var(--muted);font-size:.84rem;line-height:1.65;}
+
+/* RELATED SERVICES */
+.related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2.5rem;}
+.related-card{display:block;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.4rem 1.5rem;text-decoration:none;transition:border-color .3s,transform .3s;}
+.related-card:hover{border-color:rgba(0,212,200,0.4);transform:translateY(-4px);}
+.related-card strong{display:block;color:var(--white);font-size:.92rem;margin-bottom:.35rem;}
+.related-card span{color:var(--muted);font-size:.82rem;line-height:1.6;}
 
 /* CTA */
 .final-cta{padding:7rem 6%;text-align:center;background:linear-gradient(180deg,var(--dark) 0%,var(--dark2) 100%);border-top:1px solid var(--border);position:relative;overflow:hidden;}
@@ -362,6 +384,7 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
 .aeo-card ul{padding-left:1.2rem;display:flex;flex-direction:column;gap:.4rem;}
 .aeo-card ul li::marker{color:var(--teal);}
 .aeo-card .aeo-badge{display:inline-block;background:var(--teal-dim);border:1px solid rgba(0,212,200,0.2);color:var(--teal);font-size:.72rem;font-weight:700;letter-spacing:.08em;padding:.25rem .7rem;border-radius:4px;margin-bottom:.8rem;text-transform:uppercase;}
+.tax-note{color:var(--muted);font-size:.78rem;line-height:1.6;margin-top:1.2rem;}
 
 /* FAQ */
 .faq-sec{padding:6rem 6%;background:var(--dark2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
@@ -372,7 +395,7 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
 .faq-plus{width:28px;height:28px;min-width:28px;background:var(--teal-dim);border:1px solid rgba(0,212,200,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--teal);font-size:1.2rem;transition:transform .3s;}
 .faq-item-box.open .faq-plus{transform:rotate(45deg);}
 .faq-ans{max-height:0;overflow:hidden;transition:max-height .4s ease;}
-.faq-item-box.open .faq-ans{max-height:300px;}
+.faq-item-box.open .faq-ans{max-height:420px;}
 .faq-ans p{padding-bottom:1.4rem;color:var(--muted);font-size:.88rem;line-height:1.8;}
 
 /* AI ADVISOR */
@@ -430,11 +453,11 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
   .process-grid{grid-template-columns:1fr 1fr;}
   .footer-grid{grid-template-columns:1fr 1fr;}
   .aeo-two-col,.aeo-three-col{grid-template-columns:1fr;}
-  .why-grid{grid-template-columns:1fr 1fr;}
+  .why-grid,.related-grid{grid-template-columns:1fr 1fr;}
   .ai-input-wrap{flex-direction:column;}
 }
 @media(max-width:600px){
-  .svc-grid,.process-grid,.why-grid{grid-template-columns:1fr;}
+  .svc-grid,.process-grid,.why-grid,.related-grid{grid-template-columns:1fr;}
   .pro-hero{padding-top:7rem;}
   .ai-msg.user{max-width:95%;}
 }
@@ -479,7 +502,7 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
         <p><strong>TamkinExpress</strong> provides complete <strong>business registration in UAE</strong> — <strong>mainland company formation</strong>, <strong>free zone company setup</strong>, and <strong>offshore company registration</strong> in Abu Dhabi and Dubai. <strong>UAE company formation</strong> is completed in <strong>7 working days</strong>, with full trade licence, investor visa, PRO services, and corporate bank account opening handled end-to-end. Contact us at <strong>+971 588967713</strong> for a free consultation.</p>
       </div>
 
-      <p class="hero-desc">From <strong>trade licence registration</strong> to <strong>investor visa UAE</strong> — all company setup services handled for you across mainland, free zone, and offshore structures in Abu Dhabi, Dubai &amp; all UAE emirates.</p>
+      <p class="hero-desc">From <strong>trade licence registration</strong> to <strong>investor visa UAE</strong> — all company setup services handled for you across mainland, free zone, and offshore structures in Abu Dhabi, Dubai &amp; all UAE emirates. After setup, our <a href="/pro-services.html" title="PRO Services UAE">PRO services</a> and <a href="/ministry-of-economy.html" title="Ministry of Economy Services UAE">Ministry of Economy services</a> keep your licence and paperwork compliant.</p>
       <div class="hero-ctas">
         <a href="#ai-advisor" class="btn btn-solid">Ask Our AI Advisor</a>
         <a href="#services" class="btn btn-outline">View All Services</a>
@@ -502,24 +525,24 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
   </div>
 </section>
 
-<!-- KEYWORD STRIP — SEO signal for related search terms -->
+<!-- KEYWORD STRIP -->
 <div class="keyword-strip" aria-label="Related business registration services">
   <div class="keyword-strip-inner">
     <a href="#services" class="kw-pill">Company Formation UAE</a>
-    <a href="#services" class="kw-pill">Trade License UAE</a>
+    <a href="/ministry-of-economy.html" class="kw-pill">Trade License UAE</a>
     <a href="#services" class="kw-pill">UAE Company Setup</a>
     <a href="#services" class="kw-pill">Register Company in UAE</a>
-    <a href="#services" class="kw-pill">100% Foreign Ownership UAE</a>
-    <a href="#services" class="kw-pill">Mainland Company Formation</a>
-    <a href="#services" class="kw-pill">Free Zone Company Setup</a>
-    <a href="#services" class="kw-pill">Offshore Company Registration</a>
-    <a href="#services" class="kw-pill">Investor Visa UAE</a>
+    <a href="#why-uae-heading" class="kw-pill">100% Foreign Ownership UAE</a>
+    <a href="#structures-heading" class="kw-pill">Mainland Company Formation</a>
+    <a href="#structures-heading" class="kw-pill">Free Zone Company Setup</a>
+    <a href="#structures-heading" class="kw-pill">Offshore Company Registration</a>
+    <a href="/employment-visa.html" class="kw-pill">Investor Visa UAE</a>
     <a href="#services" class="kw-pill">LLC Company Formation UAE</a>
-    <a href="#services" class="kw-pill">Abu Dhabi Company Formation</a>
-    <a href="#services" class="kw-pill">Dubai Company Formation</a>
-    <a href="#services" class="kw-pill">Business Setup Consultants UAE</a>
+    <a href="./Best%20business%20registration%20abudhabi.html" class="kw-pill">Abu Dhabi Company Formation</a>
+    <a href="./Best%20business%20registartion%20dubai.html" class="kw-pill">Dubai Company Formation</a>
+    <a href="#contact" class="kw-pill">Business Setup Consultants UAE</a>
     <a href="#services" class="kw-pill">UAE Startup Registration</a>
-    <a href="#services" class="kw-pill">Business License UAE</a>
+    <a href="/ministry-of-economy.html" class="kw-pill">Business License UAE</a>
   </div>
 </div>
 
@@ -534,38 +557,38 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
     <div class="svc-grid">
       <div class="svc-card reveal">
         <div class="svc-num">01</div><div class="svc-icon">🏢</div>
-        <div class="svc-title">Mainland Company Formation UAE</div>
+        <h3 class="svc-title">Mainland Company Formation UAE</h3>
         <div class="svc-desc">Set up a 100% foreign-owned mainland LLC in Dubai or Abu Dhabi. Get your trade licence via DET or ADDED with no local sponsor for most activities.</div>
         <div class="svc-line"></div>
       </div>
       <div class="svc-card reveal">
         <div class="svc-num">02</div><div class="svc-icon">🏙️</div>
-        <div class="svc-title">Free Zone Company Setup UAE</div>
-        <div class="svc-desc">Business registration across DMCC, JAFZA, IFZA, ADGM, KIZAD, and 30+ UAE free zones with 100% foreign ownership and zero corporate tax. Best free zone company setup for trading, consulting, and tech businesses.</div>
+        <h3 class="svc-title">Free Zone Company Setup UAE</h3>
+        <div class="svc-desc">Business registration across DMCC, JAFZA, IFZA, ADGM, KIZAD, and 30+ UAE free zones with 100% foreign ownership and 0% corporate tax on qualifying income (conditions apply). Best free zone company setup for trading, consulting, and tech businesses.</div>
         <div class="svc-line"></div>
       </div>
       <div class="svc-card reveal">
         <div class="svc-num">03</div><div class="svc-icon">🌐</div>
-        <div class="svc-title">Offshore Company Registration UAE</div>
-        <div class="svc-desc">International company formation in Dubai or RAK — zero corporate tax, asset protection, and fast offshore company registration in 3–5 days. Ideal for holding companies, international trade, and asset structuring.</div>
+        <h3 class="svc-title">Offshore Company Registration UAE</h3>
+        <div class="svc-desc">International company formation in Dubai or RAK — a tax-efficient structure, asset protection, and fast offshore company registration in 3–5 days. Ideal for holding companies, international trade, and asset structuring.</div>
         <div class="svc-line"></div>
       </div>
       <div class="svc-card reveal">
         <div class="svc-num">04</div><div class="svc-icon">📄</div>
-        <div class="svc-title">Trade Licence Registration &amp; Renewal UAE</div>
-        <div class="svc-desc">New trade licence registration in UAE, trade licence renewal in Abu Dhabi and Dubai, business licence renewal via TAMM portal — all trade licence types handled efficiently.</div>
+        <h3 class="svc-title">Trade Licence Registration &amp; Renewal UAE</h3>
+        <div class="svc-desc">New trade licence registration in UAE, trade licence renewal in Abu Dhabi and Dubai, business licence renewal via TAMM portal — all trade licence types handled efficiently, together with our <a href="/ministry-of-economy.html" title="Ministry of Economy Services UAE">Ministry of Economy services</a>.</div>
         <div class="svc-line"></div>
       </div>
       <div class="svc-card reveal">
         <div class="svc-num">05</div><div class="svc-icon">🏦</div>
-        <div class="svc-title">Corporate Bank Account Opening UAE</div>
+        <h3 class="svc-title">Corporate Bank Account Opening UAE</h3>
         <div class="svc-desc">Expert assistance for corporate bank account opening in UAE for mainland, free zone, and offshore companies — full document preparation and bank liaison included. Smooth account opening for foreign-owned companies.</div>
         <div class="svc-line"></div>
       </div>
       <div class="svc-card reveal">
         <div class="svc-num">06</div><div class="svc-icon">✏️</div>
-        <div class="svc-title">Company Amendments &amp; PRO Services UAE</div>
-        <div class="svc-desc">Name changes, shareholder amendments, activity additions, address updates, and MOA modifications — processed via MOHRE and relevant UAE authorities. Full PRO and government liaison services.</div>
+        <h3 class="svc-title">Company Amendments &amp; PRO Services UAE</h3>
+        <div class="svc-desc">Name changes, shareholder amendments, activity additions, address updates, and MOA modifications — processed via MOHRE and relevant UAE authorities. Full <a href="/pro-services.html" title="PRO Services UAE">PRO</a> and government liaison services.</div>
         <div class="svc-line"></div>
       </div>
     </div>
@@ -580,22 +603,22 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
     <p class="sec-sub" style="margin-bottom:0;">Tamkin Express manages the entire UAE company formation process — so your business is licensed and operational without delays.</p>
     <div class="process-grid reveal-scale">
       <div class="proc-step">
-        <div class="proc-n">01</div><div class="proc-title">Free Consultation</div>
+        <div class="proc-n">01</div><h3 class="proc-title">Free Consultation</h3>
         <div class="proc-desc">We understand your business activity, ownership structure, and goals — then recommend the best legal structure and jurisdiction for your UAE company formation.</div>
         <div class="proc-arrow"></div>
       </div>
       <div class="proc-step">
-        <div class="proc-n">02</div><div class="proc-title">Name &amp; Documents</div>
-        <div class="proc-desc">We reserve your trade name, prepare all incorporation documents — MOA, share certificates, and supporting paperwork required for UAE business registration.</div>
+        <div class="proc-n">02</div><h3 class="proc-title">Name &amp; Documents</h3>
+        <div class="proc-desc">We reserve your trade name, prepare all incorporation documents — MOA, share certificates, and supporting paperwork required for UAE business registration. <a href="/notary-court.html" title="Notary and Court Services UAE">Notary</a> and <a href="/poa.html" title="Power of Attorney UAE">power of attorney</a> support available.</div>
         <div class="proc-arrow"></div>
       </div>
       <div class="proc-step">
-        <div class="proc-n">03</div><div class="proc-title">Official Registration</div>
+        <div class="proc-n">03</div><h3 class="proc-title">Official Registration</h3>
         <div class="proc-desc">Our team submits to ADDED, DED, the free zone authority, or offshore registry — tracking approvals and handling all UAE government queries on your behalf.</div>
         <div class="proc-arrow"></div>
       </div>
       <div class="proc-step">
-        <div class="proc-n">04</div><div class="proc-title">Trade Licence Delivered</div>
+        <div class="proc-n">04</div><h3 class="proc-title">Trade Licence Delivered</h3>
         <div class="proc-desc">Trade licence, incorporation certificate, and company documents delivered — your UAE business registration is complete and ready to operate.</div>
       </div>
     </div>
@@ -625,7 +648,7 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
       <h3><em>Free Zone Company Setup</em> UAE</h3>
       <ul>
         <li>100% foreign ownership guaranteed</li>
-        <li>Zero corporate &amp; personal income tax</li>
+        <li>0% corporate tax on qualifying income (conditions apply), no personal income tax</li>
         <li>Full profit repatriation to home country</li>
         <li>DMCC, ADGM, IFZA, JAFZA, KIZAD &amp; 30+ zones</li>
         <li>Fast setup — some free zones in 2–3 days</li>
@@ -636,52 +659,53 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
       <h3><em>Offshore Company Registration</em> UAE</h3>
       <ul>
         <li>International business &amp; asset holding</li>
-        <li>Zero corporate tax &amp; no audit requirements</li>
+        <li>Tax-efficient structure for international business</li>
         <li>Cannot trade within UAE locally</li>
         <li>Fast offshore company formation in 3–5 days</li>
         <li>Available in Dubai (Jebel Ali) &amp; RAK</li>
       </ul>
     </div>
   </div>
+  <p class="tax-note">Tax note: UAE corporate tax rules apply to businesses, and free zone benefits depend on meeting qualifying conditions. We confirm the tax position for your structure during the free consultation.</p>
 </section>
 
 <div class="divider"></div>
 
-<!-- WHY REGISTER A COMPANY IN UAE — NEW SEO SECTION -->
+<!-- WHY REGISTER A COMPANY IN UAE -->
 <section class="why-uae-sec" aria-labelledby="why-uae-heading">
   <p class="sec-label">Why UAE</p>
   <h2 class="sec-title" id="why-uae-heading" style="text-align:left;">Why Register a Company in UAE?<br><em>Top Reasons for UAE Business Setup</em></h2>
-  <p class="sec-sub" style="text-align:left;margin:0 0 0 0;">The UAE is one of the world's most business-friendly destinations for company formation — with zero income tax, 100% foreign ownership, and world-class infrastructure in Abu Dhabi and Dubai.</p>
+  <p class="sec-sub" style="text-align:left;margin:0 0 0 0;">The UAE is one of the world's most business-friendly destinations for company formation — with no personal income tax, 100% foreign ownership, and world-class infrastructure in Abu Dhabi and Dubai.</p>
   <div class="why-grid">
     <div class="why-card reveal">
       <div class="why-icon">🏆</div>
-      <div class="why-title">100% Foreign Ownership</div>
+      <h3 class="why-title">100% Foreign Ownership</h3>
       <div class="why-desc">Since the 2021 UAE Company Law reforms, foreigners can register a company in UAE with full ownership on mainland — no local sponsor required for most business activities.</div>
     </div>
     <div class="why-card reveal">
       <div class="why-icon">💰</div>
-      <div class="why-title">Zero Personal Income Tax</div>
-      <div class="why-desc">UAE levies no personal income tax. Free zone companies enjoy zero corporate tax and 100% profit repatriation — making UAE company formation highly tax-efficient.</div>
+      <h3 class="why-title">No Personal Income Tax</h3>
+      <div class="why-desc">UAE levies no personal income tax. Qualifying free zone companies can enjoy 0% corporate tax on qualifying income and 100% profit repatriation, while standard UAE corporate tax rules apply to other income.</div>
     </div>
     <div class="why-card reveal">
       <div class="why-icon">🌍</div>
-      <div class="why-title">Strategic Global Hub</div>
+      <h3 class="why-title">Strategic Global Hub</h3>
       <div class="why-desc">Abu Dhabi and Dubai offer direct access to GCC, African, Asian, and European markets — making UAE business registration ideal for international trade and investment.</div>
     </div>
     <div class="why-card reveal">
       <div class="why-icon">🏃</div>
-      <div class="why-title">Fast Company Registration</div>
+      <h3 class="why-title">Fast Company Registration</h3>
       <div class="why-desc">UAE company formation can be completed in as little as 2–3 days for free zones and 7 days for mainland — one of the fastest business registration processes globally.</div>
     </div>
     <div class="why-card reveal">
       <div class="why-icon">🏛️</div>
-      <div class="why-title">Stable Business Environment</div>
+      <h3 class="why-title">Stable Business Environment</h3>
       <div class="why-desc">UAE consistently ranks among the world's top business destinations — with strong legal frameworks, investor-friendly policies, and a transparent regulatory environment.</div>
     </div>
     <div class="why-card reveal">
       <div class="why-icon">🪪</div>
-      <div class="why-title">Investor Visa &amp; UAE Residency</div>
-      <div class="why-desc">Business registration in UAE entitles owners to an investor visa and UAE residence — enabling banking, property ownership, and access to world-class healthcare and education.</div>
+      <h3 class="why-title">Investor Visa &amp; UAE Residency</h3>
+      <div class="why-desc">Business registration in UAE entitles owners to an investor visa and UAE residence — see our <a href="/employment-visa.html" title="Employment Visa Services UAE">visa services</a> and the <a href="/golden-visa.html" title="UAE Golden Visa Services">Golden Visa</a> for long-term residency options.</div>
     </div>
   </div>
 </section>
@@ -694,42 +718,42 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
   <h2 class="sec-title" id="locations-heading">Company Formation Across <em>All UAE Emirates</em></h2>
   <p class="sec-sub">TamkinExpress handles business registration and company setup in every UAE emirate — from Musaffah Abu Dhabi to Dubai, Sharjah, Ajman, RAK, Fujairah, and Umm Al Quwain.</p>
   <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2.5rem;" class="locations-grid">
-    <a href="./Best business registration abudhabi.html" style="text-decoration:none;" class="aeo-card reveal" aria-label="Business registration Abu Dhabi">
+    <a href="./Best%20business%20registration%20abudhabi.html" style="text-decoration:none;" class="aeo-card reveal" aria-label="Business registration Abu Dhabi" title="Business Registration Abu Dhabi">
       <div class="aeo-badge">Abu Dhabi</div>
       <h3 style="font-size:.92rem;"><em>Business Registration</em> Abu Dhabi</h3>
       <p style="font-size:.82rem;margin-top:.5rem;">Mainland &amp; free zone company formation in Abu Dhabi — ADDED, ADGM, KIZAD, and Musaffah business setup.</p>
     </a>
-    <a href="./Best business registartion dubai.html" style="text-decoration:none;" class="aeo-card reveal" aria-label="Business registration Dubai">
+    <a href="./Best%20business%20registartion%20dubai.html" style="text-decoration:none;" class="aeo-card reveal" aria-label="Business registration Dubai" title="Business Registration Dubai">
       <div class="aeo-badge">Dubai</div>
       <h3 style="font-size:.92rem;"><em>Business Registration</em> Dubai</h3>
       <p style="font-size:.82rem;margin-top:.5rem;">Dubai DED mainland, DMCC, JAFZA, IFZA free zone company setup, and offshore company formation in Dubai.</p>
     </a>
-    <a href="./Best business registartion sharjah .html" style="text-decoration:none;" class="aeo-card reveal" aria-label="Company registration Sharjah">
+    <a href="./Best%20business%20registartion%20sharjah%20.html" style="text-decoration:none;" class="aeo-card reveal" aria-label="Company registration Sharjah" title="Company Registration Sharjah">
       <div class="aeo-badge">Sharjah</div>
       <h3 style="font-size:.92rem;"><em>Company Registration</em> Sharjah</h3>
       <p style="font-size:.82rem;margin-top:.5rem;">Company formation and trade licence registration in Sharjah — mainland and Sharjah free zone setup.</p>
     </a>
-    <a href="./best-business-registration-ajman.html" style="text-decoration:none;" class="aeo-card reveal" aria-label="Company formation Ajman">
+    <a href="./best-business-registration-ajman.html" style="text-decoration:none;" class="aeo-card reveal" aria-label="Company formation Ajman" title="Company Formation Ajman">
       <div class="aeo-badge">Ajman</div>
       <h3 style="font-size:.92rem;"><em>Company Formation</em> Ajman</h3>
       <p style="font-size:.82rem;margin-top:.5rem;">Affordable company setup and business registration in Ajman — mainland and Ajman free zone options.</p>
     </a>
-    <a href="./Best business registration  rasal khaima.html" style="text-decoration:none;" class="aeo-card reveal" aria-label="Business setup Ras Al Khaimah">
+    <a href="./Best%20business%20registration%20%20rasal%20khaima.html" style="text-decoration:none;" class="aeo-card reveal" aria-label="Business setup Ras Al Khaimah" title="Business Setup Ras Al Khaimah">
       <div class="aeo-badge">RAK</div>
       <h3 style="font-size:.92rem;"><em>Business Setup</em> Ras Al Khaimah</h3>
       <p style="font-size:.82rem;margin-top:.5rem;">RAK offshore company formation and RAKEZ free zone business registration in Ras Al Khaimah.</p>
     </a>
-    <a href="./business rejistration fujairah.html" style="text-decoration:none;" class="aeo-card reveal" aria-label="Business registration Fujairah">
+    <a href="./business%20rejistration%20fujairah.html" style="text-decoration:none;" class="aeo-card reveal" aria-label="Business registration Fujairah" title="Business Registration Fujairah">
       <div class="aeo-badge">Fujairah</div>
       <h3 style="font-size:.92rem;"><em>Business Registration</em> Fujairah</h3>
       <p style="font-size:.82rem;margin-top:.5rem;">Company setup and trade licence registration in Fujairah — mainland and Creative City free zone.</p>
     </a>
-    <a href="./business registration ummu al quwain.html" style="text-decoration:none;" class="aeo-card reveal" aria-label="Company setup Umm Al Quwain">
+    <a href="./business%20registration%20ummu%20al%20quwain.html" style="text-decoration:none;" class="aeo-card reveal" aria-label="Company setup Umm Al Quwain" title="Company Setup Umm Al Quwain">
       <div class="aeo-badge">UAQ</div>
       <h3 style="font-size:.92rem;"><em>Company Setup</em> Umm Al Quwain</h3>
       <p style="font-size:.82rem;margin-top:.5rem;">Affordable business registration and company formation in Umm Al Quwain — UAQ free zone options.</p>
     </a>
-    <a href="./business registration musaffah.html" style="text-decoration:none;" class="aeo-card reveal" aria-label="Business registration Musaffah">
+    <a href="./business%20registration%20musaffah.html" style="text-decoration:none;" class="aeo-card reveal" aria-label="Business registration Musaffah" title="Business Registration Musaffah">
       <div class="aeo-badge">Musaffah</div>
       <h3 style="font-size:.92rem;"><em>Business Registration</em> Musaffah</h3>
       <p style="font-size:.82rem;margin-top:.5rem;">TamkinExpress is based in Musaffah M43, Abu Dhabi — your local business setup expert in the industrial hub.</p>
@@ -741,6 +765,27 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
 @media(max-width:960px){.locations-grid{grid-template-columns:1fr 1fr !important;}}
 @media(max-width:600px){.locations-grid{grid-template-columns:1fr !important;}}
 </style>
+
+<div class="divider"></div>
+
+<!-- RELATED SERVICES -->
+<section>
+  <div class="sec">
+    <p class="sec-label">Related Services</p>
+    <h2 class="sec-title">After Company Setup: <em>More UAE Business Services</em></h2>
+    <div class="related-grid">
+      <a class="related-card reveal" href="/pro-services.html" title="PRO Services UAE"><strong>PRO Services UAE</strong><span>Government paperwork, labour and immigration transactions for your company.</span></a>
+      <a class="related-card reveal" href="/ministry-of-economy.html" title="Ministry of Economy Services UAE"><strong>Ministry of Economy Services UAE</strong><span>Trade license registration, renewal, trademark and commercial registration.</span></a>
+      <a class="related-card reveal" href="/employment-visa.html" title="Employment Visa Services UAE"><strong>Employment Visa Services UAE</strong><span>Work permit, medical test, Emirates ID and visa stamping for your team.</span></a>
+      <a class="related-card reveal" href="/golden-visa.html" title="UAE Golden Visa Services"><strong>UAE Golden Visa Services</strong><span>10-year residency for investors, entrepreneurs and professionals.</span></a>
+      <a class="related-card reveal" href="/poa.html" title="Power of Attorney UAE"><strong>Power of Attorney UAE</strong><span>Authorise managers and signatories for company, bank and government matters.</span></a>
+      <a class="related-card reveal" href="/notary-court.html" title="Notary and Court Services UAE"><strong>Notary &amp; Court Services UAE</strong><span>Notarisation and legal documentation for MOA and company paperwork.</span></a>
+      <a class="related-card reveal" href="/certificate-attestation.html" title="Certificate Attestation UAE"><strong>Certificate Attestation UAE</strong><span>Attestation of documents for company setup, visas and banks.</span></a>
+      <a class="related-card reveal" href="/legal-contracts.html" title="Legal Contracts UAE"><strong>Legal Contracts UAE</strong><span>Drafting and review of shareholder, service and commercial contracts.</span></a>
+      <a class="related-card reveal" href="/digital-marketing-uae.html" title="Digital Marketing UAE"><strong>Digital Marketing UAE</strong><span>SEO, Google Ads and social media to grow your new company.</span></a>
+    </div>
+  </div>
+</section>
 
 <div class="divider"></div>
 
@@ -790,11 +835,11 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
     </div>
     <div class="faq-item-box">
       <button class="faq-q">Can Tamkin Express handle business registration in Abu Dhabi and Dubai?<span class="faq-plus">+</span></button>
-      <div class="faq-ans"><p>Yes. Tamkin Express is a <strong>business setup company based in Abu Dhabi</strong> (Office No. 49, Musaffah M43) and handles <strong>company formation and business registration across Abu Dhabi, Dubai, Sharjah, Ajman, Ras Al Khaimah, Fujairah, Umm Al Quwain</strong> — and all UAE free zones including DMCC, ADGM, IFZA, and KIZAD.</p></div>
+      <div class="faq-ans"><p>Yes. Tamkin Express is a <strong>business setup company based in Abu Dhabi</strong> (Office No. 49, Musaffah M43) and handles <strong>company formation and business registration across <a href="./Best%20business%20registration%20abudhabi.html">Abu Dhabi</a>, <a href="./Best%20business%20registartion%20dubai.html">Dubai</a>, Sharjah, Ajman, Ras Al Khaimah, Fujairah, Umm Al Quwain</strong> — and all UAE free zones including DMCC, ADGM, IFZA, and KIZAD.</p></div>
     </div>
     <div class="faq-item-box">
       <button class="faq-q">What documents are required for company registration in UAE?<span class="faq-plus">+</span></button>
-      <div class="faq-ans"><p>For <strong>UAE company formation and business registration</strong>: passport copies of all shareholders and managers, Emirates ID (for UAE residents), proposed trade name, business activity description, and tenancy contract. For free zone company setup, document requirements may vary by authority. Tamkin Express provides a complete document checklist after a free consultation.</p></div>
+      <div class="faq-ans"><p>For <strong>UAE company formation and business registration</strong>: passport copies of all shareholders and managers, Emirates ID (for UAE residents), proposed trade name, business activity description, and tenancy contract. For free zone company setup, document requirements may vary by authority. Foreign documents may need <a href="/certificate-attestation.html">certificate attestation</a>, and a <a href="/poa.html">power of attorney</a> can authorise a representative to sign. Tamkin Express provides a complete document checklist after a free consultation.</p></div>
     </div>
     <div class="faq-item-box">
       <button class="faq-q">Can a foreigner register a company in UAE with 100% ownership?<span class="faq-plus">+</span></button>
@@ -806,7 +851,7 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
     </div>
     <div class="faq-item-box">
       <button class="faq-q">How do I get an investor visa with UAE business registration?<span class="faq-plus">+</span></button>
-      <div class="faq-ans"><p>After <strong>business registration in UAE</strong>, company owners are eligible for an <strong>investor visa UAE</strong> (residence visa). Tamkin Express handles the complete investor visa UAE process — medical, Emirates ID, and visa stamping — as part of its end-to-end business setup services in Abu Dhabi and Dubai.</p></div>
+      <div class="faq-ans"><p>After <strong>business registration in UAE</strong>, company owners are eligible for an <strong>investor visa UAE</strong> (residence visa). Tamkin Express handles the complete investor visa UAE process — medical, Emirates ID, and visa stamping — as part of its end-to-end business setup services in Abu Dhabi and Dubai. See our <a href="/employment-visa.html">employment visa services</a> and <a href="/golden-visa.html">Golden Visa</a> pages for more residency options.</p></div>
     </div>
     <div class="faq-item-box">
       <button class="faq-q">Can I open a corporate bank account after business registration in UAE?<span class="faq-plus">+</span></button>
@@ -814,7 +859,7 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
     </div>
     <div class="faq-item-box">
       <button class="faq-q">Why choose Tamkin Express for business registration in UAE?<span class="faq-plus">+</span></button>
-      <div class="faq-ans"><p>Tamkin Express is one of the UAE's leading <strong>business setup consultants</strong> — handling mainland, free zone, and offshore <strong>company formation</strong> across every emirate. Setup in 7 days, transparent pricing, zero rejection documentation, full post-registration support including <strong>investor visa UAE</strong> and <strong>corporate bank account opening</strong>.</p></div>
+      <div class="faq-ans"><p>Tamkin Express is one of the UAE's leading <strong>business setup consultants</strong> — handling mainland, free zone, and offshore <strong>company formation</strong> across every emirate. Setup in 7 days, transparent pricing, zero rejection documentation, full post-registration support including <strong>investor visa UAE</strong> and <strong>corporate bank account opening</strong>, plus ongoing <a href="/pro-services.html">PRO services</a>.</p></div>
     </div>
   </div>
 </section>
@@ -850,32 +895,35 @@ body{background:var(--dark);color:var(--text);font-family:'Montserrat',sans-seri
       <div class="footer-col">
         <h4 class="footer-col-title">Business Registration by City</h4>
         <ul class="footer-links">
-          <li><a href="./business registration musaffah.html">Business Registration Musaffah</a></li>
+          <li><a href="./Best%20business%20registration%20abudhabi.html">Business Registration Abu Dhabi</a></li>
+          <li><a href="./business%20registration%20musaffah.html">Business Registration Musaffah</a></li>
+          <li><a href="./Best%20business%20registartion%20dubai.html">Business Registration Dubai</a></li>
+          <li><a href="./Best%20business%20registartion%20sharjah%20.html">Company Registration Sharjah</a></li>
           <li><a href="./best-business-registration-ajman.html">Company Formation Ajman</a></li>
-          <li><a href="./business rejistration fujairah.html">Business Setup Fujairah</a></li>
-          <li><a href="./Best business registartion dubai.html">Business Registration Dubai</a></li>
-          <li><a href="./company registration and formation in uae.html">Company Formation UAE </a></li>
-          <li><a href="./Best business registration  rasal khaima.html">Business Setup Ras Al Khaimah</a></li>
-          <li><a href="./business registration ummu al quwain.html">Company Setup Umm Al Quwain</a></li>
-          <li><a href="./Best business registartion sharjah .html">Company Registration Sharjah</a></li>
+          <li><a href="./Best%20business%20registration%20%20rasal%20khaima.html">Business Setup Ras Al Khaimah</a></li>
+          <li><a href="./business%20rejistration%20fujairah.html">Business Setup Fujairah</a></li>
+          <li><a href="./business%20registration%20ummu%20al%20quwain.html">Company Setup Umm Al Quwain</a></li>
+          <li><a href="./company%20registration%20and%20formation%20in%20uae.html">Company Formation UAE</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4 class="footer-col-title">Our Services</h4>
         <ul class="footer-links">
-          <li><a href="#business-registration.html">Mainland Company Formation UAE</a></li>
-          <li><a href="#business-registration.html">Free Zone Company Setup UAE</a></li>
-          <li><a href="#business-registration.html">Offshore Company Registration UAE</a></li>
-          <li><a href="#business-registration.html">Trade Licence Registration UAE</a></li>
-          <li><a href="#business-registration.html">Investor Visa UAE</a></li>
-          <li><a href="#business-registration.html">Corporate Bank Account UAE</a></li>
+          <li><a href="#services">Mainland Company Formation UAE</a></li>
+          <li><a href="#services">Free Zone Company Setup UAE</a></li>
+          <li><a href="#services">Offshore Company Registration UAE</a></li>
+          <li><a href="/ministry-of-economy.html">Trade Licence Registration UAE</a></li>
+          <li><a href="/employment-visa.html">Investor &amp; Employment Visa UAE</a></li>
+          <li><a href="/pro-services.html">PRO Services</a></li>
+          <li><a href="/golden-visa.html">Golden Visa</a></li>
+          <li><a href="/poa.html">Power of Attorney</a></li>
           <li><a href="/about.html">About TamkinExpress</a></li>
           <li><a href="/contact-us.html">Free Consultation</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2025 TamkinExpress — UAE Business Registration &amp; Company Formation Experts. All rights reserved. | Last updated: June 2025</p>
+      <p>© 2025 TamkinExpress — UAE Business Registration &amp; Company Formation Experts. All rights reserved. | Last updated: October 2026</p>
       <div class="footer-social">
         <a href="https://www.facebook.com/profile.php?id=61563209741328" target="_blank" rel="noopener">Facebook</a>
         <a href="https://www.instagram.com/tamkinexpress" target="_blank" rel="noopener">Instagram</a>
